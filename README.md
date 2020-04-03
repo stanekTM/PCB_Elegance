@@ -20,3 +20,5 @@ Copyright (C) 2012 Herman Morsink Vollenbroek
 
 # My edited version PCB Elegance
 Just unzip this version of the files to disk. The key is the "PCB_Elegance_v3.52.0" folder.
+By default, the programs are in "EN". Other translations are only in "CZ".  If you are a proud Czech,
+copy the translation files from the "Translations\CZ" folder to the main "PCB_Elegance_v3.52.0" directory.
