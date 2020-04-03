@@ -1,4 +1,4 @@
-# PCB_Elegance
+# PCB Elegance
 PCB Elegance is a collection of circuit board design tools for Microsoft Windows.
 Including schematic capture, board layout, and manufacturing file generation.
 It was commercial software from 1998-2012.
