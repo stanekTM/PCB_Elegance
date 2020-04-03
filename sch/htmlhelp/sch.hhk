@@ -1,0 +1,596 @@
+<HTML>
+<!-- Sitemap 1.0 -->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Accelerator">
+		<param name="Name" value="Short cuts">
+		<param name="Local" value="html/short_cuts.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add arc">
+		<param name="Name" value="Add arc">
+		<param name="Local" value="html/add_arc.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add bus">
+		<param name="Name" value="Add bus">
+		<param name="Local" value="html/add_bus.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add busconnection">
+		<param name="Name" value="Add busconnection">
+		<param name="Local" value="html/add_busconnection.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add circle">
+		<param name="Name" value="Add circle">
+		<param name="Local" value="html/add_circle.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add component">
+		<param name="Name" value="Add component">
+		<param name="Local" value="html/add_component.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add dimension">
+		<param name="Name" value="Add dimension">
+		<param name="Local" value="html/add_dimension1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add Edit number of parts per package">
+		<param name="Name" value="Add Edit number of parts per package">
+		<param name="Local" value="html/edit_number_of_parts_per_package.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add Edit pinnumbers package parts">
+		<param name="Name" value="Add Edit pinnumbers package parts">
+		<param name="Local" value="html/edit_pinnumbers_package_parts.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add externalconnection">
+		<param name="Name" value="Add externalconnection">
+		<param name="Local" value="html/add_globalconnection.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add incremental netlabel">
+		<param name="Name" value="Add incremental netlabel">
+		<param name="Local" value="html/add_incremental_netlabel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add left pointed arrow">
+		<param name="Name" value="Add left pointed arrow">
+		<param name="Local" value="html/add_arrow1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add left/right pointed arrow">
+		<param name="Name" value="Add left/right pointed arrow">
+		<param name="Local" value="html/add_arrow3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add line">
+		<param name="Name" value="Add line">
+		<param name="Local" value="html/add_line.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add netlabel">
+		<param name="Name" value="Add netlabel">
+		<param name="Local" value="html/add_netlabel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add netlabel + wire">
+		<param name="Name" value="Add netlabel + wire">
+		<param name="Local" value="html/add_netlabel_wire.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add numbers incremental">
+		<param name="Name" value="Add numbers incremental">
+		<param name="Local" value="html/add_numbers_incremental.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add one pin net">
+		<param name="Name" value="Add one pin net">
+		<param name="Local" value="html/add_one_pinnet_mark.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add other objects">
+		<param name="Name" value="Add other objects">
+		<param name="Local" value="html/other_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add pin">
+		<param name="Name" value="Add pin">
+		<param name="Local" value="html/add_pin.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add pinbus">
+		<param name="Name" value="Add pinbus">
+		<param name="Local" value="html/add_pinbus.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add powerpin">
+		<param name="Name" value="Add powerpin">
+		<param name="Local" value="html/add_powerpin.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add rect">
+		<param name="Name" value="Add rect">
+		<param name="Local" value="html/add_rect2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add rect (4 lines)">
+		<param name="Name" value="Add rect (4 lines)">
+		<param name="Local" value="html/add_rect.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add right pointed arrow">
+		<param name="Name" value="Add right pointed arrow">
+		<param name="Local" value="html/add_arrow2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add sheetsymbol pin">
+		<param name="Name" value="Add sheetsymbol pin">
+		<param name="Local" value="html/add_sheetsymbolpin.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add symbol">
+		<param name="Name" value="Add symbol">
+		<param name="Local" value="html/add_symbol.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add symbol on shortcut">
+		<param name="Name" value="Add symbol on shortcut">
+		<param name="Local" value="html/add_symbol_on_short_cut.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add text">
+		<param name="Name" value="Add text">
+		<param name="Local" value="html/add_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add wire">
+		<param name="Name" value="Add wire">
+		<param name="Local" value="html/add_wire.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Align text objects">
+		<param name="Name" value="Align text objects">
+		<param name="Local" value="html/align_text_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Backup">
+		<param name="Name" value="Backup">
+		<param name="Local" value="html/backup.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change colors">
+		<param name="Name" value="Change colors">
+		<param name="Local" value="html/change_colors.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change line thickness">
+		<param name="Name" value="Change line thickness">
+		<param name="Local" value="html/change_line_thickness.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change text height">
+		<param name="Name" value="Change text height">
+		<param name="Local" value="html/change_text_height.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Check sheet">
+		<param name="Name" value="Check sheet">
+		<param name="Local" value="html/check_sheet.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Check symbol">
+		<param name="Name" value="Check symbol">
+		<param name="Local" value="html/check_symbol.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Clear references">
+		<param name="Name" value="Clear references">
+		<param name="Local" value="html/clear_references.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Comp.txt">
+		<param name="Name" value="Comp.txt">
+		<param name="Local" value="html/comp_txt.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Compmenu.txt">
+		<param name="Name" value="Compmenu.txt">
+		<param name="Local" value="html/compmenu_txt.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Component selections by list">
+		<param name="Name" value="Component selections by list">
+		<param name="Local" value="html/component_selections_by_list.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Component/net info popup display">
+		<param name="Name" value="Component/net info popup display">
+		<param name="Local" value="html/popup_display.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Contents">
+		<param name="Name" value="Contents">
+		<param name="Local" value="html/contents.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy objects">
+		<param name="Name" value="Copy objects">
+		<param name="Local" value="html/copy_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy objects to clipboard">
+		<param name="Name" value="Copy objects to clipboard">
+		<param name="Local" value="html/copy_objects_to_clipboard.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Delete objects">
+		<param name="Name" value="Delete objects">
+		<param name="Local" value="html/delete_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Deselect all">
+		<param name="Name" value="Deselect all">
+		<param name="Local" value="html/deselect_all.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Drag objects">
+		<param name="Name" value="Drag objects">
+		<param name="Local" value="html/drag_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit any text">
+		<param name="Name" value="Edit any text">
+		<param name="Local" value="html/edit_any_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit external connection">
+		<param name="Name" value="Edit any text">
+		<param name="Local" value="html/edit_any_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit gate/pin swap">
+		<param name="Name" value="Edit gate/pin swap">
+		<param name="Local" value="html/edit_gate_pin_swap.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit layout containing reference">
+		<param name="Name" value="Edit layout containing reference">
+		<param name="Local" value="html/edit_layout_on_ref.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit netlabel">
+		<param name="Name" value="Edit any text">
+		<param name="Local" value="html/edit_any_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit netlabel properties">
+		<param name="Name" value="Edit any text">
+		<param name="Local" value="html/edit_any_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit pin normal symbol">
+		<param name="Name" value="Edit pin normal symbol">
+		<param name="Local" value="html/edit_symbolpin.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit pinbus">
+		<param name="Name" value="Edit pinbus">
+		<param name="Local" value="html/edit_pinbus.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit pinbus reorder">
+		<param name="Name" value="Edit pinbus reorder">
+		<param name="Local" value="html/edit_pinbus_reorder.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit powerpin">
+		<param name="Name" value="Edit any text">
+		<param name="Local" value="html/edit_any_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit sheetsymbol pin">
+		<param name="Name" value="Edit sheetsymbol pin">
+		<param name="Local" value="html/edit_sheetsymbolpin.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit symbol">
+		<param name="Name" value="Edit symbol">
+		<param name="Local" value="html/edit_symbol.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit symbol parameters">
+		<param name="Name" value="Edit symbol parameters">
+		<param name="Local" value="html/edit_symbol_parameters.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit symbol reference">
+		<param name="Name" value="Edit any text">
+		<param name="Local" value="html/edit_any_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit symbol value">
+		<param name="Name" value="Edit any text">
+		<param name="Local" value="html/edit_any_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit symbolnames">
+		<param name="Name" value="Edit symbolnames">
+		<param name="Local" value="html/edit_symbolnames.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Export text">
+		<param name="Name" value="Export text">
+		<param name="Local" value="html/export_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Export to BMP">
+		<param name="Name" value="Export to BMP">
+		<param name="Local" value="html/export_bmp.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Export to DXF">
+		<param name="Name" value="Export to DXF">
+		<param name="Local" value="html/export_dxf.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Export to PDF">
+		<param name="Name" value="Export to PDF">
+		<param name="Local" value="html/export_pdf.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Goto higher sheet">
+		<param name="Name" value="Goto higher sheet">
+		<param name="Local" value="html/goto_higher_sheet.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Goto x">
+		<param name="See Also" value="Goto x">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="y">
+			<param name="Local" value="html/gotoxy.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Hierarchical designs">
+		<param name="Name" value="Hierarchical designs">
+		<param name="Local" value="html/hierarchical_designs.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Import from DXF">
+		<param name="Name" value="Import from DXF">
+		<param name="Local" value="html/import_dxf.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Initialisation file sch.ini">
+		<param name="Name" value="Initialisation file sch.ini">
+		<param name="Local" value="html/initialisation_file_sch_ini.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Load default colors (Black background)">
+		<param name="Name" value="Load default colors (Black background)">
+		<param name="Local" value="html/load_default_colors.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Load default colors (Gray background)">
+		<param name="Name" value="Load default colors (Gray background)">
+		<param name="Local" value="html/load_default_colors2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Mirror objects">
+		<param name="Name" value="Mirror objects">
+		<param name="Local" value="html/mirror_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move objects">
+		<param name="Name" value="Move objects">
+		<param name="Local" value="html/move_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Multiple symbols">
+		<param name="Name" value="Multiple symbols">
+		<param name="Local" value="html/multiple_symbols.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Netlabel properties">
+		<param name="Name" value="Netlabel properties">
+		<param name="Local" value="html/netlabel_properties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="New sheet">
+		<param name="Name" value="New sheet">
+		<param name="Local" value="html/new_sheet.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="New sheetsymbol">
+		<param name="Name" value="New sheetsymbol">
+		<param name="Local" value="html/new_sheetsymbol.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="New symbol">
+		<param name="Name" value="New symbol">
+		<param name="Local" value="html/new_symbol.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Open sheetsymbol">
+		<param name="Name" value="Open sheetsymbol">
+		<param name="Local" value="html/open_sheetsymbol.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Open subsheet">
+		<param name="Name" value="Open subsheet">
+		<param name="Local" value="html/open_subsheet.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Pan window">
+		<param name="Name" value="Pan window">
+		<param name="Local" value="html/pan_window.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Paste objects from clipboard">
+		<param name="Name" value="Paste objects from clipboard">
+		<param name="Local" value="html/paste_objects_from_clipboard.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Pin swap example1">
+		<param name="Name" value="Pin swap example1">
+		<param name="Local" value="html/pin_swap_example1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Pin swap example2">
+		<param name="Name" value="Pin swap example2">
+		<param name="Local" value="html/pin_swap_example2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Pin swap example3">
+		<param name="Name" value="Pin swap example3">
+		<param name="Local" value="html/pin_swap_example3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Print">
+		<param name="Name" value="Print">
+		<param name="Local" value="html/print.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Programmable keys">
+		<param name="Name" value="Short cuts">
+		<param name="Local" value="html/short_cuts.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Protect symbols">
+		<param name="Name" value="Protect symbols">
+		<param name="Local" value="html/protect_symbols.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Redo">
+		<param name="Name" value="Redo">
+		<param name="Local" value="html/redo.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Reload symbols">
+		<param name="Name" value="Reload symbols">
+		<param name="Local" value="html/reload_symbols.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Repaint">
+		<param name="Name" value="Repaint">
+		<param name="Local" value="html/repaint.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Return to previous view window">
+		<param name="Name" value="Return to previous view window">
+		<param name="Local" value="html/return_to_previous_view_window.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Rotate objects">
+		<param name="Name" value="Rotate objects">
+		<param name="Local" value="html/rotate_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Rotate objects at any angle">
+		<param name="Name" value="Rotate objects at any angle">
+		<param name="Local" value="html/rotate_objects2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Scale objects">
+		<param name="Name" value="Scale objects">
+		<param name="Local" value="html/scale_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Search for any text">
+		<param name="Name" value="Search for any text">
+		<param name="Local" value="html/search_for_any_text.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Select only">
+		<param name="Name" value="Select only">
+		<param name="Local" value="html/select_only.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Selection/deselection objects">
+		<param name="Name" value="Selection/deselection objects">
+		<param name="Local" value="html/selecting_deselecting_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Short cuts">
+		<param name="Name" value="Short cuts">
+		<param name="Local" value="html/short_cuts.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Symbol properties">
+		<param name="Name" value="Symbol properties">
+		<param name="Local" value="html/symbol_properties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Undo">
+		<param name="Name" value="Undo">
+		<param name="Local" value="html/undo.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Unprotect symbols">
+		<param name="Name" value="Unprotect symbols">
+		<param name="Local" value="html/unprotect_symbols.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Unselect objects">
+		<param name="Name" value="Unselect objects">
+		<param name="Local" value="html/unselect_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View sheet options">
+		<param name="Name" value="View symbol options">
+		<param name="Local" value="html/view_options.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View symbol options">
+		<param name="Name" value="View symbol options">
+		<param name="Local" value="html/view_options.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View topics">
+		<param name="Name" value="View topics">
+		<param name="Local" value="html/view_topics.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View whole design">
+		<param name="Name" value="View whole design">
+		<param name="Local" value="html/view_whole_design.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Viewable window">
+		<param name="Name" value="Viewable window">
+		<param name="Local" value="html/viewable_window.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Window based panning">
+		<param name="Name" value="Window based panning">
+		<param name="Local" value="html/window_based_panning.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Window based zooming">
+		<param name="Name" value="Window based zooming">
+		<param name="Local" value="html/window_based_zooming.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Zero relative cursor">
+		<param name="Name" value="Zero relative cursor">
+		<param name="Local" value="html/zero_relative_cursor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Zoom in">
+		<param name="Name" value="Zoom in">
+		<param name="Local" value="html/zoom_in.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Zoom out">
+		<param name="Name" value="Zoom out">
+		<param name="Local" value="html/zoom_out.htm">
+		</OBJECT>
+</UL></HTML>

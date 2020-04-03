@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Add bus</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Add bus">
+</OBJECT>
+
+<P><A NAME="idh_add_bus"></A><font size=5><U>Add bus</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/bitmap_doc2.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Press <B>Add bus</B> button (Special drawing mode)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/keyboard.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Press <B>b</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/keyboard.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Press <B>B</B> (Special drawing mode)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mouse2.gif" ALT="" BORDER=0></TD>
+<TD width=75%><B>Add bus</B></TD>
+</TR>
+</TABLE><BR>
+
+<P>Add a bus. When pressing the button or the key ‘B’ a special mode of drawing busses is activated. When the mouse is placed on a existing bus, this bus can be redrawn.</P>
+
+<P>A bus is a collection of a number of signals. The amount of signals in a bus depends on how the bus is named. For instance if the bus is a databus with the signals AD0,AD1,AD2,AD3,AD4,AD5,AD6,AD7 the name of the bus would be AD[0:7]. When a bus has such a name the amount is signals in a bus is limited to eight is this case. A bus can also contain an unspecified number of signals, for example a possible name could be SYSCON.</P>
+
+<P>Via busconnections signals are connected to a bus. The signal names that are connected to a bus must be unique. When a bus is directly connected to a pinbus, the pinbus should have a name with a number range. The amount of signals within this number range should be the same as the pinbus signal count.</P>
+
+<P>It is not allowed to connect a signal to a bus once (unused signal). For example if the signal MEMR is connected via a busconnection to the bus MEMCON, the same signal shouldbe connected to this bus on another place. The reason for this is to avoid some mistakes, when connecting signals to a bus. In the previous example signal MEMR is used to connect to a bus. Suppose you have typed MEMR wrong (MEM), for the first connection, and the second signal connection name is typed with MEMR. The result of this is, that the two signals are not connected to each other. As a result of this check an error will be displayed.</P>
+
+</BODY>
+</HTML>

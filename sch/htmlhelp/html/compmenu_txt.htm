@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Compmenu.txt</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Compmenu.txt">
+</OBJECT>
+
+<P><A NAME="idh_compmenu_txt"></A><font size=5><U>Compmenu.txt file</U><br>&nbsp;</font></P>
+
+<P>This is a text file containing menu items. The first character of each line will be used for decoding.</P>
+
+<P>First character:</P>
+
+<P>;Line will be ignored (Also empty lines)</P>
+
+<P>$The number directly after <B>$</B> (Code1 in the <B>comp.txt</B> file) is the main index in the component pulldown menu.</P>
+
+<P>The next string will be visible in the menu.</P>
+
+<P>#The next number (Code2 in the <B>comp.txt</B> file) will not be used if there are further pull down menus. If there are no further pulldown menus the number will be used.</P>
+
+<P>The next string will be visible in the second pulldown menu.</P>
+
+<P>^The next number is the Code2 in the <B>comp.txt</B> file</P>
+
+<P>The next string will be visible in the second pulldown menu.</P>
+
+<P>There are two options to edit this file. The first option is to add at the bottom of the file the new components. The second option is insert lines between the standard menu items. The <B>Code1</B> numbers 1 to 8 are reserved, and the <B>Code2</B> numbers used by the PCB elegance are ending on a zero. The user can insert other lines, but the <B>code2</B> numbers must end on 1 to 9. <U>Do not enter new <B>Code2</B> members, because there are reserved for future implementations.</U></P>
+
+</BODY>
+</HTML>

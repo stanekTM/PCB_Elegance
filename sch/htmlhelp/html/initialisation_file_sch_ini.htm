@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Initialisation file sch.ini</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Initialisation file sch.ini">
+</OBJECT>
+
+<P><A NAME="idh_initialisation_file_sch_ini"></A><font size=5><U>Initialisation file sch.ini</U><br>&nbsp;</font></P>
+
+<P>The initialisation file <B>sch.ini </B>is used to save some schematic/symbols parameters. The file will be stored in the designs directory, if there is a design active.</P>
+
+<P>If the schematic editor has been started as stand alone, the search rules for <B>sch.ini</B> will be as follows. When the last subdirectory name of the full edit path is <B>sch</B> or <B>sym</B>, the schematic editor will use the one level up directory. An example:</P>
+
+<P>Symbols pull path:c:\design\test\sym\testsymbol.sym</P>
+
+<P>The schematic editor is looking for the <B>sch.ini</B> in the c:\design\test directory. This situation is the case when a symbol or schematic from a design will be opened.</P>
+
+<P>When there is no <B>sch</B> or <B>sym</B> directory, or the <B>sch.ini</B> does not exist, the schematic editor tries to find the <B>sch.ini</B> in the same directory as the symbol or sheet.</P>
+
+<P>The following paramaters in the <B>sch.ini</B> are used:</P>
+
+<P><B>[Files]</B></P>
+
+<P>&lt;The last used symbol/sheet files&gt;</P>
+
+<P><B>[Settings]</B></P>
+
+<TABLE cols=2 width=513>
+
+<TR VALIGN="top">
+<TD width=38%>WindowWidth</TD>
+<TD width=62%>The width of the windows</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>WindowHeight</TD>
+<TD width=62%>The height of the windows</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>WindowStartX</TD>
+<TD width=62%>Origin X of the windows (0,0 = left top)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>WindowStartY</TD>
+<TD width=62%>Origin Y of the windows</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolDialogStartX</TD>
+<TD width=62%>Origin X of the add symbol dialog window</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolDialogStartY</TD>
+<TD width=62%>Origin Y of the add symbol dialog window</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GeometryDialogInitialX</TD>
+<TD width=62%>Origin X of the dialog window geometrie selection</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GeometryDialogInitialY</TD>
+<TD width=62%>Origin Y of the dialog window geometrie selection</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GeomScreenWidth</TD>
+<TD width=62%>The width of the geometrie editor window</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GeomScreenHeight</TD>
+<TD width=62%>The height of the geometrie editor window</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GeomStartX</TD>
+<TD width=62%>Origin X of the geometrie editor window
+<P>(0,0 = left top)</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GeomStartY</TD>
+<TD width=62%>Origin Y of the geometrie editor window </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>WireBusSelectMode</TD>
+<TD width=62%>(0 = off,1 = on)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Repeat mode</TD>
+<TD width=62%>(0 = off,1 = on)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>LineSelectMode</TD>
+<TD width=62%>(0 = normal, 1 = extended)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SelectMode</TD>
+<TD width=62%>(0 = Appending,1 = Replacement)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>DrawGrid</TD>
+<TD width=62%>(0 = off,1 = on)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GridSize</TD>
+<TD width=62%>The gridsize (0.1,0.2,1.0)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>CrossHairVisible</TD>
+<TD width=62%>(0 = off,1 = on)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>ButtonInfoTimeout</TD>
+<TD width=62%>Maximum time popup display with component/net info is visible (100msec increments)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>PopupDisplayVisible</TD>
+<TD width=62%>Popup display with component/net infois visible (0=off,1=on)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>BackGroundColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>WireColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>BusColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>BusConnectionColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GlobalConnectionColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>JunctionColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>NetLabelColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>InstanceRefTextColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>InstanceValueTextColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolPinColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolPinBusColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolPinTextColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolPowerPinTextColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolPinBusTextColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolLineColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolRectColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolTextColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolArcColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>SymbolCircleColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>ObjectLineColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>ObjectRectColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>ObjectCircleColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>ObjectArcColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>ObjectTextColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>ButtonInfoColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>GridColor</TD>
+<TD width=62%>24 bit RGB color (Stored as 32 bit)</TD>
+</TR>
+</TABLE><BR>
+
+<P><B>[Printer]</B></P>
+
+<TABLE cols=2 width=513>
+
+<TR VALIGN="top">
+<TD width=38%>PrinterName</TD>
+<TD width=62%>Default printer name</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=38%>Options</TD>
+<TD width=62%>&nbsp;</TD>
+</TR>
+</TABLE><BR>
+
+</BODY>
+</HTML>
