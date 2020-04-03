@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Create netlist</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Create netlist">
+</OBJECT>
+
+<P><A NAME="idh_create_netlist"></A><font size=5><U>Create netlist</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/netlist.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Press <B>Netlist</B> button</TD>
+</TR>
+</TABLE><BR>
+
+<P>When this button is pressed the netlist will be calculated. This netlist consists of components, and the actual netlist. This netlist will be placed in the designs <B>pcb</B> subdirectory. Also the gate/pin swap info file <B>pcb\gatepin.swp</B> will be generated. Also saved in the netlist are component and net properties. </P>
+
+<P>The format of a component property is:</P>
+
+<P>(property_name,"property_value")</P>
+
+<P>When a component should not be placed (Not placed marked in the schematic) in the BOM, the following property will be used:</P>
+
+<P>(MULTI_ASSY,"NP")</P>
+
+<P>The format of a net property is:</P>
+
+<P>(net_property_name,"net_property_value")</P>
+
+<P>For the layout editor the TRACEWIDTH and CLEARANCE net property can be used. A few examples:</P>
+
+<P>(TRACEWIDTH,”8 mil”)</P>
+
+<P>(CLEARANCE,”8 mil”)</P>
+
+<P>The standard tracewidth and clearance will be 8 mil in this example. For the units the following strings can be used:</P>
+
+<P>8 mil</P>
+
+<P>8 mils</P>
+
+<P>8 thou</P>
+
+<P>2.5 mm</P>
+
+<P>0.008 inch</P>
+
+</BODY>
+</HTML>

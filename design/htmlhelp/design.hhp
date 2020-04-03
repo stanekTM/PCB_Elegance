@@ -1,0 +1,37 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=design.chm
+Contents file=design.hhc
+Default topic=html\design_manager.htm
+Display compile progress=No
+Index file=design.hhk
+Language=0x409 English (United States)
+Title=Design manager PCB elegance
+
+
+[FILES]
+html\design_manager.htm
+html\contents.htm
+html\make_new_design.htm
+html\open_sheet.htm
+html\symbol_editor.htm
+html\annotation.htm
+html\back_annotation.htm
+html\create_netlist.htm
+html\bill_of_materials.htm
+html\check.htm
+html\conversion_orcad.htm
+html\orcad_sdt_cfg.htm
+html\layout_editor.htm
+html\gerber_viewer.htm
+html\geometry_editor.htm
+html\library_manager_symbols.htm
+html\library_manager_geometries.htm
+html\copy_symbols_shapes.htm
+html\print_all_sheets.htm
+html\print_all_sheets_pdf.htm
+html\edit_design_settings.htm
+html\edit_change_components.htm
+
+[INFOTYPES]
+

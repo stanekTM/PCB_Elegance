@@ -1,0 +1,141 @@
+calc.c:66:  if (stricmp(Instance->SymbolName,"pc-at")==0) {
+calc.c:202:    if (stricmp(Instance->SymbolName,"pc-at")==0) {
+calc.c:670:  if ((stricmp(Design.Identification,SheetCode1)!=0)
+calc.c:672:     (stricmp(Design.Identification,SheetCode2)!=0)
+calc.c:674:     (stricmp(Design.Identification,SheetCode3)!=0)
+calc.c:676:     (stricmp(Design.Identification,SheetCode4)!=0)
+calc.c:678:     (stricmp(Design.Identification,SheetCode5)!=0)) {
+calc.c:712:    if ((stricmp(Design.Identification,SheetCode3)==0)
+calc.c:714:       (stricmp(Design.Identification,SheetCode4)==0)
+calc.c:716:       (stricmp(Design.Identification,SheetCode5)==0)) {
+calc.c:717:      if ((stricmp(Design.Identification,SheetCode3)==0)
+calc.c:719:         (stricmp(Design.Identification,SheetCode4)==0)) {
+calc.c:744:      if (stricmp(Instance.SymbolName,"74hct14")==0) {
+calc.c:754:      if (stricmp(FileName,"F:\\pcb_elegance35\\PcMotherBoard\\sch\\isa-control.sch")==0) {
+calc.c:759:      if (stricmp(Instance.SymbolName,"led")==0) {
+change.c:165:      if (stricmp(str,"SWAP")==0) {
+change.c:166:        if (stricmp(str2,"GATE")==0) {
+change.c:172:          if (stricmp(str2,"PIN")==0) {
+change.c:177:            if (stricmp(str2,"PINBUS1")==0) {
+change.c:183:              if (stricmp(str2,"PINBUS0")==0) {
+change.c:194:        if (stricmp(str,"CHANGE")==0) {
+change.c:195:          if (stricmp(str2,"GEOM")==0) {
+check.c:188:                   (stricmp(Design.Identification,SheetCode1)==0)) {
+check.c:227:            if (stricmp(Instance->Reference,"t10")==0) {
+files.c:148:  if ((stricmp(Design.Identification,SheetCode1)!=0)
+files.c:150:     (stricmp(Design.Identification,SheetCode2)!=0)
+files.c:152:     (stricmp(Design.Identification,SheetCode3)!=0)
+files.c:154:     (stricmp(Design.Identification,SheetCode4)!=0)
+files.c:156:     (stricmp(Design.Identification,SheetCode5)!=0)) {
+files.c:455://         (stricmp(Instance->SymbolName,"POWER_CONNECT")!=0)
+files.c:457:         (stricmp(Instance->Reference,"?")!=0)) {
+files.c:459:        if (stricmp(Instance->Reference,"J300")==0) {
+files.c:669:  if (stricmp(SymbolName,"74HC574")==0) {
+files.c:824:  if (stricmp(&FileName[lengte-3],"sym")!=0) return;
+files.c:1085:        if (stricmp(str1,"[SymbolDirs]")==0) ParamMode=1;
+files.c:1086:        if (stricmp(str1,"[Printer]")==0) ParamMode=2;
+files.c:1104:                if (stricmp(str1,"PrinterName")==0) {
+files.c:1111:                if (stricmp(str1,"PrinterOptions")==0) {
+files.c:2772:        if (stricmp(str1,"[TopSheet]")==0) ParamMode=1;
+files.c:2773:        if (stricmp(str1,"[LayoutFile]")==0) ParamMode=2;
+files.c:2774:        if (stricmp(str1,"[Settings]")==0) ParamMode=3;
+files.c:2775:        if (stricmp(str1,"[GeometryLibraries]")==0) ParamMode=4;
+files.c:2776:        if (stricmp(str1,"[SchematicSymbolLibraries]")==0) ParamMode=5;
+files.c:2788:              if (stricmp(str1,"UpdateLayout")==0) {
+files.c:2793:              if (stricmp(str1,"SaveSymbolsLocally")==0) {
+files.c:2798:              if (stricmp(str1,"DisableOnePinNetCheck")==0) {
+files.c:2803:              if (stricmp(str1,"MaxNrRefsPerSheet")==0) {
+files.c:2808:              if (stricmp(str1,"PrinterName")==0) {
+files.c:2811:              if (stricmp(str1,"PrinterOptions")==0) {
+files.c:2818:                if (stricmp(str1,str4)==0) {
+files.c:2825:              if (stricmp(str1,"PropertyExcludeInBOMID")==0) {
+files.c:2828:              if (stricmp(str1,"PropertyExcludeInBOMValue")==0) {
+files.c:2958://        if (stricmp(str1,"[ExeDirectory]")==0) ParamMode=1;
+files.c:2959://        if (stricmp(str1,"[ProjectPath]")==0) ParamMode=2;
+files.c:2960://        if (stricmp(str1,"[SymbolDirs]")==0) ParamMode=3;
+files.c:2961://        if (stricmp(str1,"[GeometryLibraryPath]")==0) ParamMode=4;
+files.c:2962:  //      if (stricmp(str1,"[SchematicSymbolLibraryPath]")==0) ParamMode=5;
+files.c:2963:        if (stricmp(str1,"[LastDesigns]")==0) ParamMode=1;
+files.c:2964:        if (stricmp(str1,"[Settings]")==0) ParamMode=2;
+files.c:2979:              if (stricmp(str1,"WindowWidth")==0) {
+files.c:2984:              if (stricmp(str1,"WindowHeight")==0) {
+files.c:2989:              if (stricmp(str1,"WindowStartX")==0) {
+files.c:2994:              if (stricmp(str1,"WindowStartY")==0) {
+instance.c:565:      if (stricmp(Instance->SymbolName,"J103")==0) {
+instance.c:566://      if (stricmp(Instance->SymbolName,"MOUNTINGHOLE")==0) {
+instance.c:1040:  if (stricmp(str,"U0")==0) {
+instance.c:1050:    if ((stricmp(Design.Identification,SheetCode3)==0)
+instance.c:1052:       (stricmp(Design.Identification,SheetCode4)==0)
+instance.c:1054:       (stricmp(Design.Identification,SheetCode5)==0)) {
+instance.c:1055:      if ((stricmp(Design.Identification,SheetCode3)==0)
+instance.c:1057:         (stricmp(Design.Identification,SheetCode4)==0)) {
+instance.c:1099:      if ((stricmp(Design.Identification,SheetCode3)==0)
+instance.c:1101:         (stricmp(Design.Identification,SheetCode4)==0)
+instance.c:1103:         (stricmp(Design.Identification,SheetCode5)==0)) {
+instance.c:1104:        if ((stricmp(Design.Identification,SheetCode3)==0)
+instance.c:1106:           (stricmp(Design.Identification,SheetCode4)==0)) {
+instance.c:1765:        if (stricmp(Component->Geometry,"MOUTINGHOLE")==0) {
+instance.c:2053:    if (stricmp(str6,"J103")==0) {
+instance.c:2056:    if (stricmp(Component->Value,"CS8402")==0) {
+instance.c:2106:        if (stricmp(str6,"J103")==0) {
+instance.c:2109:        if (stricmp(Component->Value,"CS8402")==0) {
+instance.c:2354:           (stricmp(Instance->Reference,"?")!=0)) {
+instance.c:2359:          if (stricmp(Instance->Reference,"R2")==0) {
+instance.c:2420:            if (stricmp(str,"R003")==0) {
+instance.c:2453:            if (stricmp(str,"R?")==0) {
+instance.c:2614:          if (stricmp(RefCodes[cnt2],"R      ")==0) FoundCompNrR=cnt2;
+instance.c:2615:          if (stricmp(RefCodes[cnt2],"C      ")==0) FoundCompNrC=cnt2;
+instance.c:2868:                if (stricmp(ValueStr,"68K")==0) {
+instance.c:2922:                    if (stricmp(Component->Value,"MOER")==0) {
+instance.c:3426:  if ((stricmp(LayoutDesign.Identification,PCBCode)!=0)
+instance.c:3428:     (stricmp(LayoutDesign.Identification,PCBCode2)!=0)
+instance.c:3430:     (stricmp(LayoutDesign.Identification,PCBCode3)!=0)
+instance.c:3432:     (stricmp(LayoutDesign.Identification,PCBCode4)!=0)) return -4;
+instance.c:3482:    if (stricmp(Comp->ShapeName,"TO-220UP_1")==0) {
+instance.c:3610:  if ((stricmp(LayoutDesign.Identification,PCBCode)!=0)
+instance.c:3612:     (stricmp(LayoutDesign.Identification,PCBCode2)!=0)
+instance.c:3614:     (stricmp(LayoutDesign.Identification,PCBCode3)!=0)
+instance.c:3616:     (stricmp(LayoutDesign.Identification,PCBCode4)!=0)) return -4;
+memory.c:735:      if (stricmp(str1,str2)==0) Found=1;
+mentor.c:595:    if (stricmp(PinObject->Text1,"")==0) {
+mentor.c:808:    if (stricmp(str2,"smd_000x000")==0) {
+mentor.c:841:  if (stricmp(MentorPin->PadStackName,"smd_220x330_2")==0) {
+mentor.c:1248:    if (stricmp(ShapeNameP,"totx173")==0) {
+mentor.c:1268:    if (stricmp(ShapeNameP,"con4a_usb_a_angle_f_lowprofile")==0) {
+mentor.c:1312:    if (stricmp(ShapeNameP,"con4a_usb_a_angle_f_lowprofile")==0) {
+mentor.c:1325:      if (stricmp(ShapeNameP,"pcat-bus")==0) {
+mentor.c:1398:      if (stricmp(ShapeNameP,"K0603")==0) {
+mentor.c:1427:      if (stricmp(ShapeNameP,"Mountinghole_pcat")==0) {
+mentor.c:1519:        if (stricmp(ShapeNameP,"con4a_usb_a_angle_f_lowprofile")==0) {
+mentor.c:1606:      if (stricmp(ShapeNameP,"pcat-bus")==0) {
+mentor.c:1609:      if (stricmp(ShapeNameP,"so20")==0) {
+mentor.c:1762:          if (stricmp(ShapeNameP,"con4a_usb_a_angle_f_lowprofile")==0) {
+mentor.c:2040:      if (stricmp(ShapeNameP,"new_geom_4")==0) {
+mentor.c:2157:            if (stricmp(ShapeNameP,"con4a_usb_a_angle_f_lowprofile")==0) {
+mentor.c:2159:              if (stricmp(ShapeNameP,"smd_150_2")==0) {
+mentor.c:2169:              if (stricmp(MentorSpecialPins[Found].PadStackName,"smd_150_2")==0) {
+mentor.c:2238:                if (stricmp(ShapeNameP,"SOT23_6L")==0) {
+mentor.c:2452:    if (stricmp(ShapeNameP,"so20")==0) {
+mentor.c:2537:            if (stricmp(ShapeNameP,"SOT23_6L")==0) {
+mentor.c:2612:    if (stricmp(ShapeNameP,"con4a_usb_a_angle_f_lowprofile")==0) {
+mentor.c:2775:            if (stricmp(ShapeNameP,"con4a_usb_a_angle_f_lowprofile")==0) {
+mentor.c:2886:    if (stricmp(ShapeNameP,"con4a_usb_a_angle_f_lowprofile")==0) {
+mentor.c:2961:    if (stricmp(ShapeNameP,"new_geom_4")==0) {
+mentor.c:3043:    if (stricmp(ShapeNameP,"new_geom_4")==0) {
+netlist.c:822:    if (stricmp(GlobalConnectionStr,"Vdr")==0) {
+netlist.c:838:    if (stricmp(GlobalConnectionStr,"vee")==0) {
+netlist.c:1025:            if (stricmp(GlobalNetName,"TXD0")==0) {
+netlist.c:1203:     (stricmp(NetLabelName,"TAG7")==0)) {
+netlist.c:3209:    if (stricmp(NetLabelName,"READ")==0) {
+netlist.c:3528:    if (stricmp(RefCodes[cnt2],"U")==0) {
+netlist.c:3531:    if (stricmp(RefCodes[cnt2],"U")==0) {
+netlist.c:3628://          if (stricmp(GetObjectText(Object4->Text2),"POWER_CONNECT")!=0) {          // symbolname
+netlist.c:3640:          if (stricmp(p2,"u3")==0) {
+netlist.c:3655:            if (stricmp(p1,"u2")==0) {
+nets.c:132:        if (stricmp(Instance->SymbolName,"POWER_CONNECT")==0) {
+nets.c:149://            if (stricmp(PinObject->Text1,Sheets[cnt2].SheetName)==0) Object2->Info5=cnt2;
+nets.c:466:          if (stricmp(Design.Identification,SheetCode1)!=0) {
+nets.c:635:          if (stricmp(Design.Identification,SheetCode1)!=0) {
+nets.c:736:            if (stricmp(Design.Identification,SheetCode1)!=0) {
+nets.c:983:      if (stricmp(Instance->Reference,"K4")==0) {
+nets.c:986:      if (stricmp(Instance->SymbolName,"GND")==0) {

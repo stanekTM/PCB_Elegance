@@ -1,0 +1,45 @@
+change.c:      if ((strcmp(Design.Identification,SheetCode3)==0)
+change.c:         (strcmp(Design.Identification,SheetCode4)==0)
+change.c:         (strcmp(Design.Identification,SheetCode5)==0)) {
+change.c:        if ((strcmp(Design.Identification,SheetCode3)==0)
+change.c:           (strcmp(Design.Identification,SheetCode4)==0)) {
+change.c:      if ((strcmp(Design.Identification,SheetCode3)==0)
+change.c:         (strcmp(Design.Identification,SheetCode4)==0)
+change.c:         (strcmp(Design.Identification,SheetCode5)==0)) {
+change.c:        if ((strcmp(Design.Identification,SheetCode3)==0)
+change.c:           (strcmp(Design.Identification,SheetCode4)==0)) {
+files.c:  if (strcmp((LPSTR)&Design,SheetCode1)!=0) return -2;
+files.c:  if (strcmp(Design.Identification,SheetCode1)==0) {
+files.c:  if ((strcmp(Design.Identification,SheetCode2)==0)
+files.c:     (strcmp(Design.Identification,SheetCode3)==0)) {
+files.c:  if ((strcmp(Design.Identification,SheetCode4)==0)
+files.c:     (strcmp(Design.Identification,SheetCode5)==0)) {
+files.c:  if ((strcmp(Design.Identification,SheetCode1)==0)
+files.c:     (strcmp(Design.Identification,SheetCode2)==0)) {
+files.c:    if ((strcmp(Design.Identification,SheetCode3)==0)
+files.c:       (strcmp(Design.Identification,SheetCode4)==0)) {
+files.c:    if (strcmp(Lib.Identification,LibraryCode1)==0) {
+files.c:      if (strcmp(Lib.Identification,LibraryCode1)==0) {
+instance.c:    if ((strcmp(LayoutDesign.Identification,PCBCode)==0)
+instance.c:       (strcmp(LayoutDesign.Identification,PCBCode2)==0)) {
+instance.c:    if ((strcmp(LayoutDesign.Identification,PCBCode)==0)
+instance.c:       (strcmp(LayoutDesign.Identification,PCBCode2)==0)) {
+instance.c:              if (strcmp(Ref,"?")==0) {
+instance.c:  if ((strcmp(LayoutDesign.Identification,PCBCode)==0)
+instance.c:     (strcmp(LayoutDesign.Identification,PCBCode2)==0)) {
+instance.c:  if ((strcmp(LayoutDesign.Identification,PCBCode)==0)
+instance.c:     (strcmp(LayoutDesign.Identification,PCBCode2)==0)) {
+instance.c:          if (strcmp(Lib.Identification,LibraryCode2)==0) {
+instance.c:    if ((strcmp(LayoutDesign.Identification,PCBCode)==0)
+instance.c:       (strcmp(LayoutDesign.Identification,PCBCode2)==0)) {
+mentor.c:  if (strcmp(CurrentShapeNameP,"HEADER2X3_BOX2")==0) {
+mentor.c:  if (strcmp(TextP,"^$ref")==0) {
+mentor.c:         (strcmp(PinObject->Text2,"Layer2")==0)) {
+mentor.c:           (strcmp(PinNameP,"Layer2")==0)) {
+mentor.c:        if (strcmp(PinNameP,"1")==0) {
+mentor.c:          if (strcmp(PinNameP,"Layer2")==0) {
+mentor.c:      if (strcmp(PinNameP,"Layer2")==0) {
+netlist.c:        if (strcmp(Lib.Identification,LibraryCode2)==0) {
+netlist.c:        if (strcmp(Lib.Identification,LibraryCode2)==0) {
+pcb.c:        if (strcmp(Lib.Identification,LibraryCode2)==0) {
+pcb.c:    if (strcmp(PinText,SC(629,"Layer1"))==0) {

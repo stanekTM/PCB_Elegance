@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Orcad sdt.cfg</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Orcad sdt.cfg">
+</OBJECT>
+
+<P><A NAME="idh_orcad_sdt_cfg"></A><font size=5><U>Orcad sdt.cfg example</U><br>&nbsp;</font></P>
+
+<PRE><CODE>{ OrCAD/SDT IV  Configuration File }
+PDRV   = 'D:\ORCADESP\DRV\'
+PSCH   = ''
+PLIB   = 'D:\ORCADESP\SDT\LIBRARY\'
+DD     = 'VGA640.DRV'
+PRD    = ''
+PLD    = 'HP.DRV'
+LIB    = 'TTL.LIB'
+LIB    = 'CMOS.LIB'
+LIB    = 'DEVICE.LIB'</CODE></PRE>
+
+<P>If necessary such a sdt.cfg file can be created. The lines containing the strings PLIB and LIB are important, and the first line for identification.</P>
+
+<P>The PLIB string will contain the library directory, and the LIB strings the individual libraries in the library directory. </P>
+
+</BODY>
+</HTML>

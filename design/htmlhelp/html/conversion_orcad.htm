@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Conversion ORCAD schematics/libraries</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Conversion ORCAD schematics/libraries">
+</OBJECT>
+
+<P><A NAME="idh_conversion_orcad"></A><font size=5><U>Conversion ORCAD schematic/libraries</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mainmenu.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Sub menu <B>File</B> menu item 
+<P><B>Convert ORCAD schematic</B></P>
+
+<P><B>Convert ORCAD library</B></P>
+</TD>
+</TR>
+</TABLE><BR>
+
+<P>With these two functions ORCAD schematics and libraries can be converted to PCB elegance. ORCAD schematics and libraries being used in the windows version are not supported.</P>
+
+<P>Conversion ORCAD schematic:</P>
+
+<P>-After selection of the menu item the program continues with a dialogbox for the ORCAD schematic filename. Always select the top sheet, if there is a hierarchical structure for the schematics. The other sheets will be converted automatically.</P>
+
+<P>In the next dialogbox some parameters can be entered. If the project directory does not exist it will be created. The schematic(s) and symbols used will be copied inside this project directory.</P>
+
+<P>A provision has been made to use the geometries/shapes names attached to the components. ORCAD uses partfields for specifying such geomwtries/shapes attributes. The partfield nummer can be selected in the dialogbox.</P>
+
+<P>In most cases the geometries/shapes of ORCAD and PCB elegance do not match. In the “Geometry conversion file” field a filename can be placed, which will be used to translate the geometries.</P>
+
+<P>This file consists of a number of lines. Each line contains two strings. The first string is the geometry name used in the ORCAD file, and the second string is the PCB elegance geometry.</P>
+
+<P>Empty lines or lines starting with a ‘;’ will be ignored.</P>
+
+<P></P>
+
+<P>Now the conversion starts with reading the ORCAD configuration file <B>sdt.cfg</B>. This configuration file (Which libraries to be used) should be in the same directory as the schematic file. If the sdt.cfg file does not exist you should create this file, otherwise no symbol can be found. </P>
+
+<P><A HREF="orcad_sdt_cfg.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Example ORCAD sdt.cfg</A></P>
+
+<P>Conversion ORCAD library:</P>
+
+<P>-After selection of the menu item the program continues with a dialogbox for the ORCAD library filename. In the next dialogbox the directory of the converted library can be entered.</P>
+
+</BODY>
+</HTML>

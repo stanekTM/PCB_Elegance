@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Bill Of Materials</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Bill Of Materials">
+</OBJECT>
+
+<P><A NAME="idh_bill_of_materials"></A><font size=5><U>Bill Of Materials</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/bom.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Press <B>BOM</B> button</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mainmenu.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Sub menu <B>Edit</B> menu item <B>Bill Of Materials</B></TD>
+</TR>
+</TABLE><BR>
+
+<P>In the next dialogbox three Bill Of Materials methods can be selected. The previous Bill Of Materials files will be copied to the <B>backup</B> subdirectory.</P>
+
+<P><U>List of components</U></P>
+
+<P>Every component will be listed on a line. The columns in each line can also be selected. Possible columns are:
+
+<UL>
+	<LI>Position<BR><BR></LI>
+
+	<LI>Reference<BR><BR></LI>
+
+	<LI>Value<BR><BR></LI>
+
+	<LI>Geometry<BR><BR></LI>
+
+	<LI>PartNr<BR><BR></LI>
+
+	<LI>Description<BR><BR></LI>
+
+	<LI>Extra component properties (optional)</LI>
+</UL>
+
+<P>The columns can be shifted horizontial using the two arrow buttons. With the <B>delete</B> button a column can be removed, and with the <B>Add</B> button a new column can be inserted. If there components marked with a placing option a component property <B>MULTI_ASSY</B> = <B>NP</B> will be used. This MULTI_ASSY property will be added to the possible selectable columns. </P>
+
+<P>The filename of this Bill Of Materials is <B>component.txt</B> and <B>component.tdl</B>. The <B>component.tdl</B> file can be used to import in a spreadsheet.</P>
+
+<P><U>Bill of materials</U></P>
+
+<P>In this Bill Of Materials components are summed and listed. The filename of this Bill Of Materials is <B>&lt;design-name&gt;.bom</B> and <B>&lt;design-name&gt;.tdl</B>. The <B>&lt;design-name&gt;.tdl</B> file can be used to import in a spreadsheet. There are three buttons which control which columns are to be used.</P>
+
+<P><U><B>pos,value,#,geometrie</B> </U></P>
+
+<P><BR>
+The columns used are Position,value,nr components and geometrie.</P>
+
+<P><B><U>pos,value,#,geometrie,part nr</U></B></P>
+
+<P><BR>
+The columns used are Position,value,nr components, geometrie and part nr.</P>
+
+<P><B><U>pos,value,#,geometrie,part nr,description</U></B></P>
+
+<P><BR>
+The columns used are Position,value,nr components, geometrie, part nr and description.</P>
+
+<P>There is also an option for sorting on value or part nr if applicable.</P>
+
+</BODY>
+</HTML>

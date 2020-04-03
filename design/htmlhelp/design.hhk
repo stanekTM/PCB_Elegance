@@ -1,0 +1,106 @@
+<HTML>
+<!-- Sitemap 1.0 -->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Annotation">
+		<param name="Name" value="Annotation">
+		<param name="Local" value="html/annotation.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Back annotation">
+		<param name="Name" value="Back annotation">
+		<param name="Local" value="html/back_annotation.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Bill Of Materials">
+		<param name="Name" value="Bill Of Materials">
+		<param name="Local" value="html/bill_of_materials.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change components">
+		<param name="Name" value="Change components">
+		<param name="Local" value="html/edit_change_components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Check">
+		<param name="Name" value="Check">
+		<param name="Local" value="html/check.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Conversion ORCAD schematics/libraries">
+		<param name="Name" value="Conversion ORCAD schematics/libraries">
+		<param name="Local" value="html/conversion_orcad.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy symbols/shapes locally">
+		<param name="Name" value="Copy symbols/shapes locally">
+		<param name="Local" value="html/copy_symbols_shapes.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Create netlist">
+		<param name="Name" value="Create netlist">
+		<param name="Local" value="html/create_netlist.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit design settings">
+		<param name="Name" value="Edit design settings">
+		<param name="Local" value="html/edit_design_settings.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit symbol">
+		<param name="Name" value="Edit symbol">
+		<param name="Local" value="html/symbol_editor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Geometry editor">
+		<param name="Name" value="Geometry editor">
+		<param name="Local" value="html/geometry_editor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Gerber viewer">
+		<param name="Name" value="Gerber viewer">
+		<param name="Local" value="html/gerber_viewer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Layout editor">
+		<param name="Name" value="Layout editor">
+		<param name="Local" value="html/layout_editor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Library manager geometries">
+		<param name="Name" value="Library manager geometries">
+		<param name="Local" value="html/library_manager_geometries.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Library manager symbols">
+		<param name="Name" value="Library manager symbols">
+		<param name="Local" value="html/library_manager_symbols.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Make new design">
+		<param name="Name" value="Make new design">
+		<param name="Local" value="html/make_new_design.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Open sheet">
+		<param name="Name" value="Open sheet">
+		<param name="Local" value="html/open_sheet.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Orcad sdt.cfg">
+		<param name="Name" value="Orcad sdt.cfg">
+		<param name="Local" value="html/orcad_sdt_cfg.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Print all sheets">
+		<param name="Name" value="Print all sheets">
+		<param name="Local" value="html/print_all_sheets.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Print all sheets to PDF">
+		<param name="Name" value="Print all sheets to PDF">
+		<param name="Local" value="html/print_all_sheets_pdf.htm">
+		</OBJECT>
+</UL></HTML>

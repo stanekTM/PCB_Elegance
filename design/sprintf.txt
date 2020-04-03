@@ -1,0 +1,704 @@
+calc.c:659:    sprintf(str,SC(0,"Error in opening file %s\r\n"),FileName);
+calc.c:665:    sprintf(str,SC(1,"Error in reading file %s\r\n"),FileName);
+calc.c:680:    sprintf(str,SC(2,"%s is not a valid sheet file\r\n"),FileName);
+calc.c:710://  sprintf(Message,"The following symbols were not found/had errors :\r\n\r\n");
+calc.c:756://        sprintf(str2,"%s (%d msec)\n",Instance.SymbolName,GetDifferenceTimer1inMilliSeconds()-Time1);
+calc.c:819:  sprintf(SheetDir,"%s\\sch\\",DesignPath);
+calc.c:821:    sprintf(FileName,"%s\\sch\\%s.sch",DesignPath,Sheets[SheetCnt].SheetName);
+calc.c:852:    sprintf(str,"%d",NrSheets);
+change.c:91:  sprintf(SwapFileName,"%s\\pcb\\gatepin.ban",DesignPath);
+change.c:160://      sprintf(str,"SWAP GATE %s %i WITH %s %i",Reference1,PartNr1,Reference2,PartNr2);
+change.c:161://      sprintf(str,"SWAP PIN %s %s WITH %s %s",Reference1,str6a,Reference2,str6b);
+change.c:162://      sprintf(str,"SWAP PINBUS1 %s %i PINS %s WITH %s",Reference1,NrPins,PinBusLabel1,PinBusLabel2);
+change.c:163://      sprintf(str,"SWAP PINBUS0 %s %i %s PIN %s WITH %s",Reference1,NrPins,PinBusLabel1,str6a,str6b);
+change.c:164://      sprintf(str,"CHANGE GEOM U100 WITH %s"
+change.c:232:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+change.c:747:      sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+change.c:748:      sprintf(str,SC(126,"Sheet %s back annotated\r\n"),FileName);
+change.c:782:  sprintf(FileStr,"%s\\comp.txt",ExePath);
+change.c:1015:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+change.c:1061:            sprintf(str,SC(264,"!!!! Symbol name %s will be changed in %s\r\n"),Instance->SymbolName,NewSymbolName);
+change.c:1241:      sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+change.c:1242:      sprintf(str,SC(264,"%d symbols changed in sheet %s\r\n"),count,FileName);
+change.c:1270:  sprintf(UserVarFileName,"%s.var",str);
+change.c:1271:  sprintf(UserVarFileName2,"%s_new.var",str);
+change.c:1294:        sprintf(str3,"%s=\"%s\"",str,str2);
+change.c:1303:    sprintf(str3,"%s=\"%s\"",UserVarID,UserVarValue);
+check.c:285:          sprintf(str,SC(238,"Warning: One end of the wire (%.1f,%.1f - %.1f,%.1f) is unconnected in sheet %s\r\n"),
+check.c:1136:    sprintf(str,SC(226,"Wire/bus error(s) in sheet %s\r\n"),Filename);
+check.c:1143:    sprintf(str,SC(227,"Overlapping wires in sheet %s\r\n"),Filename);
+check.c:1149:    sprintf(str,SC(228,"Overlapping busses in sheet %s\r\n"),Filename);
+check.c:1155:    sprintf(str,SC(229,"Busconnection error(s) in sheet %s\r\n"),Filename);
+check.c:1161:    sprintf(str,SC(230,"Global connection error(s) in sheet %s\r\n"),Filename);
+check.c:1172:    sprintf(str,SC(231,"Unused junction error(s) in sheet %s\r\n"),Filename);
+check.c:1178:    sprintf(str,SC(232,"Unused one pin net error(s) in sheet %s\r\n"),Filename);
+check.c:1184:    sprintf(str,SC(233,"Netlabel error(s) in sheet %s\r\n"),Filename);
+check.c:1190:    sprintf(str,SC(234,"Pin error (%.1f,%.1f) in sheet %s\r\n"),cx,cy,Filename);
+check.c:1196:    sprintf(str,SC(235,"Unused Global connection error(s) in sheet %s\r\n"),Filename);
+check.c:1202:    sprintf(str,SC(236,"Unused busconnection error(s) in sheet %s\r\n"),Filename);
+command.c:96:    sprintf(WorkFile,"%s\\sch\\%s.sch",DesignPath,Sheets[SheetNr].SheetName);
+command.c:105:    sprintf(ExeFile,"%s\\sch.exe",ExePath);
+command.c:107:    sprintf(ExeParams,"\"%s\" \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\"",
+command.c:126:      sprintf(ExeFile,"%s\\sch.exe",ExePath);
+command.c:130:          sprintf(ExeParams,"\"%s\" /a /t1 /o /e \"%s\" /p \"%s\" /u \"%s\" /x \"%s\\%s.dsn\"",
+command.c:137:        sprintf(ExeParams,"\"%s\" /a /t1 /o /e \"%s\" /p \"%s\" /u \"%s\"",
+command.c:183:        sprintf(str,SC(9,"Design %s closed\r\n"),OldDesignFile);
+command.c:207:        sprintf(str,SC(11,"Design %s opened\r\n"),DesignFile);
+command.c:247:      sprintf(str,SC(9,"Design %s closed\r\n"),DesignFile);
+command.c:283:        sprintf(str,SC(248,"Bill Of Materials could not be created\r\n"));
+command.c:302:        sprintf(str2,SC(273,"Could not find reference %s"),str3);
+command.c:313:      sprintf(str2,"%s\\sch\\%s.sch",DesignPath,Sheets[SheetNr].SheetName);
+command.c:329:      sprintf(ExeFile,"%s\\sch.exe",ExePath);
+command.c:331:      sprintf(ExeParams,"\"%s\" \"%s\" /r \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\"",
+command.c:351:        sprintf(str2,SC(274,"Could not find partnr %s"),str3);
+command.c:362:      sprintf(str2,"%s\\sch\\%s.sch",DesignPath,Sheets[SheetNr].SheetName);
+command.c:378:      sprintf(ExeFile,"%s\\sch.exe",ExePath);
+command.c:380:      sprintf(ExeParams,"\"%s\" \"%s\" /r2 \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\"",
+command.c:409:      sprintf(WorkFile,"%s\\pcb\\%s.pcb",DesignPath,LayoutFile);
+command.c:421:      sprintf(ExeFile,"%s\\pcb.exe",ExePath);
+command.c:423:      sprintf(ExeParams,"\"%s\" \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\" /r \"%s\"",
+command.c:454:      sprintf(WorkFile,"%s\\pcb\\%s.pcb",DesignPath,LayoutFile);
+command.c:466:      sprintf(ExeFile,"%s\\pcb.exe",ExePath);
+command.c:468:      sprintf(ExeParams,"\"%s\" \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\" /r2 \"%s\"",
+command.c:504:        sprintf(WorkFile,"%s\\sch\\%s.sch",DesignPath,Sheets[SheetNr].SheetName);
+command.c:505:        sprintf(str2,SC(239,"Do you want to load the sheet %s"),WorkFile);
+command.c:524:            sprintf(ExeFile,"%s\\sch.exe",ExePath);
+command.c:526:            sprintf(ExeParams,"\"%s\\sch.exe\" \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\"",
+command.c:529:              sprintf(str2," /y %.1f,%.1f",x,y);
+command.c:544:        sprintf(str,SC(450,"No errors found in check schematics\r\n"));
+command.c:570:        sprintf(str,SC(249,"Error in creating netlist\r\n"));
+command.c:574:        sprintf(WorkFile,"%s\\sch\\%s.sch",DesignPath,Sheets[SheetNr].SheetName);
+command.c:575:        sprintf(str2,SC(239,"Do you want to load the sheet %s"),WorkFile);
+command.c:600:            sprintf(ExeFile,"%s\\sch.exe",ExePath);
+command.c:602:            sprintf(ExeParams,"\"%s\\sch.exe\" \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\"",
+command.c:605:              sprintf(str2," /y %.1f,%.1f",x,y);
+command.c:627:            sprintf(WorkFile,"%s\\sch\\%s.sch",DesignPath,Sheets[SheetNr].SheetName);
+command.c:628:            sprintf(str2,SC(239,"Do you want to load the sheet %s"),WorkFile);
+command.c:647:                sprintf(ExeFile,"%s\\sch.exe",ExePath);
+command.c:649:                sprintf(ExeParams,"\"%s\" \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\"",
+command.c:652:                  sprintf(str2," /y %.1f,%.1f",x,y);
+command.c:665:        sprintf(str,SC(249,"Error in creating netlist\r\n"));
+command.c:678:      sprintf(ExeFile,"%s\\geom.exe",ExePath);
+command.c:681:        sprintf(ExeParams,"\"%s\" /d \"%s\" /a /o /e \"%s\" /u \"%s\"",
+command.c:684:        sprintf(ExeParams,"\"%s\" /a /o /e \"%s\" /u \"%s\"",
+command.c:703:      sprintf(WorkFile,"%s\\pcb\\%s.pcb",DesignPath,LayoutFile);
+command.c:717:      sprintf(ExeFile,"%s\\pcb.exe",ExePath);
+command.c:719:      sprintf(ExeParams,"\"%s\" \"%s\" /a /o /e \"%s\" /u \"%s\" /x \"%s\\%s.dsn\"",
+command.c:728:      sprintf(ExeFile,"%s\\libman.exe",ExePath);
+command.c:730:      sprintf(ExeParams,"\"%s\" /e \"%s\" /u \"%s\"",
+command.c:736://      sprintf(FileName,"\"%s\\libman.exe\" /e \"%s\"",
+command.c:741:      sprintf(ExeFile,"%s\\libman.exe",ExePath);
+command.c:743:      sprintf(ExeParams,"\"%s\" /d \"%s\" /g /e \"%s\" /u \"%s\"",
+command.c:749://      sprintf(FileName,"\"%s\\libman.exe\" /d \"%s\" /g /e \"%s\"",
+command.c:771:      sprintf(str3,"%s\\viewplot.ini",DesignPath);
+command.c:772:      sprintf(str2,"%s\\pcb\\gerber\\GerberFiles.txt",DesignPath);
+command.c:773:      sprintf(ExeFile,"%s\\viewplot.exe",ExePath);
+command.c:776:        sprintf(ExeParams,"\"%s\\viewplot.exe\" /x \"%s\" /b /y \"%s\"",ExePath,str2,str3);
+command.c:778:        sprintf(ExeParams,"\"%s\\viewplot.exe\" /b /y \"%s\"",ExePath,str3);
+command.c:793:      sprintf(ExeFile,"%s\\notepad.exe",windir);
+command.c:806:      sprintf(ExeParams,"\"%s\" \"%s.var\"",ExeFile,str);
+command.c:827:          sprintf(str,SC(13,"ORCAD schematic(s) has been converted\r\n"));
+command.c:830:          sprintf(str,SC(14,"ORCAD library has been converted\r\n"));
+command.c:833:          sprintf(str,SC(15,"During conversion of the ORCAD file there was an error\r\n"));
+design.c:184:    sprintf(str,"TEST TEST TEST    Design %s     TEST TEST TEST",DesignName);
+design.c:186:    sprintf(str,"TEST TEST TEST    Design manager    TEST TEST TEST");
+design.c:190:    sprintf(str,"Design %s",DesignName);
+design.c:192:    sprintf(str,"Design manager");
+design.c:241:    sprintf(ExeFile,"%s\\sch.exe",ExePath);
+design.c:242:    sprintf(ExeParams,"\"%s\" \"%s\" /a /o /e \"%s\"",
+design.c:905:    sprintf(FileName ,"%s\\start.ini",ExePath);
+design.c:906:    sprintf(FileName2,"%s\\pcb_lic_limited25.txt",ExePath);
+design.c:907:    sprintf(FileName3,"%s\\pcb_eleg_size.txt",ExePath);
+design.c:909:    sprintf(FileName ,"%sstart.ini",ExePath);
+design.c:910:    sprintf(FileName2,"%spcb_lic_limited25.txt",ExePath);
+design.c:911:    sprintf(FileName3,"%spcb_eleg_size.txt",ExePath);
+design.c:929:            sprintf(str4,"%s%s",ExePath,(LPSTR)&LineBuf[7]);
+design.c:938:            sprintf(str4,"\"%s%s\"",ExePath,(LPSTR)&LineBuf[6]);
+design.c:1003:    sprintf(str,"Can not read from language file %s, default language used",FileName);
+design.c:1021:    sprintf(LanguageFileName,"%s\\%s",ExePath,str);
+design.c:1033:    sprintf(str,"Can not read from language file %s",LanguageFileName);
+design.c:1206:  sprintf(str,"%s\\LanguageDesign.txt",ExePath);
+design.c:1225:  sprintf(str,SC(18,"Can not find project directory  %s\n\nCreate the directory ?"),ProjectPath);
+design.c:1234:  sprintf(str,"%s\\test.xxx",ProjectPath);
+design.c:1238:    sprintf(str,SC(20,"Can not create a test file  %s\\test.xxx\r\n\r\n"),ProjectPath);
+design.c:1247:  sprintf(UserIniFile,"%s\\user.ini",ProjectPath);
+files.c:124:  sprintf(FileName,"%s%s.sch",SheetDir,Sheets[SheetNr].SheetName);
+files.c:127:    sprintf(str,SC(25,"Loading sheet %s\r\n"),FileName);
+files.c:134:      sprintf(str,SC(0,"Error in opening file %s\r\n"),FileName);
+files.c:142:      sprintf(str,SC(1,"Error in reading file %s\r\n"),FileName);
+files.c:158:      sprintf(str,SC(2,"%s is not a valid sheet file\r\n"),FileName);
+files.c:410:            sprintf(str,SC(26,"Symbol %s not found\r\n"),SymbolName);
+files.c:418:          sprintf(str,SC(26,"Symbol %s not found\r\n"),SymbolName);
+files.c:675:  sprintf(str,"%s\\sym\\%s.sym",DesignPath,SymbolName);
+files.c:690:  sprintf(str,"%s\\sym\\%s.sym",ProjectPath,SymbolName);
+files.c:751:    sprintf(str,"%s\\*.lib",LibraryPath);
+files.c:760:      sprintf(FileStr,"%s\\%s",LibraryPath,str2);
+files.c:1027:    sprintf(BackupFile1,"%s\\backup\\%s_4.%s",DirPart,FilePart,Extension);
+files.c:1029:      sprintf(BackupFile2,"%s\\backup\\%s_5.%s",DirPart,FilePart,Extension);
+files.c:1032:    sprintf(BackupFile1,"%s\\backup\\%s_3.%s",DirPart,FilePart,Extension);
+files.c:1034:      sprintf(BackupFile2,"%s\\backup\\%s_4.%s",DirPart,FilePart,Extension);
+files.c:1037:    sprintf(BackupFile1,"%s\\backup\\%s_2.%s",DirPart,FilePart,Extension);
+files.c:1039:      sprintf(BackupFile2,"%s\\backup\\%s_3.%s",DirPart,FilePart,Extension);
+files.c:1042:    sprintf(BackupFile1,"%s\\backup\\%s.%s",DirPart,FilePart,Extension);
+files.c:1044:      sprintf(BackupFile2,"%s\\backup\\%s_2.%s",DirPart,FilePart,Extension);
+files.c:1047:    sprintf(BackupFile1,"%s\\%s.%s",DirPart,FilePart,Extension);
+files.c:1048:    sprintf(BackupFile2,"%s\\backup\\%s.%s",DirPart,FilePart,Extension);
+files.c:1068:  sprintf(str1,"%s\\sch.ini",DesignPath);
+files.c:1254:            sprintf(DesignPath,"%s\\%s",ProjectPath,DesignName);
+files.c:1711:      sprintf(str,"%d",TempMaxNrRefsPerSheet);
+files.c:1806:      sprintf(str,SC(65,"Build version %i.%i.%i  [ %s ]"),PROGRAM_VERSION/100,PROGRAM_VERSION % 100,BUILD_VERSION,TIME_STRING);
+files.c:1949:        sprintf(OrcadConversionInfo.OutputDirectory,"%s\\%s",ProjectPath,str);
+files.c:1951:        sprintf(OrcadConversionInfo.OutputDirectory,"%s\\lib",ProjectPath);
+files.c:1959:          sprintf(str,"%d",cnt);
+files.c:2055:  sprintf(ExeFile,"%s\\OrcadConversion.exe",ExePath);
+files.c:2062:      sprintf(str,SC(81,"Can not find directory  %s"),OrcadConversionInfo.OutputDirectory);
+files.c:2068:      sprintf(str2,SC(9,"Design %s closed\r\n"),DesignFile);
+files.c:2083:    sprintf(ExeParams,"\"%s\" /s%s /d%s",ExeFile,OrcadConversionInfo.OrcadFile,OrcadConversionInfo.OutputDirectory);
+files.c:2089:      sprintf(str3," /g%d",OrcadConversionInfo.GeometryIndex);
+files.c:2092:    sprintf(str3," /w%x /m%d",DESIGNWindow,ID_ORCAD_EXIT_MESSAGE);
+files.c:2104:    sprintf(ExeParams,"\"%s\" /l%s /d%s  /w%x /m%d",
+files.c:2258:    sprintf(str,"%s\\sch\\%s.pdf",DesignPath,DesignName);
+files.c:2261:      sprintf(str2,SC(1024,"Can not open file %s"),str);
+files.c:2321:    sprintf(str,SC(219,"Printing sheet %s\r\n"),Sheets[cnt2].SheetName);
+files.c:2324:    sprintf(SchematicFile,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+files.c:2325:    sprintf(ExeFile,"%s\\sch.exe",ExePath);
+files.c:2327:      sprintf(ExeParams,"\"%s\" /o /e \"%s\" /p \"%s\" /u \"%s\" /n \"%s,%d\" /x \"%s\\%s.dsn\" \"%s\"",
+files.c:2330:      sprintf(ExeParams,"\"%s\" /o /e \"%s\" /p \"%s\" /u \"%s\" /n \"$PDF$,%d,%d,%d,%d\" /x \"%s\\%s.dsn\" \"%s\"",
+files.c:2420:  sprintf(str,"%d 0 obj\n",NrPDFObjects);
+files.c:2424:  sprintf(str,"/Count %d\n",NrSheets);
+files.c:2429:      sprintf(str2,"/Kids [%d 0 R",NrPDFObjectsRootDir+cnt+1);
+files.c:2431:      sprintf(str2," %d 0 R",NrPDFObjectsRootDir+cnt+1);
+files.c:2446:    sprintf(str,"%d 0 obj\n",NrPDFObjects);
+files.c:2450:    sprintf(str,"/Parent %d 0 R\n",NrPDFObjectsRootDir);
+files.c:2452:    sprintf(str,"/Resources << /Procset %d 0 R\n",NrPDFObjectsRootDir+NrSheets*2+4);
+files.c:2454:    sprintf(str,"              /Font << /F1 %d 0 R >>\n",NrPDFObjectsRootDir+NrSheets*2+5);
+files.c:2457:    sprintf(str,"/MediaBox [0 0 %d %d]\n",PageSizeUnitsX,PageSizeUnitsY);
+files.c:2459:    sprintf(str,"/Contents %d 0 R\n",SheetPdfObjectStart[cnt3]+1);
+files.c:2474:      sprintf(str2,"%d 0 R ",cnt4+1);
+files.c:2494:    sprintf(str,"%d 0 obj\n",NrPDFObjects);
+files.c:2497:    sprintf(str,"/Dest [%d 0 R /Fit]\n",NrPDFObjectsRootDir+cnt+1);
+files.c:2499:    sprintf(str,"/Parent %d 0 R\n",NrPDFObjectsRootDir+NrSheets*2+1);
+files.c:2501:    sprintf(str,"/Title (%s)\n",PageTitles[cnt]);
+files.c:2504:      sprintf(str,"/Prev %d 0 R\n",NrPDFObjectsRootDir+NrSheets+cnt);
+files.c:2510:      sprintf(str,"/Next %d 0 R\n",NrPDFObjectsRootDir+NrSheets+cnt+2);
+files.c:2519:  sprintf(str,"%d 0 obj\n",NrPDFObjects);
+files.c:2523:  sprintf(str,"/First %d 0 R\n",NrPDFObjectsRootDir+NrSheets+1);
+files.c:2525:  sprintf(str,"/Last %d 0 R\n",NrPDFObjectsRootDir+NrSheets*2);
+files.c:2532:  sprintf(str,"%d 0 obj\n",NrPDFObjects);
+files.c:2536:  sprintf(str,"/Pages %d 0 R\n",NrPDFObjectsRootDir);
+files.c:2538:  sprintf(str,"/Outlines %d 0 R\n",NrPDFObjectsRootDir+NrSheets*2+1);
+files.c:2549:  sprintf(str,"%d 0 obj\n",NrPDFObjects);
+files.c:2558:    sprintf(str,"/Author (%s)\n",PDFCreatorOrganisation);
+files.c:2562:    sprintf(str,"/Creator (%s)\n",PDFCreatorName);
+files.c:2566:    sprintf(str,"/Subject (%s)\n",PDFSubject);
+files.c:2570:    sprintf(str,"/Title (%s)\n",PDFTitle);
+files.c:2585:    sprintf(PDFTitle,"Schematic files from design %s",str2);
+files.c:2586:    sprintf(str,"/Title (%s)\n",PDFTitle);
+files.c:2589:  sprintf(str,"/Producer (PCB elegance %d.%d)\n",PROGRAM_VERSION/100,PROGRAM_VERSION % 100);
+files.c:2595:  sprintf(str,"%d 0 obj\n",NrPDFObjects);
+files.c:2603:  sprintf(str,"%d 0 obj\n",NrPDFObjects);
+files.c:2617:  sprintf(str,"0 %d\n",NrPDFObjects+1);
+files.c:2621:    sprintf(str,"%010d 00000 n \n",(*PDFObjectPos)[cnt]);
+files.c:2626:  sprintf(str,"/Size %d\n",NrPDFObjects+1);
+files.c:2628:  sprintf(str,"/Root %d 0 R\n",NrPDFObjectsRootDir+NrSheets*2+2);
+files.c:2630:  sprintf(str,"/Info %d 0 R\n",NrPDFObjectsRootDir+NrSheets*2+3);
+files.c:2635:  sprintf(str,"%d\n",pos);
+files.c:2639:  sprintf(str,SC(220,"Printing finished ( %s\\sch\\%s.pdf )\r\n"),DesignPath,DesignName);
+files.c:2663:  sprintf(Line,"\"%s\"",TopSheetName);
+files.c:2669:  sprintf(Line,"\"%s\"",LayoutFile);
+files.c:2677:      sprintf(Line,"\"%s\"",GeometryLibraries[cnt]);
+files.c:2686:      sprintf(Line,"\"%s\"",SchematicSymbolLibraries[cnt]);
+files.c:2694:  sprintf(Line,"UpdateLayout=%i",ProjectInfo->OtherInfos[0]);
+files.c:2696:  sprintf(Line,"SaveSymbolsLocally=%i",SaveSymbolsLocally);
+files.c:2698:  sprintf(Line,"DisableOnePinNetCheck=%i",DisableOnePinNetCheck);
+files.c:2703:    sprintf(Line,"PropertyExcludeInBOMID=%s",ExcludeInBOMID);
+files.c:2705:    sprintf(Line,"PropertyExcludeInBOMValue=%s",ExcludeInBOMValue);
+files.c:2709:    sprintf(Line,"PrinterName=\"%s\"",PrinterName);
+files.c:2713:    sprintf(Line,"PrinterOptions=%i",PaperSize);
+files.c:2717:    sprintf(Line,"BillOfMaterialColumnUsed%d=%d",cnt+1,BOMInfo.ColumnsUsed[cnt]);
+files.c:2723:    sprintf(str2,SC(85,"Could not write to file %s"),DesignFile);
+files.c:2783://            sprintf(str2,"%s\\pcb\\%s",DesignPath,str1);
+files.c:2817:                sprintf(str4,"BillOfMaterialColumnUsed%d",cnt+1);
+files.c:2894:  sprintf(Line,"WindowWidth=%i",WindowWidth);
+files.c:2896:  sprintf(Line,"WindowHeight=%i",WindowHeight);
+files.c:2899:  sprintf(Line,"WindowStartX=%i",WindowStartX);
+files.c:2901:  sprintf(Line,"WindowStartY=%i",WindowStartY);
+files.c:2911:      sprintf(str,"\"%s\"",LastDesigns[cnt]);
+files.c:2917:      sprintf(str,"\"%s\"",LastDesigns[cnt]);
+files.c:2925:    sprintf(str2,SC(85,"Could not write to file %s"),FileName);
+files.c:3016:  sprintf(LibraryPath,"%s\\lib",ProjectPath);
+help.c:12:  sprintf(str,"%s\\design.chm::/html/%s",ExePath,Topic);
+instance.c:103:    sprintf(outstr,"%s%s",instr,str);
+instance.c:533:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+instance.c:748:        sprintf(str2,"%s%d",Component->Reference,Component->RefNum);
+instance.c:754:            sprintf(str,"Changed symbol for component %s\r\n",str2);
+instance.c:776:        sprintf(str,SC(86,"Too much parts for component %s\r\n"),UsedMultiPartRefs[cnt]);
+instance.c:795:        sprintf(str2,"%s%d",Component->Reference,Component->RefNum);
+instance.c:822:              sprintf(str,SC(87,"Warning symbol %s of component %s does not exist\r\n"),
+instance.c:835:              sprintf(str,SC(88,"Error symbol %s of component %s exists more than once\r\n"),
+instance.c:859:          sprintf(str3," [%.1f,%.1f]",Component->x,Component->y);
+instance.c:862:          sprintf(str2,"%s%d (%s)",Component->Reference,Component->RefNum,Component->SymbolName);
+instance.c:864:          sprintf(str2," (%s)",Component->SymbolName);
+instance.c:866:        sprintf(str,SC(89,"Error in component "));
+instance.c:933:  sprintf((char *)&TempMem2[UsedLayoutCompRefPtr],"%s ",str);
+instance.c:954:          sprintf(str3,"Comp %s -> %s\r\n",OldRef,str);
+instance.c:979:          sprintf(str3,"Comp %s -> %s\r\n",OldRef,str);
+instance.c:1026:      sprintf(str,"%s0%i",Component->Reference,Component->RefNum);
+instance.c:1029:      sprintf(str,"%s00%i",Component->Reference,Component->RefNum);
+instance.c:1032:      sprintf(str,"%s000%i",Component->Reference,Component->RefNum);
+instance.c:1035:      sprintf(str,"%s%i",Component->Reference,Component->RefNum);
+instance.c:1046:      sprintf(str3,SC(90,"Append reference %s\r\n"),str);
+instance.c:1157:          sprintf(str3,SC(91,"The following layout components are not renamed:\r\n\r\n"));
+instance.c:1161:        sprintf(str3,"%s\r\n",LayoutComp->Name);
+instance.c:1170:          sprintf(str3,SC(91,"The following layout components are not renamed:\r\n\r\n"));
+instance.c:1174:        sprintf(str3,"%s\r\n",OldLayoutComp->Name);
+instance.c:1219:  sprintf(str3,SC(95,"Restart annotation\r\n"));
+instance.c:1222:  sprintf(str3,"---------------------------------------------------\r\n");
+instance.c:1239:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt5].SheetName);
+instance.c:1240:    sprintf(str3,SC(96,"Sheet %s\r\n"),FileName);
+instance.c:1287:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[SheetNr].SheetName);
+instance.c:1288:    sprintf(str3,SC(96,"Sheet %s\r\n"),FileName);
+instance.c:1305:        sprintf(str3,SC(225,"On sheet %s annotation can not start at %d\r\nIncrease the max number of refs per sheet"),
+instance.c:1449:      sprintf(str3,SC(97,"!!!!! The netlist needs also to be regenerated\r\n"));
+instance.c:1455:  sprintf(str3,SC(98,"Annotation done\r\n"));
+instance.c:1508:  sprintf(str3,SC(99,"Appending annotation\r\n"));
+instance.c:1511:  sprintf(str3,"---------------------------------------------------\r\n");
+instance.c:1559:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[SheetNr].SheetName);
+instance.c:1560:    sprintf(str3,SC(96,"Sheet %s\r\n"),FileName);
+instance.c:1811:  sprintf(str3,SC(98,"Annotation done\r\n"));
+instance.c:1835:  sprintf(str,SC(100,"Checking references\r\n"));
+instance.c:1839://    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+instance.c:1840://    sprintf(str,"Checking references %s\r\n",FileName);
+instance.c:1860:            sprintf(str,SC(101,"Error in component %s file %s\r\n"),Ref,FileName);
+instance.c:1868:            sprintf(str,SC(101,"Error in component %s file %s\r\n"),Ref,FileName);
+instance.c:1878:            sprintf(str,SC(101,"Error in component %s file %s\r\n"),Ref,FileName);
+instance.c:1891:                sprintf(str,SC(102,"Error in component %s (%s) file %s\r\n"),Ref,Instance->Value,FileName);
+instance.c:1894:                sprintf(str,SC(101,"Error in component %s file %s\r\n"),Ref,FileName);
+instance.c:1901:                sprintf(str,SC(104,"Max of %i component numbers per reference family (%s) in file %s\r\n"),MAX_NR_CODES_PER_REF-1,Ref,FileName);
+instance.c:1907:                  sprintf(str,SC(105,"Negative component number (%s) in file %s\r\n"),Ref,FileName);
+instance.c:1916://          sprintf(str,"Component with no reference (%.0f,%.0f) file %s\r\n",Ref,FileName);
+instance.c:1935:        sprintf(str,SC(106,"Sheet %s needs to be annotated\r\n"),FileName);
+instance.c:1967:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+instance.c:1995:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+instance.c:2037:          sprintf(fpstr,"%s0%i",Component->Reference,Component->RefNum);
+instance.c:2040:          sprintf(fpstr,"%s00%i",Component->Reference,Component->RefNum);
+instance.c:2043:          sprintf(fpstr,"%s000%i",Component->Reference,Component->RefNum);
+instance.c:2046:          sprintf(fpstr,"%s%i",Component->Reference,Component->RefNum);
+instance.c:2052:    sprintf(str6,"%s%i",Component->Reference,Component->RefNum);
+instance.c:2066:        sprintf(str6,"%i",count);
+instance.c:2073:              sprintf(str6,"%s0%i",Component->Reference,Component->RefNum);
+instance.c:2076:              sprintf(str6,"%s00%i",Component->Reference,Component->RefNum);
+instance.c:2079:              sprintf(str6,"%s000%i",Component->Reference,Component->RefNum);
+instance.c:2082:              sprintf(str6,"%s%i",Component->Reference,Component->RefNum);
+instance.c:2086:          sprintf(str6,"?%s?",Component->Reference);
+instance.c:2105:        sprintf(str6,"%s%i",Component->Reference,Component->RefNum);
+instance.c:2183:    sprintf(ValueStr,"%s.%s",NumStr1,NumStr2);
+instance.c:2336:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+instance.c:2551:      sprintf(str2,"%s\\backup\\component.txt",DesignPath);
+instance.c:2553:      sprintf(FileName,"%s\\component.txt",DesignPath);
+instance.c:2555:        sprintf(FileName2,"%s\\component.tdl",DesignPath);
+instance.c:2556:        sprintf(str2,"%s\\backup\\component.tdl",DesignPath);
+instance.c:2559:        sprintf(FileName2,"%s\\component.csv",DesignPath);
+instance.c:2560:        sprintf(str2,"%s\\backup\\component.csv",DesignPath);
+instance.c:2569:      sprintf(FileName,"%s\\%s.bom",DesignPath,LayoutFile);
+instance.c:2571:        sprintf(FileName2,"%s\\%s.tdl",DesignPath,LayoutFile);
+instance.c:2573:        sprintf(FileName2,"%s\\%s.csv",DesignPath,LayoutFile);
+instance.c:2575:      sprintf(str2,"%s\\backup\\%s.bom",DesignPath,LayoutFile);
+instance.c:2581:      sprintf(str,SC(10,"Design %s"),DesignPath);
+instance.c:2935:                        sprintf((LPSTR)&TempMem[ComponentLineOutputCount*256],
+instance.c:2949:                          sprintf((LPSTR)&TempMem[ComponentLineOutputCount*256],
+instance.c:2953:                          sprintf((LPSTR)&TempMem[ComponentLineOutputCount*256],
+instance.c:2970:                          sprintf((LPSTR)&TempMem[ComponentLineOutputCount*256],
+instance.c:2974:                          sprintf((LPSTR)&TempMem[ComponentLineOutputCount*256],
+instance.c:3027:          sprintf(str,SC(10,"Design %s"),DesignPath);
+instance.c:3279:          sprintf(str3,"%d",cnt+1);
+instance.c:3301:            sprintf(str3,"%d,%s",cnt+1,CompStr);
+instance.c:3303:            sprintf(str3,"%d\t%s",cnt+1,CompStr);
+instance.c:3317:    sprintf(str2,SC(85,"Could not write to file %s"),FileName);
+instance.c:3325:      sprintf(str2,SC(115,"Bill of materials -> %s\\component.txt ready\r\n"),DesignPath);
+instance.c:3329:        sprintf(str2,SC(116,"Bill of materials -> %s\\component.tdl ready\r\n"),DesignPath);
+instance.c:3331:        sprintf(str2,SC(279,"Bill of materials -> %s\\component.csv ready\r\n"),DesignPath);
+instance.c:3339:      sprintf(FileName,"%s\\%s.bom",DesignPath,LayoutFile);
+instance.c:3340:      sprintf(str,SC(117,"Bill of materials -> %s ready\r\n"),FileName);
+instance.c:3343:        sprintf(str,SC(118,"Bill of materials -> %s ready (.tdl file)\r\n"),FileName2);
+instance.c:3345:        sprintf(str,SC(280,"Bill of materials -> %s ready (.csv file)\r\n"),FileName2);
+instance.c:3366:  sprintf(str,"----------------------------------------------------------------------\r\n");
+instance.c:3382:      sprintf(SymbolFileName,"%s\\sym\\%s.sym",DesignPath,SymbolName);
+instance.c:3388:        sprintf(str,SC(119,"Symbol  %s  copied from %s\r\n"),SymbolName,SymbolPos2->LibName);
+instance.c:3418:  sprintf(str,"----------------------------------------------------------------------\r\n");
+instance.c:3421:  sprintf(PCBFile,"%s\\pcb\\%s.pcb",DesignPath,LayoutFile);
+instance.c:3474:  sprintf(str,"%s\\pcb\\shapes",DesignPath);
+instance.c:3486:    sprintf(ShapeFileName,"%s\\pcb\\shapes\\%s.shp",DesignPath,Comp->ShapeName);
+instance.c:3489:      sprintf(FileName,"%s\\shapes\\%s.shp",ProjectPath,Comp->ShapeName);
+instance.c:3492:          sprintf(str,SC(120,"Geometry  %s  copied from %s\r\n"),Comp->ShapeName,FileName);
+instance.c:3506:          sprintf(SearchFileName,"%s\\shplib\\*.slb",ProjectPath);
+instance.c:3512:            sprintf(GeometryLibNames[NrGeometryLibFiles++],"%s\\shplib\\%s",ProjectPath,str2);
+instance.c:3524:            sprintf(GeometryLibNames[NrGeometryLibFiles++],"%s\\shplib\\%s",ExePath,fileinfo.name);
+instance.c:3567:          sprintf(str,SC(120,"Geometry  %s  copied from %s\r\n"),Comp->ShapeName,GeometryLibNames[cnt3]);
+instance.c:3569:          sprintf(str,SC(121,"Geometry  %s  could not be found\r\n"),Comp->ShapeName);
+instance.c:3577:  sprintf(str,"----------------------------------------------------------------------\r\n");
+instance.c:3601:  sprintf(str,"----------------------------------------------------------------------\r\n");
+instance.c:3604:  sprintf(PCBFile,"%s\\pcb\\%s.pcb",DesignPath,LayoutFile);
+instance.c:3605:  sprintf(PCBFileBackup,"%s\\pcb\\backup\\%s_annotate.pcb",DesignPath,LayoutFile);
+instance.c:3659:        sprintf(str,"PIN     '%s'  %i",Object->Text1,Object->Info2);
+instance.c:3684:          sprintf(str,"PINBUS  %i '%s'  %i  %s",Object->Info3,NewPinBusStr,
+instance.c:3687:          sprintf(str,"PINBUS  %i '%s'  %i  %s",Object->Info3,Object->Text1,
+instance.c:3713:  sprintf(FileName,"%s\\pcb\\gatepin.swp",DesignPath);
+instance.c:3717:  sprintf(str,SC(122,";Gate/pin swap info design %s"),DesignName);
+instance.c:3724:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+instance.c:3725://    sprintf(str,"Checking references %s\r\n",FileName);
+instance.c:3758:          sprintf(str,"GATE    %s     0    0   %s  %i",str2,Symbol->InterfaceName,NrGates);
+instance.c:3777:            sprintf(str,"GATE    %s   %3i  %3i   %s  %i",str2,NewInstance->PackagePartNr,
+instance.c:3795:                sprintf(str,"GATE    %s   %3i  %3i   %s  %i",str2,NewInstance2->PackagePartNr,
+instance.c:3810:            sprintf(str,"GATE    %s     0    0   %s  %i",str2,NewInstance->Value,NrGates);
+instance.c:3862:            sprintf(str,"GATE    %s   %3i  %3i   %s  %i",str2,NewInstance3.PackagePartNr,
+instance.c:3877:  sprintf(str,SC(123,"Gate/pinswap file %s\\pcb\\gatepin.swp is generated\r\n"),DesignPath);
+instance.c:3911:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+mainloop.c:494:  sprintf(str,SC(138,"Messages"));
+mainloop.c:923:  sprintf(FileName,"%s\\backup",DesignPath);
+mainloop.c:930:  sprintf(FileName,"%s\\pcb",DesignPath);
+mainloop.c:937:  sprintf(FileName,"%s\\pcb\\dxf",DesignPath);
+mainloop.c:944:  sprintf(FileName,"%s\\pcb\\gerber",DesignPath);
+mainloop.c:951:  sprintf(FileName,"%s\\pcb\\hpgl",DesignPath);
+mainloop.c:958:  sprintf(FileName,"%s\\pcb\\backup",DesignPath);
+mainloop.c:965:  sprintf(FileName,"%s\\pcb\\shapes",DesignPath);
+mainloop.c:972:  sprintf(FileName,"%s\\pcb\\shapes\\backup",DesignPath);
+mainloop.c:979:  sprintf(FileName,"%s\\sch",DesignPath);
+mainloop.c:986:  sprintf(FileName,"%s\\sch\\backup",DesignPath);
+mainloop.c:993:  sprintf(FileName,"%s\\sym",DesignPath);
+mainloop.c:1000:  sprintf(FileName,"%s\\sym\\backup",DesignPath);
+mainloop.c:1009:  sprintf(FileName,"%s\\%s.dsn",DesignPath,DesignName);
+mainloop.c:1019:  sprintf(Line,"\"%s\"",TopSheetName);
+mainloop.c:1026:  sprintf(Line,"\"%s\"",LayoutFile);
+mainloop.c:1032:  sprintf(Line,"SaveSymbolsLocally=%i",SaveSymbolsLocally);
+mainloop.c:1034:  sprintf(Line,"DisableOnePinNetCheck=%i",DisableOnePinNetCheck);
+mainloop.c:1041:    sprintf(str2,SC(85,"Could not write to file %s"),FileName);
+mainloop.c:1049:  sprintf(FileName,"%s\\sch.ini",ExePath);
+mainloop.c:1050:  sprintf(FileName2,"%s\\sch.ini",ProjectPath);
+mainloop.c:1051:  sprintf(FileName3,"%s\\sch.ini",DesignPath);
+mainloop.c:1059:  sprintf(FileName,"%s\\geom.ini",ExePath);
+mainloop.c:1060:  sprintf(FileName2,"%s\\geom.ini",ProjectPath);
+mainloop.c:1061:  sprintf(FileName3,"%s\\pcb\\shapes\\geom.ini",DesignPath);
+mainloop.c:1069:  sprintf(FileName,"%s\\pcb.ini",ExePath);
+mainloop.c:1070:  sprintf(FileName2,"%s\\pcb.ini",ProjectPath);
+mainloop.c:1071:  sprintf(FileName3,"%s\\pcb\\pcb.ini",DesignPath);
+mainloop.c:1079:  sprintf(FileName,"%s\\viewplot.ini",ExePath);
+mainloop.c:1080:  sprintf(FileName2,"%s\\viewplot.ini",ProjectPath);
+mainloop.c:1081:  sprintf(FileName3,"%s\\viewplot.ini",DesignPath);
+mainloop.c:1091:  sprintf(FileName,"%s\\sch\\%s.sch",DesignPath,TopSheetName);
+mainloop.c:1105:  sprintf(FileName,"%s\\%s.prp",DesignPath,DesignName);
+mainloop.c:1120:  sprintf(FileName,"%s\\%s.var",DesignPath,DesignName);
+mainloop.c:1136:  sprintf(str,SC(10,"Design %s"),DesignFile);
+mainloop.c:1163:  sprintf(str,SC(149,"Design %s created\r\n"),DesignFile);
+mainloop.c:1166:  sprintf(str2,SC(150,"The initial settings of geom.ini,sch.ini,pcb.ini and viewplot.ini will be copied (if exists)"));
+mainloop.c:1167:  sprintf(str,SC(151,"%s from %s\r\n"),str2,ProjectPath);
+memory.c:325:    sprintf(str3,"Error in string number %d of the language file (Wrong parameters).",Nr);
+memory.c:694:  sprintf(str,"%i",num1+Index);
+mentor.c:346:  sprintf(str2,"$$circle( \"%s\", %.4f, %.4f, %.4f, %.4f );",Layer,
+mentor.c:365:                sprintf(str2,"$$arc( \"%s\", %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, \"\", @center, @radius );",
+mentor.c:377:  sprintf(str2,"$$arc( \"%s\", %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, \"\", @center, @radius );",
+mentor.c:403:      sprintf(str2,"$$initial([%.4f,%.4f], , @nosnap );",
+mentor.c:406:      sprintf(str2,"$$terminal([%.4f,%.4f] );",
+mentor.c:413:    sprintf(str2,"$$polygon( \"%s\" );",Layer);
+mentor.c:437:  sprintf(str2,"$$polygon( \"%s\", , [%.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f] );",
+mentor.c:471:      sprintf(str2,"$$initial([%.4f,%.4f], , @nosnap );",
+mentor.c:474:      sprintf(str2,"$$terminal([%.4f,%.4f] );",
+mentor.c:499:      sprintf(str2,"$$attribute( \"TERMINAL_DRILL_SIZE\", \"\", , @scale , , [%.4f, %.4f]);",
+mentor.c:502:      sprintf(str2,"$$attribute( \"TERMINAL_DRILL_SIZE\", \"%.2f\", , @scale , , [%.4f, %.4f]);",
+mentor.c:513:      sprintf(str2,"$$attribute( \"DRILL_DEFINITION_UNPLATED\", \"\", , @scale , , [%.4f, %.4f]);",
+mentor.c:516:      sprintf(str2,"$$attribute( \"DRILL_DEFINITION_UNPLATED\", \"%.1f\", , @scale , , [%.4f, %.4f]);",
+mentor.c:538:    sprintf(str2,"$$path( \"%s\", %.1f, , [%.1f, %.1f, %.1f, %.1f]);",Layer,
+mentor.c:541:    sprintf(str2,"$$path( \"%s\", %.4f, , [%.4f, %.4f, %.4f, %.4f]);",Layer,
+mentor.c:575:    sprintf(str3,"%.1f",PinObject->RotationAngle);
+mentor.c:589:    sprintf(str3,"%.1f",PinObject->RotationAngle);
+mentor.c:590://    sprintf(str3,"%.1f",PinObject->RotationAngle-180.0);
+mentor.c:647:  sprintf(str2,"$$text( \"%s\", \"%s\", %.4f, %.4f, %.4f, %s, %s, %s, %.4f, \"std\", \"None\", 0.0, 0.0",
+mentor.c:676:        sprintf(str,"%s, , ,%s);",str2,str4);
+mentor.c:678:        sprintf(str,"%s);",str2);
+mentor.c:682:        sprintf(str,"%s, ,@mirror,%s);",str2,str4);
+mentor.c:684:        sprintf(str,"%s, ,@mirror);",str2);
+mentor.c:690:        sprintf(str,"%s, ,@nomirror ,%s);",str2,str4);
+mentor.c:692:        sprintf(str,"%s, ,@nomirror);",str2);
+mentor.c:696:        sprintf(str,"%s, , ,%s);",str2,str4);
+mentor.c:698:        sprintf(str,"%s);",str2);
+mentor.c:735:      sprintf(str3,"%s_%d",PinName,cnt3+1);
+mentor.c:776:        sprintf(str2,"%03drd%03d",(int32)((MentorPins[cnt].TopPadWidth+500.0)/1000.0),
+mentor.c:781:          sprintf(str2,"%03dsq%03d",(int32)(MentorPins[cnt].TopPadWidth/1000.0),
+mentor.c:784:          sprintf(str2,"%03dx%03dre%03d",(int32)(MentorPins[cnt].TopPadWidth/1000.0),
+mentor.c:793:          sprintf(str2,"smd_%03d",(int32)(MentorPins[cnt].TopPadWidth/1000.0));
+mentor.c:795:          sprintf(str2,"smd_%03dx%03d",(int32)(MentorPins[cnt].TopPadWidth/1000.0),
+mentor.c:800:          sprintf(str2,"smd_%03d",(int32)(MentorPins[cnt].BottomPadWidth/1000.0));
+mentor.c:802:          sprintf(str2,"smd_%03dx%03d",(int32)(MentorPins[cnt].BottomPadWidth/1000.0),
+mentor.c:845:  sprintf(str3,"$$create_pin(\"%s\");",MentorPin->PadStackName);
+mentor.c:848:    sprintf(str3,"$$page(0.0, 0.0, 0.0, @mils, 0.0, 0.0, [0.0,0.0,'PI$%s'] );",
+mentor.c:852:    sprintf(str3,"$$page(0.0000, 0.0000, 0.0000, @mm, 0.0000, 0.0000, [0.0000,0.0000,'PI$%s'] );",
+mentor.c:1246://    sprintf(str,"shape %s\r\n",(*Shapes)[cnt].ShapeName);
+mentor.c:1253:      sprintf(str,"Geometry %s could not be found\r\n",ShapeNameP);
+mentor.c:1430:        sprintf(str,"- shape %s,pad %s,layer %d,xy %.0f,%.0f\r\n",PinObject->ShapeName,
+mentor.c:1546:                  sprintf(str,"Geometry solder mask warning on postion (%.2f,%.2f mm) for shape %s\r\n",
+mentor.c:1559:                  sprintf(str,"Geometry solder mask warning on postion (%.2f,%.2f mm) for shape %s\r\n",
+mentor.c:1572:                  sprintf(str,"Geometry paste mask warning on postion (%.2f,%.2f mm) for shape %s\r\n",
+mentor.c:1585:                  sprintf(str,"Geometry paste mask warning on postion (%.2f,%.2f mm) for shape %s\r\n",
+mentor.c:1982:        sprintf(str,"shape %s,pad %s,layer %d,objecttype %d,xy %.0f,%.0f\r\n",PinObject->ShapeName,
+mentor.c:1986:        sprintf(str,"shape %s,layer %d,objecttype %d,xy %.0f,%.0f\r\n",PinObject->ShapeName,
+mentor.c:2010:  sprintf(str,"%s\\%s_geom",DesignPath,DesignName);
+mentor.c:2013:  sprintf(str2,"//");
+mentor.c:2015:  sprintf(str2,"// PCB elegance mentor geometry generator 1.0");
+mentor.c:2017:  sprintf(str2,"// PCB elegance design %s",DesignName);
+mentor.c:2022:  sprintf(str2,"// date : %s",str3);
+mentor.c:2024:  sprintf(str2,"//");
+mentor.c:2026:  sprintf(str2,"$$lock_windows(@on);");
+mentor.c:2054:              sprintf(str2,"Warning: Mentor padstack %s in shape %s contains more than one drill hole\r\n",
+mentor.c:2166:              sprintf(str2,"$$create_pin(\"%s_%s\");",ShapeNameP,PinObject->Text2);
+mentor.c:2167:              sprintf(MentorSpecialPins[Found].PadStackName,"%s_%s",ShapeNameP,PinObject->Text2);
+mentor.c:2175:                sprintf(str3,"$$page(0.0, 0.0, 0.0, @mils, 0.0, 0.0, [0.0,0.0,'PI$%s_%s] );",
+mentor.c:2179:                sprintf(str3,"$$page(0.0000, 0.0000, 0.0000, @mm, 0.0000, 0.0000, [0.0000,0.0000,'PI$%s_%s'] );",
+mentor.c:2185://            sprintf(str2,"//");
+mentor.c:2199:                  sprintf(str2,"***************  Warning: Mentor padstack %s in shape %s contains more than one drill hole\r\n",
+mentor.c:2217:                  sprintf(str2,"***************  Warning: Mentor padstack %s in shape %s contains more than one drill hole\r\n",
+mentor.c:2281:                  sprintf(str2,"$$arc( \"%s\", %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, \"\", @center, @radius );",
+mentor.c:2290:                  sprintf(str2,"$$arc( \"%s\", %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, \"\", @center, @radius );",
+mentor.c:2332:    sprintf(str2,"$$create_component(\"%s\");",ShapeNameP);
+mentor.c:2335:      sprintf(str2,"$$page(0.0, 0.0, 20.0, @mils, 0.0, 0.0, [0.0,0.0,'CO$%s'] );",ShapeNameP);
+mentor.c:2337:      sprintf(str2,"$$page(0.0, 0.0, 0.2, @mm, 0.0, 0.0, [0.0,0.0,'CO$%s'] );",ShapeNameP);
+mentor.c:2340:    sprintf(str2,"$$point_mode(@vertex);");
+mentor.c:2342:    sprintf(str2,"$$template_line_style( @Solid );");
+mentor.c:2382:    sprintf(str2,"$$attribute( \"COMPONENT_DEFAULT_PADSTACK\", \"%s\");",DefaultPadStackName);
+mentor.c:2395:                sprintf(str2,"$$attribute( \"COMPONENT_PIN_DEFINITION\", \"%s\", , @scale , , [%.1f,%.1f]);",
+mentor.c:2399:                sprintf(str2,"$$attribute( \"COMPONENT_PIN_DEFINITION\", \"%s\", , @scale , , [%.4f,%.4f]);",
+mentor.c:2405:              sprintf(str2,"$$attribute( \"COMPONENT_PADSTACK_OVERRIDE\", \"%s,%s\");",
+mentor.c:2409:                sprintf(str2,"$$attribute( \"COMPONENT_PIN_DEFINITION\", \"%s\", , @scale , , [%.1f,%.1f]);",
+mentor.c:2413:                sprintf(str2,"$$attribute( \"COMPONENT_PIN_DEFINITION\", \"%s\", , @scale , , [%.4f,%.4f]);",
+mentor.c:2429:          sprintf(str2,"$$attribute( \"COMPONENT_PADSTACK_OVERRIDE\", \"%s,%s\");",
+mentor.c:2433:            sprintf(str2,"$$attribute( \"COMPONENT_PIN_DEFINITION\", \"%s\", , @scale , , [%.1f,%.1f]);",
+mentor.c:2437:            sprintf(str2,"$$attribute( \"COMPONENT_PIN_DEFINITION\", \"%s\", , @scale , , [%.4f,%.4f]);",
+mentor.c:2462:      sprintf(str2,"$$attribute( \"COMPONENT_HEIGHT\", \"\", , @scale , , [%.1f, 0.0]);",
+mentor.c:2465:      sprintf(str2,"$$attribute( \"COMPONENT_HEIGHT\", \"\", , @scale , , [%.4f, 0.0]);",
+mentor.c:2484:      sprintf(str2,"$$attribute( \"COMPONENT_LAYOUT_TYPE\", \"surface\");");
+mentor.c:2486:      sprintf(str2,"$$attribute( \"COMPONENT_LAYOUT_SURFACE\", \"both\");");
+mentor.c:2489:      sprintf(str2,"$$attribute( \"COMPONENT_LAYOUT_SURFACE\", \"both\");");
+mentor.c:2492:    sprintf(str2,"$$attribute( \"COMPONENT_OUTLINE_OVERHANG\", \"no\");");
+mentor.c:2494:    sprintf(str2,"$$attribute( \"COMPONENT_DIAGONAL_ALLOWED\", \"\");");
+mentor.c:2505:      sprintf(str2,"$$attribute( \"COMPONENT_INSERT_CENTER\", \"\", , @scale , , [%.1f, %.1f]);",
+mentor.c:2508:      sprintf(str2,"$$attribute( \"COMPONENT_INSERT_CENTER\", \"\", , @scale , , [%.4f, %.4f]);",
+mentor.c:2512:    sprintf(str2,"$$attribute( \"COMPONENT_INSERT_ANGLE\", \"'\", @mark, , \"\");");
+mentor.c:2544:            sprintf(str2,"$$attribute( \"DRILL_DEFINITION_UNPLATED\", \"%.2f\", , @scale , , [%.4f, %.4f]);",
+mentor.c:2588:    sprintf(str2,"$$text( \"ASSEMBLY\", \"^$ref\", %.4f, %.4f, %.4f, @BL, 0, %s, %.4f, \"std\", \"None\", 0.0, 0.0 );",
+mentor.c:2593:    sprintf(str2,"$$text( \"SILKSCREEN\", \"^$ref\", %.4f, %.4f, %.4f, @BL, 0, %s, %.4f, \"std\", \"None\", 0.0, 0.0 );",
+mentor.c:2623:            sprintf(str2,"***************  Warning: There is more than one COMPONENT_PLACEMENT_OUTLINE object in shape %s\r\n",
+mentor.c:2643:            sprintf(str2,"***************  Warning: There is more than one COMPONENT_PLACEMENT_OUTLINE object in shape %s\r\n",
+mentor.c:2656:          sprintf(str2,"$$attribute( \"COMPONENT_PLACEMENT_OUTLINE\", \"\", , @scale , , [%.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f]);",
+mentor.c:2678:            sprintf(str2,"***************  Warning: There is more than one COMPONENT_PLACEMENT_OUTLINE object in shape %s\r\n",
+mentor.c:2695:                  sprintf(str2,"$$initial([%.1f,%.1f], , @nosnap );",
+mentor.c:2698:                  sprintf(str2,"$$initial([%.4f,%.4f], , @nosnap );",
+mentor.c:2703:                  sprintf(str2,"$$terminal([%.1f,%.1f] );",
+mentor.c:2706:                  sprintf(str2,"$$terminal([%.4f,%.4f] );",
+mentor.c:2712:            sprintf(str2,"$$attribute( \"COMPONENT_PLACEMENT_OUTLINE\", \"\", @mark, @scale );");
+mentor.c:2720:            sprintf(str2,"$$arc( \"%s\", %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, \"\", @center, @radius );",
+mentor.c:2729:            sprintf(str2,"$$arc( \"%s\", %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, %.4f, \"\", @center, @radius );",
+mentor.c:2758:              sprintf(str2,"%.4f, %.4f",x1/UNITS_MM,y1/UNITS_MM);
+mentor.c:2764:            sprintf(str2,"$$attribute( \"COMPONENT_PLACEMENT_OUTLINE\", \"\", , @scale , , [%s]);",str3);
+mentor.c:2797:                sprintf(str2,"$$initial([%.4f,%.4f], , @nosnap );",x1/UNITS_MM,y1/UNITS_MM);
+mentor.c:2799:                sprintf(str2,"$$terminal([%.4f,%.4f] );",x1/UNITS_MM,y1/UNITS_MM);
+mentor.c:2803:            sprintf(str2,"$$attribute( \"COMPONENT_PLACEMENT_OUTLINE\", \"\", @mark, @scale );");
+mentor.c:2975:            sprintf(str2,"$$attribute( \"%s\", \"PAD_1\", @mark, @scale );",GeomLayer);
+mentor.c:2978:              sprintf(str2,"$$attribute( \"%s\", \"PAD_2\", @mark, @scale );",GeomLayer);
+mentor.c:2980:              sprintf(str2,"$$attribute( \"%s\", \"%s\", @mark, @scale );",GeomLayer,GeomLayer);
+mentor.c:2993:              sprintf(str2,"$$initial([%.4f,%.4f], , @nosnap );",x3/UNITS_MM,y3/UNITS_MM);
+mentor.c:2995:              sprintf(str2,"$$terminal([%.4f,%.4f] );",x3/UNITS_MM,y3/UNITS_MM);
+mentor.c:3000:            sprintf(str2,"$$attribute( \"%s\", \"PAD_1\", @mark, @scale );",GeomLayer);
+mentor.c:3003:              sprintf(str2,"$$attribute( \"%s\", \"PAD_2\", @mark, @scale );",GeomLayer);
+mentor.c:3005:              sprintf(str2,"$$attribute( \"%s\", \"%s\", @mark, @scale );",GeomLayer,GeomLayer);
+mentor.c:3016:            sprintf(str2,"$$attribute( \"%s\", \"PAD_1\", @mark, @scale );",GeomLayer);
+mentor.c:3019:              sprintf(str2,"$$attribute( \"%s\", \"PAD_2\", @mark, @scale );",GeomLayer);
+mentor.c:3021:              sprintf(str2,"$$attribute( \"%s\", \"%s\", @mark, @scale );",GeomLayer,GeomLayer);
+mentor.c:3111:  sprintf(str2,"Mentor geometry file %s\\%s_geom created\r\n",DesignPath,DesignName);
+netlist.c:114://  sprintf(str,"Checking sheets\r\n");
+netlist.c:118:    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
+netlist.c:122://    sprintf(str,"Checking sheet %s\r\n",FileName);
+netlist.c:272://    sprintf(str,"Checking nets sheet %s\r\n",FileName);
+netlist.c:323:  sprintf(str,SC(175,"Checking nets\r\n"));
+netlist.c:339://    sprintf(str,"Checking nets sheet %s\r\n",FileName);
+netlist.c:352:  sprintf(str,"Checking nets OK\r\n");
+netlist.c:415:  sprintf(str,SC(176,"Components and netlist (%s\\pcb\\%s.net) are generated\r\n"),DesignPath,LayoutFile);
+netlist.c:442:  sprintf(str,"%s\\nets.net",DesignPath);
+netlist.c:447:      sprintf(FileName,"%s%s.sch",SheetDir,Sheets[ShCnt].SheetName);
+netlist.c:448:      sprintf(SheetStr,"SHEET %2d %s                                 ",ShCnt,Sheets[ShCnt].SheetName);
+netlist.c:453:      sprintf(Line,"SHEET %s",FileName);
+netlist.c:461:      sprintf(Line,"\r\nPOWER PINS");
+netlist.c:466:      sprintf(Line,"%sNET %i ITEMS %i    %08X",SheetStr,cnt,stop-start,(*NetInfos)[cnt].Info);
+netlist.c:470:      sprintf(Line,"%sNET %i %s ITEMS %i    %08X",SheetStr,cnt,GetObjectText(Object2->Text1),
+netlist.c:480:            sprintf(Line,"%sCOMP     %s PIN %s %s %s",SheetStr,GetObjectText(Object2->RefNum),
+netlist.c:484:            sprintf(Line,"%sCOMP     %s SHEETPIN %s %s %s NET %i",SheetStr,GetObjectText(Object2->RefNum),
+netlist.c:494:          sprintf(Line,"%sCOMP     %s PINBUS %s %i %s %s",SheetStr,GetObjectText(Object2->RefNum),
+netlist.c:500:          sprintf(Line,"%sCOMP     %s POWERPINS %s",SheetStr,GetObjectText(Object2->RefNum),
+netlist.c:505:          sprintf(Line,"%sWIRE     %i,%i - %i,%i",SheetStr,(int32)Object2->x1,(int32)Object2->y1,
+netlist.c:510:          sprintf(Line,"%sBUS     %i,%i - %i,%i",SheetStr,(int32)Object2->x1,(int32)Object2->y1,
+netlist.c:516:            sprintf(Line,"%sBUSCON   %i,%i TO NET %d",SheetStr,
+netlist.c:520:            sprintf(Line,"%sBUSCON   %i,%i",SheetStr,(int32)Object2->x1,(int32)Object2->y1);
+netlist.c:527:              sprintf(Line2,"INPUT");
+netlist.c:530:              sprintf(Line2,"OUTPUT");
+netlist.c:533:              sprintf(Line2,"IO");
+netlist.c:536:          sprintf(Line,"%sGLOBAL   %s %s NET %i",SheetStr,Line2,GetObjectText(Object2->Text1),
+netlist.c:541:          sprintf(Line,"%sNETLABEL %s",SheetStr,GetObjectText(Object2->Text1));
+netlist.c:546:    sprintf(Line,"%sEND",SheetStr);
+netlist.c:548:    sprintf(Line,"%s",SheetStr);
+netlist.c:595:          sprintf(Line,SC(178,"External connection %s (%i,%i) sheet %s.sch is not connected\r\n"),
+netlist.c:606:        sprintf(Line,SC(179,"External connection %s (%i,%i) sheet %s.sch "),
+netlist.c:649:            sprintf(Line2,SC(213,"Sheet %s : "),Sheets[SheetNr].SheetName);
+netlist.c:650:            sprintf(Line,SC(181,"Unconnected power pin (%i,%i)\r\n"),
+netlist.c:677:          sprintf(Line2,SC(213,"Sheet %s : "),Sheets[SheetNr].SheetName);
+netlist.c:678:          sprintf(Line,SC(182,"Unconnected wire (%i,%i - %i,%i)\r\n"),
+netlist.c:703:          sprintf(Line2,SC(213,"Sheet %s : "),Sheets[SheetNr].SheetName);
+netlist.c:704:          sprintf(Line,SC(183,"Unconnected bus (%i,%i - %i,%i)\r\n"),
+netlist.c:726:          sprintf(Line2,SC(213,"Sheet %s : "),Sheets[SheetNr].SheetName);
+netlist.c:727:          sprintf(Line,"Unconnected pin (%i,%i)\r\n",
+netlist.c:814:      sprintf(str2,"N$%i",UnNamedGlobalNetNr);
+netlist.c:833:      sprintf(Line,SC(251,"Error: There are two or more global nets with the same name (%s) who are not connected\r\n"),GlobalConnectionStr);
+netlist.c:1011:  sprintf(str,"%s\\global.net",DesignPath);
+netlist.c:1024:            sprintf(str,"GLOBALNET %s",GlobalNetName);
+netlist.c:1030:              sprintf(str,"GLOBAL BUS %s",GlobalNetName);
+netlist.c:1032:              sprintf(str,"LOCAL BUS %s",GlobalNetName);
+netlist.c:1044:              sprintf(Line,SC(184,"Warning: Different name %s for global net %s\r\n"),Line2,GlobalNetName);
+netlist.c:1048:              sprintf(Line,SC(185,"Warning: Different name %s for global bus %s\r\n"),Line2,GlobalNetName);
+netlist.c:1059:      sprintf(str,"NET %i",GlobalNets[cnt3]);
+netlist.c:1064:    sprintf(str,"END");
+netlist.c:1169:          sprintf(str,SC(187,"nr %i"),GlobalNetNr2);
+netlist.c:1173:          sprintf(str,SC(186,"Warning: Can not connect net %s into two busses\r\n"),NetLabelName);
+netlist.c:1209:      sprintf(str,SC(187,"nr %i"),NetNr);
+netlist.c:1213:      sprintf(str,SC(188,"nr %i %i"),NetNr,PinBusNr);
+netlist.c:1217:      sprintf(str,"NET %s",NetLabelName);
+netlist.c:1219:      sprintf(str,SC(187,"nr %i"),NetNr);
+netlist.c:1223:      sprintf(str,"NET %s",NetLabelName);
+netlist.c:1225:      sprintf(str,SC(188,"nr %i %i"),NetNr,PinBusNr);
+netlist.c:1229:      sprintf(str,"NET %i %s",NetNr,NetLabelName);
+netlist.c:1292://              sprintf(str,SC(187,"nr %i"),cnt4);
+netlist.c:1318://                    sprintf(str,SC(188,"nr %i %i"),cnt4,cnt5);
+netlist.c:1363:  //                sprintf(str,SC(188,"nr %i %i"),cnt4,cnt5);
+netlist.c:1396://              sprintf(str,SC(187,"nr %i"),cnt4);
+netlist.c:1431://            sprintf(str,SC(188,"nr %i %i"),PinBusNetNr,cnt5);
+netlist.c:1515://          sprintf(str,SC(187,"nr %i"),cnt4);
+netlist.c:1540://              sprintf(str,SC(187,"nr %i"),cnt4);
+netlist.c:1561://              sprintf(str,SC(187,"nr %i"),cnt4);
+netlist.c:1614:  sprintf(str,"%s\\nets2.net",DesignPath);
+netlist.c:1721:  //            sprintf(str,"NET %s",NetLabelName);
+netlist.c:1723:  //            sprintf(str,SC(187,"nr %i"),NetNr);
+netlist.c:1863:                    sprintf(str,SC(186,"Warning: Can not connect net %s into two busses\r\n"),NetLabelName);
+netlist.c:1920:  //            sprintf(str,"NET %s",NetLabelName);
+netlist.c:1922:  //            sprintf(str,SC(188,"nr %i %i"),NetNr,cnt6);
+netlist.c:1970:  //                          sprintf(str,SC(188,"nr %i %i"),cnt4,cnt5);
+netlist.c:2218:    sprintf(str,"NET %s [POWER]",NetLabelName);
+netlist.c:2354:                          sprintf(str,SC(186,"Warning: Can not connect net %s into two busses\r\n"),NetLabelName);
+netlist.c:2445://        sprintf(str,"NET %i %s",NetNr,NetLabelName);
+netlist.c:2477:                  sprintf(str,SC(187,"nr %i"),cnt4);
+netlist.c:2491:        sprintf(str2,"N$%i",UnNamedNetNr);
+netlist.c:2494://        sprintf(str,"NET %i %s",NetNr,str2);
+netlist.c:2619:              sprintf(Line,SC(189,"Warning: Different labels for the same net on sheets\r\n"));
+netlist.c:2622:              sprintf(Line,"   %s : %s%s.sch\r\n",NetLabelName,SheetDir,Sheets[SheetNr1].SheetName);
+netlist.c:2628:            sprintf(Line,"   %s : %s%s.sch\r\n",NetLabelName,SheetDir,Sheets[SheetNr1].SheetName);
+netlist.c:2678:      sprintf(Line,"One pin net %s [sheet %s]\r\n",NetLabelName,FileName);
+netlist.c:2712:  sprintf(DirName,"%s\\pcb\\shapes\\*.shp",DesignPath);
+netlist.c:2742:  sprintf(DirName,"%s\\shapes\\*.shp",ProjectPath);
+netlist.c:2771:  sprintf(DirName,"%s\\shplib\\*.slb",ProjectPath);
+netlist.c:2779:    sprintf(str,"%s\\shplib\\%s",ProjectPath,str2);
+netlist.c:2806:    sprintf(str,"%s\\shplib\\%s",ExePath,fileinfo.name);
+netlist.c:2837:        sprintf(Line,SC(190,"No geometry for component %s\r\n"),RefName);
+netlist.c:2848:          sprintf(Line,SC(191,"Geometry %s not found for component %s\r\n"),
+netlist.c:2855:      sprintf(Line,SC(192,"Component without a reference name (%.0f,%.0f)\r\n"),Object4->x1,Object4->y1);
+netlist.c:2906:            sprintf(NetItemStr,"%s-%s",RefName,PinName);
+netlist.c:2926:              sprintf(NetItemStr,"%s-%s",RefName,PinName2);
+netlist.c:2945:            sprintf(NetItemStr,"%s-%s",RefName,Line);
+netlist.c:3000:  sprintf(PropertyFileName,"%s\\%s.prp",DesignPath,str);
+netlist.c:3030:          sprintf(Line,SC(193,"Netname %s in two or more different nets\r\n"),Net1);
+netlist.c:3054:        sprintf(Line,SC(193,"Warning: Netname %s in two or more different nets\r\n"),Net1);
+netlist.c:3152:                sprintf(Line3," %s-%s",RefName,PinName);
+netlist.c:3168:                sprintf(Line3," %s-%s",RefName,PinName2);
+netlist.c:3170:                  sprintf(Line2,"NET   '%s' ",NetLabelName);
+netlist.c:3189:              sprintf(Line3," %s-%s",RefName,Line);
+netlist.c:3196:            sprintf(Line2,"NET   '%s' ",NetLabelName);
+netlist.c:3240:                sprintf(str,"%s%d",str4,cnt3);
+netlist.c:3242:                  sprintf(Line3," (%s,\"%s\")",str2,str3);
+netlist.c:3244:                    sprintf(Line2,"NET   '%s' ",NetLabelName);
+netlist.c:3258:              sprintf(Line3," (%s,\"%s\")",str2,str3);
+netlist.c:3260:                sprintf(Line2,"NET   '%s' ",NetLabelName);
+netlist.c:3287:  sprintf(str,"%s\\net.nr",DesignPath);
+netlist.c:3294:    sprintf(Line2,"%i %s",cnt,NetLabelName);
+netlist.c:3299:    sprintf(str2,SC(85,"Could not write to file %s"),str);
+netlist.c:3304:  sprintf(str,"%s\\design.rst",DesignPath);
+netlist.c:3316:            sprintf(Line,"COMP %s PIN %s %s %s",GetObjectText(Object2->RefNum),
+netlist.c:3320:            sprintf(Line,"COMP %s SHEETPIN %s %s %s NET %i",GetObjectText(Object2->RefNum),
+netlist.c:3330:          sprintf(Line,"COMP %s PINBUS %s %i %s %s",GetObjectText(Object2->RefNum),
+netlist.c:3336:          sprintf(Line,"COMP %s POWERPINS %s",GetObjectText(Object2->RefNum),
+netlist.c:3341:          sprintf(Line,"WIRE %i,%i - %i,%i",(int32)Object2->x1,(int32)Object2->y1,
+netlist.c:3346:          sprintf(Line,"BUS %i,%i - %i,%i",(int32)Object2->x1,(int32)Object2->y1,
+netlist.c:3352:            sprintf(Line,"BUSCON %i,%i TO NET %d",
+netlist.c:3356:            sprintf(Line,"BUSCON %i,%i",(int32)Object2->x1,(int32)Object2->y1);
+netlist.c:3363:              sprintf(Line2,"INPUT");
+netlist.c:3366:              sprintf(Line2,"OUTPUT");
+netlist.c:3369:              sprintf(Line2,"IO");
+netlist.c:3372:          sprintf(Line,"GLOBAL %s %s NET %i",Line2,GetObjectText(Object2->Text1),
+netlist.c:3377:          sprintf(Line,"NETLABEL %s",GetObjectText(Object2->Text1));
+netlist.c:3381:          sprintf(Line,"ONE_PIN_NET %i,%i",(int32)Object2->x1,(int32)Object2->y1);
+netlist.c:3428:  sprintf(FileName,"%s\\compinfo.txt",DesignPath);
+netlist.c:3489:  sprintf(FileName,"%s\\pcb\\%s___.net",DesignPath,LayoutFile);
+netlist.c:3490:  sprintf(str2,"%s\\pcb\\backup\\%s.net",DesignPath,LayoutFile);
+netlist.c:3618:            sprintf(str2," (%s,\"%s\")",AttributeIdents[cnt3],AttributeValues[cnt3]);
+netlist.c:3659:            sprintf(Line,SC(194,"Different symbols for components with the same reference %s\r\n"),
+netlist.c:3671:              sprintf(Line,SC(195,"Different geometries for components with the same reference %s\r\n"),
+netlist.c:3679:                sprintf(Line,SC(196,"Error in multiple symbols for the same reference %s\r\n"),
+netlist.c:3693:                  sprintf(Line,SC(197,"Error in package part nr for the same reference %s\r\n"),
+netlist.c:3703:                    sprintf(Line,SC(198,"Error in package part nr for the same reference %s%c\r\n"),
+netlist.c:3717:                      sprintf(Line,SC(199,"Double reference %s\r\n"),
+netlist.c:3741:    sprintf(str2,SC(85,"Could not write to file %s"),FileName);
+netlist.c:3749:      sprintf(str2,SC(451,"Do you want to open the sheet with reference %s"),ErrorRef);
+netlist.c:3757:    sprintf(FileName,"%s\\pcb\\%s.net",DesignPath,LayoutFile);
+netlist.c:3758:    sprintf(str2,"%s\\pcb\\backup\\%s.net",DesignPath,LayoutFile);
+netlist.c:3760:    sprintf(str2,"%s\\pcb\\%s___.net",DesignPath,LayoutFile);
+netlist.c:3792:  sprintf(str,"%s\\design.bus",DesignPath);
+netlist.c:3822:      sprintf(Line,"*************************** BUS %i %s **********************",
+netlist.c:3849:              sprintf(Line,"BUS %i,%i - %i,%i      %s",(int32)Object2->x1,(int32)Object2->y1,
+netlist.c:3868:              sprintf(Line,"GLOBAL %i,%i      %s",(int32)Object2->x1,(int32)Object2->y1,
+netlist.c:3914:                        sprintf(Line,"Object pinbus netnr  %i           %i",cnt4,cnt);
+netlist.c:3940:                    sprintf(Line,"Object netnr %i             %i",Object2c->NetNr,NetNr4);
+netlist.c:3975:                  sprintf(Line,"Object pinbus netnr  %i           %i",BusNetNr,cnt);
+netlist.c:3988:      sprintf(Line,"*************************** END *******************************");
+netlist.c:4003:  sprintf(Line,"***************************************************************");
+netlist.c:4028:          sprintf(Line,"***************** PINBUS %i %s ***********************",
+netlist.c:4033:          sprintf(Line,"***************** PINBUS %i ***********************",
+netlist.c:4057:            sprintf(Line,"PINBUS  %s %i,%i - %i,%i      %s",NetLabelName,
+netlist.c:4086:              sprintf(Line,"Object pinbus netnr             %i",cnt);
+netlist.c:4096:        sprintf(Line,"*************************** END *******************************");
+netlist.c:4106:  sprintf(Line,"***************************************************************");
+netlist.c:4123:    sprintf(Line,"*************************** WIRE *******************************");
+netlist.c:4148:            sprintf(Line,"WIRE %i,%i - %i,%i    %s",(int32)Object2->x1,(int32)Object2->y1,
+netlist.c:4169:            sprintf(Line,"GLOBAL %i,%i   %s",(int32)Object2->x1,(int32)Object2->y1,
+netlist.c:4179:    sprintf(Line,"Net %s -> netnr                %i",NetLabelName,cnt);
+netlist.c:4181:    sprintf(Line,"*************************** END *******************************");
+netlist.c:4196:    sprintf(FileName,"%s\\sch\\",DesignPath);
+netlist.c:4204:    sprintf(FileName,"%s\\sch\\",DesignPath);
+netlist.c:4239:          sprintf(str3,"BUS  %3.0f ,%3.0f  - %3.0f ,%3.0f    %i",
+netlist.c:4262:        sprintf(str3,"WIRE %3.0f ,%3.0f  - %3.0f ,%3.0f    %i",
+netlist.c:4347:              sprintf(Line3," %s-%s",RefName,PinName);
+netlist.c:4371:                sprintf(Line3," %s-%s",RefName,PinName2);
+netlist.c:4373:                  sprintf(Line2,"NET   '%s' ",NetLabelName);
+netlist.c:4405://              sprintf(Line3," %s-%s",RefName,Line);
+netlist.c:4412:            sprintf(Line2,"NET   '%s' ",NetLabelName);
+nets.c:1136:      sprintf(str2,"N$%i",UnNamedGlobalNetNr);
+nets.c:1219:  sprintf(FileName,"%s%s.sch",SheetDir,Sheets[SheetNr].SheetName);
+nets.c:1328:            sprintf(str,SC(200,"%s: For the same net different labels (%s,%s)\r\n"),
+nets.c:1348:              sprintf(str,SC(201,"%s: Nr pins pin busses are not equal (%i,%i)\r\n"),
+nets.c:1382:              sprintf(str,SC(202,"%s: Only one bus connection (%i,%i) allowed\r\n"),
+nets.c:1407:            sprintf(str,SC(203,"%s: Only one external connection %s allowed\r\n"),
+nets.c:1436:      sprintf(str,SC(204,"%s: Only a pinbus is allowed to connect to a busconnection (%i,%i)\r\n"),
+nets.c:1449:      sprintf(str,SC(205,"%s: No label connected to a bus (%i,%i - %i,%i)\r\n"),
+nets.c:1460:      sprintf(str,SC(206,"%s: No label connected to bus connection (%i,%i)\r\n"),
+nets.c:1472:      sprintf(str,"No label connected to external connection (%i,%i)\r\n",
+nets.c:1482:      sprintf(str,SC(207,"%s: Bus and external connections can not be combined (%i,%i)\r\n"),
+nets.c:1493:      sprintf(str,SC(208,"%s: Power and external connections can not be combined (%i,%i)\r\n"),
+nets.c:1504:      sprintf(str,SC(209,"Warning: Power connection (%s) connected to label (%s) (%i,%i)\r\n"),
+nets.c:1516:      sprintf(str,"No label connected to a sheet symbol pin (%i,%i)\r\n",
+nets.c:1529:        sprintf(str,SC(210,"%s: Nr pins (%i) pin bus(ses) and label (%s) are not equal\r\n"),
+pcb.c:256:  sprintf(str,"%s\\pcb\\shapes\\%s.shp",DesignPath,ShapeName);
+pcb.c:258:    sprintf(str,"%s\\shapes\\%s.shp",ProjectPath,ShapeName);
+pcb.c:272:      sprintf(SearchFileName,"%s\\shplib\\*.slb",ProjectPath);
+pcb.c:280:        sprintf(GeometryLibNames[NrGeometryLibFiles++],"%s\\shplib\\%s",ProjectPath,str2);

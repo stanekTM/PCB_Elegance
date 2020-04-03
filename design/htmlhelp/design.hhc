@@ -1,0 +1,127 @@
+<HTML>
+<!--Sitemap 1.0-->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Getting started">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Getting started">
+			<param name="Local" value="html/contents.htm">
+			</OBJECT>
+			<A HREF="html/contents.htm">Getting started</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="File">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Make new design">
+			<param name="Local" value="html/make_new_design.htm">
+			</OBJECT>
+			<A HREF="html/make_new_design.htm">Make new design</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Copy symbols and shapes locally">
+			<param name="Local" value="html/copy_symbols_shapes.htm">
+			</OBJECT>
+			<A HREF="html/copy_symbols_shapes.htm">Copy symbols and shapes locally</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Print all sheets">
+			<param name="Local" value="html/print_all_sheets.htm">
+			</OBJECT>
+			<A HREF="html/print_all_sheets.htm">Print all sheets</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Print all sheets to PDF">
+			<param name="Local" value="html/print_all_sheets_pdf.htm">
+			</OBJECT>
+			<A HREF="html/print_all_sheets_pdf.htm">Print all sheets to PDF</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Edit">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Bill Of Materials">
+			<param name="Local" value="html/bill_of_materials.htm">
+			</OBJECT>
+			<A HREF="html/bill_of_materials.htm">Bill Of Materials</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Edit design settings">
+			<param name="Local" value="html/edit_design_settings.htm">
+			</OBJECT>
+			<A HREF="html/edit_design_settings.htm">Edit design settings</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Check">
+			<param name="Local" value="html/check.htm">
+			</OBJECT>
+			<A HREF="html/check.htm">Check</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Conversion ORCAD schematics/libraries">
+			<param name="Local" value="html/conversion_orcad.htm">
+			</OBJECT>
+			<A HREF="html/conversion_orcad.htm">Conversion ORCAD schematics/libraries</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change components">
+			<param name="Local" value="html/edit_change_components.htm">
+			</OBJECT>
+			<A HREF="html/edit_change_components.htm">Change components</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Start">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Open sheet">
+			<param name="Local" value="html/open_sheet.htm">
+			</OBJECT>
+			<A HREF="html/open_sheet.htm">Open sheet</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Edit symbol">
+			<param name="Local" value="html/symbol_editor.htm">
+			</OBJECT>
+			<A HREF="html/symbol_editor.htm">Edit symbol</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Create netlist">
+			<param name="Local" value="html/create_netlist.htm">
+			</OBJECT>
+			<A HREF="html/create_netlist.htm">Create netlist</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Annotation">
+			<param name="Local" value="html/annotation.htm">
+			</OBJECT>
+			<A HREF="html/annotation.htm">Annotation</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Back annotation">
+			<param name="Local" value="html/back_annotation.htm">
+			</OBJECT>
+			<A HREF="html/back_annotation.htm">Back annotation</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Start layout editor">
+			<param name="Local" value="html/layout_editor.htm">
+			</OBJECT>
+			<A HREF="html/layout_editor.htm">Start layout editor</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Start gerber viewer">
+			<param name="Local" value="html/gerber_viewer.htm">
+			</OBJECT>
+			<A HREF="html/gerber_viewer.htm">Start gerber viewer</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Start geometry editor">
+			<param name="Local" value="html/geometry_editor.htm">
+			</OBJECT>
+			<A HREF="html/geometry_editor.htm">Start geometry editor</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Start library manager symbols">
+			<param name="Local" value="html/library_manager_symbols.htm">
+			</OBJECT>
+			<A HREF="html/library_manager_symbols.htm">Start library manager symbols</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Start library manager geometries">
+			<param name="Local" value="html/library_manager_geometries.htm">
+			</OBJECT>
+			<A HREF="html/library_manager_geometries.htm">Start library manager geometries</A><BR>
+	</UL>
+</UL>
+</HTML>
