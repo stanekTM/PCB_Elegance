@@ -1,0 +1,166 @@
+command.c:290:                  (stricmp(ProjectInfo->FileNames[cnt],EditFile)!=0))) cnt++;
+draw.c:77:  if (stricmp(str,"NO DIVING")==0) {
+draw2.c:108:        if (stricmp(PinInfo->PinText,"1")==0) {
+dxf.c:1099:              if (stricmp((char *)Object->Text,"Text45")==0) {
+dxf.c:1231:        (stricmp(BlockNames[cnt],BlockName)!=0)) cnt++;
+dxf.c:1391:          if (stricmp(ValueStr,"SECTION")==0) {
+dxf.c:1395:          if (stricmp(ValueStr,"SEQEND")==0) {
+dxf.c:1398:          if (stricmp(ValueStr,"VERTEX")==0) {
+dxf.c:1404:          if (stricmp(ValueStr,"POLYLINE")==0) {
+dxf.c:1410:          if (stricmp(ValueStr,"ENDSEC")==0) {
+dxf.c:1416:          if (stricmp(ValueStr,"TABLE")==0) {
+dxf.c:1419:          if (stricmp(ValueStr,"ENDTAB")==0) {
+dxf.c:1425:          if (stricmp(ValueStr,"BLOCK")==0) {
+dxf.c:1429:          if (stricmp(ValueStr,"ENDBLK")==0) {
+dxf.c:1442:                  (stricmp(DXFLayers[cnt],ValueStr)!=0)) cnt++;
+dxf.c:1895:            if (stricmp(CurrentCommandString,"VERTEX")==0) {
+dxf.c:1929:            if ((stricmp(CurrentCommandString,"SEQEND")==0)
+dxf.c:1931:               (stricmp(CurrentCommandString,"LINE")==0)) {
+dxf.c:1941:              if (stricmp(CurrentCommandString,"LINE")==0) {
+dxf.c:1973:              if (stricmp(CurrentCommandString,"LINE")==0) {
+dxf.c:2174:            if ((stricmp(CurrentCommandString,"TRACE")==0)
+dxf.c:2176:               (stricmp(CurrentCommandString,"SOLID")==0)) {
+dxf.c:2266:            if (stricmp(CurrentCommandString,"POLYLINE")==0) {
+dxf.c:2276:            if (stricmp(CurrentCommandString,"CIRCLE")==0) {
+dxf.c:2340:            if (stricmp(CurrentCommandString,"ARC")==0) {
+dxf.c:2412:            if (stricmp(CurrentCommandString,"INSERT")==0) {
+dxf.c:2443:                if (stricmp(AttributeName,"CONN4")==0) {
+dxf.c:2480:            if (stricmp(CurrentCommandString,"TEXT")==0) {
+dxf.c:2549:                if (stricmp(TextString,"produktie")==0) {
+dxf.c:2617:          if (stricmp(ValueStr,"SECTION")==0) {
+dxf.c:2620:          if (stricmp(ValueStr,"SEQEND")==0) {
+dxf.c:2623:          if (stricmp(ValueStr,"VERTEX")==0) {
+dxf.c:2629:          if (stricmp(ValueStr,"LINE")==0) {
+dxf.c:2631:          if (stricmp(ValueStr,"POLYLINE")==0) {
+dxf.c:2641:          if ((stricmp(ValueStr,"INSERT")==0)
+dxf.c:2643:             (stricmp(ValueStr,"TEXT")==0)) {
+dxf.c:2648:          if (stricmp(ValueStr,"ENDSEC")==0) {
+dxf.c:2660:          if (stricmp(ValueStr,"TABLE")==0) {
+dxf.c:2663:          if (stricmp(ValueStr,"ENDTAB")==0) {
+dxf.c:2669:          if (stricmp(ValueStr,"BLOCK")==0) {
+dxf.c:2677:          if (stricmp(ValueStr,"ENDBLK")==0) {
+dxf.c:2747:            if (stricmp(CurrentCommandString,"INSERT")==0) {
+dxf.c:2751:              if (stricmp(ValueStr,"HEADER")==0) {
+dxf.c:2758:              if (stricmp(ValueStr,"TABLES")==0) {
+dxf.c:2765:              if (stricmp(ValueStr,"BLOCKS")==0) {
+dxf.c:2772:              if (stricmp(ValueStr,"ENTITIES")==0) {
+dxf.c:2797:              if (stricmp(VarName,"$ANGDIR")==0) {
+dxf.c:2854:            if (stricmp(CurrentCommandString,"CIRCLE")==0) {
+dxf.c:2857:            if (stricmp(CurrentCommandString,"ARC")==0) {
+dxf.c:2860:            if (stricmp(CurrentCommandString,"TEXT")==0) {
+dxf.c:2863:            if (stricmp(CurrentCommandString,"POLYLINE")==0) {
+dxf.c:2866:            if (stricmp(CurrentCommandString,"VERTEX")==0) {
+dxf.c:2872:            if (stricmp(CurrentCommandString,"POLYLINE")==0) {
+dxf.c:2875:            if (stricmp(CurrentCommandString,"VERTEX")==0) {
+dxf.c:2878:            if (stricmp(CurrentCommandString,"INSERT")==0) {
+dxf.c:2881:            if (stricmp(CurrentCommandString,"TEXT")==0) {
+dxf.c:2887:            if (stricmp(CurrentCommandString,"POLYLINE")==0) {
+dxf.c:2890:            if (stricmp(CurrentCommandString,"INSERT")==0) {
+dxf.c:2893:            if (stricmp(CurrentCommandString,"VERTEX")==0) {
+dxf.c:2899:            if (stricmp(CurrentCommandString,"ARC")==0) {
+dxf.c:2907:            if (stricmp(CurrentCommandString,"TEXT")==0) {
+dxf.c:2910:            if (stricmp(CurrentCommandString,"INSERT")==0) {
+dxf.c:2916:            if (stricmp(CurrentCommandString,"ARC")==0) {
+dxf.c:2923:            if (stricmp(CurrentCommandString,"POLYLINE")==0) {
+dxf.c:2928:            if (stricmp(CurrentCommandString,"POLYLINE")==0) {
+dxf.c:2937:            if (stricmp(CurrentCommandString,"TEXT")==0) {
+files.c:81:  if (stricmp(&FileName[lengte-3],"shp")!=0) return;
+files.c:154:    if (stricmp(ShapePad->Name,"geom1230")==0) {
+files.c:2503:    if (stricmp(ShapePad.Name,"5")==0) {
+files.c:2516:        if (stricmp(ShapePad.Name,"5")==0) {
+files.c:2610:          if (stricmp(ShapePad.Name,"bottom2")==0) {
+files.c:3243:      if ((stricmp(Shape.Identification,ShapeCode)!=0)
+files.c:3245:         (stricmp(Shape.Identification,ShapeCode2)!=0)
+files.c:3247:         (stricmp(Shape.Identification,ShapeCode3)!=0)) {
+files.c:3313:    if ((stricmp(Shape.Identification,ShapeCode)!=0)
+files.c:3315:       (stricmp(Shape.Identification,ShapeCode2)!=0)
+files.c:3317:       (stricmp(Shape.Identification,ShapeCode3)!=0)) {
+files.c:3455:  if ((stricmp(Shape->Identification,ShapeCode)!=0)
+files.c:3457:     (stricmp(Shape->Identification,ShapeCode2)!=0)
+files.c:3459:     (stricmp(Shape->Identification,ShapeCode3)!=0)) {
+geom.c:1895:        if (stricmp(str1,"[Settings]")==0) ParamMode=3;
+geom.c:1896:        if (stricmp(str1,"[Keys]")==0) ParamMode=4;
+geom.c:1901:              if (stricmp(str1,"WindowWidth")==0) {
+geom.c:1906:              if (stricmp(str1,"WindowHeight")==0) {
+geom.c:1911:              if (stricmp(str1,"WindowStartX")==0) {
+geom.c:1916:              if (stricmp(str1,"WindowStartY")==0) {
+geom.c:1921:              if (stricmp(str1,"Units")==0) {
+geom.c:1927:              if (stricmp(str1,"GridSize")==0) {
+geom.c:1934:                if (stricmp(str1,str5)==0) {
+geom.c:1938:              if (stricmp(str1,"SoldMaskPadsBottomVisible")==0) {
+geom.c:1941:              if (stricmp(str1,"SoldMaskPadsTopVisible")==0) {
+geom.c:1944:              if (stricmp(str1,"PastePadsTopVisible")==0) {
+geom.c:1947:              if (stricmp(str1,"PastePadsBottomVisible")==0) {
+geom.c:1950:              if (stricmp(str1,"PlacementVisible")==0) {
+geom.c:1953:              if (stricmp(str1,"CompOutlineVisible")==0) {
+geom.c:1956:              if (stricmp(str1,"SilkScreenTopVisible")==0) {
+geom.c:1959:              if (stricmp(str1,"SilkScreenBottomVisible")==0) {
+geom.c:1964:                if (stricmp(str1,str5)==0) {
+geom.c:1968:              if (stricmp(str1,"GeomNameVisible")==0) {
+geom.c:1971:              if (stricmp(str1,"PowerPadsVisible")==0) {
+geom.c:1974:              if (stricmp(str1,"PinNamesVisible")==0) {
+geom.c:1977:              if (stricmp(str1,"InnerPadsVisible")==0) {
+geom.c:1980:              if (stricmp(str1,"DrillVisible")==0) {
+geom.c:1983:              if (stricmp(str1,"DrillUnplatedVisible")==0) {
+geom.c:1986:              if (stricmp(str1,"SnapMode")==0) {
+geom.c:1989:              if (stricmp(str1,"ZoomMode")==0) {
+geom.c:1992:              if (stricmp(str1,"DrawGrid")==0) {
+geom.c:1995:              if (stricmp(str1,"MousePanMultiply")==0) {
+geom.c:1998:              if (stricmp(str1,"DrawCrossHair")==0) {
+geom.c:2001:              if (stricmp(str1,"ClearanceVisible")==0) {
+geom.c:2004:              if (stricmp(str1,"ViewInsertionPoint")==0) {
+geom.c:2007:              if (stricmp(str1,"DefaultRuleSolderMask_TH")==0) {
+geom.c:2012:              if (stricmp(str1,"DefaultRulePasteMask_SMD")==0) {
+geom.c:2017:              if (stricmp(str1,SC(250,"DefaultRulePad"))==0) {
+geom.c:2022:              if (stricmp(str1,"DefaultRuleSolderMask_SMD")==0) {
+geom.c:2027:              if (stricmp(str1,"DefaultRuleAntiPowerPad")==0) {
+geom.c:2032:              if (stricmp(str1,"DefaultRuleInnerPad")==0) {
+geom.c:2037:              if (stricmp(str1,"DefaultRuleClearance")==0) {
+geom.c:2043:              if (stricmp(str1,"TraceThickness")==0) {
+geom.c:2048:              if (stricmp(str1,"CurrentClearance")==0) {
+geom.c:2053:              if (stricmp(str1,"CurrentSilkscreenLine")==0) {
+geom.c:2058:              if (stricmp(str1,"CurrentCompOutLine")==0) {
+geom.c:2063:              if (stricmp(str1,"CurrentInfoLine")==0) {
+geom.c:2068:              if (stricmp(str1,"CurrentBoardOutLine")==0) {
+geom.c:2073:              if (stricmp(str1,"CurrentTextHeight")==0) {
+geom.c:2081:                if (stricmp(str1,str5)==0) {
+geom.c:2095:                if (stricmp(str1,str5)==0) {
+geom.c:2109:                if (stricmp(str1,str5)==0) {
+geom.c:2121:              if (stricmp(str1,"SilkScreenTopColor")==0) {
+geom.c:2126:              if (stricmp(str1,"SilkScreenBottomColor")==0) {
+geom.c:2131:              if (stricmp(str1,"CompOutlineColor")==0) {
+geom.c:2136:              if (stricmp(str1,"ShapePlacementOutLineColor")==0) {
+geom.c:2141:              if (stricmp(str1,"ShapePinsDrillColor")==0) {
+geom.c:2146:              if (stricmp(str1,"ShapePinsDrillUnplatedColor")==0) {
+geom.c:2151:              if (stricmp(str1,"ShapePinsCompSideColor")==0) {
+geom.c:2156:              if (stricmp(str1,"ShapePinsTopColor")==0) {
+geom.c:2161:              if (stricmp(str1,"ShapePinsInnerColor")==0) {
+geom.c:2166:              if (stricmp(str1,"ShapePinsSoldSideColor")==0) {
+geom.c:2171:              if (stricmp(str1,"ShapePinsBottomColor")==0) {
+geom.c:2176:              if (stricmp(str1,"ShapePinsInnerColor")==0) {
+geom.c:2181:              if (stricmp(str1,"ShapePasteMaskCompSideColor")==0) {
+geom.c:2186:              if (stricmp(str1,"ShapePasteMaskTopColorNr")==0) {
+geom.c:2191:              if (stricmp(str1,"ShapePasteMaskSoldSideColor")==0) {
+geom.c:2196:              if (stricmp(str1,"ShapePasteMaskBottomColorNr")==0) {
+geom.c:2201:              if (stricmp(str1,"ShapeSoldMaskCompSideColor")==0) {
+geom.c:2206:              if (stricmp(str1,"ShapeSoldMaskTopColorNr")==0) {
+geom.c:2211:              if (stricmp(str1,"ShapeSoldMaskSoldSideColor")==0) {
+geom.c:2216:              if (stricmp(str1,"ShapeSoldMaskBottomColorNr")==0) {
+geom.c:2221:              if (stricmp(str1,"GeomNameColor")==0) {
+geom.c:2226:              if (stricmp(str1,"PowerPadColor")==0) {
+geom.c:2231:              if (stricmp(str1,"ClearanceColor")==0) {
+geom.c:2236:              if (stricmp(str1,"ButtonInfoColor")==0) {
+geom.c:2241:              if (stricmp(str1,"GridColor")==0) {
+geom.c:2246:              if (stricmp(str1,"BoardOutlineColor")==0) {
+geom.c:2251:              if (stricmp(str1,"Info1Color")==0) {
+geom.c:2256:              if (stricmp(str1,"Info2Color")==0) {
+geom.c:2261:              if (stricmp(str1,"Info3Color")==0) {
+geom.c:2266:              if (stricmp(str1,"Info4Color")==0) {
+geom.c:2271:              if (stricmp(str1,"BackGroundColor")==0) {
+geom.c:2276:              if (stricmp(str1,"RoutingKeepoutTopColor")==0) {
+geom.c:2281:              if (stricmp(str1,"RoutingKeepoutBottomColor")==0) {
+geom.c:2286:              if (stricmp(str1,"RoutingKeepoutInnerColor")==0) {
+geom.c:2292:              if (stricmp(str1,"WireBusSelectMode")==0) {
+toets.c:719:  if (stricmp(TempStr,SpaceString)==0) {
+toets.c:792:    if (stricmp(TempStr,KeyStrings[cnt].KeyStringPtr)==0) {
+toets.c:834:        (stricmp(KeyFunctions[cnt].FunctionString,FunctionString)!=0)) cnt++;

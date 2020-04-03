@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Add rectangle SMD pads with solder and paste mask</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Add rectangle SMD pads with solder and paste mask">
+</OBJECT>
+
+<P><A NAME="idh_add_rectangle_smd_pads"></A><font size=5><U>Add rectangle SMD pads with solder and paste mask</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/bitmap_doc4.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Press <B>Add rectangle SMD pads</B> button</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mouse2.gif" ALT="" BORDER=0></TD>
+<TD width=75%><B>Add pad</B> -&gt; <B>SIL SMD rectangle pads</B></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mouse2.gif" ALT="" BORDER=0></TD>
+<TD width=75%><B>Copy special</B> -&gt; <B>Add SIL SMD based on selected objects</B></TD>
+</TR>
+</TABLE><BR>
+
+<P>If a number of rectangular SMD pads (Pads,paste mask and solder mask) on a equal distance needs to be included, this function can do the job. In the next dialogbox all the necessary parameters can be entered. After pressing the <B>OK</B> button the pads can be placed. When pressing the <B>right mouse button</B> the pads will rotate 90 degrees counter clock wise. By pressing and keep down the <B>shift</B> key and moving the mouse cursor, the moving center will change. When the <B>spacebar</B> is pressed, a dialogbox will popup, and the position of the first pad can be edited by hand. When the first character typed is a <B>@</B> the coordinates will be relative against the <B>Relative (grid)position</B>. The coordinates typed in will be used with the current units (dimension).</P>
+
+<P>The function <B>Add SIL SMD based on selected objects</B> will do the same, but the dialogbox parameters will already be filled, with the parameters of a <B>selected</B> pad.</P>
+
+<P>The following parameters can be changed:</P>
+
+<P><U>Pad width and height</U></P>
+
+<P><U>Pitch</U></P>
+
+<P><U>Nr pads</U></P>
+
+<P><U>Pad width and height solder paste</U></P>
+
+<P>If the solder paste pad is not necessary, fill the X or Y parameter with zero.</P>
+
+<P><U>Pad width and height solder mask</U></P>
+
+<P>If the solder mask pad is not necessary, fill the X or Y parameter with zero.</P>
+
+<P><U>Top/bottom layer</U></P>
+
+<P>The pads will be placed on the top or bottom layer</P>
+
+<P><U>Clearance</U></P>
+
+<P>The initial clearance is the clearance used for this geometry.</P>
+
+<P><U>Startpin</U></P>
+
+<P>The startpin consists of two editboxes. The first editbox(optional) contains text or a number, and will not be changed. The second editbox contains a start number. This startnumber will be increased with <B>Increment</B> for the next pads.</P>
+
+<P>The <B>Use default rules for solder paste/mask and clearance</B> button can be used the fill in values based on the pad size.</P>
+
+<P><A HREF="smd_pad.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Definition of a SMD pad</A></P>
+
+<P><A HREF="design_rules_pad.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Design rules pad</A></P>
+
+</BODY>
+</HTML>

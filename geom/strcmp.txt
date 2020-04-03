@@ -1,0 +1,10 @@
+dxf.c:1577:    if (strcmp(DXFLayerToCheck,DXFLayers[SelectedLayers[cnt]])==0) {
+dxf.c:2283:                 (strcmp(BlockLayerName[BlockNestingLevel],"0")==0)) {
+files.c:845:        if (strcmp(TextP,"   Info1_45")==0) {
+files.c:862:        if (strcmp(TextP,"   Info1_0")==0) {
+files.c:2106:    if (strcmp(Object->Text,"noname")==0) {
+files.c:3273:    if (strcmp(Lib.Identification,LibraryCode1)==0) {
+files.c:3424:    if (strcmp(Lib.Identification,LibraryCode1)==0) {
+toets.c:734:       (strcmp(str,str3)==0)) {
+toets.c:747:       (strcmp(str,str3)==0)) {
+toets.c:760:       (strcmp(str,str3)==0)) {
