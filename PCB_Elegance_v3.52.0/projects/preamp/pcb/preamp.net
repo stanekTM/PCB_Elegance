@@ -1,0 +1,127 @@
+# Components
+COMP  R1                       RESISTOR_TH_4                      47k5
+COMP  R2                       RESISTOR_TH_4                      470R
+COMP  R3                       RESISTOR_TH_4                      1k00
+COMP  R4                       RESISTOR_TH_4                      5K62
+COMP  R5                       RESISTOR_TH_4                      806R
+COMP  R6                       RESISTOR_TH_4                      806R
+COMP  R7                       RESISTOR_TH_4                      80R6
+COMP  R8                       RESISTOR_TH_4                      80R6
+COMP  R9                       RESISTOR_TH_4                      806R
+COMP  R10                      RESISTOR_TH_4                      806R
+COMP  R11                      RESISTOR_TH_4                      80R6
+COMP  R12                      RESISTOR_TH_4                      80R6
+COMP  R13                      RESISTOR_TH_4                      221R
+COMP  R14                      RESISTOR_TH_4                      221R
+COMP  R15                      RESISTOR_TH_4                      2K7
+COMP  R16                      RESISTOR_TH_4                      820R
+COMP  R17                      RESISTOR_TH_4                      249R
+COMP  R18                      RESISTOR_TH_4                      249R
+COMP  R19                      RESISTOR_TH_4                      10k0
+COMP  R20                      RESISTOR_TH_4                      10k0
+COMP  R21                      RESISTOR_TH_4                      390R
+COMP  R22                      RESISTOR_TH_4                      390R
+COMP  R23                      RESISTOR_TH_4                      10k0
+COMP  R24                      RESISTOR_TH_4                      10k0
+COMP  R25                      RESISTOR_TH_4                      12K
+COMP  R26                      RESISTOR_TH_4                      475k
+COMP  R27                      RESISTOR_TH_4                      475k
+COMP  R28                      RESISTOR_TH_4                      27k
+COMP  R29                      RESISTOR_TH_4                      3k9
+COMP  R30                      RESISTOR_TH_4                      100k
+COMP  R31                      RESISTOR_TH_4                      392k
+COMP  R32                      RESISTOR_TH_4                      392k
+COMP  C1                       CAPACITOR_TH_3a                    2u2
+COMP  C2                       CAPACITOR_TH_1                     33P
+COMP  C3                       CAPACITOR_TH_2                     10P
+COMP  C4                       elco1_rad6mm                       100u/6V3
+COMP  C5                       elco1_rad6mm                       100u/6V3
+COMP  C6                       CAPACITOR_TH_3                     150p
+COMP  C7                       CAPACITOR_TH_3                     150p
+COMP  C8                       capacitor_th_3a                    1u
+COMP  C9                       CAPACITOR_TH_3                     220N
+COMP  C10                      elco1_rad6mm                       100u/25V
+COMP  C11                      CAPACITOR_TH_3                     220N
+COMP  C12                      elco1_rad6mm                       100u/25V
+COMP  C13                      CAPACITOR_TH_3a                    2u2
+COMP  C14                      CAPACITOR_TH_3a                    2u2
+COMP  C15                      CAPACITOR_TH_2                     100n
+COMP  C16                      CAPACITOR_TH_2                     100n
+COMP  D1                       led                                LED
+COMP  D2                       led                                LED
+COMP  D3                       DIODE_TH_4                         1n4148
+COMP  D4                       DIODE_TH_4                         1n4148
+COMP  T1                       DIP8                               MAT02
+COMP  T2                       DIP8                               MAT03
+COMP  T3                       TO92_TOR_BCE                       BC560C
+COMP  T4                       TO92_TOR_BCE                       BC550C
+COMP  T5                       TO92_FET_GDS                       BF256C
+COMP  T6                       TO92_TOR_BCE                       BC560C
+COMP  T7                       TO92_TOR_BCE                       BC550C
+COMP  T8                       TO92_TOR_BCE                       BC550C
+COMP  T9                       TO92_TOR_BCE                       BC560C
+COMP  T10                      TO92_TOR_BCE                       BC337/40
+COMP  T11                      TO92_TOR_BCE                       BC327/40
+COMP  T12                      TO92_TOR_BCE                       BC550C
+COMP  P1                       potm3                              10k
+COMP  P2                       potm3                              100k
+COMP  IC1                      DIP8                               OP77
+COMP  J1                       POINT_1_1MM                        CON1
+COMP  J2                       POINT_1_1MM                        CON1
+COMP  J3                       POINT_1_1MM                        CON1
+COMP  J4                       POINT_1_1MM                        CON1
+COMP  J5                       POINT_1_1MM                        CON1
+COMP  J6                       POINT_1_1MM                        CON1
+COMP  J7                       POINT_1_1MM                        CON1
+COMP  M1                       MOUNTINGHOLE3MM                    MOUTINGHOLE
+COMP  M2                       MOUNTINGHOLE3MM                    MOUTINGHOLE
+COMP  M3                       MOUNTINGHOLE3MM                    MOUTINGHOLE
+COMP  M4                       MOUNTINGHOLE3MM                    MOUTINGHOLE
+# Netlist
+NET   '-15V'                   R9-1 J6-1 R10-1 R18-1 C11-2 T11-C C12-2 R14-1
+NET   '-15V'                   D2-K C5-2 P2-3 R29-1 P2-2 C16-2 IC1-4
+NET   'GND'                    C7-1 C6-2 C11-1 C12-1 C9-2 C10-2 R3-1 C13-2 R27-1
+NET   'GND'                    D3-A D4-K C16-1 C15-2 C2-2 J2-1 R1-1 J5-1 J7-1
+NET   '+15V'                   C15-1 IC1-7 R5-2 J3-1 R6-2 R13-2 R17-2 C9-1 T10-C
+NET   '+15V'                   C10-1 D1-A C4-1
+NET   'N$1000'                 R7-1 R8-1 T4-C
+NET   'N$1001'                 T1-3 R7-2
+NET   'N$1002'                 T1-5 R8-2
+NET   'N$1003'                 R5-1 T1-1 T6-B
+NET   'N$1004'                 R6-1 T1-7
+NET   'N$1005'                 R31-1 R32-1 T12-C
+NET   'N$1006'                 R11-2 R12-2 T3-C
+NET   'N$1007'                 T2-6 R31-2 T1-2 R2-2 C2-1 R1-2
+NET   'N$1008'                 T2-7 R9-2 T7-B
+NET   'N$1009'                 T2-1 R10-2
+NET   'N$1010'                 T2-2 R32-2 T1-6 R4-1 R3-2 C3-2
+NET   'N$1011'                 R11-1 T2-5
+NET   'N$1012'                 R12-1 T2-3
+NET   'N$1013'                 C3-1 R25-1 R4-2 R26-2
+NET   'N$1014'                 R23-1 R24-2
+NET   'N$1015'                 R24-1 T11-E
+NET   'N$1016'                 T11-B R20-1 C8-2 T9-C T7-C R22-1
+NET   'N$1017'                 R22-2 P1-1 T9-B P1-2
+NET   'N$1018'                 R20-2 C7-2
+NET   'N$1019'                 C6-1 R19-1
+NET   'N$1020'                 R21-1 P1-3 T8-B
+NET   'N$1021'                 T8-E T9-E
+NET   'N$1022'                 T10-E R23-2
+NET   'N$1023'                 T10-B R19-2 T8-C C8-1 R21-2 T6-C
+NET   'N$1024'                 T5-S R16-2
+NET   'N$1025'                 T5-G R16-1 D2-A T4-B C5-1
+NET   'N$1026'                 T3-B C4-2 D1-K R15-2
+NET   'N$1027'                 R13-1 T3-E
+NET   'N$1028'                 T6-E R17-1
+NET   'N$1029'                 R15-1 T5-D
+NET   'N$1030'                 R18-2 T7-E
+NET   'N$1031'                 R14-2 T4-E
+NET   'N$1032'                 T12-E R30-2
+NET   'N$1033'                 R30-1 P2-1
+NET   'N$1034'                 T12-B R28-1 R29-2
+NET   'N$1035'                 R28-2 IC1-6 C14-2
+NET   'N$1036'                 IC1-2 R27-2 C14-1
+NET   'N$1037'                 D3-K D4-A IC1-3 R26-1 C13-1
+NET   'OUT'                    R25-2 J4-1
+NET   'N$1038'                 R2-1 C1-1
+NET   'IN'                     J1-1 C1-2

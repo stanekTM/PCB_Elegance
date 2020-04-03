@@ -1,0 +1,2833 @@
+;Gate/pin swap info design PcMotherBoard
+GATE    R162         0    0   33R  0
+PIN     '2'  0
+PIN     '1'  0
+GATE    R161         0    0   33R  1
+PIN     '2'  0
+PIN     '1'  0
+GATE    R160         0    0   33R  2
+PIN     '2'  0
+PIN     '1'  0
+GATE    R159         0    0   33R  3
+PIN     '2'  0
+PIN     '1'  0
+GATE    R158         0    0   33R  4
+PIN     '2'  0
+PIN     '1'  0
+GATE    R157         0    0   33R  5
+PIN     '2'  0
+PIN     '1'  0
+GATE    R156         0    0   33R  6
+PIN     '2'  0
+PIN     '1'  0
+GATE    R155         0    0   33R  7
+PIN     '2'  0
+PIN     '1'  0
+GATE    R154         0    0   33R  8
+PIN     '2'  0
+PIN     '1'  0
+GATE    R153         0    0   33R  9
+PIN     '2'  0
+PIN     '1'  0
+GATE    R152         0    0   470R  10
+PIN     '2'  0
+PIN     '1'  0
+GATE    R151         0    0   33R  11
+PIN     '2'  0
+PIN     '1'  0
+GATE    R150         0    0   33R  12
+PIN     '2'  0
+PIN     '1'  0
+GATE    R149         0    0   33R  13
+PIN     '2'  0
+PIN     '1'  0
+GATE    R148         0    0   33R  14
+PIN     '2'  0
+PIN     '1'  0
+GATE    R147         0    0   33R  15
+PIN     '2'  0
+PIN     '1'  0
+GATE    R146         0    0   33R  16
+PIN     '2'  0
+PIN     '1'  0
+GATE    R145         0    0   33R  17
+PIN     '2'  0
+PIN     '1'  0
+GATE    R144         0    0   33R  18
+PIN     '2'  0
+PIN     '1'  0
+GATE    R143         0    0   33R  19
+PIN     '2'  0
+PIN     '1'  0
+GATE    R142         0    0   33R  20
+PIN     '2'  0
+PIN     '1'  0
+GATE    R141         0    0   470R  21
+PIN     '2'  0
+PIN     '1'  0
+GATE    R140         0    0   33R  22
+PIN     '2'  0
+PIN     '1'  0
+GATE    R139         0    0   33R  23
+PIN     '2'  0
+PIN     '1'  0
+GATE    R137         0    0   33R  24
+PIN     '2'  0
+PIN     '1'  0
+GATE    R136         0    0   33R  25
+PIN     '2'  0
+PIN     '1'  0
+GATE    R130         0    0   33R  26
+PIN     '2'  0
+PIN     '1'  0
+GATE    R100         0    0   33R  27
+PIN     '2'  0
+PIN     '1'  0
+GATE    R101         0    0   33R  28
+PIN     '2'  0
+PIN     '1'  0
+GATE    R102         0    0   33R  29
+PIN     '2'  0
+PIN     '1'  0
+GATE    R103         0    0   33R  30
+PIN     '2'  0
+PIN     '1'  0
+GATE    R104         0    0   33R  31
+PIN     '2'  0
+PIN     '1'  0
+GATE    R105         0    0   33R  32
+PIN     '2'  0
+PIN     '1'  0
+GATE    R106         0    0   33R  33
+PIN     '2'  0
+PIN     '1'  0
+GATE    R107         0    0   33R  34
+PIN     '2'  0
+PIN     '1'  0
+GATE    R108         0    0   33R  35
+PIN     '2'  0
+PIN     '1'  0
+GATE    R109         0    0   33R  36
+PIN     '2'  0
+PIN     '1'  0
+GATE    R110         0    0   33R  37
+PIN     '2'  0
+PIN     '1'  0
+GATE    R111         0    0   47R  38
+PIN     '2'  0
+PIN     '1'  0
+GATE    R112         0    0   33R  39
+PIN     '2'  0
+PIN     '1'  0
+GATE    R113         0    0   33R  40
+PIN     '2'  0
+PIN     '1'  0
+GATE    R114         0    0   33R  41
+PIN     '2'  0
+PIN     '1'  0
+GATE    R115         0    0   33R  42
+PIN     '2'  0
+PIN     '1'  0
+GATE    R116         0    0   33R  43
+PIN     '2'  0
+PIN     '1'  0
+GATE    R117         0    0   33R  44
+PIN     '2'  0
+PIN     '1'  0
+GATE    R118         0    0   33R  45
+PIN     '2'  0
+PIN     '1'  0
+GATE    R119         0    0   33R  46
+PIN     '2'  0
+PIN     '1'  0
+GATE    R120         0    0   33R  47
+PIN     '2'  0
+PIN     '1'  0
+GATE    R121         0    0   33R  48
+PIN     '2'  0
+PIN     '1'  0
+GATE    R122         0    0   33R  49
+PIN     '2'  0
+PIN     '1'  0
+GATE    R123         0    0   33R  50
+PIN     '2'  0
+PIN     '1'  0
+GATE    R124         0    0   33R  51
+PIN     '2'  0
+PIN     '1'  0
+GATE    R125         0    0   33R  52
+PIN     '2'  0
+PIN     '1'  0
+GATE    R126         0    0   33R  53
+PIN     '2'  0
+PIN     '1'  0
+GATE    R127         0    0   33R  54
+PIN     '2'  0
+PIN     '1'  0
+GATE    R128         0    0   47R  55
+PIN     '2'  0
+PIN     '1'  0
+GATE    C100         0    0   22p  56
+PIN     '2'  0
+PIN     '1'  0
+GATE    C101         0    0   22p  57
+PIN     '2'  0
+PIN     '1'  0
+GATE    U102         1    1   74HCT14  58
+PIN     '1'  0
+PIN     '2'  0
+GATE    JP100        0    0   HEADER_20X2  59
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '7'  0
+PIN     '8'  0
+PIN     '9'  0
+PIN     '10'  0
+PIN     '11'  0
+PIN     '12'  0
+PIN     '13'  0
+PIN     '14'  0
+PIN     '15'  0
+PIN     '16'  0
+PIN     '17'  0
+PIN     '18'  0
+PIN     '19'  0
+PIN     '20'  0
+PIN     '21'  0
+PIN     '22'  0
+PIN     '23'  0
+PIN     '24'  0
+PIN     '25'  0
+PIN     '26'  0
+PIN     '27'  0
+PIN     '28'  0
+PIN     '29'  0
+PIN     '30'  0
+PIN     '31'  0
+PIN     '32'  0
+PIN     '33'  0
+PIN     '34'  0
+PIN     '35'  0
+PIN     '36'  0
+PIN     '37'  0
+PIN     '38'  0
+PIN     '39'  0
+PIN     '40'  0
+GATE    JP101        0    0   HEADER_20X2  60
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '7'  0
+PIN     '8'  0
+PIN     '9'  0
+PIN     '10'  0
+PIN     '11'  0
+PIN     '12'  0
+PIN     '13'  0
+PIN     '14'  0
+PIN     '15'  0
+PIN     '16'  0
+PIN     '17'  0
+PIN     '18'  0
+PIN     '19'  0
+PIN     '20'  0
+PIN     '21'  0
+PIN     '22'  0
+PIN     '23'  0
+PIN     '24'  0
+PIN     '25'  0
+PIN     '26'  0
+PIN     '27'  0
+PIN     '28'  0
+PIN     '29'  0
+PIN     '30'  0
+PIN     '31'  0
+PIN     '32'  0
+PIN     '33'  0
+PIN     '34'  0
+PIN     '35'  0
+PIN     '36'  0
+PIN     '37'  0
+PIN     '38'  0
+PIN     '39'  0
+PIN     '40'  0
+GATE    Y100         0    0   32.768kHz  61
+PIN     '1'  0
+PIN     '2'  0
+GATE    J100         0    0   CON4  62
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+GATE    BT100        0    0   BATTERY  63
+PIN     '2'  0
+PIN     '1'  0
+GATE    R131         0    0   1k0  64
+PIN     '2'  0
+PIN     '1'  0
+GATE    R132         0    0   68R  65
+PIN     '2'  0
+PIN     '1'  0
+GATE    R133         0    0   68R  66
+PIN     '2'  0
+PIN     '1'  0
+GATE    R134         0    0   2k2  67
+PIN     '2'  0
+PIN     '1'  0
+GATE    C102         0    0   100n  68
+PIN     '2'  0
+PIN     '1'  0
+GATE    R135         0    0   220R  69
+PIN     '2'  0
+PIN     '1'  0
+GATE    U101         2    2   7407  70
+PIN     '3'  0
+PIN     '4'  0
+GATE    U101         1    2   7407  71
+PIN     '1'  0
+PIN     '2'  0
+GATE    JP102        0    0   HEADER_2  72
+PIN     '1'  0
+PIN     '2'  0
+GATE    JP103        0    0   HEADER_4  73
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+GATE    R138         0    0   4k7  74
+PIN     '2'  0
+PIN     '1'  0
+GATE    U100         0    0   34091  75
+PIN     'C17'  0
+PIN     'B17'  0
+PIN     'A18'  0
+PIN     'G19'  0
+PIN     'A17'  0
+PIN     'F18'  0
+PIN     'A16'  0
+PIN     'F17'  0
+PIN     'F16'  0
+PIN     'G20'  0
+PIN     'C16'  0
+PIN     'B16'  0
+PIN     'D16'  0
+PIN     'G16'  0
+PIN     'G18'  0
+PIN     'G17'  0
+PIN     'C18'  0
+PIN     'H16'  0
+PIN     'B18'  0
+PIN     'H17'  0
+PIN     'M4'  0
+PIN     'M3'  0
+PIN     'M2'  0
+PIN     'L3'  0
+PIN     'V11'  0
+PIN     'D11'  0
+PIN     'M19'  0
+PIN     'K19'  0
+PIN     'L17'  0
+PIN     'L19'  0
+PIN     'P1'  0
+PIN     'P20'  0
+PIN     'J18'  0
+PIN     'N20'  0
+PIN     'M20'  0
+PIN     'M18'  0
+PIN     'K17'  0
+PIN     'E5'  0
+PIN     'A5'  0
+PIN     'A3'  0
+PIN     'B5'  0
+PIN     'B6'  0
+PIN     'A1'  0
+PIN     'A6'  0
+PIN     'D5'  0
+PIN     'C5'  0
+PIN     'Y12'  0
+PIN     'V15'  0
+PIN     'U15'  0
+PIN     'U10'  0
+PIN     'V12'  0
+PIN     'W12'  0
+PIN     'Y4'  0
+PIN     'Y1'  0
+PIN     'W4'  0
+PIN     'U3'  0
+PIN     'T7'  0
+PIN     'W7'  0
+PIN     'Y3'  0
+PIN     'W1'  0
+PIN     'Y5'  0
+PIN     'T4'  0
+PIN     'T3'  0
+PIN     'F1'  0
+PIN     'H2'  0
+PIN     'G2'  0
+PIN     'H3'  0
+PIN     'V20'  0
+PIN     'T20'  0
+PIN     'R19'  0
+PIN     'V10'  0
+PIN     'J1'  0
+PIN     'J2'  0
+PIN     'W20'  0
+PIN     'V19'  0
+PIN     'U18'  0
+PIN     'R1'  0
+PIN     'R2'  0
+PIN     'K16'  0
+PIN     'T17'  0
+PIN     'T18'  0
+PIN     'H19'  0
+PIN     'U19'  0
+PIN     'M17'  0
+PIN     'P16'  0
+PIN     'N17'  0
+PIN     'P18'  0
+PIN     'J16'  0
+PIN     'P19'  0
+PIN     'L2'  0
+PIN     'J3'  0
+PIN     'L5'  0
+PIN     'K3'  0
+PIN     'K4'  0
+PIN     'H1'  0
+PIN     'H4'  0
+PIN     'H5'  0
+PIN     'G3'  0
+PIN     'G4'  0
+PIN     'T19'  0
+PIN     'G5'  0
+PIN     'P2'  0
+PIN     'P3'  0
+PIN     'P4'  0
+PIN     'M16'  0
+PIN     'M5'  0
+PIN     'N4'  0
+PIN     'L4'  0
+PIN     'N5'  0
+PIN     'R5'  0
+PIN     'R20'  0
+PIN     'N19'  0
+PIN     'L16'  0
+PIN     'P17'  0
+PIN     'B12'  0
+PIN     'A12'  0
+PIN     'C10'  0
+PIN     'L18'  0
+PIN     'L20'  0
+PIN     'U20'  0
+PINBUS  32 'B10,A10,D9,C9,B9,A9,D8,E8\B8,A8,D7,C7,B7,A7,D6,E6\E4,C4,B4,A4,D3,E3,C3,B3\E2,C2,B2,A2,D1,E1,C1,B1'  0  AD[0:31]
+PINBUS  4 'C8,C6,D4,D2'  0  C/BE[0:3]#
+PINBUS  4 'E10,A11,B11,C11'  0  REQ[0:3]#
+PINBUS  4 'U14,W6,Y10,V5'  0  DACK[0:3]#
+PINBUS  3 'T15,V16,W17'  0  DACK[5:7]#
+PINBUS  16 'H20,J20,J4,T9,W9,U8,V8,Y8\Y20,U1,U12,W13,T13,N18,V14,Y14'  0  IRQ[0:15]
+PINBUS  20 'U11,T11,W11,Y11,T10,W10,U9,V9\Y9,T8,W8,U7,V7,Y7,V6,Y6\T5,W5,U4,V4'  0  SA[0:19]
+PINBUS  16 'V3,W3,U2,T2,W2,Y2,T1,V1\W16,T16,Y17,V17,Y18,W18,Y19,W19'  0  SD[0:15]
+PINBUS  7 'Y15,T14,W14,U13,V13,Y13,T12'  0  LA[17:23]
+PINBUS  16 'F20,E18,E20,D18,D20,C20,B20,A20\A19,B19,C19,D19,D17,E19,E17,F19'  0  IDE0D[0:15]
+PINBUS  16 'E15,B15,D14,C14,A14,C13,A13,C12\D12,B13,D13,B14,E14,A15,C15,D15'  0  IDE1D[0:15]
+PINBUS  4 'W15,U6,V2,U5'  0  DREQ[0:3]
+PINBUS  3 'Y16,U16,U17'  0  DREQ[5:7]
+PINBUS  4 'R3,R4,P5,G1'  0  PIRQ[0:3]#
+GATE    JP104        0    0   HEADER_2  76
+PIN     '1'  0
+PIN     '2'  0
+GATE    R129         0    0   1M0  77
+PIN     '2'  0
+PIN     '1'  0
+GATE    Q100         0    0   2N3904  78
+PIN     'E'  0
+PIN     'C'  0
+PIN     'B'  0
+GATE    R200         0    0   47R  79
+PIN     '2'  0
+PIN     '1'  0
+GATE    R201         0    0   47R  80
+PIN     '2'  0
+PIN     '1'  0
+GATE    R202         0    0   33R  81
+PIN     '2'  0
+PIN     '1'  0
+GATE    R203         0    0   33R  82
+PIN     '2'  0
+PIN     '1'  0
+GATE    R204         0    0   33R  83
+PIN     '2'  0
+PIN     '1'  0
+GATE    R205         0    0   33R  84
+PIN     '2'  0
+PIN     '1'  0
+GATE    R206         0    0   22R  85
+PIN     '2'  0
+PIN     '1'  0
+GATE    R207         0    0   33R  86
+PIN     '2'  0
+PIN     '1'  0
+GATE    R208         0    0   33R  87
+PIN     '2'  0
+PIN     '1'  0
+GATE    R209         0    0   33R  88
+PIN     '2'  0
+PIN     '1'  0
+GATE    R210         0    0   33R  89
+PIN     '2'  0
+PIN     '1'  0
+GATE    R211         0    0   22R  90
+PIN     '2'  0
+PIN     '1'  0
+GATE    R212         0    0   22R  91
+PIN     '2'  0
+PIN     '1'  0
+GATE    R213         0    0   22R  92
+PIN     '2'  0
+PIN     '1'  0
+GATE    R214         0    0   22R  93
+PIN     '2'  0
+PIN     '1'  0
+GATE    R215         0    0   22R  94
+PIN     '2'  0
+PIN     '1'  0
+GATE    R216         0    0   22R  95
+PIN     '2'  0
+PIN     '1'  0
+GATE    R217         0    0   22R  96
+PIN     '2'  0
+PIN     '1'  0
+GATE    R218         0    0   22R  97
+PIN     '2'  0
+PIN     '1'  0
+GATE    R219         0    0   10k  98
+PIN     '2'  0
+PIN     '1'  0
+GATE    R220         0    0   4k7  99
+PIN     '2'  0
+PIN     '1'  0
+GATE    R221         0    0   4k7  100
+PIN     '2'  0
+PIN     '1'  0
+GATE    R222         0    0   330R  101
+PIN     '2'  0
+PIN     '1'  0
+GATE    R223         0    0   330R  102
+PIN     '2'  0
+PIN     '1'  0
+GATE    R224         0    0   4k7  103
+PIN     '2'  0
+PIN     '1'  0
+GATE    R225         0    0   4k7  104
+PIN     '2'  0
+PIN     '1'  0
+GATE    R226         0    0   4k7  105
+PIN     '2'  0
+PIN     '1'  0
+GATE    R227         0    0   4k7  106
+PIN     '2'  0
+PIN     '1'  0
+GATE    R228         0    0   330R  107
+PIN     '2'  0
+PIN     '1'  0
+GATE    C200         0    0   33u  108
+PIN     '2'  0
+PIN     '1'  0
+GATE    C201         0    0   10u  109
+PIN     '2'  0
+PIN     '1'  0
+GATE    C202         0    0   100n  110
+PIN     '2'  0
+PIN     '1'  0
+GATE    C203         0    0   100n  111
+PIN     '2'  0
+PIN     '1'  0
+GATE    C204         0    0   100n  112
+PIN     '2'  0
+PIN     '1'  0
+GATE    C205         0    0   100n  113
+PIN     '2'  0
+PIN     '1'  0
+GATE    C206         0    0   100n  114
+PIN     '2'  0
+PIN     '1'  0
+GATE    C207         0    0   100n  115
+PIN     '2'  0
+PIN     '1'  0
+GATE    C208         0    0   100n  116
+PIN     '2'  0
+PIN     '1'  0
+GATE    C209         0    0   100n  117
+PIN     '2'  0
+PIN     '1'  0
+GATE    C210         0    0   100n  118
+PIN     '2'  0
+PIN     '1'  0
+GATE    C211         0    0   10p  119
+PIN     '2'  0
+PIN     '1'  0
+GATE    C212         0    0   10p  120
+PIN     '2'  0
+PIN     '1'  0
+GATE    R229         0    0   33R  121
+PIN     '2'  0
+PIN     '1'  0
+GATE    R230         0    0   33R  122
+PIN     '2'  0
+PIN     '1'  0
+GATE    R231         0    0   33R  123
+PIN     '2'  0
+PIN     '1'  0
+GATE    JP200        0    0   HEADER_3X2  124
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+GATE    JP201        0    0   HEADER_3  125
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+GATE    Y200         0    0   14.318MHz  126
+PIN     '1'  0
+PIN     '2'  0
+GATE    L200         0    0   INDUCTOR  127
+PIN     '1'  0
+PIN     '2'  0
+GATE    U200         0    0   SOCKET7  128
+PIN     'AJ1'  0
+PIN     'AL5'  0
+PIN     'AK6'  0
+PIN     'AF4'  0
+PIN     'AJ3'  0
+PIN     'AK2'  0
+PIN     'AH4'  0
+PIN     'AE5'  0
+PIN     'AC5'  0
+PIN     'AG5'  0
+PIN     'AL3'  0
+PIN     'U3'  0
+PIN     'AJ5'  0
+PIN     'AK4'  0
+PIN     'AM6'  0
+PIN     'T4'  0
+PIN     'Q5'  0
+PIN     'AM2'  0
+PIN     'AL17'  0
+PIN     'Y35'  0
+PIN     'P4'  0
+PIN     'AG3'  0
+PIN     'Q3'  0
+PIN     'S3'  0
+PIN     'S5'  0
+PIN     'R4'  0
+PIN     'AE35'  0
+PIN     'Q35'  0
+PIN     'AH32'  0
+PIN     'W3'  0
+PIN     'AB4'  0
+PIN     'V34'  0
+PIN     'Z34'  0
+PIN     'AC35'  0
+PIN     'AB34'  0
+PIN     'AA33'  0
+PIN     'AA5'  0
+PIN     'AL7'  0
+PIN     'Y5'  0
+PIN     'Y3'  0
+PIN     'U5'  0
+PIN     'AK20'  0
+PIN     'AM4'  0
+PIN     'AA35'  0
+PIN     'AC33'  0
+PIN     'AD34'  0
+PIN     'AK8'  0
+PIN     'Z4'  0
+PIN     'W5'  0
+PIN     'AK18'  0
+PIN     'Y33'  0
+PIN     'X34'  0
+PIN     'M34'  0
+PIN     'N33'  0
+PIN     'N35'  0
+PIN     'P34'  0
+PIN     'Q33'  0
+PIN     'H34'  0
+PIN     'L35'  0
+PIN     'AC3'  0
+PIN     'AA3'  0
+PIN     'J33'  0
+PIN     'X4'  0
+PIN     'V4'  0
+PIN     'AN7'  0
+PIN     'AL1'  0
+PIN     'AD4'  0
+PIN     'AE3'  0
+PINBUS  8 'D36,D30,C25,D18\C7,F6,F2,N5'  0  DP[0:7]
+PINBUS  8 'AL9,AK10,AL11,AK12\AL13,AK14,AL15,AK16'  0  BE[0:7]#
+PINBUS  29 'AL35,AM34,AK32,AN33,AL33\AM32,AK30,AN31,AL31,AL29,AK28,AL27,AK26\AL25,AK24,AL23,AK22,AL21,AF34,AH36,AE33\AG35,AJ35,AH34,AG33,AK36,AK34,AM36,AJ33'  0  A[3:31]
+PINBUS  64 'K34,G35,J35,G33,F36,F34,E35,E33\D34,C37,C35,B36,D32,B34,C33,A35\B32,C31,A33,D28,B30,C29,A31,D26\C27,C23,D24,C21,D22,C19,D20,C17\C15,D16,C13,D14,C11,D12,C9,D10\D8,A5,E9,B4,D6,C5,E7,C3\D4,E5,D2,F4,E3,G5,E1,G3\H4,J3,J5,K4,L5,L3,M4,N3'  0  D[0:63]
+GATE    R232         0    0   220R  129
+PIN     '2'  0
+PIN     '1'  0
+GATE    U204         0    0   CLOCKSYNTH  130
+PIN     '19'  0
+PIN     '20'  0
+PIN     '45'  0
+PIN     '44'  0
+PIN     '42'  0
+PIN     '41'  0
+PIN     '39'  0
+PIN     '38'  0
+PIN     '36'  0
+PIN     '35'  0
+PIN     '33'  0
+PIN     '32'  0
+PIN     '30'  0
+PIN     '29'  0
+PIN     '26'  0
+PIN     '27'  0
+PIN     '8'  0
+PIN     '9'  0
+PIN     '11'  0
+PIN     '12'  0
+PIN     '13'  0
+PIN     '14'  0
+PIN     '16'  0
+PIN     '22'  0
+PIN     '23'  0
+PIN     '6'  0
+PIN     '18'  0
+PIN     '2'  0
+PIN     '1'  0
+PIN     '47'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '34'  0
+PIN     '28'  0
+PIN     '21'  0
+PIN     '15'  0
+PIN     '7'  0
+PIN     '25'  0
+PIN     '48'  0
+PIN     '40'  0
+PIN     '46'  0
+GATE    R234         0    0   10K  131
+PIN     '2'  0
+PIN     '1'  0
+GATE    R235         0    0   10K  132
+PIN     '2'  0
+PIN     '1'  0
+GATE    R233         0    0   10K  133
+PIN     '2'  0
+PIN     '1'  0
+GATE    R236         0    0   220R  134
+PIN     '2'  0
+PIN     '1'  0
+GATE    R237         0    0   220R  135
+PIN     '2'  0
+PIN     '1'  0
+GATE    U201         0    0   sram32kx32  136
+PIN     '38'  0
+PIN     '39'  0
+PIN     '16'  0
+PIN     '66'  0
+PIN     '30'  0
+PIN     '31'  0
+PIN     '14'  0
+PIN     '64'  0
+PIN     '92'  0
+PIN     '98'  0
+PIN     '97'  0
+PIN     '86'  0
+PIN     '83'  0
+PIN     '84'  0
+PIN     '85'  0
+PIN     '87'  0
+PIN     '88'  0
+PIN     '89'  0
+PIN     '42'  0
+PIN     '51'  0
+PIN     '43'  0
+PIN     '80'  0
+PIN     '1'  0
+PINBUS  4 '93,94,95,96'  0  BWE[0:3]#
+PINBUS  16 '37,36,35,34,33,32,100,99\82,81,44,45,46,47,48,49'  0  A[0:15]
+PINBUS  32 '52,53,56,57,58,59,62,63\68,69,72,73,74,75,78,79\2,3,6,7,8,9,12,13\18,19,22,23,24,25,28,29'  0  DQ[0:31]
+GATE    U203         0    0   SRAM32KX8_H  137
+PIN     '27'  0
+PIN     '20'  0
+PIN     '22'  0
+PIN     '1'  0
+PINBUS  8 '11,12,13,15,16,17,18,19'  0  D[0:7]
+PINBUS  14 '10,9,8,7,6,5,4,3\25,24,21,23,2,26'  0  A[0:13]
+GATE    U202         0    0   sram32kx32  138
+PIN     '38'  0
+PIN     '39'  0
+PIN     '16'  0
+PIN     '66'  0
+PIN     '30'  0
+PIN     '31'  0
+PIN     '14'  0
+PIN     '64'  0
+PIN     '92'  0
+PIN     '98'  0
+PIN     '97'  0
+PIN     '86'  0
+PIN     '83'  0
+PIN     '84'  0
+PIN     '85'  0
+PIN     '87'  0
+PIN     '88'  0
+PIN     '89'  0
+PIN     '42'  0
+PIN     '51'  0
+PIN     '43'  0
+PIN     '80'  0
+PIN     '1'  0
+PINBUS  4 '93,94,95,96'  0  BWE[0:3]#
+PINBUS  16 '37,36,35,34,33,32,100,99\82,81,44,45,46,47,48,49'  0  A[0:15]
+PINBUS  32 '52,53,56,57,58,59,62,63\68,69,72,73,74,75,78,79\2,3,6,7,8,9,12,13\18,19,22,23,24,25,28,29'  0  DQ[0:31]
+GATE    R238         0    0   10K  139
+PIN     '2'  0
+PIN     '1'  0
+GATE    R239         0    0   10K  140
+PIN     '2'  0
+PIN     '1'  0
+GATE    R240         0    0   10K  141
+PIN     '2'  0
+PIN     '1'  0
+GATE    C300         0    0   100n  142
+PIN     '2'  0
+PIN     '1'  0
+GATE    C301         0    0   100n  143
+PIN     '2'  0
+PIN     '1'  0
+GATE    C302         0    0   100n  144
+PIN     '2'  0
+PIN     '1'  0
+GATE    C303         0    0   100n  145
+PIN     '2'  0
+PIN     '1'  0
+GATE    C304         0    0   100n  146
+PIN     '2'  0
+PIN     '1'  0
+GATE    C305         0    0   100n  147
+PIN     '2'  0
+PIN     '1'  0
+GATE    C307         0    0   100n  148
+PIN     '2'  0
+PIN     '1'  0
+GATE    C308         0    0   100n  149
+PIN     '2'  0
+PIN     '1'  0
+GATE    J300         0    0   PCI-BUS  150
+PIN     'B9'  0
+PIN     'B11'  0
+PIN     'B16'  0
+PIN     'B18'  0
+PIN     'B35'  0
+PIN     'B37'  0
+PIN     'B39'  0
+PIN     'B40'  0
+PIN     'B42'  0
+PIN     'A15'  0
+PIN     'A17'  0
+PIN     'A26'  0
+PIN     'A34'  0
+PIN     'A36'  0
+PIN     'A38'  0
+PIN     'A40'  0
+PIN     'A41'  0
+PIN     'A43'  0
+PIN     'A7'  0
+PIN     'B8'  0
+PIN     'B7'  0
+PIN     'A6'  0
+PIN     'B60'  0
+PIN     'A60'  0
+PINBUS  32 'A58,B58,A57,B56,A55,B55,A54,B53\B52,A49,B48,A47,B47,A46,B45,A44\A32,B32,A31,B30,A29,B29,A28,B27\A25,B24,A23,B23,A22,B21,A20,B20'  0  AD[0:31]
+PINBUS  4 'A52,B44,B33,B26'  0  C/BE[0:3]#
+GATE    J301         0    0   PCI-BUS  151
+PIN     'B9'  0
+PIN     'B11'  0
+PIN     'B16'  0
+PIN     'B18'  0
+PIN     'B35'  0
+PIN     'B37'  0
+PIN     'B39'  0
+PIN     'B40'  0
+PIN     'B42'  0
+PIN     'A15'  0
+PIN     'A17'  0
+PIN     'A26'  0
+PIN     'A34'  0
+PIN     'A36'  0
+PIN     'A38'  0
+PIN     'A40'  0
+PIN     'A41'  0
+PIN     'A43'  0
+PIN     'A7'  0
+PIN     'B8'  0
+PIN     'B7'  0
+PIN     'A6'  0
+PIN     'B60'  0
+PIN     'A60'  0
+PINBUS  32 'A58,B58,A57,B56,A55,B55,A54,B53\B52,A49,B48,A47,B47,A46,B45,A44\A32,B32,A31,B30,A29,B29,A28,B27\A25,B24,A23,B23,A22,B21,A20,B20'  0  AD[0:31]
+PINBUS  4 'A52,B44,B33,B26'  0  C/BE[0:3]#
+GATE    J302         0    0   PCI-BUS  152
+PIN     'B9'  0
+PIN     'B11'  0
+PIN     'B16'  0
+PIN     'B18'  0
+PIN     'B35'  0
+PIN     'B37'  0
+PIN     'B39'  0
+PIN     'B40'  0
+PIN     'B42'  0
+PIN     'A15'  0
+PIN     'A17'  0
+PIN     'A26'  0
+PIN     'A34'  0
+PIN     'A36'  0
+PIN     'A38'  0
+PIN     'A40'  0
+PIN     'A41'  0
+PIN     'A43'  0
+PIN     'A7'  0
+PIN     'B8'  0
+PIN     'B7'  0
+PIN     'A6'  0
+PIN     'B60'  0
+PIN     'A60'  0
+PINBUS  32 'A58,B58,A57,B56,A55,B55,A54,B53\B52,A49,B48,A47,B47,A46,B45,A44\A32,B32,A31,B30,A29,B29,A28,B27\A25,B24,A23,B23,A22,B21,A20,B20'  0  AD[0:31]
+PINBUS  4 'A52,B44,B33,B26'  0  C/BE[0:3]#
+GATE    J303         0    0   PCI-BUS  153
+PIN     'B9'  0
+PIN     'B11'  0
+PIN     'B16'  0
+PIN     'B18'  0
+PIN     'B35'  0
+PIN     'B37'  0
+PIN     'B39'  0
+PIN     'B40'  0
+PIN     'B42'  0
+PIN     'A15'  0
+PIN     'A17'  0
+PIN     'A26'  0
+PIN     'A34'  0
+PIN     'A36'  0
+PIN     'A38'  0
+PIN     'A40'  0
+PIN     'A41'  0
+PIN     'A43'  0
+PIN     'A7'  0
+PIN     'B8'  0
+PIN     'B7'  0
+PIN     'A6'  0
+PIN     'B60'  0
+PIN     'A60'  0
+PINBUS  32 'A58,B58,A57,B56,A55,B55,A54,B53\B52,A49,B48,A47,B47,A46,B45,A44\A32,B32,A31,B30,A29,B29,A28,B27\A25,B24,A23,B23,A22,B21,A20,B20'  0  AD[0:31]
+PINBUS  4 'A52,B44,B33,B26'  0  C/BE[0:3]#
+GATE    R400         0    0   22R  154
+PIN     '2'  0
+PIN     '1'  0
+GATE    R401         0    0   22R  155
+PIN     '2'  0
+PIN     '1'  0
+GATE    R402         0    0   22R  156
+PIN     '2'  0
+PIN     '1'  0
+GATE    R403         0    0   22R  157
+PIN     '2'  0
+PIN     '1'  0
+GATE    R404         0    0   22R  158
+PIN     '2'  0
+PIN     '1'  0
+GATE    R405         0    0   22R  159
+PIN     '2'  0
+PIN     '1'  0
+GATE    R406         0    0   10R  160
+PIN     '2'  0
+PIN     '1'  0
+GATE    R407         0    0   10R  161
+PIN     '2'  0
+PIN     '1'  0
+GATE    R408         0    0   10R  162
+PIN     '2'  0
+PIN     '1'  0
+GATE    R409         0    0   10R  163
+PIN     '2'  0
+PIN     '1'  0
+GATE    R410         0    0   10R  164
+PIN     '2'  0
+PIN     '1'  0
+GATE    R411         0    0   10R  165
+PIN     '2'  0
+PIN     '1'  0
+GATE    R412         0    0   10R  166
+PIN     '2'  0
+PIN     '1'  0
+GATE    R413         0    0   10R  167
+PIN     '2'  0
+PIN     '1'  0
+GATE    R414         0    0   10R  168
+PIN     '2'  0
+PIN     '1'  0
+GATE    R415         0    0   10R  169
+PIN     '2'  0
+PIN     '1'  0
+GATE    R416         0    0   10R  170
+PIN     '2'  0
+PIN     '1'  0
+GATE    R417         0    0   10R  171
+PIN     '2'  0
+PIN     '1'  0
+GATE    R418         0    0   10R  172
+PIN     '2'  0
+PIN     '1'  0
+GATE    R419         0    0   10R  173
+PIN     '2'  0
+PIN     '1'  0
+GATE    R420         0    0   10R  174
+PIN     '2'  0
+PIN     '1'  0
+GATE    R421         0    0   10R  175
+PIN     '2'  0
+PIN     '1'  0
+GATE    R422         0    0   10R  176
+PIN     '2'  0
+PIN     '1'  0
+GATE    R423         0    0   10R  177
+PIN     '2'  0
+PIN     '1'  0
+GATE    R424         0    0   10R  178
+PIN     '2'  0
+PIN     '1'  0
+GATE    R425         0    0   10R  179
+PIN     '2'  0
+PIN     '1'  0
+GATE    R426         0    0   10R  180
+PIN     '2'  0
+PIN     '1'  0
+GATE    R427         0    0   10R  181
+PIN     '2'  0
+PIN     '1'  0
+GATE    R428         0    0   10R  182
+PIN     '2'  0
+PIN     '1'  0
+GATE    R429         0    0   10R  183
+PIN     '2'  0
+PIN     '1'  0
+GATE    R430         0    0   10R  184
+PIN     '2'  0
+PIN     '1'  0
+GATE    R431         0    0   10R  185
+PIN     '2'  0
+PIN     '1'  0
+GATE    R432         0    0   10R  186
+PIN     '2'  0
+PIN     '1'  0
+GATE    R433         0    0   10R  187
+PIN     '2'  0
+PIN     '1'  0
+GATE    U402         0    0   34090  188
+PIN     'E6'  0
+PIN     'E9'  0
+PIN     'E7'  0
+PIN     'E8'  0
+PIN     'E11'  0
+PIN     'E5'  0
+PIN     'D4'  0
+PIN     'D5'  0
+PIN     'A16'  0
+PIN     'C13'  0
+PIN     'W17'  0
+PIN     'T15'  0
+PIN     'T5'  0
+PIN     'M5'  0
+PIN     'N5'  0
+PIN     'L5'  0
+PIN     'P5'  0
+PIN     'T8'  0
+PIN     'H5'  0
+PIN     'G5'  0
+PIN     'J5'  0
+PIN     'K5'  0
+PIN     'T10'  0
+PIN     'T9'  0
+PIN     'T7'  0
+PIN     'R5'  0
+PINBUS  64 'Y1,Y3,Y2,Y4,W1,W2,V1,R1\U1,W3,V3,W4,T1,V4,U3,V2\U4,T2,U2,R3,T4,R2,T3,P1\R4,P3,P2,N1,P4,N3,N2,N4\M3,M2,K1,M4,J2,J1,J4,H1\H2,G2,J3,G4,H4,G1,H3,F2\F1,G3,F4,F3,E1,E4,E2,D1\E3,D3,D2,C1,C2,C3,B1,A1'  0  D[0:63]
+PINBUS  29 'V11,Y11,U8,T11,Y8\V8,V7,Y7,W7,U7,Y6,V6,W6\U6,Y5,W5,V5,U5,V9,U10,U9\W10,W9,V10,Y9,Y10,U11,W11,W8'  0  A[3:31]
+PINBUS  32 'A15,A14,B13,A13,C12,B12,A12,C11\A11,C10,B10,A10,C9,B9,A9,C8\C7,B7,A7,C6,B6,A6,C5,B5\D6,C4,B4,A4,B3,A3,B2,A2'  0  AD[0:31]
+PINBUS  4 'D7,D9,D11,D13'  0  REQ[0:3]#
+PINBUS  4 'B11,B8,A8,A5'  0  C/BE[0:3]#
+PINBUS  4 'D8,D10,D12,D14'  0  GNT[0:3]#
+PINBUS  8 'U14,Y14,V14,T12,W15,Y15,U13,W14'  0  TIO[0:7]
+PINBUS  8 'K2,K3,K4,L1,L2,L3,L4,M1'  0  BE[0:7]#
+PIN     'Y20'  0
+PIN     'P18'  0
+PIN     'R17'  0
+PIN     'N17'  0
+PIN     'V19'  0
+PIN     'M16'  0
+PIN     'K16'  0
+PIN     'E10'  0
+PIN     'U20'  0
+PIN     'W16'  0
+PIN     'V17'  0
+PIN     'N18'  0
+PIN     'P19'  0
+PIN     'P20'  0
+PIN     'M18'  0
+PIN     'W12'  0
+PIN     'U12'  0
+PIN     'W13'  0
+PIN     'V12'  0
+PIN     'V13'  0
+PIN     'Y12'  0
+PIN     'Y13'  0
+PIN     'R18'  0
+PIN     'V18'  0
+PIN     'U18'  0
+PIN     'W20'  0
+PIN     'V20'  0
+PIN     'T17'  0
+PIN     'T19'  0
+PIN     'U19'  0
+PIN     'P17'  0
+PIN     'T18'  0
+PIN     'V15'  0
+PIN     'V16'  0
+PIN     'Y17'  0
+PIN     'T14'  0
+PIN     'U15'  0
+PIN     'Y16'  0
+PIN     'W18'  0
+PIN     'Y18'  0
+PIN     'W19'  0
+PIN     'U17'  0
+PIN     'U16'  0
+PIN     'Y19'  0
+PINBUS  64 'H17,J16,J17,L17,H18,H19,L20,K19\F18,D20,C19,R20,B18,B16,B15,E13\H16,H20,G18,F20,M19,N19,M20,J20\E19,E17,D18,A19,C17,A17,D16,B14\G17,F17,K17,G16,G19,L18,L19,K18\F19,E18,C20,A20,D17,C16,D15,C14\F16,E16,G20,N20,J18,M17,K20,J19\E20,D19,B20,B19,A18,B17,C18,C15'  0  MD[0:63]
+GATE    R434         0    0   10k  189
+PIN     '2'  0
+PIN     '1'  0
+GATE    U400         0    0   DIMM  190
+PIN     '109'  0
+PIN     '134'  0
+PIN     '147'  0
+PIN     '25'  0
+PIN     '24'  0
+PIN     '145'  0
+PIN     '164'  0
+PIN     '81'  0
+PIN     '51'  0
+PIN     '61'  0
+PIN     '165'  0
+PIN     '166'  0
+PIN     '167'  0
+PIN     '83'  0
+PIN     '82'  0
+PIN     '128'  0
+PIN     '63'  0
+PIN     '42'  0
+PIN     '125'  0
+PIN     '79'  0
+PIN     '163'  0
+PIN     '115'  0
+PIN     '27'  0
+PIN     '30'  0
+PIN     '114'  0
+PIN     '45'  0
+PIN     '129'  0
+PIN     '111'  0
+PIN     '62'  0
+PIN     '146'  0
+PIN     '48'  0
+PIN     '44'  0
+PIN     '31'  0
+PIN     '135'  0
+PIN     '50'  0
+PIN     '80'  0
+PIN     '108'  0
+PIN     '38'  0
+PIN     '123'  0
+PIN     '126'  0
+PIN     '132'  0
+PIN     '122'  0
+PIN     '39'  0
+PIN     '121'  0
+PIN     '37'  0
+PIN     '33'  0
+PIN     '117'  0
+PIN     '21'  0
+PIN     '22'  0
+PIN     '52'  0
+PIN     '53'  0
+PIN     '105'  0
+PIN     '106'  0
+PIN     '136'  0
+PIN     '137'  0
+PIN     '28'  4096
+PIN     '29'  4352
+PIN     '46'  4608
+PIN     '47'  4864
+PIN     '112'  5120
+PIN     '113'  5376
+PIN     '130'  5632
+PIN     '131'  5888
+PINBUS  6 '34,118,35,119,36,120'  0  A[2:7]
+PINBUS  8 '2,3,4,5,7,8,9,10'  4099  DQ[0:7]
+PINBUS  8 '11,13,14,15,16,17,19,20'  4355  DQ[8:15]
+PINBUS  8 '55,56,57,58,60,65,66,67'  4611  DQ[16:23]
+PINBUS  8 '69,70,71,72,74,75,76,77'  4867  DQ[24:31]
+PINBUS  8 '86,87,88,89,91,92,93,94'  5123  DQ[32:39]
+PINBUS  8 '95,97,98,99,100,101,103,104'  5379  DQ[40:47]
+PINBUS  8 '139,140,141,142,144,149,150,151'  5635  DQ[48:55]
+PINBUS  8 '153,154,155,156,158,159,160,161'  5891  DQ[56:63]
+GATE    U401         0    0   DIMM  191
+PIN     '109'  0
+PIN     '134'  0
+PIN     '147'  0
+PIN     '25'  0
+PIN     '24'  0
+PIN     '145'  0
+PIN     '164'  0
+PIN     '81'  0
+PIN     '51'  0
+PIN     '61'  0
+PIN     '165'  0
+PIN     '166'  0
+PIN     '167'  0
+PIN     '83'  0
+PIN     '82'  0
+PIN     '128'  0
+PIN     '63'  0
+PIN     '42'  0
+PIN     '125'  0
+PIN     '79'  0
+PIN     '163'  0
+PIN     '115'  0
+PIN     '27'  0
+PIN     '30'  0
+PIN     '114'  0
+PIN     '45'  0
+PIN     '129'  0
+PIN     '111'  0
+PIN     '62'  0
+PIN     '146'  0
+PIN     '48'  0
+PIN     '44'  0
+PIN     '31'  0
+PIN     '135'  0
+PIN     '50'  0
+PIN     '80'  0
+PIN     '108'  0
+PIN     '38'  0
+PIN     '123'  0
+PIN     '126'  0
+PIN     '132'  0
+PIN     '122'  0
+PIN     '39'  0
+PIN     '121'  0
+PIN     '37'  0
+PIN     '33'  0
+PIN     '117'  0
+PIN     '21'  0
+PIN     '22'  0
+PIN     '52'  0
+PIN     '53'  0
+PIN     '105'  0
+PIN     '106'  0
+PIN     '136'  0
+PIN     '137'  0
+PIN     '28'  4096
+PIN     '29'  4352
+PIN     '46'  4608
+PIN     '47'  4864
+PIN     '112'  5120
+PIN     '113'  5376
+PIN     '130'  5632
+PIN     '131'  5888
+PINBUS  6 '34,118,35,119,36,120'  0  A[2:7]
+PINBUS  8 '2,3,4,5,7,8,9,10'  4099  DQ[0:7]
+PINBUS  8 '11,13,14,15,16,17,19,20'  4355  DQ[8:15]
+PINBUS  8 '55,56,57,58,60,65,66,67'  4611  DQ[16:23]
+PINBUS  8 '69,70,71,72,74,75,76,77'  4867  DQ[24:31]
+PINBUS  8 '86,87,88,89,91,92,93,94'  5123  DQ[32:39]
+PINBUS  8 '95,97,98,99,100,101,103,104'  5379  DQ[40:47]
+PINBUS  8 '139,140,141,142,144,149,150,151'  5635  DQ[48:55]
+PINBUS  8 '153,154,155,156,158,159,160,161'  5891  DQ[56:63]
+GATE    J500         0    0   PCAT-BUS  192
+PIN     'B27'  0
+PIN     'B28'  0
+PIN     'B30'  0
+PIN     'D1'  0
+PIN     'D2'  0
+PIN     'B20'  0
+PIN     'D7'  0
+PIN     'D6'  0
+PIN     'D3'  0
+PIN     'D4'  0
+PIN     'D5'  0
+PIN     'B4'  0
+PIN     'B25'  0
+PIN     'B24'  0
+PIN     'B23'  0
+PIN     'B22'  0
+PIN     'B21'  0
+PIN     'B11'  0
+PIN     'B12'  0
+PIN     'B13'  0
+PIN     'B14'  0
+PIN     'D11'  0
+PIN     'D13'  0
+PIN     'D15'  0
+PIN     'B6'  0
+PIN     'B18'  0
+PIN     'B16'  0
+PIN     'D9'  0
+PIN     'C9'  0
+PIN     'C10'  0
+PIN     'B15'  0
+PIN     'B17'  0
+PIN     'B26'  0
+PIN     'D10'  0
+PIN     'D12'  0
+PIN     'D14'  0
+PIN     'D8'  0
+PIN     'A1'  0
+PIN     'A10'  0
+PIN     'B8'  0
+PIN     'D17'  0
+PIN     'C1'  0
+PIN     'B2'  0
+PIN     'B19'  0
+PIN     'A11'  0
+PINBUS  20 'A31,A30,A29,A28,A27,A26,A25,A24\A23,A22,A21,A20,A19,A18,A17,A16\A15,A14,A13,A12'  0  SA[0:19]
+PINBUS  16 'A9,A8,A7,A6,A5,A4,A3,A2\C11,C12,C13,C14,C15,C16,C17,C18'  0  SD[0:15]
+PINBUS  7 'C8,C7,C6,C5,C4,C3,C2'  0  LA[17:23]
+GATE    J501         0    0   PCAT-BUS  193
+PIN     'B27'  0
+PIN     'B28'  0
+PIN     'B30'  0
+PIN     'D1'  0
+PIN     'D2'  0
+PIN     'B20'  0
+PIN     'D7'  0
+PIN     'D6'  0
+PIN     'D3'  0
+PIN     'D4'  0
+PIN     'D5'  0
+PIN     'B4'  0
+PIN     'B25'  0
+PIN     'B24'  0
+PIN     'B23'  0
+PIN     'B22'  0
+PIN     'B21'  0
+PIN     'B11'  0
+PIN     'B12'  0
+PIN     'B13'  0
+PIN     'B14'  0
+PIN     'D11'  0
+PIN     'D13'  0
+PIN     'D15'  0
+PIN     'B6'  0
+PIN     'B18'  0
+PIN     'B16'  0
+PIN     'D9'  0
+PIN     'C9'  0
+PIN     'C10'  0
+PIN     'B15'  0
+PIN     'B17'  0
+PIN     'B26'  0
+PIN     'D10'  0
+PIN     'D12'  0
+PIN     'D14'  0
+PIN     'D8'  0
+PIN     'A1'  0
+PIN     'A10'  0
+PIN     'B8'  0
+PIN     'D17'  0
+PIN     'C1'  0
+PIN     'B2'  0
+PIN     'B19'  0
+PIN     'A11'  0
+PINBUS  20 'A31,A30,A29,A28,A27,A26,A25,A24\A23,A22,A21,A20,A19,A18,A17,A16\A15,A14,A13,A12'  0  SA[0:19]
+PINBUS  16 'A9,A8,A7,A6,A5,A4,A3,A2\C11,C12,C13,C14,C15,C16,C17,C18'  0  SD[0:15]
+PINBUS  7 'C8,C7,C6,C5,C4,C3,C2'  0  LA[17:23]
+GATE    J502         0    0   PCAT-BUS  194
+PIN     'B27'  0
+PIN     'B28'  0
+PIN     'B30'  0
+PIN     'D1'  0
+PIN     'D2'  0
+PIN     'B20'  0
+PIN     'D7'  0
+PIN     'D6'  0
+PIN     'D3'  0
+PIN     'D4'  0
+PIN     'D5'  0
+PIN     'B4'  0
+PIN     'B25'  0
+PIN     'B24'  0
+PIN     'B23'  0
+PIN     'B22'  0
+PIN     'B21'  0
+PIN     'B11'  0
+PIN     'B12'  0
+PIN     'B13'  0
+PIN     'B14'  0
+PIN     'D11'  0
+PIN     'D13'  0
+PIN     'D15'  0
+PIN     'B6'  0
+PIN     'B18'  0
+PIN     'B16'  0
+PIN     'D9'  0
+PIN     'C9'  0
+PIN     'C10'  0
+PIN     'B15'  0
+PIN     'B17'  0
+PIN     'B26'  0
+PIN     'D10'  0
+PIN     'D12'  0
+PIN     'D14'  0
+PIN     'D8'  0
+PIN     'A1'  0
+PIN     'A10'  0
+PIN     'B8'  0
+PIN     'D17'  0
+PIN     'C1'  0
+PIN     'B2'  0
+PIN     'B19'  0
+PIN     'A11'  0
+PINBUS  20 'A31,A30,A29,A28,A27,A26,A25,A24\A23,A22,A21,A20,A19,A18,A17,A16\A15,A14,A13,A12'  0  SA[0:19]
+PINBUS  16 'A9,A8,A7,A6,A5,A4,A3,A2\C11,C12,C13,C14,C15,C16,C17,C18'  0  SD[0:15]
+PINBUS  7 'C8,C7,C6,C5,C4,C3,C2'  0  LA[17:23]
+GATE    C600         0    0   100p  195
+PIN     '2'  0
+PIN     '1'  0
+GATE    C601         0    0   100p  196
+PIN     '2'  0
+PIN     '1'  0
+GATE    C602         0    0   100p  197
+PIN     '2'  0
+PIN     '1'  0
+GATE    C603         0    0   100p  198
+PIN     '2'  0
+PIN     '1'  0
+GATE    C604         0    0   100p  199
+PIN     '2'  0
+PIN     '1'  0
+GATE    C605         0    0   100p  200
+PIN     '2'  0
+PIN     '1'  0
+GATE    C606         0    0   100p  201
+PIN     '2'  0
+PIN     '1'  0
+GATE    C607         0    0   100p  202
+PIN     '2'  0
+PIN     '1'  0
+GATE    C608         0    0   100p  203
+PIN     '2'  0
+PIN     '1'  0
+GATE    C609         0    0   100p  204
+PIN     '2'  0
+PIN     '1'  0
+GATE    C610         0    0   100p  205
+PIN     '2'  0
+PIN     '1'  0
+GATE    C611         0    0   100p  206
+PIN     '2'  0
+PIN     '1'  0
+GATE    C612         0    0   100p  207
+PIN     '2'  0
+PIN     '1'  0
+GATE    C613         0    0   100p  208
+PIN     '2'  0
+PIN     '1'  0
+GATE    C614         0    0   100p  209
+PIN     '2'  0
+PIN     '1'  0
+GATE    C615         0    0   100p  210
+PIN     '2'  0
+PIN     '1'  0
+GATE    R600         0    0   33R  211
+PIN     '2'  0
+PIN     '1'  0
+GATE    R601         0    0   33R  212
+PIN     '2'  0
+PIN     '1'  0
+GATE    R602         0    0   33R  213
+PIN     '2'  0
+PIN     '1'  0
+GATE    R603         0    0   33R  214
+PIN     '2'  0
+PIN     '1'  0
+GATE    R604         0    0   33R  215
+PIN     '2'  0
+PIN     '1'  0
+GATE    C616         0    0   180p  216
+PIN     '2'  0
+PIN     '1'  0
+GATE    C617         0    0   180p  217
+PIN     '2'  0
+PIN     '1'  0
+GATE    C618         0    0   180p  218
+PIN     '2'  0
+PIN     '1'  0
+GATE    C619         0    0   180p  219
+PIN     '2'  0
+PIN     '1'  0
+GATE    C620         0    0   180p  220
+PIN     '2'  0
+PIN     '1'  0
+GATE    C621         0    0   180p  221
+PIN     '2'  0
+PIN     '1'  0
+GATE    C622         0    0   180p  222
+PIN     '2'  0
+PIN     '1'  0
+GATE    C623         0    0   180p  223
+PIN     '2'  0
+PIN     '1'  0
+GATE    C624         0    0   180p  224
+PIN     '2'  0
+PIN     '1'  0
+GATE    C625         0    0   180p  225
+PIN     '2'  0
+PIN     '1'  0
+GATE    C626         0    0   180p  226
+PIN     '2'  0
+PIN     '1'  0
+GATE    C627         0    0   180p  227
+PIN     '2'  0
+PIN     '1'  0
+GATE    C628         0    0   180p  228
+PIN     '2'  0
+PIN     '1'  0
+GATE    C629         0    0   180p  229
+PIN     '2'  0
+PIN     '1'  0
+GATE    C630         0    0   180p  230
+PIN     '2'  0
+PIN     '1'  0
+GATE    C631         0    0   180p  231
+PIN     '2'  0
+PIN     '1'  0
+GATE    C632         0    0   180p  232
+PIN     '2'  0
+PIN     '1'  0
+GATE    R605         0    0   33R  233
+PIN     '2'  0
+PIN     '1'  0
+GATE    R606         0    0   33R  234
+PIN     '2'  0
+PIN     '1'  0
+GATE    R607         0    0   33R  235
+PIN     '2'  0
+PIN     '1'  0
+GATE    R608         0    0   33R  236
+PIN     '2'  0
+PIN     '1'  0
+GATE    R609         0    0   33R  237
+PIN     '2'  0
+PIN     '1'  0
+GATE    R610         0    0   33R  238
+PIN     '2'  0
+PIN     '1'  0
+GATE    R611         0    0   33R  239
+PIN     '2'  0
+PIN     '1'  0
+GATE    C633         0    0   470p  240
+PIN     '2'  0
+PIN     '1'  0
+GATE    C634         0    0   470p  241
+PIN     '2'  0
+PIN     '1'  0
+GATE    R612         0    0   4k7  242
+PIN     '2'  0
+PIN     '1'  0
+GATE    R613         0    0   10k  243
+PIN     '2'  0
+PIN     '1'  0
+GATE    R614         0    0   10k  244
+PIN     '2'  0
+PIN     '1'  0
+GATE    C635         0    0   470p  245
+PIN     '2'  0
+PIN     '1'  0
+GATE    R616         0    0   15k  246
+PIN     '2'  0
+PIN     '1'  0
+GATE    R617         0    0   15k  247
+PIN     '2'  0
+PIN     '1'  0
+GATE    C636         0    0   47p  248
+PIN     '2'  0
+PIN     '1'  0
+GATE    C637         0    0   47p  249
+PIN     '2'  0
+PIN     '1'  0
+GATE    R618         0    0   33R  250
+PIN     '2'  0
+PIN     '1'  0
+GATE    R619         0    0   33R  251
+PIN     '2'  0
+PIN     '1'  0
+GATE    C638         0    0   47p  252
+PIN     '2'  0
+PIN     '1'  0
+GATE    C639         0    0   47p  253
+PIN     '2'  0
+PIN     '1'  0
+GATE    C640         0    0   100n  254
+PIN     '2'  0
+PIN     '1'  0
+GATE    C641         0    0   47u  255
+PIN     '2'  0
+PIN     '1'  0
+GATE    C642         0    0   100n  256
+PIN     '2'  0
+PIN     '1'  0
+GATE    R620         0    0   15k  257
+PIN     '2'  0
+PIN     '1'  0
+GATE    R621         0    0   15k  258
+PIN     '2'  0
+PIN     '1'  0
+GATE    C643         0    0   47p  259
+PIN     '2'  0
+PIN     '1'  0
+GATE    C644         0    0   47p  260
+PIN     '2'  0
+PIN     '1'  0
+GATE    R622         0    0   33R  261
+PIN     '2'  0
+PIN     '1'  0
+GATE    R623         0    0   33R  262
+PIN     '2'  0
+PIN     '1'  0
+GATE    C645         0    0   47p  263
+PIN     '2'  0
+PIN     '1'  0
+GATE    C646         0    0   47p  264
+PIN     '2'  0
+PIN     '1'  0
+GATE    C647         0    0   100n  265
+PIN     '2'  0
+PIN     '1'  0
+GATE    C648         0    0   47u  266
+PIN     '2'  0
+PIN     '1'  0
+GATE    C649         0    0   100n  267
+PIN     '2'  0
+PIN     '1'  0
+GATE    C650         0    0   100n  268
+PIN     '2'  0
+PIN     '1'  0
+GATE    J600         0    0   CON6  269
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+GATE    L600         0    0   FB  270
+PIN     '1'  0
+PIN     '2'  0
+GATE    L601         0    0   FB  271
+PIN     '1'  0
+PIN     '2'  0
+GATE    JP600        0    0   HEADER_3  272
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+GATE    JP601        0    0   HEADER_17X2  273
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '7'  0
+PIN     '8'  0
+PIN     '9'  0
+PIN     '10'  0
+PIN     '11'  0
+PIN     '12'  0
+PIN     '13'  0
+PIN     '14'  0
+PIN     '15'  0
+PIN     '16'  0
+PIN     '17'  0
+PIN     '18'  0
+PIN     '19'  0
+PIN     '20'  0
+PIN     '21'  0
+PIN     '22'  0
+PIN     '23'  0
+PIN     '24'  0
+PIN     '25'  0
+PIN     '26'  0
+PIN     '27'  0
+PIN     '28'  0
+PIN     '29'  0
+PIN     '30'  0
+PIN     '31'  0
+PIN     '32'  0
+PIN     '33'  0
+PIN     '34'  0
+GATE    RP602        7    3   1k  274
+PIN     '8'  0
+GATE    RP602        6    3   1k  275
+PIN     '7'  0
+GATE    RP602        5    3   1k  276
+PIN     '6'  0
+GATE    RP602        4    3   1k  277
+PIN     '5'  0
+GATE    RP602        3    3   1k  278
+PIN     '4'  0
+GATE    RP601        1    3   1k  279
+PIN     '2'  0
+GATE    RP600        7    3   1k  280
+PIN     '8'  0
+GATE    RP600        6    3   1k  281
+PIN     '7'  0
+GATE    RP600        5    3   1k  282
+PIN     '6'  0
+GATE    RP600        4    3   1k  283
+PIN     '5'  0
+GATE    RP600        3    3   1k  284
+PIN     '4'  0
+GATE    RP600        2    3   1k  285
+PIN     '3'  0
+GATE    RP600        1    3   1k  286
+PIN     '2'  0
+GATE    RP602        2    3   1k  287
+PIN     '3'  0
+GATE    RP602        1    3   1k  288
+PIN     '2'  0
+GATE    RP601        7    3   1k  289
+PIN     '8'  0
+GATE    RP601        6    3   1k  290
+PIN     '7'  0
+GATE    RP601        5    3   1k  291
+PIN     '6'  0
+GATE    RP601        4    3   1k  292
+PIN     '5'  0
+GATE    RP601        3    3   1k  293
+PIN     '4'  0
+GATE    RP601        2    3   1k  294
+PIN     '3'  0
+GATE    JP602        0    0   HEADER-SUBD9  295
+PIN     '1'  0
+PIN     '3'  0
+PIN     '5'  0
+PIN     '7'  0
+PIN     '9'  0
+PIN     '2'  0
+PIN     '4'  0
+PIN     '6'  0
+PIN     '8'  0
+GATE    JP603        0    0   HEADER-SUBD9  296
+PIN     '1'  0
+PIN     '3'  0
+PIN     '5'  0
+PIN     '7'  0
+PIN     '9'  0
+PIN     '2'  0
+PIN     '4'  0
+PIN     '6'  0
+PIN     '8'  0
+GATE    J601         0    0   CON4  297
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+GATE    J602         0    0   CON4  298
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+GATE    L602         0    0   FB  299
+PIN     '1'  0
+PIN     '2'  0
+GATE    L603         0    0   FB  300
+PIN     '1'  0
+PIN     '2'  0
+GATE    L604         0    0   FB  301
+PIN     '1'  0
+PIN     '2'  0
+GATE    L605         0    0   FB  302
+PIN     '1'  0
+PIN     '2'  0
+GATE    U602         0    0   75188  303
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '7'  0
+PIN     '9'  0
+PIN     '16'  0
+PIN     '15'  0
+PIN     '13'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '8'  0
+PIN     '19'  0
+PIN     '18'  0
+PIN     '17'  0
+PIN     '14'  0
+PIN     '12'  0
+GATE    U603         0    0   75188  304
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '7'  0
+PIN     '9'  0
+PIN     '16'  0
+PIN     '15'  0
+PIN     '13'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '8'  0
+PIN     '19'  0
+PIN     '18'  0
+PIN     '17'  0
+PIN     '14'  0
+PIN     '12'  0
+GATE    JP604        0    0   HEADER-SUBD25  305
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '7'  0
+PIN     '8'  0
+PIN     '9'  0
+PIN     '10'  0
+PIN     '11'  0
+PIN     '12'  0
+PIN     '13'  0
+PIN     '14'  0
+PIN     '15'  0
+PIN     '16'  0
+PIN     '17'  0
+PIN     '18'  0
+PIN     '19'  0
+PIN     '20'  0
+PIN     '21'  0
+PIN     '22'  0
+PIN     '23'  0
+PIN     '24'  0
+PIN     '25'  0
+GATE    F600         0    0   1A  306
+PIN     '1'  0
+PIN     '2'  0
+GATE    F601         0    0   1A  307
+PIN     '1'  0
+PIN     '2'  0
+GATE    F602         0    0   1A  308
+PIN     '1'  0
+PIN     '2'  0
+GATE    U601         0    0   W83977F  309
+PIN     '2'  0
+PIN     '3'  0
+PIN     '105'  0
+PIN     '106'  0
+PIN     '107'  0
+PIN     '108'  0
+PIN     '118'  0
+PIN     '99'  0
+PIN     '103'  0
+PIN     '104'  0
+PIN     '128'  0
+PIN     '1'  0
+PIN     '41'  0
+PIN     '48'  0
+PIN     '42'  0
+PIN     '43'  0
+PIN     '50'  0
+PIN     '44'  0
+PIN     '45'  0
+PIN     '52'  0
+PIN     '46'  0
+PIN     '53'  0
+PIN     '47'  0
+PIN     '54'  0
+PIN     '65'  0
+PIN     '66'  0
+PIN     '18'  0
+PIN     '19'  0
+PIN     '21'  0
+PIN     '22'  0
+PIN     '34'  0
+PIN     '32'  0
+PIN     '33'  0
+PIN     '35'  0
+PIN     '36'  0
+PIN     '31'  0
+PIN     '30'  0
+PIN     '29'  0
+PIN     '28'  0
+PIN     '27'  0
+PIN     '26'  0
+PIN     '24'  0
+PIN     '23'  0
+PIN     '12'  0
+PIN     '14'  0
+PIN     '15'  0
+PIN     '10'  0
+PIN     '6'  0
+PIN     '7'  0
+PIN     '8'  0
+PIN     '4'  0
+PIN     '17'  0
+PIN     '13'  0
+PIN     '16'  0
+PIN     '11'  0
+PIN     '9'  0
+PIN     '67'  0
+PIN     '60'  0
+PIN     '59'  0
+PIN     '68'  0
+PIN     '57'  0
+PIN     '58'  0
+PIN     '56'  0
+PIN     '73'  0
+PIN     '72'  0
+PIN     '71'  0
+PIN     '70'  0
+PIN     '69'  0
+PIN     '64'  0
+PIN     '63'  0
+PIN     '61'  0
+PIN     '51'  0
+PIN     '49'  0
+PIN     '5'  0
+PINBUS  16 '74,75,76,77,78,79,80,81\82,83,84,86,87,88,89,91'  0  SA[0:15]
+PINBUS  10 '98,97,96,95,94\93,92,100,101,102'  0  IRQ[3:12]
+PINBUS  4 '119,122,124,126'  0  DACK[0:3]#
+PINBUS  4 '121,123,125,127'  0  DRQ[0:3]
+PINBUS  8 '109,110,111,112\113,114,116,117'  0  SD[0:7]
+GATE    U600         0    0   PROM128KX8  310
+PIN     '31'  0
+PIN     '22'  0
+PIN     '24'  0
+PIN     '1'  0
+PIN     '30'  0
+PINBUS  8 '13,14,15,17,18,19,20,21'  0  D[0:7]
+PINBUS  17 '12,11,10,9,8,7,6,5\27,26,23,25,4,28,29,3\2'  0  A[0:16]
+GATE    R624         0    0   1K0  311
+PIN     '2'  0
+PIN     '1'  0
+GATE    R700         0    0   10k  312
+PIN     '2'  0
+PIN     '1'  0
+GATE    R701         0    0   10k  313
+PIN     '2'  0
+PIN     '1'  0
+GATE    R702         0    0   10k  314
+PIN     '2'  0
+PIN     '1'  0
+GATE    R703         0    0   10k  315
+PIN     '2'  0
+PIN     '1'  0
+GATE    R704         0    0   10k  316
+PIN     '2'  0
+PIN     '1'  0
+GATE    R705         0    0   10k  317
+PIN     '2'  0
+PIN     '1'  0
+GATE    R706         0    0   10k  318
+PIN     '2'  0
+PIN     '1'  0
+GATE    R707         0    0   10k  319
+PIN     '2'  0
+PIN     '1'  0
+GATE    R708         0    0   1k0  320
+PIN     '2'  0
+PIN     '1'  0
+GATE    R709         0    0   1k0  321
+PIN     '2'  0
+PIN     '1'  0
+GATE    R710         0    0   330R  322
+PIN     '2'  0
+PIN     '1'  0
+GATE    R711         0    0   330R  323
+PIN     '2'  0
+PIN     '1'  0
+GATE    R712         0    0   330R  324
+PIN     '2'  0
+PIN     '1'  0
+GATE    R713         0    0   330R  325
+PIN     '2'  0
+PIN     '1'  0
+GATE    R714         0    0   4k7  326
+PIN     '2'  0
+PIN     '1'  0
+GATE    R715         0    0   10k  327
+PIN     '2'  0
+PIN     '1'  0
+GATE    R716         0    0   10k  328
+PIN     '2'  0
+PIN     '1'  0
+GATE    R717         0    0   10k  329
+PIN     '2'  0
+PIN     '1'  0
+GATE    R718         0    0   10k  330
+PIN     '2'  0
+PIN     '1'  0
+GATE    R719         0    0   10k  331
+PIN     '2'  0
+PIN     '1'  0
+GATE    R720         0    0   10k  332
+PIN     '2'  0
+PIN     '1'  0
+GATE    R721         0    0   10k  333
+PIN     '2'  0
+PIN     '1'  0
+GATE    R722         0    0   10k  334
+PIN     '2'  0
+PIN     '1'  0
+GATE    R723         0    0   10k  335
+PIN     '2'  0
+PIN     '1'  0
+GATE    R724         0    0   10k  336
+PIN     '2'  0
+PIN     '1'  0
+GATE    R725         0    0   10k  337
+PIN     '2'  0
+PIN     '1'  0
+GATE    R726         0    0   10k  338
+PIN     '2'  0
+PIN     '1'  0
+GATE    R727         0    0   10k  339
+PIN     '2'  0
+PIN     '1'  0
+GATE    R728         0    0   10k  340
+PIN     '2'  0
+PIN     '1'  0
+GATE    R729         0    0   10k  341
+PIN     '2'  0
+PIN     '1'  0
+GATE    R730         0    0   10k  342
+PIN     '2'  0
+PIN     '1'  0
+GATE    R731         0    0   10k  343
+PIN     '2'  0
+PIN     '1'  0
+GATE    R732         0    0   10k  344
+PIN     '2'  0
+PIN     '1'  0
+GATE    R733         0    0   10k  345
+PIN     '2'  0
+PIN     '1'  0
+GATE    R734         0    0   10k  346
+PIN     '2'  0
+PIN     '1'  0
+GATE    R735         0    0   10k  347
+PIN     '2'  0
+PIN     '1'  0
+GATE    R736         0    0   10k  348
+PIN     '2'  0
+PIN     '1'  0
+GATE    R737         0    0   10k  349
+PIN     '2'  0
+PIN     '1'  0
+GATE    R738         0    0   10k  350
+PIN     '2'  0
+PIN     '1'  0
+GATE    R739         0    0   10k  351
+PIN     '2'  0
+PIN     '1'  0
+GATE    R740         0    0   10k  352
+PIN     '2'  0
+PIN     '1'  0
+GATE    R741         0    0   10k  353
+PIN     '2'  0
+PIN     '1'  0
+GATE    R742         0    0   10k  354
+PIN     '2'  0
+PIN     '1'  0
+GATE    R743         0    0   10k  355
+PIN     '2'  0
+PIN     '1'  0
+GATE    R744         0    0   10k  356
+PIN     '2'  0
+PIN     '1'  0
+GATE    R745         0    0   10k  357
+PIN     '2'  0
+PIN     '1'  0
+GATE    R746         0    0   10k  358
+PIN     '2'  0
+PIN     '1'  0
+GATE    R747         0    0   10k  359
+PIN     '2'  0
+PIN     '1'  0
+GATE    R748         0    0   10k  360
+PIN     '2'  0
+PIN     '1'  0
+GATE    R749         0    0   10k  361
+PIN     '2'  0
+PIN     '1'  0
+GATE    R750         0    0   10k  362
+PIN     '2'  0
+PIN     '1'  0
+GATE    R751         0    0   10k  363
+PIN     '2'  0
+PIN     '1'  0
+GATE    R752         0    0   10k  364
+PIN     '2'  0
+PIN     '1'  0
+GATE    R753         0    0   10k  365
+PIN     '2'  0
+PIN     '1'  0
+GATE    R754         0    0   10k  366
+PIN     '2'  0
+PIN     '1'  0
+GATE    R755         0    0   10k  367
+PIN     '2'  0
+PIN     '1'  0
+GATE    R756         0    0   10k  368
+PIN     '2'  0
+PIN     '1'  0
+GATE    R757         0    0   10k  369
+PIN     '2'  0
+PIN     '1'  0
+GATE    R758         0    0   2k7  370
+PIN     '2'  0
+PIN     '1'  0
+GATE    R759         0    0   2k7  371
+PIN     '2'  0
+PIN     '1'  0
+GATE    R760         0    0   2k7  372
+PIN     '2'  0
+PIN     '1'  0
+GATE    R761         0    0   2k7  373
+PIN     '2'  0
+PIN     '1'  0
+GATE    R762         0    0   2k7  374
+PIN     '2'  0
+PIN     '1'  0
+GATE    R763         0    0   2k7  375
+PIN     '2'  0
+PIN     '1'  0
+GATE    R764         0    0   2k7  376
+PIN     '2'  0
+PIN     '1'  0
+GATE    R765         0    0   2k7  377
+PIN     '2'  0
+PIN     '1'  0
+GATE    R766         0    0   2k7  378
+PIN     '2'  0
+PIN     '1'  0
+GATE    R767         0    0   2k7  379
+PIN     '2'  0
+PIN     '1'  0
+GATE    R768         0    0   2k7  380
+PIN     '2'  0
+PIN     '1'  0
+GATE    R769         0    0   10k  381
+PIN     '2'  0
+PIN     '1'  0
+GATE    R770         0    0   10k  382
+PIN     '2'  0
+PIN     '1'  0
+GATE    R771         0    0   10k  383
+PIN     '2'  0
+PIN     '1'  0
+GATE    R772         0    0   10k  384
+PIN     '2'  0
+PIN     '1'  0
+GATE    R773         0    0   2k7  385
+PIN     '2'  0
+PIN     '1'  0
+GATE    R774         0    0   2k7  386
+PIN     '2'  0
+PIN     '1'  0
+GATE    R775         0    0   2k7  387
+PIN     '2'  0
+PIN     '1'  0
+GATE    R776         0    0   2k7  388
+PIN     '2'  0
+PIN     '1'  0
+GATE    R777         0    0   2k7  389
+PIN     '2'  0
+PIN     '1'  0
+GATE    R778         0    0   2k7  390
+PIN     '2'  0
+PIN     '1'  0
+GATE    R779         0    0   2k7  391
+PIN     '2'  0
+PIN     '1'  0
+GATE    R780         0    0   2k7  392
+PIN     '2'  0
+PIN     '1'  0
+GATE    R781         0    0   10k  393
+PIN     '2'  0
+PIN     '1'  0
+GATE    R782         0    0   10k  394
+PIN     '2'  0
+PIN     '1'  0
+GATE    R783         0    0   10k  395
+PIN     '2'  0
+PIN     '1'  0
+GATE    R784         0    0   10k  396
+PIN     '2'  0
+PIN     '1'  0
+GATE    R785         0    0   10k  397
+PIN     '2'  0
+PIN     '1'  0
+GATE    R786         0    0   10k  398
+PIN     '2'  0
+PIN     '1'  0
+GATE    JP706        0    0   MOUNTING-HOLE  399
+PIN     '1'  0
+GATE    JP707        0    0   MOUNTING-HOLE  400
+PIN     '1'  0
+GATE    JP708        0    0   MOUNTING-HOLE  401
+PIN     '1'  0
+GATE    JP709        0    0   MOUNTING-HOLE  402
+PIN     '1'  0
+GATE    R787         0    0   5k6  403
+PIN     '2'  0
+PIN     '1'  0
+GATE    R788         0    0   5k6  404
+PIN     '2'  0
+PIN     '1'  0
+GATE    R789         0    0   5k6  405
+PIN     '2'  0
+PIN     '1'  0
+GATE    R790         0    0   5k6  406
+PIN     '2'  0
+PIN     '1'  0
+GATE    R791         0    0   5k6  407
+PIN     '2'  0
+PIN     '1'  0
+GATE    R792         0    0   5k6  408
+PIN     '2'  0
+PIN     '1'  0
+GATE    R793         0    0   5k6  409
+PIN     '2'  0
+PIN     '1'  0
+GATE    R794         0    0   10k  410
+PIN     '2'  0
+PIN     '1'  0
+GATE    R795         0    0   10k  411
+PIN     '2'  0
+PIN     '1'  0
+GATE    R796         0    0   10k  412
+PIN     '2'  0
+PIN     '1'  0
+GATE    R797         0    0   10k  413
+PIN     '2'  0
+PIN     '1'  0
+GATE    R798         0    0   10k  414
+PIN     '2'  0
+PIN     '1'  0
+GATE    R799         0    0   10k  415
+PIN     '2'  0
+PIN     '1'  0
+GATE    R800         0    0   10k  416
+PIN     '2'  0
+PIN     '1'  0
+GATE    R801         0    0   10k  417
+PIN     '2'  0
+PIN     '1'  0
+GATE    R802         0    0   10k  418
+PIN     '2'  0
+PIN     '1'  0
+GATE    R803         0    0   10k  419
+PIN     '2'  0
+PIN     '1'  0
+GATE    R804         0    0   10k  420
+PIN     '2'  0
+PIN     '1'  0
+GATE    R805         0    0   10k  421
+PIN     '2'  0
+PIN     '1'  0
+GATE    R806         0    0   10k  422
+PIN     '2'  0
+PIN     '1'  0
+GATE    R807         0    0   10k  423
+PIN     '2'  0
+PIN     '1'  0
+GATE    R808         0    0   10k  424
+PIN     '2'  0
+PIN     '1'  0
+GATE    R809         0    0   10k  425
+PIN     '2'  0
+PIN     '1'  0
+GATE    JP702        0    0   MOUNTING-HOLE  426
+PIN     '1'  0
+GATE    JP701        0    0   MOUNTING-HOLE  427
+PIN     '1'  0
+GATE    C900         0    0   10u  428
+PIN     '2'  0
+PIN     '1'  0
+GATE    C901         0    0   10u  429
+PIN     '2'  0
+PIN     '1'  0
+GATE    C902         0    0   10u  430
+PIN     '2'  0
+PIN     '1'  0
+GATE    C903         0    0   10u  431
+PIN     '2'  0
+PIN     '1'  0
+GATE    C904         0    0   10u  432
+PIN     '2'  0
+PIN     '1'  0
+GATE    C905         0    0   10u  433
+PIN     '2'  0
+PIN     '1'  0
+GATE    C906         0    0   10u  434
+PIN     '2'  0
+PIN     '1'  0
+GATE    C907         0    0   10u  435
+PIN     '2'  0
+PIN     '1'  0
+GATE    C908         0    0   10u  436
+PIN     '2'  0
+PIN     '1'  0
+GATE    C909         0    0   10u  437
+PIN     '2'  0
+PIN     '1'  0
+GATE    C910         0    0   100n  438
+PIN     '2'  0
+PIN     '1'  0
+GATE    C911         0    0   100n  439
+PIN     '2'  0
+PIN     '1'  0
+GATE    C921         0    0   100n  440
+PIN     '2'  0
+PIN     '1'  0
+GATE    C922         0    0   100n  441
+PIN     '2'  0
+PIN     '1'  0
+GATE    C923         0    0   100n  442
+PIN     '2'  0
+PIN     '1'  0
+GATE    C924         0    0   100n  443
+PIN     '2'  0
+PIN     '1'  0
+GATE    C938         0    0   100n  444
+PIN     '2'  0
+PIN     '1'  0
+GATE    C940         0    0   100n  445
+PIN     '2'  0
+PIN     '1'  0
+GATE    C941         0    0   100n  446
+PIN     '2'  0
+PIN     '1'  0
+GATE    C942         0    0   100n  447
+PIN     '2'  0
+PIN     '1'  0
+GATE    C943         0    0   100n  448
+PIN     '2'  0
+PIN     '1'  0
+GATE    C945         0    0   100n  449
+PIN     '2'  0
+PIN     '1'  0
+GATE    C946         0    0   100n  450
+PIN     '2'  0
+PIN     '1'  0
+GATE    C947         0    0   100n  451
+PIN     '2'  0
+PIN     '1'  0
+GATE    C948         0    0   100n  452
+PIN     '2'  0
+PIN     '1'  0
+GATE    C949         0    0   100n  453
+PIN     '2'  0
+PIN     '1'  0
+GATE    C950         0    0   100n  454
+PIN     '2'  0
+PIN     '1'  0
+GATE    C951         0    0   100n  455
+PIN     '2'  0
+PIN     '1'  0
+GATE    C952         0    0   100n  456
+PIN     '2'  0
+PIN     '1'  0
+GATE    C953         0    0   100n  457
+PIN     '2'  0
+PIN     '1'  0
+GATE    C954         0    0   100n  458
+PIN     '2'  0
+PIN     '1'  0
+GATE    C955         0    0   100n  459
+PIN     '2'  0
+PIN     '1'  0
+GATE    C956         0    0   100n  460
+PIN     '2'  0
+PIN     '1'  0
+GATE    C957         0    0   100n  461
+PIN     '2'  0
+PIN     '1'  0
+GATE    C958         0    0   100n  462
+PIN     '2'  0
+PIN     '1'  0
+GATE    C960         0    0   100n  463
+PIN     '2'  0
+PIN     '1'  0
+GATE    C962         0    0   100n  464
+PIN     '2'  0
+PIN     '1'  0
+GATE    C963         0    0   100n  465
+PIN     '2'  0
+PIN     '1'  0
+GATE    C964         0    0   100n  466
+PIN     '2'  0
+PIN     '1'  0
+GATE    C965         0    0   100n  467
+PIN     '2'  0
+PIN     '1'  0
+GATE    C966         0    0   100n  468
+PIN     '2'  0
+PIN     '1'  0
+GATE    C967         0    0   100n  469
+PIN     '2'  0
+PIN     '1'  0
+GATE    C968         0    0   100n  470
+PIN     '2'  0
+PIN     '1'  0
+GATE    C969         0    0   100n  471
+PIN     '2'  0
+PIN     '1'  0
+GATE    C970         0    0   100n  472
+PIN     '2'  0
+PIN     '1'  0
+GATE    C971         0    0   100n  473
+PIN     '2'  0
+PIN     '1'  0
+GATE    C995         0    0   10n  474
+PIN     '2'  0
+PIN     '1'  0
+GATE    C996         0    0   1u  475
+PIN     '2'  0
+PIN     '1'  0
+GATE    C997         0    0   10n  476
+PIN     '2'  0
+PIN     '1'  0
+GATE    C998         0    0   1u  477
+PIN     '2'  0
+PIN     '1'  0
+GATE    C999         0    0   10n  478
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1000        0    0   1u  479
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1001        0    0   10n  480
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1002        0    0   1u  481
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1003        0    0   10n  482
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1004        0    0   1u  483
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1005        0    0   10n  484
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1006        0    0   1u  485
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1007        0    0   10n  486
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1008        0    0   1u  487
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1009        0    0   10n  488
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1010        0    0   1u  489
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1011        0    0   10n  490
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1012        0    0   1u  491
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1013        0    0   10n  492
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1014        0    0   1u  493
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1015        0    0   100n  494
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1016        0    0   100n  495
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1017        0    0   100n  496
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1018        0    0   10u  497
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1019        0    0   10u  498
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1020        0    0   10u  499
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1021        0    0   10u  500
+PIN     '2'  0
+PIN     '1'  0
+GATE    R900         0    0   22R  501
+PIN     '2'  0
+PIN     '1'  0
+GATE    R901         0    0   100R  502
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1022        0    0   100n  503
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1023        0    0   100p  504
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1024        0    0   220p  505
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1025        0    0   100n  506
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1026        0    0   1u  507
+PIN     '2'  0
+PIN     '1'  0
+GATE    R902         0    0   100R  508
+PIN     '2'  0
+PIN     '1'  0
+GATE    R903         0    0   22R  509
+PIN     '2'  0
+PIN     '1'  0
+GATE    R904         0    0   10R  510
+PIN     '2'  0
+PIN     '1'  0
+GATE    R905         0    0   100R  511
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1027        0    0   100n  512
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1028        0    0   100p  513
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1029        0    0   220p  514
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1030        0    0   100n  515
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1031        0    0   1u  516
+PIN     '2'  0
+PIN     '1'  0
+GATE    R906         0    0   100R  517
+PIN     '2'  0
+PIN     '1'  0
+GATE    R907         0    0   10R  518
+PIN     '2'  0
+PIN     '1'  0
+GATE    R908         0    0   220R  519
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1033        0    0   100n  520
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1034        0    0   100n  521
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1035        0    0   100n  522
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1036        0    0   100n  523
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1037        0    0   100n  524
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1038        0    0   100n  525
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1039        0    0   1u  526
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1040        0    0   1u  527
+PIN     '2'  0
+PIN     '1'  0
+GATE    R909         0    0   75R  528
+PIN     '2'  0
+PIN     '1'  0
+GATE    R910         0    0   180R  529
+PIN     '2'  0
+PIN     '1'  0
+GATE    R911         0    0   180R  530
+PIN     '2'  0
+PIN     '1'  0
+GATE    R912         0    0   180R  531
+PIN     '2'  0
+PIN     '1'  0
+GATE    R913         0    0   10R  532
+PIN     '2'  0
+PIN     '1'  0
+GATE    R914         0    0   220R  533
+PIN     '2'  0
+PIN     '1'  0
+GATE    R915         0    0   10R  534
+PIN     '2'  0
+PIN     '1'  0
+GATE    R916         0    0   220R  535
+PIN     '2'  0
+PIN     '1'  0
+GATE    R917         0    0   10R  536
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1041        0    0   100n  537
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1042        0    0   100n  538
+PIN     '2'  0
+PIN     '1'  0
+GATE    U900         0    0   EL7556C  539
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '7'  0
+PIN     '8'  0
+PIN     '9'  0
+PIN     '10'  0
+PIN     '11'  0
+PIN     '12'  0
+PIN     '13'  0
+PIN     '14'  0
+PIN     '28'  0
+PIN     '27'  0
+PIN     '26'  0
+PIN     '25'  0
+PIN     '24'  0
+PIN     '23'  0
+PIN     '22'  0
+PIN     '21'  0
+PIN     '20'  0
+PIN     '19'  0
+PIN     '18'  0
+PIN     '17'  0
+PIN     '16'  0
+PIN     '15'  0
+GATE    U901         0    0   EL7556C  540
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '7'  0
+PIN     '8'  0
+PIN     '9'  0
+PIN     '10'  0
+PIN     '11'  0
+PIN     '12'  0
+PIN     '13'  0
+PIN     '14'  0
+PIN     '28'  0
+PIN     '27'  0
+PIN     '26'  0
+PIN     '25'  0
+PIN     '24'  0
+PIN     '23'  0
+PIN     '22'  0
+PIN     '21'  0
+PIN     '20'  0
+PIN     '19'  0
+PIN     '18'  0
+PIN     '17'  0
+PIN     '16'  0
+PIN     '15'  0
+GATE    JP900        0    0   HEADER_5X2  541
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+PIN     '7'  0
+PIN     '8'  0
+PIN     '9'  0
+PIN     '10'  0
+GATE    J900         0    0   CON6  542
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+GATE    J901         0    0   CON6  543
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+PIN     '4'  0
+PIN     '5'  0
+PIN     '6'  0
+GATE    C1043        0    0   100u  544
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1044        0    0   100u  545
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1045        0    0   100u  546
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1046        0    0   100u  547
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1047        0    0   330u  548
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1048        0    0   330u  549
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1049        0    0   330u  550
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1050        0    0   330u  551
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1051        0    0   330u  552
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1052        0    0   330u  553
+PIN     '2'  0
+PIN     '1'  0
+GATE    L900         0    0   2.5uH  554
+PIN     '1'  0
+PIN     '2'  0
+GATE    L901         0    0   2.5uH  555
+PIN     '1'  0
+PIN     '2'  0
+GATE    C1053        0    0   330u  556
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1054        0    0   330u  557
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1055        0    0   330u  558
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1056        0    0   330u  559
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1057        0    0   330u  560
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1058        0    0   330u  561
+PIN     '2'  0
+PIN     '1'  0
+GATE    D900         0    0   BAV99  562
+PIN     'A'  0
+PIN     'K'  0
+GATE    D905         0    0   BAV99  563
+PIN     'A'  0
+PIN     'K'  0
+GATE    D903         0    0   BAV99  564
+PIN     'A'  0
+PIN     'K'  0
+GATE    D902         0    0   BAV99  565
+PIN     'A'  0
+PIN     'K'  0
+GATE    D904         0    0   BAV99  566
+PIN     'A'  0
+PIN     'K'  0
+GATE    D901         0    0   BAV99  567
+PIN     'A'  0
+PIN     'K'  0
+GATE    C1059        0    0   10u  568
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1060        0    0   10u  569
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1061        0    0   10u  570
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1062        0    0   10u  571
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1063        0    0   10u  572
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1064        0    0   10u  573
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1065        0    0   10u  574
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1066        0    0   10u  575
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1067        0    0   10u  576
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1068        0    0   10u  577
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1070        0    0   10u  578
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1071        0    0   10u  579
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1072        0    0   10u  580
+PIN     '2'  0
+PIN     '1'  0
+GATE    C1073        0    0   100n  581
+PIN     '2'  0
+PIN     '1'  0
+GATE    U102         2    1   74HCT14  582
+PIN     '3'  0
+PIN     '4'  0
+GATE    U102         3    1   74HCT14  583
+PIN     '5'  0
+PIN     '6'  0
+GATE    U102         4    1   74HCT14  584
+PIN     '9'  0
+PIN     '8'  0
+GATE    U102         5    1   74HCT14  585
+PIN     '11'  0
+PIN     '10'  0
+GATE    U102         6    1   74HCT14  586
+PIN     '13'  0
+PIN     '12'  0
+GATE    U101         3    2   7407  587
+PIN     '5'  0
+PIN     '6'  0
+GATE    U101         4    2   7407  588
+PIN     '9'  0
+PIN     '8'  0
+GATE    U101         5    2   7407  589
+PIN     '11'  0
+PIN     '10'  0
+GATE    U101         6    2   7407  590
+PIN     '13'  0
+PIN     '12'  0

@@ -1,0 +1,10 @@
+;Drill tools [ C:\pcb_elegance\preamp\pcb\preamp.pcb ]
+;
+;  Tool nr   Type      Diam mm     mils        Nr drills
+;-------------------------------------------------------
+  T1         Plated       0.716    28.00         132
+  T2         Plated       0.919    36.00           8
+  T3         Plated       1.105    43.30           7
+  T4         Plated       1.021    40.00          24
+  T5         Unplated     3.205   125.98           4
+  T6         Plated       0.805    31.50           6

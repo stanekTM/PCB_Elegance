@@ -1,0 +1,80 @@
+Bill Of Materials
+
+Design C:\pcb_elegance\PcMotherBoard
+
+April 18, 2012 19:32:13
+
++---+---------------+---+-----------------+
+|pos|Component value|#  |Geometry         |
++---+---------------+---+-----------------+
+|1  |BATTERY        |1  |batt_2032        |
+|2  |10p            |2  |K0603            |
+|3  |22p            |2  |K0603            |
+|4  |47p            |8  |K0603            |
+|5  |100p           |18 |K0603            |
+|6  |180p           |17 |K0603            |
+|7  |220p           |2  |K0603            |
+|8  |470p           |3  |K0603            |
+|9  |10n            |10 |K0603            |
+|10 |100n           |75 |K0603            |
+|11 |1u             |14 |K1206            |
+|12 |10u            |28 |ELCO_SMD35x28    |
+|13 |33u            |1  |ELCO_SMD60x32    |
+|14 |47u            |2  |ELCO_SMD60x32    |
+|15 |100u           |4  |ELCO_SMD72x43    |
+|16 |330u           |12 |elco2_rad10mm    |
+|17 |BAV99          |6  |sot23_diode      |
+|18 |1A             |3  |fuse_smd10x6     |
+|19 |CON4           |3  |header1x4        |
+|20 |PCI-BUS        |4  |pci_slot         |
+|21 |PCAT-BUS       |3  |isa_atslot       |
+|22 |CON6           |1  |din5_keyb        |
+|23 |CON6           |2  |header1x6_pcat   |
+|24 |HEADER_20X2    |2  |header2x20       |
+|25 |HEADER_2       |2  |header1x2        |
+|26 |HEADER_4       |1  |header1x4        |
+|27 |HEADER_3X2     |1  |header2x3        |
+|28 |HEADER_3       |2  |header1x3        |
+|29 |HEADER_17X2    |1  |header2x17       |
+|30 |HEADER-SUBD9   |2  |header2x5        |
+|31 |HEADER-SUBD25  |1  |header2x13       |
+|32 |MOUNTING-HOLE  |6  |Mountinghole_pcat|
+|33 |HEADER_5X2     |1  |header2x5        |
+|34 |INDUCTOR       |1  |SMD_ferriet      |
+|35 |FB             |6  |SMD_ferriet      |
+|36 |2.5uH          |2  |ind_rad10_p10    |
+|37 |2N3904         |1  |sot23_tor        |
+|38 |10R            |33 |K0603            |
+|39 |22R            |17 |K0603            |
+|40 |33R            |79 |K0603            |
+|41 |47R            |4  |K0603            |
+|42 |68R            |2  |K0603            |
+|43 |75R            |1  |K0603            |
+|44 |100R           |4  |K0603            |
+|45 |180R           |3  |K0603            |
+|46 |220R           |7  |K0603            |
+|47 |330R           |7  |K0603            |
+|48 |470R           |2  |K0603            |
+|49 |1k0            |4  |K0603            |
+|50 |2k2            |1  |K0603            |
+|51 |2k7            |19 |K0603            |
+|52 |4k7            |9  |K0603            |
+|53 |5k6            |7  |K0603            |
+|54 |10k            |87 |K0603            |
+|55 |15k            |4  |K0603            |
+|56 |1M0            |1  |K0603            |
+|57 |1k             |3  |sil8             |
+|58 |SOCKET7        |1  |pga321_026_zif   |
+|59 |sram32kx32     |2  |qfp100_m65       |
+|60 |SRAM32KX8_H    |1  |so28             |
+|61 |CLOCKSYNTH     |1  |ssop48           |
+|62 |DIMM           |2  |DIMM168          |
+|63 |PROM128KX8     |1  |plcc32_socket_smd|
+|64 |EL7556C        |2  |so28             |
+|65 |W83977F        |1  |qfp128_m50       |
+|66 |34090          |1  |BGA_324          |
+|67 |34091          |1  |BGA_324          |
+|68 |75188          |2  |so20             |
+|69 |32.768kHz      |1  |xtal_smd49       |
+|70 |14.318MHz      |1  |xtal_smd49       |
++---+---------------+---+-----------------+

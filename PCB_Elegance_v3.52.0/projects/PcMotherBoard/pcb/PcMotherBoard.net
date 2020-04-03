@@ -1,0 +1,1765 @@
+# Components
+COMP  R100                     K0603                              33R
+COMP  R101                     K0603                              33R
+COMP  R102                     K0603                              33R
+COMP  R103                     K0603                              33R
+COMP  R104                     K0603                              33R
+COMP  R105                     K0603                              33R
+COMP  R106                     K0603                              33R
+COMP  R107                     K0603                              33R
+COMP  R108                     K0603                              33R
+COMP  R109                     K0603                              33R
+COMP  R110                     K0603                              33R
+COMP  R111                     K0603                              47R
+COMP  R112                     K0603                              33R
+COMP  R113                     K0603                              33R
+COMP  R114                     K0603                              33R
+COMP  R115                     K0603                              33R
+COMP  R116                     K0603                              33R
+COMP  R117                     K0603                              33R
+COMP  R118                     K0603                              33R
+COMP  R119                     K0603                              33R
+COMP  R120                     K0603                              33R
+COMP  R121                     K0603                              33R
+COMP  R122                     K0603                              33R
+COMP  R123                     K0603                              33R
+COMP  R124                     K0603                              33R
+COMP  R125                     K0603                              33R
+COMP  R126                     K0603                              33R
+COMP  R127                     K0603                              33R
+COMP  R128                     K0603                              47R
+COMP  R129                     K0603                              1M0
+COMP  R130                     K0603                              33R
+COMP  R131                     K0603                              1k0
+COMP  R132                     K0603                              68R
+COMP  R133                     K0603                              68R
+COMP  R134                     K0603                              2k2
+COMP  R135                     K0603                              220R
+COMP  R136                     K0603                              33R
+COMP  R137                     K0603                              33R
+COMP  R138                     K0603                              4k7
+COMP  R139                     K0603                              33R
+COMP  R140                     K0603                              33R
+COMP  R141                     K0603                              470R
+COMP  R142                     K0603                              33R
+COMP  R143                     K0603                              33R
+COMP  R144                     K0603                              33R
+COMP  R145                     K0603                              33R
+COMP  R146                     K0603                              33R
+COMP  R147                     K0603                              33R
+COMP  R148                     K0603                              33R
+COMP  R149                     K0603                              33R
+COMP  R150                     K0603                              33R
+COMP  R151                     K0603                              33R
+COMP  R152                     K0603                              470R
+COMP  R153                     K0603                              33R
+COMP  R154                     K0603                              33R
+COMP  R155                     K0603                              33R
+COMP  R156                     K0603                              33R
+COMP  R157                     K0603                              33R
+COMP  R158                     K0603                              33R
+COMP  R159                     K0603                              33R
+COMP  R160                     K0603                              33R
+COMP  R161                     K0603                              33R
+COMP  R162                     K0603                              33R
+COMP  R200                     K0603                              47R
+COMP  R201                     K0603                              47R
+COMP  R202                     K0603                              33R
+COMP  R203                     K0603                              33R
+COMP  R204                     K0603                              33R
+COMP  R205                     K0603                              33R
+COMP  R206                     K0603                              22R
+COMP  R207                     K0603                              33R
+COMP  R208                     K0603                              33R
+COMP  R209                     K0603                              33R
+COMP  R210                     K0603                              33R
+COMP  R211                     K0603                              22R
+COMP  R212                     K0603                              22R
+COMP  R213                     K0603                              22R
+COMP  R214                     K0603                              22R
+COMP  R215                     K0603                              22R
+COMP  R216                     K0603                              22R
+COMP  R217                     K0603                              22R
+COMP  R218                     K0603                              22R
+COMP  R219                     K0603                              10k
+COMP  R220                     K0603                              4k7
+COMP  R221                     K0603                              4k7
+COMP  R222                     K0603                              330R
+COMP  R223                     K0603                              330R
+COMP  R224                     K0603                              4k7
+COMP  R225                     K0603                              4k7
+COMP  R226                     K0603                              4k7
+COMP  R227                     K0603                              4k7
+COMP  R228                     K0603                              330R
+COMP  R229                     K0603                              33R
+COMP  R230                     K0603                              33R
+COMP  R231                     K0603                              33R
+COMP  R232                     K0603                              220R
+COMP  R233                     K0603                              10K
+COMP  R234                     K0603                              10K
+COMP  R235                     K0603                              10K
+COMP  R236                     K0603                              220R
+COMP  R237                     K0603                              220R
+COMP  R238                     K0603                              10K
+COMP  R239                     K0603                              10K
+COMP  R240                     K0603                              10K
+COMP  R400                     K0603                              22R
+COMP  R401                     K0603                              22R
+COMP  R402                     K0603                              22R
+COMP  R403                     K0603                              22R
+COMP  R404                     K0603                              22R
+COMP  R405                     K0603                              22R
+COMP  R406                     K0603                              10R
+COMP  R407                     K0603                              10R
+COMP  R408                     K0603                              10R
+COMP  R409                     K0603                              10R
+COMP  R410                     K0603                              10R
+COMP  R411                     K0603                              10R
+COMP  R412                     K0603                              10R
+COMP  R413                     K0603                              10R
+COMP  R414                     K0603                              10R
+COMP  R415                     K0603                              10R
+COMP  R416                     K0603                              10R
+COMP  R417                     K0603                              10R
+COMP  R418                     K0603                              10R
+COMP  R419                     K0603                              10R
+COMP  R420                     K0603                              10R
+COMP  R421                     K0603                              10R
+COMP  R422                     K0603                              10R
+COMP  R423                     K0603                              10R
+COMP  R424                     K0603                              10R
+COMP  R425                     K0603                              10R
+COMP  R426                     K0603                              10R
+COMP  R427                     K0603                              10R
+COMP  R428                     K0603                              10R
+COMP  R429                     K0603                              10R
+COMP  R430                     K0603                              10R
+COMP  R431                     K0603                              10R
+COMP  R432                     K0603                              10R
+COMP  R433                     K0603                              10R
+COMP  R434                     K0603                              10k
+COMP  R600                     K0603                              33R
+COMP  R601                     K0603                              33R
+COMP  R602                     K0603                              33R
+COMP  R603                     K0603                              33R
+COMP  R604                     K0603                              33R
+COMP  R605                     K0603                              33R
+COMP  R606                     K0603                              33R
+COMP  R607                     K0603                              33R
+COMP  R608                     K0603                              33R
+COMP  R609                     K0603                              33R
+COMP  R610                     K0603                              33R
+COMP  R611                     K0603                              33R
+COMP  R612                     K0603                              4k7
+COMP  R613                     K0603                              10k
+COMP  R614                     K0603                              10k
+COMP  R616                     K0603                              15k
+COMP  R617                     K0603                              15k
+COMP  R618                     K0603                              33R
+COMP  R619                     K0603                              33R
+COMP  R620                     K0603                              15k
+COMP  R621                     K0603                              15k
+COMP  R622                     K0603                              33R
+COMP  R623                     K0603                              33R
+COMP  R624                     K0603                              1K0
+COMP  R700                     K0603                              10k
+COMP  R701                     K0603                              10k
+COMP  R702                     K0603                              10k
+COMP  R703                     K0603                              10k
+COMP  R704                     K0603                              10k
+COMP  R705                     K0603                              10k
+COMP  R706                     K0603                              10k
+COMP  R707                     K0603                              10k
+COMP  R708                     K0603                              1k0
+COMP  R709                     K0603                              1k0
+COMP  R710                     K0603                              330R
+COMP  R711                     K0603                              330R
+COMP  R712                     K0603                              330R
+COMP  R713                     K0603                              330R
+COMP  R714                     K0603                              4k7
+COMP  R715                     K0603                              10k
+COMP  R716                     K0603                              10k
+COMP  R717                     K0603                              10k
+COMP  R718                     K0603                              10k
+COMP  R719                     K0603                              10k
+COMP  R720                     K0603                              10k
+COMP  R721                     K0603                              10k
+COMP  R722                     K0603                              10k
+COMP  R723                     K0603                              10k
+COMP  R724                     K0603                              10k
+COMP  R725                     K0603                              10k
+COMP  R726                     K0603                              10k
+COMP  R727                     K0603                              10k
+COMP  R728                     K0603                              10k
+COMP  R729                     K0603                              10k
+COMP  R730                     K0603                              10k
+COMP  R731                     K0603                              10k
+COMP  R732                     K0603                              10k
+COMP  R733                     K0603                              10k
+COMP  R734                     K0603                              10k
+COMP  R735                     K0603                              10k
+COMP  R736                     K0603                              10k
+COMP  R737                     K0603                              10k
+COMP  R738                     K0603                              10k
+COMP  R739                     K0603                              10k
+COMP  R740                     K0603                              10k
+COMP  R741                     K0603                              10k
+COMP  R742                     K0603                              10k
+COMP  R743                     K0603                              10k
+COMP  R744                     K0603                              10k
+COMP  R745                     K0603                              10k
+COMP  R746                     K0603                              10k
+COMP  R747                     K0603                              10k
+COMP  R748                     K0603                              10k
+COMP  R749                     K0603                              10k
+COMP  R750                     K0603                              10k
+COMP  R751                     K0603                              10k
+COMP  R752                     K0603                              10k
+COMP  R753                     K0603                              10k
+COMP  R754                     K0603                              10k
+COMP  R755                     K0603                              10k
+COMP  R756                     K0603                              10k
+COMP  R757                     K0603                              10k
+COMP  R758                     K0603                              2k7
+COMP  R759                     K0603                              2k7
+COMP  R760                     K0603                              2k7
+COMP  R761                     K0603                              2k7
+COMP  R762                     K0603                              2k7
+COMP  R763                     K0603                              2k7
+COMP  R764                     K0603                              2k7
+COMP  R765                     K0603                              2k7
+COMP  R766                     K0603                              2k7
+COMP  R767                     K0603                              2k7
+COMP  R768                     K0603                              2k7
+COMP  R769                     K0603                              10k
+COMP  R770                     K0603                              10k
+COMP  R771                     K0603                              10k
+COMP  R772                     K0603                              10k
+COMP  R773                     K0603                              2k7
+COMP  R774                     K0603                              2k7
+COMP  R775                     K0603                              2k7
+COMP  R776                     K0603                              2k7
+COMP  R777                     K0603                              2k7
+COMP  R778                     K0603                              2k7
+COMP  R779                     K0603                              2k7
+COMP  R780                     K0603                              2k7
+COMP  R781                     K0603                              10k
+COMP  R782                     K0603                              10k
+COMP  R783                     K0603                              10k
+COMP  R784                     K0603                              10k
+COMP  R785                     K0603                              10k
+COMP  R786                     K0603                              10k
+COMP  R787                     K0603                              5k6
+COMP  R788                     K0603                              5k6
+COMP  R789                     K0603                              5k6
+COMP  R790                     K0603                              5k6
+COMP  R791                     K0603                              5k6
+COMP  R792                     K0603                              5k6
+COMP  R793                     K0603                              5k6
+COMP  R794                     K0603                              10k
+COMP  R795                     K0603                              10k
+COMP  R796                     K0603                              10k
+COMP  R797                     K0603                              10k
+COMP  R798                     K0603                              10k
+COMP  R799                     K0603                              10k
+COMP  R800                     K0603                              10k
+COMP  R801                     K0603                              10k
+COMP  R802                     K0603                              10k
+COMP  R803                     K0603                              10k
+COMP  R804                     K0603                              10k
+COMP  R805                     K0603                              10k
+COMP  R806                     K0603                              10k
+COMP  R807                     K0603                              10k
+COMP  R808                     K0603                              10k
+COMP  R809                     K0603                              10k
+COMP  R900                     K0603                              22R
+COMP  R901                     K0603                              100R
+COMP  R902                     K0603                              100R
+COMP  R903                     K0603                              22R
+COMP  R904                     K0603                              10R
+COMP  R905                     K0603                              100R
+COMP  R906                     K0603                              100R
+COMP  R907                     K0603                              10R
+COMP  R908                     K0603                              220R
+COMP  R909                     K0603                              75R
+COMP  R910                     K0603                              180R
+COMP  R911                     K0603                              180R
+COMP  R912                     K0603                              180R
+COMP  R913                     K0603                              10R
+COMP  R914                     K0603                              220R
+COMP  R915                     K0603                              10R
+COMP  R916                     K0603                              220R
+COMP  R917                     K0603                              10R
+COMP  C100                     K0603                              22p
+COMP  C101                     K0603                              22p
+COMP  C102                     K0603                              100n
+COMP  C200                     ELCO_SMD60x32                      33u
+COMP  C201                     ELCO_SMD35x28                      10u
+COMP  C202                     K0603                              100n
+COMP  C203                     K0603                              100n
+COMP  C204                     K0603                              100n
+COMP  C205                     K0603                              100n
+COMP  C206                     K0603                              100n
+COMP  C207                     K0603                              100n
+COMP  C208                     K0603                              100n
+COMP  C209                     K0603                              100n
+COMP  C210                     K0603                              100n
+COMP  C211                     K0603                              10p
+COMP  C212                     K0603                              10p
+COMP  C300                     K0603                              100n
+COMP  C301                     K0603                              100n
+COMP  C302                     K0603                              100n
+COMP  C303                     K0603                              100n
+COMP  C304                     K0603                              100n
+COMP  C305                     K0603                              100n
+COMP  C307                     K0603                              100n
+COMP  C308                     K0603                              100n
+COMP  C600                     K0603                              100p
+COMP  C601                     K0603                              100p
+COMP  C602                     K0603                              100p
+COMP  C603                     K0603                              100p
+COMP  C604                     K0603                              100p
+COMP  C605                     K0603                              100p
+COMP  C606                     K0603                              100p
+COMP  C607                     K0603                              100p
+COMP  C608                     K0603                              100p
+COMP  C609                     K0603                              100p
+COMP  C610                     K0603                              100p
+COMP  C611                     K0603                              100p
+COMP  C612                     K0603                              100p
+COMP  C613                     K0603                              100p
+COMP  C614                     K0603                              100p
+COMP  C615                     K0603                              100p
+COMP  C616                     K0603                              180p
+COMP  C617                     K0603                              180p
+COMP  C618                     K0603                              180p
+COMP  C619                     K0603                              180p
+COMP  C620                     K0603                              180p
+COMP  C621                     K0603                              180p
+COMP  C622                     K0603                              180p
+COMP  C623                     K0603                              180p
+COMP  C624                     K0603                              180p
+COMP  C625                     K0603                              180p
+COMP  C626                     K0603                              180p
+COMP  C627                     K0603                              180p
+COMP  C628                     K0603                              180p
+COMP  C629                     K0603                              180p
+COMP  C630                     K0603                              180p
+COMP  C631                     K0603                              180p
+COMP  C632                     K0603                              180p
+COMP  C633                     K0603                              470p
+COMP  C634                     K0603                              470p
+COMP  C635                     K0603                              470p
+COMP  C636                     K0603                              47p
+COMP  C637                     K0603                              47p
+COMP  C638                     K0603                              47p
+COMP  C639                     K0603                              47p
+COMP  C640                     K0603                              100n
+COMP  C641                     ELCO_SMD60x32                      47u
+COMP  C642                     K0603                              100n
+COMP  C643                     K0603                              47p
+COMP  C644                     K0603                              47p
+COMP  C645                     K0603                              47p
+COMP  C646                     K0603                              47p
+COMP  C647                     K0603                              100n
+COMP  C648                     ELCO_SMD60x32                      47u
+COMP  C649                     K0603                              100n
+COMP  C650                     K0603                              100n
+COMP  C900                     ELCO_SMD35x28                      10u
+COMP  C901                     ELCO_SMD35x28                      10u
+COMP  C902                     ELCO_SMD35x28                      10u
+COMP  C903                     ELCO_SMD35x28                      10u
+COMP  C904                     ELCO_SMD35x28                      10u
+COMP  C905                     ELCO_SMD35x28                      10u
+COMP  C906                     ELCO_SMD35x28                      10u
+COMP  C907                     ELCO_SMD35x28                      10u
+COMP  C908                     ELCO_SMD35x28                      10u
+COMP  C909                     ELCO_SMD35x28                      10u
+COMP  C910                     K0603                              100n
+COMP  C911                     K0603                              100n
+COMP  C921                     K0603                              100n
+COMP  C922                     K0603                              100n
+COMP  C923                     K0603                              100n
+COMP  C924                     K0603                              100n
+COMP  C938                     K0603                              100n
+COMP  C940                     K0603                              100n
+COMP  C941                     K0603                              100n
+COMP  C942                     K0603                              100n
+COMP  C943                     K0603                              100n
+COMP  C945                     K0603                              100n
+COMP  C946                     K0603                              100n
+COMP  C947                     K0603                              100n
+COMP  C948                     K0603                              100n
+COMP  C949                     K0603                              100n
+COMP  C950                     K0603                              100n
+COMP  C951                     K0603                              100n
+COMP  C952                     K0603                              100n
+COMP  C953                     K0603                              100n
+COMP  C954                     K0603                              100n
+COMP  C955                     K0603                              100n
+COMP  C956                     K0603                              100n
+COMP  C957                     K0603                              100n
+COMP  C958                     K0603                              100n
+COMP  C960                     K0603                              100n
+COMP  C962                     K0603                              100n
+COMP  C963                     K0603                              100n
+COMP  C964                     K0603                              100n
+COMP  C965                     K0603                              100n
+COMP  C966                     K0603                              100n
+COMP  C967                     K0603                              100n
+COMP  C968                     K0603                              100n
+COMP  C969                     K0603                              100n
+COMP  C970                     K0603                              100n
+COMP  C971                     K0603                              100n
+COMP  C995                     K0603                              10n
+COMP  C996                     K1206                              1u
+COMP  C997                     K0603                              10n
+COMP  C998                     K1206                              1u
+COMP  C999                     K0603                              10n
+COMP  C1000                    K1206                              1u
+COMP  C1001                    K0603                              10n
+COMP  C1002                    K1206                              1u
+COMP  C1003                    K0603                              10n
+COMP  C1004                    K1206                              1u
+COMP  C1005                    K0603                              10n
+COMP  C1006                    K1206                              1u
+COMP  C1007                    K0603                              10n
+COMP  C1008                    K1206                              1u
+COMP  C1009                    K0603                              10n
+COMP  C1010                    K1206                              1u
+COMP  C1011                    K0603                              10n
+COMP  C1012                    K1206                              1u
+COMP  C1013                    K0603                              10n
+COMP  C1014                    K1206                              1u
+COMP  C1015                    K0603                              100n
+COMP  C1016                    K0603                              100n
+COMP  C1017                    K0603                              100n
+COMP  C1018                    ELCO_SMD35x28                      10u
+COMP  C1019                    ELCO_SMD35x28                      10u
+COMP  C1020                    ELCO_SMD35x28                      10u
+COMP  C1021                    ELCO_SMD35x28                      10u
+COMP  C1022                    K0603                              100n
+COMP  C1023                    K0603                              100p
+COMP  C1024                    K0603                              220p
+COMP  C1025                    K0603                              100n
+COMP  C1026                    K1206                              1u
+COMP  C1027                    K0603                              100n
+COMP  C1028                    K0603                              100p
+COMP  C1029                    K0603                              220p
+COMP  C1030                    K0603                              100n
+COMP  C1031                    K1206                              1u
+COMP  C1033                    K0603                              100n
+COMP  C1034                    K0603                              100n
+COMP  C1035                    K0603                              100n
+COMP  C1036                    K0603                              100n
+COMP  C1037                    K0603                              100n
+COMP  C1038                    K0603                              100n
+COMP  C1039                    K1206                              1u
+COMP  C1040                    K1206                              1u
+COMP  C1041                    K0603                              100n
+COMP  C1042                    K0603                              100n
+COMP  C1043                    ELCO_SMD72x43                      100u
+COMP  C1044                    ELCO_SMD72x43                      100u
+COMP  C1045                    ELCO_SMD72x43                      100u
+COMP  C1046                    ELCO_SMD72x43                      100u
+COMP  C1047                    elco2_rad10mm                      330u
+COMP  C1048                    elco2_rad10mm                      330u
+COMP  C1049                    elco2_rad10mm                      330u
+COMP  C1050                    elco2_rad10mm                      330u
+COMP  C1051                    elco2_rad10mm                      330u
+COMP  C1052                    elco2_rad10mm                      330u
+COMP  C1053                    elco2_rad10mm                      330u
+COMP  C1054                    elco2_rad10mm                      330u
+COMP  C1055                    elco2_rad10mm                      330u
+COMP  C1056                    elco2_rad10mm                      330u
+COMP  C1057                    elco2_rad10mm                      330u
+COMP  C1058                    elco2_rad10mm                      330u
+COMP  C1059                    ELCO_SMD35x28                      10u
+COMP  C1060                    ELCO_SMD35x28                      10u
+COMP  C1061                    ELCO_SMD35x28                      10u
+COMP  C1062                    ELCO_SMD35x28                      10u
+COMP  C1063                    ELCO_SMD35x28                      10u
+COMP  C1064                    ELCO_SMD35x28                      10u
+COMP  C1065                    ELCO_SMD35x28                      10u
+COMP  C1066                    ELCO_SMD35x28                      10u
+COMP  C1067                    ELCO_SMD35x28                      10u
+COMP  C1068                    ELCO_SMD35x28                      10u
+COMP  C1070                    ELCO_SMD35x28                      10u
+COMP  C1071                    ELCO_SMD35x28                      10u
+COMP  C1072                    ELCO_SMD35x28                      10u
+COMP  C1073                    K0603                              100n
+COMP  U100                     BGA_324                            34091
+COMP  U101                     so14                               7407
+COMP  U102                     so14                               74HCT14
+COMP  U200                     pga321_026_zif                     SOCKET7
+COMP  U201                     qfp100_m65                         sram32kx32
+COMP  U202                     qfp100_m65                         sram32kx32
+COMP  U203                     so28                               SRAM32KX8_H
+COMP  U204                     ssop48                             CLOCKSYNTH
+COMP  U400                     DIMM168                            DIMM
+COMP  U401                     DIMM168                            DIMM
+COMP  U402                     BGA_324                            34090A
+COMP  U600                     plcc32_socket_smd                  PROM128KX8
+COMP  U601                     qfp128_m50                         W83977F
+COMP  U602                     so20                               75188
+COMP  U603                     so20                               75188
+COMP  U900                     so28                               EL7556C
+COMP  U901                     so28                               EL7556C
+COMP  JP100                    header2x20                         HEADER_20X2
+COMP  JP101                    header2x20                         HEADER_20X2
+COMP  JP102                    header1x2                          HEADER_2
+COMP  JP103                    header1x4                          HEADER_4
+COMP  JP104                    header1x2                          HEADER_2
+COMP  JP200                    header2x3                          HEADER_3X2
+COMP  JP201                    header1x3                          HEADER_3
+COMP  JP600                    header1x3                          HEADER_3
+COMP  JP601                    header2x17                         HEADER_17X2
+COMP  JP602                    header2x5                          HEADER-SUBD9
+COMP  JP603                    header2x5                          HEADER-SUBD9
+COMP  JP604                    header2x13                         HEADER-SUBD25
+COMP  JP701                    Mountinghole_pcat                  MOUNTING-HOLE
+COMP  JP702                    Mountinghole_pcat                  MOUNTING-HOLE
+COMP  JP706                    Mountinghole_pcat                  MOUNTING-HOLE
+COMP  JP707                    Mountinghole_pcat                  MOUNTING-HOLE
+COMP  JP708                    Mountinghole_pcat                  MOUNTING-HOLE
+COMP  JP709                    Mountinghole_pcat                  MOUNTING-HOLE
+COMP  JP900                    header2x5                          HEADER_5X2
+COMP  Y100                     xtal_smd49                         32.768kHz
+COMP  Y200                     xtal_smd49                         14.318MHz
+COMP  J100                     header1x4                          CON4
+COMP  J300                     pci_slot                           PCI-BUS
+COMP  J301                     pci_slot                           PCI-BUS
+COMP  J302                     pci_slot                           PCI-BUS
+COMP  J303                     pci_slot                           PCI-BUS
+COMP  J500                     isa_atslot                         PCAT-BUS
+COMP  J501                     isa_atslot                         PCAT-BUS
+COMP  J502                     isa_atslot                         PCAT-BUS
+COMP  J600                     din5_keyb                          CON6
+COMP  J601                     header1x4                          CON4
+COMP  J602                     header1x4                          CON4
+COMP  J900                     header1x6_pcat                     CON6
+COMP  J901                     header1x6_pcat                     CON6
+COMP  BT100                    batt_2032                          BATTERY
+COMP  Q100                     sot23_tor                          2N3904
+COMP  L200                     SMD_ferriet                        INDUCTOR
+COMP  L600                     SMD_ferriet                        FB
+COMP  L601                     SMD_ferriet                        FB
+COMP  L602                     SMD_ferriet                        FB
+COMP  L603                     SMD_ferriet                        FB
+COMP  L604                     SMD_ferriet                        FB
+COMP  L605                     SMD_ferriet                        FB
+COMP  L900                     ind_rad10_p10                      2.5uH
+COMP  L901                     ind_rad10_p10                      2.5uH
+COMP  RP600                    sil8                               1k
+COMP  RP601                    sil8                               1k
+COMP  RP602                    sil8                               1k
+COMP  F600                     fuse_smd10x6                       1A
+COMP  F601                     fuse_smd10x6                       1A
+COMP  F602                     fuse_smd10x6                       1A
+COMP  D900                     sot23_diode                        BAV99
+COMP  D901                     sot23_diode                        BAV99
+COMP  D902                     sot23_diode                        BAV99
+COMP  D903                     sot23_diode                        BAV99
+COMP  D904                     sot23_diode                        BAV99
+COMP  D905                     sot23_diode                        BAV99
+# Netlist
+NET   'DEVSEL#'                U100-E5 J301-B37 J300-B37 J303-B37 J302-B37 U402-E9
+NET   'DEVSEL#'                R763-1
+NET   'FRAME#'                 U100-A5 J301-A34 J300-A34 J303-A34 J302-A34 U402-E6
+NET   'FRAME#'                 R766-1
+NET   'IDSEL'                  U100-A3 J301-A26 J300-A26 J303-A26 J302-A26
+NET   'IRDY#'                  U100-B5 J301-B35 J300-B35 J303-B35 J302-B35 U402-E7
+NET   'IRDY#'                  R765-1
+NET   'PAR'                    U100-B6 J301-A43 J300-A43 J303-A43 J302-A43 U402-A16
+NET   'PAR'                    R758-1
+NET   'PCIRST#'                U100-A1 J301-A15 J300-A15 J303-A15 J302-A15 U402-T15
+NET   'SERR#'                  U100-A6 J301-B42 J300-B42 J303-B42 J302-B42 R760-1
+NET   'STOP#'                  U100-D5 J301-A38 J300-A38 J303-A38 J302-A38 U402-E11
+NET   'STOP#'                  R762-1
+NET   'TRDY#'                  U100-C5 J301-A36 J300-A36 J303-A36 J302-A36 U402-E8
+NET   'TRDY#'                  R764-1
+NET   'REQ0#'                  U100-E10 J300-B18 U402-D7 R781-1
+NET   'REQ1#'                  U100-A11 J301-B18 U402-D9 R783-1
+NET   'REQ2#'                  U100-B11 J302-B18 U402-D11 R782-1
+NET   'REQ3#'                  U100-C11 J303-B18 U402-D13 R784-1
+NET   'C/BE0#'                 U100-C8 J301-A52 J300-A52 J303-A52 J302-A52 U402-B11
+NET   'C/BE1#'                 U100-C6 J301-B44 J300-B44 J303-B44 J302-B44 U402-B8
+NET   'C/BE2#'                 U100-D4 J301-B33 J300-B33 J303-B33 J302-B33 U402-A8
+NET   'C/BE3#'                 U100-D2 J301-B26 J300-B26 J303-B26 J302-B26 U402-A5
+NET   'AD0'                    U100-B10 J301-A58 J300-A58 J303-A58 J302-A58 U402-A15
+NET   'AD1'                    U100-A10 J301-B58 J300-B58 J303-B58 J302-B58 U402-A14
+NET   'AD2'                    U100-D9 J301-A57 J300-A57 J303-A57 J302-A57 U402-B13
+NET   'AD3'                    U100-C9 J301-B56 J300-B56 J303-B56 J302-B56 U402-A13
+NET   'AD4'                    U100-B9 J301-A55 J300-A55 J303-A55 J302-A55 U402-C12
+NET   'AD5'                    U100-A9 J301-B55 J300-B55 J303-B55 J302-B55 U402-B12
+NET   'AD6'                    U100-D8 J301-A54 J300-A54 J303-A54 J302-A54 U402-A12
+NET   'AD7'                    U100-E8 J301-B53 J300-B53 J303-B53 J302-B53 U402-C11
+NET   'AD8'                    U100-B8 J301-B52 J300-B52 J303-B52 J302-B52 U402-A11
+NET   'AD9'                    U100-A8 J301-A49 J300-A49 J303-A49 J302-A49 U402-C10
+NET   'AD10'                   U100-D7 J301-B48 J300-B48 J303-B48 J302-B48 U402-B10
+NET   'AD11'                   U100-C7 J301-A47 J300-A47 J303-A47 J302-A47 U402-A10
+NET   'AD12'                   U100-B7 J301-B47 J300-B47 J303-B47 J302-B47 U402-C9
+NET   'AD13'                   U100-A7 J301-A46 J300-A46 J303-A46 J302-A46 U402-B9
+NET   'AD14'                   U100-D6 J301-B45 J300-B45 J303-B45 J302-B45 U402-A9
+NET   'AD15'                   U100-E6 J301-A44 J300-A44 J303-A44 J302-A44 U402-C8
+NET   'AD16'                   U100-E4 J301-A32 J300-A32 J303-A32 J302-A32 U402-C7
+NET   'AD17'                   U100-C4 J301-B32 J300-B32 J303-B32 J302-B32 U402-B7
+NET   'AD18'                   U100-B4 J301-A31 J300-A31 J303-A31 J302-A31 U402-A7
+NET   'AD19'                   U100-A4 J301-B30 J300-B30 J303-B30 J302-B30 U402-C6
+NET   'AD20'                   U100-D3 J301-A29 J300-A29 J303-A29 J302-A29 U402-B6
+NET   'AD21'                   U100-E3 J301-B29 J300-B29 J303-B29 J302-B29 U402-A6
+NET   'AD22'                   U100-C3 J301-A28 J300-A28 J303-A28 J302-A28 U402-C5
+NET   'AD23'                   U100-B3 J301-B27 J300-B27 J303-B27 J302-B27 U402-B5
+NET   'AD24'                   U100-E2 J301-A25 J300-A25 J303-A25 J302-A25 U402-D6
+NET   'AD25'                   U100-C2 J301-B24 J300-B24 J303-B24 J302-B24 U402-C4
+NET   'AD26'                   U100-B2 J301-A23 J300-A23 J303-A23 J302-A23 U402-B4
+NET   'AD27'                   U100-A2 J301-B23 J300-B23 J303-B23 J302-B23 U402-A4
+NET   'AD28'                   U100-D1 J301-A22 J300-A22 J303-A22 J302-A22 U402-B3
+NET   'AD29'                   U100-E1 J301-B21 J300-B21 J303-B21 J302-B21 U402-A3
+NET   'AD30'                   U100-C1 J301-A20 J300-A20 J303-A20 J302-A20 U402-B2
+NET   'AD31'                   U100-B1 J301-B20 J300-B20 J303-B20 J302-B20 U402-A2
+NET   'LOCK#'                  J301-B39 J300-B39 J303-B39 J302-B39 U402-E5 R761-1
+NET   'PERR#'                  J301-B40 J300-B40 J303-B40 J302-B40 R759-1
+NET   'GNT1#'                  J301-A17 U402-D10 R770-1
+NET   'SDONE'                  J301-A40 J300-A40 J303-A40 J302-A40 R768-1
+NET   'SBO#'                   J301-A41 J300-A41 J303-A41 J302-A41 R767-1
+NET   'ACK64S2#'               J301-B60 R774-1
+NET   'REQ64S2#'               J301-A60 R776-1
+NET   'GNT0#'                  J300-A17 U402-D8 R769-1
+NET   'PIRQ0#'                 J300-A6 J301-B8 J302-A7 J303-B7 U100-R3
+NET   'PIRQ1#'                 J300-B7 J301-A6 J302-B8 J303-A7 U100-R4
+NET   'PIRQ2#'                 J300-A7 J301-B7 J302-A6 J303-B8 U100-P5
+NET   'PIRQ3#'                 J300-B8 J301-A7 J302-B7 J303-A6 U100-G1
+NET   'ACK64S1#'               J300-B60 R773-1
+NET   'REQ64S1#'               J300-A60 R775-1
+NET   'GNT3#'                  J303-A17 U402-D14 R772-1
+NET   'ACK64S4#'               J303-B60 R778-1
+NET   'REQ64S4#'               J303-A60 R780-1
+NET   'GNT2#'                  J302-A17 U402-D12 R771-1
+NET   'ACK64S3#'               J302-B60 R777-1
+NET   'REQ64S3#'               J302-A60 R779-1
+NET   'MEMCS16#'               U100-Y12 J500-D1 J501-D1 J502-D1 R712-1
+NET   'MEMR#'                  U100-V15 U600-24 J500-C9 J501-C9 J502-C9 R703-1
+NET   'MEMW#'                  U100-U15 U600-31 J500-C10 J501-C10 J502-C10 R704-1
+NET   'SMEMR#'                 U100-W4 J500-B11 J501-B11 J502-B11 R705-1
+NET   'SMEMW#'                 U100-U3 J500-B12 J501-B12 J502-B12 R706-1
+NET   'ALE'                    U100-U10 J500-B28 J501-B28 J502-B28 R700-1
+NET   'IOCHCK#'                U100-Y1 J500-A1 J501-A1 J502-A1 R714-1
+NET   'REFRSH#'                U100-W7 J500-B19 J501-B19 J502-B19 R708-1
+NET   'IOCS16#'                U100-V12 J500-D2 J501-D2 J502-D2 R713-1
+NET   'ZEROWS#'                U100-Y3 J500-B8 J501-B8 J502-B8 R710-1
+NET   'SBHE#'                  U100-W12 J500-C1 J501-C1 J502-C1 R707-1
+NET   'RSTISA'                 U100-W1 U102-1
+NET   'IOR#'                   U100-Y5 U601-105 J500-B14 J501-B14 J502-B14 R701-1
+NET   'IOW#'                   U100-T4 U601-106 J500-B13 J501-B13 J502-B13 R702-1
+NET   'IOCHRDY'                U100-T3 U601-108 J500-A10 J501-A10 J502-A10 R709-1
+NET   'AEN'                    U100-Y4 U601-107 J500-A11 J501-A11 J502-A11
+NET   'TC'                     U100-V10 U601-128 J500-B27 J501-B27 J502-B27
+NET   'IRQ14'                  R111-1 U601-103 J500-D7 J501-D7 J502-D7 U100-V14
+NET   'IRQ14'                  R794-1
+NET   'IRQ15'                  R128-1 U601-104 J500-D6 J501-D6 J502-D6 U100-Y14
+NET   'IRQ15'                  R795-1
+NET   'DACK0#'                 U100-U14 U601-119 J500-D8 J501-D8 J502-D8
+NET   'DACK1#'                 U100-W6 U601-122 J500-B17 J501-B17 J502-B17
+NET   'DACK2#'                 U100-Y10 U601-124 J500-B26 J501-B26 J502-B26
+NET   'DACK3#'                 U100-V5 U601-126 J500-B15 J501-B15 J502-B15
+NET   'DACK5#'                 U100-T15 J500-D10 J501-D10 J502-D10
+NET   'DACK6#'                 U100-V16 J500-D12 J501-D12 J502-D12
+NET   'DACK7#'                 U100-W17 J500-D14 J501-D14 J502-D14
+NET   'DREQ0'                  U100-W15 U601-121 J500-D9 J501-D9 J502-D9 R787-1
+NET   'DREQ1'                  U100-U6 U601-123 J500-B18 J501-B18 J502-B18 R788-1
+NET   'DREQ2'                  U100-V2 U601-125 J500-B6 J501-B6 J502-B6 R789-1
+NET   'DREQ3'                  U100-U5 U601-127 J500-B16 J501-B16 J502-B16 R790-1
+NET   'DREQ5'                  U100-Y16 J500-D11 J501-D11 J502-D11 R791-1
+NET   'DREQ6'                  U100-U16 J500-D13 J501-D13 J502-D13 R792-1
+NET   'DREQ7'                  U100-U17 J500-D15 J501-D15 J502-D15 R793-1
+NET   'IRQ0'                   U100-H20 R805-1
+NET   'IRQ1'                   U100-J20 U601-99 R806-1
+NET   'IRQ2'                   U100-J4 R807-1
+NET   'IRQ3'                   U100-T9 U601-98 J500-B25 J501-B25 J502-B25 R800-1
+NET   'IRQ4'                   U100-W9 U601-97 J500-B24 J501-B24 J502-B24 R801-1
+NET   'IRQ5'                   U100-U8 U601-96 J500-B23 J501-B23 J502-B23 R802-1
+NET   'IRQ6'                   U100-V8 U601-95 J500-B22 J501-B22 J502-B22 R803-1
+NET   'IRQ7'                   U100-Y8 U601-94 J500-B21 J501-B21 J502-B21 R804-1
+NET   'IRQ8'                   U100-Y20 U601-93 R808-1
+NET   'IRQ9'                   U100-U1 U601-92 J500-B4 J501-B4 J502-B4 R796-1
+NET   'IRQ10'                  U100-U12 U601-100 J500-D3 J501-D3 J502-D3 R797-1
+NET   'IRQ11'                  U100-W13 U601-101 J500-D4 J501-D4 J502-D4 R798-1
+NET   'IRQ12'                  U100-T13 U601-102 J500-D5 J501-D5 J502-D5 R799-1
+NET   'IRQ13'                  U100-N18 R809-1
+NET   'SA0'                    U100-U11 U601-74 U600-12 J500-A31 J501-A31 J502-A31
+NET   'SA0'                    R715-1
+NET   'SA1'                    U100-T11 U601-75 U600-11 J500-A30 J501-A30 J502-A30
+NET   'SA1'                    R716-1
+NET   'SA2'                    U100-W11 U601-76 U600-10 J500-A29 J501-A29 J502-A29
+NET   'SA2'                    R717-1
+NET   'SA3'                    U100-Y11 U601-77 U600-9 J500-A28 J501-A28 J502-A28
+NET   'SA3'                    R718-1
+NET   'SA4'                    U100-T10 U601-78 U600-8 J500-A27 J501-A27 J502-A27
+NET   'SA4'                    R719-1
+NET   'SA5'                    U100-W10 U601-79 U600-7 J500-A26 J501-A26 J502-A26
+NET   'SA5'                    R720-1
+NET   'SA6'                    U100-U9 U601-80 U600-6 J500-A25 J501-A25 J502-A25
+NET   'SA6'                    R721-1
+NET   'SA7'                    U100-V9 U601-81 U600-5 J500-A24 J501-A24 J502-A24
+NET   'SA7'                    R722-1
+NET   'SA8'                    U100-Y9 U601-82 U600-27 J500-A23 J501-A23 J502-A23
+NET   'SA8'                    R723-1
+NET   'SA9'                    U100-T8 U601-83 U600-26 J500-A22 J501-A22 J502-A22
+NET   'SA9'                    R724-1
+NET   'SA10'                   U100-W8 U601-84 U600-23 J500-A21 J501-A21 J502-A21
+NET   'SA10'                   R725-1
+NET   'SA11'                   U100-U7 U601-86 U600-25 J500-A20 J501-A20 J502-A20
+NET   'SA11'                   R726-1
+NET   'SA12'                   U100-V7 U601-87 U600-4 J500-A19 J501-A19 J502-A19
+NET   'SA12'                   R727-1
+NET   'SA13'                   U100-Y7 U601-88 U600-28 J500-A18 J501-A18 J502-A18
+NET   'SA13'                   R728-1
+NET   'SA14'                   U100-V6 U601-89 U600-29 J500-A17 J501-A17 J502-A17
+NET   'SA14'                   R729-1
+NET   'SA15'                   U100-Y6 U601-91 U600-3 J500-A16 J501-A16 J502-A16
+NET   'SA15'                   R730-1
+NET   'SA16'                   U100-T5 U600-2 J500-A15 J501-A15 J502-A15 R731-1
+NET   'SA17'                   U100-W5 J500-A14 J501-A14 J502-A14 R732-1
+NET   'SA18'                   U100-U4 J500-A13 J501-A13 J502-A13 R733-1
+NET   'SA19'                   U100-V4 J500-A12 J501-A12 J502-A12 R734-1
+NET   'SD0'                    U100-V3 U601-109 U600-13 J500-A9 J501-A9 J502-A9
+NET   'SD0'                    R742-1
+NET   'SD1'                    U100-W3 U601-110 U600-14 J500-A8 J501-A8 J502-A8
+NET   'SD1'                    R743-1
+NET   'SD2'                    U100-U2 U601-111 U600-15 J500-A7 J501-A7 J502-A7
+NET   'SD2'                    R744-1
+NET   'SD3'                    U100-T2 U601-112 U600-17 J500-A6 J501-A6 J502-A6
+NET   'SD3'                    R745-1
+NET   'SD4'                    U100-W2 U601-113 U600-18 J500-A5 J501-A5 J502-A5
+NET   'SD4'                    R746-1
+NET   'SD5'                    U100-Y2 U601-114 U600-19 J500-A4 J501-A4 J502-A4
+NET   'SD5'                    R747-1
+NET   'SD6'                    U100-T1 U601-116 U600-20 J500-A3 J501-A3 J502-A3
+NET   'SD6'                    R748-1
+NET   'SD7'                    U100-V1 U601-117 U600-21 J500-A2 J501-A2 J502-A2
+NET   'SD7'                    R749-1
+NET   'SD8'                    U100-W16 J500-C11 J501-C11 J502-C11 R750-1
+NET   'SD9'                    U100-T16 J500-C12 J501-C12 J502-C12 R751-1
+NET   'SD10'                   U100-Y17 J500-C13 J501-C13 J502-C13 R752-1
+NET   'SD11'                   U100-V17 J500-C14 J501-C14 J502-C14 R753-1
+NET   'SD12'                   U100-Y18 J500-C15 J501-C15 J502-C15 R754-1
+NET   'SD13'                   U100-W18 J500-C16 J501-C16 J502-C16 R755-1
+NET   'SD14'                   U100-Y19 J500-C17 J501-C17 J502-C17 R756-1
+NET   'SD15'                   U100-W19 J500-C18 J501-C18 J502-C18 R757-1
+NET   'LA17'                   U100-Y15 J500-C8 J501-C8 J502-C8 R735-1
+NET   'LA18'                   U100-T14 J500-C7 J501-C7 J502-C7 R736-1
+NET   'LA19'                   U100-W14 J500-C6 J501-C6 J502-C6 R737-1
+NET   'LA20'                   U100-U13 J500-C5 J501-C5 J502-C5 R738-1
+NET   'LA21'                   U100-V13 J500-C4 J501-C4 J502-C4 R739-1
+NET   'LA22'                   U100-Y13 J500-C3 J501-C3 J502-C3 R740-1
+NET   'LA23'                   U100-T12 J500-C2 J501-C2 J502-C2 R741-1
+NET   'RSTDRV'                 J500-B2 U601-118 J501-B2 J502-B2
+NET   'MASTER#'                J500-D17 J501-D17 J502-D17 R711-1
+NET   'A20GATE#'               U100-P1 U601-56 R614-2
+NET   'KBRESET#'               U100-N20 U601-57 R613-2
+NET   'PWROK'                  U100-M18 J900-1
+NET   'SPKR'                   U100-K17 R134-1
+NET   'USBP0+'                 U100-G2 C639-1 R618-1
+NET   'USBP1-'                 U100-H2 R623-1 C645-1
+NET   'USBP1+'                 U100-F1 R622-1 C646-1
+NET   'USBP0-'                 U100-H3 R619-1 C638-1
+NET   'ROMCS#'                 U100-M2 U600-22
+NET   'LED1#'                  JP101-39 U101-1
+NET   'LED0#'                  JP100-39 U101-3
+NET   'CLK48MHZ'               U100-L3 R218-2
+NET   'OSC34091'               U100-V11 R229-2
+NET   'PCICLK1'                U100-D11 R204-2
+NET   'SYSCLK'                 U100-T7 J502-B20 J500-B20 J501-B20
+NET   'CLK-SDRAM1'             R206-2 U400-125
+NET   'CLK-SDRAM0'             R211-2 U400-42
+NET   'CLK-SDRAM5'             R212-2 U401-125
+NET   'CLK-SDRAM4'             R213-2 U401-42
+NET   'CLK-SDRAM6'             R214-2 U401-79
+NET   'CLK-SDRAM7'             R215-2 U401-163
+NET   'CLK-SDRAM3'             R216-2 U400-163
+NET   'CLK-SDRAM2'             R217-2 U400-79
+NET   'PCICLK2'                R203-2 J300-B16
+NET   'PCICLK3'                R202-2 J301-B16
+NET   'PCICLK4'                R201-2 J302-B16
+NET   'PCICLK5'                R200-2 J303-B16
+NET   'CPU-CLK'                R207-2 U200-AK18
+NET   'CLK34090'               R208-2 U402-K16
+NET   'CLKSRAM1'               R209-2 U201-89
+NET   'CLKSRAM2'               R210-2 U202-89
+NET   'CLK14.318'              R230-2 J500-B30 J502-B30 J501-B30
+NET   'PCICLK6'                R205-2 U402-E10
+NET   'FERR#'                  U100-K19 U200-Q5
+NET   'IGNNE#'                 U100-L17 U200-AA35
+NET   'INTR'                   U100-L19 U200-AD34
+NET   'PHOLD#'                 U100-B12 U402-D4 R785-1
+NET   'PHOLDA#'                U100-A12 U402-D5 R786-1
+NET   'CLKRUN#'                U100-C10 U402-C13
+NET   'SMI#'                   U100-P20 U200-AB34
+NET   'CPURST'                 U100-M19 U200-AK20
+NET   'INIT'                   U100-L18 U200-AA33
+NET   'NMI'                    U100-L20 U200-AC33
+NET   'A20M#'                  U100-M20 U200-AK8
+NET   'STPCLK#'                U100-J18 U200-V34
+NET   'SMIACT#'                U200-AG3 U402-T10
+NET   'ADSC#'                  U200-AM2 U201-84 U202-84
+NET   'HITM#'                  U200-AL5 U402-T8
+NET   'HLOCK#'                 U200-AH4 U402-G5
+NET   'CACHE#'                 U200-U3 U402-J5
+NET   'ADS#'                   U200-AJ5 U402-T5
+NET   'D/C#'                   U200-AK4 U402-T7
+NET   'W/R#'                   U200-AM6 U402-T9
+NET   'M/IO#'                  U200-T4 U402-H5
+NET   'KEN#'                   U200-U5 U200-W5 U402-K5
+NET   'NA#'                    U200-Y5 U402-N5
+NET   'BRDY#'                  U200-X4 U402-M5
+NET   'EADS#'                  U200-AM4 U402-R5
+NET   'AHOLD'                  U200-V4 U402-L5
+NET   'BOFF#'                  U200-Z4 U402-P5
+NET   'CCS#'                   U201-98 U402-W13 U202-98
+NET   'COE#'                   U201-86 U402-V12 U202-86
+NET   'CADV#'                  U201-83 U402-W12 U202-83
+NET   'CADS#'                  U201-85 U402-U12 U202-85
+NET   'BWE#'                   U201-87 U402-Y12 U202-87
+NET   'GWE#'                   U201-88 U402-V13 U202-88
+NET   'TWE#'                   U203-27 U402-Y13
+NET   'D0'                     U201-52 U402-Y1 U200-K34
+NET   'D1'                     U201-53 U402-Y3 U200-G35
+NET   'D2'                     U201-56 U402-Y2 U200-J35
+NET   'D3'                     U201-57 U402-Y4 U200-G33
+NET   'D4'                     U201-58 U402-W1 U200-F36
+NET   'D5'                     U201-59 U402-W2 U200-F34
+NET   'D6'                     U201-62 U402-V1 U200-E35
+NET   'D7'                     U201-63 U402-R1 U200-E33
+NET   'D8'                     U201-68 U402-U1 U200-D34
+NET   'D9'                     U201-69 U402-W3 U200-C37
+NET   'D10'                    U201-72 U402-V3 U200-C35
+NET   'D11'                    U201-73 U402-W4 U200-B36
+NET   'D12'                    U201-74 U402-T1 U200-D32
+NET   'D13'                    U201-75 U402-V4 U200-B34
+NET   'D14'                    U201-78 U402-U3 U200-C33
+NET   'D15'                    U201-79 U402-V2 U200-A35
+NET   'D16'                    U201-2 U402-U4 U200-B32
+NET   'D17'                    U201-3 U402-T2 U200-C31
+NET   'D18'                    U201-6 U402-U2 U200-A33
+NET   'D19'                    U201-7 U402-R3 U200-D28
+NET   'D20'                    U201-8 U402-T4 U200-B30
+NET   'D21'                    U201-9 U402-R2 U200-C29
+NET   'D22'                    U201-12 U402-T3 U200-A31
+NET   'D23'                    U201-13 U402-P1 U200-D26
+NET   'D24'                    U201-18 U402-R4 U200-C27
+NET   'D25'                    U201-19 U402-P3 U200-C23
+NET   'D26'                    U201-22 U402-P2 U200-D24
+NET   'D27'                    U201-23 U402-N1 U200-C21
+NET   'D28'                    U201-24 U402-P4 U200-D22
+NET   'D29'                    U201-25 U402-N3 U200-C19
+NET   'D30'                    U201-28 U402-N2 U200-D20
+NET   'D31'                    U201-29 U402-N4 U200-C17
+NET   'D32'                    U202-52 U402-M3 U200-C15
+NET   'D33'                    U202-53 U402-M2 U200-D16
+NET   'D34'                    U202-56 U402-K1 U200-C13
+NET   'D35'                    U202-57 U402-M4 U200-D14
+NET   'D36'                    U202-58 U402-J2 U200-C11
+NET   'D37'                    U202-59 U402-J1 U200-D12
+NET   'D38'                    U202-62 U402-J4 U200-C9
+NET   'D39'                    U202-63 U402-H1 U200-D10
+NET   'D40'                    U202-68 U402-H2 U200-D8
+NET   'D41'                    U202-69 U402-G2 U200-A5
+NET   'D42'                    U202-72 U402-J3 U200-E9
+NET   'D43'                    U202-73 U402-G4 U200-B4
+NET   'D44'                    U202-74 U402-H4 U200-D6
+NET   'D45'                    U202-75 U402-G1 U200-C5
+NET   'D46'                    U202-78 U402-H3 U200-E7
+NET   'D47'                    U202-79 U402-F2 U200-C3
+NET   'D48'                    U202-2 U402-F1 U200-D4
+NET   'D49'                    U202-3 U402-G3 U200-E5
+NET   'D50'                    U202-6 U402-F4 U200-D2
+NET   'D51'                    U202-7 U402-F3 U200-F4
+NET   'D52'                    U202-8 U402-E1 U200-E3
+NET   'D53'                    U202-9 U402-E4 U200-G5
+NET   'D54'                    U202-12 U402-E2 U200-E1
+NET   'D55'                    U202-13 U402-D1 U200-G3
+NET   'D56'                    U202-18 U402-E3 U200-H4
+NET   'D57'                    U202-19 U402-D3 U200-J3
+NET   'D58'                    U202-22 U402-D2 U200-J5
+NET   'D59'                    U202-23 U402-C1 U200-K4
+NET   'D60'                    U202-24 U402-C2 U200-L5
+NET   'D61'                    U202-25 U402-C3 U200-L3
+NET   'D62'                    U202-28 U402-B1 U200-M4
+NET   'D63'                    U202-29 U402-A1 U200-N3
+NET   'BE0#'                   U201-93 U402-K2 U200-AL9
+NET   'BE1#'                   U201-94 U402-K3 U200-AK10
+NET   'BE2#'                   U201-95 U402-K4 U200-AL11
+NET   'BE3#'                   U201-96 U402-L1 U200-AK12
+NET   'BE4#'                   U202-93 U402-L2 U200-AL13
+NET   'BE5#'                   U202-94 U402-L3 U200-AK14
+NET   'BE6#'                   U202-95 U402-L4 U200-AL15
+NET   'BE7#'                   U202-96 U402-M1 U200-AK16
+NET   'A3'                     U201-37 U402-V11 U200-AL35 U202-37
+NET   'A4'                     U201-36 U402-Y11 U200-AM34 U202-36
+NET   'A5'                     U201-35 U402-U8 U200-AK32 U203-10 U202-35
+NET   'A6'                     U201-34 U402-T11 U200-AN33 U203-9 U202-34
+NET   'A7'                     U201-33 U402-Y8 U200-AL33 U203-8 U202-33
+NET   'A8'                     U201-32 U402-V8 U200-AM32 U203-7 U202-32
+NET   'A9'                     U201-100 U402-V7 U200-AK30 U203-6 U202-100
+NET   'A10'                    U201-99 U402-Y7 U200-AN31 U203-5 U202-99
+NET   'A11'                    U201-82 U402-W7 U200-AL31 U203-4 U202-82
+NET   'A12'                    U201-81 U402-U7 U200-AL29 U203-3 U202-81
+NET   'A13'                    U201-44 U402-Y6 U200-AK28 U203-25 U202-44
+NET   'A14'                    U201-45 U402-V6 U200-AL27 U203-24 U202-45
+NET   'A15'                    U201-46 U402-W6 U200-AK26 U203-21 U202-46
+NET   'A16'                    U201-47 U402-U6 U200-AL25 U203-23 U202-47
+NET   'A17'                    U201-48 U402-Y5 U200-AK24 U203-2 U202-48
+NET   'A18'                    U201-49 U402-W5 U200-AL23 U203-26 U202-49
+NET   'IDE0D8'                 R162-2 U100-A19
+NET   'IDE0D9'                 R161-2 U100-B19
+NET   'IDE0D10'                R160-2 U100-C19
+NET   'IDE0D11'                R159-2 U100-D19
+NET   'IDE0D12'                R158-2 U100-D17
+NET   'IDE0D13'                R157-2 U100-E19
+NET   'IDE0D14'                R156-2 U100-E17
+NET   'IDE0D15'                R155-2 U100-F19
+NET   'IDE0A2'                 R154-2 U100-G17
+NET   'IDE0CS3#'               R153-2 U100-H16
+NET   'IDE1D8'                 R151-2 U100-D12
+NET   'IDE1D9'                 R150-2 U100-B13
+NET   'IDE1D10'                R149-2 U100-D13
+NET   'IDE1D11'                R148-2 U100-B14
+NET   'IDE1D12'                R147-2 U100-E14
+NET   'IDE1D13'                R146-2 U100-A15
+NET   'IDE1D14'                R145-2 U100-C15
+NET   'IDE1D15'                R144-2 U100-D15
+NET   'IDE1A2'                 R143-2 U100-A18
+NET   'IDE1CS3#'               R142-2 U100-C18
+NET   'IDE0D7'                 R140-1 U100-A20
+NET   'IDE0D6'                 R139-1 U100-B20
+NET   'IDE0D5'                 R137-1 U100-C20
+NET   'IDE0D4'                 R136-1 U100-D20
+NET   'IDE0D3'                 R130-1 U100-D18
+NET   'IDE0D2'                 R100-1 U100-E20
+NET   'IDE0D1'                 R101-1 U100-E18
+NET   'IDE0D0'                 R102-1 U100-F20
+NET   'IDE0DRQ#'               R110-1 U100-F18
+NET   'IDE0IOW#'               R109-1 U100-F16
+NET   'IDE0IOR#'               R108-1 U100-F17
+NET   'IDE0IORDY'              JP100-27 U100-G20
+NET   'IDE0DACK#'              R104-1 U100-G19
+NET   'IDE0A1'                 R105-1 U100-G18
+NET   'IDE0A0'                 R106-1 U100-G16
+NET   'IDE0CS1#'               R107-1 U100-H17
+NET   'IDE1D7'                 R112-1 U100-C12
+NET   'IDE1D6'                 R113-1 U100-A13
+NET   'IDE1D5'                 R114-1 U100-C13
+NET   'IDE1D4'                 R115-1 U100-A14
+NET   'IDE1D3'                 R116-1 U100-C14
+NET   'IDE1D2'                 R117-1 U100-D14
+NET   'IDE1D1'                 R118-1 U100-B15
+NET   'IDE1D0'                 R119-1 U100-E15
+NET   'IDE1DRQ#'               R127-1 U100-A16
+NET   'IDE1IOW#'               R126-1 U100-B16
+NET   'IDE1IOR#'               R125-1 U100-C16
+NET   'IDE1IORDY'              JP101-27 U100-D16
+NET   'IDE1DACK#'              R121-1 U100-A17
+NET   'IDE1A1'                 R122-1 U100-B17
+NET   'IDE1A0'                 R123-1 U100-C17
+NET   'IDE1CS1#'               R124-1 U100-B18
+NET   'CAS0#'                  R406-2 U401-28 U400-28
+NET   'CAS1#'                  R407-2 U401-29 U400-29
+NET   'CAS2#'                  R408-2 U401-46 U400-46
+NET   'CAS3#'                  R409-2 U401-47 U400-47
+NET   'CAS4#'                  R410-2 U401-112 U400-112
+NET   'CAS5#'                  R411-2 U401-113 U400-113
+NET   'CAS6#'                  R412-2 U401-130 U400-130
+NET   'CAS7#'                  R413-2 U401-131 U400-131
+NET   'RAS0#'                  U400-45 U400-30 R400-2
+NET   'RAS1#'                  U400-129 U400-114 R401-2
+NET   'MWEA#'                  U400-27 R430-2
+NET   'SRASA#'                 U400-115 R426-2
+NET   'SCASA#'                 U400-111 R427-2
+NET   'RAS2#'                  U401-45 U401-30 R402-2
+NET   'RAS3#'                  U401-129 U401-114 R403-2
+NET   'MWEB#'                  U401-27 R431-2
+NET   'SRASB#'                 U401-115 R428-2
+NET   'SCASB#'                 U401-111 R429-2
+NET   'MA10'                   U401-38 R424-2 U400-38
+NET   'RAS5#'                  U401-123 R405-2 U400-123
+NET   'RAS4#'                  U401-39 U401-126 R404-2 U400-39 U400-126
+NET   'MA11'                   U401-122 R425-2 U400-122
+NET   'MA8'                    U401-37 R422-2 U400-37
+NET   'MA9'                    U401-121 R423-2 U400-121
+NET   'MAB0'                   R432-2 U401-33
+NET   'MAB1'                   R433-2 U401-117
+NET   'MAA0'                   R414-2 U400-33
+NET   'MAA1'                   R415-2 U400-117
+NET   'MA2'                    R416-2 U401-34 U400-34
+NET   'MA3'                    R417-2 U401-118 U400-118
+NET   'MA4'                    R418-2 U401-35 U400-35
+NET   'MA5'                    R419-2 U401-119 U400-119
+NET   'MA6'                    R420-2 U401-36 U400-36
+NET   'MA7'                    R421-2 U401-120 U400-120
+NET   'MD0'                    U400-2 U402-H17 U401-2
+NET   'MD1'                    U400-3 U402-J16 U401-3
+NET   'MD2'                    U400-4 U402-J17 U401-4
+NET   'MD3'                    U400-5 U402-L17 U401-5
+NET   'MD4'                    U400-7 U402-H18 U401-7
+NET   'MD5'                    U400-8 U402-H19 U401-8
+NET   'MD6'                    U400-9 U402-L20 U401-9
+NET   'MD7'                    U400-10 U402-K19 U401-10
+NET   'MD8'                    U400-11 U402-F18 U401-11
+NET   'MD9'                    U400-13 U402-D20 U401-13
+NET   'MD10'                   U400-14 U402-C19 U401-14
+NET   'MD11'                   U400-15 U402-R20 U401-15
+NET   'MD12'                   U400-16 U402-B18 U401-16
+NET   'MD13'                   U400-17 U402-B16 U401-17
+NET   'MD14'                   U400-19 U402-B15 U401-19
+NET   'MD15'                   U400-20 U402-E13 U401-20
+NET   'MD16'                   U400-55 U402-H16 U401-55
+NET   'MD17'                   U400-56 U402-H20 U401-56
+NET   'MD18'                   U400-57 U402-G18 U401-57
+NET   'MD19'                   U400-58 U402-F20 U401-58
+NET   'MD20'                   U400-60 U402-M19 U401-60
+NET   'MD21'                   U400-65 U402-N19 U401-65
+NET   'MD22'                   U400-66 U402-M20 U401-66
+NET   'MD23'                   U400-67 U402-J20 U401-67
+NET   'MD24'                   U400-69 U402-E19 U401-69
+NET   'MD25'                   U400-70 U402-E17 U401-70
+NET   'MD26'                   U400-71 U402-D18 U401-71
+NET   'MD27'                   U400-72 U402-A19 U401-72
+NET   'MD28'                   U400-74 U402-C17 U401-74
+NET   'MD29'                   U400-75 U402-A17 U401-75
+NET   'MD30'                   U400-76 U402-D16 U401-76
+NET   'MD31'                   U400-77 U402-B14 U401-77
+NET   'MD32'                   U400-86 U402-G17 U401-86
+NET   'MD33'                   U400-87 U402-F17 U401-87
+NET   'MD34'                   U400-88 U402-K17 U401-88
+NET   'MD35'                   U400-89 U402-G16 U401-89
+NET   'MD36'                   U400-91 U402-G19 U401-91
+NET   'MD37'                   U400-92 U402-L18 U401-92
+NET   'MD38'                   U400-93 U402-L19 U401-93
+NET   'MD39'                   U400-94 U402-K18 U401-94
+NET   'MD40'                   U400-95 U402-F19 U401-95
+NET   'MD41'                   U400-97 U402-E18 U401-97
+NET   'MD42'                   U400-98 U402-C20 U401-98
+NET   'MD43'                   U400-99 U402-A20 U401-99
+NET   'MD44'                   U400-100 U402-D17 U401-100
+NET   'MD45'                   U400-101 U402-C16 U401-101
+NET   'MD46'                   U400-103 U402-D15 U401-103
+NET   'MD47'                   U400-104 U402-C14 U401-104
+NET   'MD48'                   U400-139 U402-F16 U401-139
+NET   'MD49'                   U400-140 U402-E16 U401-140
+NET   'MD50'                   U400-141 U402-G20 U401-141
+NET   'MD51'                   U400-142 U402-N20 U401-142
+NET   'MD52'                   U400-144 U402-J18 U401-144
+NET   'MD53'                   U400-149 U402-M17 U401-149
+NET   'MD54'                   U400-150 U402-K20 U401-150
+NET   'MD55'                   U400-151 U402-J19 U401-151
+NET   'MD56'                   U400-153 U402-E20 U401-153
+NET   'MD57'                   U400-154 U402-D19 U401-154
+NET   'MD58'                   U400-155 U402-B20 U401-155
+NET   'MD59'                   U400-156 U402-B19 U401-156
+NET   'MD60'                   U400-158 U402-A18 U401-158
+NET   'MD61'                   U400-159 U402-B17 U401-159
+NET   'MD62'                   U400-160 U402-C18 U401-160
+NET   'MD63'                   U400-161 U402-C15 U401-161
+NET   'ERR#'                   C623-1 JP604-15 R624-1 U601-34
+NET   'SLCT'                   C622-1 JP604-13 RP600-3 U601-18
+NET   'BUSY'                   C621-1 JP604-11 RP600-4 U601-21
+NET   'ACK#'                   C629-1 JP604-10 RP601-6 U601-22
+NET   'PE'                     C630-1 JP604-12 RP601-5 U601-19
+NET   'PD2'                    R607-2 U601-29
+NET   'PD0'                    R606-2 U601-31
+NET   'PD4'                    R608-2 U601-27
+NET   'PD6'                    R609-2 U601-24
+NET   'AFD#'                   R610-2 U601-35
+NET   'INIT#'                  R611-2 U601-33
+NET   'STB#'                   R600-1 U601-36
+NET   'PD3'                    R602-1 U601-28
+NET   'PD1'                    R601-1 U601-30
+NET   'PD5'                    R603-1 U601-26
+NET   'PD7'                    R604-1 U601-23
+NET   'SLIN#'                  R605-1 U601-32
+NET   'DSR1'                   JP602-2 C609-1 U602-4
+NET   'RTS1'                   JP602-4 C608-1 U602-8
+NET   'CTS1'                   JP602-6 C611-1 U602-7
+NET   'RI1'                    JP602-8 C610-1 U602-9
+NET   'DCD1'                   JP602-1 C603-1 U602-2
+NET   'RXD1'                   JP602-3 C602-1 U602-3
+NET   'TXD1'                   JP602-5 C601-1 U602-6
+NET   'DTR1'                   JP602-7 C600-1 U602-5
+NET   'DSR2'                   C605-1 JP603-2 U603-4
+NET   'RTS2'                   C604-1 JP603-4 U603-8
+NET   'CTS2'                   C607-1 JP603-6 U603-7
+NET   'RI2'                    C606-1 JP603-8 U603-9
+NET   'DCD2'                   C615-1 JP603-1 U603-2
+NET   'RXD2'                   C614-1 JP603-3 U603-3
+NET   'TXD2'                   C613-1 JP603-5 U603-6
+NET   'DTR2'                   C612-1 JP603-7 U603-5
+NET   'DSKCHG#'                JP601-34 RP602-7 U601-4
+NET   'SIDE1#'                 JP601-32 U601-5
+NET   'RDATA#'                 JP601-30 RP602-6 U601-6
+NET   'WPT#'                   JP601-28 RP602-5 U601-7
+NET   'TRACK0#'                JP601-26 RP602-4 U601-8
+NET   'WGATE#'                 JP601-24 U601-9
+NET   'WDATA#'                 JP601-22 U601-10
+NET   'STEP#'                  JP601-20 U601-11
+NET   'DIR#'                   JP601-18 U601-12
+NET   'MTR1#'                  JP601-16 U601-13
+NET   'DRVSEL0#'               JP601-14 U601-14
+NET   'DRVSEL1#'               JP601-12 U601-15
+NET   'MTR0#'                  JP601-10 U601-16
+NET   'INDEX#'                 JP601-8 RP602-8 U601-17
+NET   'DRVDEN1'                JP601-6 U601-3
+NET   'DRVDEN0'                JP601-2 U601-2
+NET   'A19'                    U200-AK22 U402-V5
+NET   'A20'                    U200-AL21 U402-U5
+NET   'A21'                    U200-AF34 U402-V9
+NET   'A22'                    U200-AH36 U402-U10
+NET   'A23'                    U200-AE33 U402-U9
+NET   'A24'                    U200-AG35 U402-W10
+NET   'A25'                    U200-AJ35 U402-W9
+NET   'A26'                    U200-AH34 U402-V10
+NET   'A27'                    U200-AG33 U402-Y9
+NET   'A28'                    U200-AK36 U402-Y10
+NET   'A29'                    U200-AK34 U402-U11
+NET   'A30'                    U200-AM36 U402-W11
+NET   'A31'                    U200-AJ33 U402-W8
+NET   'TAG0'                   U203-11 U402-U14
+NET   'TAG1'                   U203-12 U402-Y14
+NET   'TAG2'                   U203-13 U402-V14
+NET   'TAG3'                   U203-15 U402-T12
+NET   'TAG4'                   U203-16 U402-W15
+NET   'TAG5'                   U203-17 U402-Y15
+NET   'TAG6'                   U203-18 U402-U13
+NET   'TAG7'                   U203-19 U402-W14
+NET   'GND'                    JP100-2 JP100-22 JP100-24 JP100-26 JP100-30 JP100-40
+NET   'GND'                    R152-2 JP101-2 JP101-22 JP101-24 JP101-26 JP101-30
+NET   'GND'                    JP101-40 R141-2 JP100-19 JP101-19 C100-2 C101-2
+NET   'GND'                    J100-1 Q100-E C102-2 JP104-2 JP200-6 JP200-5 JP201-3
+NET   'GND'                    R222-1 R223-1 C200-2 C201-2 C202-2 C203-2 C204-2
+NET   'GND'                    C205-2 C206-2 C207-2 C208-2 C209-2 C210-2 C211-2
+NET   'GND'                    C212-2 U203-1 R232-1 R236-1 R237-1 C300-2 C301-2
+NET   'GND'                    C302-2 C303-2 C304-2 C305-2 C307-2 C308-2 JP601-1
+NET   'GND'                    JP601-3 JP601-7 JP601-9 JP601-11 JP601-13 JP601-15
+NET   'GND'                    JP601-17 JP601-19 JP601-21 JP601-23 JP601-25 JP601-27
+NET   'GND'                    JP601-29 JP601-31 JP601-33 JP602-9 JP603-9 C601-2
+NET   'GND'                    C600-2 C603-2 C602-2 C605-2 C604-2 C607-2 C606-2
+NET   'GND'                    C609-2 C608-2 C611-2 C610-2 C613-2 C612-2 C615-2
+NET   'GND'                    C614-2 JP604-19 JP604-21 JP604-23 JP604-25 JP604-18
+NET   'GND'                    JP604-20 JP604-22 JP604-24 C623-2 C624-2 C621-2
+NET   'GND'                    C622-2 C619-2 C620-2 C617-2 C618-2 C616-2 C632-2
+NET   'GND'                    C630-2 C631-2 C628-2 C629-2 C626-2 C627-2 C625-2
+NET   'GND'                    C633-2 J600-6 C635-2 C640-2 C639-2 C638-2 C636-2
+NET   'GND'                    C637-2 R617-1 R616-1 C647-2 C646-2 C645-2 C643-2
+NET   'GND'                    C644-2 R621-1 R620-1 C650-2 C634-2 L602-1 C641-2
+NET   'GND'                    C642-2 L604-1 C648-2 C649-2 R787-2 R788-2 R789-2
+NET   'GND'                    R790-2 R791-2 R792-2 R793-2 JP706-1 JP707-1 JP708-1
+NET   'GND'                    JP709-1 JP702-1 JP701-1 U900-25 U900-19 U900-18
+NET   'GND'                    U900-17 U900-12 U900-11 U900-10 U900-9 U900-7
+NET   'GND'                    U900-13 C1047-2 C1048-2 C1049-2 C1022-2 C1023-2
+NET   'GND'                    C1024-2 C1025-2 C1055-2 C1054-2 C1053-2 U901-25
+NET   'GND'                    U901-19 U901-18 U901-17 U901-12 U901-11 U901-10
+NET   'GND'                    U901-9 U901-7 U901-13 C1050-2 C1051-2 C1052-2
+NET   'GND'                    C1027-2 C1028-2 C1029-2 C1030-2 C1058-2 C1057-2
+NET   'GND'                    C1056-2 J901-2 J901-1 J900-6 J900-5 C1073-2 C900-2
+NET   'GND'                    C901-2 C902-2 C903-2 C904-2 C905-2 C906-2 C907-2
+NET   'GND'                    C908-2 C909-2 C910-2 C911-2 C921-2 C922-2 C923-2
+NET   'GND'                    C924-2 C938-2 C940-2 C941-2 C942-2 C943-2 C945-2
+NET   'GND'                    C946-2 C947-2 C948-2 C949-2 C950-2 C951-2 C952-2
+NET   'GND'                    C953-2 C954-2 C955-2 C956-2 C957-2 C958-2 C960-2
+NET   'GND'                    C962-2 C963-2 C964-2 C965-2 C966-2 C967-2 C968-2
+NET   'GND'                    C969-2 C970-2 C971-2 C1046-2 C1044-2 C1045-2 C995-2
+NET   'GND'                    C996-2 C997-2 C998-2 C999-2 C1000-2 C1001-2 C1002-2
+NET   'GND'                    C1003-2 C1004-2 C1005-2 C1006-2 C1007-2 C1008-2
+NET   'GND'                    C1009-2 C1010-2 C1011-2 C1012-2 C1043-2 C1013-2
+NET   'GND'                    C1014-2 C1018-1 C1019-1 C1020-2 C1021-2 R901-1
+NET   'GND'                    C1026-2 R905-1 C1031-2 C1059-2 C1060-2 C1061-2
+NET   'GND'                    C1062-2 C1063-2 C1064-2 C1065-2 C1066-2 C1067-2
+NET   'GND'                    C1068-2 C1070-2 C1071-2 C1072-2 U102-7 U101-7
+NET   'GND'                    U100-D10 U100-E7 U100-E13 U100-J9 U100-J10 U100-J11
+NET   'GND'                    U100-J12 U100-K9 U100-K10 U100-K11 U100-K12 U100-L9
+NET   'GND'                    U100-L10 U100-L11 U100-L12 U100-M9 U100-M10 U100-M11
+NET   'GND'                    U100-M12 U200-AJ37 U200-AL37 U200-AM8 U200-AM10
+NET   'GND'                    U200-AM12 U200-AM14 U200-AM16 U200-AM18 U200-AM20
+NET   'GND'                    U200-AM22 U200-AM24 U200-AM26 U200-AM28 U200-AM30
+NET   'GND'                    U200-AN37 U200-B6 U200-B8 U200-B10 U200-B12 U200-B14
+NET   'GND'                    U200-B16 U200-B18 U200-B20 U200-B22 U200-B24 U200-B26
+NET   'GND'                    U200-B28 U200-E11 U200-E13 U200-E19 U200-E23 U200-E29
+NET   'GND'                    U200-E31 U200-H2 U200-H36 U200-K2 U200-K36 U200-M2
+NET   'GND'                    U200-M36 U200-P2 U200-P36 U200-R2 U200-R36 U200-T2
+NET   'GND'                    U200-T36 U200-U35 U200-V2 U200-V36 U200-X2 U200-X36
+NET   'GND'                    U200-Z2 U200-Z36 U200-A3 U200-AB2 U200-AB36 U200-AD2
+NET   'GND'                    U200-AD36 U200-AF2 U200-AF36 U200-AH2 U200-AJ7
+NET   'GND'                    U200-AJ9 U200-AJ13 U200-AJ17 U200-AJ21 U200-AJ25
+NET   'GND'                    U200-AJ27 U200-AJ31 U204-3 U204-10 U204-17 U204-24
+NET   'GND'                    U204-31 U204-37 U204-43 U201-5 U201-10 U201-17
+NET   'GND'                    U201-21 U201-26 U201-40 U201-55 U201-60 U201-67
+NET   'GND'                    U201-71 U201-76 U201-90 U203-14 U202-5 U202-10
+NET   'GND'                    U202-17 U202-21 U202-26 U202-40 U202-55 U202-60
+NET   'GND'                    U202-67 U202-71 U202-76 U202-90 J300-B2 J300-B3
+NET   'GND'                    J300-B12 J300-B13 J300-B15 J300-B17 J300-B22 J300-B28
+NET   'GND'                    J300-B34 J300-B38 J300-B46 J300-B49 J300-B57 J300-A24
+NET   'GND'                    J300-A30 J300-A35 J300-A37 J300-A42 J300-A48 J300-A56
+NET   'GND'                    J300-A3 J300-A12 J300-A13 J300-A18 J301-B2 J301-B3
+NET   'GND'                    J301-B12 J301-B13 J301-B15 J301-B17 J301-B22 J301-B28
+NET   'GND'                    J301-B34 J301-B38 J301-B46 J301-B49 J301-B57 J301-A24
+NET   'GND'                    J301-A30 J301-A35 J301-A37 J301-A42 J301-A48 J301-A56
+NET   'GND'                    J301-A3 J301-A12 J301-A13 J301-A18 J302-B2 J302-B3
+NET   'GND'                    J302-B12 J302-B13 J302-B15 J302-B17 J302-B22 J302-B28
+NET   'GND'                    J302-B34 J302-B38 J302-B46 J302-B49 J302-B57 J302-A24
+NET   'GND'                    J302-A30 J302-A35 J302-A37 J302-A42 J302-A48 J302-A56
+NET   'GND'                    J302-A3 J302-A12 J302-A13 J302-A18 J303-B2 J303-B3
+NET   'GND'                    J303-B12 J303-B13 J303-B15 J303-B17 J303-B22 J303-B28
+NET   'GND'                    J303-B34 J303-B38 J303-B46 J303-B49 J303-B57 J303-A24
+NET   'GND'                    J303-A30 J303-A35 J303-A37 J303-A42 J303-A48 J303-A56
+NET   'GND'                    J303-A3 J303-A12 J303-A13 J303-A18 U402-E15 U402-J9
+NET   'GND'                    U402-J10 U402-J11 U402-J12 U402-K9 U402-K10 U402-K11
+NET   'GND'                    U402-K12 U402-L9 U402-L10 U402-L11 U402-L12 U402-M9
+NET   'GND'                    U402-M10 U402-M11 U402-M12 U402-T6 U402-T16 U400-127
+NET   'GND'                    U400-148 U400-1 U400-116 U400-23 U400-12 U400-162
+NET   'GND'                    U400-152 U400-43 U400-85 U400-107 U400-96 U400-68
+NET   'GND'                    U400-64 U400-78 U400-54 U400-32 U400-138 U401-127
+NET   'GND'                    U401-148 U401-1 U401-116 U401-23 U401-12 U401-162
+NET   'GND'                    U401-152 U401-43 U401-85 U401-107 U401-96 U401-68
+NET   'GND'                    U401-64 U401-78 U401-54 U401-32 U401-138 J500-B1
+NET   'GND'                    J500-B10 J500-B31 J500-D18 J501-B1 J501-B10 J501-B31
+NET   'GND'                    J501-D18 J502-B1 J502-B10 J502-B31 J502-D18 U602-11
+NET   'GND'                    U603-11 U601-25 U601-62 U601-90 U601-120 U600-16
+NET   'VCC'                    R135-2 JP103-4 R612-2 R614-1 R613-1 F602-1 F600-2
+NET   'VCC'                    F601-1 R624-2 R700-2 R701-2 R702-2 R703-2 R704-2
+NET   'VCC'                    R705-2 R706-2 R707-2 R708-2 R709-2 R710-2 R711-2
+NET   'VCC'                    R712-2 R713-2 R714-2 R794-2 R795-2 R796-2 R797-2
+NET   'VCC'                    R798-2 R799-2 R800-2 R801-2 R802-2 R803-2 R804-2
+NET   'VCC'                    R807-2 R806-2 R805-2 R808-2 R809-2 R715-2 R716-2
+NET   'VCC'                    R717-2 R718-2 R719-2 R720-2 R721-2 R722-2 R723-2
+NET   'VCC'                    R724-2 R725-2 R726-2 R727-2 R728-2 R729-2 R730-2
+NET   'VCC'                    R731-2 R732-2 R733-2 R734-2 R735-2 R736-2 R737-2
+NET   'VCC'                    R738-2 R739-2 R740-2 R741-2 R742-2 R743-2 R744-2
+NET   'VCC'                    R745-2 R746-2 R747-2 R748-2 R749-2 R750-2 R751-2
+NET   'VCC'                    R752-2 R753-2 R754-2 R755-2 R756-2 R757-2 R758-2
+NET   'VCC'                    R759-2 R760-2 R761-2 R762-2 R763-2 R764-2 R765-2
+NET   'VCC'                    R766-2 R767-2 R768-2 R770-2 R771-2 R772-2 R769-2
+NET   'VCC'                    R773-2 R774-2 R775-2 R776-2 R777-2 R778-2 R779-2
+NET   'VCC'                    R780-2 C900-1 C901-1 C910-1 C911-1 C921-1 C922-1
+NET   'VCC'                    C923-1 C924-1 C1059-1 C1060-1 C1017-1 U900-8 U900-6
+NET   'VCC'                    U900-14 C1049-1 C1047-1 C1048-1 R917-1 U901-8
+NET   'VCC'                    U901-6 U901-14 C1052-1 C1051-1 C1050-1 R904-1
+NET   'VCC'                    C1033-2 C1034-2 C1035-2 C1036-2 C1037-2 C1038-2
+NET   'VCC'                    J901-4 J901-5 J901-6 J900-2 C1061-1 C1062-1 C1063-1
+NET   'VCC'                    C1064-1 C1065-1 C1066-1 C1067-1 C1068-1 U102-14
+NET   'VCC'                    U101-14 U200-AN1 U200-AN3 U203-28 J300-B5 J300-B6
+NET   'VCC'                    J300-B19 J300-B59 J300-B61 J300-B62 J300-A1 J300-A4
+NET   'VCC'                    J300-A5 J300-A8 J300-A10 J300-A16 J300-A59 J300-A61
+NET   'VCC'                    J300-A62 J301-B5 J301-B6 J301-B19 J301-B59 J301-B61
+NET   'VCC'                    J301-B62 J301-A1 J301-A4 J301-A5 J301-A8 J301-A10
+NET   'VCC'                    J301-A16 J301-A59 J301-A61 J301-A62 J302-B5 J302-B6
+NET   'VCC'                    J302-B19 J302-B59 J302-B61 J302-B62 J302-A1 J302-A4
+NET   'VCC'                    J302-A5 J302-A8 J302-A10 J302-A16 J302-A59 J302-A61
+NET   'VCC'                    J302-A62 J303-B5 J303-B6 J303-B19 J303-B59 J303-B61
+NET   'VCC'                    J303-B62 J303-A1 J303-A4 J303-A5 J303-A8 J303-A10
+NET   'VCC'                    J303-A16 J303-A59 J303-A61 J303-A62 J500-B3 J500-B29
+NET   'VCC'                    J500-D16 J501-B3 J501-B29 J501-D16 J502-B3 J502-B29
+NET   'VCC'                    J502-D16 RP602-1 U602-20 U603-20 U601-20 U601-55
+NET   'VCC'                    U601-85 U601-115 U600-32 RP601-1 RP600-1
+NET   '3V3'                    R224-2 R225-2 R226-2 R227-2 R228-2 L200-1 C200-1
+NET   '3V3'                    R233-2 R234-2 R235-2 R240-2 R238-2 R239-2 R219-2
+NET   '3V3'                    R220-1 R221-1 JP200-1 JP200-2 R434-2 R781-2 R782-2
+NET   '3V3'                    R783-2 R784-2 R785-2 R786-2 C902-1 C903-1 C970-1
+NET   '3V3'                    C971-1 C908-1 C909-1 C955-1 C956-1 C957-1 C958-1
+NET   '3V3'                    C960-1 C962-1 C963-1 C964-1 C965-1 C966-1 C967-1
+NET   '3V3'                    C968-1 C969-1 C1072-1 C906-1 C907-1 C940-1 C941-1
+NET   '3V3'                    C942-1 C943-1 C945-1 C946-1 C947-1 C948-1 C949-1
+NET   '3V3'                    C950-1 C951-1 C952-1 C953-1 C954-1 C1071-1 C904-1
+NET   '3V3'                    C905-1 C938-1 C1070-1 C1046-1 C1015-1 C1016-1
+NET   '3V3'                    L900-2 C1056-1 C1058-1 C1057-1 C1033-1 C1034-1
+NET   '3V3'                    C1035-1 C1036-1 C1037-1 C1038-1 U100-K5 U100-N16
+NET   '3V3'                    U100-R16 U100-T6 U100-P15 U100-R7 U100-G6 U100-F14
+NET   '3V3'                    U100-F5 U100-E16 U100-E12 U100-E9 U100-R15 U100-R6
+NET   '3V3'                    U100-F15 U100-E11 U100-F6 U200-A19 U200-A21 U200-A23
+NET   '3V3'                    U200-A25 U200-A27 U200-A29 U200-AA37 U200-AC37
+NET   '3V3'                    U200-AE37 U200-AG37 U200-AJ19 U200-AN21 U200-AN23
+NET   '3V3'                    U200-AN25 U200-AN27 U200-AN29 U200-E21 U200-E27
+NET   '3V3'                    U200-E37 U200-G37 U200-J37 U200-L33 U200-L37 U200-N37
+NET   '3V3'                    U200-Q37 U200-S37 U200-T34 U200-U33 U200-U37 U200-W37
+NET   '3V3'                    U200-Y37 U201-4 U201-11 U201-15 U201-20 U201-41
+NET   '3V3'                    U201-54 U201-61 U201-65 U201-77 U201-91 U202-4
+NET   '3V3'                    U202-11 U202-15 U202-20 U202-41 U202-54 U202-61
+NET   '3V3'                    U202-65 U202-77 U202-91 J300-B25 J300-B31 J300-B36
+NET   '3V3'                    J300-B41 J300-B43 J300-B54 J300-A21 J300-A27 J300-A33
+NET   '3V3'                    J300-A39 J300-A45 J300-A53 J301-B25 J301-B31 J301-B36
+NET   '3V3'                    J301-B41 J301-B43 J301-B54 J301-A21 J301-A27 J301-A33
+NET   '3V3'                    J301-A39 J301-A45 J301-A53 J302-B25 J302-B31 J302-B36
+NET   '3V3'                    J302-B41 J302-B43 J302-B54 J302-A21 J302-A27 J302-A33
+NET   '3V3'                    J302-A39 J302-A45 J302-A53 J303-B25 J303-B31 J303-B36
+NET   '3V3'                    J303-B41 J303-B43 J303-B54 J303-A21 J303-A27 J303-A33
+NET   '3V3'                    J303-A39 J303-A45 J303-A53 U402-P16 U402-N16 U402-R16
+NET   '3V3'                    U402-F5 U402-L16 U402-G6 U402-R6 U402-R7 U402-F6
+NET   '3V3'                    U402-T13 U402-F14 U402-P15 U402-E12 U402-F15 U402-R15
+NET   '3V3'                    U400-6 U400-90 U400-41 U400-40 U400-49 U400-102
+NET   '3V3'                    U400-143 U400-18 U400-124 U400-73 U400-26 U400-168
+NET   '3V3'                    U400-110 U400-157 U400-59 U400-133 U400-84 U401-6
+NET   '3V3'                    U401-90 U401-41 U401-40 U401-49 U401-102 U401-143
+NET   '3V3'                    U401-18 U401-124 U401-73 U401-26 U401-168 U401-110
+NET   '3V3'                    U401-157 U401-59 U401-133 U401-84
+NET   '+12V'                   JP600-1 C1020-1 C1021-1 J900-3 J300-A2 J301-A2
+NET   '+12V'                   J302-A2 J303-A2 J500-B9 J501-B9 J502-B9 U602-1
+NET   '+12V'                   U603-1
+NET   'VCORE'                  C1044-1 C1045-1 C1043-1 C996-1 C998-1 C1000-1
+NET   'VCORE'                  C1002-1 C1004-1 C1006-1 C1008-1 C1010-1 C1012-1
+NET   'VCORE'                  C1014-1 C995-1 C997-1 C999-1 C1001-1 C1003-1 C1005-1
+NET   'VCORE'                  C1007-1 C1009-1 C1011-1 C1013-1 C1015-2 C1016-2
+NET   'VCORE'                  C1017-2 C1055-1 C1054-1 C1053-1 L901-2 C1073-1
+NET   'VCORE'                  U200-A7 U200-A9 U200-A11 U200-A13 U200-A15 U200-A17
+NET   'VCORE'                  U200-AA1 U200-AC1 U200-AE1 U200-AG1 U200-AJ11
+NET   'VCORE'                  U200-AN9 U200-AN11 U200-AN15 U200-AN17 U200-AN19
+NET   'VCORE'                  U200-B2 U200-E15 U200-G1 U200-J1 U200-L1 U200-N1
+NET   'VCORE'                  U200-Q1 U200-S1 U200-U1 U200-W1 U200-Y1
+NET   '-5V'                    C1018-2 J901-3 J500-B5 J501-B5 J502-B5
+NET   '-12V'                   C1019-2 J900-4 J300-B1 J301-B1 J302-B1 J303-B1
+NET   '-12V'                   J500-B7 J501-B7 J502-B7 U602-10 U603-10
+NET   'N$1000'                 R103-2 JP100-1
+NET   'N$1001'                 R140-2 JP100-3
+NET   'N$1002'                 R139-2 JP100-5
+NET   'N$1003'                 R137-2 JP100-7
+NET   'N$1004'                 R136-2 JP100-9
+NET   'N$1005'                 R130-2 JP100-11
+NET   'N$1006'                 R100-2 JP100-13
+NET   'N$1007'                 R101-2 JP100-15
+NET   'N$1008'                 R102-2 JP100-17
+NET   'N$1009'                 R110-2 JP100-21
+NET   'N$1010'                 R109-2 JP100-23
+NET   'N$1011'                 R108-2 JP100-25
+NET   'N$1012'                 R104-2 JP100-29
+NET   'N$1013'                 R111-2 JP100-31
+NET   'N$1014'                 R105-2 JP100-33
+NET   'N$1015'                 R106-2 JP100-35
+NET   'N$1016'                 R107-2 JP100-37
+NET   'N$1017'                 R162-1 JP100-4
+NET   'N$1018'                 R161-1 JP100-6
+NET   'N$1019'                 R160-1 JP100-8
+NET   'N$1020'                 R159-1 JP100-10
+NET   'N$1021'                 R158-1 JP100-12
+NET   'N$1022'                 R157-1 JP100-14
+NET   'N$1023'                 R156-1 JP100-16
+NET   'N$1024'                 R155-1 JP100-18
+NET   'N$1025'                 R152-1 JP100-28
+NET   'N$1026'                 R154-1 JP100-36
+NET   'N$1027'                 R153-1 JP100-38
+NET   'N$1028'                 R120-2 JP101-1
+NET   'N$1029'                 R112-2 JP101-3
+NET   'N$1030'                 R113-2 JP101-5
+NET   'N$1031'                 R114-2 JP101-7
+NET   'N$1032'                 R115-2 JP101-9
+NET   'N$1033'                 R116-2 JP101-11
+NET   'N$1034'                 R117-2 JP101-13
+NET   'N$1035'                 R118-2 JP101-15
+NET   'N$1036'                 R119-2 JP101-17
+NET   'N$1037'                 R127-2 JP101-21
+NET   'N$1038'                 R126-2 JP101-23
+NET   'N$1039'                 R125-2 JP101-25
+NET   'N$1040'                 R121-2 JP101-29
+NET   'N$1041'                 R128-2 JP101-31
+NET   'N$1042'                 R122-2 JP101-33
+NET   'N$1043'                 R123-2 JP101-35
+NET   'N$1044'                 R124-2 JP101-37
+NET   'N$1045'                 R151-1 JP101-4
+NET   'N$1046'                 R150-1 JP101-6
+NET   'N$1047'                 R149-1 JP101-8
+NET   'N$1048'                 R148-1 JP101-10
+NET   'N$1049'                 R147-1 JP101-12
+NET   'N$1050'                 R146-1 JP101-14
+NET   'N$1051'                 R145-1 JP101-16
+NET   'N$1052'                 R144-1 JP101-18
+NET   'N$1053'                 R141-1 JP101-28
+NET   'N$1054'                 R143-1 JP101-36
+NET   'N$1055'                 R142-1 JP101-38
+NET   'IDERST#'                U102-2 R120-1 R103-1
+NET   'N$1056'                 C100-1 U100-N19 R129-1 Y100-1
+NET   'N$1057'                 U100-R20 C101-1 Y100-2 R129-2
+NET   'N$1058'                 BT100-2 J100-3
+NET   'N$1059'                 J100-4 BT100-1 R131-1
+NET   'VBAT'                   U100-L16 R131-2 R138-2
+NET   'N$1060'                 U101-4 U101-2 JP102-2
+NET   'N$1061'                 R133-2 C102-1 R132-2 JP103-1
+NET   'N$1062'                 R134-2 Q100-B
+NET   'N$1063'                 R132-1 R133-1 Q100-C
+NET   'N$1064'                 R135-1 JP102-1
+NET   'PWRBUT'                 R138-1 JP104-1 U100-U20
+NET   'N$1065'                 JP100-20
+NET   'N$1066'                 JP100-32
+NET   'N$1067'                 JP100-34
+NET   'N$1068'                 JP101-20
+NET   'N$1069'                 JP101-32
+NET   'N$1070'                 JP101-34
+NET   'N$1071'                 J100-2
+NET   'N$1072'                 JP103-2
+NET   'N$1073'                 JP103-3
+NET   'N$1074'                 U100-M4
+NET   'N$1075'                 U100-M3
+NET   'N$1076'                 U100-V20
+NET   'N$1077'                 U100-T20
+NET   'N$1078'                 U100-R19
+NET   'N$1079'                 U100-J1
+NET   'N$1080'                 U100-J2
+NET   'N$1081'                 U100-W20
+NET   'N$1082'                 U100-V19
+NET   'N$1083'                 U100-U18
+NET   'N$1084'                 U100-R1
+NET   'N$1085'                 U100-R2
+NET   'N$1086'                 U100-K16
+NET   'N$1087'                 U100-T17
+NET   'N$1088'                 U100-T18
+NET   'N$1089'                 U100-H19
+NET   'N$1090'                 U100-U19
+NET   'N$1091'                 U100-M17
+NET   'N$1092'                 U100-P16
+NET   'N$1093'                 U100-N17
+NET   'N$1094'                 U100-P18
+NET   'N$1095'                 U100-J16
+NET   'N$1096'                 U100-P19
+NET   'N$1097'                 U100-L2
+NET   'N$1098'                 U100-J3
+NET   'N$1099'                 U100-L5
+NET   'N$1100'                 U100-K3
+NET   'N$1101'                 U100-K4
+NET   'N$1102'                 U100-H1
+NET   'N$1103'                 U100-H4
+NET   'N$1104'                 U100-H5
+NET   'N$1105'                 U100-G3
+NET   'N$1106'                 U100-G4
+NET   'N$1107'                 U100-T19
+NET   'N$1108'                 U100-G5
+NET   'N$1109'                 U100-P2
+NET   'N$1110'                 U100-P3
+NET   'N$1111'                 U100-P4
+NET   'N$1112'                 U100-M16
+NET   'N$1113'                 U100-M5
+NET   'N$1114'                 U100-N4
+NET   'N$1115'                 U100-L4
+NET   'N$1116'                 U100-N5
+NET   'N$1117'                 U100-R5
+NET   'N$1118'                 U100-P17
+NET   'BF0'                    JP200-4 U200-Y33
+NET   'BF1'                    JP200-3 U200-X34
+NET   'N$1119'                 R205-1 U204-8
+NET   'N$1120'                 R204-1 U204-9
+NET   'N$1121'                 R203-1 U204-11
+NET   'N$1122'                 R202-1 U204-12
+NET   'N$1123'                 R201-1 U204-13
+NET   'N$1124'                 R200-1 U204-14
+NET   'N$1125'                 R206-1 U204-36
+NET   'N$1126'                 R207-1 U204-42
+NET   'N$1127'                 R208-1 U204-41
+NET   'N$1128'                 R209-1 U204-39
+NET   'N$1129'                 R210-1 U204-38
+NET   'N$1130'                 R211-1 U204-35
+NET   'N$1131'                 R212-1 U204-33
+NET   'N$1132'                 R213-1 U204-32
+NET   'N$1133'                 R214-1 U204-30
+NET   'N$1134'                 R215-1 U204-29
+NET   'N$1135'                 R216-1 U204-26
+NET   'N$1136'                 R217-1 U204-27
+NET   'N$1137'                 R218-1 U204-22
+NET   'N$1138'                 R219-1 JP201-1
+NET   'N$1139'                 JP201-2 U204-18
+NET   'N$1140'                 R220-2 U200-Y35
+NET   'N$1141'                 U200-AK2 R221-2
+NET   'N$1142'                 R222-2 U200-W3
+NET   'N$1143'                 U200-AB4 R223-2
+NET   'N$1144'                 R224-1 U200-AN7
+NET   'N$1145'                 R225-1 U200-AL7
+NET   'N$1146'                 R226-1 U200-AA5
+NET   'N$1147'                 R227-1 U200-Z34
+NET   'N$1148'                 R228-1 U200-Y3
+NET   'N$1149'                 U204-40 U204-46 U204-34 U204-28 U204-21 U204-15
+NET   'N$1149'                 U204-7 U204-25 U204-48 C210-1 L200-2 C201-1 C202-1
+NET   'N$1149'                 C203-1 C204-1 C205-1 C206-1 C207-1 C208-1 C209-1
+NET   'N$1150'                 Y200-2 C211-1 U204-5
+NET   'N$1151'                 Y200-1 C212-1 U204-4
+NET   'N$1152'                 U204-47 R229-1
+NET   'N$1153'                 U204-1 R230-1
+NET   'N$1154'                 U204-2 R231-1
+NET   'N$1155'                 U201-97 R233-1
+NET   'N$1156'                 U201-31 R234-1
+NET   'N$1157'                 U201-14 R235-1
+NET   'N$1158'                 U201-64 R237-2 U201-92
+NET   'N$1159'                 R236-2 U203-20 U203-22
+NET   'N$1160'                 U202-64 R232-2 U202-92
+NET   'N$1161'                 U202-97 R240-1
+NET   'N$1162'                 U202-31 R238-1
+NET   'N$1163'                 U202-14 R239-1
+NET   'N$1164'                 R231-2
+NET   'N$1165'                 U200-AJ1
+NET   'N$1166'                 U200-AK6
+NET   'N$1167'                 U200-AF4
+NET   'N$1168'                 U200-AJ3
+NET   'N$1169'                 U200-AE5
+NET   'N$1170'                 U200-AC5
+NET   'N$1171'                 U200-AG5
+NET   'N$1172'                 U200-AL3
+NET   'N$1173'                 U200-AL17
+NET   'N$1174'                 U200-P4
+NET   'N$1175'                 U200-Q3
+NET   'N$1176'                 U200-S3
+NET   'N$1177'                 U200-S5
+NET   'N$1178'                 U200-R4
+NET   'N$1179'                 U200-AE35
+NET   'N$1180'                 U200-Q35
+NET   'N$1181'                 U200-AH32
+NET   'N$1182'                 U200-AC35
+NET   'N$1183'                 U200-M34
+NET   'N$1184'                 U200-N33
+NET   'N$1185'                 U200-N35
+NET   'N$1186'                 U200-P34
+NET   'N$1187'                 U200-Q33
+NET   'N$1188'                 U200-H34
+NET   'N$1189'                 U200-L35
+NET   'N$1190'                 U200-AC3
+NET   'N$1191'                 U200-AA3
+NET   'N$1192'                 U200-J33
+NET   'N$1193'                 U200-AL1
+NET   'N$1194'                 U200-AD4
+NET   'N$1195'                 U200-AE3
+NET   'N$1196'                 U200-D36
+NET   'N$1197'                 U204-19
+NET   'N$1198'                 U204-20
+NET   'N$1199'                 U204-45
+NET   'N$1200'                 U204-44
+NET   'N$1201'                 U204-16
+NET   'N$1202'                 U204-23
+NET   'N$1203'                 U204-6
+NET   'N$1204'                 U201-38
+NET   'N$1205'                 U201-39
+NET   'N$1206'                 U201-16
+NET   'N$1207'                 U201-66
+NET   'N$1208'                 U201-30
+NET   'N$1209'                 U201-42
+NET   'N$1210'                 U201-51
+NET   'N$1211'                 U201-43
+NET   'N$1212'                 U201-80
+NET   'N$1213'                 U201-1
+NET   'N$1214'                 U202-38
+NET   'N$1215'                 U202-39
+NET   'N$1216'                 U202-16
+NET   'N$1217'                 U202-66
+NET   'N$1218'                 U202-30
+NET   'N$1219'                 U202-42
+NET   'N$1220'                 U202-51
+NET   'N$1221'                 U202-43
+NET   'N$1222'                 U202-80
+NET   'N$1223'                 U202-1
+NET   'N$1224'                 C301-1 J301-B11
+NET   'N$1225'                 C300-1 J301-B9
+NET   'N$1226'                 C303-1 J300-B11
+NET   'N$1227'                 C302-1 J300-B9
+NET   'N$1228'                 C305-1 J303-B11
+NET   'N$1229'                 C304-1 J303-B9
+NET   'N$1230'                 C307-1 J302-B11
+NET   'N$1231'                 C308-1 J302-B9
+NET   'N$1232'                 R425-1 U402-Y19
+NET   'N$1233'                 R424-1 U402-U16
+NET   'N$1234'                 R423-1 U402-U17
+NET   'N$1235'                 R422-1 U402-W19
+NET   'N$1236'                 R421-1 U402-Y18
+NET   'N$1237'                 R420-1 U402-W18
+NET   'N$1238'                 R419-1 U402-Y16
+NET   'N$1239'                 R418-1 U402-U15
+NET   'N$1240'                 R417-1 U402-T14
+NET   'N$1241'                 R416-1 U402-Y17
+NET   'N$1242'                 R415-1 U402-V16
+NET   'N$1243'                 R414-1 U402-V15
+NET   'N$1244'                 R413-1 U402-T18
+NET   'N$1245'                 R412-1 U402-P17
+NET   'N$1246'                 R411-1 U402-U19
+NET   'N$1247'                 R410-1 U402-T19
+NET   'N$1248'                 R409-1 U402-T17
+NET   'N$1249'                 R408-1 U402-V20
+NET   'N$1250'                 R407-1 U402-W20
+NET   'N$1251'                 R406-1 U402-U18
+NET   'N$1252'                 R405-1 U402-M16
+NET   'N$1253'                 R404-1 U402-V19
+NET   'N$1254'                 R403-1 U402-N17
+NET   'N$1255'                 R402-1 U402-R17
+NET   'N$1256'                 R401-1 U402-P18
+NET   'N$1257'                 R400-1 U402-Y20
+NET   'N$1258'                 R429-1 U402-M18
+NET   'N$1259'                 R428-1 U402-P20
+NET   'N$1260'                 R427-1 U402-P19
+NET   'N$1261'                 R426-1 U402-N18
+NET   'N$1262'                 R431-1 U402-V18
+NET   'N$1263'                 R430-1 U402-R18
+NET   'N$1264'                 R433-1 U402-W16
+NET   'N$1265'                 R432-1 U402-U20
+NET   'TEST#'                  U402-W17 R434-1
+NET   'N$1266'                 U402-V17
+NET   'N$1267'                 U400-109
+NET   'N$1268'                 U400-134
+NET   'N$1269'                 U400-147
+NET   'N$1270'                 U400-25
+NET   'N$1271'                 U400-24
+NET   'N$1272'                 U400-145
+NET   'N$1273'                 U400-164
+NET   'N$1274'                 U400-81
+NET   'N$1275'                 U400-51
+NET   'N$1276'                 U400-61
+NET   'N$1277'                 U400-165
+NET   'N$1278'                 U400-166
+NET   'N$1279'                 U400-167
+NET   'N$1280'                 U400-83
+NET   'N$1281'                 U400-82
+NET   'N$1282'                 U400-128
+NET   'N$1283'                 U400-63
+NET   'N$1284'                 U400-62
+NET   'N$1285'                 U400-146
+NET   'N$1286'                 U400-48
+NET   'N$1287'                 U400-44
+NET   'N$1288'                 U400-31
+NET   'N$1289'                 U400-135
+NET   'N$1290'                 U400-50
+NET   'N$1291'                 U400-80
+NET   'N$1292'                 U400-108
+NET   'N$1293'                 U400-132
+NET   'N$1294'                 U400-21
+NET   'N$1295'                 U400-22
+NET   'N$1296'                 U400-52
+NET   'N$1297'                 U400-53
+NET   'N$1298'                 U400-105
+NET   'N$1299'                 U400-106
+NET   'N$1300'                 U400-136
+NET   'N$1301'                 U400-137
+NET   'N$1302'                 U401-109
+NET   'N$1303'                 U401-134
+NET   'N$1304'                 U401-147
+NET   'N$1305'                 U401-25
+NET   'N$1306'                 U401-24
+NET   'N$1307'                 U401-145
+NET   'N$1308'                 U401-164
+NET   'N$1309'                 U401-81
+NET   'N$1310'                 U401-51
+NET   'N$1311'                 U401-61
+NET   'N$1312'                 U401-165
+NET   'N$1313'                 U401-166
+NET   'N$1314'                 U401-167
+NET   'N$1315'                 U401-83
+NET   'N$1316'                 U401-82
+NET   'N$1317'                 U401-128
+NET   'N$1318'                 U401-63
+NET   'N$1319'                 U401-62
+NET   'N$1320'                 U401-146
+NET   'N$1321'                 U401-48
+NET   'N$1322'                 U401-44
+NET   'N$1323'                 U401-31
+NET   'N$1324'                 U401-135
+NET   'N$1325'                 U401-50
+NET   'N$1326'                 U401-80
+NET   'N$1327'                 U401-108
+NET   'N$1328'                 U401-132
+NET   'N$1329'                 U401-21
+NET   'N$1330'                 U401-22
+NET   'N$1331'                 U401-52
+NET   'N$1332'                 U401-53
+NET   'N$1333'                 U401-105
+NET   'N$1334'                 U401-106
+NET   'N$1335'                 U401-136
+NET   'N$1336'                 U401-137
+NET   'N$1337'                 R600-2 JP604-1 C616-1 RP601-2
+NET   'N$1338'                 R601-2 JP604-3 C617-1 RP600-8
+NET   'N$1339'                 R602-2 JP604-5 C618-1 RP600-7
+NET   'N$1340'                 R603-2 JP604-7 C619-1 RP600-6
+NET   'N$1341'                 R604-2 JP604-9 C620-1 RP600-5
+NET   'N$1342'                 R605-2 JP604-17 C624-1 RP600-2
+NET   'N$1343'                 R606-1 JP604-2 C625-1 RP602-3
+NET   'N$1344'                 R607-1 JP604-4 C626-1 RP602-2
+NET   'N$1345'                 R608-1 JP604-6 C627-1 RP601-8
+NET   'N$1346'                 R609-1 JP604-8 C628-1 RP601-7
+NET   'N$1347'                 R610-1 JP604-14 C631-1 RP601-4
+NET   'N$1348'                 R611-1 JP604-16 C632-1 RP601-3
+NET   'N$1349'                 L603-2 C641-1 C642-1 J602-1
+NET   'N$1350'                 U602-19 U601-47
+NET   'N$1351'                 U602-18 U601-45
+NET   'N$1352'                 U602-17 U601-42
+NET   'N$1353'                 U602-16 U601-44
+NET   'N$1354'                 U602-15 U601-46
+NET   'N$1355'                 U602-14 U601-41
+NET   'N$1356'                 U602-13 U601-43
+NET   'N$1357'                 U602-12 U601-65
+NET   'N$1358'                 U603-19 U601-54
+NET   'N$1359'                 U603-18 U601-52
+NET   'N$1360'                 U603-17 U601-49
+NET   'N$1361'                 U603-16 U601-51
+NET   'N$1362'                 U603-15 U601-53
+NET   'N$1363'                 U603-14 U601-48
+NET   'N$1364'                 L600-2 U601-67
+NET   'N$1365'                 L601-2 U601-59
+NET   'N$1366'                 J600-1 C635-1 F600-1
+NET   'N$1367'                 J600-3 L600-1 C634-1
+NET   'N$1368'                 J600-4 L601-1 C633-1
+NET   'N$1369'                 U600-1 JP600-2 C650-1
+NET   'N$1370'                 R612-1 JP600-3
+NET   'N$1371'                 U603-13 U601-50
+NET   'N$1372'                 U603-12 U601-66
+NET   'N$1373'                 L605-2 C648-1 C649-1 J601-1
+NET   'N$1374'                 L602-2 C640-1 J602-4
+NET   'N$1375'                 R618-2 J602-2 R616-2 C637-1
+NET   'N$1376'                 R619-2 J602-3 R617-2 C636-1
+NET   'N$1377'                 L604-2 C647-1 J601-4
+NET   'N$1378'                 R622-2 J601-2 R620-2 C644-1
+NET   'N$1379'                 R623-2 J601-3 R621-2 C643-1
+NET   'N$1380'                 J600-2
+NET   'N$1381'                 J600-5
+NET   'N$1382'                 JP601-4
+NET   'N$1383'                 JP601-5
+NET   'N$1384'                 L603-1 F602-2
+NET   'N$1385'                 L605-1 F601-2
+NET   'N$1386'                 U601-1
+NET   'N$1387'                 U601-60
+NET   'N$1388'                 U601-68
+NET   'N$1389'                 U601-58
+NET   'N$1390'                 U601-73
+NET   'N$1391'                 U601-72
+NET   'N$1392'                 U601-71
+NET   'N$1393'                 U601-70
+NET   'N$1394'                 U601-69
+NET   'N$1395'                 U601-64
+NET   'N$1396'                 U601-63
+NET   'N$1397'                 U601-61
+NET   'N$1398'                 U600-30
+NET   'N$1399'                 U900-28 R909-2 R913-2 R911-2 R914-2 R915-2
+NET   'N$1400'                 C1040-1 U900-27
+NET   'N$1401'                 U900-22 U900-21 U900-20 U900-23 L901-1 C1041-2
+NET   'N$1402'                 R900-1 U900-24
+NET   'N$1403'                 U900-26 R902-1
+NET   'N$1404'                 U900-1 R901-2 JP900-1 JP900-3 JP900-5 JP900-7
+NET   'N$1404'                 JP900-9
+NET   'N$1405'                 U900-2 C1022-1
+NET   'N$1406'                 U900-3 C1023-1
+NET   'N$1407'                 U900-4 C1024-1
+NET   'N$1408'                 C1025-1 R917-2 U900-5 D901-A
+NET   'N$1409'                 C1026-1 R902-2 D905-K D900-A
+NET   'N$1410'                 C1041-1 D900-K R900-2
+NET   'N$1411'                 C1039-1 U901-27
+NET   'N$1412'                 R903-1 U901-24
+NET   'N$1413'                 U901-26 R906-1
+NET   'N$1414'                 U901-28 R907-2
+NET   'N$1415'                 R904-2 U901-5 C1030-1 D902-A
+NET   'N$1416'                 U901-1 R908-1 R905-2
+NET   'N$1417'                 U901-2 C1027-1
+NET   'N$1418'                 U901-3 C1028-1
+NET   'N$1419'                 U901-4 C1029-1
+NET   'N$1420'                 C1031-1 R906-2 D904-K D903-A
+NET   'N$1421'                 C1042-1 D903-K R903-2
+NET   'N$1422'                 R907-1 R908-2
+NET   'N$1423'                 L900-1 C1042-2 U901-23 U901-20 U901-21 U901-22
+NET   'N$1424'                 R909-1 R910-2
+NET   'N$1425'                 R912-2 R913-1
+NET   'N$1426'                 R915-1 R916-2
+NET   'N$1427'                 C1039-2 D904-A D902-K
+NET   'N$1428'                 D905-A D901-K C1040-2
+NET   'N$1429'                 R910-1 JP900-2
+NET   'N$1430'                 R911-1 JP900-10
+NET   'N$1431'                 R912-1 JP900-8
+NET   'N$1432'                 R914-1 JP900-6
+NET   'N$1433'                 R916-1 JP900-4
+NET   'N$1434'                 U900-16
+NET   'N$1435'                 U900-15
+NET   'N$1436'                 U901-16
+NET   'N$1437'                 U901-15

@@ -1,0 +1,243 @@
+;Gate/pin swap info design preamp
+GATE    R2           0    0   470R  0
+PIN     '2'  0
+PIN     '1'  0
+GATE    R1           0    0   47k5  1
+PIN     '2'  0
+PIN     '1'  0
+GATE    C2           0    0   33P  2
+PIN     '2'  0
+PIN     '1'  0
+GATE    R5           0    0   806R  3
+PIN     '2'  0
+PIN     '1'  0
+GATE    R6           0    0   806R  4
+PIN     '2'  0
+PIN     '1'  0
+GATE    R13          0    0   221R  5
+PIN     '2'  0
+PIN     '1'  0
+GATE    D1           0    0   LED  6
+PIN     'K'  0
+PIN     'A'  0
+GATE    C4           0    0   100u/6V3  7
+PIN     '2'  0
+PIN     '1'  0
+GATE    T3           0    0   BC560C  8
+PIN     'B'  0
+PIN     'E'  0
+PIN     'C'  0
+GATE    T1           0    0   MAT02  9
+PIN     '7'  0
+PIN     '5'  0
+PIN     '3'  0
+PIN     '1'  0
+PIN     '2'  0
+PIN     '6'  0
+GATE    R7           0    0   80R6  10
+PIN     '2'  0
+PIN     '1'  0
+GATE    R8           0    0   80R6  11
+PIN     '2'  0
+PIN     '1'  0
+GATE    R15          0    0   2K7  12
+PIN     '2'  0
+PIN     '1'  0
+GATE    C6           0    0   150p  13
+PIN     '2'  0
+PIN     '1'  0
+GATE    R19          0    0   10k0  14
+PIN     '2'  0
+PIN     '1'  0
+GATE    R21          0    0   390R  15
+PIN     '2'  0
+PIN     '1'  0
+GATE    T8           0    0   BC550C  16
+PIN     'E'  0
+PIN     'C'  0
+PIN     'B'  0
+GATE    T6           0    0   BC560C  17
+PIN     'B'  0
+PIN     'E'  0
+PIN     'C'  0
+GATE    R17          0    0   249R  18
+PIN     '2'  0
+PIN     '1'  0
+GATE    C9           0    0   220N  19
+PIN     '2'  0
+PIN     '1'  0
+GATE    C10          0    0   100u/25V  20
+PIN     '2'  0
+PIN     '1'  0
+GATE    T10          0    0   BC337/40  21
+PIN     'E'  0
+PIN     'C'  0
+PIN     'B'  0
+GATE    R23          0    0   10k0  22
+PIN     '2'  0
+PIN     '1'  0
+GATE    R25          0    0   12K  23
+PIN     '2'  0
+PIN     '1'  0
+GATE    R24          0    0   10k0  24
+PIN     '2'  0
+PIN     '1'  0
+GATE    T11          0    0   BC327/40  25
+PIN     'B'  0
+PIN     'E'  0
+PIN     'C'  0
+GATE    C12          0    0   100u/25V  26
+PIN     '2'  0
+PIN     '1'  0
+GATE    C11          0    0   220N  27
+PIN     '2'  0
+PIN     '1'  0
+GATE    R18          0    0   249R  28
+PIN     '2'  0
+PIN     '1'  0
+GATE    T7           0    0   BC550C  29
+PIN     'E'  0
+PIN     'C'  0
+PIN     'B'  0
+GATE    R22          0    0   390R  30
+PIN     '2'  0
+PIN     '1'  0
+GATE    R20          0    0   10k0  31
+PIN     '2'  0
+PIN     '1'  0
+GATE    T9           0    0   BC560C  32
+PIN     'B'  0
+PIN     'E'  0
+PIN     'C'  0
+GATE    C8           0    0   1u  33
+PIN     '2'  0
+PIN     '1'  0
+GATE    P1           0    0   10k  34
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+GATE    C7           0    0   150p  35
+PIN     '2'  0
+PIN     '1'  0
+GATE    T5           0    0   BF256C  36
+PIN     'G'  0
+PIN     'D'  0
+PIN     'S'  0
+GATE    R16          0    0   820R  37
+PIN     '2'  0
+PIN     '1'  0
+GATE    C5           0    0   100u/6V3  38
+PIN     '2'  0
+PIN     '1'  0
+GATE    D2           0    0   LED  39
+PIN     'K'  0
+PIN     'A'  0
+GATE    R14          0    0   221R  40
+PIN     '2'  0
+PIN     '1'  0
+GATE    T4           0    0   BC550C  41
+PIN     'E'  0
+PIN     'C'  0
+PIN     'B'  0
+GATE    R11          0    0   80R6  42
+PIN     '2'  0
+PIN     '1'  0
+GATE    R12          0    0   80R6  43
+PIN     '2'  0
+PIN     '1'  0
+GATE    T2           0    0   MAT03  44
+PIN     '6'  0
+PIN     '5'  0
+PIN     '3'  0
+PIN     '1'  0
+PIN     '7'  0
+PIN     '2'  0
+GATE    R9           0    0   806R  45
+PIN     '2'  0
+PIN     '1'  0
+GATE    R10          0    0   806R  46
+PIN     '2'  0
+PIN     '1'  0
+GATE    R31          0    0   392k  47
+PIN     '2'  0
+PIN     '1'  0
+GATE    R32          0    0   392k  48
+PIN     '2'  0
+PIN     '1'  0
+GATE    T12          0    0   BC550C  49
+PIN     'E'  0
+PIN     'C'  0
+PIN     'B'  0
+GATE    R30          0    0   100k  50
+PIN     '2'  0
+PIN     '1'  0
+GATE    P2           0    0   100k  51
+PIN     '1'  0
+PIN     '2'  0
+PIN     '3'  0
+GATE    R29          0    0   3k9  52
+PIN     '2'  0
+PIN     '1'  0
+GATE    R28          0    0   27k  53
+PIN     '2'  0
+PIN     '1'  0
+GATE    C16          0    0   100n  54
+PIN     '2'  0
+PIN     '1'  0
+GATE    C13          0    0   2u2  55
+PIN     '2'  0
+PIN     '1'  0
+GATE    D4           0    0   1n4148  56
+PIN     'A'  0
+PIN     'K'  0
+GATE    D3           0    0   1n4148  57
+PIN     'A'  0
+PIN     'K'  0
+GATE    R27          0    0   475k  58
+PIN     '2'  0
+PIN     '1'  0
+GATE    C14          0    0   2u2  59
+PIN     '2'  0
+PIN     '1'  0
+GATE    IC1          0    0   OP77  60
+PIN     '6'  0
+PIN     '3'  0
+PIN     '2'  0
+PIN     '7'  0
+PIN     '4'  0
+GATE    C15          0    0   100n  61
+PIN     '2'  0
+PIN     '1'  0
+GATE    R26          0    0   475k  62
+PIN     '2'  0
+PIN     '1'  0
+GATE    C3           0    0   10P  63
+PIN     '2'  0
+PIN     '1'  0
+GATE    R4           0    0   5K62  64
+PIN     '2'  0
+PIN     '1'  0
+GATE    R3           0    0   1k00  65
+PIN     '2'  0
+PIN     '1'  0
+GATE    J1           0    0   CON1  66
+PIN     '1'  0
+GATE    J2           0    0   CON1  67
+PIN     '1'  0
+GATE    J3           0    0   CON1  68
+PIN     '1'  0
+GATE    J4           0    0   CON1  69
+PIN     '1'  0
+GATE    J5           0    0   CON1  70
+PIN     '1'  0
+GATE    J6           0    0   CON1  71
+PIN     '1'  0
+GATE    C1           0    0   2u2  72
+PIN     '2'  0
+PIN     '1'  0
+GATE    J7           0    0   CON1  73
+PIN     '1'  0
+GATE    M1           0    0   MOUTINGHOLE  74
+GATE    M2           0    0   MOUTINGHOLE  75
+GATE    M3           0    0   MOUTINGHOLE  76
+GATE    M4           0    0   MOUTINGHOLE  77

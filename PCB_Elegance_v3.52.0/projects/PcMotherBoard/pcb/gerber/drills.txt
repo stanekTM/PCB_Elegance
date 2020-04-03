@@ -1,0 +1,18 @@
+;Drill tools [ C:\pcb_elegance\PcMotherBoard\pcb\PcMotherBoard.pcb ]
+;
+;  Tool nr   Type      Diam mm     mils        Nr drills
+;-------------------------------------------------------
+  T1         Plated       0.615    24.00          48
+  T2         Unplated     4.018   158.00           6
+  T3         Plated       1.021    40.00         496
+  T4         Plated       1.148    45.00           7
+  T5         Plated       1.605    63.00          12
+  T6         Unplated     1.707    67.00           2
+  T7         Plated       0.919    36.00         360
+  T8         Unplated     2.418    95.00           8
+  T9         Plated       1.123    44.00         484
+  T10        Unplated     2.469    97.00           8
+  T11        Plated       0.716    28.00          24
+  T12        Plated       0.665    26.00         321
+  T13        Plated       1.529    60.00           2
+  T14        Plated       0.462    18.00        1251

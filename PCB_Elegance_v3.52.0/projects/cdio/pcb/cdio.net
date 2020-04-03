@@ -1,0 +1,285 @@
+# Components
+COMP  U100                     dip24s                             GAL20V8
+COMP  U101                     SO20                               74F245
+COMP  U102                     SO20                               74F245
+COMP  U103                     so20                               74HC299
+COMP  U104                     so20                               74HC299
+COMP  U105                     dip40                              ATV2500
+COMP  U106                     SO20                               74HC574
+COMP  U107                     SO20                               74HC245
+COMP  U108                     so28                               CS8412
+COMP  U109                     so24                               CS8402
+COMP  U110                     totx173                            TOTX173
+COMP  U111                     so14                               74HCU04
+COMP  U200                     SO28                               SRAM 32KX8
+COMP  U201                     SO28                               SRAM 32KX8
+COMP  U202                     dip40                              ATV2500
+COMP  C100                     K0805                              10N
+COMP  C101                     K0805                              100N
+COMP  C102                     K0805                              10N
+COMP  C103                     K0805                              10n
+COMP  C104                     K0805                              100n
+COMP  C105                     K0805                              68P
+COMP  C106                     K0805                              68P
+COMP  C107                     K0805                              68P
+COMP  C108                     K0805                              68P
+COMP  C109                     K0805                              100N
+COMP  C110                     K0805                              100N
+COMP  C111                     K0805                              100N
+COMP  C112                     K0805                              100N
+COMP  C113                     K0805                              100N
+COMP  C114                     K0805                              100N
+COMP  C115                     elco_smd35x28                      33u
+COMP  C116                     elco_smd35x28                      33u
+COMP  C117                     elco_smd35x28                      33u
+COMP  C118                     K0805                              100N
+COMP  C119                     K0805                              100N
+COMP  C120                     K0805                              100N
+COMP  C121                     K0805                              100N
+COMP  C122                     K0805                              100N
+COMP  C123                     K0805                              100N
+COMP  C124                     K0805                              100N
+COMP  C125                     K0805                              100N
+COMP  R100                     K0805                              75R
+COMP  R101                     K0805                              75R
+COMP  R102                     K0805                              150R
+COMP  R103                     K0805                              8K2
+COMP  R104                     K0805                              4R7
+COMP  R105                     K0805                              1k
+COMP  R106                     K0805                              10M
+COMP  R107                     K0805                              560R
+COMP  R108                     K0805                              10M
+COMP  R109                     K0805                              560R
+COMP  J100                     pcat-bus                           PC-AT
+COMP  J102                     cinch                              CINCH
+COMP  J103                     cinch                              CINCH
+COMP  Y100                     xtal_smd49                         12.288MHz
+COMP  Y101                     xtal_smd49                         11.2896MHz
+# Netlist
+NET   'A-0'                    U105-18 U100-22 U202-18
+NET   'A-1'                    U105-19 U100-21 U202-17
+NET   'CLK_COUNT1'             U105-4 U202-21
+NET   'CLK_COUNT2'             U105-5 U202-24
+NET   'CE_RAM'                 U105-8 U200-20 U201-20
+NET   'OE_COUNT1_2'            U105-6 U202-19
+NET   'OE_COUNT_VALUE'         U105-7 U202-20
+NET   'RESET_COUNT1'           U106-18 U202-22
+NET   'RESET_COUNT2'           U106-17 U202-23
+NET   'WR_RAM'                 U105-14 U200-27 U201-27
+NET   'D-0'                    U106-2 U107-2 U103-7 U101-18 U200-11 U202-25
+NET   'D-1'                    U106-3 U107-3 U103-13 U101-17 U200-12 U202-26
+NET   'D-2'                    U106-4 U107-4 U103-6 U101-16 U200-13 U202-27
+NET   'D-3'                    U106-5 U107-5 U103-14 U101-15 U200-15 U202-28
+NET   'D-4'                    U106-6 U107-6 U103-5 U101-14 U200-16 U202-29
+NET   'D-5'                    U106-7 U107-7 U103-15 U101-13 U200-17 U202-31
+NET   'D-6'                    U106-8 U107-8 U103-4 U101-12 U200-18 U202-32
+NET   'D-7'                    U106-9 U107-9 U103-16 U101-11 U200-19 U202-33
+NET   'D-15'                   U104-7 U102-18 U201-19
+NET   'D-14'                   U104-13 U102-17 U201-18
+NET   'D-13'                   U104-6 U102-16 U201-17
+NET   'D-12'                   U104-14 U102-15 U201-16
+NET   'D-11'                   U104-5 U102-14 U201-15
+NET   'D-10'                   U104-15 U102-13 U201-13
+NET   'D-9'                    U104-4 U102-12 U201-12
+NET   'D-8'                    U104-16 U102-11 U201-11
+NET   'D7'                     J100-A2 U101-9
+NET   'D6'                     J100-A3 U101-8
+NET   'D5'                     J100-A4 U101-7
+NET   'D4'                     J100-A5 U101-6
+NET   'D3'                     J100-A6 U101-5
+NET   'D2'                     J100-A7 U101-4
+NET   'D1'                     J100-A8 U101-3
+NET   'D0'                     J100-A9 U101-2
+NET   'READY'                  J100-A10 U105-25
+NET   'AEN'                    J100-A11 U100-17
+NET   'A9'                     J100-A22 U100-9
+NET   'A8'                     J100-A23 U100-8
+NET   'A7'                     J100-A24 U100-7
+NET   'A6'                     J100-A25 U100-6
+NET   'A5'                     J100-A26 U100-5
+NET   'A4'                     J100-A27 U100-4
+NET   'A3'                     J100-A28 U100-3
+NET   'A2'                     J100-A29 U100-2
+NET   'A1'                     J100-A30 U100-1
+NET   'A0'                     J100-A31 U100-23
+NET   'IOW#'                   J100-B13 U100-13
+NET   'IOR#'                   J100-B14 U100-14
+NET   'CLK_PC_BUS'             U106-11 U105-35
+NET   'ZERO'                   U106-19 U105-31
+NET   'SELECT_CLK'             U106-16 U105-33
+NET   'MODE'                   U106-15 U105-37
+NET   'SELECT'                 U106-14 U108-16
+NET   'RESET'                  U106-13 U109-16
+NET   'E0'                     U107-18 U108-6
+NET   'E1'                     U107-17 U108-5
+NET   'E2'                     U107-16 U108-4
+NET   'F0'                     U107-15 U108-3
+NET   'F1'                     U107-14 U108-2
+NET   'F2'                     U107-13 U108-27
+NET   'ERROR'                  U107-12 U108-25
+NET   'R_L'                    U107-11 U105-29
+NET   'EN_INFO'                U107-19 U105-32
+NET   'INP_RL'                 U108-11 U105-39
+NET   'INP_DATA'               U108-26 U105-38
+NET   'INP_CLK'                U108-12 U105-2
+NET   'OUTP_CLK'               U109-6 U105-28
+NET   'OUTP_RL'                U109-7 U105-27
+NET   'OUTP_DATA'              U109-8 U105-26
+NET   'CLK/2'                  U109-5 U108-13 U105-36
+NET   'BUF_L'                  U101-19 U105-34
+NET   'READ'                   U101-1 U105-22 U100-16 U102-1
+NET   'OE_SHIFT'               U103-2 U103-3 U104-2 U104-3 U105-13
+NET   'LOAD_SHIFT'             U103-19 U104-19 U105-9
+NET   'CLK_SER'                U103-12 U104-12 U105-11
+NET   'SER_IN'                 U103-11 U105-12
+NET   'SHIFT8'                 U103-17 U104-11
+NET   'SER_OUT'                U104-17 U105-17
+NET   '11.2896_MHz'            U105-1 R107-1 U111-6 R106-2
+NET   'BUF_H'                  U105-15 U102-19
+NET   'IOCS16#'                U105-16 J100-D2
+NET   'A-2'                    U105-20 U100-20
+NET   '12.288_MHz'             U105-40 R109-1 U111-4 R108-2
+NET   'EN_ADR'                 U105-24 U100-19
+NET   'BUF-SBHE#'              U105-23 U100-18
+NET   'WRITE'                  U105-21 U100-15
+NET   'SBHE#'                  U100-11 J100-C1
+NET   'D8'                     J100-C11 U102-9
+NET   'D9'                     J100-C12 U102-8
+NET   'D10'                    J100-C13 U102-7
+NET   'D11'                    J100-C14 U102-6
+NET   'D12'                    J100-C15 U102-5
+NET   'D13'                    J100-C16 U102-4
+NET   'D14'                    J100-C17 U102-3
+NET   'D15'                    J100-C18 U102-2
+NET   'TA0'                    U202-4 U201-10 U200-10
+NET   'TA1'                    U202-5 U201-9 U200-9
+NET   'TA2'                    U202-6 U201-8 U200-8
+NET   'TA3'                    U202-7 U201-7 U200-7
+NET   'TA4'                    U202-8 U201-6 U200-6
+NET   'TA5'                    U202-9 U201-5 U200-5
+NET   'TA6'                    U202-11 U201-4 U200-4
+NET   'TA7'                    U202-12 U201-3 U200-3
+NET   'TA8'                    U202-13 U201-25 U200-25
+NET   'TA9'                    U202-14 U201-24 U200-24
+NET   'TA10'                   U202-15 U201-21 U200-21
+NET   'TA11'                   U202-16 U201-23 U200-23
+NET   'TA12'                   U201-2 U202-36 U200-2
+NET   'TA13'                   U201-26 U202-35 U200-26
+NET   'TA14'                   U201-1 U202-34 U200-1
+NET   'GND'                    U106-1 U107-1 C100-2 J102-2 U109-3 U109-4 U109-24
+NET   'GND'                    U108-21 U108-23 U108-24 U108-18 U108-17 C102-2
+NET   'GND'                    J103-2 J100-B1 J100-D18 J100-B31 R100-1 C101-2
+NET   'GND'                    C105-2 C106-2 C107-2 C108-2 R101-1 C109-2 C110-2
+NET   'GND'                    C111-2 C112-2 C113-2 C114-2 C115-2 C116-2 C117-2
+NET   'GND'                    C118-2 C119-2 C120-2 C121-2 C122-2 C123-2 C124-2
+NET   'GND'                    C125-2 U200-22 U201-22 U106-10 U107-10 U105-10
+NET   'GND'                    U108-8 U109-18 U103-10 U104-10 U100-12 U110-1
+NET   'GND'                    U111-7 U101-10 U102-10 U200-14 U201-14 U202-10
+NET   'VCC'                    U109-2 U109-1 U109-12 U109-13 U109-14 U108-22
+NET   'VCC'                    J100-B29 J100-B3 J100-D16 C109-1 C110-1 C111-1
+NET   'VCC'                    C112-1 C113-1 C114-1 C115-1 C116-1 C117-1 C118-1
+NET   'VCC'                    C119-1 C120-1 C121-1 C122-1 C123-1 C124-1 C125-1
+NET   'VCC'                    U103-1 U103-9 U104-1 U104-9 R104-2 U106-20 U107-20
+NET   'VCC'                    U105-30 U108-7 U109-19 U103-20 U104-20 U100-24
+NET   'VCC'                    U111-14 U101-20 U102-20 U200-28 U201-28 U202-30
+NET   'N$1000'                 R100-2 C103-1 J102-1
+NET   'N$1001'                 C103-2 U108-9
+NET   'N$1002'                 C100-1 U108-10
+NET   'N$1003'                 U108-20 R105-2
+NET   'N$1004'                 U110-4 C104-1 U109-20
+NET   'N$1005'                 R102-2 R101-2 J103-1
+NET   'N$1006'                 R102-1 C104-2
+NET   'N$1007'                 R103-2 U110-2
+NET   'N$1008'                 U110-3 R104-1 C101-1 R103-1
+NET   'N$1009'                 C106-1 R107-2 Y101-2
+NET   'N$1010'                 U111-5 C105-1 Y101-1 R106-1
+NET   'N$1011'                 C108-1 R109-2 Y100-2
+NET   'N$1012'                 U111-3 C107-1 Y100-1 R108-1
+NET   'N$1013'                 U106-12
+NET   'N$1014'                 C102-1 R105-1
+NET   'N$1015'                 U105-3
+NET   'N$1016'                 J100-B2
+NET   'N$1017'                 J100-B4
+NET   'N$1018'                 J100-B6
+NET   'N$1019'                 J100-B8
+NET   'N$1020'                 J100-B10
+NET   'N$1021'                 J100-B11
+NET   'N$1022'                 J100-B12
+NET   'N$1023'                 J100-B15
+NET   'N$1024'                 J100-B16
+NET   'N$1025'                 J100-B17
+NET   'N$1026'                 J100-B18
+NET   'N$1027'                 J100-B19
+NET   'N$1028'                 J100-B20
+NET   'N$1029'                 J100-B21
+NET   'N$1030'                 J100-B22
+NET   'N$1031'                 J100-B23
+NET   'N$1032'                 J100-B24
+NET   'N$1033'                 J100-B25
+NET   'N$1034'                 J100-B26
+NET   'N$1035'                 J100-B27
+NET   'N$1036'                 J100-B28
+NET   'N$1037'                 J100-B30
+NET   'N$1038'                 J100-A1
+NET   'N$1039'                 J100-A12
+NET   'N$1040'                 J100-A13
+NET   'N$1041'                 J100-A14
+NET   'N$1042'                 J100-A15
+NET   'N$1043'                 J100-A16
+NET   'N$1044'                 J100-A17
+NET   'N$1045'                 J100-A18
+NET   'N$1046'                 J100-A19
+NET   'N$1047'                 J100-A20
+NET   'N$1048'                 J100-A21
+NET   'N$1049'                 J100-D1
+NET   'N$1050'                 J100-D3
+NET   'N$1051'                 J100-D4
+NET   'N$1052'                 J100-D5
+NET   'N$1053'                 J100-D6
+NET   'N$1054'                 J100-D7
+NET   'N$1055'                 J100-D8
+NET   'N$1056'                 J100-D9
+NET   'N$1057'                 J100-D10
+NET   'N$1058'                 J100-D11
+NET   'N$1059'                 J100-D12
+NET   'N$1060'                 J100-D13
+NET   'N$1061'                 J100-D14
+NET   'N$1062'                 J100-D15
+NET   'N$1063'                 J100-D17
+NET   'N$1064'                 J100-C2
+NET   'N$1065'                 J100-C3
+NET   'N$1066'                 J100-C4
+NET   'N$1067'                 J100-C5
+NET   'N$1068'                 J100-C6
+NET   'N$1069'                 J100-C7
+NET   'N$1070'                 J100-C8
+NET   'N$1071'                 J100-C9
+NET   'N$1072'                 J100-C10
+NET   'N$1073'                 J100-B5
+NET   'N$1074'                 J100-B7
+NET   'N$1075'                 J100-B9
+NET   'N$1076'                 U108-19
+NET   'N$1077'                 U108-1
+NET   'N$1078'                 U108-14
+NET   'N$1079'                 U108-28
+NET   'N$1080'                 U108-15
+NET   'N$1081'                 U109-21
+NET   'N$1082'                 U109-22
+NET   'N$1083'                 U109-23
+NET   'N$1084'                 U109-10
+NET   'N$1085'                 U109-11
+NET   'N$1086'                 U109-9
+NET   'N$1087'                 U109-17
+NET   'N$1088'                 U109-15
+NET   'N$1089'                 U103-18
+NET   'N$1090'                 U103-8
+NET   'N$1091'                 U104-18
+NET   'N$1092'                 U104-8
+NET   'N$1093'                 U100-10
+NET   'N$1094'                 U202-1
+NET   'N$1095'                 U202-2
+NET   'N$1096'                 U202-3
+NET   'N$1097'                 U202-37
+NET   'N$1098'                 U202-38
+NET   'N$1099'                 U202-39
+NET   'N$1100'                 U202-40

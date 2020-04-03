@@ -1,0 +1,11 @@
+"SilkscreenTopRefs.ger"
+"PasteMaskTop.ger"
+"SolderMaskTop.ger"
+"Top_1.ger"
+"Inner_2.ger"
+"Inner_3.ger"
+"Bottom_4.ger"
+"SolderMaskBottom.ger"
+"PasteMaskBottom.ger"
+"SilkscreenBottomRefs.ger"
+"PcMotherBoard.ncd" FSLM34

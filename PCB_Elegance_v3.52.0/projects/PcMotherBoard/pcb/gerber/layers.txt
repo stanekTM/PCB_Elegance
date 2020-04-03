@@ -1,0 +1,45 @@
+Layout  PcMotherBoard   Date: April 18, 2012 19:31:13
+
+Designed with PCB elegance 3.50
+
+---------------------------------------------------------------------
+Gerber files :
+
+Filename                      Polarity    Layer name
+---------------------------------------------------------------------
+PasteMaskTop.ger              P           Paste mask top
+SolderMaskTop.ger             P           Solder mask top
+Top_1.ger                     P           Top layer 1
+Inner_2.ger                   N           Inner layer 2 ( Powerplane GND )
+Inner_3.ger                   N           Inner layer 3 ( Powerplane VCC )
+Bottom_4.ger                  P           Bottom layer 4
+SolderMaskBottom.ger          P           Solder mask bottom
+PasteMaskBottom.ger           P           Paste mask bottom
+
+
+---------------------------------------------------------------------
+Drill file
+---------------------------------------------------------------------
+PcMotherBoard.ncd                         Drill file
+
+
+
+---------------------------------------------------------------------
+PCB Specifications :
+---------------------------------------------------------------------
+
+PCB size (Width,height)             :  11220.0000 ,  8701.0000  mils
+PCB size (Width,height)             :     11.22000,     8.70100 inch
+PCB size (Width,height)             :    284.988  ,   221.005   mm
+
+PCB origin (x,y)                    :   1000.0000 ,  1000.0000  mils
+PCB origin (x,y)                    :      1.00000,     1.00000 inch
+PCB origin (x,y)                    :     25.400  ,    25.400   mm
+
+
+Board thickness                     : 1.6 mm
+Material                            : FR4
+Copper thickness                    : 0.035 mm
+Number of layers                    : 4
+Minimal Trace width                 : 6 mils (0.1524 mm)
+Minimal Clearance                   : 6 mils (0.1524 mm)

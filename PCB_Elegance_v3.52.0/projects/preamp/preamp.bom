@@ -1,0 +1,51 @@
+Bill Of Materials
+
+Design C:\pcb_elegance\preamp_org
+
+April 18, 2012 13:48:47
+
++---+---------------+---+---------------+
+|pos|Component value|#  |Geometry       |
++---+---------------+---+---------------+
+|1  |10P            |1  |CAPACITOR_TH_2 |
+|2  |33P            |1  |CAPACITOR_TH_1 |
+|3  |150p           |2  |CAPACITOR_TH_3 |
+|4  |100n           |2  |CAPACITOR_TH_2 |
+|5  |220N           |2  |CAPACITOR_TH_3 |
+|6  |1u             |1  |capacitor_th_3a|
+|7  |2u2            |3  |CAPACITOR_TH_3a|
+|8  |100u/6V3       |2  |elco1_rad6mm   |
+|9  |100u/25V       |2  |elco1_rad6mm   |
+|10 |LED            |2  |led            |
+|11 |1n4148         |2  |DIODE_TH_4     |
+|12 |OP77           |1  |DIP8           |
+|13 |CON1           |7  |POINT_1_1MM    |
+|14 |MOUTINGHOLE    |4  |MOUNTINGHOLE3MM|
+|15 |10k            |1  |potm3          |
+|16 |100k           |1  |potm3          |
+|17 |80R6           |4  |RESISTOR_TH_4  |
+|18 |221R           |2  |RESISTOR_TH_4  |
+|19 |249R           |2  |RESISTOR_TH_4  |
+|20 |390R           |2  |RESISTOR_TH_4  |
+|21 |470R           |1  |RESISTOR_TH_4  |
+|22 |806R           |4  |RESISTOR_TH_4  |
+|23 |820R           |1  |RESISTOR_TH_4  |
+|24 |1k00           |1  |RESISTOR_TH_4  |
+|25 |2K7            |1  |RESISTOR_TH_4  |
+|26 |3k9            |1  |RESISTOR_TH_4  |
+|27 |5K62           |1  |RESISTOR_TH_4  |
+|28 |10k0           |4  |RESISTOR_TH_4  |
+|29 |12K            |1  |RESISTOR_TH_4  |
+|30 |27k            |1  |RESISTOR_TH_4  |
+|31 |47k5           |1  |RESISTOR_TH_4  |
+|32 |100k           |1  |RESISTOR_TH_4  |
+|33 |392k           |2  |RESISTOR_TH_4  |
+|34 |475k           |2  |RESISTOR_TH_4  |
+|35 |MAT02          |1  |DIP8           |
+|36 |MAT03          |1  |DIP8           |
+|37 |BC560C         |3  |TO92_TOR_BCE   |
+|38 |BC550C         |4  |TO92_TOR_BCE   |
+|39 |BF256C         |1  |TO92_FET_GDS   |
+|40 |BC337/40       |1  |TO92_TOR_BCE   |
+|41 |BC327/40       |1  |TO92_TOR_BCE   |
++---+---------------+---+---------------+

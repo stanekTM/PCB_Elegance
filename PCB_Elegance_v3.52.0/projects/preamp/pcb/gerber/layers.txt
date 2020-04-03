@@ -1,0 +1,43 @@
+Layout  preamp   Date: April 18, 2012 19:38:06
+
+Designed with PCB elegance 3.50
+
+---------------------------------------------------------------------
+Gerber files :
+
+Filename                      Polarity    Layer name
+---------------------------------------------------------------------
+PasteMaskTop.ger              P           Paste mask top
+SolderMaskTop.ger             P           Solder mask top
+Top_1.ger                     P           Top layer 1
+Bottom_2.ger                  P           Bottom layer 2
+SolderMaskBottom.ger          P           Solder mask bottom
+PasteMaskBottom.ger           P           Paste mask bottom
+
+
+---------------------------------------------------------------------
+Drill file
+---------------------------------------------------------------------
+preamp.ncd                                Drill file
+
+
+
+---------------------------------------------------------------------
+PCB Specifications :
+---------------------------------------------------------------------
+
+PCB size (Width,height)             :   2650.0000 ,  3025.0000  mils
+PCB size (Width,height)             :      2.65000,     3.02500 inch
+PCB size (Width,height)             :     67.310  ,    76.835   mm
+
+PCB origin (x,y)                    :   1000.0000 ,  1075.0000  mils
+PCB origin (x,y)                    :      1.00000,     1.07500 inch
+PCB origin (x,y)                    :     25.400  ,    27.305   mm
+
+
+Board thickness                     : 1.6 mm
+Material                            : FR4
+Copper thickness                    : 0.035 mm
+Number of layers                    : 2
+Minimal Trace width                 : 12 mils (0.3048 mm)
+Minimal Clearance                   : 12 mils (0.3048 mm)
