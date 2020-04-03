@@ -1,0 +1,18 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+LCID=0x409 0x0 0x0 ; English (United States)
+REPORT=Yes
+CONTENTS=IDH_Contents
+TITLE=Library manager PCB elegance
+COPYRIGHT=Merco Electronics
+HLP=libman.hlp
+
+[FILES]
+libman.rtf
+
+[WINDOWS]
+main="Library manager PCB elegance",(460,102,540,600),27904,(r14876671),(r12632256),f3
+
+[CONFIG]
+BrowseButtons()
