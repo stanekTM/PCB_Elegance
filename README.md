@@ -17,3 +17,6 @@ http://www.pcbelegance.org
 tim@pcbelegance.org
 
 Copyright (C) 2012 Herman Morsink Vollenbroek
+
+# My edited version PCB Elegance
+Just unzip this version of the files to disk. The key is the "PCB_Elegance_v3.52.0" folder.
