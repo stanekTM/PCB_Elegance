@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Import bitmap</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Import bitmap">
+</OBJECT>
+
+<P><A NAME="idh_import_gerber"></A><font size=5><U>Import a gerber file</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mainmenu.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Sub menu<B> File </B>item<B> Import</B> item <B>Import gerber file</B></TD>
+</TR>
+</TABLE><BR>
+
+<P>In the next dialogbox select a layer where the gerber file should be imported. Next a gerber file is be requested in the following dialogbox. After selecting a file the gerber file will be imported on the selected layer. If the file is not a valid gerber file, an error will be shown. If the gerber file is ok, the objects found in the gerber file should be placed on the right position. For easier placing gerber objects on copper layer, snap functionality has been included. After clicking on the left mouse button, the mouse cursor will snap to the object closest to the cursor. If necessary the moving center can be changed by holding the shift key. After release the moving center will snap to the moving object closest to the mouse cursor. There are a number of rules how traces/pads are converted. First objects who after placement are not connected to any net, will be skipped. If necessary vias will be created from circle pads, if this circle pad does not overlap an already existing pad/via. Polygons in the gerber file are not supported.</P>
+
+<P>!!! This feature depends on the current license.</P>
+
+<P>If the gerber polygon are necessary there is a workaround. This workaround is loading the gerber file in the gerber viewer VIEWPlot. In VIEWPlot the vertices of polygon can be copied on the clipboard. Next the vertices on the clipboard can be used, when adding an areafill.</P>
+
+</BODY>
+</HTML>

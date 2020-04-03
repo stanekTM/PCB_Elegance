@@ -1,0 +1,760 @@
+<HTML>
+<!--Sitemap 1.0-->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Getting started">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Layout editor PCB elegance">
+			<param name="Local" value="html/layout_editor.htm">
+			</OBJECT>
+			<A HREF="html/layout_editor.htm">Layout editor PCB elegance</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Getting started">
+			<param name="Local" value="html/contents.htm">
+			</OBJECT>
+			<A HREF="html/contents.htm">Getting started</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Viewable window">
+			<param name="Local" value="html/viewable_window.htm">
+			</OBJECT>
+			<A HREF="html/viewable_window.htm">Viewable window</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="File">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Make new layout">
+			<param name="Local" value="html/make_new_layout.htm">
+			</OBJECT>
+			<A HREF="html/make_new_layout.htm">Make new layout</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Design rules when using a printer for the plot outputs">
+			<param name="Local" value="html/design_rules_printer.htm">
+			</OBJECT>
+			<A HREF="html/design_rules_printer.htm">Design rules when using a printer for the plot outputs</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Importing components/netlist">
+			<param name="Local" value="html/importing_components_netlist.htm">
+			</OBJECT>
+			<A HREF="html/importing_components_netlist.htm">Importing components/netlist</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Updating components/netlist">
+			<param name="Local" value="html/updating_components_netlist.htm">
+			</OBJECT>
+			<A HREF="html/updating_components_netlist.htm">Updating components/netlist</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Plot output to gerber format">
+			<param name="Local" value="html/plot_output_to_gerber_format.htm">
+			</OBJECT>
+			<A HREF="html/plot_output_to_gerber_format.htm">Plot output to gerber format</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Plot output to printer">
+			<param name="Local" value="html/plot_output_to_printer.htm">
+			</OBJECT>
+			<A HREF="html/plot_output_to_printer.htm">Plot output to printer</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Save layout as a geometry">
+			<param name="Local" value="html/save_as_geom.htm">
+			</OBJECT>
+			<A HREF="html/save_as_geom.htm">Save layout as a geometry</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Penplot output">
+			<param name="Local" value="html/penplot_output.htm">
+			</OBJECT>
+			<A HREF="html/penplot_output.htm">Penplot output</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Print screen">
+			<param name="Local" value="html/print_screen.htm">
+			</OBJECT>
+			<A HREF="html/print_screen.htm">Print screen</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Output netlist">
+			<param name="Local" value="html/output_netlist.htm">
+			</OBJECT>
+			<A HREF="html/output_netlist.htm">Output netlist</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Import from DXF file">
+			<param name="Local" value="html/importdxf.htm">
+			</OBJECT>
+			<A HREF="html/importdxf.htm">Import from DXF file</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Export to DXF file">
+			<param name="Local" value="html/exportdxf.htm">
+			</OBJECT>
+			<A HREF="html/exportdxf.htm">Export to DXF file</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Export to PDF file">
+			<param name="Local" value="html/export_pdf.htm">
+			</OBJECT>
+			<A HREF="html/export_pdf.htm">Export to PDF file</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Export to bitmap file">
+			<param name="Local" value="html/export_bmp.htm">
+			</OBJECT>
+			<A HREF="html/export_bmp.htm">Export to bitmap file</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Import a bitmap">
+			<param name="Local" value="html/import_bitmap.htm">
+			</OBJECT>
+			<A HREF="html/import_bitmap.htm">Import a bitmap</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Import a gerber file">
+			<param name="Local" value="html/import_gerber.htm">
+			</OBJECT>
+			<A HREF="html/import_gerber.htm">Import a gerber file</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Initialisation file pcb.ini">
+			<param name="Local" value="html/initialisation_file_pcb_ini.htm">
+			</OBJECT>
+			<A HREF="html/initialisation_file_pcb_ini.htm">Initialisation file pcb.ini</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Edit">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Move entire PCB">
+			<param name="Local" value="html/move_entire_pcb.htm">
+			</OBJECT>
+			<A HREF="html/move_entire_pcb.htm">Move entire PCB</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change design rules">
+			<param name="Local" value="html/change_design_rules.htm">
+			</OBJECT>
+			<A HREF="html/change_design_rules.htm">Change design rules</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Select component">
+			<param name="Local" value="html/select_component.htm">
+			</OBJECT>
+			<A HREF="html/select_component.htm">Select component</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Via definition">
+			<param name="Local" value="html/via_definition.htm">
+			</OBJECT>
+			<A HREF="html/via_definition.htm">Via definition</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Zero relative cursor">
+			<param name="Local" value="html/zero_relative_cursor.htm">
+			</OBJECT>
+			<A HREF="html/zero_relative_cursor.htm">Zero relative cursor</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Component protection">
+			<param name="Local" value="html/component_protection.htm">
+			</OBJECT>
+			<A HREF="html/component_protection.htm">Component protection</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Undo">
+			<param name="Local" value="html/undo.htm">
+			</OBJECT>
+			<A HREF="html/undo.htm">Undo</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Redo">
+			<param name="Local" value="html/redo.htm">
+			</OBJECT>
+			<A HREF="html/redo.htm">Redo</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="View">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="View topics">
+			<param name="Local" value="html/view_topics.htm">
+			</OBJECT>
+			<A HREF="html/view_topics.htm">View topics</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Hide/view layers">
+			<param name="Local" value="html/hide_view_layers.htm">
+			</OBJECT>
+			<A HREF="html/hide_view_layers.htm">Hide/view layers</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Zoom in">
+			<param name="Local" value="html/zoom_in.htm">
+			</OBJECT>
+			<A HREF="html/zoom_in.htm">Zoom in</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Zoom out">
+			<param name="Local" value="html/zoom_out.htm">
+			</OBJECT>
+			<A HREF="html/zoom_out.htm">Zoom out</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Pan window">
+			<param name="Local" value="html/pan_window.htm">
+			</OBJECT>
+			<A HREF="html/pan_window.htm">Pan window</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Window based panning">
+			<param name="Local" value="html/window_based_panning.htm">
+			</OBJECT>
+			<A HREF="html/window_based_panning.htm">Window based panning</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Unhighlight all">
+			<param name="Local" value="html/unhighlight_all.htm">
+			</OBJECT>
+			<A HREF="html/unhighlight_all.htm">Unhighlight all</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Return to previous view window">
+			<param name="Local" value="html/return_to_previous_view_window.htm">
+			</OBJECT>
+			<A HREF="html/return_to_previous_view_window.htm">Return to previous view window</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Repaint">
+			<param name="Local" value="html/repaint.htm">
+			</OBJECT>
+			<A HREF="html/repaint.htm">Repaint</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="View whole design">
+			<param name="Local" value="html/view_whole_design.htm">
+			</OBJECT>
+			<A HREF="html/view_whole_design.htm">View whole design</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Measurement">
+			<param name="Local" value="html/measurement.htm">
+			</OBJECT>
+			<A HREF="html/measurement.htm">Measurement</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change colors">
+			<param name="Local" value="html/change_colors.htm">
+			</OBJECT>
+			<A HREF="html/change_colors.htm">Change colors</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Load default colors">
+			<param name="Local" value="html/load_default_colors.htm">
+			</OBJECT>
+			<A HREF="html/load_default_colors.htm">Load default colors</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Short cuts">
+			<param name="Local" value="html/short_cuts.htm">
+			</OBJECT>
+			<A HREF="html/short_cuts.htm">Short cuts</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change units">
+			<param name="Local" value="html/change_units.htm">
+			</OBJECT>
+			<A HREF="html/change_units.htm">Change units</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Selection objects">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Selecting/deselecting objects">
+			<param name="Local" value="html/selecting_deselecting_objects.htm">
+			</OBJECT>
+			<A HREF="html/selecting_deselecting_objects.htm">Selecting/deselecting objects</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Deselect all">
+			<param name="Local" value="html/deselect_all.htm">
+			</OBJECT>
+			<A HREF="html/deselect_all.htm">Deselect all</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Info on selected objects">
+			<param name="Local" value="html/info_on_selected_objects.htm">
+			</OBJECT>
+			<A HREF="html/info_on_selected_objects.htm">Info on selected objects</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Make Selections in dialog listboxes">
+			<param name="Local" value="html/dialogbox_selections.htm">
+			</OBJECT>
+			<A HREF="html/dialogbox_selections.htm">Make Selections in dialog listboxes</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Layers">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Insert layer">
+			<param name="Local" value="html/insert_layer.htm">
+			</OBJECT>
+			<A HREF="html/insert_layer.htm">Insert layer</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Remove layer">
+			<param name="Local" value="html/remove_layer.htm">
+			</OBJECT>
+			<A HREF="html/remove_layer.htm">Remove layer</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Swap layers">
+			<param name="Local" value="html/swap_layers.htm">
+			</OBJECT>
+			<A HREF="html/swap_layers.htm">Swap layers</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Components">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Activate component menu">
+			<param name="Local" value="html/components.htm">
+			</OBJECT>
+			<A HREF="html/components.htm">Activate component menu</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Move components">
+			<param name="Local" value="html/move_components.htm">
+			</OBJECT>
+			<A HREF="html/move_components.htm">Move components</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Move component by reference">
+			<param name="Local" value="html/move_component_by_reference.htm">
+			</OBJECT>
+			<A HREF="html/move_component_by_reference.htm">Move component by reference</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Move components to fixed position">
+			<param name="Local" value="html/move_components.htm">
+			</OBJECT>
+			<A HREF="html/move_components.htm">Move components to fixed position</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Rotate components">
+			<param name="Local" value="html/rotate_components.htm">
+			</OBJECT>
+			<A HREF="html/rotate_components.htm">Rotate components</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Align components">
+			<param name="Local" value="html/align_components.htm">
+			</OBJECT>
+			<A HREF="html/align_components.htm">Align components</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Move components to top/bottom layer">
+			<param name="Local" value="html/move_components_to_other_layer.htm">
+			</OBJECT>
+			<A HREF="html/move_components_to_other_layer.htm">Move components to top/bottom layer</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Import component positions">
+			<param name="Local" value="html/import_component_positions.htm">
+			</OBJECT>
+			<A HREF="html/import_component_positions.htm">Import component positions</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Regroup components">
+			<param name="Local" value="html/regroup_components.htm">
+			</OBJECT>
+			<A HREF="html/regroup_components.htm">Regroup components</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Edit geometry component">
+			<param name="Local" value="html/edit_geometry.htm">
+			</OBJECT>
+			<A HREF="html/edit_geometry.htm">Edit geometry component</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change component parameters">
+			<param name="Local" value="html/change_component_parameters.htm">
+			</OBJECT>
+			<A HREF="html/change_component_parameters.htm">Change component parameters</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Edit component value">
+			<param name="Local" value="html/change_component_parameters.htm">
+			</OBJECT>
+			<A HREF="html/change_component_parameters.htm">Edit component value</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Protect components">
+			<param name="Local" value="html/protect_components.htm">
+			</OBJECT>
+			<A HREF="html/protect_components.htm">Protect components</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Component info">
+			<param name="Local" value="html/component_info.htm">
+			</OBJECT>
+			<A HREF="html/component_info.htm">Component info</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Move multiple components from list">
+			<param name="Local" value="html/compplacement.htm">
+			</OBJECT>
+			<A HREF="html/compplacement.htm">Move multiple components from list</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Nets">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Delete traces/vias nets">
+			<param name="Local" value="html/delete_traces_vias_nets.htm">
+			</OBJECT>
+			<A HREF="html/delete_traces_vias_nets.htm">Delete traces/vias nets</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change design rules nets">
+			<param name="Local" value="html/change_design_rules_nets.htm">
+			</OBJECT>
+			<A HREF="html/change_design_rules_nets.htm">Change design rules nets</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Highlight/unhighlight nets">
+			<param name="Local" value="html/highlight_unhighlight_nets.htm">
+			</OBJECT>
+			<A HREF="html/highlight_unhighlight_nets.htm">Highlight/unhighlight nets</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Disable connections nets">
+			<param name="Local" value="html/disable_connections_nets.htm">
+			</OBJECT>
+			<A HREF="html/disable_connections_nets.htm">Disable connections nets</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Hide connections nets">
+			<param name="Local" value="html/hide_connections_nets.htm">
+			</OBJECT>
+			<A HREF="html/hide_connections_nets.htm">Hide connections nets</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Unselect traces/vias nets">
+			<param name="Local" value="html/unselect_traces_vias_nets.htm">
+			</OBJECT>
+			<A HREF="html/unselect_traces_vias_nets.htm">Unselect traces/vias nets</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Connections">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Hide all connections">
+			<param name="Local" value="html/hide_all_connections.htm">
+			</OBJECT>
+			<A HREF="html/hide_all_connections.htm">Hide all connections</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="View all connections">
+			<param name="Local" value="html/view_all_connections.htm">
+			</OBJECT>
+			<A HREF="html/view_all_connections.htm">View all connections</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Highlight visible connections">
+			<param name="Local" value="html/highlight_visible_connections.htm">
+			</OBJECT>
+			<A HREF="html/highlight_visible_connections.htm">Highlight visible connections</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Traces/vias">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Activate routing menu">
+			<param name="Local" value="html/traces_vias.htm">
+			</OBJECT>
+			<A HREF="html/traces_vias.htm">Activate routing menu</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Add traces">
+			<param name="Local" value="html/add_trace.htm">
+			</OBJECT>
+			<A HREF="html/add_trace.htm">Add traces</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Trace popup menu">
+			<param name="Local" value="html/trace_popup_menu.htm">
+			</OBJECT>
+			<A HREF="html/trace_popup_menu.htm">Trace popup menu</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Add via">
+			<param name="Local" value="html/add_via.htm">
+			</OBJECT>
+			<A HREF="html/add_via.htm">Add via</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Highlight/unhighlight net during trace drawing">
+			<param name="Local" value="html/highlight_unhighlight_net_during_trace_drawing.htm">
+			</OBJECT>
+			<A HREF="html/highlight_unhighlight_net_during_trace_drawing.htm">Highlight/unhighlight net during trace drawing</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Modify trace">
+			<param name="Local" value="html/add_trace.htm">
+			</OBJECT>
+			<A HREF="html/add_trace.htm">Modify trace</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Trace drawing feature">
+			<param name="Local" value="html/trace_drawing_feature.htm">
+			</OBJECT>
+			<A HREF="html/trace_drawing_feature.htm">Trace drawing feature</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Add extra trace">
+			<param name="Local" value="html/add_extra_trace.htm">
+			</OBJECT>
+			<A HREF="html/add_extra_trace.htm">Add extra trace</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Search first unrouted net">
+			<param name="Local" value="html/search_first_unrouted_net.htm">
+			</OBJECT>
+			<A HREF="html/search_first_unrouted_net.htm">Search first unrouted net</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Show next connection">
+			<param name="Local" value="html/show_next_connection.htm">
+			</OBJECT>
+			<A HREF="html/show_next_connection.htm">Show next connection</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Change traces/vias">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Activate change traces/vias menu">
+			<param name="Local" value="html/change_traces_vias.htm">
+			</OBJECT>
+			<A HREF="html/change_traces_vias.htm">Activate change traces/vias menu</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Move traces/vias">
+			<param name="Local" value="html/move_traces_vias.htm">
+			</OBJECT>
+			<A HREF="html/move_traces_vias.htm">Move traces/vias</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Copy traces vias">
+			<param name="Local" value="html/copy_traces_vias.htm">
+			</OBJECT>
+			<A HREF="html/copy_traces_vias.htm">Copy traces vias</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Copy traces/vias to clipboard">
+			<param name="Local" value="html/copy_traces_vias_to_clipboard.htm">
+			</OBJECT>
+			<A HREF="html/copy_traces_vias_to_clipboard.htm">Copy traces/vias to clipboard</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Copy traces/vias from clipboard">
+			<param name="Local" value="html/copy_traces_vias_from_clipboard.htm">
+			</OBJECT>
+			<A HREF="html/copy_traces_vias_from_clipboard.htm">Copy traces/vias from clipboard</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change trace width">
+			<param name="Local" value="html/change_trace_width.htm">
+			</OBJECT>
+			<A HREF="html/change_trace_width.htm">Change trace width</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change clearance traces vias">
+			<param name="Local" value="html/change_clearance_traces_vias.htm">
+			</OBJECT>
+			<A HREF="html/change_clearance_traces_vias.htm">Change clearance traces vias</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change via">
+			<param name="Local" value="html/change_via.htm">
+			</OBJECT>
+			<A HREF="html/change_via.htm">Change via</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Calculate length trace">
+			<param name="Local" value="html/calculate_length_trace.htm">
+			</OBJECT>
+			<A HREF="html/calculate_length_trace.htm">Calculate length trace</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Swap traces/vias two nets">
+			<param name="Local" value="html/swap_traces_vias_two_nets.htm">
+			</OBJECT>
+			<A HREF="html/swap_traces_vias_two_nets.htm">Swap traces/vias two nets</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Delete traces/vias net selected trace">
+			<param name="Local" value="html/delete_traces_vias_net_selected_trace.htm">
+			</OBJECT>
+			<A HREF="html/delete_traces_vias_net_selected_trace.htm">Delete traces/vias net selected trace</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Delete">
+			<param name="Local" value="html/traces_vias_delete.htm">
+			</OBJECT>
+			<A HREF="html/traces_vias_delete.htm">Delete</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Drag one trace">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Activate drag one trace menu">
+			<param name="Local" value="html/drag_one_trace.htm">
+			</OBJECT>
+			<A HREF="html/drag_one_trace.htm">Activate drag one trace menu</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Dragging traces/vias/components">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Actitate Dragging traces/vias/components menu">
+			<param name="Local" value="html/dragging_traces_vias_components.htm">
+			</OBJECT>
+			<A HREF="html/dragging_traces_vias_components.htm">Actitate Dragging traces/vias/components menu</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Check">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Check connectivity">
+			<param name="Local" value="html/check_connectivity.htm">
+			</OBJECT>
+			<A HREF="html/check_connectivity.htm">Check connectivity</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Check design rules">
+			<param name="Local" value="html/check_design_rules.htm">
+			</OBJECT>
+			<A HREF="html/check_design_rules.htm">Check design rules</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="View design rule errors">
+			<param name="Local" value="html/view_design_rule_errors.htm">
+			</OBJECT>
+			<A HREF="html/view_design_rule_errors.htm">View design rule errors</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Show next design rule error/warning">
+			<param name="Local" value="html/show_next_error.htm">
+			</OBJECT>
+			<A HREF="html/show_next_error.htm">Show next design rule error/warning</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Powerplanes">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Powerplane introduction">
+			<param name="Local" value="html/powerplanes.htm">
+			</OBJECT>
+			<A HREF="html/powerplanes.htm">Powerplane introduction</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Add powerplane">
+			<param name="Local" value="html/add_powerplane.htm">
+			</OBJECT>
+			<A HREF="html/add_powerplane.htm">Add powerplane</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Cut from powerplane">
+			<param name="Local" value="html/cut_from_powerplane.htm">
+			</OBJECT>
+			<A HREF="html/cut_from_powerplane.htm">Cut from powerplane</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change powerplane">
+			<param name="Local" value="html/change_powerplane.htm">
+			</OBJECT>
+			<A HREF="html/change_powerplane.htm">Change powerplane</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Delete powerplane">
+			<param name="Local" value="html/delete_powerplane.htm">
+			</OBJECT>
+			<A HREF="html/delete_powerplane.htm">Delete powerplane</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Areafills">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Areafills introduction">
+			<param name="Local" value="html/areafills.htm">
+			</OBJECT>
+			<A HREF="html/areafills.htm">Areafills introduction</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Add areafill inside a powerplane">
+			<param name="Local" value="html/add_areafill_inside_a_powerplane.htm">
+			</OBJECT>
+			<A HREF="html/add_areafill_inside_a_powerplane.htm">Add areafill inside a powerplane</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change areafill">
+			<param name="Local" value="html/change_areafill.htm">
+			</OBJECT>
+			<A HREF="html/change_areafill.htm">Change areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Merge areafills">
+			<param name="Local" value="html/merge_areafills.htm">
+			</OBJECT>
+			<A HREF="html/merge_areafills.htm">Merge areafills</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Add to areafill">
+			<param name="Local" value="html/add_to_areafill.htm">
+			</OBJECT>
+			<A HREF="html/add_to_areafill.htm">Add to areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Cut from areafill">
+			<param name="Local" value="html/cut_from_areafill.htm">
+			</OBJECT>
+			<A HREF="html/cut_from_areafill.htm">Cut from areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Rebuild areafill">
+			<param name="Local" value="html/rebuild_areafill.htm">
+			</OBJECT>
+			<A HREF="html/rebuild_areafill.htm">Rebuild areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Mirror X areafill">
+			<param name="Local" value="html/mirror_areafill_x.htm">
+			</OBJECT>
+			<A HREF="html/mirror_areafill_x.htm">Mirror X areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Mirror Y areafill">
+			<param name="Local" value="html/mirror_areafill_y.htm">
+			</OBJECT>
+			<A HREF="html/mirror_areafill_y.htm">Mirror Y areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Copy areafill">
+			<param name="Local" value="html/copy_areafill.htm">
+			</OBJECT>
+			<A HREF="html/copy_areafill.htm">Copy areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Move areafill">
+			<param name="Local" value="html/move_areafill.htm">
+			</OBJECT>
+			<A HREF="html/move_areafill.htm">Move areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="View vertices areafill">
+			<param name="Local" value="html/view_vertices_areafill.htm">
+			</OBJECT>
+			<A HREF="html/view_vertices_areafill.htm">View vertices areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Stretch areafill">
+			<param name="Local" value="html/stretch_areafill.htm">
+			</OBJECT>
+			<A HREF="html/stretch_areafill.htm">Stretch areafill</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Delete areafill">
+			<param name="Local" value="html/delete_areafill.htm">
+			</OBJECT>
+			<A HREF="html/delete_areafill.htm">Delete areafill</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Moving component references/values">
+		</OBJECT>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Special objects">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Special objects">
+			<param name="Local" value="html/special_objects.htm">
+			</OBJECT>
+			<A HREF="html/special_objects.htm">Special objects</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Add objects">
+			<param name="Local" value="html/add_special_objects.htm">
+			</OBJECT>
+			<A HREF="html/add_special_objects.htm">Add objects</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change objects">
+			</OBJECT>
+		<UL>
+			<LI><OBJECT type="text/sitemap">
+				<param name="Name" value="Change objects">
+				<param name="Local" value="html/change_special_objects.htm">
+				</OBJECT>
+				<A HREF="html/change_special_objects.htm">Change objects</A><BR>
+			<LI><OBJECT type="text/sitemap">
+				<param name="Name" value="Copy objects array">
+				<param name="Local" value="html/copy_objects_array.htm">
+				</OBJECT>
+				<A HREF="html/copy_objects_array.htm">Copy objects array</A><BR>
+			<LI><OBJECT type="text/sitemap">
+				<param name="Name" value="Copy objects polar">
+				<param name="Local" value="html/copy_objects_polar.htm">
+				</OBJECT>
+				<A HREF="html/copy_objects_polar.htm">Copy objects polar</A><BR>
+			<LI><OBJECT type="text/sitemap">
+				<param name="Name" value="Assign net to objects">
+				<param name="Local" value="html/assign_net_to_objects.htm">
+				</OBJECT>
+				<A HREF="html/assign_net_to_objects.htm">Assign net to objects</A><BR>
+			<LI><OBJECT type="text/sitemap">
+				<param name="Name" value="Assign no net to objects">
+				<param name="Local" value="html/assign_no_net_to_objects.htm">
+				</OBJECT>
+				<A HREF="html/assign_no_net_to_objects.htm">Assign no net to objects</A><BR>
+		</UL>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Gate/pin swap">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Gate/pin swap">
+			<param name="Local" value="html/gate_pin_swap.htm">
+			</OBJECT>
+			<A HREF="html/gate_pin_swap.htm">Gate/pin swap</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Schematic link">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Schematic link">
+			<param name="Local" value="html/schematic_link.htm">
+			</OBJECT>
+			<A HREF="html/schematic_link.htm">Schematic link</A><BR>
+	</UL>
+</UL>
+</HTML>

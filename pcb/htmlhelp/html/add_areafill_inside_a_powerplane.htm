@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Add areafill inside a powerplane</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Add areafill inside a powerplane">
+</OBJECT>
+
+<P><A NAME="idh_add_areafill_inside_a_powerplane"></A><font size=5><U>Add areafill inside a powerplane</U><br>&nbsp;</font></P>
+
+<P><IMG SRC="../images/areafill_menu.gif" ALT="" BORDER=0></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mouse2.gif" ALT="" BORDER=0></TD>
+<TD width=75%><B>Add areafill </B>-&gt; <B>Select (powerplane) layer</B></TD>
+</TR>
+</TABLE><BR>
+
+<P>An example:</P>
+
+<P>In a 5V powerplane is another smaller powerplane for +3.3 V needed. It is possible to use a small area of this powerplane for an areafill. The procedure to do is almost the same as for adding an areafill, only use the 5V powerplane as layer. The next dialogbox is almost the same as for adding a normal areafill. In this dialogbox there is a new item <B>Areafill inside powerplane</B>. The <B>Clearance</B> has to be specified. This clearance will be the distance between the 5V powerplane and the 3.3V areafill. </P>
+
+<P>After pressing the <B>OK</B> button a polyline must be drawn. When drawing this polyline all the pins of the areafill net will be highlighted in yellow, and the pins of the powerplane are highlighted with red. All the pins highlighted in yellow must be included, and the pins highlighted in red must be excluded. When the drawing of the polyline is finished, an area will be cut out from the powerplane, and the new areafill will be included. The cut out area in the powerplane will be a little bit greater.</P>
+
+<P>In this new areafill there will be not cut outs (from vias/pins) calculated, so are not visible. In a later stage when the output films are generated, the cut outs will be calculated.</P>
+
+<P><A HREF="thermal_relief.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Thermal relief</A></P>
+
+<P><A HREF="areafills.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Activate areafills/powerplanes menu</A></P>
+
+</BODY>
+</HTML>

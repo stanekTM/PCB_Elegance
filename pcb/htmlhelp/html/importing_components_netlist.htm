@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Importing components/netlist</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Importing components/netlist">
+</OBJECT>
+
+<P><A NAME="idh_importing_components_netlist"></A><font size=5><U>Importing components/netlist</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mainmenu.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Sub menu <B>File</B> menu item <B>Importing components/netlist</B></TD>
+</TR>
+</TABLE><BR>
+
+<P>In the <B>File</B> menu the <B>Importing components/netlist</B>, function can be used to import components and the netlist in the design. Before importing the components, the whole design will be deleted. (This can not be <B>undone</B>) After importing the netlist, the connections (Air lines, service lines, guide wires) of each net will be recalculated (ratsnet).</P>
+
+<P><U>Importing components</U></P>
+
+<P>All the components with starting with a reference name R (resistors), will be placed below the PCB. The R components with the smallest geometry will be placed first, just below the PCB. The R components with the next smallest geometry will be placed under the previous ones, etc.</P>
+
+<P>All the components with starting with a reference name C (capacitors), will be placed right the PCB. The C components with the smallest geometry will be placed first, just at the right of the PCB. The C components with the next smallest geometry will be placed to the right of the previous ones, etc.</P>
+
+<P>All the other component will be placed on top of the PCB, the smallest geometries first, and the greater the component geometries the higher they will be placed.</P>
+
+<P><U>Calculating connections (ratsnest)</U></P>
+
+<P>Calculating connections means, find the shortest connections between the pads of a net. Every found connection is visible by a line. When the net contains many pads (&gt;200) usually the power nets, a different calculation will be used. For those power nets, every connection will go to a central point below the PCB. The reason for doing this, is speed up calculations for those nets.</P>
+
+<P>The layout editor also supports net properties. There are two properties which can be used by the layout editor: TRACEWIDTH and CLEARANCE. The properties have the following format:</P>
+
+<P>(TRACEWIDTH,”&lt;value&gt;”)</P>
+
+<P>(CLEARANCE,”&lt;value&gt;”)</P>
+
+<P>Examples of the value are: “8 mil” or “0.2 mm”.</P>
+
+<P>The TRACEWIDTH and CLEARANCE values will overrule the standard value for the net.</P>
+
+</BODY>
+</HTML>

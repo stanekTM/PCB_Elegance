@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Plot output to gerber format</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Plot output to gerber format">
+</OBJECT>
+
+<P><A NAME="idh_plot_output_to_gerber_format"></A><font size=5><U>Plot output to gerber format</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mainmenu.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Sub menu <B>File</B> menu item <B>Output gerber/drill</B></TD>
+</TR>
+</TABLE><BR>
+
+<P>Plot selected layers in the gerber format. In the next dialogbox the following items can be selected:
+
+<UL>
+	<LI>Layers<BR><BR></LI>
+
+	<LI>X mirroring<BR><BR></LI>
+
+	<LI>Plotting board outline<BR><BR></LI>
+
+	<LI>Layer numbering <BR><BR></LI>
+
+	<LI>Plotting the drills as gerber<BR><BR></LI>
+
+	<LI>Neutral file output for PCB testing<BR><BR></LI>
+
+	<LI>Gerber output (RS274X) number format <BR><BR></LI>
+
+	<LI>PCB specification (-&gt; layers.txt file)</LI>
+</UL>
+
+<P>There are also two editboxes available. In those two editboxes  (each four lines) some information about the PCB can be stored. This information will then be plotted additionally for each layer. Initial three macros are stored into the first editbox.</P>
+
+<P><B>$DesignName</B>Current design name</P>
+
+<P><B>$Layer</B>Current layer</P>
+
+<P><B>$Date</B>Current date</P>
+
+<P>The aperture file (generated automatically) will have the name <B>gerber.txt.</B> The drill file (Excellon format) will have the name <B>&lt;design&gt;.drl</B> and the drill tool file the name <B>drills.txt</B>. The PCB information is stored in the <B>layers.txt</B> file.</P>
+
+<P>All the files will be generated in the <B>pcb\gerber</B> subdirectory.</P>
+
+<P><A HREF="thermal_relief.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Thermal_relief</A></P>
+
+</BODY>
+</HTML>

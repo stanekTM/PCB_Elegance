@@ -1,0 +1,790 @@
+<HTML>
+<!-- Sitemap 1.0 -->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Accelerator">
+		<param name="Name" value="Short cuts">
+		<param name="Local" value="html/short_cuts.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add all angle traces">
+		<param name="Name" value="Add all angle traces">
+		<param name="Local" value="html/route_all_angle.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add arc trace 45 degrees">
+		<param name="Name" value="Add arc trace 45 degrees">
+		<param name="Local" value="html/route_arc45.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add arc trace 90 degrees">
+		<param name="Name" value="Add arc trace 90 degrees">
+		<param name="Local" value="html/route_arc90.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add areafill inside a powerplane">
+		<param name="Name" value="Add areafill inside a powerplane">
+		<param name="Local" value="html/add_areafill_inside_a_powerplane.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add areafills">
+		<param name="Name" value="Add areafills">
+		<param name="Local" value="html/add_areafills.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add drill holes">
+		<param name="Name" value="Add special objects">
+		<param name="Local" value="html/add_special_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add extra trace">
+		<param name="Name" value="Add extra trace">
+		<param name="Local" value="html/add_extra_trace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add on silkscreen">
+		<param name="Name" value="Add special objects">
+		<param name="Local" value="html/add_special_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add paste mask pads">
+		<param name="Name" value="Add special objects">
+		<param name="Local" value="html/add_special_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add powerplane">
+		<param name="Name" value="Add powerplane">
+		<param name="Local" value="html/add_powerplane.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add solder mask pads">
+		<param name="Name" value="Add special objects">
+		<param name="Local" value="html/add_special_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add special objects">
+		<param name="Name" value="Add special objects">
+		<param name="Local" value="html/add_special_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add to areafill">
+		<param name="Name" value="Add to areafill">
+		<param name="Local" value="html/add_to_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add trace">
+		<param name="Name" value="Add trace">
+		<param name="Local" value="html/add_trace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Add via">
+		<param name="Name" value="Add via">
+		<param name="Local" value="html/add_via.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Areafills">
+		<param name="Name" value="Areafills">
+		<param name="Local" value="html/areafills.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Assign objects to a net">
+		<param name="Name" value="Assign objects to a net">
+		<param name="Local" value="html/assign_net_to_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Assign objects to a not used net">
+		<param name="Name" value="Assign objects to a not used net">
+		<param name="Local" value="html/assign_no_net_to_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Backup">
+		<param name="Name" value="Backup">
+		<param name="Local" value="html/backup.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Calculate length trace">
+		<param name="Name" value="Calculate length trace">
+		<param name="Local" value="html/calculate_length_trace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Center view on next connection">
+		<param name="Name" value="Center view on next connection">
+		<param name="Local" value="html/show_next_connection.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change areafill">
+		<param name="Name" value="Change areafill">
+		<param name="Local" value="html/change_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change clearance areafill">
+		<param name="Name" value="Change clearance areafill">
+		<param name="Local" value="html/change_clearance_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change clearance traces/vias">
+		<param name="Name" value="Change clearance traces/vias">
+		<param name="Local" value="html/change_clearance_traces_vias.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change colors">
+		<param name="Name" value="Change colors">
+		<param name="Local" value="html/change_colors.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change component parameters">
+		<param name="Name" value="Change component parameters">
+		<param name="Local" value="html/change_component_parameters.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change design rules">
+		<param name="Name" value="Change design rules">
+		<param name="Local" value="html/change_design_rules.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change design rules net">
+		<param name="Name" value="Change design rules net">
+		<param name="Local" value="html/change_design_rules_net2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change design rules nets">
+		<param name="Name" value="Change design rules nets">
+		<param name="Local" value="html/change_design_rules_nets.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change geometry">
+		<param name="Name" value="Change geometry">
+		<param name="Local" value="html/change_geometry.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change powerplane">
+		<param name="Name" value="Change powerplane">
+		<param name="Local" value="html/change_powerplane.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change special objects">
+		<param name="Name" value="Change special objects">
+		<param name="Local" value="html/change_special_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change trace width">
+		<param name="Name" value="Change trace width">
+		<param name="Local" value="html/change_trace_width.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change traces/vias">
+		<param name="Name" value="Change traces/vias">
+		<param name="Local" value="html/change_traces_vias.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change units">
+		<param name="Name" value="Change units">
+		<param name="Local" value="html/change_units.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Change via">
+		<param name="Name" value="Change via">
+		<param name="Local" value="html/change_via.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Check connectivity">
+		<param name="Name" value="Check connectivity">
+		<param name="Local" value="html/check_connectivity.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Check design rules">
+		<param name="Name" value="Check design rules">
+		<param name="Local" value="html/check_design_rules.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Component info">
+		<param name="Name" value="Component info">
+		<param name="Local" value="html/component_info.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Component protection">
+		<param name="Name" value="Component protection">
+		<param name="Local" value="html/component_protection.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Component selections">
+		<param name="Name" value="Component selections">
+		<param name="Local" value="html/compselection.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Component selections by list">
+		<param name="Name" value="Component selections by list">
+		<param name="Local" value="html/compselectionbylist.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Components">
+		<param name="Name" value="Components">
+		<param name="Local" value="html/components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Contents">
+		<param name="Name" value="Contents">
+		<param name="Local" value="html/contents.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copper pour">
+		<param name="Name" value="Areafills">
+		<param name="Local" value="html/areafills.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy areafill">
+		<param name="Name" value="Copy areafill">
+		<param name="Local" value="html/copy_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy component placement outline to a different layer">
+		<param name="Name" value="Copy component layer objects to the objects layer">
+		<param name="Local" value="html/copy_component_layer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy objects array">
+		<param name="Name" value="Copy objects array">
+		<param name="Local" value="html/copy_objects_array.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy objects polar">
+		<param name="Name" value="Copy objects polar">
+		<param name="Local" value="html/copy_objects_polar.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy start polygon to info4 layer">
+		<param name="Name" value="Copy start polygon to info4 layer">
+		<param name="Local" value="html/copy_start_polygon_to_info4_layer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy traces/vias">
+		<param name="Name" value="Copy traces/vias">
+		<param name="Local" value="html/copy_traces_vias.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy traces/vias from clipboard">
+		<param name="Name" value="Copy traces/vias from clipboard">
+		<param name="Local" value="html/copy_traces_vias_from_clipboard.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Copy traces/vias to clipboard">
+		<param name="Name" value="Copy traces/vias to clipboard">
+		<param name="Local" value="html/copy_traces_vias_to_clipboard.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Cut from areafill">
+		<param name="Name" value="Cut from areafill">
+		<param name="Local" value="html/cut_from_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Cut from powerplane">
+		<param name="Name" value="Cut from powerplane">
+		<param name="Local" value="html/cut_from_powerplane.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Delete">
+		<param name="Name" value="Delete">
+		<param name="Local" value="html/traces_vias_delete.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Delete components">
+		<param name="Name" value="Delete components">
+		<param name="Local" value="html/delete_components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Delete from areafill">
+		<param name="Name" value="Delete from areafill">
+		<param name="Local" value="html/delete_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Delete powerplane">
+		<param name="Name" value="Delete powerplane">
+		<param name="Local" value="html/delete_powerplane.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Delete traces/vias net selected trace">
+		<param name="Name" value="Delete traces/vias net selected trace">
+		<param name="Local" value="html/delete_traces_vias_net_selected_trace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Delete traces/vias nets">
+		<param name="Name" value="Delete traces/vias nets">
+		<param name="Local" value="html/delete_traces_vias_nets.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Deselect all">
+		<param name="Name" value="Deselect all">
+		<param name="Local" value="html/deselect_all.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Design rules when using a printer for the plot outputs">
+		<param name="Name" value="Design rules when using a printer for the plot outputs">
+		<param name="Local" value="html/design_rules_printer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Disable connections nets">
+		<param name="Name" value="Disable connections nets">
+		<param name="Local" value="html/disable_connections_nets.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Drag one trace">
+		<param name="Name" value="Drag one trace">
+		<param name="Local" value="html/drag_one_trace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Dragging traces/vias/components">
+		<param name="Name" value="Dragging traces/vias/components">
+		<param name="Local" value="html/dragging_traces_vias_components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit geometry">
+		<param name="Name" value="Edit geometry">
+		<param name="Local" value="html/edit_geometry.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit schematic containing reference">
+		<param name="Name" value="Edit schematic containing reference">
+		<param name="Local" value="html/edit_schematic_on_ref.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Export component positions">
+		<param name="Name" value="Export component positions">
+		<param name="Local" value="html/export_component_positions.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Export DXF">
+		<param name="Name" value="Export DXF">
+		<param name="Local" value="html/exportdxf.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Gate/pin swap">
+		<param name="Name" value="Gate/pin swap">
+		<param name="Local" value="html/gate_pin_swap.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Goto xy">
+		<param name="Name" value="Goto xy">
+		<param name="Local" value="html/gotoxy.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Hide all connections">
+		<param name="Name" value="Hide all connections">
+		<param name="Local" value="html/hide_all_connections.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Hide connections nets">
+		<param name="Name" value="Hide connections nets">
+		<param name="Local" value="html/hide_connections_nets.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Hide/view layers">
+		<param name="Name" value="Hide/view layers">
+		<param name="Local" value="html/hide_view_layers.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Highlight visible connections">
+		<param name="Name" value="Highlight visible connections">
+		<param name="Local" value="html/highlight_visible_connections.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Highlight/unhighlight net during trace drawing">
+		<param name="Name" value="Highlight/unhighlight net during trace drawing">
+		<param name="Local" value="html/highlight_unhighlight_net_during_trace_drawing.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Highlight/unhighlight nets">
+		<param name="Name" value="Highlight/unhighlight nets">
+		<param name="Local" value="html/highlight_unhighlight_nets.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Import bitmap">
+		<param name="Name" value="Import bitmap">
+		<param name="Local" value="html/import_bitmap.htm">
+		<param name="Name" value="Import bitmap">
+		<param name="Local" value="html/import_gerber.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Import component positions">
+		<param name="Name" value="Import component positions">
+		<param name="Local" value="html/import_component_positions.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Import DXF">
+		<param name="Name" value="Import DXF">
+		<param name="Local" value="html/importdxf.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Importing components/netlist">
+		<param name="Name" value="Importing components/netlist">
+		<param name="Local" value="html/importing_components_netlist.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Info on selected objects">
+		<param name="Name" value="Info on selected objects">
+		<param name="Local" value="html/info_on_selected_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Initialisation file pcb.ini">
+		<param name="Name" value="Initialisation file pcb.ini">
+		<param name="Local" value="html/initialisation_file_pcb_ini.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Insert layer">
+		<param name="Name" value="Insert layer">
+		<param name="Local" value="html/insert_layer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Load default colors">
+		<param name="Name" value="Load default colors">
+		<param name="Local" value="html/load_default_colors.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Make new layout">
+		<param name="Name" value="Make new layout">
+		<param name="Local" value="html/make_new_layout.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Make Selections in dialog listboxes">
+		<param name="Name" value="Make Selections in dialog listboxes">
+		<param name="Local" value="html/dialogbox_selections.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Measurement">
+		<param name="Name" value="Measurement">
+		<param name="Local" value="html/measurement.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Merge areafills">
+		<param name="Name" value="Merge areafills">
+		<param name="Local" value="html/merge_areafills.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Mirror X areafill">
+		<param name="Name" value="Mirror X areafill">
+		<param name="Local" value="html/mirror_areafill_x.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Mirror Y areafill">
+		<param name="Name" value="Mirror Y areafill">
+		<param name="Local" value="html/mirror_areafill_y.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Modify component references">
+		<param name="Name" value="Modify component references">
+		<param name="Local" value="html/modify_component_references.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Modify component values">
+		<param name="Name" value="Modify component values">
+		<param name="Local" value="html/modify_component_values.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move areafill">
+		<param name="Name" value="Move areafill">
+		<param name="Local" value="html/move_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move components">
+		<param name="Name" value="Move components">
+		<param name="Local" value="html/move_components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move components by reference">
+		<param name="Name" value="Move components by reference">
+		<param name="Local" value="html/move_component_by_reference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move components to fixed position">
+		<param name="Name" value="Move components">
+		<param name="Local" value="html/move_components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move components to top/bottom layer">
+		<param name="Name" value="Move components to top/bottom layer">
+		<param name="Local" value="html/move_components_to_other_layer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move entire PCB">
+		<param name="Name" value="Move entire PCB">
+		<param name="Local" value="html/move_entire_pcb.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move multiple components">
+		<param name="Name" value="Move multiple components">
+		<param name="Local" value="html/compplacement.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Move traces/vias">
+		<param name="Name" value="Move traces/vias">
+		<param name="Local" value="html/move_traces_vias.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Options">
+		<param name="Name" value="Options">
+		<param name="Local" value="html/options.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Output netlist">
+		<param name="Name" value="Output netlist">
+		<param name="Local" value="html/output_netlist.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Pan window">
+		<param name="Name" value="Pan window">
+		<param name="Local" value="html/pan_window.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Penplot output">
+		<param name="Name" value="Penplot output">
+		<param name="Local" value="html/penplot_output.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Plot output to bitmap">
+		<param name="Name" value="Plot output to bitmap">
+		<param name="Local" value="html/export_bmp.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Plot output to gerber format">
+		<param name="Name" value="Plot output to gerber format">
+		<param name="Local" value="html/plot_output_to_gerber_format.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Plot output to PDF">
+		<param name="Name" value="Plot output to PDF">
+		<param name="Local" value="html/export_pdf.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Plot output to printer">
+		<param name="Name" value="Plot output to printer">
+		<param name="Local" value="html/plot_output_to_printer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Powerplanes">
+		<param name="Name" value="Powerplanes">
+		<param name="Local" value="html/powerplanes.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Print screen">
+		<param name="Name" value="Print screen">
+		<param name="Local" value="html/print_screen.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Programmable keys">
+		<param name="Name" value="Short cuts">
+		<param name="Local" value="html/short_cuts.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Protect components">
+		<param name="Name" value="Protect components">
+		<param name="Local" value="html/protect_components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Rebuild areafill">
+		<param name="Name" value="Rebuild areafill">
+		<param name="Local" value="html/rebuild_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Redo">
+		<param name="Name" value="Redo">
+		<param name="Local" value="html/redo.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Regroup components">
+		<param name="Name" value="Regroup components">
+		<param name="Local" value="html/regroup_components.htm">
+		<param name="Name" value="Regroup components">
+		<param name="Local" value="html/align_components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Reload geometries">
+		<param name="Name" value="Reload geometries">
+		<param name="Local" value="html/reload_geometries.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Remove layer">
+		<param name="Name" value="Remove layer">
+		<param name="Local" value="html/remove_layer.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Repaint">
+		<param name="Name" value="Repaint">
+		<param name="Local" value="html/repaint.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Return to previous view window">
+		<param name="Name" value="Return to previous view window">
+		<param name="Local" value="html/return_to_previous_view_window.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Rotate components">
+		<param name="Name" value="Rotate components">
+		<param name="Local" value="html/rotate_components.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Save layout as a geometry">
+		<param name="Name" value="Save layout as a geometry">
+		<param name="Local" value="html/save_as_geom.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Schematic link">
+		<param name="Name" value="Schematic link">
+		<param name="Local" value="html/schematic_link.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Select component by reference">
+		<param name="Name" value="Select component by reference">
+		<param name="Local" value="html/select_component.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Select only">
+		<param name="Name" value="Select only">
+		<param name="Local" value="html/select_only.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Selection/deselection objects">
+		<param name="Name" value="Selection/deselection objects">
+		<param name="Local" value="html/selecting_deselecting_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Short cuts">
+		<param name="Name" value="Short cuts">
+		<param name="Local" value="html/short_cuts.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Show next design rule error/warning">
+		<param name="Name" value="Show next design rule error/warning">
+		<param name="Local" value="html/show_next_error.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Special objects">
+		<param name="Name" value="Special objects">
+		<param name="Local" value="html/special_objects.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Start routing with shortest net">
+		<param name="Name" value="Start routing with shortest net">
+		<param name="Local" value="html/search_first_unrouted_net.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Stretch areafill">
+		<param name="Name" value="Stretch areafill">
+		<param name="Local" value="html/stretch_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Swap layers">
+		<param name="Name" value="Swap layers">
+		<param name="Local" value="html/swap_layers.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Swap traces/vias two nets">
+		<param name="Name" value="Swap traces/vias two nets">
+		<param name="Local" value="html/swap_traces_vias_two_nets.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Thermal relief">
+		<param name="Name" value="Thermal relief">
+		<param name="Local" value="html/thermal_relief.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Trace drawing feature">
+		<param name="Name" value="Trace drawing feature">
+		<param name="Local" value="html/trace_drawing_feature.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Trace popup menu">
+		<param name="Name" value="Trace popup menu">
+		<param name="Local" value="html/trace_popup_menu.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Traces/vias">
+		<param name="Name" value="Traces/vias">
+		<param name="Local" value="html/traces_vias.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Undo">
+		<param name="Name" value="Undo">
+		<param name="Local" value="html/undo.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Unhighlight all">
+		<param name="Name" value="Unhighlight all">
+		<param name="Local" value="html/unhighlight_all.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Unselect traces/vias nets">
+		<param name="Name" value="Unselect traces/vias nets">
+		<param name="Local" value="html/unselect_traces_vias_nets.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Updating components/netlist">
+		<param name="Name" value="Updating components/netlist">
+		<param name="Local" value="html/updating_components_netlist.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Via definition">
+		<param name="Name" value="Via definition">
+		<param name="Local" value="html/via_definition.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View all connections">
+		<param name="Name" value="View all connections">
+		<param name="Local" value="html/view_all_connections.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View design rule errors">
+		<param name="Name" value="View design rule errors">
+		<param name="Local" value="html/view_design_rule_errors.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View topics">
+		<param name="Name" value="View topics">
+		<param name="Local" value="html/view_topics.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View vertices areafill">
+		<param name="Name" value="View vertices areafill">
+		<param name="Local" value="html/view_vertices_areafill.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View whole design">
+		<param name="Name" value="View whole design">
+		<param name="Local" value="html/view_whole_design.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="View_hide_grid">
+		<param name="Name" value="Options">
+		<param name="Local" value="html/options.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Viewable window">
+		<param name="Name" value="Viewable window">
+		<param name="Local" value="html/viewable_window.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Window based panning">
+		<param name="Name" value="Window based panning">
+		<param name="Local" value="html/window_based_panning.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Window based zooming">
+		<param name="Name" value="Window based zooming">
+		<param name="Local" value="html/window_based_zooming.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Zero relative cursor">
+		<param name="Name" value="Zero relative cursor">
+		<param name="Local" value="html/zero_relative_cursor.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Zoom in">
+		<param name="Name" value="Zoom in">
+		<param name="Local" value="html/zoom_in.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Zoom out">
+		<param name="Name" value="Zoom out">
+		<param name="Local" value="html/zoom_out.htm">
+		</OBJECT>
+</UL></HTML>

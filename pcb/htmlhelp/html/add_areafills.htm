@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Add areafills</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Add areafills">
+</OBJECT>
+
+<P><A NAME="idh_add_areafills"></A><font size=5><U>Add areafill</U><br>&nbsp;</font></P>
+
+<P><IMG SRC="../images/areafill_menu.gif" ALT="" BORDER=0></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mouse2.gif" ALT="" BORDER=0></TD>
+<TD width=75%><B>Add areafill</B> -&gt; <B>Select layer</B>
+<P><B>Add areafill with no net </B>-&gt; <B>Select layer</B></P>
+</TD>
+</TR>
+</TABLE><BR>
+
+<P><U>Add areafill:</U></P>
+
+<P>In the next dialogbox the net can be selected, and the areafill clearance can be specified. Also some parameters for thermal reliefs can be specified. A desciption for thermal reliefs can be found at <A HREF="thermal_relief.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Thermal_relief</A></P>
+
+<P>After pressing the <B>OK</B> button a polyline must be drawn.</P>
+
+<P><U>Add areafill with no net:</U></P>
+
+<P>A polyline must drawn.</P>
+
+<P>When drawing this polyline all the pins of the areafill net (If applicable) will be highlighted (yellow). When drawing this polyline use the the <B>right mouse button</B> menu to change the drawing direction, goto the previous polyline point (Backwards) and to finish the polyline drawing. When the spacebar is pressed, a dialogbox will popup, and the polyline parameters can be edited by hand. As many as 256 points can be edited. The coordinates typed in will be used with the current units. After finishing the polyline drawing and the polyline does not contain any crossings of lines, the area enclosed by the polyline will be calculated and added as areafill. The areafill will only be added if the areafill does not overlap other areafills of other nets. During calculation of the areafill, any object (traces/vias/pins) which do not belong to the areafill net will be cut out from the areafill. For large areafill this can take a while. If the calculation time is to long press the <B>ESC</B> key to abort, and the areafill will not be added to the design.</P>
+
+<P><A HREF="thermal_relief.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Thermal relief</A></P>
+
+<P><A HREF="areafills.htm"><IMG SRC="../images/button6.gif" ALT="" BORDER=0>Activate areafills/powerplanes menu</A></P>
+
+</BODY>
+</HTML>

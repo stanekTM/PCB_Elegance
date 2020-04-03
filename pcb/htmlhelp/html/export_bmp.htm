@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Plot output to bitmap</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<PARAM NAME="Keyword" VALUE="Plot output to bitmap">
+</OBJECT>
+
+<P><A NAME="idh_export_bmp"></A><font size=5><U>Export to bitmap</U><br>&nbsp;</font></P>
+
+<TABLE cols=2 border=1 width=480>
+
+<TR VALIGN="top">
+<TD width=25%><IMG SRC="../images/mainmenu.gif" ALT="" BORDER=0></TD>
+<TD width=75%>Sub menu <B>File</B> item <B>Export</B> item<B> Plotfiles as bitmap</B></TD>
+</TR>
+</TABLE><BR>
+
+<P>Plot <B>selected</B> layers in the bitmap format. Every layer will be plotted in a separate bitmap file. In the next dialogbox the layers, bitmap compression, bitmap resolution and plotting board outline can be selected. There are also two editboxes available. In those two editboxes  (each four lines) some information about the PCB can be stored. This information will then be plotted additionally for each layer. Initial three macros are stored into the first editbox.</P>
+
+<P><B>$DesignName</B>Current design name</P>
+
+<P><B>$Layer</B>Current layer</P>
+
+<P><B>$Date</B>Current date</P>
+
+<P>For the bitmap resolution are two possibilities. The first is selection of dpi (Dots per inch), and the second is specification of the pixel (dot) size.</P>
+
+<P>!!! Warning: If the files are saved in the “Non compressed” mode, the file size will be big.</P>
+
+<P>All the files will be generated in the <B>pcb\gerber</B> subdirectory.</P>
+
+</BODY>
+</HTML>
