@@ -19,6 +19,7 @@ tim@pcbelegance.org
 Copyright (C) 2012 Herman Morsink Vollenbroek
 
 # My edited version PCB Elegance
+This version of PCB Elegance is continually modified to suit my liking.
 Just unzip this version of the files to disk. The key is the "PCB_Elegance_v3.52.0" folder,
 here is also the latest version of the release.
 By default, the programs are in "EN". Other translations are only in "CZ".  If you are a proud Czech,
