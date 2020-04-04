@@ -27,7 +27,7 @@ By default, the programs are in "EN". Other translations are only in "CZ".  If y
 copy the translation files from the "Translations\CZ" folder to the main "PCB_Elegance_v3.52.0" directory.
 Keep in mind that there are thousands of words in software tools and some are not yet finished.
 I edit programs and translations sometimes even while the PCB design is running, they take a lot of time
-and i'm doing my free time and as my hobby in electronics and RC modeling.
+and do it I'm doing my free time and as my hobby in electronics and RC modeling.
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
 
 # For developers
