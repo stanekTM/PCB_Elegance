@@ -30,6 +30,6 @@ Translations in "CZ" will by no means go with the original version from http://w
 # For developers
 Lines of code are sometimes commented in "EN" and otherwise in "CZ".
 I did it solely for myself and for pleasure. I'm sorry if you want to improve this version further.
-Maybe I'll get better next time :o)
+Maybe I'll get better next time  :o)
 
 George stanekTM
