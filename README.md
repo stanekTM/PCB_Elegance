@@ -28,7 +28,7 @@ and do it in my free time and as my hobby in electronics and RC modeling.
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
 
 # For developers
-For developers: Lines of code are sometimes commented in "EN" and otherwise in "CZ".
+Lines of code are sometimes commented in "EN" and otherwise in "CZ".
 I did it solely for myself and for pleasure. I'm sorry if you want to improve this version further.
 Maybe I'll get better next time :)
 
