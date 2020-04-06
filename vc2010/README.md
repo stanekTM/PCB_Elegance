@@ -6,7 +6,7 @@ https://visualstudio.microsoft.com/en/downloads
 
 Stáhnìte si balíèek Microsoft Visual C++ Redistributable pro Visual Studio 2015, 2017 a 2019
 Zahrnuta je základní verze Universal C Runtime
-https://support.microsoft.com/cs-en/help/2977003/the-latest-supported-visual-c-downloads
+https://support.microsoft.com/en/help/2977003/the-latest-supported-visual-c-downloads
 
 Poznámka : Visual C++ 2015, 2017 a 2019 sdílejí stejné, opìtovnì distribuovatelné soubory.
 Napøíklad instalace opìtovnì distribuovatelného softwaru Visual C ++ 2019 ovlivní programy vytvoøené také s Visual C ++ 2015 a 2017.
