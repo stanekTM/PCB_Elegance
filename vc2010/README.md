@@ -8,13 +8,13 @@ Stáhnìte si balíèek Microsoft Visual C++ Redistributable pro Visual Studio 2015,
 Zahrnuta je základní verze Universal C Runtime
 https://support.microsoft.com/cs-en/help/2977003/the-latest-supported-visual-c-downloads
 
-Poznámka : Visual C++ 2015, 2017 a 2019 sdílejí stejné, opìtovnì distribuovatelné soubory.
-Napøíklad instalace opìtovnì distribuovatelného softwaru Visual C ++ 2019 ovlivní programy vytvoøené také s Visual C ++ 2015 a 2017.
-Instalace dále distribuovatelné verze Visual C++ 2015 však nenahradí novìjší verze souborù nainstalovaných dále distribuovatelných verzí Visual C++ 2017 a 2019.
+Note : Visual C++ 2015, 2017 a 2019 shares the same redistributable files.
+For example, installing redistributable software Visual C ++ 2019 affects programs created with Visual C ++ 2015 a 2017.
+Installation distributable versions Visual C++ 2015 it does not replace newer versions of files with installed distributable versions Visual C++ 2017 a 2019.
 
-Tato verze "PCB Elegance" je kompatibilní s Windows XP, Windows 7, Windows 10
-Verze Windows SDK 7.0
-Sada nástrojù platformy Visual Studio 2017 - Windows XP (v141_xp)
+This version of "PCB Elegance" is compatible with Windows XP, Windows 7, Windows 10
+Version Windows : SDK 7.0
+Platform tools set : Visual Studio 2017 - Windows XP (v141_xp)
 
 Open the solution file "vc2010\pcbeleg.sln"
 
