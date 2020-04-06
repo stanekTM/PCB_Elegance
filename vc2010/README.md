@@ -1,7 +1,7 @@
 # Instructions for building/compiling
 Unzip the source code archive into am empty directory.
 
-The source code can be compiled with either Microsoft Visual Studio 2019 (version Community is free)
+The source code can be compiled with either Microsoft Visual Studio 2019 (version "Community" is free)
 https://visualstudio.microsoft.com/en/downloads
 
 Download the package Microsoft Visual C++ Redistributable pro Visual Studio 2015, 2017 a 2019
