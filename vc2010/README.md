@@ -2,7 +2,7 @@
 Unzip the source code archive into am empty directory.
 
 The source code can be compiled with either Microsoft Visual Studio 2019 (version Community is free)
-https://visualstudio.microsoft.com/en/downloads/?rr=https%3A%2F%2Fsupport.microsoft.com%2Fcs-cz%2Fhelp%2F2977003%2Fthe-latest-supported-visual-c-downloads
+https://visualstudio.microsoft.com/en/downloads
 
 Stáhnìte si balíèek Microsoft Visual C++ Redistributable pro Visual Studio 2015, 2017 a 2019
 Zahrnuta je základní verze Universal C Runtime
