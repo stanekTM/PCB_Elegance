@@ -417,8 +417,8 @@ void MenuPopUpMoveComponentsTracesVias()
 	int32 NrTracesSelected, NrViasSelected, NrCompsSelected;
 
 	AppendMenuUTF8(PopUpMenu, MF_OWNERDRAW | MF_DISABLED, IDD_MENU_ITEM1, (LPSTR) 0);
-//      AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(269, "Drag traces/vias/components"));
-//      AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(269, "Drag traces/vias/components"));
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
 	NrTracesSelected = GetNrTracesSelected();
 	NrViasSelected = GetNrViasSelected();
 	NrCompsSelected = GetNrCompsSelected();
@@ -434,7 +434,6 @@ void MenuPopUpMoveComponentsTracesVias()
 	}
 }
 
-
 // ********************************************************************************************************
 // ********************************************************************************************************
 // ********************************************************************************************************
@@ -445,8 +444,8 @@ void MenuPopUpRouting()
 	int32 cnt;
 
 	AppendMenuUTF8(PopUpMenu, MF_OWNERDRAW | MF_DISABLED, IDD_MENU_ITEM1, (LPSTR) 1);
-//      AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(138, "Routing traces"));
-//      AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(138, "Routing traces"));
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_ADD_EXTRA_TRACE, SC(541, "Add extra trace"));
 
 	if (Design.NrBoardLayers == 2)
@@ -486,8 +485,8 @@ void MenuPopUpDragOneTrace()
 
 	AppendMenuUTF8(PopUpMenu, MF_OWNERDRAW | MF_DISABLED, IDD_MENU_ITEM1, (LPSTR) 2);
 
-//  AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(135, "Drag traces"));
-//  AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(135, "Drag traces"));
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
 
 	NrTracesSelected = GetNrTracesSelected();
 
@@ -497,7 +496,6 @@ void MenuPopUpDragOneTrace()
 		LastAction = 2;
 	}
 }
-
 
 // ********************************************************************************************************
 // ********************************************************************************************************
@@ -524,14 +522,12 @@ void MenuPopUpComponents()
 	NrCompsSelected = GetNrCompsSelected();
 	AppendMenuUTF8(PopUpMenu, MF_OWNERDRAW | MF_DISABLED, IDD_MENU_ITEM1, (LPSTR) 3);
 
-//  AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,"Components menu");
-//  AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
-//  AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,"Components menu");
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
 
 	if (NrCompsSelected > 0)
 	{
-// ********************************************************************************************************
-// ********************************************************************************************************
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_MOVE_OBJECTS, SC(332, "Move objects"));
 
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu30, SC(549, "Rotate"));
@@ -622,13 +618,13 @@ void MenuPopUpComponents()
 			AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu12, SC(47, "Component values"));
 		}
 
-//        AppendMenuOwn(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
-// ********************************************************************************************************
+        //AppendMenuOwn(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu13Copy, SC(564, "Copy objects component layer"));
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu13, SC(565, "Component outline to"));
 		CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(COMP_OUTLINE_LAYER, BOARD_OUTLINE_LAYER);
-//    MenuCommand=GetMenuCode(CodedLayer,0);
+        //MenuCommand=GetMenuCode(CodedLayer,0);
 		AppendMenuUTF8(PopUpMenu13, MF_ENABLED | MF_STRING, CodedLayer, SC(43, "Board outline"));
 		CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(COMP_OUTLINE_LAYER, INFO_LAYER);
 		AppendMenuUTF8(PopUpMenu13, MF_ENABLED | MF_STRING, CodedLayer, "Info 1");
@@ -652,8 +648,8 @@ void MenuPopUpComponents()
 		AppendMenuUTF8(PopUpMenu13, MF_ENABLED | MF_STRING, CodedLayer, SC(128, "Paste mask top"));
 		CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(COMP_OUTLINE_LAYER, PASTE_MASK_BOTTOM);
 		AppendMenuUTF8(PopUpMenu13, MF_ENABLED | MF_STRING, CodedLayer, SC(129, "Paste mask bottom"));
-//		CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(COMP_OUTLINE_LAYER, PASTE_MASK_TOP);
-//		AppendMenuUTF8(PopUpMenu13, MF_ENABLED | MF_STRING, CodedLayer, SC(128, "Paste mask top layer"));
+        //CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(COMP_OUTLINE_LAYER, PASTE_MASK_TOP);
+        //AppendMenuUTF8(PopUpMenu13, MF_ENABLED | MF_STRING, CodedLayer, SC(128, "Paste mask top layer"));
 		AppendMenuUTF8(PopUpMenu13, MF_ENABLED | MF_SEPARATOR, 0, 0);
 
 		for (cnt = Design.NrBoardLayers - 1; cnt >= 0; cnt--)
@@ -664,7 +660,7 @@ void MenuPopUpComponents()
 			AppendMenuUTF8(PopUpMenu13, MF_ENABLED | MF_STRING, CodedLayer, str);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu14, SC(568, "Placement outline top to"));
 		CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(PLACEMENT_OUTLINE_TOP, BOARD_OUTLINE_LAYER);
 		AppendMenuUTF8(PopUpMenu14, MF_ENABLED | MF_STRING, CodedLayer, SC(43, "Board outline"));
@@ -681,7 +677,7 @@ void MenuPopUpComponents()
 		AppendMenuUTF8(PopUpMenu14, MF_ENABLED | MF_STRING, CodedLayer, SC(122, "Silkscreen top"));
 		CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(PLACEMENT_OUTLINE_TOP, SILKSCREEN_BOTTOM);
 		AppendMenuUTF8(PopUpMenu14, MF_ENABLED | MF_STRING, CodedLayer, SC(123, "Silkscreen bottom"));
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu21, SC(503, "Placement outline bottom to"));
 		CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(PLACEMENT_OUTLINE_BOTTOM, BOARD_OUTLINE_LAYER);
 		AppendMenuUTF8(PopUpMenu21, MF_ENABLED | MF_STRING, CodedLayer, SC(43, "Board outline"));
@@ -698,7 +694,7 @@ void MenuPopUpComponents()
 		AppendMenuUTF8(PopUpMenu21, MF_ENABLED | MF_STRING, CodedLayer, SC(122, "Silkscreen top"));
 		CodedLayer = ID_COPY_COMP_OTHER_LAYER + CompressSrcDestLayer(PLACEMENT_OUTLINE_BOTTOM, SILKSCREEN_BOTTOM);
 		AppendMenuUTF8(PopUpMenu21, MF_ENABLED | MF_STRING, CodedLayer, SC(123, "Silkscreen bottom"));
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu15, SC(569, "Silkscreen top to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -713,7 +709,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu15, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu16, SC(570, "Silkscreen bottom to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -728,7 +724,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu16, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu17, SC(571, "Info 1 to"));
 
@@ -744,7 +740,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu17, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu18, SC(572, "Info 2 to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -759,7 +755,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu18, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu19, SC(573, "Info 3 to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -774,7 +770,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu19, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu20, SC(574, "Info 4 to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -789,7 +785,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu20, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_SEPARATOR, 0, 0);
 
 		for (Layer = Design.NrBoardLayers - 1; Layer >= 0; Layer--)
@@ -814,7 +810,7 @@ void MenuPopUpComponents()
 		}
 
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_SEPARATOR, 0, 0);
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu23, SC(576, "Solder mask top to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -829,7 +825,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu23, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu24, SC(577, "Solder mask bottom to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -844,7 +840,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu24, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu25, SC(578, "Paste mask top to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -859,7 +855,7 @@ void MenuPopUpComponents()
 				AppendMenuUTF8(PopUpMenu25, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu13Copy, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu26, SC(579, "Paste mask bottom to"));
 
 		for (cnt = 0; cnt < NrObjectLayers; cnt++)
@@ -879,7 +875,7 @@ void MenuPopUpComponents()
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_UNSELECT_COMP_TOP, SC(1170, "Unselect top components"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_UNSELECT_COMP_BOTTOM, SC(1171, "Unselect bottom components"));
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		if (NrCompsSelected > 1)
 		{
 			AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_EDIT_ALIGN_COMP, SC(580, "Component alignment/spacing"));
@@ -887,8 +883,6 @@ void MenuPopUpComponents()
 	}
 	else
 	{
-// ********************************************************************************************************
-// ********************************************************************************************************
 		AppendMenuUTF8(PopUpMenu1, MF_ENABLED | MF_STRING, ID_MOVE_COMPBYREF, SC(581, "Move component by reference"));
 		AppendMenuUTF8(PopUpMenu1, MF_ENABLED | MF_STRING, ID_SELECT_BY_PARTNR2, SC(1240, "Select all components with part nr"));
 		AppendMenuUTF8(PopUpMenu1, MF_ENABLED | MF_STRING, ID_SELECT_BY_GEOMETRY2, SC(1241, "Select all components with geometry"));
@@ -1010,21 +1004,21 @@ void MenuPopUpObjects()
 		ObjectsLayers[NrObjectLayers++] = Design.NrBoardLayers - cnt - 1 + ROUTING_KEEPOUT_LAYER;
 
 	AppendMenuUTF8(PopUpMenu, MF_OWNERDRAW | MF_DISABLED, IDD_MENU_ITEM1, (LPSTR) 6);
-//      AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(228, "Draw/change objects other layers"));
-//      AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(228, "Draw/change objects other layers"));
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
 	NrObjectsSelected = GetNrObjectSelections(0, -1);
 
 	if (NrObjectsSelected > 0)
 	{
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_MOVE_OBJECTS, SC(332, "Move objects"));
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_COPY_OBJECTS, SC(330, "Copy objects"));
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu11, SC(593, "Copy/move special"));
 		AppendMenuUTF8(PopUpMenu11, MF_ENABLED | MF_STRING, ID_COPY_ARRAY_OBJECTS, SC(594, "Copy objects using a 2D array"));
 		AppendMenuUTF8(PopUpMenu11, MF_ENABLED | MF_STRING, ID_COPY_POLAR_OBJECTS, SC(595, "Copy objects polar"));
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu11, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		AppendMenuUTF8(PopUpMenu11, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu34, SC(596, "Copy objects to"));
 
@@ -1060,7 +1054,7 @@ void MenuPopUpObjects()
 				AppendMenuUTF8(PopUpMenu35, MF_ENABLED | MF_SEPARATOR, 0, 0);
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu12, SC(597, "Modify object"));
 		AppendMenuUTF8(PopUpMenu12, MF_ENABLED | MF_STRING, ID_ROTATE_OBJECTS, SC(598, "Rotate objects"));
 		AppendMenuUTF8(PopUpMenu12, MF_ENABLED | MF_STRING, ID_SCALE_OBJECTS, SC(599, "Scale objects"));
@@ -1098,12 +1092,12 @@ void MenuPopUpObjects()
 			AppendMenuUTF8(PopUpMenu12, MF_ENABLED | MF_STRING, ID_MIRROR_TEXT, SC(607, "Mirror text"));
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_ASSIGN_OBJECTS_TO_NET, SC(608, "Assign objects to a net"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_ASSIGN_OBJECTS_TO_NET2, SC(609, "Assign objects to a not used net"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_INFOSELECTEDOBJECTS, SC(137, "Information on selected objects"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_SEPARATOR, 0, 0);
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu31, SC(611, "Select only"));
 
@@ -1118,6 +1112,7 @@ void MenuPopUpObjects()
 		      AppendMenuUTF8(PopUpMenu31,MF_ENABLED|MF_STRING,ID_SEL_ONLY_CIRCLES,"Circles");
 		    }
 		*/
+
 		if (GetNrObjectSelections(0, 3) > 0)
 			AppendMenuUTF8(PopUpMenu31, MF_ENABLED | MF_STRING, ID_SEL_ONLY_ARCS, SC(614, "Arcs"));
 
@@ -1223,7 +1218,7 @@ void MenuPopUpObjects()
 			}
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_POPUP, (UINT) PopUpMenu32, SC(620, "Unselect"));
 
@@ -1238,6 +1233,7 @@ void MenuPopUpObjects()
 		      AppendMenuUTF8(PopUpMenu32,MF_ENABLED|MF_STRING,ID_UNSEL_CIRCLES,"Circles");
 		    }
 		*/
+
 		if (GetNrObjectSelections(0, 3) > 0)
 			AppendMenuUTF8(PopUpMenu32, MF_ENABLED | MF_STRING, ID_UNSEL_ARCS, SC(614, "Arcs"));
 
@@ -1343,7 +1339,7 @@ void MenuPopUpObjects()
 			}
 		}
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		if (GetNrObjectSelections(0, 5) > 0)
 		{
 			AppendMenuUTF8(PopUpMenu36, MF_ENABLED | MF_BITMAP, ID_CUT_POLYLINE_POLYGON, (LPSTR) BitMapPolyline);
@@ -1392,7 +1388,8 @@ void MenuPopUpObjects()
 		// 101  .. 65001  ( increments 100)
 
 		*/
-// ********************************************************************************************************
+
+// *******************************************************************************************************************************
 
 		EnableMask = MF_ENABLED;
 		NewLayer = SILKSCREEN_TOP;
@@ -1432,7 +1429,7 @@ void MenuPopUpObjects()
 
 		NewLayer = INFO_LAYER;
 
-//      AppendMenuOwn(PopUpMenu,EnableMask|MF_POPUP,(UINT) PopUpMenu120,"Add info layer");
+        //AppendMenuOwn(PopUpMenu,EnableMask|MF_POPUP,(UINT) PopUpMenu120,"Add info layer");
 
 		AppendMenuUTF8(PopUpMenu12, EnableMask | MF_POPUP, (UINT) PopUpMenu120, SC(629, "Layer 1"));
 		AddObjectsPopUpItems(PopUpMenu120, EnableMask, NewLayer, 16);
@@ -1473,7 +1470,7 @@ void MenuPopUpObjects()
 		NewLayer = BOARD_OUTLINE_LAYER;
 		AppendMenuUTF8(PopUpMenu, EnableMask | MF_POPUP, (UINT) PopUpMenu130, SC(633, "Add board outline"));
 		AddObjectsPopUpItems(PopUpMenu130, EnableMask, NewLayer, 16 + 1);
-//          AppendMenuUTF8(PopUpMenu130,MF_ENABLED|MF_STRING,ID_ADD_TEXT_OBJECT+NewLayer, "Text");
+        //AppendMenuUTF8(PopUpMenu130,MF_ENABLED|MF_STRING,ID_ADD_TEXT_OBJECT+NewLayer, "Text");
 // ********************************************************************************************************
 		AppendMenuUTF8(PopUpMenu, EnableMask | MF_POPUP, (UINT) PopUpMenu13, SC(634, "Add on copper layers"));
 
@@ -1503,7 +1500,7 @@ void MenuPopUpObjects()
 		{
 			GetLayerTextObjects(Layer, str, 0);
 
-//        GetLayerTextObjects(Layer+ROUTING_KEEPOUT_LAYER,str,4);
+            //GetLayerTextObjects(Layer+ROUTING_KEEPOUT_LAYER,str,4);
 			if (CheckIfTopLayer(Layer))
 			{
 				if ((DrawLayerCode[Layer] >= 0) && (DrawLayerCode[Layer] < MAX_ACTIVE_DRAWING_LAYERS)
@@ -1588,7 +1585,7 @@ void MenuPopUpObjects()
 		AppendMenuUTF8(PopUpMenu16, EnableMask | MF_POPUP, (UINT) PopUpMenu180, SC(312, "Bottom"));
 		AddObjectsPopUpItems(PopUpMenu180, EnableMask, NewLayer, 16 + 2);
 
-// ********************************************************************************************************
+// *******************************************************************************************************************************
 		if (DrawDrillMode > 0)
 			EnableMask = MF_ENABLED;
 		else
@@ -1616,8 +1613,9 @@ void MenuPopUpAreafills()
 	NrAreaFillsSelected = GetNrAreaFillsSelected();
 	AppendMenuUTF8(PopUpMenu, MF_OWNERDRAW | MF_DISABLED, IDD_MENU_ITEM1, (LPSTR) 7);
 
-//      AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(176, "Areafills/powerplanes"));
-//      AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(176, "Areafills/powerplanes"));
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+
 	if (OkToDrawAreaFills)
 		EnableMask = MF_ENABLED;
 	else
@@ -1690,8 +1688,8 @@ void MenuPopUpAreafills()
 
 		if ((GetNrPowerPlanes() > 0) && (Design.NrBoardLayers > 1))
 		{
-//          AppendMenuUTF8(PopUpMenu,EnableMask|MF_POPUP,(UINT) PopUpMenu12,"Rebuild areafill powerplane");
-//        AppendMenuUTF8(PopUpMenu,EnableMask|MF_POPUP,(UINT) PopUpMenu13,"Change clearance powerplane");
+            //AppendMenuUTF8(PopUpMenu,EnableMask|MF_POPUP,(UINT) PopUpMenu12,"Rebuild areafill powerplane");
+            //AppendMenuUTF8(PopUpMenu,EnableMask|MF_POPUP,(UINT) PopUpMenu13,"Change clearance powerplane");
 			AppendMenuUTF8(PopUpMenu, EnableMask | MF_SEPARATOR, 0, 0);
 			AppendMenuUTF8(PopUpMenu, EnableMask | MF_POPUP, (UINT) PopUpMenu14, SC(655, "Cut from powerplane"));
 			AppendMenuUTF8(PopUpMenu14, EnableMask | MF_BITMAP | MF_POPUP, (UINT) PopUpMenu21, (LPSTR) BitMapPolyline);
@@ -1761,7 +1759,6 @@ void MenuPopUpAreafills()
 	}
 }
 
-
 // ********************************************************************************************************
 // ********************************************************************************************************
 // ********************************************************************************************************
@@ -1772,8 +1769,8 @@ void MenuPopUpEditTracesVias()
 	int32 cnt, NrTracesSelected, NrViasSelected, NrConnectionsSelected, MenuChanged;
 
 	AppendMenuUTF8(PopUpMenu, MF_OWNERDRAW | MF_DISABLED, IDD_MENU_ITEM1, (LPSTR) 8);
-//      AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(136, "Change traces/vias"));
-//      AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(136, "Change traces/vias"));
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_CENTER_ON_CONNECTION, SC(547, "Center view on next connection"));
 	NrTracesSelected = GetNrTracesSelected();
 	NrViasSelected = GetNrViasSelected();
@@ -1796,7 +1793,7 @@ void MenuPopUpEditTracesVias()
 
 		if ((NrTracesSelected == 1) || (NrViasSelected == 1))
 		{
-//    if (GetNrObjectSelections(0,0)>0) {
+        //if (GetNrObjectSelections(0,0)>0) {
 			AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_HIGHLIGHT_NET, SC(1284, "Switch highlight net on/off"));
 		}
 
@@ -1960,71 +1957,55 @@ void MenuPopUp()
 
 	switch (SelectionMode)
 	{
-// ********************************************************************************************************
-// ********************************************************************************************************
 	case DRAG_TRACES_VIAS_COMPS_MODE:	//Drag traces/vias/components
 		MenuPopUpMoveComponentsTracesVias();
 		break;
 
-// ********************************************************************************************************
-// ********************************************************************************************************
 	case ROUTING_MODE:			// Routing
 		MenuPopUpRouting();
 		break;
 
-// ********************************************************************************************************
-// ********************************************************************************************************
 	case MOVE_ONE_TRACE_MODE:	// Move one trace
 		MenuPopUpDragOneTrace();
 		break;
 
-// ********************************************************************************************************
-// ********************************************************************************************************
 	case MOVE_COMPONENTS_MODE:	// Move and rotate components
 		MenuPopUpComponents();
 		break;
 
-// ********************************************************************************************************
 	case MOVE_COMPONENT_REFERENCES_MODE:	// Component references
 		MenuPopUpComponentReferences();
 		break;
 
-// ********************************************************************************************************
 	case MOVE_COMPONENT_VALUES_MODE:	// Component values
 		MenuPopUpComponentValues();
 		break;
 
-// ********************************************************************************************************
 	case OBJECTS_MODE:			// Objects menu
 		MenuPopUpObjects();
 		break;
 
-// ********************************************************************************************************
 	case AREAFILLS_MODE:		// Areafill/powerplanes
 		MenuPopUpAreafills();
 		break;
 
-// ********************************************************************************************************
 	case MOVING_TRACES_VIAS_MODE:	// Moving traces and vias
 		MenuPopUpEditTracesVias();
 		break;
 
-// ********************************************************************************************************
 	case GATE_PINSWAP_MODE:	// Gate/pin swap
 		AppendMenuUTF8(PopUpMenu, MF_OWNERDRAW | MF_DISABLED, IDD_MENU_ITEM1, (LPSTR) 9);
-//      AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(292, "Gate/pin swap"));
-//      AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+
+        //AppendMenuUTF8(PopUpMenu,MF_DISABLED|MF_STRING,0,SC(292, "Gate/pin swap"));
+        //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_CENTER_ON_COMPONENT, SC(676, "Find component"));
 		break;
-// ********************************************************************************************************
-// ********************************************************************************************************
-
 	}
 
-// ********************************************************************************************************
-// ********************************************************************************************************
-//  if (MenuChanged) AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
-//  AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_STRING,0,SC(687,"Other menus"));
+    //if (MenuChanged) AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_SEPARATOR,0,0);
+    //AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_STRING,0,SC(687,"Other menus"));
+
 	if (SelectionMode != ROUTING_MODE)
 		AppendMenuUTF8(PopUpMenu1000, MF_ENABLED | MF_STRING, ID_ACTION_ROUTE_TRACES, SC(138, "Routing traces"));
 
