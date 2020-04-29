@@ -2069,7 +2069,7 @@ void MenuPopUp()
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_SEPARATOR, 0, 0);
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_EDIT_GOTOXY, SC(1204, "Goto x,y"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_MEASUREMENT, SC(1276, "Measurement"));
-	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_UNSELECT_ALL, SC(274, "Unselect all"));
+	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_UNSELECT_ALL, SC(161, "Unselect all"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_PREVIOUS_VIEW, SC(688, "Previous view"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(689, "Full view"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_REPAINT, SC(690, "Repaint"));
