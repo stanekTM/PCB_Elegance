@@ -274,7 +274,7 @@
 271  "Obrys desky plotu"
 272  "Zrcadlo x"
 273  "Režim zvětšení"
-;274  "Odebrat vše"
+274  "volný text"
 275  "Importovat pozice komponent ze souboru"
 276  "Velikost pera"
 277  "Pero 1"
