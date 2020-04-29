@@ -1272,7 +1272,7 @@ void ButtonInfo()
 						break;
 
 					case 20:
-						strcpy(str, SC(274, "Unselect all"));
+						strcpy(str, SC(161, "Unselect all"));
 
 						if (GetKeyString(str2, ID_UNSELECT_ALL, 0x21) == 1)
 							strcat(str, str2);
