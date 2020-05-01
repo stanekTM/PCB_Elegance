@@ -153,15 +153,12 @@ extern HGDIOBJ BackGroundBrush;
 #define  TIMER_TICK_DIV                 50000
 #endif
 
-
 // *******************************************************************************************************
-
 
 #define   ScreenPosAbsCursorInit         10
 #define   ScreenPosAbsGridCursorInit     170
 #define   ScreenPosRelGridCursorInit     350
 #define   ScreenPosInfoStrInit           590
-
 
 WNDCLASS GEOMClass = { CS_HREDRAW | CS_VREDRAW | CS_DBLCLKS,
                        (WNDPROC) GEOMWinProc,
@@ -184,12 +181,10 @@ void DeleteGraphicObjects(void);
 
 void WriteIniFile(void);
 
-
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
-
 
 void InsertWindowInProject(HWND Window, int32 mode)
 {
@@ -285,7 +280,6 @@ void AdjustWindowSize()
 		WindowHeight = ScreenSizeY;
 	}
 }
-
 
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -385,11 +379,14 @@ void DoneDeviceContext()
 
 void DoneDeviceContext2()
 {
-//	int32 res;
+
+ //int32 res;
 
 	if (DCInUse)
 	{
-//    res=GetDIBits(OutputDisplay,ViewBitmap,0,ViewPixelsY,TempMem,BitmapInfo,DIB_RGB_COLORS);
+
+     //res=GetDIBits(OutputDisplay,ViewBitmap,0,ViewPixelsY,TempMem,BitmapInfo,DIB_RGB_COLORS);
+
 		BitBlt(OutputDisplay2, 0, 0, ViewPixelsX, ViewPixelsY, OutputDisplay, 0, 0, SRCCOPY);
 		GdiFlush();
 
@@ -531,7 +528,6 @@ void SaveViewPos(void)
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-
 void RedrawMainWindow()
 {
 	RECT Rect;
@@ -583,7 +579,8 @@ void RedrawMainWindow()
 	  y=MultY(0.0);
 	  DrawLine(x,y+80,x,y-80);
 	  DrawLine(x+80,y,x-80,y);
-	*/
+   */
+
 	if (ViewInsertionPoint)
 		DrawInsertionPoint(0);
 
@@ -595,7 +592,8 @@ void RedrawMainWindow()
 
 	ExitDrawing();
 
-//  ValidateRect(GEOMWindow,&Rect);
+    //ValidateRect(GEOMWindow,&Rect);
+
 	SelectClipRgn(OutputDisplay, NULL);
 	DeleteObject(hrgn);
 }
@@ -663,7 +661,9 @@ void RedrawAbsPosStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(PCBDisplay, NULL);
+
+     //SelectClipRgn(PCBDisplay, NULL);
+
 		break;
 
 	case 1:
@@ -689,7 +689,9 @@ void RedrawAbsPosStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(PCBDisplay, EditingRegion);
+
+     //SelectClipRgn(PCBDisplay, EditingRegion);
+
 		break;
 
 	case 1:
@@ -722,7 +724,9 @@ void RedrawAbsGridPosStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(PCBDisplay, NULL);
+
+     //SelectClipRgn(PCBDisplay, NULL);
+
 		break;
 
 	case 1:
@@ -748,7 +752,9 @@ void RedrawAbsGridPosStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(PCBDisplay, EditingRegion);
+
+     //SelectClipRgn(PCBDisplay, EditingRegion);
+
 		break;
 
 	case 1:
@@ -781,7 +787,9 @@ void RedrawRelPosStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(PCBDisplay, NULL);
+
+     //SelectClipRgn(PCBDisplay, NULL);
+
 		break;
 
 	case 1:
@@ -807,7 +815,9 @@ void RedrawRelPosStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(PCBDisplay, EditingRegion);
+
+     //SelectClipRgn(PCBDisplay, EditingRegion);
+
 		break;
 
 	case 1:
@@ -840,7 +850,9 @@ void RedrawInfoStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(PCBDisplay, NULL);
+
+     //SelectClipRgn(PCBDisplay, NULL);
+
 		break;
 
 	case 1:
@@ -865,7 +877,9 @@ void RedrawInfoStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(PCBDisplay, EditingRegion);
+
+     //SelectClipRgn(PCBDisplay, EditingRegion);
+
 		break;
 
 	case 1:
@@ -993,7 +1007,6 @@ void RedrawInfoBar()
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-
 void WindowPaint()
 {
 	RECT Rect, Rect2;
@@ -1045,6 +1058,7 @@ void WindowPaint()
 				Rect2.right = ClientRect.right;
 				Rect2.top = ClientRect.bottom - HeightInfoBar - HeightScrollBar;
 				Rect2.bottom = ClientRect.bottom;
+
 				/*
 				        if ((PaintBecauseOfResizeMode & (4)) != 0) {
 				          Rect2.left=OldClientRect.right-WidthScrollBar-1;
@@ -1055,7 +1069,8 @@ void WindowPaint()
 				        if ((PaintBecauseOfResizeMode & (16+32)) != 0) {
 				          Rect2.left=0;
 				        }
-				*/
+			   */
+
 				InvalidateRect(GEOMWindow, &Rect2, 0);
 				res = GetUpdateRect(GEOMWindow, &UpdateRect, 0);
 				Painting = 1;
@@ -1184,8 +1199,9 @@ void WindowPaint()
 				Painting = 0;
 			}
 
-//        SetScrollPageSize();
-//        SetScrollPosition();
+         //SetScrollPageSize();
+         //SetScrollPosition();
+
 			PaintBecauseOfResizeMode = 0;
 		}
 
@@ -1446,7 +1462,6 @@ void ClipMouseCursor()
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-
 void UnClipMouseCursor()
 {
 	ClipCursor(NULL);
@@ -1494,7 +1509,6 @@ void DrawIntro()
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-
 LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM LParam)
 {
 	POINT pp;
@@ -1504,7 +1518,8 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 	HDC hdc;
 	LRESULT Result;
 	double Factor3, dx, dy, cx, cy, ccy, ty, tx;
-//  char    str[MAX_LENGTH_STRING];
+
+  //char    str[MAX_LENGTH_STRING];
 
 #ifdef _DEBUG
 
@@ -1521,7 +1536,9 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 		{
 			if (MasterWindow != NULL)
 			{
-//              MessageBoxUTF8(NULL,"Send size",SC(48,"Error"),MB_APPLMODAL|MB_OK);
+
+                //MessageBoxUTF8(NULL,"Send size",SC(48,"Error"),MB_APPLMODAL|MB_OK);
+
 				SendMessage(MasterWindow, WM_COMMAND, (WPARAM) ID_SEND_WINDOW_SIZE1,
 				            (LPARAM) MAKELPARAM(RealWindow.left, RealWindow.top));
 				SendMessage(MasterWindow, WM_COMMAND, (WPARAM) ID_SEND_WINDOW_SIZE2,
@@ -1535,7 +1552,9 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 	switch (Message)
 	{
 	case WM_HELP:
-//      Focused=0;
+
+      //Focused=0;
+
 		ok = 1;
 		break;
 
@@ -1554,7 +1573,9 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 		if (FirstPaint)
 		{
 			FirstPaint = 0;
-//          MessageBoxUTF8(GEOMWindow,"First paint",SC(4,"Message"),MB_APPLMODAL|MB_OK);
+
+            //MessageBoxUTF8(GEOMWindow,"First paint",SC(4,"Message"),MB_APPLMODAL|MB_OK);
+
 			ViewWholeDesign(0);
 			FirstPaintMode = 0;
 			SetScrollPageSize();
@@ -1756,8 +1777,10 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 		memmove(&OldRealWindow, &RealWindow, sizeof(RECT));
 		GetClientRect(GEOMWindow, &ClientRect);
 		GetWindowRect(GEOMWindow, &RealWindow);
-//      sprintf(str,"%4i  %4i  %4i \n",RealWindow.left,OldRealWindow2.left,RealWindow2.left);
-//      OutputDebugStr(str);
+
+        //sprintf(str,"%4i  %4i  %4i \n",RealWindow.left,OldRealWindow2.left,RealWindow2.left);
+        //OutputDebugStr(str);
+
 		DrawWindowMinX = WidthButtonBar;
 		DrawWindowMinY = 0;
 		DrawWindowMaxX = ClientRect.right - WidthScrollBar;
@@ -1849,7 +1872,9 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 
 		ScrollSize = (min(DrawWindowMaxX - DrawWindowMinX, DrawWindowMaxY - DrawWindowMinY) / 4) & ~3;;
 		ScrollEndOfWindow = 25;
-//      ScrollEndOfWindow=ScrollSize/2;
+
+        //ScrollEndOfWindow=ScrollSize/2;
+
 		ScrollSizeDrawing = ScrollSize / 2;
 		ViewMinX = PixelToRealOffX(-1);
 		ViewMaxX = PixelToRealOffX(DrawWindowMaxX + 1);
