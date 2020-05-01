@@ -1906,8 +1906,8 @@ void RedrawInfoStr(int32 Mode)
 	Rect.top = LeftTopY;
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOutW(OutputDisplay, ScreenPosInfoStr + 2, ClientRect.bottom - (HeightInfoBar - 4), (LPCWSTR) & InfoStrUC,
-	         wcslen(InfoStrUC));
+	TextOutW(OutputDisplay, ScreenPosInfoStr + 2, ClientRect.bottom - (HeightInfoBar - 4), 
+		    (LPCWSTR) & InfoStrUC, wcslen(InfoStrUC));
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
