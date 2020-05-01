@@ -682,8 +682,8 @@ void RedrawAbsPosStr(int32 Mode)
 	Rect.top = LeftTopY;
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOut(OutputDisplay, ScreenPosAbsCursor, ClientRect.bottom - (HeightInfoBar - 4), (LPCSTR) & AbsPosStr,
-	        strlen(AbsPosStr));
+	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor, ClientRect.bottom - (HeightInfoBar - 4), 
+		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodní pøeklad absolutní
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -745,8 +745,8 @@ void RedrawAbsGridPosStr(int32 Mode)
 	Rect.top = LeftTopY;
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOut(OutputDisplay, ScreenPosAbsGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4),
-	        (LPCSTR) & AbsGridPosStr, strlen(AbsGridPosStr));
+	TextOutUTF8(OutputDisplay, ScreenPosAbsGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4),
+	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodní pøeklad møížka
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -808,8 +808,8 @@ void RedrawRelPosStr(int32 Mode)
 	Rect.top = LeftTopY;
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOut(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), (LPCSTR) & RelPosStr,
-	        strlen(RelPosStr));
+	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
+		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodní pøeklad relativní
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -870,8 +870,8 @@ void RedrawInfoStr(int32 Mode)
 	Rect.top = LeftTopY;
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOut(OutputDisplay, ScreenPosInfoStr + 2, ClientRect.bottom - (HeightInfoBar - 4), (LPCSTR) & InfoStr,
-	        strlen(InfoStr));
+	TextOutUTF8(OutputDisplay, ScreenPosInfoStr + 2, ClientRect.bottom - (HeightInfoBar - 4), 
+		       (LPSTR) & InfoStr, strlen(InfoStr)); //TextOut, LPCSTR
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
