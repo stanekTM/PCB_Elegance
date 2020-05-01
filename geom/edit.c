@@ -133,15 +133,18 @@ void DrawTryingObject(double CurrentX, double CurrentY, int32 Mode)
 			case 1:
 				switch (NewObject.Layer)
 				{
-//              case PLACEMENT_OUTLINE_LAYER:
-//              case SILKSCREEN_LAYER:
-//              case COMP_OUTLINE_LAYER:
+
+             //case PLACEMENT_OUTLINE_LAYER:
+             //case SILKSCREEN_LAYER:
+             //case COMP_OUTLINE_LAYER:
+
 				default:
 					NewObject.x1 = (float) ((CurrentX2 + CurrentX) * 0.5);
 					NewObject.y1 = (float) ((CurrentY2 + CurrentY) * 0.5);
 					NewObject.x2 = (float) (fabs(CurrentX - CurrentX2));
 					NewObject.y2 = (float) (fabs(CurrentY - CurrentY2));
 					break;
+
 					/*
 					              default:
 					                NewObject.x1=CurrentX2;
@@ -150,6 +153,7 @@ void DrawTryingObject(double CurrentX, double CurrentY, int32 Mode)
 					                NewObject.y2=(fabs(CurrentY-CurrentY2)*2);
 					                break;
 					*/
+
 				}
 
 				break;
@@ -225,8 +229,10 @@ void DrawTryingObject(double CurrentX, double CurrentY, int32 Mode)
 				break;
 
 			case 2:
-//            NewObject.x3=CurrentX-NewObject.x1;
-//            NewObject.y3=CurrentY-NewObject.y1;
+
+                //NewObject.x3=CurrentX-NewObject.x1;
+                //NewObject.y3=CurrentY-NewObject.y1;
+
 				NewObject.x3 = (float) (CurrentX - NewObject.x1);
 				NewObject.y3 = (float) (CurrentY - NewObject.y1);
 				NewObject.x4 = (float) (CurrentX - NewObject.x1);
@@ -262,6 +268,7 @@ void DrawTryingObject(double CurrentX, double CurrentY, int32 Mode)
 			NewObject.RotationAngle = 90.0;
 
 		break;
+
 		/*
 		    case TRACE:
 		      if (Mode==1) {
@@ -272,9 +279,10 @@ void DrawTryingObject(double CurrentX, double CurrentY, int32 Mode)
 		        NewObject.y1=TraceObject.y1;
 		        NewObject.x2=TraceObject.x2;
 		      }
-		//      NewObject.ObjectType=0;
+		        //NewObject.ObjectType=0;
 		      break;
 		*/
+
 	}
 
 	StartDrawingEditingWindow();
@@ -298,8 +306,7 @@ void DrawTryingObject(double CurrentX, double CurrentY, int32 Mode)
 	case OBJECT_LINE:
 		if (OkToDraw)
 		{
-			if (GetDimensionTextFromLine(CurrentX2, CurrentY2, CurrentX, CurrentY, &NewObjectText2, NewObject.Info2) ==
-			        0)
+			if (GetDimensionTextFromLine(CurrentX2, CurrentY2, CurrentX, CurrentY, &NewObjectText2, NewObject.Info2) == 0)
 				DrawObject(&NewObjectText2, 0.0, 0.0, 4);
 		}
 
@@ -354,14 +361,16 @@ void DrawTryingObject(double CurrentX, double CurrentY, int32 Mode)
 	}
 
 	NewObject.ObjectType = (int16) OldObjectType;
-//  if (SpecialMode==0) {
+
+  //if (SpecialMode==0) {
+
 	DrawCrossHair(16 + 8);
-//  }
+
+  //}
+
 	ExitDrawing();
 	EndDrawingEditingWindow();
 }
-
-
 
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -691,7 +700,8 @@ void InitInfoStr(double CurrentX, double CurrentY, int32 ObjectType, int32 mode)
 	char str[MAX_LENGTH_STRING];
 	double x4, x3, y3, x, y, Length, Angle;
 	int32 OkToDraw = 0;
-//  int32  mode=0;
+
+  //int32  mode=0;
 
 	ConvertPointToPolar(CurrentX - CurrentX2, CurrentY - CurrentY2, &Length, &Angle);
 	x = fabs(CurrentX - CurrentX2);
@@ -710,11 +720,11 @@ void InitInfoStr(double CurrentX, double CurrentY, int32 ObjectType, int32 mode)
 			switch (Units)
 			{
 			case 0:
-				sprintf(str, "%.1f,%.1f", Length, Angle);
+				sprintf(str, "%.1f , %.1f", Length, Angle);
 				break;
 
 			case 1:
-				sprintf(str, "%.4f,%.1f", Length, Angle);
+				sprintf(str, "%.4f , %.1f", Length, Angle);
 				break;
 			}
 
@@ -729,11 +739,11 @@ void InitInfoStr(double CurrentX, double CurrentY, int32 ObjectType, int32 mode)
 			switch (Units)
 			{
 			case 0:
-				sprintf(str, "%.1f,%.1f", x3, y3);
+				sprintf(str, "%.1f , %.1f", x3, y3);
 				break;
 
 			case 1:
-				sprintf(str, "%.4f,%.4f", x3, y3);
+				sprintf(str, "%.4f , %.4f", x3, y3);
 				break;
 			}
 
@@ -784,11 +794,11 @@ void InitInfoStr(double CurrentX, double CurrentY, int32 ObjectType, int32 mode)
 					switch (Units)
 					{
 					case 0:
-						sprintf(str, "%.1f,%.1f", x3 * 2, y3 * 2);
+						sprintf(str, "%.1f , %.1f", x3 * 2, y3 * 2);
 						break;
 
 					case 1:
-						sprintf(str, "%.4f,%.4f", x3 * 2, y3 * 2);
+						sprintf(str, "%.4f , %.4f", x3 * 2, y3 * 2);
 						break;
 					}
 				}
@@ -858,15 +868,15 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 	uint8 Buf[4096];
 	DrawXorFunctionRecord DrawXorFunction;
 
-//  PopUpMenu=CreatePopupMenu();
-//  AppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ESCAPE,SC(154,"Escape"));
-
+    //PopUpMenu=CreatePopupMenu();
+    //AppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ESCAPE,SC(154,"Escape"));
 
 	SelectionActive = 1;
 	SelectionEsc = 0;
 	FinishPolygon = 0;
 	RepeatMode = 0;
-//  CurrentDrawMode=1;
+
+    //CurrentDrawMode=1;
 
 	memset(&NewObject, 0, sizeof(ObjectRecord));
 	memset(&NewObjectText2, 0, sizeof(ObjectRecord));
@@ -962,11 +972,13 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 		NewObjectPolygon->maxx = 1000000000.0;
 		NewObjectPolygon->maxy = 1000000000.0;
 		NewObject.Info2 = ObjectMode;
+
 		/*
 		      if ((ObjectMode & 0x0f)==1) {
 		        Mode=1;
 		      }
 		*/
+
 		break;
 
 	case OBJECT_LINE:
@@ -1061,10 +1073,10 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 	DrawXorFunction.Param2[2] = &Mode2;
 	ZoomInOutProcessed = 0;
 
-// *******************************************************************************************************
+ // *******************************************************************************************************
 	while ((!SelectionEsc) && ((NewObject.ObjectType != OBJECT_POLYGON) || (!FinishPolygon)))
 	{
-// *******************************************************************************************************
+     // *******************************************************************************************************
 		if (MouseChanged)
 		{
 			CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
@@ -1087,7 +1099,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 				DrawTryingObject(CurrentX, CurrentY, Mode | 0x40);
 			}
 
-// *******************************************************************************************************
+         // *******************************************************************************************************
 			if (MousePosX > DrawWindowMaxX - ScrollEndOfWindow)
 			{
 				if (NewObject.ObjectType == OBJECT_POLYGON)
@@ -1115,7 +1127,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 					DrawTryingObject(CurrentX, CurrentY, Mode | 0x40);
 			}
 
-// *******************************************************************************************************
+         // *******************************************************************************************************
 			if (MousePosY > DrawWindowMaxY - ScrollEndOfWindow)
 			{
 				if (NewObject.ObjectType == OBJECT_POLYGON)
@@ -1143,7 +1155,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 					DrawTryingObject(CurrentX, CurrentY, Mode | 0x40);
 			}
 
-// *******************************************************************************************************
+         // *******************************************************************************************************
 			if (MousePosX < DrawWindowMinX + ScrollEndOfWindow)
 			{
 				if (NewObject.ObjectType == OBJECT_POLYGON)
@@ -1171,7 +1183,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 					DrawTryingObject(CurrentX, CurrentY, Mode | 0x40);
 			}
 
-// *******************************************************************************************************
+         // *******************************************************************************************************
 			if (MousePosY < DrawWindowMinY + ScrollEndOfWindow)
 			{
 				if (NewObject.ObjectType == OBJECT_POLYGON)
@@ -1204,7 +1216,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 			MouseChanged = 0;
 		}
 
-// *******************************************************************************************************
+     // *******************************************************************************************************
 
 		CheckInputMessages(0);
 
@@ -1236,11 +1248,13 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 				DrawTryingObject(OldX, OldY, Mode | 0x40);
 
 			DrawTryingObject(OldX, OldY, Mode);
+
 			/*
 			      if (NewObject.ObjectType==OBJECT_POLYGON) {
 			        DrawTryingObject(CurrentX,CurrentY,Mode|0x40);
 			      }
 			*/
+
 			UnClipMouseCursor();
 			CheckInputMessages(0);
 
@@ -1261,7 +1275,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 				DisplayObjectOnEscape = 0;
 		}
 
-// *******************************************************************************************************
+     // *******************************************************************************************************
 		if ((ZoomActive()) && (!SelectionEsc))
 		{
 			if (NewObject.ObjectType == OBJECT_POLYGON)
@@ -1293,7 +1307,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 				DisplayObjectOnEscape = 0;
 		}
 
-// *******************************************************************************************************
+     // *******************************************************************************************************
 		if ((PanActive()) && (!SelectionEsc))
 		{
 			if (NewObject.ObjectType == OBJECT_POLYGON)
@@ -1325,8 +1339,8 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 				DisplayObjectOnEscape = 0;
 		}
 
-// *******************************************************************************************************
-// *******************************************************************************************************
+     // *******************************************************************************************************
+     // *******************************************************************************************************
 		if (TraceBackWardsKeyPressed)
 		{
 			if (NewObjectPolygon->NrVertices > 0)
@@ -1348,8 +1362,8 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 			TraceBackWardsKeyPressed = 0;
 		}
 
-// *******************************************************************************************************
-// *******************************************************************************************************
+     // *******************************************************************************************************
+     // *******************************************************************************************************
 		if (CheckLeftButton())
 		{
 #ifdef _DEBUG
@@ -1561,14 +1575,16 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 			}
 		}
 
-// *******************************************************************************************************
-// *******************************************************************************************************
+     // *******************************************************************************************************
+     // *******************************************************************************************************
 
 		if (CheckRightButton(&DrawXorFunction) == 1)
 		{
-//    if (RightButtonPressed) {
-//      TrackPopupMenu(PopUpMenu,TPM_RIGHTBUTTON,
-//                     MousePosX+5,MousePosY+40,0,SCHWindow,NULL);
+
+            //if (RightButtonPressed) {
+            //TrackPopupMenu(PopUpMenu,TPM_RIGHTBUTTON,
+            //MousePosX+5,MousePosY+40,0,SCHWindow,NULL);
+
 			if (NewObject.ObjectType == OBJECT_POLYGON)
 				DrawTryingObject(OldX, OldY, Mode | 0x40);
 
@@ -1605,7 +1621,8 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 				DestroyMenu(PopUpMenu);
 			}
 
-//      RightButtonPressed=0;
+            //RightButtonPressed=0;
+
 			CheckInputMessages(0);
 			DrawTryingObject(CurrentX, CurrentY, Mode);
 
@@ -1613,8 +1630,8 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 				DrawTryingObject(CurrentX, CurrentY, Mode | 0x40);
 		}
 
-// *******************************************************************************************************
-// *******************************************************************************************************
+     // *******************************************************************************************************
+     // *******************************************************************************************************
 		if (NrFunctionsInBuf > 0)
 		{
 			if (NewObject.ObjectType == OBJECT_POLYGON)
@@ -2277,8 +2294,8 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 		}
 	}
 
-// *******************************************************************************************************
-// *******************************************************************************************************
+ // *******************************************************************************************************
+ // *******************************************************************************************************
 	if (FinishPolygon)
 	{
 		DisplayObjectOnEscape = 0;
@@ -2289,6 +2306,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 				DrawTryingObject(OldX, OldY, Mode | 0x40);
 
 			DrawTryingObject(OldX, OldY, Mode);
+
 			/*
 			      if ((!LeftButtonFinishPolygon)
 			         ||
@@ -2298,6 +2316,7 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 			        CommandAddTryingObject();
 			      }
 			*/
+
 		}
 
 		if ((ObjectMode & 32) == 0)
@@ -2306,7 +2325,9 @@ void CommandAddObjects(int32 ObjectType, double LineThickNess, int32 Layer, int3
 			{
 				if (NewObjectPolygon->NrVertices > 2)
 				{
-//        DrawTryingPolygon(Mult(NewObjectLine.LineThickNess),1);
+
+                    //DrawTryingPolygon(Mult(NewObjectLine.LineThickNess),1);
+
 					OkToAddObjectPolygon = 1;
 				}
 			}
@@ -2364,13 +2385,13 @@ void CommandAddMultipleObjects(int32 mode)
 	int32 FirstShift;
 	DrawXorFunctionRecord DrawXorFunction;
 
-//  PopUpMenu=CreatePopupMenu();
-//  AppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ROTATE_MULTIPLE,"Rotate");
-
+    //PopUpMenu=CreatePopupMenu();
+    //AppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ROTATE_MULTIPLE,"Rotate");
 
 	SelectionActive = 1;
 	SelectionEsc = 0;
-//  CurrentDrawMode=1;
+
+    //CurrentDrawMode=1;
 
 	CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
 	CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
@@ -2479,11 +2500,13 @@ void CommandAddMultipleObjects(int32 mode)
 		{
 			if (!FirstShift)
 			{
-//        DrawSelectedObjects(OldX,OldY,1);
+
+                //DrawSelectedObjects(OldX,OldY,1);
 				CentreSelectedX -= ShiftX - CurrentX;
 				CentreSelectedY -= ShiftY - CurrentY;
 				FirstShift = 1;
-//        DrawSelectedObjects(OldX,OldY,1);
+                //DrawSelectedObjects(OldX,OldY,1);
+
 			}
 		}
 		else
@@ -2493,7 +2516,9 @@ void CommandAddMultipleObjects(int32 mode)
 				ShiftX = CurrentX;
 				ShiftY = CurrentY;
 				FirstShift = 0;
-//            DrawSelectedObjects(CurrentX,CurrentY,1);
+
+                //DrawSelectedObjects(CurrentX,CurrentY,1);
+
 			}
 		}
 
@@ -2561,18 +2586,25 @@ void CommandAddMultipleObjects(int32 mode)
 			OldX = CurrentX;
 			OldY = CurrentY;
 			InsertObjects2(CurrentX - CentreSelectedX, CurrentY - CentreSelectedY);
-//      LastActionNr++;
+
+            //LastActionNr++;
+
 			SelectionEsc = 1;
-//      DrawObjects2(CurrentX-CentreSelectedX,CurrentY-CentreSelectedY,1);
+
+            //DrawObjects2(CurrentX-CentreSelectedX,CurrentY-CentreSelectedY,1);
 
 		}
 
 		if (CheckRightButton(&DrawXorFunction) == 1)
 		{
-//    if (RightButtonPressed) {
+
+            //if (RightButtonPressed) {
+
 			DrawObjects2(OldX - CentreSelectedX, OldY - CentreSelectedY, 1);
 			RotateObjects2();
-//      RightButtonPressed=0;
+
+            //RightButtonPressed=0;
+
 			DrawObjects2(CurrentX - CentreSelectedX, CurrentY - CentreSelectedY, 1);
 		}
 
@@ -2680,8 +2712,8 @@ void CommandChangedCrosses(double OX, double OY, int32 Mode)
 	int32 LeftButtonExit;
 	DrawXorFunctionRecord DrawXorFunction;
 
-//  PopUpMenu=CreatePopupMenu();
-//  AppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ESCAPE,SC(154,"Escape"));
+    //PopUpMenu=CreatePopupMenu();
+    //AppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ESCAPE,SC(154,"Escape"));
 
 	if (Mode == 2)
 	{
@@ -2785,8 +2817,9 @@ void CommandChangedCrosses(double OX, double OY, int32 Mode)
 				DrawTryingObjectCross(CurrentX, CurrentY, Mode);
 			}
 
-//      InitInfoStr(CurrentX,CurrentY);
-//      DisplayCursorPosition();
+         //InitInfoStr(CurrentX,CurrentY);
+         //DisplayCursorPosition();
+
 			MouseChanged = 0;
 		}
 
@@ -2874,7 +2907,9 @@ void CommandChangedCrosses(double OX, double OY, int32 Mode)
 
 		if (CheckRightButton(&DrawXorFunction) == 1)
 		{
-//    if (RightButtonPressed) {
+
+         //if (RightButtonPressed) {
+
 		}
 
 		if (NrFunctionsInBuf > 0)
@@ -3139,12 +3174,13 @@ int32 CopyObjectsFromClipBoard(int32 mode)
 	GlobalUnlock(NewGlobalClipBoardMem);
 	GlobalFree(NewGlobalClipBoardMem);
 
-// ********************************************************************************************************
-// ********************************************************************************************************
+ // ********************************************************************************************************
+ // ********************************************************************************************************
 
 	SelectionActive = 1;
 	SelectionEsc = 0;
-//  CurrentDrawMode=1;
+
+    //CurrentDrawMode=1;
 
 	CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
 	CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
@@ -3253,11 +3289,15 @@ int32 CopyObjectsFromClipBoard(int32 mode)
 		{
 			if (!FirstShift)
 			{
-//        DrawSelectedObjects(OldX,OldY,1);
+
+             //DrawSelectedObjects(OldX,OldY,1);
+
 				CentreSelectedX -= ShiftX - CurrentX;
 				CentreSelectedY -= ShiftY - CurrentY;
 				FirstShift = 1;
-//        DrawSelectedObjects(OldX,OldY,1);
+
+             //DrawSelectedObjects(OldX,OldY,1);
+
 			}
 		}
 		else
@@ -3267,7 +3307,9 @@ int32 CopyObjectsFromClipBoard(int32 mode)
 				ShiftX = CurrentX;
 				ShiftY = CurrentY;
 				FirstShift = 0;
-//            DrawSelectedObjects(CurrentX,CurrentY,1);
+
+                //DrawSelectedObjects(CurrentX,CurrentY,1);
+
 			}
 		}
 
@@ -3335,16 +3377,21 @@ int32 CopyObjectsFromClipBoard(int32 mode)
 			OldX = CurrentX;
 			OldY = CurrentY;
 			InsertObjects2(CurrentX - CentreSelectedX, CurrentY - CentreSelectedY);
-//      LastActionNr++;
+
+            //LastActionNr++;
+
 			SelectionEsc = 1;
-//      DrawObjects2(CurrentX-CentreSelectedX,CurrentY-CentreSelectedY,1);
+
+            //DrawObjects2(CurrentX-CentreSelectedX,CurrentY-CentreSelectedY,1);
 
 		}
 
 		if (CheckRightButton(&DrawXorFunction) == 1)
 		{
-//    if (RightButtonPressed) {
-//      RightButtonPressed=0;
+
+         //if (RightButtonPressed) {
+         //RightButtonPressed=0;
+
 		}
 
 		if (NrFunctionsInBuf > 0)
@@ -3377,7 +3424,6 @@ int32 CopyObjectsFromClipBoard(int32 mode)
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
-
 
 int32 ChangeGeometryHeight(int32 mode)
 {
@@ -3652,13 +3698,16 @@ void PrintScreenToBitmap(int32 mode)
 
 	memset(&BitmapInfoMem, 0, sizeof(BitmapInfoMem));
 
-//  BitmapInfo=(BITMAPINFO *)BitmapInfoMem;
+    //BitmapInfo=(BITMAPINFO *)BitmapInfoMem;
+
 	BitmapInfo = (BITMAPINFO_Own *) BitmapInfoMem;
 	BitmapHeader = (BITMAPV4HEADER *) & BitmapInfo->bmiHeader;
 	BitmapHeader->bV4Size = sizeof(BITMAPV4HEADER);
 	BitmapHeader->bV4Planes = 1;
 	BitmapHeader->bV4BitCount = 32;
-//  BitmapHeader->bV4V4Compression=BI_RLE8;
+
+    //BitmapHeader->bV4V4Compression=BI_RLE8;
+
 	BitmapHeader->bV4V4Compression = BI_RGB;
 	BitmapHeader->bV4Width = PixelsX;
 	BitmapHeader->bV4Height = PixelsY;
@@ -3671,7 +3720,9 @@ void PrintScreenToBitmap(int32 mode)
 	SetROP2(OutputDisplay, R2_COPYPEN);
 
 	ViewBitmap = CreateCompatibleBitmap(CurrentDeviceContext, PixelsX, PixelsY);
-//  ViewBitmap = CreateCompatibleBitmap(OutputDisplay,PixelsX,PixelsY);
+
+    //ViewBitmap = CreateCompatibleBitmap(OutputDisplay,PixelsX,PixelsY);
+
 	SelectObject(OutputDisplay, ViewBitmap);
 
 	CurrentFontCode = 0;
@@ -3684,7 +3735,7 @@ void PrintScreenToBitmap(int32 mode)
 
 	AllocateMemTemp(BitmapMemsize);
 
-//  Rectangle(OutputDisplay,0,0,PixelsX+1,PixelsY+1);
+    //Rectangle(OutputDisplay,0,0,PixelsX+1,PixelsY+1);
 
 	ViewWholeDesign(0);
 
@@ -3708,7 +3759,8 @@ void PrintScreenToBitmap(int32 mode)
 	if (GridVisible)
 		DrawGrid();
 
-//  res=GetDIBits(OutputDisplay,ViewBitmap,0,1,TempMem,(BITMAPINFO *)BitmapInfo,DIB_RGB_COLORS);
+    //res=GetDIBits(OutputDisplay,ViewBitmap,0,1,TempMem,(BITMAPINFO *)BitmapInfo,DIB_RGB_COLORS);
+
 	res = GetDIBits(OutputDisplay, ViewBitmap, 0, PixelsY, TempMem, (BITMAPINFO *) BitmapInfo, DIB_RGB_COLORS);
 
 	memset(&BitmapColors, 0, sizeof(BitmapColors));
@@ -3814,7 +3866,7 @@ void PrintScreenToBitmap(int32 mode)
 	BmpHeader.FileSize = sizeof(BmpHeader) + NrBitmapColors * 4 + BmpHeader.BitmapDataSize;
 	FileWrite(fp, &BmpHeader, sizeof(BmpHeader), &result);
 
-//    FileWrite(fp,(uint8 *)&TempMem[cnt*BytesPerLine],BytesPerLine,&result);
+    //FileWrite(fp,(uint8 *)&TempMem[cnt*BytesPerLine],BytesPerLine,&result);
 
 	FileClose(fp);
 
@@ -3838,7 +3890,6 @@ void PrintScreenToBitmap(int32 mode)
 	RePaint();
 	return;
 }
-
 
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -3922,7 +3973,6 @@ int32 RenamePin(int32 mode)
 	RePaint();
 	return 0;
 }
-
 
 // *******************************************************************************************************
 // *******************************************************************************************************
