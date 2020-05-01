@@ -305,7 +305,7 @@ LRESULT SendDlgItemBigMessageUTF8(HWND hDlg, int32 nIDDlgItem, uint32 Msg, WPARA
 
 		return SendDlgItemMessageW(hDlg, nIDDlgItem, Msg, wParam, (LPARAM) TempMemUTF8);
 
-	/*
+	  /*
 	    case EM_GETLINE:
 	      SrcMem16=(uint16 *)lParam;
 	      lengte=*SrcMem16;
@@ -316,7 +316,8 @@ LRESULT SendDlgItemBigMessageUTF8(HWND hDlg, int32 nIDDlgItem, uint32 Msg, WPARA
 	      if (result==0) return 0;
 	      if (UnicodeToUtf8((WCHAR *)TempMemUTF8,(LPSTR)lParam,lengte)==0) return 0;
 	      return strlen((LPSTR)lParam);
-	*/
+	  */
+
 	case WM_GETTEXT:
 		AllocateMemTempUTF8(wParam * 2);
 		result = SendDlgItemMessageW(hDlg, nIDDlgItem, Msg, wParam, (LPARAM) TempMemUTF8);
@@ -359,6 +360,7 @@ int32 MessageBoxUTF8(HWND Window, LPSTR Text, LPSTR Caption, uint32 MessageBoxTy
 	int32 lengte;
 
 	lengte = strlen(Text);
+
 	/*
 	  if ((!CheckForUtf8Chars(Text))
 	     &&
@@ -367,6 +369,7 @@ int32 MessageBoxUTF8(HWND Window, LPSTR Text, LPSTR Caption, uint32 MessageBoxTy
 	  }
 	  MultiByteToWideChar(CP_UTF8,0,
 	*/
+
 	AllocateMemTempUTF8(lengte * 2);
 
 	if ((Utf8ToUnicode(Caption, TempStrUC2, MAX_LENGTH_UC_STRING - 1) == 0)
@@ -439,7 +442,9 @@ int32 CopyStrToClipboardUTF8(HWND Window, LPSTR StrToCopy)
 		hGlobalMemory = GlobalAlloc(GHND, MemSize);
 		ClipBuf = GlobalLock(hGlobalMemory);
 		Utf8ToUnicode(StrToCopy, (WCHAR *) ClipBuf, MemSize / 2 - 1);
-//    strcpy(ClipBuf,StrToCopy);
+
+        //strcpy(ClipBuf,StrToCopy);
+
 		GlobalUnlock(hGlobalMemory);
 		EmptyClipboard();
 		SetClipboardData(CF_UNICODETEXT, hGlobalMemory);
@@ -678,7 +683,6 @@ int32 Utf8ToUnicode(char *utf8, uint16 * unicode16, int32 MaxUCLength)
 	return result;
 }
 
-
 // ***************************************************************************************************
 // ***************************************************************************************************
 // ***************************************************************************************************
@@ -819,7 +823,6 @@ int32 Utf8ToUnicode_old(uint8 * utf8, uint16 * unicode16, int32 MaxUCLength)
 	return count;
 }
 
-
 // ***************************************************************************************************
 // ***************************************************************************************************
 // ***************************************************************************************************
@@ -899,7 +902,6 @@ int32 UnicodeToUtf8_old(uint16 * unicode16, uint8 * utf8, int32 MaxUtf8Length)
 	*utf8++ = 0;
 	return count2;
 }
-
 
 // ***************************************************************************************************
 // ***************************************************************************************************
