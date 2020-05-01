@@ -761,13 +761,15 @@ void RedrawAbsPosStr(int32 Mode)
 	SetTextColor(OutputDisplay, RGB(0, 0, 0));
 	SetBkColor(OutputDisplay, RGB(192, 192, 192));
 
-//	Rect.left = ScreenPosAbsCursor + 1;
+    //Rect.left = ScreenPosAbsCursor + 1;
+
 	Rect.right = ScreenPosAbsGridCursor - 3;
 	Rect.top = ClientRect.bottom - (HeightInfoBar - 4);
 	Rect.bottom = ClientRect.bottom - 3;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor, ClientRect.bottom - (HeightInfoBar - 4), (LPSTR) & AbsPosStr,
-	        strlen(AbsPosStr));
+	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor, ClientRect.bottom - (HeightInfoBar - 4), 
+		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodní pøeklad absolutní
+
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -826,13 +828,16 @@ void RedrawAbsGridPosStr(int32 Mode)
 	Rect.bottom = ClientRect.bottom - 3;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4),
-	        (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr));
+	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodní pøeklad 2
+
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(OutputDisplay, EditingRegion);
+
+        //SelectClipRgn(OutputDisplay, EditingRegion);
+
 		break;
 
 	case 1:
@@ -884,8 +889,9 @@ void RedrawRelPosStr(int32 Mode)
 	Rect.top = ClientRect.bottom - (HeightInfoBar - 4);
 	Rect.bottom = ClientRect.bottom - 3;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), (LPSTR) & RelPosStr,
-	        strlen(RelPosStr));
+	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
+		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodní pøeklad møížka
+
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -904,7 +910,7 @@ void RedrawRelPosStr(int32 Mode)
 }
 
 //****************************************************************************************************************************************
-//****************************** pravý spodní pøeklad vybraných symbolù grafika **********************************************************
+//****************************** pravý spodní pøeklad vybraných symbolù ******************************************************************
 //****************************************************************************************************************************************
 
 void RedrawInfoStr(int32 Mode)
@@ -923,7 +929,9 @@ void RedrawInfoStr(int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-//      SelectClipRgn(OutputDisplay, NULL);
+
+        //SelectClipRgn(OutputDisplay, NULL);
+
 		break;
 
 	case 1:
@@ -940,7 +948,8 @@ void RedrawInfoStr(int32 Mode)
 	Rect.top = ClientRect.bottom - (HeightInfoBar - 4);
 	Rect.bottom = ClientRect.bottom - 3;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOutUTF8(OutputDisplay, ScreenPosInfoStr + 2, ClientRect.bottom - (HeightInfoBar - 4), (LPSTR)&InfoStr, strlen(InfoStr));
+	TextOutUTF8(OutputDisplay, ScreenPosInfoStr + 2, ClientRect.bottom - (HeightInfoBar - 4), 
+		       (LPSTR)&InfoStr, strlen(InfoStr)); //pravý spodní pøeklad vybraných symbolù
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -948,7 +957,9 @@ void RedrawInfoStr(int32 Mode)
 	{
 	case 0:
 		SelectClipRgn(OutputDisplay, NULL);
-//      SelectClipRgn(OutputDisplay, EditingRegion);
+
+        //SelectClipRgn(OutputDisplay, EditingRegion);
+
 		break;
 
 	case 1:
