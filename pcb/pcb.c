@@ -1669,7 +1669,9 @@ void RedrawLayerStr(int32 Mode)
 		FillRect(OutputDisplay, &Rect, GraphicsObjectBrush[Index]);
 
 	SetBkMode(OutputDisplay, OPAQUE);
-	TextOutUTF8(OutputDisplay, 20, ClientRect.bottom - (HeightInfoBar - 4), (LPCSTR) & LayerStr, strlen(LayerStr));
+	TextOut(OutputDisplay, 20, ClientRect.bottom - (HeightInfoBar - 4), 
+		   (LPCSTR) & LayerStr, strlen(LayerStr));
+
 	SetBkMode(OutputDisplay, TRANSPARENT);
 
 	SelectObject(OutputDisplay, SaveFont);
@@ -1728,8 +1730,9 @@ void RedrawAbsPosStr(int32 Mode)
 	Rect.top = LeftTopY;
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), (LPCSTR) & AbsPosStr,
-	        strlen(AbsPosStr));
+	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
+		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodní pøeklad absolutní
+
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -1787,7 +1790,8 @@ void RedrawAbsGridPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4),
-	        (LPCSTR) & AbsGridPosStr, strlen(AbsGridPosStr));
+	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodní pøeklad møížka
+
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -1845,8 +1849,9 @@ void RedrawRelPosStr(int32 Mode)
 	Rect.top = LeftTopY;
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
-	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), (LPCSTR) & RelPosStr,
-	        strlen(RelPosStr));
+	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
+		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodní pøeklad relativní
+
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -1908,6 +1913,7 @@ void RedrawInfoStr(int32 Mode)
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutW(OutputDisplay, ScreenPosInfoStr + 2, ClientRect.bottom - (HeightInfoBar - 4), 
 		    (LPCWSTR) & InfoStrUC, wcslen(InfoStrUC));
+
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
