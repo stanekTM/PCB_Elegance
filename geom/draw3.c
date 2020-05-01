@@ -1258,8 +1258,7 @@ void ButtonInfo()
 					ButtonRect.right = 40 + NewTextSize.cx + 5;
 					ButtonRect.top = NrButtonInfo * ButtonSizeY + 5;
 					ButtonRect.bottom = NrButtonInfo * ButtonSizeY + 23;
-					RoundRect(OutputDisplay, ButtonRect.left, ButtonRect.top, ButtonRect.right, ButtonRect.bottom, 5,
-					          5);
+					RoundRect(OutputDisplay, ButtonRect.left, ButtonRect.top, ButtonRect.right, ButtonRect.bottom, 5, 5);
 					TextOut(OutputDisplay, ButtonRect.left + 2, ButtonRect.top + 2, str, strlen(str));
 					SelectObject(OutputDisplay, SaveFont);
 					ExitDrawing();
