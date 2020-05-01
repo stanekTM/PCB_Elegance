@@ -123,7 +123,6 @@ void MoveSpecial(void);
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-
 void ObjectSelection()
 {
 	int32 mode;
@@ -131,8 +130,10 @@ void ObjectSelection()
 
 	CurrentX = PixelToRealOffX(MousePosX);
 	CurrentY = PixelToRealOffY(DrawWindowMaxY - MousePosY);
-//  CurrentX=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
-//  CurrentY=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
+
+    //CurrentX=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
+    //CurrentY=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
+
 	CurrentX2 = CurrentX;
 	CurrentY2 = CurrentY;
 	OldX = CurrentX;
@@ -160,8 +161,9 @@ void ObjectSelection()
 		CurrentX = PixelToRealOffX(MousePosX);
 		CurrentY = PixelToRealOffY(DrawWindowMaxY - MousePosY);
 
-//    CurrentX=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
-//    CurrentY=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
+        //CurrentX=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
+        //CurrentY=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
+
 		if ((OldX != CurrentX) || (OldY != CurrentY))
 		{
 			DrawXorWindow(MultX(CurrentX2), MultY(CurrentY2), MultX(OldX), MultY(OldY), 0);
@@ -172,13 +174,13 @@ void ObjectSelection()
 			{
 				x1 = fabs((CurrentX - CurrentX2) / 2540.0);
 				y1 = fabs((CurrentY - CurrentY2) / 2540.0);
-				sprintf(InfoStr, "%.2f,%.2f", x1, y1);
+				sprintf(InfoStr, "%.2f , %.2f", x1, y1);
 			}
 			else
 			{
 				x1 = fabs((CurrentX - CurrentX2) / 100000.0);
 				y1 = fabs((CurrentY - CurrentY2) / 100000.0);
-				sprintf(InfoStr, "%.4f,%.4f", x1, y1);
+				sprintf(InfoStr, "%.4f , %.4f", x1, y1);
 			}
 
 			RedrawInfoStr(1);
@@ -228,7 +230,7 @@ void ObjectSelection()
 		{
 			DrawXorWindow(MultX(CurrentX2), MultY(CurrentY2), MultX(OldX), MultY(OldY), 0);
 			ScrollUp(ScrollSize);
-//        NrGraphicsObjects
+            //NrGraphicsObjects
 			SetCursorPos(MousePosX + ClientStartX, MousePosY + ScrollSizeDrawing + ClientStartY);
 			MousePosY += ScrollSizeDrawing;
 			CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
@@ -376,7 +378,7 @@ int32 PanActive()
 
 void CheckMouseOutOfWindow(int32 mode)
 {
-//  if (SelectionMode!=1) return ;
+    //if (SelectionMode!=1) return ;
 	if (!ShiftPressed)
 		return;
 
@@ -710,7 +712,7 @@ int32 CheckRightButton(DrawXorFunctionRecord * DrawXorFunction)
 			}
 		}
 
-//    MenuPopUp();
+        //MenuPopUp();
 		CheckInputMessages(0);
 	}
 	else
@@ -821,11 +823,11 @@ void MainLoop()
 
 	if (CheckRightButton(NULL) == 1)
 	{
-//  if (RightButtonPressed) {
+    //if (RightButtonPressed) {
 		DrawCrossHair(2);
 		DrawButtonInfoOff(0);
 		MenuPopUp();
-//    RightButtonPressed=0;
+        //RightButtonPressed=0;
 		CheckInputMessages(0);
 	}
 
@@ -857,7 +859,7 @@ void MainLoop()
 
 	if (DataBaseChanged)
 	{
-//    UpdateInsDelInfo();
+        //UpdateInsDelInfo();
 		SetWindowName(1);
 		FileChanged = 1;
 		DataBaseChanged = 0;
@@ -873,7 +875,6 @@ void MainLoop()
 
 	if (GEOMSystemError != 0)
 		GEOMSystemError = 0;
-
 }
 
 // *******************************************************************************************************
@@ -936,17 +937,21 @@ void DisplayCursorPosition()
 		}
 
 		Length = CalcLengthLine(0.0, 0.0, x3, y3);
-//      sprintf(str,"%i,%i",MousePosX,MousePosY);
-		sprintf(str, SC(274, "(x,y) %.4f,%.4f mm"), x4, y4);
-		sprintf(str2, "(grid x,y) %.2f,%.2f thou", x2, y2);
-		sprintf(str3, "(rel x,y) %.2f,%.2f [%.1f %.1f] thou", x3, y3, Length, Angle);
+
+        //sprintf(str,"%i,%i",MousePosX,MousePosY);
+
+		sprintf(str, SC(274, "(x,y) %.4f , %.4f mm"), x4, y4);
+		sprintf(str2, "(grid x,y) %.2f , %.2f thou", x2, y2);
+		sprintf(str3, "(rel x,y) %.2f , %.2f [%.1f %.1f] thou", x3, y3, Length, Angle);
+
 		/*
 		      strcpy(str3,"                ");
 		      for (cnt=0;cnt<16;cnt++) {
 		        str3[cnt]=cnt+112;
 		      }
 		*/
-//      sprintf(str3,"(rel x,y) %.2f,%.2f thou",x3,y3);
+        //sprintf(str3,"(rel x,y) %.2f,%.2f thou",x3,y3);
+
 		break;
 
 	case 1:
@@ -985,18 +990,22 @@ void DisplayCursorPosition()
 		}
 
 		Length = CalcLengthLine(0.0, 0.0, x3, y3);
-		sprintf(str, SC(274, "(x,y) %.4f,%.4f mm"), x4, y4);
-		sprintf(str2, SC(277, "(grid x,y) %.4f,%.4f mm"), x2, y2);
-//      sprintf(str3,"(rel x,y) %.4f,%.4f mm",x3,y3);
-		sprintf(str3, SC(278, "(rel x,y) %.4f,%.4f [%.4f %.1f] mm"), x3, y3, Length, Angle);
+		sprintf(str, SC(274, "(x,y) %.4f , %.4f mm"), x4, y4);
+		sprintf(str2, SC(277, "(grid x,y) %.4f , %.4f mm"), x2, y2);
+
+        //sprintf(str3,"(rel x,y) %.4f,%.4f mm",x3,y3);
+
+		sprintf(str3, SC(278, "(rel x,y) %.4f , %.4f [%.4f %.1f] mm"), x3, y3, Length, Angle);
 		break;
 	}
 
 	strcpy(AbsPosStr, str);
 	RedrawAbsPosStr(1);
-//  if (DebugPaint) {
-//    sprintf(str2,"%i,%i",MousePosX,MousePosY);
-//  }
+
+    //if (DebugPaint) {
+    //sprintf(str2,"%i,%i",MousePosX,MousePosY);
+    //}
+
 	strcpy(AbsGridPosStr, str2);
 	RedrawAbsGridPosStr(1);
 
@@ -1221,6 +1230,7 @@ void ZoomIn(int32 mode)
 		      else Factor=10/DefFontSize;
 		    }
 		*/
+
 		ViewMinX = PixelToRealOffX(DrawWindowMinX - 1);
 		ViewMaxX = PixelToRealOffX(DrawWindowMaxX + 1);
 		ViewMinY = PixelToRealOffY(DrawWindowMinY - 1);
@@ -1296,8 +1306,10 @@ void ZoomOut(int32 mode)
 		ViewMaxY = PixelToRealOffY(DrawWindowMaxY + 1 - DrawWindowMinY);
 		Xoffset = cx - (ViewMaxX - ViewMinX) / 2;
 		Yoffset = cy - (ViewMaxY - ViewMinY) / 2;
-//    Xoffset=cx-PixelToReal(MouseX);
-//    Yoffset=cy-PixelToReal(DrawWindowMaxY-MouseY);
+
+        //Xoffset=cx-PixelToReal(MouseX);
+        //Yoffset=cy-PixelToReal(DrawWindowMaxY-MouseY);
+
 		DisplX = PixelToRealOffX(DrawWindowMaxX) - PixelToRealOffX(DrawWindowMinX);
 		DisplY = PixelToRealOffY(DrawWindowMaxY) - PixelToRealOffY(DrawWindowMinY);
 		Rect.left = DrawWindowMinX;
@@ -1379,7 +1391,6 @@ void PreviousView()
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-
 void RePaint()
 {
 	DrawCrossHair(7);
@@ -1454,7 +1465,7 @@ void GotoXY()
 
 	if (TextInputDialog(&ObjectText, 0x10 + 8) == 1)
 	{
-		if (sscanf((LPSTR) & ObjectText.Text, "%f,%f", &x, &y) == 2)
+		if (sscanf((LPSTR) & ObjectText.Text, "%f , %f", &x, &y) == 2)
 		{
 			CenterScreen(UnitConvert(x, Units), UnitConvert(y, Units));
 			RePaint();
@@ -1480,7 +1491,6 @@ void ExitProgram()
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
-
 
 void ExecuteKeys()
 {
@@ -1555,6 +1565,7 @@ void ExecuteKeys()
 		break;
 
 	case Key_F8:
+
 		/*
 		      TestRect.left=0;
 		      TestRect.top=0;
