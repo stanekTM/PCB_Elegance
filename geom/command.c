@@ -87,8 +87,8 @@ void GEOMCommand(int32 WParam, int32 LParam)
 	ObjectRecord2 TypeObject2;
 	HMENU MainMenu, SubMenu;
 
-//  sprintf(str,"WParam %08X , LParam %08X",WParam,LParam);
-//  MessageBoxUTF8(GEOMWindow,str,"Params",MB_APPLMODAL|MB_OK);
+    //sprintf(str,"WParam %08X , LParam %08X",WParam,LParam);
+    //MessageBoxUTF8(GEOMWindow,str,"Params",MB_APPLMODAL|MB_OK);
 
 	if (SystemBusyMode != 0)
 		res = 1;
@@ -118,7 +118,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 	case ID_DRAW_CROSS_HAIR_OFF:
 	case ID_DRAW_CROSS_HAIR_ON:
 		break;
-
+	
 	default:
 		if (SystemBusyMode != 0)
 			return;
@@ -132,16 +132,16 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		PostMessage(GEOMWindow, WM_PAINT, (WPARAM) NULL, (LPARAM) NULL);
 	}
 
-// ********************************************************************************************************
-// ********************************************************************************************************
-
+ // ********************************************************************************************************
+ // ********************************************************************************************************
 
 	if ((WParam >= ID_ADD_LINE_OBJECT) && (WParam < ID_ADD_LINE_OBJECT + 0x400000))
 	{
-// Layer range
-//
-// 100  .. 12700  ( increments 100)
-// 101  .. 12701  ( increments 100)
+
+     // Layer range
+     // 100  .. 12700  ( increments 100)
+     // 101  .. 12701  ( increments 100)
+
 		Layer = WParam & 0xFFFF;
 		LineWidth = (8 * 2540);
 
@@ -288,8 +288,8 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		return;
 	}
 
-// ********************************************************************************************************
-// ********************************************************************************************************
+ // ********************************************************************************************************
+ // ********************************************************************************************************
 
 	switch (WParam)
 	{
@@ -610,7 +610,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		ChangeMenuSelectionMode();
 		break;
 
-// *****************************************************************************************
+     // *****************************************************************************************
 	case ID_ADD_RECT_PAD_TOP:
 		CommandAddObjects(OBJECT_RECT, 0.0, NrPadLayers - 1, 0);
 		break;
@@ -635,7 +635,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		CommandAddObjects(OBJECT_RECT, 0.0, SOLD_MASK_BOTTOM_LAYER, 0);
 		break;
 
-// *****************************************************************************************
+     // *****************************************************************************************
 	case ID_ADD_CIRCLE_PAD_TOP:
 		CommandAddObjects(OBJECT_CIRCLE, 0.0, NrPadLayers - 1, 0);
 		break;
@@ -672,7 +672,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		CommandAddObjects(OBJECT_CIRCLE, 0.0, DRILL_UNPLATED_LAYER, 0);
 		break;
 
-// *****************************************************************************************
+     // *****************************************************************************************
 	case ID_ADD_LINE_SILK_TOP:
 		CommandAddObjects(OBJECT_LINE, CurrentSilkscreenLine, SILKSCREEN_TOP_LAYER, LParam * 0x100);
 		break;
@@ -709,7 +709,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		CommandAddObjects(OBJECT_LINE, TraceThickness, SOLD_MASK_TOP_LAYER, 0);
 		break;
 
-// *****************************************************************************************
+     // *****************************************************************************************
 	case ID_ADD_RECT_SILK_TOP:
 		CommandAddObjects(OBJECT_RECT, CurrentSilkscreenLine, SILKSCREEN_TOP_LAYER, LParam);
 		break;
@@ -734,7 +734,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		CommandAddObjects(OBJECT_RECT, CurrentCompOutLine, COMP_OUTLINE_LAYER, 2 + LParam);
 		break;
 
-// *****************************************************************************************
+     // *****************************************************************************************
 	case ID_ADD_CIRCLE_SILK_TOP_F:
 		CommandAddObjects(OBJECT_CIRCLE, CurrentSilkscreenLine, SILKSCREEN_TOP_LAYER, 15 + LParam * 16);
 		break;
@@ -747,7 +747,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		CommandAddObjects(OBJECT_CIRCLE, CurrentCompOutLine, COMP_OUTLINE_LAYER, 15 + LParam * 16);
 		break;
 
-// *****************************************************************************************
+     // *****************************************************************************************
 	case ID_ADD_TEXT_SILK_TOP:
 		CommandAddObjects(OBJECT_TEXT, CurrentSilkscreenLine, SILKSCREEN_TOP_LAYER, 0);
 		break;
@@ -756,7 +756,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		CommandAddObjects(OBJECT_TEXT, CurrentCompOutLine, COMP_OUTLINE_LAYER, 0);
 		break;
 
-// *****************************************************************************************
+     // *****************************************************************************************
 	case ID_SETTINGS_UNITS_MILS:
 		Units = 0;
 		DisplayCursorPosition();
@@ -852,7 +852,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 	      RepeatMode=0;
 	      break;
 	*/
-//    case ID_TRACE_WIDTH:
+    //case ID_TRACE_WIDTH:
 	/*
 	      memset(&TypeObject,0,sizeof(ObjectRecord));
 	      switch (Units) {
@@ -878,6 +878,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 	      RepeatMode=0;
 	      break;
 	*/
+
 	case ID_LINE_WIDTH:
 		memset(&TypeObject2, 0, sizeof(ObjectRecord2));
 		value = -10.0;
@@ -1080,6 +1081,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 	      CopyObjectsToSilkscreen();
 	      break;
 	*/
+
 	case ID_VIEW_RELATIVEPOSITIONONGRID:
 		MouseCursorOnGrid = !MouseCursorOnGrid;
 		ChangeMenuRelativeMousePosition();
@@ -1096,7 +1098,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		RePaint();
 		break;
 
-	/*************************** Right button popup menu ************************/
+	 //*************************** Right button popup menu ************************
 
 	case ID_ESCAPE:
 		SelectionEsc = 1;
@@ -1170,6 +1172,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 	      RepeatMode=0;
 	      break;
 	*/
+
 	case ID_MIRRORX_OBJECTS:
 		PlaceRotatedFlippedComponents(4);
 		RepeatMode = 0;
@@ -1373,8 +1376,8 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		RePaint();
 		break;
 
-	/******************************************************************************************************/
-	/******************************************************************************************************/
+	 //******************************************************************************************************
+	 //******************************************************************************************************
 	case ID_COPY_TO_PADS:
 	case ID_COPY_TO_PADS_1:
 	case ID_COPY_TO_PADS_2:
@@ -1552,8 +1555,8 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		RePaint();
 		break;
 
-	/******************************************************************************************************/
-	/******************************************************************************************************/
+	 //******************************************************************************************************
+	 //******************************************************************************************************
 	case ID_MOVE_TO_PADS:
 	case ID_MOVE_TO_PADS_1:
 	case ID_MOVE_TO_PADS_2:
@@ -1732,8 +1735,8 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		RePaint();
 		break;
 
-	/******************************************************************************************************/
-	/******************************************************************************************************/
+	 //******************************************************************************************************
+	 //******************************************************************************************************
 	case ID_COPY_COOR:
 		CopyOnMultipleCoordinates();
 		RePaint();
@@ -1949,7 +1952,7 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		UnselectFirstObject(0);
 		break;
 
-// ************************************************************************************
+     // ************************************************************************************
 	case ID_HELP_ON_COMMAND:
 		HelpAsked = 1;
 		break;
@@ -1967,7 +1970,6 @@ void GEOMCommand(int32 WParam, int32 LParam)
 		break;
 	}
 }
-
 
 // ********************************************************************************************************
 // ********************************************************************************************************
