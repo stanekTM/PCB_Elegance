@@ -31,6 +31,7 @@
 #include  "windows.h"
 
 
+
 #define MAX_LENGTH_UC_STRING          4096
 
 #ifdef UC
