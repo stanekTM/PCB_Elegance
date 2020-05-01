@@ -1915,13 +1915,17 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 		break;
 
 	case WM_DRAWITEM:
-//      DrawSpecialMenuItem((DRAWITEMSTRUCT *)LParam);
+
+        //DrawSpecialMenuItem((DRAWITEMSTRUCT *)LParam);
+
 		break;
 
 	case WM_MEASUREITEM:
-//      MenuItemSize=(DRAWITEMSTRUCT *)LParam;
-//      MenuItemSize->itemWidth=100;
-//      MenuItemSize->itemHeight=40;
+
+     //MenuItemSize=(DRAWITEMSTRUCT *)LParam;
+     //MenuItemSize->itemWidth=100;
+     //MenuItemSize->itemHeight=40;
+
 		ok = 1;
 		break;
 
@@ -2030,7 +2034,9 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 			LeftButtonDoublePressed = 0;
 			MousePosX = LOWORD(LParam);
 			MousePosY = HIWORD(LParam) + 1;
-//          LeftPressedOk=1;
+
+            //LeftPressedOk=1;
+
 			return DefWindowProc(Window, Message, WParam, LParam);
 		}
 
@@ -2097,19 +2103,18 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 		if ((HWND) WParam == GEOMWindow)
 			return 0;
 
-	/* Otherwise, fall through to WM_QUERYNEWPALETTE. */
+	 // Otherwise, fall through to WM_QUERYNEWPALETTE
+
 	case WM_QUERYNEWPALETTE:
-		/*
-		 * If realizing the palette causes the palette to change,
-		 * redraw completely.
-		 */
+
+	    // If realizing the palette causes the palette to change, redraw completely
 		hdc = GetDC(GEOMWindow);
 		hpalT = SelectPalette(hdc, GEOMPalette, 0);
-		i = RealizePalette(hdc);	/* i == entries that changed  */
+		i = RealizePalette(hdc);	// i == entries that changed
 		SelectPalette(hdc, hpalT, 0);
 		ReleaseDC(GEOMWindow, hdc);
 
-		/* If any palette entries changed, repaint the window. */
+		// If any palette entries changed, repaint the window
 		if (i > 0)
 			InvalidateRect(GEOMWindow, NULL, 1);
 
@@ -2119,29 +2124,38 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 		Focused = 1;
 		SetCursor(LoadCursor(0, IDC_ARROW));
 		WaitForPaint = 0;
-//      GEOMCursorActive=1;
-//      OldCursor=SetCursor(Cursor1);
-//      ShowCursor(1);
-//        WindowSetFocus();
+
+      //GEOMCursorActive=1;
+      //OldCursor=SetCursor(Cursor1);
+      //ShowCursor(1);
+      //WindowSetFocus();
+
 		break;
 
 	case WM_KILLFOCUS:
+
 		/*
 		        WindowKillFocus();
 		        LeftPressedOk=0;
 		*/
-//      GEOMCursorActive=0;
-//      SetCursor(OldCursor);
+
+        //GEOMCursorActive=0;
+        //SetCursor(OldCursor);
+
 		Focused = 0;
 		DrawCrossHair(32 + 2);
 		DrawButtonInfoOff(0);
-//      SelectionEsc=1;
+
+        //SelectionEsc=1;
+
 		AltPressed = 0;
 		CtrlPressed = 0;
 		ShiftPressed = 0;
 		RightButtonPressed = 0;
 		LeftButtonPressed = 0;
-//      FocusedAgain=0;
+
+        //FocusedAgain=0;
+
 		break;
 
 	case WM_TIMER:
@@ -2174,8 +2188,10 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 				{
 					if (MasterWindow != NULL)
 					{
-//              sprintf(str,"Send size to %x",MasterWindow);
-//              MessageBoxUTF8(NULL,str,SC(48,"Error"),MB_APPLMODAL|MB_OK);
+
+                        //sprintf(str,"Send size to %x",MasterWindow);
+                        //MessageBoxUTF8(NULL,str,SC(48,"Error"),MB_APPLMODAL|MB_OK);
+
 						SendMessage(MasterWindow, WM_USER, (WPARAM) ID_SEND_WINDOW_SIZE1,
 						            (LPARAM) MAKELPARAM(RealWindow.left, RealWindow.top));
 						SendMessage(MasterWindow, WM_USER, (WPARAM) ID_SEND_WINDOW_SIZE2,
@@ -2197,11 +2213,14 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 
 	case WM_DESTROY:
 		WindowDestroy();
-//        Created=0;
+
+     //Created=0;
+
 		return 0;
 
-//    case WM_DROPFILES:DragFiles(WParam);
-//      break;
+     //case WM_DROPFILES:DragFiles(WParam);
+     //break;
+
 	default:
 		return DefWindowProc(Window, Message, WParam, LParam);
 	}
@@ -2213,7 +2232,6 @@ LRESULT CALLBACK GEOMWinProc(HWND Window, uint32 Message, WPARAM WParam, LPARAM 
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
-
 
 void ChangeValue(int32 * Object, LPSTR str)
 {
@@ -2230,14 +2248,16 @@ void ChangeValue(int32 * Object, LPSTR str)
 
 void LoadIniFile(LPSTR FileName, int32 mode)
 {
-	/*
+
+  /*
 	mode:
 
 	bit 0 :
 	bit 1 : Load [Settings]
 	bit 2 : Load [Keys]
 
-	*/
+ */
+
 	int32 fp, cnt, Length, ParamMode, Value, ok, Key, OldWindowStartX, OldWindowStartY, OldWindowWidth, OldWindowHeight;
 
 	char LineBuf[512], str2[MAX_LENGTH_STRING], str1[MAX_LENGTH_STRING], str4[MAX_LENGTH_STRING],
@@ -2250,7 +2270,7 @@ void LoadIniFile(LPSTR FileName, int32 mode)
 	if (FileName[0] == 0)
 		return;
 
-//  MessageBox(NULL,IniFile,"Load ini file from",MB_APPLMODAL+MB_OK);
+    //MessageBox(NULL,IniFile,"Load ini file from",MB_APPLMODAL+MB_OK);
 
 	if ((fp = TextFileOpenUTF8(FileName)) < 0)
 		return;
@@ -2764,13 +2784,14 @@ void LoadIniFile(LPSTR FileName, int32 mode)
 								GEOMColors[ShapeRoutingKeepoutInnerColorNr] = (COLORREF) Value;
 						}
 
-						/*
+					                /*
 						              if (stricmp(str1,"WireBusSelectMode")==0) {
 						                if (sscanf(str2,"%i",&Value)==1) {
 						                  WireSelectMode=Value;
 						                }
 						              }
-						*/
+					               */
+
 					}
 
 					break;
@@ -2808,7 +2829,6 @@ void LoadIniFile(LPSTR FileName, int32 mode)
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-
 void WriteIniFile()
 {
 	int32 fp, cnt, res, Stop;
@@ -2817,7 +2837,8 @@ void WriteIniFile()
 	if (WindowInitialSized)
 		return;
 
-//  if (MasterWindow!=NULL) return;
+    //if (MasterWindow!=NULL) return;
+
 	if (LibraryFile[0] != 0)
 		return;
 
@@ -2835,7 +2856,7 @@ void WriteIniFile()
 	if ((fp = FileOpenWriteUTF8(IniFile)) < 0)
 		return;
 
-// ******************************************************************************
+ // ******************************************************************************
 	WriteLn(fp, "[Settings]");
 	WriteLn(fp, "");
 
@@ -2852,7 +2873,7 @@ void WriteIniFile()
 	sprintf(str1, "GridSize=%f", GridSize);
 	WriteLn(fp, str1);
 
-// ******************************************************************************
+ // ******************************************************************************
 	/*
 	      if (!PadsSoldVisible) return;
 	      if (!PadsCompVisible) return;
@@ -2860,7 +2881,7 @@ void WriteIniFile()
 	      if (!SoldMaskPadsCompVisible) return;
 	      if (!PastePadsCompVisible) return;
 	      if (!PastePadsSoldVisible) return;
-	//      if (!RoutingKeepoutVisible) return;
+	      if (!RoutingKeepoutVisible) return;
 	      if (!SilkScreenVisible) return;
 	      if (!PlacementVisible) return;
 	      if (!CompOutlineVisible) return;
@@ -3025,17 +3046,18 @@ void WriteIniFile()
 	sprintf(str1, "BackGroundColor=%i", (int32) GEOMColors[BackGroundColorNr]);
 	WriteLn(fp, str1);
 
-//  sprintf(str1,"DrawCompReference=%i",OkToDrawCompReference);
-//  WriteLn(fp,str1);
-//  sprintf(str1,"DrawCompValue=%i",OkToDrawCompValue);
-//  WriteLn(fp,str1);
-// ******************************************************************************
+    //sprintf(str1,"DrawCompReference=%i",OkToDrawCompReference);
+    //WriteLn(fp,str1);
+    //sprintf(str1,"DrawCompValue=%i",OkToDrawCompValue);
+    //WriteLn(fp,str1);
 
-//  WriteLn(fp,"");
-//  for (cnt=0;cnt<32;cnt++) {
-//    sprintf(str1,"Layer%i=%i",cnt,(DrawLayerCode[cnt] >> 4) ^ 1);
-//    WriteLn(fp,str1);
-//  }
+    // ******************************************************************************
+    //WriteLn(fp,"");
+    //for (cnt=0;cnt<32;cnt++) {
+    //sprintf(str1,"Layer%i=%i",cnt,(DrawLayerCode[cnt] >> 4) ^ 1);
+    //WriteLn(fp,str1);
+    //}
+
 	WriteLn(fp, "");
 
 	for (cnt = 0; cnt < NrGridSizes; cnt++)
@@ -3139,10 +3161,12 @@ int32 AddGeomLanguageStrings(LPSTR FileName)
 
 	if ((fp = TextFileOpenUTF8(FileName)) < 0)
 	{
+
 		/*
 		    sprintf(str,"Can not read from language file %s, default language used",FileName);
 		    MessageBoxUTF8(NULL,str,SC(49,"Warning"),MB_OK);
 		*/
+
 		return -1;
 	}
 
@@ -3168,15 +3192,17 @@ int32 AddGeomLanguageStrings(LPSTR FileName)
 
 	TextFileClose(fp);
 
-// ********************************************************************************************************
+ // ********************************************************************************************************
 
 	if ((LanguageFileName[0] == 0) || ((fp = TextFileOpenUTF8(LanguageFileName)) < 0))
 	{
+
 		/*
 		    sprintf(str,"Can not read from language file %s",LanguageFileName);
 		    MessageBoxUTF8(NULL,str,"System error",MB_OK);
 		    return -2;
 		*/
+
 		return -1;
 	}
 
@@ -3221,7 +3247,6 @@ int32 AddGeomLanguageStrings(LPSTR FileName)
 // ********************************************************************************************************
 // ********************************************************************************************************
 // ********************************************************************************************************
-
 
 void DecodeParameters(int32 mode)
 {
@@ -3354,7 +3379,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	else
 		strcpy(ProjectPath, ExePath);
 
-//  MessageBox(NULL,DesignPath,"Design path",MB_APPLMODAL+MB_OK);
+    //MessageBox(NULL,DesignPath,"Design path",MB_APPLMODAL+MB_OK);
+
 	ClosingWindowMessage = RegisterWindowMessage("CLOSING_WINDOW");
 
 	sprintf(str, "%s\\LanguageGeom.txt", ExePath);
@@ -3368,23 +3394,29 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	SystemCursor = GetCursor();
 
 	ChangeFile(0, 2);
-//  MessageBoxUTF8(NULL,EditFile,"edit file",MB_APPLMODAL+MB_OK);
+
+    //MessageBoxUTF8(NULL,EditFile,"edit file",MB_APPLMODAL+MB_OK);
 
 	if (hPrevInstance == 0)
 	{
 		GEOMClass.hInstance = hInstance;
 		GEOMClass.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(ICON1));
-//      GEOMClass.hCursor = LoadCursor(0, IDC_ARROW);
+
+        //GEOMClass.hCursor = LoadCursor(0, IDC_ARROW);
+
 		GEOMClass.hbrBackground = 0;
-//    GEOMClass.hbrBackground = GetStockObject(BLACK_BRUSH);
+
+        //GEOMClass.hbrBackground = GetStockObject(BLACK_BRUSH);
+
 		GEOMClass.lpszMenuName = MAKEINTRESOURCE(IDR_MENU1);
 
-//      GEOMClass.lpszMenuName= "IDR_MENU1";
+        //GEOMClass.lpszMenuName= "IDR_MENU1";
+
 		if (!RegisterClass(&GEOMClass))
 			exit(255);
 	}
 
-// GetSystemMetrics   createfont
+    //GetSystemMetrics   createfont
 
 	if (ProjectActive)
 	{
@@ -3392,7 +3424,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 
 		if ((SharedMemoryHandle = OpenFileMapping(FILE_MAP_WRITE, 0, MEMORYMAPPEDSTRING)))
 		{
-// The memory mapped file has already been created by another applicatoin (Design manager)
+            // The memory mapped file has already been created by another applicatoin (Design manager)
 			SharedMemory = (uint8 *) MapViewOfFile(SharedMemoryHandle, FILE_MAP_ALL_ACCESS, 0, 0, 0);
 
 			if (SharedMemory != NULL)
@@ -3405,7 +3437,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 		}
 	}
 
-//  WindowWidth=0;
+    //WindowWidth=0;
+
 	memset(&ClientRect, 0, sizeof(RECT));
 	ScreenSizeX = GetSystemMetrics(SM_CXMAXIMIZED) - 10;
 	ScreenSizeY = GetSystemMetrics(SM_CYMAXIMIZED) - 10;
@@ -3441,11 +3474,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 
 	HeightScrollBar = GetSystemMetrics(SM_CYHSCROLL), WidthScrollBar = GetSystemMetrics(SM_CXVSCROLL);
 
-// CreateWindowEx(GEOMClass.lpszClassName,
-// Creatoolbarex
-// CreateStatusWindow
+    //CreateWindowEx(GEOMClass.lpszClassName,
+    //Creatoolbarex
+    //CreateStatusWindow
+
 	GEOMWindow = CreateWindow(GEOMClass.lpszClassName, NULL, WS_OVERLAPPEDWINDOW,
-//                            WS_OVERLAPPEDWINDOW | WS_HSCROLL | WS_VSCROLL,
+
+                              //WS_OVERLAPPEDWINDOW | WS_HSCROLL | WS_VSCROLL,
+
 	                          WindowStartX, WindowStartY, WindowWidth, WindowHeight, HWND_DESKTOP, 0, hInstance, NULL);
 
 	hwndHBar =
@@ -3455,8 +3491,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	    CreateWindow("scrollbar", NULL, WS_CHILD | WS_VISIBLE | SBS_VERT, 0, 0, 0, 0, GEOMWindow, (HMENU) 2, hInstance,
 	                 NULL);
 
-//  CreateStatusWindow
-//  MakeMenu((MenuRecord *)&NewMenu);
+    //CreateStatusWindow
+    //MakeMenu((MenuRecord *)&NewMenu);
+
 	TimerObject = SetTimer(GEOMWindow, TimerIdentifier, 100, NULL);
 	CheckExpandedCtrlKeys(0);
 	MakeMainMenu();
@@ -3469,8 +3506,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	SetScrollRange(hwndHBar, SB_CTL, 0, MaxScrollBarX, 1);
 	SetScrollRange(hwndVBar, SB_CTL, 0, MaxScrollBarY, 1);
 
-//  SetScrollRange(GEOMWindow,SB_VERT,0,MaxScrollBarX,1);
-//  SetScrollRange(GEOMWindow,SB_HORZ,0,MaxScrollBarY,1);
+    //SetScrollRange(GEOMWindow,SB_VERT,0,MaxScrollBarX,1);
+    //SetScrollRange(GEOMWindow,SB_HORZ,0,MaxScrollBarY,1);
 
 	ChangeMenuSelectionMode();
 	ChangeMenuRelativeMousePosition();
@@ -3498,10 +3535,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 		TranslateMessage(&M);
 		DispatchMessage(&M);
 
-//      while ( (! exit22)
-//            &&
-//            ((NrFunctionsInBuf>0) || (MouseChanged)) ) MainEditFunction(&exit22);
-//      if ( exit22 ) PostQuitMessage(0);
+        //while ( (! exit22)
+        //&&
+        //((NrFunctionsInBuf>0) || (MouseChanged)) ) MainEditFunction(&exit22);
+        //if ( exit22 ) PostQuitMessage(0);
+
 		if (Focused)
 			MainLoop();
 	}
@@ -3515,7 +3553,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 
 	/*
 	  if (SharedMemoryHandle) {
-	// Close memory mapped file handle
+	    Close memory mapped file handle
 	    CloseHandle(SharedMemoryHandle);
 	  }
 	*/
