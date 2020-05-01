@@ -158,8 +158,10 @@ void DrawXorWindow2(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 		NewFactor = Factor / m2;
 		hulp = x3;
 		hulp = (hulp * (DisplY / DisplX));
-//    BoardCentreX=BoardWidth*0.5+BoardOX;
-//    BoardCentreY=BoardHeight*0.5+BoardOY;
+
+        //BoardCentreX=BoardWidth*0.5+BoardOX;
+        //BoardCentreY=BoardHeight*0.5+BoardOY;
+
 		BoardCentreX = BoardOX;
 		BoardCentreY = BoardOY;
 
@@ -169,9 +171,9 @@ void DrawXorWindow2(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 		hulp = ((CentreY - BoardCentreY) / BoardHeight) * DisplayY;
 		y4 = (int32) hulp;
 
-//    if (FirstOutZoom) {
-//      DrawTempObjects(DisplayX,DisplayY);
-//    }
+     //if (FirstOutZoom) {
+     //DrawTempObjects(DisplayX,DisplayY);
+     //}
 
 		if (FirstOutZoom)
 		{
@@ -257,17 +259,20 @@ void ZoomWindow()
 	SelectRectY2 = MousePosY;
 	OldX2 = SelectRectX2;
 	OldY2 = SelectRectY2;
-//  if (CurrentDrawMode==0) CurrentDrawMode=1;
+
+    //if (CurrentDrawMode==0) CurrentDrawMode=1;
 
 	FindMinMaxBoard(&BoardOX, &BoardOY, &BoardWidth, &BoardHeight, 0);
+
 	/*
 	  BoardWidth=Design.BoardWidth;
 	  BoardOX=0;
 	  BoardHeight=Design.BoardHeight;
 	  BoardOY=0;
 	*/
-//  BoardWidth-=BoardOX;
-//  BoardHeight-=BoardOY;
+
+    //BoardWidth-=BoardOX;
+    //BoardHeight-=BoardOY;
 
 	SelectionActive = 1;
 	SelectionEsc = 0;
@@ -362,6 +367,7 @@ void ZoomWindow()
 					hulp = (DrawWindowMaxX - DrawWindowMinX);
 					hulp = hulp / (ZoomMaxX - ZoomMinX);
 					Factor = hulp;
+
 					/*
 					          if ((Factor>(10/sqrt(2.0)/DefFontSize))
 					             &&
@@ -375,19 +381,21 @@ void ZoomWindow()
 					            if (Factor>14.0) Factor=20.0;
 					            else Factor=10.0;
 					          }
-					  */
+				   */
+
 					ViewMinY = PixelToRealOffY(-1);
 					ViewMaxY = PixelToRealOffY(DrawWindowMaxY + 1 - DrawWindowMinY);
 					Yoffset = cy - (ViewMaxY - ViewMinY) / 2;
 				}
 				else
 				{
-					// *****************************************************************************************
+				 // *****************************************************************************************
 
 					Yoffset = ZoomMinY;
 					hulp = (DrawWindowMaxY - DrawWindowMinY);
 					hulp = hulp / (ZoomMaxY - ZoomMinY);
 					Factor = hulp;
+
 					/*
 					   if ((Factor>7.5)
 					   &&
@@ -409,7 +417,8 @@ void ZoomWindow()
 					   if (Factor>(10*sqrt(2.0)/DefFontSize)) Factor=20/DefFontSize;
 					   else Factor=10/DefFontSize;
 					   }
-					 */
+				   */
+
 					ViewMinX = PixelToRealOffX(-1);
 					ViewMaxX = PixelToRealOffX(DrawWindowMaxX + 1);
 
@@ -418,8 +427,10 @@ void ZoomWindow()
 
 				DisplX = PixelToRealOffX(DrawWindowMaxX) - PixelToRealOffX(DrawWindowMinX);
 				DisplY = PixelToRealOffY(DrawWindowMaxY) - PixelToRealOffY(DrawWindowMinY);
-				//      DisplX=(ZoomMaxX-ZoomMinX);
-				//      DisplY=DisplX*DrawWindowMaxY/DrawWindowMaxX;
+
+				//DisplX=(ZoomMaxX-ZoomMinX);
+				//DisplY=DisplX*DrawWindowMaxY/DrawWindowMaxX;
+
 				Rect.left = DrawWindowMinX;
 				Rect.right = DrawWindowMaxX;
 				Rect.top = DrawWindowMinY;
@@ -435,6 +446,7 @@ void ZoomWindow()
 				CentreX = PixelToRealOffX((DrawWindowMaxX - DrawWindowMinX) / 2);
 				CentreY = PixelToRealOffY((DrawWindowMaxY - DrawWindowMinY) / 2);
 				Factor = NewFactor;
+
 				/*
 				        if ((Factor>(10/sqrt(2.0)/DefFontSize))
 				           &&
@@ -442,7 +454,8 @@ void ZoomWindow()
 				          if (Factor>(10*sqrt(2.0)/DefFontSize)) Factor=20/DefFontSize;
 				          else Factor=10/DefFontSize;
 				        }
-				*/
+			   */
+
 				DisplX = PixelToReal(DrawWindowMaxX - DrawWindowMinX);
 				DisplY = PixelToReal(DrawWindowMaxY - DrawWindowMinY);
 				Xoffset = (CentreX - DisplX / 2);
@@ -500,8 +513,9 @@ void PanWindow()
 	CentreY = PixelToRealOffY((DrawWindowMaxY - DrawWindowMinY) / 2);
 
 	FindMinMaxBoard(&BoardOX, &BoardOY, &BoardWidth, &BoardHeight, 0);
-//  BoardWidth-=BoardOX;
-//  BoardHeight-=BoardOY;
+
+    //BoardWidth-=BoardOX;
+    //BoardHeight-=BoardOY;
 
 	DisplayX = (DrawWindowMaxX - DrawWindowMinX);
 	DisplayX *= 0.75;
@@ -514,8 +528,9 @@ void PanWindow()
 		DisplayX = (DisplayY * BoardWidth / BoardHeight);
 	}
 
-//  BoardCentreX=BoardWidth*0.5+BoardOX;
-//  BoardCentreY=BoardHeight*0.5+BoardOY;
+    //BoardCentreX=BoardWidth*0.5+BoardOX;
+    //BoardCentreY=BoardHeight*0.5+BoardOY;
+
 	BoardCentreX = BoardOX;
 	BoardCentreY = BoardOY;
 	hulp = ((CentreX - BoardCentreX) / BoardWidth) * DisplayX;
@@ -523,7 +538,7 @@ void PanWindow()
 	hulp = ((CentreY - BoardCentreY) / BoardHeight) * DisplayY;
 	cy2 = (int32) hulp;
 
-//  DrawTempObjects(DisplayX,DisplayY);
+    //DrawTempObjects(DisplayX,DisplayY);
 
 	MousePosX = cx + cx2 + DrawWindowMinX;
 	MousePosY = cy - cy2;
@@ -542,7 +557,8 @@ void PanWindow()
 	SelectRectY2 = MousePosY;
 	OldX2 = SelectRectX2;
 	OldY2 = SelectRectY2;
-//  if (CurrentDrawMode==0) CurrentDrawMode=1;
+
+    //if (CurrentDrawMode==0) CurrentDrawMode=1;
 
 	SelectionActive = 1;
 	SelectionEsc = 0;
@@ -624,8 +640,10 @@ void PanWindow()
 		Xoffset = ((hulp * BoardWidth / DisplayX) - (DisplX * 0.5) + BoardCentreX - BoardWidth / 2);
 		hulp = (cy + (DisplayY / 2) - MousePosY);
 		Yoffset = ((hulp * BoardHeight / DisplayY) - (DisplY * 0.5) + BoardCentreY - BoardHeight / 2);
-//    DisplX=PixelToRealOffX(DrawWindowMaxX)-PixelToRealOffX(DrawWindowMinX);
-//    DisplY=PixelToRealOffY(DrawWindowMaxY)-PixelToRealOffY(DrawWindowMinY);
+
+        //DisplX=PixelToRealOffX(DrawWindowMaxX)-PixelToRealOffX(DrawWindowMinX);
+        //DisplY=PixelToRealOffY(DrawWindowMaxY)-PixelToRealOffY(DrawWindowMinY);
+
 		Rect.left = DrawWindowMinX;
 		Rect.right = DrawWindowMaxX;
 		Rect.top = DrawWindowMinY;
@@ -643,7 +661,6 @@ void PanWindow()
 	SelectionEsc = 0;
 }
 
-
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -660,7 +677,9 @@ void DrawWindow(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 	if (mode == 0)
 	{
 		rect2(x1, y1, x2 - x1 + 1, y2 - y1 + 1);
-//    Rectangle(OutputDisplay,x1,y1,x2,y2);
+
+       //Rectangle(OutputDisplay,x1,y1,x2,y2);
+
 	}
 	else
 	{
@@ -710,9 +729,11 @@ void CenterScreen(double cx, double cy)
 	ViewMaxX = PixelToRealOffX(DrawWindowMaxX + 1);
 	ViewMinY = PixelToRealOffY(-1);
 	ViewMaxY = PixelToRealOffY(DrawWindowMaxY + 1 - DrawWindowMinY);
-//  DrawCrossHair(7);
-//  InvalidateRect(GEOMWindow,&Rect,0);
-//  UpdateWindow(GEOMWindow);
+
+    //DrawCrossHair(7);
+    //InvalidateRect(GEOMWindow,&Rect,0);
+    //UpdateWindow(GEOMWindow);
+
 }
 
 // *******************************************************************************************************
@@ -737,15 +758,17 @@ void DrawMeasurementLine(double x1, double y1, double x2, double y2, int32 mode)
 	else
 	{
 		SetROP2(OutputDisplay, R2_XORPEN);
+
 		/*
-		//    SetROP2(OutputDisplay,R2_NOT);
-		    SetBkColor(OutputDisplay,RGB(0,0,0));
-		//    SetBkColor(OutputDisplay,RGB(255,255,255));
-		    SetTextColor(OutputDisplay,RGB(255,255,255));
-		//    SetTextColor(OutputDisplay,RGB(0,0,0));
-		    SetBkMode(OutputDisplay,OPAQUE);
-		    SelectObject(OutputDisplay,PinTextFont);
-		*/
+		      SetROP2(OutputDisplay,R2_NOT);
+		      SetBkColor(OutputDisplay,RGB(0,0,0));
+		      SetBkColor(OutputDisplay,RGB(255,255,255));
+		      SetTextColor(OutputDisplay,RGB(255,255,255));
+		      SetTextColor(OutputDisplay,RGB(0,0,0));
+		      SetBkMode(OutputDisplay,OPAQUE);
+		      SelectObject(OutputDisplay,PinTextFont);
+	   */
+
 	}
 
 	length = CalcLengthLine(x1, y1, x2, y2);
@@ -756,7 +779,9 @@ void DrawMeasurementLine(double x1, double y1, double x2, double y2, int32 mode)
 		y = MultY(y2);
 		DrawLine(x - 5, y, x + 5, y);
 		DrawLine(x, y - 5, x, y + 5);
-//    ellips2(x,y,5,5,255);
+
+        //ellips2(x,y,5,5,255);
+
 	}
 
 	x = MultX(x1);
@@ -764,8 +789,10 @@ void DrawMeasurementLine(double x1, double y1, double x2, double y2, int32 mode)
 
 	if (Units == 0)
 	{
-//    x1=fabs((CurrentX-CurrentX2)/2540.0);
-//    y1=fabs((CurrentY-CurrentY2)/2540.0);
+
+        //x1=fabs((CurrentX-CurrentX2)/2540.0);
+        //y1=fabs((CurrentY-CurrentY2)/2540.0);
+
 		sprintf(str, "%.2f thou", length / 2540.0);
 	}
 	else
@@ -777,7 +804,9 @@ void DrawMeasurementLine(double x1, double y1, double x2, double y2, int32 mode)
 	DrawLine(x, y, MultX(x2), MultY(y2));
 	DrawLine(x - 20, y, x + 20, y);
 	DrawLine(x, y - 20, x, y + 20);
-//  TextOut(OutputDisplay,MultX(x1+Xoff),MultY(y1+Yoff),str,strlen(str));
+
+    //TextOut(OutputDisplay,MultX(x1+Xoff),MultY(y1+Yoff),str,strlen(str));
+
 	DrawStrWithRotation(x1 + Xoff, y1 + Yoff, Value, 0, 0, 0, str);
 
 	DrawCrossHair(8);
@@ -796,8 +825,9 @@ void Measurement(int32 TestMode)
 	double OldX, OldY, CurrentX, CurrentY, CurrentX2, CurrentY2;
 	DrawXorFunctionRecord DrawXorFunction;
 
-//  CurrentX=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
-//  CurrentY=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
+    //CurrentX=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
+    //CurrentY=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
+
 	CurrentX = PixelToRealOffX(MousePosX);
 	CurrentY = PixelToRealOffY(DrawWindowMaxY - MousePosY);
 	FirstMousePosX = MousePosX;
@@ -816,7 +846,7 @@ void Measurement(int32 TestMode)
 	OldX = CurrentX;
 	OldY = CurrentY;
 
-//  DrawXorWindow(MultX(CurrentX2),MultY(CurrentY2),MultX(OldX),MultY(OldY),0);
+    //DrawXorWindow(MultX(CurrentX2),MultY(CurrentY2),MultX(OldX),MultY(OldY),0);
 
 	SystemBusyMode = 250;
 	Mode2 = mode | 0x10;
@@ -841,13 +871,15 @@ void Measurement(int32 TestMode)
 		MouseDivX = abs(MousePosX - FirstMousePosX);
 		MouseDivY = abs(MousePosY - FirstMousePosY);
 
-//    CurrentX=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
-//    CurrentY=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
+        //CurrentX=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
+        //CurrentY=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
+
 		if ((CurrentX2 != CurrentX) || (CurrentY2 != CurrentY))
 		{
 			DrawMeasurementLine(CurrentX2, CurrentY2, OldX, OldY, mode);
 			CurrentX2 = CurrentX;
 			CurrentY2 = CurrentY;
+
 			/*
 			      if (Units==0) {
 			        x1=fabs((CurrentX-CurrentX2)/2540.0);
@@ -859,7 +891,8 @@ void Measurement(int32 TestMode)
 			        sprintf(InfoStr,"%.4f,%.4f",x1,y1);
 			      }
 			      RedrawInfoStr(1);
-			*/
+		   */
+
 			DrawMeasurementLine(CurrentX2, CurrentY2, OldX, OldY, mode);
 		}
 
@@ -901,7 +934,9 @@ void Measurement(int32 TestMode)
 			SetCursorPos(MousePosX + ClientStartX, MousePosY + ScrollSizeDrawing + ClientStartY);
 			DrawMeasurementLine(CurrentX2, CurrentY2, OldX, OldY, mode | 0x10);
 			ScrollUp(ScrollSize);
-//        NrGraphicsObjects
+
+            //NrGraphicsObjects
+
 			MousePosY += ScrollSizeDrawing;
 			CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
 			CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
@@ -1010,7 +1045,8 @@ void ButtonInfo()
 	char str[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING];
 	SIZE NewTextSize;
 
-// String
+    //String
+
 	if (FirstPaint)
 		return;
 
@@ -1068,9 +1104,10 @@ void ButtonInfo()
 
 						break;
 
-//            case 3:
-//              strcpy(str,SC(363,"Print"));
-//              break;
+                     //case 3:
+                     //strcpy(str,SC(363,"Print"));
+                     //break;
+
 					case 3:
 						strcpy(str, SC(81, "Create circle SIP (SIL) THT"));
 
@@ -1330,9 +1367,10 @@ void CheckButtonPressed(int32 mode)
 			PostMessage(GEOMWindow, WM_COMMAND, (WPARAM) ID_FILE_SAVE, (LPARAM) NULL);
 			break;
 
-//      case 3:
-//        PostMessage(GEOMWindow,WM_COMMAND,(WPARAM)ID_FILE_PRINT,(LPARAM)NULL);
-//        break;
+         //case 3:
+         //PostMessage(GEOMWindow,WM_COMMAND,(WPARAM)ID_FILE_PRINT,(LPARAM)NULL);
+         //break;
+
 		case 3:
 			PostMessage(GEOMWindow, WM_COMMAND, (WPARAM) ID_CREATE_SIL, (LPARAM) NULL);
 			break;
