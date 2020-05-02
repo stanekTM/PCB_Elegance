@@ -65,8 +65,9 @@ typedef struct
 	int32 DialogControlIds[32];
 	int32 NrDialogControls;
 	int32 CurrentDialogControlNr;
-} TabInfoRecord;
+}
 
+TabInfoRecord;
 
 int32 CALLBACK MainPcbSettingsProc(HWND Dialog, UINT Message, WPARAM WParam, LPARAM LParam);
 void PcbSettingsTabControlSetup(HWND TabControl);
@@ -133,7 +134,6 @@ int32 PcbSettingsDialog(int32 DialogActive, int32 mode)
 {
 	int32 cnt, cnt2, cnt3, res;
 	MSG msg;
-//	char text;
 
 #ifdef _DEBUG
 	
@@ -192,8 +192,6 @@ int32 PcbSettingsDialog(int32 DialogActive, int32 mode)
 
 		if (((cnt2 == 0) && (DialogActive != IDD_DIALOG_VIA)) || ((cnt2 == 1) && (DialogActive == IDD_DIALOG_VIA)))
 		{
-//			PcbSettingsTabInfo[cnt].Name = text;
-//		    strcpy(text, SC(42, "Via"));
 			PcbSettingsTabInfo[cnt].Name = (SC(42, "Via"));
 			PcbSettingsTabInfo[cnt].TabProc = (DLGPROC) PcbSettingsViaDialog;
 			PcbSettingsTabInfo[cnt].ResourceID = IDD_DIALOG_VIA;
