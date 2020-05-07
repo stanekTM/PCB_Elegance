@@ -289,7 +289,7 @@
 286  "Dva nebo více symbolů %s se překrývá ! ( %.1f , %.1f )"
 287  "Symbol nemá referenční indikaci !\n\nChcete přidat referenci ?"
 288  "Varování !"
-289  "Soubor symbolu/schéma se změnilo.\n\nChcete ho uložit ?"
+289  "Soubor symbolu/schéma se změnil.\n\nChcete ho uložit ?"
 290  "Chyba při otevírání souboru ! %s"
 291  "Chyba při čtení souboru ! %s"
 292  "Soubor %s není platný schématický soubor !"
