@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ vygeneroval soubor zahrnutí.
-// Použito D:\Programy\PCBeleganceZdroje\sch\resource\sch.rc
+// Použito C:\GitHub\PCB_Elegance\sch\resource\sch.rc
 //
 #define IDHELP                          9
 #define IDHELP3                         11
