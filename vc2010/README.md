@@ -11,7 +11,10 @@ Note : Visual C++ 2015, 2017 a 2019 shares the same redistributable files.
 For example, installing redistributable software Visual C ++ 2019 affects programs created with Visual C ++ 2015 a 2017.
 Installation distributable versions Visual C++ 2015 it does not replace newer versions of files with installed distributable versions Visual C++ 2017 a 2019.
 
-This version of "PCB Elegance" is compatible with Windows XP, Windows 7, Windows 10.              
+This version of "PCB Elegance" is compatible with Windows 7, Windows 10.              
+Version Windows : SDK 10.0              
+Platform tools set : Visual Studio 2019 - Windows 10 (v142)
+
 Version Windows : SDK 7.0              
 Platform tools set : Visual Studio 2017 - Windows XP (v141_xp)
 
