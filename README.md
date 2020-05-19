@@ -1,5 +1,5 @@
 # PCB Elegance
-PCB Elegance is a collection of circuit board design tools for Windows XP, 7 and 10.
+PCB Elegance is a collection of circuit board design tools for Windows 7 and 10.
 Including schematic capture, board layout, and manufacturing file generation.
 
 It was commercial software from 1998-2012.
@@ -46,7 +46,8 @@ Installation distributable versions Visual C++ 2015 it does not replace newer ve
 This version of "PCB Elegance" is compatible with Windows 7, Windows 10.              
 Version Windows : SDK 10.0              
 Platform tools set : Visual Studio 2019 - Windows 10 (v142)
-              
+
+To support Windows XP              
 Version Windows : SDK 7.0              
 Platform tools set : Visual Studio 2017 - Windows XP (v141_xp)
 
