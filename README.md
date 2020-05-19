@@ -5,7 +5,7 @@ PCB Elegance is a collection of circuit board design tools for Windows 7 and 10.
 - Geometry editor 
 - Layout editor 
 - Gerber file generation 
-- View gerber (does not contain source code, is a viewer only. WievPlot 2.0 copyright by Roneda, made by Merco electronics http://www.viewplot.com)
+- View gerber (does not contain source code, it is just a browser, more at http://www.viewplot.com)
 
 It was commercial software from 1998-2012.
 In 2012 it was released as open source software under the GPL.
