@@ -30,11 +30,6 @@ In the PCB project I deal with programming and translation errors and do it in m
 
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
 
-# For developers
-Lines of code are sometimes commented in "EN" and otherwise in "CZ".
-I did it solely for myself and for pleasure. I'm sorry if you want to improve this version further.
-Maybe I'll get better next time /:o)
-
 # Instructions for building/compiling
 Unzip the source code archive into am empty directory.
 
