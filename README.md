@@ -25,7 +25,7 @@ Copyright (C) 2012 Herman Morsink Vollenbroek
 
 # My edited version PCB Elegance
 Somehow I didn't like "Kickad" and "EasyEda", I just prefer PCB Elegance which is closer to me.
-This version of "PCB Elegance" is compatible with Windows 7 and 10.
+This version of "PCB Elegance" is compatible with Windows 7, 8 and 10.
 I want to say in advance that with my modified version I generate gerber files reliably as the original versions and have PCBs manufactured in China.
 This version of PCB Elegance is continually modified to suit my liking. I am gradually removing the errors that occur.
 Unfortunately I am not writing a record of the changes I made.
