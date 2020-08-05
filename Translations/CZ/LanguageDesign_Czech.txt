@@ -41,7 +41,7 @@
 38   "Nastavení projektu"
 39   "Adresář projektu"
 40   "Název projektu"
-41   "První název listu"
+41   "První název listu ( musí být zadán ! )"
 42   "Symboly uživatele"
 43   "Geometrie uživatele"
 44   "Použijte čísla dílů"
