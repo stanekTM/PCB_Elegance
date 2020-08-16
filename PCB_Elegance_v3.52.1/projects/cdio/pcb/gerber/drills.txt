@@ -1,0 +1,9 @@
+;Drill tools [ c:\pcb_elegance\cdio\pcb\cdio.pcb ]
+;
+;  Tool nr   Type      Diam mm     mils        Nr drills
+;-------------------------------------------------------
+  T1         Plated       0.706    27.60           4
+  T2         Plated       0.904    35.40           2
+  T3         Plated       1.021    40.00         104
+  T4         Plated       2.004    78.70           8
+  T5         Plated       0.505    19.70         154

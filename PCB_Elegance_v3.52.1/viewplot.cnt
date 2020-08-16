@@ -1,0 +1,140 @@
+:Base VIEWPlot>main
+:Title Viewplot Gerber/HPGL/Drill/DXF Editor,Translator
+1 Getting started
+2 Introduction to Viewplot=IDH_Introduction_to_Viewplot
+2 Getting started=IDH_Contents
+2 Ordering Information=IDH_Ordering_Information
+2 Most common functions=IDH_Most_common_functions
+2 User Interface=IDH_User_Interface
+
+1 Create new Viewplot file
+2 Topics=IDH_Create_new_Viewplot_file_Topics
+2 Create Gerber file=IDH_Create_Gerber_file
+2 Create HPGL file=IDH_Create_HPGL_file
+2 Create Drill file=IDH_Create_Drill_file
+2 Create DXF file=IDH_Create_DXF_file
+
+1 Load Files
+2 Topics=IDH_Load_files_Topics
+2 Load Gerber file=IDH_Load_gerber_file
+2 Load HPGL file=IDH_Load_HPGL_file
+2 Load Drill file=IDH_Load_Drill_file
+2 Load DXF file=IDH_Load_DXF_file
+2 Load Job file=IDH_Load_job
+2 Load Global apertures=IDH_Load_global_apertures
+2 Load Global drill tools=IDH_Load_global_drill_tools
+
+1 Save Files
+2 Topics=IDH_Save_as_Topics
+2 Save Gerber file=IDH_Save_Gerber_file
+2 Save Gerber file (Using user apertures)=IDH_Save_Gerber_file2
+2 Save Save as (with offset)=IDH_Save_as_offset
+2 Save Drill file=IDH_Save_Drill_file
+2 Save PDF file=IDH_Save_PDF_file
+2 Save DXF file=IDH_Save_PDF_file
+2 Save HPGL file=IDH_Save_HPGL_file
+2 Save as Bitmap file=IDH_Save_bitmap_file
+2 Save job file=IDH_Save_job_file
+2 Save Apertures=IDH_Save_Apertures
+2 Save global Drill tools=IDH_Save_global_drill_tools
+2 Print=IDH_Print
+
+1 Edit commands
+2 Undo=IDH_Undo
+2 Redo=IDH_Redo
+2 Clear all layers=IDH_Clear_all_layers
+2 Edit apertures=IDH_Edit_apertures
+2 Get nets=IDH_Get_nets
+2 Edit clearance=IDH_Edit_clearance
+2 Edit global drill tools=IDH_Edit_global_drill_tools
+2 Edit penplot diameter=IDH_Edit_penplot_diameter
+2 Change gerber layer into drill layer=IDH_Change_gerber_layer_into_drill_layer
+2 Select line width=IDH_Select_line_width
+2 Edit gerber/drill startup info=IDH_Edit_startup_info
+2 Replace selection=IDH_Replace_selection
+2 Append selection=IDH_Append_selection
+2 Remove errors=IDH_Remove_errors
+2 Zero relative cursor=IDH_Zero_relative_cursor
+
+
+1 Select and De-select commands
+2 Select and De-select commands=IDH_Select_and_De-select_commands
+2 Deselect all=IDH_Deselect_all
+2 Deselect all layers=IDH_Deselect_all_layers
+2 Select all=IDH_Select_all
+2 Select all layers=IDH_Select_all_layers
+2 Select or De-select by object=IDH_Select_or_De-select_by_object
+2 Info on selected objects=IDH_Info_on_selected_objects
+2 Select active layer=IDH_Select_active_layer
+
+1 Units
+2 Change units=IDH_Change_units
+
+1 View commands
+2 Topics=IDH_View_Topics
+2 Zoom in=IDH_Zoom_in
+2 Zoom out=IDH_Zoom_out
+2 Window based zooming=IDH_Window_based_zooming
+2 Pan window=IDH_Pan_window
+2 Window based panning=IDH_Window_based_panning
+2 View whole design=IDH_View_whole_design
+2 Repaint=IDH_Repaint
+2 Previous view=IDH_Previous_view
+2 Change grid=IDH_Change_grid
+2 Viewable objects=IDH_Viewable_objects
+2 Change colors=IDH_Change_colors
+2 Load default colors=IDH_Load_default_colors
+2 Grid on/off=IDH_Grid_on_off
+2 Goto xy location=IDH_Goto_xy_location
+
+1 Design rules
+2 Check design rules(current layer)=IDH_Check_design_rules
+
+1 Add object
+2 Topics=IDH_Add_object_Topics
+2 Add Line object=IDH_Add_Line_object
+2 Add Circle object=IDH_Add_Circle_object
+2 Add Arc object=IDH_Add_Arc_object
+2 Add Rectange object=IDH_Add_Rectangle_object
+2 Add Oblong object=IDH_Add_Oblong_object
+2 Add Text object=IDH_Add_Text_object
+2 Add Polygon object=IDH_Add_Polygon_object
+2 Add Drill=IDH_Add_Drill_object
+
+
+1 Change object
+2 Topics=IDH_Change_object_Topics
+2 Move object=IDH_Move_object
+2 Drag object=IDH_Drag_object
+2 Copy object=IDH_Copy_object
+2 Copy to other layer=IDH_Copy_to_other_layer
+2 Rotate object=IDH_Rotate_object
+2 Mirror object=IDH_Mirror_object
+2 Oversize object=IDH_Oversize_object
+2 Scale object=IDH_Scale_object
+2 Delete object=IDH_Delete_object
+
+1 Edit object
+2 Topics=IDH_Edit_object_Topics
+2 Edit single object=IDH_Edit_single_object
+2 Change lines=IDH_Change_lines
+2 Change diameter circle pads= IDH_Change_diameter_circle_pads
+2 Change angles arc=IDH_Change_angles_arc
+2 Change rectangle pads=IDH_Change_rectangle_pads
+2 Change oblong pads=IDH_Change_oblong_pads
+2 Change drill diameter=IDH_Change_drill_diameter
+2 Change pen=IDH_Change_pen
+
+1 Measure
+2 Measure distance between objects=IDH_Measure_distance_between_objects
+2 Measure to relative position=IDH_Measure_to_relative_position
+
+1 Viewplot command line functions
+2 Translate gerber to PDF in batch mode=IDH_Translate_gerber_to_PDF_in_batch_mode
+2 Start Viewplot from destination path=IDH_Start_Viewplot_from_destination_path
+2 Start Viewplot with selected files=IDH_Start_Viewplot_with_selected_files
+2 Start Viewplot within Total Commander=IDH_Viewplot_Commander
+
+1 Viewplot configuration files
+2 Config file pdfexport.txt=IDH_pdfexport_file
+2 Initialization file viewplot.ini=IDH_Initialization_file_viewplot_ini

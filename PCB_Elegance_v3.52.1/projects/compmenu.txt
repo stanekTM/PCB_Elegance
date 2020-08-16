@@ -1,0 +1,205 @@
+;*************************************************
+;$  code1  "name"
+;
+;   This "name" will be visible in the pulldown menu
+;
+
+;#  code2  "name"
+;
+;     This "name" will be visible in the pulldown menu->menu2
+;
+;     Do not add new code2 xx0 numbers 
+;
+;^  Code2  "name"
+;
+;     This "name" will be visible in the pulldown menu->menu2->menu3
+;
+;     Do not add new code2 xx0 numbers 
+;
+;
+;*************************************************
+
+$   1    "Resistor"
+#   100  "SMD"
+^   100  "0402"
+^   110  "0603"
+^   120  "0805"
+^   130  "1206"
+^   140  "1210"
+^   150  "1812"
+^   160  "2512"
+
+^   200  "Resistor Pack"
+^   300  "Variable"
+
+
+#   400  "Through hole"
+^   400  "Pitch 2"
+^   420  "Pitch 3"
+^   440  "Pitch 4"
+^   460  "Pitch 5"
+^   480  "Pitch 6"
+^   500  "Pitch 8"
+^   520  "Pitch 10"
+
+^   600  "Resistor pack"
+^   610  "Resistor pullup 5V"
+^   620  "Resistor pullup 3V3"
+^   700  "Variable"
+^   710  "Variable SMD"
+
+
+$   2    "Capacitor
+#   100  "SMD"
+^   100  "Ceramic 0402"
+^   110  "Ceramic 0603"
+^   120  "Ceramic 0805"
+^   130  "Ceramic 1206"
+^   140  "Ceramic 1210"
+^   150  "Ceramic 1812"
+^   160  "Ceramic 2512"
+
+^   200  "Elco"
+^   300  "Elco tantalum"
+
+#   400  "Through hole"
+^   400  "Pitch 1"
+^   420  "Pitch 2"
+^   440  "Pitch 3"
+^   460  "Pitch 4"
+^   480  "Pitch 5"
+^   500  "Pitch 6"
+^   520  "Pitch 8"
+^   540  "Pitch 10"
+
+^   600  "Elco axial"
+^   650  "Elco radial"
+
+
+
+$   3    "IC
+#   100  "7400     series"
+^   110  "74xx"
+^   120  "74LSxx"
+^   130  "74ALSxx"
+^   140  "74Fxx"
+^   150  "74HCxx"
+^   160  "74HCTxx"
+^   170  "74ABTxx"
+^   180  "74ACxx"
+^   190  "74ACTxx"
+^   200  "74AHCxx"
+^   210  "74AHCTxx"
+^   220  "74ASxx"
+^   230  "74BCTxx"
+^   240  "74Sxx"
+^   250  "74ALBxx"
+^   260  "74ALVCxx"
+^   270  "74LVxx"
+^   280  "74LVTxx"
+^   290  "74CBTxx"
+^   300  "74CBTLVxx"
+
+#   400  "7400 series SMD"
+
+^   410  "74xx"
+^   420  "74LSxx"
+^   430  "74ALSxx"
+^   440  "74Fxx"
+^   450  "74HCxx"
+^   460  "74HCTxx"
+^   470  "74ABTxx"
+^   480  "74ACxx"
+^   490  "74ACTxx"
+^   500  "74AHCxx"
+^   510  "74AHCTxx"
+^   520  "74ASxx"
+^   530  "74BCTxx"
+^   540  "74Sxx"
+^   550  "74ALBxx"
+^   560  "74ALVCxx"
+^   570  "74LVxx"
+^   580  "74LVTxx"
+^   590  "74CBTxx"
+^   600  "74CBTLVxx"
+
+#   700  "40xx     series"
+^   700  "40xx     series SMD"
+^   710  "40xx     series"
+
+#   800  "Memory
+^   800  "DRAM"
+^   810  "SRAM"
+^   820  "ROM"
+^   830  "PROM"
+^   840  "EPROM"
+^   850  "EEPROM"
+^   860  "FLASH EPROM"
+
+#   900  "Analog"
+^   900  "Opamp"
+
+$   4    "Semiconductors"
+
+#   100  "Transistor"
+^   100  "NPN SMD"
+^   110  "NPN Through hole"
+^   120  "PNP SMD"
+^   130  "PNP Through hole"
+
+#   200  "FETS"
+^   200  "JFET N SMD"
+^   210  "JFET N Through hole"
+^   220  "JFET P SMD"
+^   230  "JFET P Through hole"
+^   240  "MOSFET N SMD"
+^   250  "MOSFET N Through hole"
+^   260  "MOSFET P SMD"
+^   270  "MOSFET P Through hole"
+
+#   300  "Regulators"
+
+#   400  "Optocouplers"
+
+#   500  "Diodes"
+^   500  "SMD"
+^   510  "Through hole"
+^   520  "Bridges"
+
+#   600  "Zeners"
+^   600  "SMD"
+^   610  "Through hole"
+
+#   700  "Crystals"
+^   700  "Crystals"
+^   710  "Crystal oscillators"
+
+
+$5       "Passive"
+
+#   100  "Connectors"
+^   100  "Headers"
+^   110  "Headers boxed"
+^   120  "Sub-D conn"
+^   130  "SMD"
+
+#   200  "Mounting holes"
+
+;
+;
+;
+;The component index1 value is 9 can be used for user additions
+;
+;
+;
+
+$9       "User"
+
+#   100  "Submenu1 (item1)"
+#   200  "Submenu1 (item2)"
+
+#   300  "Submenu1 (item3)"
+^   300  "Submenu2 (item1)"
+
+
+

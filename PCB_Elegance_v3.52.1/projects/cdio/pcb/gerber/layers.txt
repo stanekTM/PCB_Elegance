@@ -1,0 +1,43 @@
+Layout  cdio   Date: April 18, 2012 19:28:39
+
+Designed with PCB elegance 3.50
+
+---------------------------------------------------------------------
+Gerber files :
+
+Filename                      Polarity    Layer name
+---------------------------------------------------------------------
+PasteMaskTop.ger              P           Paste mask top
+SolderMaskTop.ger             P           Solder mask top
+Top_1.ger                     P           Top layer 1
+Bottom_2.ger                  P           Bottom layer 2
+SolderMaskBottom.ger          P           Solder mask bottom
+PasteMaskBottom.ger           P           Paste mask bottom
+
+
+---------------------------------------------------------------------
+Drill file
+---------------------------------------------------------------------
+cdio.ncd                                  Drill file
+
+
+
+---------------------------------------------------------------------
+PCB Specifications :
+---------------------------------------------------------------------
+
+PCB size (Width,height)             :   6200.0000 ,  3200.0000  mils
+PCB size (Width,height)             :      6.20000,     3.20000 inch
+PCB size (Width,height)             :    157.480  ,    81.280   mm
+
+PCB origin (x,y)                    :   1000.0000 ,  1000.0000  mils
+PCB origin (x,y)                    :      1.00000,     1.00000 inch
+PCB origin (x,y)                    :     25.400  ,    25.400   mm
+
+
+Board thickness                     : 1.6 mm
+Material                            : FR4
+Copper thickness                    : 0.035 mm
+Number of layers                    : 2
+Minimal Trace width                 : 8 mils (0.2032 mm)
+Minimal Clearance                   : 8 mils (0.2032 mm)
