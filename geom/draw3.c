@@ -22,7 +22,6 @@
  */
 /*******************************************************************************************/
 
-
 #include "types.h"
 #include "windows.h"
 #include "string.h"
@@ -52,6 +51,7 @@
 #include "graphics.h"
 #include "resource.h"
 #include "resource2.h"
+#include "utf8.h"
 
 #define  BUTTON_INFO_TIMEOUT  40
 
@@ -66,6 +66,8 @@ int32 ButtonSizeX = 27;
 int32 ButtonSizeY = 22;
 
 int32 FirstOutZoom;
+
+
 
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -1033,10 +1035,9 @@ void DrawButtonInfoOff(int32 mode)
 		OldButtonNr = -1;
 }
 
-// *******************************************************************************************************
-// *******************************************************************************************************
-// *******************************************************************************************************
-// *******************************************************************************************************
+//****************************************************************************************************************************************
+//****************************** pøeklad Button Info *************************************************************************************
+//****************************************************************************************************************************************
 
 void ButtonInfo()
 {
@@ -1259,7 +1260,7 @@ void ButtonInfo()
 					ButtonRect.top = NrButtonInfo * ButtonSizeY + 5;
 					ButtonRect.bottom = NrButtonInfo * ButtonSizeY + 23;
 					RoundRect(OutputDisplay, ButtonRect.left, ButtonRect.top, ButtonRect.right, ButtonRect.bottom, 5, 5);
-					TextOut(OutputDisplay, ButtonRect.left + 2, ButtonRect.top + 2, str, strlen(str));
+					TextOutUTF8(OutputDisplay, ButtonRect.left + 2, ButtonRect.top + 2, str, strlen(str));
 					SelectObject(OutputDisplay, SaveFont);
 					ExitDrawing();
 					EndDrawingEditingWindow();
