@@ -2904,7 +2904,7 @@ int32 CALLBACK AssignValuesDialog2(HWND Dialog, uint32 Message, WPARAM WParam, L
 	{
 	case WM_INITDIALOG:
 		SelectionEsc = 0;
-		SetWindowTextUTF8(Dialog, SC(117, "Line widths"));
+		SetWindowTextUTF8(Dialog, SC(117, "Rules of geometry"));
 		FillValuesDialog(Dialog, Units);
 		SetDialogItemText(Dialog, IDOK, "OK");
 		SetDialogItemText(Dialog, IDCANCEL, SC(46, "Cancel"));
