@@ -2018,7 +2018,7 @@ void MakeMainMenu()
 	OwnAppendMenu(GEOMMenu2, MENU_ID, ID_EDIT_MOVE_ORIGIN2, SC(366, "Set origin to center selected objects"));
 	OwnAppendMenu(GEOMMenu2, MENU_ID, ID_EDIT_INSERTPOINT, SC(367, "Set insertion point"));
 	OwnAppendMenu(GEOMMenu2, MENU_ID, ID_EDIT_INSERTPOINT2, SC(368, "Set insertion point to center selected objects"));
-	OwnAppendMenu(GEOMMenu2, MENU_ID, ID_SETTINGS_THICKNESS, SC(369, "Thickness line/clearance"));
+	OwnAppendMenu(GEOMMenu2, MENU_ID, ID_SETTINGS_THICKNESS, SC(117, "Thickness line/clearance"));
 	OwnAppendMenu(GEOMMenu2, MENU_ID, ID_ASSIGN_PINS, SC(41, "Assign/Remove pins to objects"));
 	OwnAppendMenu(GEOMMenu2, MENU_ID, ID_ASSIGN_PINS2, SC(42, "Assign pins to objects (Auto increment)"));
 	OwnAppendMenu(GEOMMenu2, MENU_ID, ID_EDIT_GEOMNAME, SC(37, "Change geometry name"));
