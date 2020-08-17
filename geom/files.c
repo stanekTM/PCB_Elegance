@@ -2535,7 +2535,7 @@ int32 CheckPads(int32 mode)
 	else
 	{
 		if (((mode & 1) == 1) && (!Warning))
-			MessageBox(GEOMWindow, SC(235, "No Error(s)/warning(s) found"), SC(4, "Message"), MB_OK);
+			MessageBoxUTF8(GEOMWindow, SC(235, "No Error(s)/warning(s) found"), SC(4, "Message"), MB_OK);
 	}
 
 	return 1;
