@@ -40,6 +40,7 @@
 #include "polygon.h"
 #include "select.h"
 #include "mainloop.h"
+#include "utf8.h"
 
 extern COLORREF GridColor, LineColor;
 extern HDC OutputDisplay;
@@ -1484,7 +1485,6 @@ void InitSpecialDraw(MEASUREITEMSTRUCT * MeasureItem)
 	}
 }
 
-
 // ***************************************************************************************************
 // ***************************************************************************************************
 // ***************************************************************************************************
@@ -1492,20 +1492,6 @@ void InitSpecialDraw(MEASUREITEMSTRUCT * MeasureItem)
 
 void DrawSpecialItem(DRAWITEMSTRUCT * DrawItem)
 {
-	/*
-	DRAWITEMSTRUCT
-
-	    uint32  CtlType;
-	    uint32  CtlID;
-	    uint32  itemID;
-	    uint32  itemAction;
-	    uint32  itemState;
-	    HWND  hwndItem;
-	    HDC   hDC;
-	    RECT  rcItem;
-	    DWORD itemData;
-	*/
-
 	HGDIOBJ SavePen, SaveBrush, MenuBrush, SaveFont;
 	LOGBRUSH BrushObject;
 	HPEN MenuPen, WhitePen, Pen2;
@@ -1514,8 +1500,6 @@ void DrawSpecialItem(DRAWITEMSTRUCT * DrawItem)
 	int32 Redraw;
 	char TextStr[MAX_LENGTH_STRING];
 	HPALETTE OldPalette;
-
-// OnDrawItem
 
 	OldPalette = NULL;
 
@@ -1532,7 +1516,6 @@ void DrawSpecialItem(DRAWITEMSTRUCT * DrawItem)
 		{
 		case IDC_LIST1:
 			ItemNr = DrawItem->itemData;
-//          ItemNr=DrawItem->itemID;
 			Redraw = 0;
 
 			switch (DrawItem->itemAction)
@@ -1583,7 +1566,6 @@ void DrawSpecialItem(DRAWITEMSTRUCT * DrawItem)
 			if (Redraw)
 			{
 				SaveFont = SelectObject(DrawItem->hDC, GetStockObject(DEFAULT_GUI_FONT));
-//            SaveFont=SelectObject(DrawItem->hDC,GetStockObject(SYSTEM_FONT));
 				SetBkColor(DrawItem->hDC, RGB(0, 0, 0));
 				SetTextColor(DrawItem->hDC, RGB(255, 255, 255));
 				WhitePen = CreatePen(PS_SOLID, 1, RGB(255, 255, 255));
@@ -1613,9 +1595,7 @@ void DrawSpecialItem(DRAWITEMSTRUCT * DrawItem)
 					          DrawItem->rcItem.bottom + 1);
 				}
 
-//            SaveFont=SelectObject(DrawItem->hDC,MenuFont);
 				SetBkMode(DrawItem->hDC, TRANSPARENT);
-//            SetBkColor(DrawItem->hDC,RGB(0,0,0));
 				SetTextColor(DrawItem->hDC, RGB(0, 0, 0));
 
 				switch (ItemNr)
@@ -1729,7 +1709,7 @@ void DrawSpecialItem(DRAWITEMSTRUCT * DrawItem)
 					break;
 				}
 
-				TextOut(DrawItem->hDC, 185, DrawItem->rcItem.top + 6, TextStr, strlen(TextStr));
+				TextOutUTF8(DrawItem->hDC, 185, DrawItem->rcItem.top + 6, TextStr, strlen(TextStr));
 				SelectObject(DrawItem->hDC, SavePen);
 				SelectObject(DrawItem->hDC, SaveBrush);
 				SelectObject(DrawItem->hDC, SaveFont);
@@ -1746,8 +1726,6 @@ void DrawSpecialItem(DRAWITEMSTRUCT * DrawItem)
 	}
 }
 
-
-// ***************************************************************************************************
-// ***************************************************************************************************
-// ***************************************************************************************************
-// ***************************************************************************************************
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//*******************************************************************************************************************
