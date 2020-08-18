@@ -40,9 +40,9 @@
 #include "draw2.h"
 #include "files2.h"
 #include "mainloop.h"
-#include "utf8.h"
 #include "ctype.h"
 #include "../functionsc/version.h"
+#include "utf8.h"
 
 #define NrGeomRadioButtons  6
 #define NrGeomInts          5
@@ -874,9 +874,6 @@ int32 CALLBACK LineInputDialog2(HWND Dialog, uint32 Message, WPARAM WParam, LPAR
 		{
 		case IDOK:
 
-//          res=(int32)SendDlgItemMessage(Dialog,ID_LISTBOX_NETS2,LB_GETCURSEL,0,0);
-//          if (res!=LB_ERR) UnselectTracesViasNet(res);
-//  Static_SetText sscanf SelectionEsc
 			if (SendDlgItemMessageUTF8
 			        (Dialog, IDD_LINEINPUT_EDIT1, WM_GETTEXT, MAX_LENGTH_STRING - 1, (LPARAM) DialogTextLine) > 0)
 			{
@@ -1054,23 +1051,10 @@ int32 SetDialogFloatValue(HWND Dialog, int32 DialogMode, int32 DialogControl, do
 
 	if (value == 0.0)
 		strcpy(DialogTextLine, "0.0");
-	else
-	{
-		/*
-		    count=strlen(DialogTextLine);
-		    if (count>4) {
-		      if ((DialogTextLine[count-1]=='0')
-		         &&
-		         (DialogTextLine[count-2]!='.')) DialogTextLine[count-1]=0;
-		      if ((DialogTextLine[count-2]=='0')
-		         &&
-		         (DialogTextLine[count-3]!='.')) DialogTextLine[count-2]=0;
-		      if ((DialogTextLine[count-3]=='0')
-		         &&
-		         (DialogTextLine[count-4]!='.')) DialogTextLine[count-3]=0;
-		    }
-		*/
-	}
+//	else
+//	{
+
+//	}
 
 	if (!CheckDialogControl(DialogMode, DialogControl))
 		return 0;
@@ -1241,16 +1225,6 @@ int32 SetGetGeomRadioButtonValue(int32 DialogMode, int32 DialogControl, int32 va
 
 	switch (DialogControl)
 	{
-	/*
-	    case IDD_GEOM_POW_PAD_BUT:
-	      if (mode==0) return TempGeom->InsertPowerPad;
-	      else TempGeom->InsertPowerPad=value;
-	      break;
-	    case IDD_GEOM_INNER_PAD_BUT:
-	      if (mode==0) return TempGeom->InsertInnerPad;
-	      else TempGeom->InsertInnerPad=value;
-	      break;
-	*/
 	case IDD_GEOM_PIN1_SQUARE:
 		if (mode == 0)
 			return TempGeom->Pin1Square;
@@ -1493,10 +1467,6 @@ void ChangeDialogUnits(HWND Dialog, int32 DialogMode, int32 DialogControl, int32
 			}
 
 			SetDialogFloatValue(Dialog, DialogMode, DialogControl, value, NewUnits);
-//      sprintf(DialogTextLine,"%f",value);
-//      if (value==0.0) strcpy(DialogTextLine,"0.0");
-//      if ((res=SetDialogText(Dialog,DialogMode,DialogControl))!=0) {
-//      }
 		}
 	}
 
@@ -1711,6 +1681,7 @@ void SetDialogRuleValues(HWND Dialog, int32 DialogMode)
 	double                       DefaultRuleAntiPowerPad=0.75e5;
 	double                       DefaultRuleInnerPad=0.55e5;
 	*/
+
 	switch (DialogMode)
 	{
 	case IDD_DIALOG_BGA:
@@ -1772,9 +1743,6 @@ void SetDialogRuleValues(HWND Dialog, int32 DialogMode)
 
 		break;
 	}
-
-//  CurrentUnits=Units;
-//  CurrentUnits=TempGeom->Units;
 }
 
 // ***************************************************************************************************
@@ -2609,8 +2577,6 @@ int32 ViewObjectsDialog(int32 Mode)
 {
 	int res, ok;
 
-//  InitDialogTextLine=TextLine;
-//  DialogWindowText=DialogText;
 	DialogMode = Mode;
 	res = DialogBox(GEOMClass.hInstance, MAKEINTRESOURCE(IDD_DIALOG_VIEW), GEOMWindow, (DLGPROC) ViewObjectsDialog2);
 	ok = 1;
@@ -2699,11 +2665,8 @@ int32 AssignPinDialog(ObjectRecord * ObjectText, int32 Mode)
 	int res, ok, cnt, num;
 	char str[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING];
 
-//  InitDialogTextLine=TextLine;
-//  DialogWindowText=DialogText;
 	DialogMode = Mode;
 
-//  WorkingObject=ObjectText;
 	if ((DialogMode == 0) || (OldPinStr[0] == 0))
 	{
 		memset(&ObjectText->Text, 0, sizeof(ObjectText->Text));
@@ -3093,8 +3056,6 @@ int32 AssignValuesDialog(int32 Mode)
 {
 	int res, ok;
 
-//  InitDialogTextLine=TextLine;
-//  DialogWindowText=DialogText;
 	DialogMode = Mode;
 	res = DialogBox(GEOMClass.hInstance, MAKEINTRESOURCE(IDD_DIALOG_VALUES), GEOMWindow, (DLGPROC) AssignValuesDialog2);
 	ok = 1;
@@ -3117,6 +3078,9 @@ int32 CALLBACK SelectNewGeomtrieDialog2(HWND Dialog, uint32 Message, WPARAM WPar
 	case WM_INITDIALOG:
 		SelectionEsc = 0;
 		SetWindowTextUTF8(Dialog, SC(24, "Select new geometry"));
+		SetDialogItemText(Dialog, IDOK, "OK");
+		SetDialogItemText(Dialog, IDHELP, SC(47, "Help"));
+		SetDialogItemText(Dialog, IDCANCEL, SC(46, "Cancel"));
 		SendDlgItemMessageUTF8(Dialog, IDC_LIST1, LB_ADDSTRING, 0, (LPARAM)SC(1, "New geometry"));
 		SendDlgItemMessageUTF8(Dialog, IDC_LIST1, LB_ADDSTRING, 0, (LPARAM) "DIP (DIL)");
 		SendDlgItemMessageUTF8(Dialog, IDC_LIST1, LB_ADDSTRING, 0, (LPARAM) "PGA");
