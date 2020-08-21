@@ -2179,129 +2179,110 @@ int32 AnnotateAppend(int32 mode, int32 MaxNrRefsPerSheet)
 	return 0;
 }
 
-// *******************************************************************************************************
-// *******************************************************************************************************
-// *******************************************************************************************************
-// *******************************************************************************************************
+//************************************************************************************************************************************
+//************************************************************************************************************************************
+//************************************************************************************************************************************
 
-int32 CheckRefInstances(int32 Mode) // LPSTR SymbolName)
+int32 CheckRefInstances(int32 Mode)
 {
-	int32 lengte, cnt, cnt2, cnt3, RefNum, SheetError, TotalErrors, NeedAnnotation;
+	int32 lengte, cnt, cnt2, RefNum, SheetError, TotalErrors, NeedAnnotation;
 	char FileName[MAX_LENGTH_STRING], str[MAX_LENGTH_STRING], SymbolName[MAX_LENGTH_STRING];
 	InstanceRecord *Instance;
-	SymbolsPos2Record* SymbolPos2;
-	SymbolRecord* Symbol;
 	LPSTR Ref;
 
 	NeedAnnotation = 0;
 	TotalErrors = 0;
+
 	sprintf(str, SC(100, "Checking references\r\n"));
 	AddMessage(str);
-
 
 	for (cnt2 = 0; cnt2 < NrSheets; cnt2++)
 	{
 		Sheets[cnt2].Info = 0;
 		LoadSheetInMemory(cnt2, 1);
 		SheetError = 0;
-
-		SymbolPos2 = &((*SymbolsPos2)[cnt2]);
-		Symbol = (SymbolRecord*)&((*SymbolsMem)[SymbolPos2->Pos]);
-		strcpy(SymbolName, SymbolPos2->SymbolName);
-		sprintf(FileName, "%s\\sym\\%s.sym", DesignPath, SymbolName);
-//		sprintf(FileName, "%s.sym", SymbolName);
-
+		
 		for (cnt = 0; cnt < Design.NrInstances; cnt++)
 		{
 			Instance = (InstanceRecord *) & ((*Instances)[cnt]);
-
+			
 			if ((Instance->Info & (SHEET_SYMBOL | OBJECT_PROTECTED)) == 0)
 			{
 				Ref = Instance->Reference;
 				lengte = strlen(Ref);
-
+				
 				if (lengte > 0)
 				{
 					if (lengte == 1)
 					{
-						SheetError = 1;
-						sprintf(str, SC(101, "1Error in component %s file %s\r\n"), Ref, FileName);
-						AddMessage(str);
+						  SheetError = 1;
+						  sprintf(str, SC(101, "Error in reference %s\r\n"), Ref);
+						  AddMessage(str);
 					}
 
 					if ((!SheetError) && (!isalpha(Ref[0])))
 					{
-						SheetError = 1;
-						sprintf(str, SC(101, "2Error in component %s file %s\r\n"), Ref, FileName);
-						AddMessage(str);
+						  SheetError = 1;
+						  sprintf(str, SC(101, "Error in reference %s\r\n"), Ref);
+						  AddMessage(str);
 					}
 
 					if ((!SheetError) && (!isdigit(Ref[lengte - 1])) && (Ref[lengte - 1] != '?'))
 					{
-						SheetError = 1;
-						sprintf(str, SC(101, "3Error in component %s file %s\r\n"), Ref, FileName);
-						AddMessage(str);
+						  SheetError = 1;
+						  sprintf(str, SC(101, "Error in reference %s\r\n"), Ref);
+						  AddMessage(str);
 					}
 
 					if ((!SheetError) && (Ref[lengte - 1] == '?'))
-					{
-						Sheets[cnt2].Info = 1;
-						NeedAnnotation = 1;
+				    {
+					      Sheets[cnt2].Info = 1;
+					 	  NeedAnnotation = 1;
 					}
 					else
 					{
 						if (GetRefCode2(Ref, str, &RefNum) == -1)
 						{
 							SheetError = 1;
-
+							
 							if (strcmp(Ref, "?") == 0)
-							{
-								sprintf(str, SC(102, "Error in component %s (%s) file %s\r\n"), Ref, Instance->Value, FileName);
-								strcat(str, SC(103, "  A ? reference is not allowed\r\n"));
+							{                                                                                       //Instance->SymbolName,Value,Reference
+								 sprintf(str, SC(102, "Error in reference %s. The %s character is not allowed!\r\n"), Instance->Reference, Ref);
 							}
 							else
-								sprintf(str, SC(101, "4Error in component %s file %s\r\n"), Ref, FileName);
-
-							AddMessage(str);
+								sprintf(str, SC(101, "Error in reference %s\r\n"), Ref);
+							    AddMessage(str);
 						}
 						else
 						{
 							if (RefNum >= MAX_NR_CODES_PER_REF - 1)
 							{
-								SheetError = 1;
-								sprintf(str,
-								        SC(104, "Max of %i component numbers per reference family (%s) in file %s\r\n"),
-								        MAX_NR_CODES_PER_REF - 1, Ref, FileName);
-								AddMessage(str);
+								  SheetError = 1;
+								  sprintf(str, SC(104, "Max of %i component numbers per reference family (%s) in file %s\r\n"),
+								          MAX_NR_CODES_PER_REF - 1, Ref, FileName);
+								  AddMessage(str);
 							}
 							else
 							{
 								if (RefNum < 0)
 								{
-									SheetError = 1;
-									sprintf(str, SC(105, "Negative component number (%s) in file %s\r\n"), Ref, FileName);
-									AddMessage(str);
+									   SheetError = 1;
+									   sprintf(str, SC(105, "Negative component number (%s) in file %s\r\n"), Ref, FileName);
+									   AddMessage(str);
 								}
 							}
 						}
-					}
-				}
-				else
-				{
-//          SheetError=1;
-//          sprintf(str,"Component with no reference (%.0f,%.0f) file %s\r\n",Ref,FileName);
-//          SendMessageUTF8(EditWindow,EM_REPLACESEL,0,(LPARAM)str);
+			        }
 				}
 			}
 		}
-
+		
 		if (SheetError)
 			TotalErrors = 1;
 	}
 
 	if ((Mode == 0) && (TotalErrors))
 	{
-//    DisplayMessage();
 		return -1;
 	}
 
@@ -2320,12 +2301,10 @@ int32 CheckRefInstances(int32 Mode) // LPSTR SymbolName)
 			}
 		}
 
-//    DisplayMessage();
 		if (Mode == 0)
 			return 1;
 	}
 
-//  return -1;
 	if (Mode == 1)
 		return 0;
 
@@ -2333,7 +2312,6 @@ int32 CheckRefInstances(int32 Mode) // LPSTR SymbolName)
 		return -1;
 
 	return 0;
-
 }
 
 // *******************************************************************************************************
