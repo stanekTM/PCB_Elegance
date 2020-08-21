@@ -39,8 +39,8 @@
 #include "time.h"
 #include "stddef.h"
 #include "instance.h"
-#include "utf8.h"
 #include "ctype.h"
+#include "utf8.h"
 
 #define CompPartMemSize           65536
 #define MAX_NR_CODES_PER_REF      32768
@@ -1464,8 +1464,7 @@ int32 CheckComponentsLayoutAfterAnnotation(int32 mode)
 
 int32 AnnotateRestart(int32 mode, int32 MaxNrRefsPerSheet)
 {
-	int32 res, result, Designfp, cnt, cnt2, cnt3, cnt4, cnt5, StartNumber, ok, SheetNr, Start, MaxRefs, MaxOccupation,
-	      MinDiv;
+	int32 res, result, Designfp, cnt, cnt2, cnt3, cnt4, cnt5, StartNumber, ok, SheetNr, Start, MaxRefs, MaxOccupation, MinDiv;
 	SheetIndexRecord SheetStartAnnotate[128];
 	uint8 Occupation;
 	char FileName[MAX_LENGTH_STRING], str3[MAX_LENGTH_STRING];
@@ -2185,29 +2184,32 @@ int32 AnnotateAppend(int32 mode, int32 MaxNrRefsPerSheet)
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-int32 CheckRefInstances(int32 Mode)
+int32 CheckRefInstances(int32 Mode) // LPSTR SymbolName)
 {
-	int32 lengte, cnt, cnt2, RefNum;
-	char FileName[MAX_LENGTH_STRING], str[MAX_LENGTH_STRING];
+	int32 lengte, cnt, cnt2, cnt3, RefNum, SheetError, TotalErrors, NeedAnnotation;
+	char FileName[MAX_LENGTH_STRING], str[MAX_LENGTH_STRING], SymbolName[MAX_LENGTH_STRING];
 	InstanceRecord *Instance;
+	SymbolsPos2Record* SymbolPos2;
+	SymbolRecord* Symbol;
 	LPSTR Ref;
-	int32 SheetError, TotalErrors, NeedAnnotation;
-
-//  MessageBuf[0]=0;
 
 	NeedAnnotation = 0;
 	TotalErrors = 0;
 	sprintf(str, SC(100, "Checking references\r\n"));
 	AddMessage(str);
 
+
 	for (cnt2 = 0; cnt2 < NrSheets; cnt2++)
 	{
-//    sprintf(FileName,"%s%s.sch",SheetDir,Sheets[cnt2].SheetName);
-//    sprintf(str,"Checking references %s\r\n",FileName);
-
 		Sheets[cnt2].Info = 0;
 		LoadSheetInMemory(cnt2, 1);
 		SheetError = 0;
+
+		SymbolPos2 = &((*SymbolsPos2)[cnt2]);
+		Symbol = (SymbolRecord*)&((*SymbolsMem)[SymbolPos2->Pos]);
+		strcpy(SymbolName, SymbolPos2->SymbolName);
+		sprintf(FileName, "%s\\sym\\%s.sym", DesignPath, SymbolName);
+//		sprintf(FileName, "%s.sym", SymbolName);
 
 		for (cnt = 0; cnt < Design.NrInstances; cnt++)
 		{
@@ -2223,21 +2225,21 @@ int32 CheckRefInstances(int32 Mode)
 					if (lengte == 1)
 					{
 						SheetError = 1;
-						sprintf(str, SC(101, "Error in component %s file %s\r\n"), Ref, FileName);
+						sprintf(str, SC(101, "1Error in component %s file %s\r\n"), Ref, FileName);
 						AddMessage(str);
 					}
 
 					if ((!SheetError) && (!isalpha(Ref[0])))
 					{
 						SheetError = 1;
-						sprintf(str, SC(101, "Error in component %s file %s\r\n"), Ref, FileName);
+						sprintf(str, SC(101, "2Error in component %s file %s\r\n"), Ref, FileName);
 						AddMessage(str);
 					}
 
 					if ((!SheetError) && (!isdigit(Ref[lengte - 1])) && (Ref[lengte - 1] != '?'))
 					{
 						SheetError = 1;
-						sprintf(str, SC(101, "Error in component %s file %s\r\n"), Ref, FileName);
+						sprintf(str, SC(101, "3Error in component %s file %s\r\n"), Ref, FileName);
 						AddMessage(str);
 					}
 
@@ -2254,12 +2256,11 @@ int32 CheckRefInstances(int32 Mode)
 
 							if (strcmp(Ref, "?") == 0)
 							{
-								sprintf(str, SC(102, "Error in component %s (%s) file %s\r\n"), Ref, Instance->Value,
-								        FileName);
+								sprintf(str, SC(102, "Error in component %s (%s) file %s\r\n"), Ref, Instance->Value, FileName);
 								strcat(str, SC(103, "  A ? reference is not allowed\r\n"));
 							}
 							else
-								sprintf(str, SC(101, "Error in component %s file %s\r\n"), Ref, FileName);
+								sprintf(str, SC(101, "4Error in component %s file %s\r\n"), Ref, FileName);
 
 							AddMessage(str);
 						}
@@ -2278,8 +2279,7 @@ int32 CheckRefInstances(int32 Mode)
 								if (RefNum < 0)
 								{
 									SheetError = 1;
-									sprintf(str, SC(105, "Negative component number (%s) in file %s\r\n"), Ref,
-									        FileName);
+									sprintf(str, SC(105, "Negative component number (%s) in file %s\r\n"), Ref, FileName);
 									AddMessage(str);
 								}
 							}
