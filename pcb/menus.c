@@ -541,7 +541,7 @@ void MenuPopUpComponents()
 			AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_REGROUP_COMP, SC(551, "Regroup"));
 
 		if (NrCompsSelected == 2)
-			AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_SWAP_COMPONENTS, "Swap components");
+			AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_SWAP_COMPONENTS, SC(274, "Swap components"));
 
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_PROTECT_COMP, SC(552, "Protect"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_MOVE_COMP_TO_TOP, SC(553, "Move components to top layer"));
