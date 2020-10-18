@@ -9,5 +9,5 @@ By default, the programs are in "EN". Other translations are only in "CZ". If yo
 Keep in mind that there are thousands of words in software tools and some are not yet finished. 
 
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
-
+#
 George stanekTM
