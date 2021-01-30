@@ -34,7 +34,7 @@ Remember that there are thousands of words in software tools and some are not re
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
 
 # For "C" fans and programmers
-Unfortunately, these tools are no longer evolving, the only mentioned thread speaks for itself https://www.eevblog.com/forum/eda/pcb-elegance-new-version/.
+Unfortunately, these tools are no longer evolving, the only mentioned thread speaks for itself https://www.eevblog.com/forum/eda/pcb-elegance-new-version/
 
 My calls for a code pitbucket repair were never accepted, so I set out on my own.
 That's how I got to "C" and started learning.
