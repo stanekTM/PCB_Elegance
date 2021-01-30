@@ -24,14 +24,27 @@ tim@pcbelegance.org
 Copyright (C) 2012 Herman Morsink Vollenbroek
 
 # My edited version PCB Elegance
-Somehow I didn't like "Kickad" and "EasyEda", I just prefer PCB Elegance which is closer to me.
-This version of "PCB Elegance" is compatible with Windows 7, 8 and 10.
-I want to say in advance that with my modified version I generate gerber files reliably as the original versions and have PCBs manufactured in China.
-This version is not installed, just unzip the itself files folder to disk. The key is the "PCB_Elegance_v3.52.1" folder, here is also the latest version of the release.
-By default, the programs are in "EN". Other translations are only in "CZ". If you are a proud Czech, copy the translation files from the "Translations\CZ" folder to the main "PCB_Elegance_v3.52.1" directory.
-Keep in mind that there are thousands of words in software tools and some are not yet finished. 
+This version is not installed, just extract the file folder to disk.
+The key is the folder "PCB_Elegance_v3.52.1", here is also the latest version of the release.
+By default, the programs are in "EN".
+Other translations are only in "CZ".
+If you are a proud Czech, copy the translation files from the "Translations\CZ" folder to the main directory "PCB_Elegance_v3.52.1".
+Remember that there are thousands of words in software tools and some are not ready yet.
 
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
+
+# For "C" fans and programmers
+Unfortunately, these tools are no longer evolving, the only mentioned thread speaks for itself https://www.eevblog.com/forum/eda/pcb-elegance-new-version/.
+My calls for a code pitbucket repair were never accepted, so I set out on my own.
+That's how I got to "C" and started learning.
+There are many features that I do not use in the production of printed circuit boards and could be removed.
+For now, however, I leave these functions to others if they are interested.
+This version of "PCB Elegance" is compatible with Windows 7, 8 and 10.
+It is possible to compile for Windows XP, but you must change the compilation target in the IDE.
+Until recently, I used this system successfully.
+I have already stopped testing the XP system, I use Windows 10 for tests and work.
+Testing takes place during the design of the project I am currently creating.
+If I find a bug, I'll try to fix it.
 
 # Instructions for building/compiling
 Unzip the source code archive into am empty directory.
