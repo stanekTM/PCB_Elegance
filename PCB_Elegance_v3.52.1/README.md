@@ -1,5 +1,5 @@
 # My version PCB Elegance
-This version is not installed, just extract the file folder to disk.
-The key is the folder "PCB_Elegance_v3.52.1", here is also the latest version of the release.
+Here is the latest version of the release. 
+This folder "PCB_Elegance_v3.52.1" contains everything for working with a PCB design project.
 #
 Jiri stanekTM
