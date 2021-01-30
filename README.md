@@ -35,6 +35,7 @@ Translations in "CZ" will by no means go with the original version from http://w
 
 # For "C" fans and programmers
 Unfortunately, these tools are no longer evolving, the only mentioned thread speaks for itself https://www.eevblog.com/forum/eda/pcb-elegance-new-version/.
+
 My calls for a code pitbucket repair were never accepted, so I set out on my own.
 That's how I got to "C" and started learning.
 There are many features that I do not use in the production of printed circuit boards and could be removed.
