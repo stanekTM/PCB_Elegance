@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ vygeneroval soubor zahrnutí.
-// Použito D:\Programy\PCBeleganceZdroje\pcb\resource\pcb.rc
+// Použito C:\GitHub\PCB_Elegance\pcb\resource\pcb.rc
 //
 #define IDAPPEND                        3
 #define IDDELETE                        4
