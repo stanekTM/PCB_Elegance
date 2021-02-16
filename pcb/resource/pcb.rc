@@ -873,7 +873,7 @@ BEGIN
     CONTROL         "Plot board outline on each layer",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,235,275,185,8
     GROUPBOX        "Options",IDC_STATIC10,230,260,195,75
     PUSHBUTTON      "thou/mm/inch",IDD_UNITS,125,180,70,15
-    EDITTEXT        IDC_EDIT6,55,185,20,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,55,185,25,12,ES_AUTOHSCROLL
     GROUPBOX        "Drill option",IDC_STATIC8,10,260,215,30
     CONTROL         "Include drill tools in drill file (NCD)",IDC_CHECK3,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,275,205,8
