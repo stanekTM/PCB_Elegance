@@ -1039,7 +1039,7 @@ void CreateUserIniFile()
 }
 
 // ********************************************************************************************************
-// ******************************* naètení jazykového souboru *********************************************
+// ******************************* naèten?jazykového souboru *********************************************
 // ********************************************************************************************************
 
 int32 AddDesignLanguageString(int32 ID, LPSTR Text)
@@ -1069,7 +1069,7 @@ int32 AddDesignLanguageString(int32 ID, LPSTR Text)
 }
 
 // ********************************************************************************************************
-// ******************************* naètení jazykového souboru *********************************************
+// ******************************* naèten?jazykového souboru *********************************************
 // ********************************************************************************************************
 
 int32 AddDesignLanguageStrings(LPSTR FileName)
@@ -1375,7 +1375,7 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 
 	if ((SharedMemoryHandle = OpenFileMapping(FILE_MAP_WRITE, 0, MEMORYMAPPEDSTRING)))
 	{
-		//Mapovaný soubor pamìti již byl vytvoøen jinou aplikací
+		//Mapovan?soubor pamìti ji?byl vytvoøen jinou aplikac?
 		ok = 1;
 	
 #ifdef _DEBUG
@@ -1410,10 +1410,16 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	else
 	{
 // The memory mapped file should be created
-		if (!
-		        (SharedMemoryHandle =
-		             CreateFileMapping((HANDLE) 0xFFFFFFFF, NULL, PAGE_READWRITE, 0, DefSharedMemoryLength,
-		                               MEMORYMAPPEDSTRING)))
+#ifdef _WIN64
+		SharedMemoryHandle =
+			CreateFileMapping((HANDLE)0xFFFFFFFFFFFFFFFF, NULL, PAGE_READWRITE, 0, DefSharedMemoryLength,
+				MEMORYMAPPEDSTRING);
+#else
+		SharedMemoryHandle =
+			CreateFileMapping((HANDLE)0xFFFFFFFF, NULL, PAGE_READWRITE, 0, DefSharedMemoryLength,
+				MEMORYMAPPEDSTRING);
+#endif
+		if (!SharedMemoryHandle)
 		{
 // The memory mapped file can not be created
 			ok = 1;

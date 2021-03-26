@@ -3152,7 +3152,11 @@ int32 ChangeFile(LPSTR FileName, int32 mode)
 
 	if (EditingSymbol)
 	{
+#ifdef _WIN64
+		SetClassLong(SCHWindow, GCLP_HICON, (LONG)LoadIcon(SCHClass.hInstance, MAKEINTRESOURCE(ICON_SYMBOL)));
+#else
 		SetClassLong(SCHWindow, GCL_HICON, (LONG) LoadIcon(SCHClass.hInstance, MAKEINTRESOURCE(ICON_SYMBOL)));
+#endif
 
 		if (EditingSheetSymbol)
 			NewSheetSymbol(res);
@@ -3199,7 +3203,11 @@ int32 ChangeFile(LPSTR FileName, int32 mode)
 	}
 	else
 	{
+#ifdef _WIN64
+		SetClassLong(SCHWindow, GCLP_HICON, (LONG)LoadIcon(SCHClass.hInstance, MAKEINTRESOURCE(ICON_SYMBOL)));
+#else
 		SetClassLong(SCHWindow, GCL_HICON, (LONG) LoadIcon(SCHClass.hInstance, MAKEINTRESOURCE(ICON_SHEET)));
+#endif
 		NewDesign(res);
 		FileChanged = 0;
 
@@ -3308,7 +3316,7 @@ int32 LoadNewFile(int32 mode)
 			sprintf(str3, "%s", DesignPath);
 	}
 
-//	sprintf(str4, "Open %s",str3); //nejde UTF8, naèítá se systémové
+//	sprintf(str4, "Open %s",str3); //nejde UTF8, naèít?se systémov?
 //	FileInputInfo.lpstrTitle = (LPSTR) & str4;
 
 	FileInputInfo.lpstrInitialDir = str3;
@@ -3421,7 +3429,7 @@ int32 SaveFileName(int32 Mode)
 		if (chdir(str3) != 0)
 			sprintf(str3, "%s", DesignPath);
 
-//		sprintf(str4, "Save as %s", str3); //nejde UTF8, naèítá se systémové
+//		sprintf(str4, "Save as %s", str3); //nejde UTF8, naèít?se systémov?
 //		FileInputInfo.lpstrTitle = (LPSTR) & str4;
 
 		strcpy(str, "*.sch");
@@ -3441,7 +3449,7 @@ int32 SaveFileName(int32 Mode)
 		if (chdir(str3) != 0)
 			sprintf(str3, "%s", DesignPath);
 
-//		sprintf(str4, "Save as %s", str3); //nejde UTF8, naèítá se systémové
+//		sprintf(str4, "Save as %s", str3); //nejde UTF8, naèít?se systémov?
 //		FileInputInfo.lpstrTitle = (LPSTR) & str4;
 
 		strcpy(str, "*.sym");

@@ -727,7 +727,7 @@ void RedrawButtons()
 }
 
 //********************************************************************************************************************************
-//*************************** grafika absolutní x,y ******************************************************************************
+//*************************** grafika absolutn?x,y ******************************************************************************
 //********************************************************************************************************************************
 
 void RedrawAbsPosStr(int32 Mode)
@@ -768,7 +768,7 @@ void RedrawAbsPosStr(int32 Mode)
 	Rect.bottom = ClientRect.bottom - 3;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodní pøeklad absolutní
+		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodn?pøeklad absolutn?
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -828,7 +828,7 @@ void RedrawAbsGridPosStr(int32 Mode)
 	Rect.bottom = ClientRect.bottom - 3;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4),
-	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodní pøeklad 2
+	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodn?pøeklad 2
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -890,7 +890,7 @@ void RedrawRelPosStr(int32 Mode)
 	Rect.bottom = ClientRect.bottom - 3;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodní pøeklad møížka
+		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodn?pøeklad møížka
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -910,7 +910,7 @@ void RedrawRelPosStr(int32 Mode)
 }
 
 //****************************************************************************************************************************************
-//****************************** pravý spodní pøeklad vybraných symbolù ******************************************************************
+//****************************** prav?spodn?pøeklad vybraných symbol?******************************************************************
 //****************************************************************************************************************************************
 
 void RedrawInfoStr(int32 Mode)
@@ -949,7 +949,7 @@ void RedrawInfoStr(int32 Mode)
 	Rect.bottom = ClientRect.bottom - 3;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosInfoStr + 2, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR)&InfoStr, strlen(InfoStr)); //pravý spodní pøeklad vybraných symbolù
+		       (LPSTR)&InfoStr, strlen(InfoStr)); //prav?spodn?pøeklad vybraných symbol?
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -1543,7 +1543,18 @@ LRESULT CALLBACK SCHWinProc(HWND Window, UINT Message, WPARAM WParam, LPARAM LPa
 		if (FirstPaint)
 		{
 			FirstPaint = 0;
-
+#ifdef _WIN64
+			if (EditingSymbol)
+			{
+				SetClassLong(SCHWindow, GCLP_HICON, (LONG)LoadIcon(SCHClass.hInstance, MAKEINTRESOURCE(ICON_SYMBOL)));
+				SetSymbolMenu();
+			}
+			else
+			{
+				SetSheetMenu();
+				SetClassLong(SCHWindow, GCLP_HICON, (LONG)LoadIcon(SCHClass.hInstance, MAKEINTRESOURCE(ICON_SHEET)));
+			}
+#else
 			if (EditingSymbol)
 			{
 				SetClassLong(SCHWindow, GCL_HICON, (LONG) LoadIcon(SCHClass.hInstance, MAKEINTRESOURCE(ICON_SYMBOL)));
@@ -1554,7 +1565,7 @@ LRESULT CALLBACK SCHWinProc(HWND Window, UINT Message, WPARAM WParam, LPARAM LPa
 				SetSheetMenu();
 				SetClassLong(SCHWindow, GCL_HICON, (LONG) LoadIcon(SCHClass.hInstance, MAKEINTRESOURCE(ICON_SHEET)));
 			}
-
+#endif
 			AddMenuFiles();
 			ViewWholeDesign(0);
 			SetScrollPageSize();
@@ -3137,9 +3148,9 @@ void DecodeParameters(int32 mode)
 
 			if (strnicmp(Parameters[cnt].Option, "w", lengte) == 0)
 			{
-//				sscanf((LPSTR) &Parameters[cnt].Parameter[pos], "%x", &MasterWindow); //pùvodní
+//				sscanf((LPSTR) &Parameters[cnt].Parameter[pos], "%x", &MasterWindow); //pùvodn?
 
-				scanf_s((LPSTR) &Parameters[cnt].Parameter[pos], "%x", &MasterWindow); //opravený
+				scanf_s((LPSTR) &Parameters[cnt].Parameter[pos], "%x", &MasterWindow); //opraven?
 			}
 
 			if (strnicmp(Parameters[cnt].Option, "x", lengte) == 0)
