@@ -397,7 +397,7 @@ void CreateNewBrush(HBRUSH * NewBrush, int32 GraphicsObjectNr, int32 mode)
 	typedef uint8 ByteArray[1000];
 	BITMAPV4HEADER *BitmapHeader;
 	COLORREF *BitmapColors;
-	uint32 MemPos;
+	uint64 MemPos;
 	uint8 *BitmapBits;
 	LOGBRUSH *BrushObject;
 
@@ -444,7 +444,7 @@ void CreateNewBrush(HBRUSH * NewBrush, int32 GraphicsObjectNr, int32 mode)
 	if (OperatingSystem == VER_PLATFORM_WIN32_NT)
 	{
 		BitmapHeader = (BITMAPV4HEADER *) & BitmapBrushInfo[GraphicsObjectNr]->bmiHeader;
-		MemPos = (uint32) BitmapBrushInfo[GraphicsObjectNr];
+		MemPos = (uint64) BitmapBrushInfo[GraphicsObjectNr];
 		MemPos += BitmapHeader->bV4Size;
 		BitmapColors = (COLORREF *) MemPos;
 		BitmapBits = (uint8 *) & BitmapColors[2];

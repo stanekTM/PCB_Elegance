@@ -1617,7 +1617,7 @@ void RedrawButtons()
 }
 
 //*****************************************************************************************************************************
-//******************************** levý pøeklad vrstev ************************************************************************
+//******************************** lev?pøeklad vrstev ************************************************************************
 //*****************************************************************************************************************************
 
 void RedrawLayerStr(int32 Mode)
@@ -1730,7 +1730,7 @@ void RedrawAbsPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodní pøeklad absolutní
+		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodn?pøeklad absolutn?
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -1789,7 +1789,7 @@ void RedrawAbsGridPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4),
-	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodní pøeklad møížka
+	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodn?pøeklad møížka
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -1849,7 +1849,7 @@ void RedrawRelPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodní pøeklad relativní
+		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodn?pøeklad relativn?
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -4205,7 +4205,7 @@ void DialogResources(int32 DialogResourceValue) //pøidán
 }
 
 // ********************************************************************************************************
-// ******************************* naètení jazykového souboru *********************************************
+// ******************************* naèten?jazykového souboru *********************************************
 // ********************************************************************************************************
 
 int32 AddPcbLanguageString(int32 ID, LPSTR Text)
@@ -4236,7 +4236,7 @@ int32 AddPcbLanguageString(int32 ID, LPSTR Text)
 }
 
 // ********************************************************************************************************
-// ******************************* naètení jazykového souboru *********************************************
+// ******************************* naèten?jazykového souboru *********************************************
 // ********************************************************************************************************
 
 int32 AddPcbLanguageStrings(LPSTR FileName)
@@ -4497,7 +4497,7 @@ int32 PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd
 
 		if ((SharedMemoryHandle = OpenFileMapping(FILE_MAP_WRITE, 0, MEMORYMAPPEDSTRING)))
 		{
-			//********** Mapovaný soubor pamìti již byl vytvoøen jinou aplikací (Správce návrhù) ******
+			//********** Mapovan?soubor pamìti ji?byl vytvoøen jinou aplikac?(Správce návrh? ******
 
 			SharedMemory = (uint8 *) MapViewOfFile(SharedMemoryHandle, FILE_MAP_ALL_ACCESS, 0, 0, 0);
 

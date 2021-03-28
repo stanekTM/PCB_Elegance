@@ -1,4 +1,4 @@
-/*
+﻿/*
  * PCB elegance (Open source tools for making printed circuit boards)
  *
  * Copyright (C) 2012  Herman Morsink Vollenbroek
@@ -2236,13 +2236,13 @@ void CreateWindowObjects(HINSTANCE hInstance)
 
 	ShowWindow(DeleteSymbolsButton1, SW_SHOW);
 
-	Utf8ToUnicode(SC(39, "Copy ►"), Wstr, 200);
+	Utf8ToUnicode(SC(39, u8"Copy ►"), Wstr, 200);
 //  Utf8ToUnicode(SC(39,"Copy ->"),Wstr,200);
 	CopyButton1 =
 	    CreateWindowW(L"BUTTON", Wstr, WS_CHILD, RectListWindow2.left - ButtonSizeX - 15, 120, ButtonSizeX, ButtonSizeY,
 	                  LIBMANWindow, (HMENU) ID_COPY_SYMBOLS1, hInstance, NULL);
 	ShowWindow(CopyButton1, SW_SHOW);
-	Utf8ToUnicode(SC(40, "Move ►"), Wstr, 200);
+	Utf8ToUnicode(SC(40, u8"Move ►"), Wstr, 200);
 //  Utf8ToUnicode(SC(40,"Move ->"),Wstr,200);
 	MoveButton1 =
 	    CreateWindowW(L"BUTTON", Wstr, WS_CHILD, RectListWindow2.left - ButtonSizeX - 15, 160, ButtonSizeX, ButtonSizeY,
@@ -2342,13 +2342,13 @@ void CreateWindowObjects(HINSTANCE hInstance)
 
 	ShowWindow(DeleteSymbolsButton2, SW_SHOW);
 
-	Utf8ToUnicode(SC(41, "◄ Copy"), Wstr, 200);
+	Utf8ToUnicode(SC(41, u8"◄ Copy"), Wstr, 200);
 //  Utf8ToUnicode(SC(41,"<- Copy"),Wstr,200);
 	CopyButton2 =
 	    CreateWindowW(L"BUTTON", Wstr, WS_CHILD, RectListWindow2.left - ButtonSizeX - 15, 220, ButtonSizeX, ButtonSizeY,
 	                  LIBMANWindow, (HMENU) ID_COPY_SYMBOLS2, hInstance, NULL);
 	ShowWindow(CopyButton2, SW_SHOW);
-	Utf8ToUnicode(SC(42, "◄ Move"), Wstr, 200);
+	Utf8ToUnicode(SC(42, u8"◄ Move"), Wstr, 200);
 //  Utf8ToUnicode(SC(42,"<- Move"),Wstr,200);
 	MoveButton2 =
 	    CreateWindowW(L"BUTTON", Wstr, WS_CHILD, RectListWindow2.left - ButtonSizeX - 15, 260, ButtonSizeX, ButtonSizeY,
@@ -3397,10 +3397,17 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	ShowWindow(LIBMANWindow, nCmdShow);
 	MakeMenu();
 
+#ifdef _WIN64
+	if (LibraryMode == 0)
+		SetClassLong(LIBMANWindow, GCLP_HICON, (LONG)LoadIcon(LIBMANClass.hInstance, MAKEINTRESOURCE(ICON1_1)));
+	else
+		SetClassLong(LIBMANWindow, GCLP_HICON, (LONG)LoadIcon(LIBMANClass.hInstance, MAKEINTRESOURCE(ICON1_2)));
+#else
 	if (LibraryMode == 0)
 		SetClassLong(LIBMANWindow, GCL_HICON, (LONG) LoadIcon(LIBMANClass.hInstance, MAKEINTRESOURCE(ICON1_1)));
 	else
 		SetClassLong(LIBMANWindow, GCL_HICON, (LONG) LoadIcon(LIBMANClass.hInstance, MAKEINTRESOURCE(ICON1_2)));
+#endif
 
 	if (ProjectActive)
 		InsertWindowInProject(LIBMANWindow, 0);

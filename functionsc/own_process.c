@@ -922,6 +922,9 @@ void GetCPUID(uint32 op, uint32 *EAX, uint32 *EBX, uint32 *ECX, uint32 *EDX)
 	*ECX = regC;
 	*EDX = regD;
 #else
+#ifdef _WIN64
+	x64_cpuid(op, EAX, EBX, ECX, EDX);
+#else
 	DWORD A, B, C, D;
 	_asm {
 		mov eax, op
@@ -936,6 +939,7 @@ void GetCPUID(uint32 op, uint32 *EAX, uint32 *EBX, uint32 *ECX, uint32 *EDX)
 	*EBX = B;
 	*ECX = C;
 	*EDX = D;
+#endif
 #endif
 }
 
