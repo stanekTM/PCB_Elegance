@@ -42,6 +42,7 @@ That's how I got to "C" and started learning.
 There are many features that I do not use in the production of printed circuit boards and could be removed.
 For now, however, I leave these functions to others if they are interested.
 This version of "PCB Elegance" is compatible with Windows 7, 8 and 10.
+Thanks to the "zhouxs1023" developer for supporting x64 code!
 It is possible to compile for Windows XP, but you must change the compilation target in the IDE.
 Until recently, I used this system successfully.
 I have already stopped testing the XP system, I use Windows 10 for tests and work.
