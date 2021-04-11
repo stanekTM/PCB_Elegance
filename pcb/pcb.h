@@ -96,4 +96,6 @@ void SetScrollPageSize(void);
 
 void SetScrollPosition(void);
 
+void LoadUserIniFile(void);
+
 #endif

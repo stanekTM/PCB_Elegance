@@ -1104,7 +1104,7 @@ int32 AddDesignLanguageStrings(LPSTR FileName)
 			if (LanguageFileName[0] == 0)
 			{
 				GetString(LineBuf, str);
-				sprintf(LanguageFileName, "%s\\%s", ExePath, str);
+				sprintf(LanguageFileName, "%s\\%s", LanguagePath, str);
 			}
 		}
 	}
@@ -1282,11 +1282,6 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 
 //  res=TestLineConnectedToCircle(152.0,78.0,152.0,95.0,151.0,94.0,0.04);
 
-	sprintf(str, "%s\\LanguageDesign.txt", ExePath);
-
-	if (AddDesignLanguageStrings(str) == -2)
-		return -1;
-
 	MemoryMain();
 #ifdef _DEBUG
 //  GetRegistrySoftwareKeys(ExePath);
@@ -1341,6 +1336,11 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 
 	LoadUserIniFile();
 	AdjustWindowSize();
+	
+	sprintf(str, "%s\\LanguageDesign.txt", LanguagePath);
+
+	if (AddDesignLanguageStrings(str) == -2)
+		return -1;
 
 	strcpy(WindowStr, SC(63, "Design manager PCB Elegance"));
 	SetWindowTextUTF8(DESIGNWindow, WindowStr);
@@ -1375,7 +1375,6 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 
 	if ((SharedMemoryHandle = OpenFileMapping(FILE_MAP_WRITE, 0, MEMORYMAPPEDSTRING)))
 	{
-		//Mapovan?soubor pamìti ji?byl vytvoøen jinou aplikac?
 		ok = 1;
 	
 #ifdef _DEBUG

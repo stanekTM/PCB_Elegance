@@ -1380,7 +1380,6 @@ int32 CheckProjectPath(char* NewProjectPath)
 }
 
 //***********************************************************************************************************
-//************************** Vložit oznaèení komponentu/èíslo dílu IDD_DIALOG_TEXTINPUT *********************
 //***********************************************************************************************************
 
 int32 CALLBACK TextInputDialog2(HWND Dialog, WORD Message, WORD WParam, int32 LParam)
@@ -1446,7 +1445,6 @@ int32 TextInputDialog(LPSTR TextLine, int32 Mode)
 }
 
 //*******************************************************************************************************
-//************************************ Nový projekt IDD_DIALOG_NEW_PROJECT ******************************
 //*******************************************************************************************************
 
 int32 CALLBACK NewProjectDialog2(HWND Dialog, WORD Message, WORD WParam, int32 LParam)
@@ -1467,7 +1465,7 @@ int32 CALLBACK NewProjectDialog2(HWND Dialog, WORD Message, WORD WParam, int32 L
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC5, SC(43, "User geometry"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC6, SC(243, "Libraries"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC7, SC(242, "Project"));
-//		SetDialogItemTextUTF8(Dialog, IDC_CHECK1, SC(44, "Use part numbers")); //nevyužito, nezobrazeno
+//		SetDialogItemTextUTF8(Dialog, IDC_CHECK1, SC(44, "Use part numbers"));
 		SetDialogItemTextUTF8(Dialog, IDC_CHECK2, SC(217, "Disable one pin net check"));
 		SetDialogItemTextUTF8(Dialog, IDC_CHECK3, SC(240, "Save symbols/geometries locally"));
 		SetDialogItemTextUTF8(Dialog, IDOK, "OK");
@@ -1486,7 +1484,7 @@ int32 CALLBACK NewProjectDialog2(HWND Dialog, WORD Message, WORD WParam, int32 L
 			CutExtensionFileName(TopSheetName);
 		}
 
-		SendDlgItemMessageUTF8(Dialog, IDC_EDIT1, WM_SETTEXT, 0, (LPARAM) & DesignPath); //nevyužito
+		SendDlgItemMessageUTF8(Dialog, IDC_EDIT1, WM_SETTEXT, 0, (LPARAM) & DesignPath); 
 
 		SendDlgItemMessageUTF8(Dialog, IDC_EDIT2, WM_SETTEXT, 0, (LPARAM) & DesignName);
 		SendDlgItemMessageUTF8(Dialog, IDC_EDIT5, WM_SETTEXT, 0, (LPARAM) & TopSheetName);
@@ -1631,7 +1629,6 @@ int32 NewProjectDialog(int32 Mode)
 }
 
 //*********************************************************************************************************
-//************************** nastavení projektu IDD_DIALOG_PROJECT ****************************************
 //*********************************************************************************************************
 
 int32 CALLBACK ProjectDialog2(HWND Dialog, WORD Message, WORD WParam, int32 LParam)
@@ -1652,7 +1649,7 @@ int32 CALLBACK ProjectDialog2(HWND Dialog, WORD Message, WORD WParam, int32 LPar
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC5, SC(43, "User geometry"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC6, SC(241, "Special settings"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC7, SC(242, "Project"));
-//		SetDialogItemTextUTF8(Dialog, IDC_CHECK1, SC(44, "Use part numbers")); //nevyužito, nezobrazeno
+//		SetDialogItemTextUTF8(Dialog, IDC_CHECK1, SC(44, "Use part numbers")); 
 		SetDialogItemTextUTF8(Dialog, IDC_CHECK2, SC(217, "Disable one pin net check"));
 		SetDialogItemTextUTF8(Dialog, IDC_CHECK3, SC(240, "Save symbols/geometries locally"));
 		SetDialogItemTextUTF8(Dialog, IDOK, "OK");
@@ -1837,23 +1834,32 @@ int32 CALLBACK ConfigurePathsDialog2(HWND Dialog, WORD Message, WORD WParam, int
 	case WM_INITDIALOG:
 		SetWindowTextUTF8(Dialog, SC(280, "Configure the project paths"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC1, SC(282, "Project directory"));
-		SetDialogItemTextUTF8(Dialog, IDC_STATIC2, SC(283, "Path - This may require administrator privileges to set"));
+		SetDialogItemTextUTF8(Dialog, IDC_STATIC2, SC(283, "Project Path - This may require administrator privileges to set"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC3, SC(163, "Gerber viewer"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC4, SC(285, "Path"));
 		SetDialogItemTextUTF8(Dialog, IDC_RADIO1, SC(286, "Viewplot ( default )"));
 		SetDialogItemTextUTF8(Dialog, IDC_RADIO2, SC(287, "Gerbv"));
 		SetDialogItemTextUTF8(Dialog, IDC_BUTTON1, SC(284, "Set"));
+		SetDialogItemTextUTF8(Dialog, IDC_STATIC5, SC(294, "Language path set"));
+		SetDialogItemTextUTF8(Dialog, IDC_RADIO3, SC(295, "English ( default )"));
+		SetDialogItemTextUTF8(Dialog, IDC_RADIO4, SC(296, "Other Language"));
 		SetDialogItemTextUTF8(Dialog, IDOK, "OK");
 		SetDialogItemTextUTF8(Dialog, IDCANCEL, SC(37, "Cancel"));
 		SetDialogItemTextUTF8(Dialog, IDHELP, SC(36, "Help"));
 
 		SendDlgItemMessageUTF8(Dialog, IDC_EDIT1, WM_SETTEXT, 0, (LPARAM)& ProjectPath);
 		SendDlgItemMessageUTF8(Dialog, IDC_EDIT2, WM_SETTEXT, 0, (LPARAM)& GerbvPath);
+		SendDlgItemMessageUTF8(Dialog, IDC_EDIT3, WM_SETTEXT, 0, (LPARAM)& LanguagePath);
 
 		if (UseGerbv == 1)
 			SendDlgItemMessage(Dialog, IDC_RADIO2, BM_SETCHECK, 1, 0);
 		else
 			SendDlgItemMessage(Dialog, IDC_RADIO1, BM_SETCHECK, 1, 0);
+
+		if (UseLanguage == 1)
+			SendDlgItemMessage(Dialog, IDC_RADIO4, BM_SETCHECK, 1, 0);
+		else
+			SendDlgItemMessage(Dialog, IDC_RADIO3, BM_SETCHECK, 1, 0);
 
 		return about;
 
@@ -1937,12 +1943,34 @@ int32 CALLBACK ConfigurePathsDialog2(HWND Dialog, WORD Message, WORD WParam, int
 				}
 			}
 
+			if (SendDlgItemMessage(Dialog, IDC_RADIO3, BM_GETCHECK, 0, 0) == 1)
+				UseLanguage = 0;
+
+			if (SendDlgItemMessage(Dialog, IDC_RADIO4, BM_GETCHECK, 0, 0) == 1)
+			{
+				if ((res = SendDlgItemMessageUTF8(Dialog, IDC_EDIT3, WM_GETTEXT, MAX_LENGTH_STRING - 50,
+					(LPARAM)DialogTextLine)) != 0)
+				{
+					strcpy(str, DialogTextLine);
+					if (FileExistsUTF8(str) != -1)
+					{ // Gerbv found
+						strcpy(LanguagePath, str);
+						UseLanguage = 1;
+					}
+				}
+
+			}
+			else
+			{
+				strcpy(LanguagePath, "");
+				UseLanguage = 0;
+			}
 
 			EndDialog(Dialog, 1);
 			return about;
 
 		case IDHELP:
-//			Help("..     .htm", 0); //místní nápovìda chybí
+//			Help("..     .htm", 0); 
 			ShellExecute(0, 0, "http://www.pcbelegance.org/docs/current/design/text/configure_paths.html", 0, 0, SW_SHOW);
 			
 			break;
@@ -2015,7 +2043,6 @@ void FillItemColumnsBOM(HWND Dialog, int32 ColumnListBox, int32 ListBox)
 }
 
 //*******************************************************************************************************
-//************************* Generovat seznam materiálu IDD_DIALOG_BOM ***********************************
 //*******************************************************************************************************
 
 int32 CALLBACK BOMDialog2(HWND Dialog, WORD Message, WORD WParam, int32 LParam)
@@ -2221,7 +2248,7 @@ int32 BOMDialog(int32 Mode)
 }
 
 //************************************************************************************************************
-//**************************** Generovat anotaci listù IDD_DIALOG_ANNOTATION *********************************
+//**************************** Generovat anotaci list IDD_DIALOG_ANNOTATION *********************************
 //************************************************************************************************************
 
 int32 CALLBACK AnnotationDialog2(HWND Dialog, WORD Message, WORD WParam, int32 LParam)
@@ -2348,7 +2375,7 @@ int32 CALLBACK AboutDialogBody(HWND Dialog, UINT Message, WPARAM WParam, LPARAM 
 		SetWindowTextUTF8(Dialog, SC(62, "About program"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC1, SC(63, "Design manager PCB Elegance"));
 		SetDialogItemTextUTF8(Dialog, IDOK, "OK");
-		SetDialogItemTextUTF8(Dialog, IDHELP, "Web PCB Elegance"); //pøidán
+		SetDialogItemTextUTF8(Dialog, IDHELP, "Web PCB Elegance"); 
 
 		sprintf(str, SC(64, "\r\n Build version %i.%i.%i  ( %s )"), VER_VERSION / 100, VER_VERSION % 100, VER_BUILD, VER_DATE_STR);
 
@@ -2375,7 +2402,7 @@ int32 CALLBACK AboutDialogBody(HWND Dialog, UINT Message, WPARAM WParam, LPARAM 
 			return about;
 		
 		case IDHELP:
-			ShellExecute(0, 0, "http://www.pcbelegance.org", 0, 0, SW_SHOW); //pøidán
+			ShellExecute(0, 0, "http://www.pcbelegance.org", 0, 0, SW_SHOW); 
 			return about;
 		}
 
@@ -2417,8 +2444,6 @@ int32 LoadOrcadFileName(LPSTR OrcadFile, int32 mode)
 }
 
 //*******************************************************************************************************
-//********************************* Pøevod schématu ORCAD IDD_DIALOG_ORCAD_CONV *************************
-//********************************* Pøevod knihovny ORCAD IDD_DIALOG_ORCAD_CONV2 ************************
 //*******************************************************************************************************
 
 int32 CALLBACK OrcadConvertDialog2(HWND Dialog, WORD Message, WORD WParam, int32 LParam)
@@ -2664,7 +2689,6 @@ int32 OrcadConversion(int32 mode)
 }
 
 //*******************************************************************************************************
-//************************ Tisk všech listù schémat do jednoho souboru PDF ******************************
 //********************************** IDD_DIALOG_PDF_OUTPUT **********************************************
 //*******************************************************************************************************
 
@@ -3586,6 +3610,11 @@ void SaveUserIniFile(int32 mode)
 	WriteLn(fp, Line);
 	sprintf(Line, "GerbvPath=\"%s\"", GerbvPath);
 	WriteLn(fp, Line);
+	sprintf(Line, "UseLanguage=%i", UseLanguage);
+	WriteLn(fp, Line);
+	sprintf(Line, "LanguagePath=\"%s\"", LanguagePath);
+	WriteLn(fp, Line);
+	sprintf(Line, "");
 	WriteLn(fp, "");
 
 	strcpy(Line, "[LastDesigns]");
@@ -3719,6 +3748,22 @@ void LoadUserIniFile()
 							{ // Gerbv found
 								strcpy(GerbvPath, str2);
 							}
+						}
+
+						if (stricmp(str1, "UseLanguage") == 0)
+						{
+							if (sscanf(str2, "%i", &Value) == 1)
+								UseLanguage = Value;
+						}
+
+						if (stricmp(str1, "LanguagePath") == 0)
+						{
+							if (FileExistsUTF8(str2) != -1)
+							{ // Gerbv found
+								strcpy(LanguagePath, str2);
+							}
+							else
+								strcpy(LanguagePath, "");
 						}
 
 					}

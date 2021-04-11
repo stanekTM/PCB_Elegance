@@ -95,6 +95,8 @@
 
 #define  SCROLL_FACTOR                  1.0
 #define  MEMORYMAPPEDSTRING             "MMFILE_PCB_ELEGANCE"
+
+#define PCB_ELEG_ENVIRONMENT_STRING     "PCB_ELEG_ENVIRONMENT"
 /*
 #define  ScreenPosAbsCursorInit         10
 #define  ScreenPosAbsGridCursorInit     170
@@ -177,6 +179,7 @@ char SearchForPartNrString[MAX_LENGTH_STRING];
 char ExecuteCommands[MAX_LENGTH_STRING];
 WCHAR StartDirW[MAX_LENGTH_STRING];
 LPTSTR CursorType = IDC_ARROW;
+char LanguagePath[MAX_LENGTH_STRING], UserIniFile[MAX_LENGTH_STRING], UserIniFilePath[MAX_LENGTH_STRING];
 //LPTSTR                      CursorType=IDC_CROSS;
 
 ProjectInfoRecord *ProjectInfo = NULL;
@@ -267,7 +270,7 @@ static ProgramInfoRecord ProgramInfo = { {
 
 void WriteIniFile(void);
 
-extern void DialogResources(int32 DialogResourceValue); //pøidán øádek 4227
+extern void DialogResources(int32 DialogResourceValue); 
 
 // ********************************************************************************************************
 // ********************************************************************************************************
@@ -1617,7 +1620,7 @@ void RedrawButtons()
 }
 
 //*****************************************************************************************************************************
-//******************************** lev?pøeklad vrstev ************************************************************************
+//*****************************************************************************************************************************
 //*****************************************************************************************************************************
 
 void RedrawLayerStr(int32 Mode)
@@ -1730,7 +1733,7 @@ void RedrawAbsPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodn?pøeklad absolutn?
+		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); 
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -1789,7 +1792,7 @@ void RedrawAbsGridPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4),
-	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodn?pøeklad møížka
+	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); 
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -1849,7 +1852,7 @@ void RedrawRelPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodn?pøeklad relativn?
+		       (LPSTR) & RelPosStr, strlen(RelPosStr)); 
 
 	SelectObject(OutputDisplay, SaveFont);
 
@@ -4200,12 +4203,12 @@ void WriteIniFile()
 	FileClose(fp);
 }
 
-void DialogResources(int32 DialogResourceValue) //pøidán
+void DialogResources(int32 DialogResourceValue) 
 {
 }
 
 // ********************************************************************************************************
-// ******************************* naèten?jazykového souboru *********************************************
+// ********************************************************************************************************
 // ********************************************************************************************************
 
 int32 AddPcbLanguageString(int32 ID, LPSTR Text)
@@ -4236,7 +4239,7 @@ int32 AddPcbLanguageString(int32 ID, LPSTR Text)
 }
 
 // ********************************************************************************************************
-// ******************************* naèten?jazykového souboru *********************************************
+// ********************************************************************************************************
 // ********************************************************************************************************
 
 int32 AddPcbLanguageStrings(LPSTR FileName)
@@ -4271,10 +4274,11 @@ int32 AddPcbLanguageStrings(LPSTR FileName)
 			{
 				GetString(LineBuf, str);
 
-				if (ExePath[0] != 0)
-					sprintf(LanguageFileName, "%s\\%s", ExePath, str);
+				if (LanguagePath[0] != 0)
+					sprintf(LanguageFileName, "%s\\%s", LanguagePath, str);
 				else
-					sprintf(LanguageFileName, "%s\\%s", ExecutableDir, str);
+				//	sprintf(LanguageFileName, "%s\\%s", ExecutableDir, str);
+					strcpy(LanguageFileName, "");
 			}
 		}
 	}
@@ -4399,6 +4403,90 @@ void DecodeParameters(int32 mode)
 	}
 }
 
+void LoadUserIniFile()
+{
+	int32 fp, Length, ParamMode, Value, res;
+	char LineBuf[MAX_LENGTH_STRING], str1[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING], CurrentDir[MAX_LENGTH_STRING],
+		str4[MAX_LENGTH_STRING];
+
+	if ((fp = TextFileOpenUTF8(UserIniFile)) < 0)
+		return;
+
+	ParamMode = 0;
+
+	while ((Length = ReadLnWithMaxLength(fp, LineBuf, MAX_LENGTH_STRING - 50)) >= 0)
+	{
+		strcpy(str4, LineBuf);
+
+		if ((Length > 1) && (LineBuf[0] != ';') && (LineBuf[0] != '/') && (LineBuf[0] != '#'))
+		{
+			GetSpecialString(LineBuf, str1, 0);
+			GetSpecialString(LineBuf, str2, 0);
+
+			if (str1[0] == '[')
+			{
+				ParamMode = 0;
+
+				//        if (stricmp(str1,"[ExeDirectory]")==0) ParamMode=1;
+				//        if (stricmp(str1,"[ProjectPath]")==0) ParamMode=2;
+				//        if (stricmp(str1,"[SymbolDirs]")==0) ParamMode=3;
+				//        if (stricmp(str1,"[GeometryLibraryPath]")==0) ParamMode=4;
+				//      if (stricmp(str1,"[SchematicSymbolLibraryPath]")==0) ParamMode=5;
+				if (stricmp(str1, "[LastDesigns]") == 0)
+					ParamMode = 1;
+
+				if (stricmp(str1, "[Settings]") == 0)
+					ParamMode = 2;
+			}
+			else
+			{
+				switch (ParamMode)
+				{
+				case 1:
+					break;
+
+				case 2:
+					if (GetStringValue(str4, str1, str2))
+					{
+						//						if (stricmp(str1, "UseLanguage") == 0)
+						//						{
+						//							if (sscanf(str2, "%i", &Value) == 1)
+						//								UseLanguage = Value;
+						//						}
+
+						if (stricmp(str1, "LanguagePath") == 0)
+						{
+							if (FileExistsUTF8(str2) != -1)
+							{ // Gerbv found
+								strcpy(LanguagePath, str2);
+							}
+							else
+								strcpy(LanguagePath, "");
+						}
+					}
+
+					break;
+
+				case 3:
+					break;
+
+				case 4:
+					break;
+
+				case 5:
+					break;
+
+				case 6:
+					break;
+				}
+			}
+		}
+	}
+
+	TextFileClose(fp);
+	//	SetCurrentDirectoryUTF8(CurrentDir);
+}
+
 // ********************************************************************************************************
 // ********************************************************************************************************
 // ********************************************************************************************************
@@ -4407,9 +4495,10 @@ void DecodeParameters(int32 mode)
 int32 PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, int32 nCmdShow)
 {
 	MSG M;
-	int32 count, code;
+	int32 count, code, res, KeySize;
 	uint32 EAX, EBX, ECX, EDX, FlagSSE2 = 0;
-	char str[MAX_LENGTH_STRING], *TestCommandLine, vendor[40];
+	char str[MAX_LENGTH_STRING], *TestCommandLine, vendor[40], *env;
+	HKEY Key;
 
 #ifdef _DEBUG
 	HMENU EditMenu, MainMenu;
@@ -4477,10 +4566,44 @@ int32 PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd
 	ToetsMain();
 	LoadDesignIniFile();
 
-	if (ExePath[0] != 0)
-		sprintf(str, "%s\\LanguagePcb.txt", ExePath);
+	if (UserIniFilePath[0] == 0)
+	{
+		env = getenv(PCB_ELEG_ENVIRONMENT_STRING);
+
+		if (env != NULL)
+			strcpy(UserIniFilePath, env);
+	}
+
+	if (UserIniFilePath[0] == 0)
+	{
+		sprintf(str, "Software\\PCB Elegance");
+
+		if ((res = RegOpenKeyEx(HKEY_LOCAL_MACHINE, str, 0, KEY_QUERY_VALUE, &Key)) == ERROR_SUCCESS)
+		{
+			KeySize = sizeof(UserIniFilePath) - 1;
+
+			if ((res = RegQueryValueEx(Key, "ProjectDir", 0, NULL, (LPBYTE)str, (PDWORD)& KeySize))
+				== ERROR_SUCCESS)
+			{
+				strcpy(UserIniFilePath, str);
+				ok = 1;
+			}
+
+			RegCloseKey(Key);
+		}
+	}
+
+	if (UserIniFilePath[0] == 0)
+		strcpy(UserIniFilePath, ExePath);
+
+	sprintf(UserIniFile, "%s\\user.ini", UserIniFilePath);
+	LoadUserIniFile();
+
+	if (LanguagePath[0] != 0)
+		sprintf(str, "%s\\LanguagePcb.txt", LanguagePath);
 	else
-		sprintf(str, "%s\\LanguagePcb.txt", ExecutableDir);
+		//sprintf(str, "%s\\LanguagePcb.txt", ExecutableDir);
+		strcpy(str, "");
 
 	if (AddPcbLanguageStrings(str) == -2)
 		return -1;
@@ -4497,8 +4620,6 @@ int32 PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd
 
 		if ((SharedMemoryHandle = OpenFileMapping(FILE_MAP_WRITE, 0, MEMORYMAPPEDSTRING)))
 		{
-			//********** Mapovan?soubor pamìti ji?byl vytvoøen jinou aplikac?(Správce návrh? ******
-
 			SharedMemory = (uint8 *) MapViewOfFile(SharedMemoryHandle, FILE_MAP_ALL_ACCESS, 0, 0, 0);
 
 			if (SharedMemory != NULL)

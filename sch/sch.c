@@ -83,6 +83,8 @@
 #define  MEMORYMAPPEDSTRING             "MMFILE_PCB_ELEGANCE"
 #define  AtomStrSchematicSelect         "Layout_editor_active_schematic_select"
 
+#define PCB_ELEG_ENVIRONMENT_STRING     "PCB_ELEG_ENVIRONMENT"
+
 #define  ScreenPosAbsCursor             3   //10 grafika pozic x,y
 #define  ScreenPosAbsGridCursor         200 //80
 #define  ScreenPosRelGridCursor         200 //80
@@ -146,7 +148,8 @@ UINT StartUpMessage;
 uint8 ButtonSaveMem[32768];
 
 char IniFile[MAX_LENGTH_STRING], StartDir[MAX_LENGTH_STRING], ExecutableDir[MAX_LENGTH_STRING],
-     PrintingParameters[MAX_LENGTH_STRING], SchExecutable[MAX_LENGTH_STRING], MessageStr[MAX_LENGTH_STRING];
+     PrintingParameters[MAX_LENGTH_STRING], SchExecutable[MAX_LENGTH_STRING], MessageStr[MAX_LENGTH_STRING],
+	LanguagePath[MAX_LENGTH_STRING], UserIniFile[MAX_LENGTH_STRING], UserIniFilePath[MAX_LENGTH_STRING];
 ProjectInfoRecord *ProjectInfo;
 uint8 *SharedMemory;
 HANDLE *SharedMemoryHandle;
@@ -2969,7 +2972,7 @@ int32 AddSchLanguageStrings(LPSTR FileName)
 			if (LanguageFileName[0] == 0)
 			{
 				GetString(LineBuf, str);
-				sprintf(LanguageFileName, "%s\\%s", ExePath, str);
+				sprintf(LanguageFileName, "%s\\%s", LanguagePath, str);
 			}
 		}
 	}
@@ -3190,6 +3193,89 @@ void DecodeParameters(int32 mode)
 	}
 }
 
+void LoadUserIniFile()
+{
+	int32 fp, Length, ParamMode, Value, res;
+	char LineBuf[MAX_LENGTH_STRING], str1[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING], CurrentDir[MAX_LENGTH_STRING],
+		str4[MAX_LENGTH_STRING];
+
+	if ((fp = TextFileOpenUTF8(UserIniFile)) < 0)
+		return;
+
+	ParamMode = 0;
+
+	while ((Length = ReadLnWithMaxLength(fp, LineBuf, MAX_LENGTH_STRING - 50)) >= 0)
+	{
+		strcpy(str4, LineBuf);
+
+		if ((Length > 1) && (LineBuf[0] != ';') && (LineBuf[0] != '/') && (LineBuf[0] != '#'))
+		{
+			GetSpecialString(LineBuf, str1, 0);
+			GetSpecialString(LineBuf, str2, 0);
+
+			if (str1[0] == '[')
+			{
+				ParamMode = 0;
+
+				//        if (stricmp(str1,"[ExeDirectory]")==0) ParamMode=1;
+				//        if (stricmp(str1,"[ProjectPath]")==0) ParamMode=2;
+				//        if (stricmp(str1,"[SymbolDirs]")==0) ParamMode=3;
+				//        if (stricmp(str1,"[GeometryLibraryPath]")==0) ParamMode=4;
+				//      if (stricmp(str1,"[SchematicSymbolLibraryPath]")==0) ParamMode=5;
+				if (stricmp(str1, "[LastDesigns]") == 0)
+					ParamMode = 1;
+
+				if (stricmp(str1, "[Settings]") == 0)
+					ParamMode = 2;
+			}
+			else
+			{
+				switch (ParamMode)
+				{
+				case 1:
+					break;
+
+				case 2:
+					if (GetStringValue(str4, str1, str2))
+					{
+						//						if (stricmp(str1, "UseLanguage") == 0)
+						//						{
+						//							if (sscanf(str2, "%i", &Value) == 1)
+						//								UseLanguage = Value;
+						//						}
+
+						if (stricmp(str1, "LanguagePath") == 0)
+						{
+							if (FileExistsUTF8(str2) != -1)
+							{ // Gerbv found
+								strcpy(LanguagePath, str2);
+							}
+							else
+								strcpy(LanguagePath, "");
+						}
+					}
+
+					break;
+
+				case 3:
+					break;
+
+				case 4:
+					break;
+
+				case 5:
+					break;
+
+				case 6:
+					break;
+				}
+			}
+		}
+	}
+
+	TextFileClose(fp);
+	//	SetCurrentDirectoryUTF8(CurrentDir);
+}
 
 // ********************************************************************************************************
 // ********************************************************************************************************
@@ -3199,10 +3285,11 @@ void DecodeParameters(int32 mode)
 int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, int nCmdShow)
 {
 	MSG M;
-	int32 ok, count, res, x, y, PdfObjectStart;
-	char str[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING];
+	int32 ok, count, res, x, y, PdfObjectStart, res1, KeySize;
+	char str[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING], *env;
 	uint32 EAX, EBX, ECX, EDX, FlagSSE2 = 0;
 	char vendor[40];
+	HKEY Key;
 
 	/*
 	  OutputDebugStr("\r\n");
@@ -3296,7 +3383,45 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	ClosingWindowMessage = RegisterWindowMessage("CLOSING_WINDOW");
 	IniFile[0] = 0;
 	GeomScreenWidth = 0;
-	sprintf(str, "%s\\LanguageSch.txt", ExePath);
+
+	if (UserIniFilePath[0] == 0)
+	{
+		env = getenv(PCB_ELEG_ENVIRONMENT_STRING);
+
+		if (env != NULL)
+			strcpy(UserIniFilePath, env);
+	}
+
+	if (UserIniFilePath[0] == 0)
+	{
+		sprintf(str, "Software\\PCB Elegance");
+
+		if ((res = RegOpenKeyEx(HKEY_LOCAL_MACHINE, str, 0, KEY_QUERY_VALUE, &Key)) == ERROR_SUCCESS)
+		{
+			KeySize = sizeof(UserIniFilePath) - 1;
+
+			if ((res = RegQueryValueEx(Key, "ProjectDir", 0, NULL, (LPBYTE)str, (PDWORD)& KeySize))
+				== ERROR_SUCCESS)
+			{
+				strcpy(UserIniFilePath, str);
+				ok = 1;
+			}
+
+			RegCloseKey(Key);
+		}
+	}
+
+	if (UserIniFilePath[0] == 0)
+		strcpy(UserIniFilePath, ExePath);
+
+	sprintf(UserIniFile, "%s\\user.ini", UserIniFilePath);
+	LoadUserIniFile();
+
+	if (LanguagePath[0] != 0)
+		sprintf(str, "%s\\LanguageSch.txt", LanguagePath);
+	else
+		//sprintf(str, "%s\\LanguageLibman.txt", ExecutableDir);
+		strcpy(str, "");
 
 	if (AddSchLanguageStrings(str) == -2)
 		return -1;

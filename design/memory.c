@@ -67,7 +67,7 @@ int32 Created, Painting, DCInUse, MouseChanged, Focused, LeftButtonPressed, Righ
       FileChanged, MouseTraceDrawing, UndoRedoActive, SelectionActive, SelectionEsc, ExecuteZoom, TraceMode,
       EmptyBrushActive, FillObjects, DrawCompPlacement, DrawCompOutline, DesignActive, UsingPartNumbers,
       DisableOnePinNetCheck, DrawCompReference, DrawCompValue, CompRotationChanged, OkToAddViewPos, IncDeleteNr,
-	  UseGerbv;
+	  UseGerbv, UseLanguage;
 
 ObjectRecord DrawWire1, DrawWire2, LimitObject, WireObject1, WireObject2, CurrentWorkingWire, NullObject;
 
@@ -101,6 +101,7 @@ char WindowStr[MAX_LENGTH_STRING];
 char DesignPath[MAX_LENGTH_STRING];
 char ExePath[MAX_LENGTH_STRING];
 char ProjectPath[MAX_LENGTH_STRING];
+char LanguagePath[MAX_LENGTH_STRING];
 char SheetDir[MAX_LENGTH_STRING];
 char GeometrieLibraryPath[MAX_LENGTH_STRING];
 char LibraryPath[MAX_LENGTH_STRING];

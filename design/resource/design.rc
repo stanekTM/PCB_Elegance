@@ -16,7 +16,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Angliètina (Spojené státy) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -297,7 +297,7 @@ BEGIN
     RTEXT           "Part description",IDC_STATIC12,175,80,50,8
 END
 
-IDD_DIALOG_PATHS DIALOGEX 0, 0, 458, 116
+IDD_DIALOG_PATHS DIALOGEX 0, 0, 459, 167
 STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Configure the project paths"
 FONT 8, "MS Sans Serif", 400, 0, 0xEE
@@ -306,14 +306,19 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,400,40,50,15
     EDITTEXT        IDC_EDIT1,40,30,290,12,ES_AUTOHSCROLL
     PUSHBUTTON      "Set",IDC_BUTTON1,335,25,50,15
-    EDITTEXT        IDC_EDIT2,95,85,290,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,95,84,290,12,ES_AUTOHSCROLL
     GROUPBOX        "Gerber viewer",IDC_STATIC3,10,55,380,50
     GROUPBOX        "Project directory",IDC_STATIC1,10,5,380,45
-    RTEXT           "Path",IDC_STATIC4,55,85,35,8
+    RTEXT           "Path",IDC_STATIC4,54,86,35,8
     PUSHBUTTON      "Help",IDHELP,400,65,50,15
     CONTROL         "Viewplot ( default )",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,15,70,370,8
-    CONTROL         "Gerbv",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,85,35,8
+    CONTROL         "Gerbv",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,86,35,8
     LTEXT           "Path - This may require administrator privileges to set",IDC_STATIC2,40,20,290,8
+    EDITTEXT        IDC_EDIT3,125,142,290,12,ES_AUTOHSCROLL
+    GROUPBOX        "Language path set",IDC_STATIC5,10,113,434,50
+    RTEXT           "Path",IDC_STATIC6,83,144,35,8
+    CONTROL         "English( default )",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,16,127,89,8
+    CONTROL         "Other Language",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,16,143,83,8
 END
 
 
@@ -439,9 +444,9 @@ BEGIN
     IDD_DIALOG_PATHS, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 451
+        RIGHTMARGIN, 452
         TOPMARGIN, 7
-        BOTTOMMARGIN, 109
+        BOTTOMMARGIN, 116
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -515,7 +520,7 @@ BEGIN
     0
 END
 
-#endif    // Angliètina (Spojené státy) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

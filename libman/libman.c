@@ -68,6 +68,8 @@
 
 #define  SC(Nr,string) (StringConvert(Nr,string))
 
+#define PCB_ELEG_ENVIRONMENT_STRING		"PCB_ELEG_ENVIRONMENT"
+
 PAINTSTRUCT PS;
 RECT RealWindow, ClientRect, UpdateRect;
 RECT RectListWindow1, RectListWindow2;
@@ -87,7 +89,8 @@ char *Buf, ExportDir[MAX_LENGTH_STRING], ExecutableDir[MAX_LENGTH_STRING], Versi
      *TextBuf, LibraryText1[MAX_LENGTH_STRING], LibraryText2[MAX_LENGTH_STRING], EditPath[MAX_LENGTH_STRING],
      LibraryFile[2][MAX_LENGTH_STRING], DialogTextLine[MAX_LENGTH_STRING], NewLibName[MAX_LENGTH_STRING],
      Params[8][MAX_LENGTH_STRING], ExePath[MAX_LENGTH_STRING], SymbolToBeEdited[2][20][MAX_LENGTH_STRING],
-     TempPath[MAX_LENGTH_STRING], SymbolImportDir[MAX_LENGTH_STRING];
+     TempPath[MAX_LENGTH_STRING], SymbolImportDir[MAX_LENGTH_STRING], LanguagePath[MAX_LENGTH_STRING], 
+	 UserIniFile[MAX_LENGTH_STRING], UserIniFilePath[MAX_LENGTH_STRING];
 
 LibNameRecord LibNames[2][MAX_NR_LIB_SYMBOLS];
 uint8 LibNamesDeleted[MAX_NR_LIB_SYMBOLS];
@@ -3133,10 +3136,11 @@ int32 AddLibmanLanguageStrings(LPSTR FileName)
 			{
 				GetString(LineBuf, str);
 
-				if (ExePath[0] != 0)
-					sprintf(LanguageFileName, "%s\\%s", ExePath, str);
+				if (LanguagePath[0] != 0)
+					sprintf(LanguageFileName, "%s\\%s", LanguagePath, str);
 				else
-					sprintf(LanguageFileName, "%s\\%s", ExecutableDir, str);
+				//	sprintf(LanguageFileName, "%s\\%s", ExecutableDir, str);
+					strcpy(LanguageFileName, "");
 			}
 		}
 	}
@@ -3210,6 +3214,90 @@ int32 AddLibmanLanguageStrings(LPSTR FileName)
 	return 0;
 }
 
+void LoadUserIniFile()
+{
+	int32 fp, Length, ParamMode, Value, res;
+	char LineBuf[MAX_LENGTH_STRING], str1[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING], CurrentDir[MAX_LENGTH_STRING],
+		str4[MAX_LENGTH_STRING];
+
+	if ((fp = TextFileOpenUTF8(UserIniFile)) < 0)
+		return;
+
+	ParamMode = 0;
+
+	while ((Length = ReadLnWithMaxLength(fp, LineBuf, MAX_LENGTH_STRING - 50)) >= 0)
+	{
+		strcpy(str4, LineBuf);
+
+		if ((Length > 1) && (LineBuf[0] != ';') && (LineBuf[0] != '/') && (LineBuf[0] != '#'))
+		{
+			GetSpecialString(LineBuf, str1, 0);
+			GetSpecialString(LineBuf, str2, 0);
+
+			if (str1[0] == '[')
+			{
+				ParamMode = 0;
+
+				//        if (stricmp(str1,"[ExeDirectory]")==0) ParamMode=1;
+				//        if (stricmp(str1,"[ProjectPath]")==0) ParamMode=2;
+				//        if (stricmp(str1,"[SymbolDirs]")==0) ParamMode=3;
+				//        if (stricmp(str1,"[GeometryLibraryPath]")==0) ParamMode=4;
+				//      if (stricmp(str1,"[SchematicSymbolLibraryPath]")==0) ParamMode=5;
+				if (stricmp(str1, "[LastDesigns]") == 0)
+					ParamMode = 1;
+
+				if (stricmp(str1, "[Settings]") == 0)
+					ParamMode = 2;
+			}
+			else
+			{
+				switch (ParamMode)
+				{
+				case 1:
+					break;
+
+				case 2:
+					if (GetStringValue(str4, str1, str2))
+					{
+//						if (stricmp(str1, "UseLanguage") == 0)
+//						{
+//							if (sscanf(str2, "%i", &Value) == 1)
+//								UseLanguage = Value;
+//						}
+
+						if (stricmp(str1, "LanguagePath") == 0)
+						{
+							if (FileExistsUTF8(str2) != -1)
+							{ // Gerbv found
+								strcpy(LanguagePath, str2);
+							}
+							else
+								strcpy(LanguagePath, "");
+						}
+					}
+
+					break;
+
+				case 3:
+					break;
+
+				case 4:
+					break;
+
+				case 5:
+					break;
+
+				case 6:
+					break;
+				}
+			}
+		}
+	}
+
+	TextFileClose(fp);
+//	SetCurrentDirectoryUTF8(CurrentDir);
+}
+
 // **************************************************************************************************
 // **************************************************************************************************
 // **************************************************************************************************
@@ -3218,10 +3306,11 @@ int32 AddLibmanLanguageStrings(LPSTR FileName)
 int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, int nCmdShow)
 {
 	MSG M;
-	int32 length, res;
-	char str[600], str2[600], str3[600], *FileName;
+	int32 length, res, KeySize;
+	char str[600], str2[600], str3[600], *FileName, *env;
 	uint32 EAX, EBX, ECX, EDX, FlagSSE2 = 0;
 	char vendor[40];
+	HKEY Key;
 //	WCHAR Wstr[MAX_LENGTH_STRING];
 
 	GetCPUID(0x0, &EAX, &EBX, &ECX, &EDX);
@@ -3336,10 +3425,44 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	GetParameters(lpszCmd);
 	DecodeParameters(lpszCmd);
 
-	if (ExePath[0] != 0)
-		sprintf(str, "%s\\LanguageLibman.txt", ExePath);
+	if (UserIniFilePath[0] == 0)
+	{
+		env = getenv(PCB_ELEG_ENVIRONMENT_STRING);
+
+		if (env != NULL)
+			strcpy(UserIniFilePath, env);
+	}
+
+	if (UserIniFilePath[0] == 0)
+	{
+		sprintf(str, "Software\\PCB Elegance");
+
+		if ((res = RegOpenKeyEx(HKEY_LOCAL_MACHINE, str, 0, KEY_QUERY_VALUE, &Key)) == ERROR_SUCCESS)
+		{
+			KeySize = sizeof(UserIniFilePath) - 1;
+
+			if ((res = RegQueryValueEx(Key, "ProjectDir", 0, NULL, (LPBYTE)str, (PDWORD)& KeySize))
+				== ERROR_SUCCESS)
+			{
+				strcpy(UserIniFilePath, str);
+				ok = 1;
+			}
+
+			RegCloseKey(Key);
+		}
+	}
+
+	if (UserIniFilePath[0] == 0)
+		strcpy(UserIniFilePath, ExePath);
+
+	sprintf(UserIniFile, "%s\\user.ini", UserIniFilePath);
+	LoadUserIniFile();
+
+	if (LanguagePath[0] != 0)
+		sprintf(str, "%s\\LanguageLibman.txt", LanguagePath);
 	else
-		sprintf(str, "%s\\LanguageLibman.txt", ExecutableDir);
+		//sprintf(str, "%s\\LanguageLibman.txt", ExecutableDir);
+		strcpy(str, "");
 
 	if (AddLibmanLanguageStrings(str) == -2)
 		return -1;
