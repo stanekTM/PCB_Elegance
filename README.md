@@ -29,13 +29,18 @@ The key is the folder "PCB_Elegance_v3.52.1", here is also the latest version of
 By default, the programs are in "EN".
 
 Other translations are only in "CZ".
-If you are a proud Czech, copy the translation files from the "Translations\CZ" folder to the main directory "PCB_Elegance_v3.52.1".
+Copy the path of the translation folder in advance, for example "C:\PCB_Elegance_v3.52.1\translations\CZ".
+Then start the main program "Design manager" by right-clicking "run as administrator" and click on "Configure paths" in the "Edit" tab.
+In the "Language path set" setting, switch to the "Other language" entry and enter the path of the translation folder, for example "C:\PCB_Elegance_v3.52.1\translations\CZ".
+Confirm "OK" and restart the program.
+All translations should be in Czech.
+
 Remember that there are thousands of words in software tools and some are not ready yet.
 
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
 
 # For "C" fans and programmers
-### Thanks to the "zhouxs1023" developer for supporting x64 code!
+### Thanks to the dev "zhouxs1023" for supporting x64 code!
 
 Unfortunately, these tools are no longer evolving, the only mentioned thread speaks for itself https://www.eevblog.com/forum/eda/pcb-elegance-new-version/
 
