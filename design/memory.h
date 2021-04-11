@@ -66,7 +66,7 @@ extern int32 Created, Painting, DCInUse, MouseChanged, Focused, LeftButtonPresse
        FillObjects, DrawClearances, DrawSpecial, DrawCompPlacement, DrawCompOutline, DrawViaClearances, DrawCompReference,
        DrawCompValue, CompRotationChanged, OkToSwitchDrawingLayers, OkToAddViewPos, CurrentDrawingNetHilited,
        DrawViaInfoForTryingTrace, DesignActive, UsingPartNumbers, DisableOnePinNetCheck, DrawTraceUsingGuide, IncDeleteNr,
-       DrawTraceLimitInfo, UseGerbv;
+       DrawTraceLimitInfo, UseGerbv, UseLanguage;
 
 extern ObjectRecord DrawWire1, DrawWire2, LimitObject, WireObject1, WireObject2, CurrentWorkingWire, NullObject;
 
@@ -106,6 +106,7 @@ extern char WindowStr[MAX_LENGTH_STRING];
 extern char DesignPath[MAX_LENGTH_STRING];
 extern char ExePath[MAX_LENGTH_STRING];
 extern char ProjectPath[MAX_LENGTH_STRING];
+extern char LanguagePath[MAX_LENGTH_STRING];
 extern char SheetDir[MAX_LENGTH_STRING];
 extern char GeometrieLibraryPath[MAX_LENGTH_STRING];
 extern char LibraryPath[MAX_LENGTH_STRING];

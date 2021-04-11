@@ -64,6 +64,8 @@
 #define  SCROLL_FACTOR                  2.0
 #define  MEMORYMAPPEDSTRING             "MMFILE_PCB_ELEGANCE"
 
+#define PCB_ELEG_ENVIRONMENT_STRING     "PCB_ELEG_ENVIRONMENT"
+
 HCURSOR SystemCursor;
 HPALETTE OldPalette;
 HCURSOR OldCursor, Cursor1;
@@ -131,7 +133,8 @@ double OldPos;
 
 char IniFile[MAX_LENGTH_STRING], CurrentDir[MAX_LENGTH_STRING], StartDir[MAX_LENGTH_STRING],
      ExecutableDir[MAX_LENGTH_STRING], GeomExecutable[MAX_LENGTH_STRING], ProjectPath[MAX_LENGTH_STRING],
-     LibraryFile[MAX_LENGTH_STRING];
+     LibraryFile[MAX_LENGTH_STRING], LanguagePath[MAX_LENGTH_STRING], UserIniFile[MAX_LENGTH_STRING],
+	 UserIniFilePath[MAX_LENGTH_STRING];
 ProjectInfoRecord *ProjectInfo = NULL;
 uint8 *SharedMemory;
 HANDLE *SharedMemoryHandle;
@@ -683,7 +686,7 @@ void RedrawAbsPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsCursor, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); //spodní pøeklad absolutní
+		       (LPSTR) & AbsPosStr, strlen(AbsPosStr)); 
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -746,7 +749,7 @@ void RedrawAbsGridPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosAbsGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4),
-	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); //spodní pøeklad møížka
+	           (LPSTR) & AbsGridPosStr, strlen(AbsGridPosStr)); 
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -809,7 +812,7 @@ void RedrawRelPosStr(int32 Mode)
 	Rect.bottom = RightBottomY;
 	FillRect(OutputDisplay, &Rect, GetStockObject(LTGRAY_BRUSH));
 	TextOutUTF8(OutputDisplay, ScreenPosRelGridCursor + 2, ClientRect.bottom - (HeightInfoBar - 4), 
-		       (LPSTR) & RelPosStr, strlen(RelPosStr)); //spodní pøeklad relativní
+		       (LPSTR) & RelPosStr, strlen(RelPosStr)); 
 	SelectObject(OutputDisplay, SaveFont);
 
 	switch (Mode)
@@ -3114,7 +3117,7 @@ void WriteIniFile()
 }
 
 // ********************************************************************************************************
-// ******************************* naètení jazykového souboru *********************************************
+// ********************************************************************************************************
 // ********************************************************************************************************
 
 int32 AddGeomLanguageString(int32 ID, LPSTR Text)
@@ -3144,7 +3147,7 @@ int32 AddGeomLanguageString(int32 ID, LPSTR Text)
 }
 
 // ********************************************************************************************************
-// ******************************* naètení jazykového souboru *********************************************
+// ********************************************************************************************************
 // ********************************************************************************************************
 
 int32 AddGeomLanguageStrings(LPSTR FileName)
@@ -3182,10 +3185,11 @@ int32 AddGeomLanguageStrings(LPSTR FileName)
 			{
 				GetString(LineBuf, str);
 
-				if (ExePath[0] != 0) //pøidán
-					sprintf(LanguageFileName, "%s\\%s", ExePath, str);
+				if (LanguagePath[0] != 0) 
+					sprintf(LanguageFileName, "%s\\%s", LanguagePath, str);
 				else
-				    sprintf(LanguageFileName, "%s\\%s", ExecutableDir, str); //pøidán, pùvodní byl ,ProjectPath,
+				 //   sprintf(LanguageFileName, "%s\\%s", ExecutableDir, str); 
+					strcpy(LanguageFileName, "");
 			}
 		}
 	}
@@ -3325,6 +3329,90 @@ void DecodeParameters(int32 mode)
 	}
 }
 
+void LoadUserIniFile()
+{
+	int32 fp, Length, ParamMode, Value, res;
+	char LineBuf[MAX_LENGTH_STRING], str1[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING], CurrentDir[MAX_LENGTH_STRING],
+		str4[MAX_LENGTH_STRING];
+
+	if ((fp = TextFileOpenUTF8(UserIniFile)) < 0)
+		return;
+
+	ParamMode = 0;
+
+	while ((Length = ReadLnWithMaxLength(fp, LineBuf, MAX_LENGTH_STRING - 50)) >= 0)
+	{
+		strcpy(str4, LineBuf);
+
+		if ((Length > 1) && (LineBuf[0] != ';') && (LineBuf[0] != '/') && (LineBuf[0] != '#'))
+		{
+			GetSpecialString(LineBuf, str1, 0);
+			GetSpecialString(LineBuf, str2, 0);
+
+			if (str1[0] == '[')
+			{
+				ParamMode = 0;
+
+				//        if (stricmp(str1,"[ExeDirectory]")==0) ParamMode=1;
+				//        if (stricmp(str1,"[ProjectPath]")==0) ParamMode=2;
+				//        if (stricmp(str1,"[SymbolDirs]")==0) ParamMode=3;
+				//        if (stricmp(str1,"[GeometryLibraryPath]")==0) ParamMode=4;
+				//      if (stricmp(str1,"[SchematicSymbolLibraryPath]")==0) ParamMode=5;
+				if (stricmp(str1, "[LastDesigns]") == 0)
+					ParamMode = 1;
+
+				if (stricmp(str1, "[Settings]") == 0)
+					ParamMode = 2;
+			}
+			else
+			{
+				switch (ParamMode)
+				{
+				case 1:
+					break;
+
+				case 2:
+					if (GetStringValue(str4, str1, str2))
+					{
+//						if (stricmp(str1, "UseLanguage") == 0)
+//						{
+//							if (sscanf(str2, "%i", &Value) == 1)
+//								UseLanguage = Value;
+//						}
+
+						if (stricmp(str1, "LanguagePath") == 0)
+						{
+							if (FileExistsUTF8(str2) != -1)
+							{ // Gerbv found
+								strcpy(LanguagePath, str2);
+							}
+							else
+								strcpy(LanguagePath, "");
+						}
+					}
+
+					break;
+
+				case 3:
+					break;
+
+				case 4:
+					break;
+
+				case 5:
+					break;
+
+				case 6:
+					break;
+				}
+			}
+		}
+	}
+
+	TextFileClose(fp);
+//	SetCurrentDirectoryUTF8(CurrentDir);
+}
+
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -3333,10 +3421,11 @@ void DecodeParameters(int32 mode)
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, int nCmdShow)
 {
 	MSG M;
-	int32 ok, count;
+	int32 ok, count, res, KeySize;
 	uint32 EAX, EBX, ECX, EDX, FlagSSE2 = 0;
-	char vendor[40];
+	char vendor[40], *env;
 	char str[MAX_LENGTH_STRING];
+	HKEY Key;
 
 	GetCPUID(0x0, &EAX, &EBX, &ECX, &EDX);
 	memset(vendor, 0, sizeof(vendor));
@@ -3378,12 +3467,45 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd, 
 	}
 	else
 		strcpy(ProjectPath, ExePath);
+	
+	if (UserIniFilePath[0] == 0)
+	{
+		env = getenv(PCB_ELEG_ENVIRONMENT_STRING);
 
+		if (env != NULL)
+			strcpy(UserIniFilePath, env);
+	}
+
+	if (UserIniFilePath[0] == 0)
+	{
+		sprintf(str, "Software\\PCB Elegance");
+
+		if ((res = RegOpenKeyEx(HKEY_LOCAL_MACHINE, str, 0, KEY_QUERY_VALUE, &Key)) == ERROR_SUCCESS)
+		{
+			KeySize = sizeof(UserIniFilePath) - 1;
+
+			if ((res = RegQueryValueEx(Key, "ProjectDir", 0, NULL, (LPBYTE)str, (PDWORD)& KeySize))
+				== ERROR_SUCCESS)
+			{
+				strcpy(UserIniFilePath, str);
+				ok = 1;
+			}
+
+			RegCloseKey(Key);
+		}
+	}
+
+	if (UserIniFilePath[0] == 0)
+		strcpy(UserIniFilePath, ExePath);
+
+	sprintf(UserIniFile, "%s\\user.ini", UserIniFilePath);
+	LoadUserIniFile();
+	
     //MessageBox(NULL,DesignPath,"Design path",MB_APPLMODAL+MB_OK);
 
 	ClosingWindowMessage = RegisterWindowMessage("CLOSING_WINDOW");
 
-	sprintf(str, "%s\\LanguageGeom.txt", ExePath);
+	sprintf(str, "%s\\LanguageGeom.txt", LanguagePath);
 
 	if (AddGeomLanguageStrings(str) == -2)
 		return -1;

@@ -64,4 +64,6 @@
 #define RGB_LightOrange                         RGB(223,188,96 )
 #define RGB_Violet                              RGB(238,130,238)
 
+void LoadUserIniFile(void);
+
 #endif

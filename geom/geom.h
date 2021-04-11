@@ -85,5 +85,6 @@ void SetScrollPosition(void);
 
 void SaveViewPos(void);
 
+void LoadUserIniFile(void);
 
 #endif

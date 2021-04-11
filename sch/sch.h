@@ -106,4 +106,6 @@ void ScrollAppWindow(int32 DivX, int32 DivY);
 
 void SaveViewPos(void);
 
+void LoadUserIniFile(void);
+
 #endif
