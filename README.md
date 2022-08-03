@@ -23,7 +23,7 @@ tim@pcbelegance.org
 
 Copyright (C) 2012 Herman Morsink Vollenbroek
 
-# My version PCB Elegance
+## My version PCB Elegance
 This version is not installed, just extract the file folder to disk.
 The key is the folder "PCB_Elegance_v3.52.1", here is also the latest version of the release.
 By default, the programs are in "EN".
@@ -39,7 +39,7 @@ Remember that there are thousands of words in software tools and some are not re
 
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
 
-# For "C" fans and programmers
+## For "C" fans and programmers
 ### Thanks to the dev "zhouxs1023" for supporting x64 code!
 
 Unfortunately, these tools are no longer evolving, the only mentioned thread speaks for itself https://www.eevblog.com/forum/eda/pcb-elegance-new-version/
@@ -55,7 +55,7 @@ I have already stopped testing the XP system, I use Windows 10 for tests and wor
 Testing takes place during the design of the project I am currently creating.
 If I find a bug, I'll try to fix it.
 
-# Instructions for building/compiling
+## Instructions for building/compiling
 Unzip the source code archive into am empty directory.
 
 The source code can be compiled with Microsoft Visual Studio 2019 (version "Community" is free)        
