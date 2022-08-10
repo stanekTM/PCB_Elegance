@@ -9,5 +9,3 @@ All translations should be in Czech.
 Remember that there are thousands of words in software tools and some are not ready yet.
 
 Translations in "CZ" will by no means go with the original version from http://www.pcbelegance.org
-#
-Jiri StanekTM
