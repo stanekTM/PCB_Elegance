@@ -80,4 +80,4 @@ Open the solution file "vc2010\pcbeleg.sln"
 
 The solution contains all the projects for "PCB Elegance 3.52.1"
 
-When doing a rebuild (Debug/release) all executables/libraries are compiled.
+When doing a rebuild (debug/release) all executables/libraries are compiled.
