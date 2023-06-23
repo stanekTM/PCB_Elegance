@@ -71,7 +71,7 @@ void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 m
 	if (OkToDrawCrossHair == 1)
 		DrawCrossHair(1);
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 
 
 	if ((mode & 1) == 1)
@@ -238,7 +238,7 @@ void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 m
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 
 	if (OkToDrawCrossHair == 1)
 		DrawCrossHair(1);

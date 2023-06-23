@@ -25,9 +25,15 @@
 
 #ifndef _PCB
 
-#define _PCB
-
 #include "types.h"
+
+#define _PCB
+#define BM_Mask						0xE000
+#define BM_DirectToScreen			0
+#define BM_DoubleBuffer				0x2000
+#define BM_MultiStart				0x4000
+#define BM_MultiContinue			0x8000
+#define BM_MultiEnd					0xC000
 
 LRESULT CALLBACK PCBWinProc(HWND Window, UINT Message, WPARAM WParam, LPARAM LParam);
 
@@ -39,6 +45,9 @@ extern HRGN EditingRegion;
 extern HMENU PopUpMenu, MainMenu;
 extern int32 DrawWindowMinX, DrawWindowMinY, DrawWindowMaxX, DrawWindowMaxY;
 
+void StartDrawingEditingWindow(int32 BufferMode);
+
+void EndDrawingEditingWindow(int32 BufferMode);
 
 void SetWaitCursor(void);
 
@@ -48,13 +57,9 @@ void DoneDeviceContext(void);
 
 void InitDeviceContext(void);
 
-void StartDrawingEditingWindow(void);
-
 HWND GetDesignManagersWindow(int32 mode);
 
 int32 SetNewCursor(double *CurrentX, double *CurrentY);
-
-void EndDrawingEditingWindow(void);
 
 void RedrawAbsPosStr(int32 Mode);
 

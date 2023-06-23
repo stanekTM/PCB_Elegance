@@ -1654,15 +1654,15 @@ void SetBackGroundActive(int32 mode)
 // ****************************************************************************************************
 // ****************************************************************************************************
 
-void DrawLineYellow(double x1, double y1, double x2, double y2)
+void DrawLineYellow(double x1, double y1, double x2, double y2, int32 BufferMode)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BufferMode);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_YELLOW + DRAW_WITH_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_MERGEPEN);
 	DrawLine(Mult(x1 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y1 - Yoffset) - 1,
 	         Mult(x2 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y2 - Yoffset) - 1);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(BufferMode);
 }
 
 // ****************************************************************************************************
@@ -1670,15 +1670,15 @@ void DrawLineYellow(double x1, double y1, double x2, double y2)
 // ****************************************************************************************************
 // ****************************************************************************************************
 
-void DrawLineWhite(double x1, double y1, double x2, double y2)
+void DrawLineWhite(double x1, double y1, double x2, double y2, int32 BufferMode)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BufferMode);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_MERGEPEN);
 	DrawLine(Mult(x1 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y1 - Yoffset) - 1,
 	         Mult(x2 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y2 - Yoffset) - 1);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(BufferMode);
 
 }
 
@@ -1687,16 +1687,16 @@ void DrawLineWhite(double x1, double y1, double x2, double y2)
 // ****************************************************************************************************
 // ****************************************************************************************************
 
-void DrawLineRed(double x1, double y1, double x2, double y2)
+void DrawLineRed(double x1, double y1, double x2, double y2, int32 BufferMode)
 {
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BufferMode);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_RED + DRAW_WITH_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_COPYPEN);
 	DrawLine(Mult(x1 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y1 - Yoffset) - 1,
 	         Mult(x2 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y2 - Yoffset) - 1);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(BufferMode);
 
 }
 
@@ -1706,17 +1706,16 @@ void DrawLineRed(double x1, double y1, double x2, double y2)
 // ****************************************************************************************************
 
 
-void DrawLineGray(double x1, double y1, double x2, double y2)
+void DrawLineGray(double x1, double y1, double x2, double y2, int32 BufferMode)
 {
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BufferMode);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_GRAY + DRAW_WITH_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_XORPEN);
 	DrawLine(Mult(x1 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y1 - Yoffset) - 1,
 	         Mult(x2 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y2 - Yoffset) - 1);
 	ExitDrawing();
-	EndDrawingEditingWindow();
-
+	EndDrawingEditingWindow(BufferMode);
 }
 
 // ****************************************************************************************************
@@ -1724,17 +1723,15 @@ void DrawLineGray(double x1, double y1, double x2, double y2)
 // ****************************************************************************************************
 // ****************************************************************************************************
 
-void DrawLineGreen(double x1, double y1, double x2, double y2)
+void DrawLineGreen(double x1, double y1, double x2, double y2, int32 BufferMode)
 {
-
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BufferMode);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_GREEN + DRAW_WITH_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_COPYPEN);
 	DrawLine(Mult(x1 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y1 - Yoffset) - 1,
-	         Mult(x2 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y2 - Yoffset) - 1);
+		     Mult(x2 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y2 - Yoffset) - 1);
 	ExitDrawing();
-	EndDrawingEditingWindow();
-
+	EndDrawingEditingWindow(BufferMode);
 }
 
 // ****************************************************************************************************
@@ -1742,15 +1739,15 @@ void DrawLineGreen(double x1, double y1, double x2, double y2)
 // ****************************************************************************************************
 // ****************************************************************************************************
 
-void DrawCircleWhite(double x, double y, double dikte)
+void DrawCircleWhite(double x, double y, double dikte, int32 BufferMode)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BufferMode);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_COPYPEN);
-//  DrawLine(Mult(x1-Xoffset),DrawWindowMaxY-Mult(y1-Yoffset)-1,Mult(x2-Xoffset),DrawWindowMaxY-Mult(y2-Yoffset)-1);
+    //DrawLine(Mult(x1-Xoffset),DrawWindowMaxY-Mult(y1-Yoffset)-1,Mult(x2-Xoffset),DrawWindowMaxY-Mult(y2-Yoffset)-1);
 	ellips2(Mult(x - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y - Yoffset) - 1, Mult(dikte), Mult(dikte), 255);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(BufferMode);
 }
 
 // ****************************************************************************************************
@@ -1758,15 +1755,15 @@ void DrawCircleWhite(double x, double y, double dikte)
 // ****************************************************************************************************
 // ****************************************************************************************************
 
-void DrawCircleYellow(double x, double y, double dikte)
+void DrawCircleYellow(double x, double y, double dikte, int32 BufferMode)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BufferMode);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_YELLOW + DRAW_WITH_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_COPYPEN);
-//  DrawLine(Mult(x1-Xoffset),DrawWindowMaxY-Mult(y1-Yoffset)-1,Mult(x2-Xoffset),DrawWindowMaxY-Mult(y2-Yoffset)-1);
-	ellips2(Mult(x - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y - Yoffset) - 1, Mult(dikte), Mult(dikte), 255);
+	//DrawLine(Mult(x1-Xoffset),DrawWindowMaxY-Mult(y1-Yoffset)-1,Mult(x2-Xoffset),DrawWindowMaxY-Mult(y2-Yoffset)-1);
+    ellips2(Mult(x - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y - Yoffset) - 1, Mult(dikte), Mult(dikte), 255);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(BufferMode);
 }
 
 // ****************************************************************************************************
@@ -1774,15 +1771,15 @@ void DrawCircleYellow(double x, double y, double dikte)
 // ****************************************************************************************************
 // ****************************************************************************************************
 
-void DrawCircleGray(double x, double y, double dikte)
+void DrawCircleGray(double x, double y, double dikte, int32 BufferMode)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BufferMode);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_GRAY + DRAW_WITH_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_COPYPEN);
-//  DrawLine(Mult(x1-Xoffset),DrawWindowMaxY-Mult(y1-Yoffset)-1,Mult(x2-Xoffset),DrawWindowMaxY-Mult(y2-Yoffset)-1);
+	//DrawLine(Mult(x1-Xoffset),DrawWindowMaxY-Mult(y1-Yoffset)-1,Mult(x2-Xoffset),DrawWindowMaxY-Mult(y2-Yoffset)-1);
 	ellips2(Mult(x - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y - Yoffset) - 1, Mult(dikte), Mult(dikte), 255);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(BufferMode);
 }
 
 // ****************************************************************************************************

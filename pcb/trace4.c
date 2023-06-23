@@ -171,7 +171,7 @@ void DrawTryingObjectLine(double CurrentX, double CurrentY, int32 Mode)
 {
 	double x1, y1;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	SetROP2(OutputDisplay, R2_XORPEN);
 
 	if (Mode == 0)
@@ -181,7 +181,7 @@ void DrawTryingObjectLine(double CurrentX, double CurrentY, int32 Mode)
 		DrawLine(100000, MultY(CurrentY), -100000, MultY(CurrentY));
 
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 		return;
 	}
 
@@ -206,7 +206,7 @@ void DrawTryingObjectLine(double CurrentX, double CurrentY, int32 Mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -218,7 +218,7 @@ void CommandAddTryingObjectLine()
 {
 	int32 ok;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	SetROP2(OutputDisplay, R2_COPYPEN);
 	DrawCrossHair(8 + 2);
 
@@ -236,7 +236,7 @@ void CommandAddTryingObjectLine()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -806,13 +806,13 @@ void DrawTryingObjectRect(double CurrentX, double CurrentY, int32 Mode)
 	switch (Mode)
 	{
 	case 0:
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		SetROP2(OutputDisplay, R2_XORPEN);
 		InitDrawingObject(0, CROSS_HAIR_LAYER, 1, DRAW_WITH_DASH_PEN_AND_NO_BRUSH);
 		DrawLine(MultX(CurrentX), 100000, MultX(CurrentX), -100000);
 		DrawLine(100000, MultY(CurrentY), -100000, MultY(CurrentY));
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 		return;
 
 	case 1:
@@ -832,7 +832,7 @@ void DrawTryingObjectRect(double CurrentX, double CurrentY, int32 Mode)
 		break;
 	}
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	SetROP2(OutputDisplay, R2_XORPEN);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_PEN_AND_NOT_FILLED);
 	DrawLine(Mult(NewObjectRect.CentreX - Xoffset) + DrawWindowMinX - 3,
@@ -851,7 +851,7 @@ void DrawTryingObjectRect(double CurrentX, double CurrentY, int32 Mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -861,7 +861,7 @@ void DrawTryingObjectRect(double CurrentX, double CurrentY, int32 Mode)
 
 void CommandAddTryingObjectRect(ObjectRectRecord * ObjectRect, int32 Mode)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	DrawCrossHair(8 + 2);
 	SetROP2(OutputDisplay, R2_COPYPEN);
 
@@ -910,7 +910,7 @@ void CommandAddTryingObjectRect(ObjectRectRecord * ObjectRect, int32 Mode)
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -1275,16 +1275,16 @@ void DrawTryingObjectArc(double CurrentX, double CurrentY, int32 Mode)
 
 	if (Mode == 0)
 	{
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		SetROP2(OutputDisplay, R2_XORPEN);
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 		return;
 	}
 
 	OkToDraw = 0;
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	SetROP2(OutputDisplay, R2_XORPEN);
 
 	switch (Mode)
@@ -1397,7 +1397,7 @@ void DrawTryingObjectArc(double CurrentX, double CurrentY, int32 Mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -1407,7 +1407,7 @@ void DrawTryingObjectArc(double CurrentX, double CurrentY, int32 Mode)
 
 void CommandAddTryingObjectArc(ObjectArcRecord * ObjectArc)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	DrawCrossHair(2);
 	SetROP2(OutputDisplay, R2_COPYPEN);
 
@@ -1415,7 +1415,7 @@ void CommandAddTryingObjectArc(ObjectArcRecord * ObjectArc)
 		DrawObjectArc(ObjectArc, 0.0, 0.0, 0);
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -2019,7 +2019,7 @@ void CommandAddObjectArcs(double LineThickNess, int32 Layer, int32 CircleMode, i
 
 void DrawTryingObjectText2(double CurrentX, double CurrentY, int32 Mode)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	SetROP2(OutputDisplay, R2_XORPEN);
 	NewObjectText2.X = (float) CurrentX;
 	NewObjectText2.Y = (float) CurrentY;
@@ -2030,7 +2030,7 @@ void DrawTryingObjectText2(double CurrentX, double CurrentY, int32 Mode)
 	DrawObjectText2(&NewObjectText2, 0.0, 0.0, 0.0, 1);
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 
 }
 
@@ -2041,14 +2041,14 @@ void DrawTryingObjectText2(double CurrentX, double CurrentY, int32 Mode)
 
 void CommandAddTryingObjectText2(ObjectTextRecord2 * ObjectText2)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	DrawCrossHair(2);
 
 	if (AddObjectText2(ObjectText2))
 		DrawObjectText2(ObjectText2, 0.0, 0.0, 0.0, 0);
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************

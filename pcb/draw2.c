@@ -436,7 +436,7 @@ void DrawCrossObjects(int32 Repaint, int32 Mode)
 	divx = PixelToReal(1);
 
 	if (!Repaint)
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 //  if (Mode==0) {
 //    if (divx>10000.0) DrawPen=CreatePen(PS_SOLID,1,NetPinsColor);
@@ -445,6 +445,7 @@ void DrawCrossObjects(int32 Repaint, int32 Mode)
 //    else DrawPen=CreatePen(PS_SOLID,2,RGB(0,0,0));
 //    LineColor=RGB(0,0,0);
 //  }
+
 	PenType = 0;
 	InitDrawingObject(0, NET_PINS_LAYER, 3, DRAW_WITH_PEN_AND_NOT_FILLED);
 
@@ -646,7 +647,7 @@ void DrawCrossObjects(int32 Repaint, int32 Mode)
 	if (!Repaint)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 	else
 		SetROP2(OutputDisplay, R2_COPYPEN);
@@ -748,11 +749,12 @@ void DrawObjectsWithColorMagenta(int32 Mode)
 	int32 cnt;
 	ObjectRecord *Object;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_MAGENTA + DRAW_WITH_PEN_AND_NOT_FILLED);
 
-//  NrObjects=min(1,NrObjects);
+    //NrObjects=min(1,NrObjects);
+
 	for (cnt = 0; cnt < NrObjects2; cnt++)
 	{
 		Object = &((*Objects2)[cnt]);
@@ -761,7 +763,7 @@ void DrawObjectsWithColorMagenta(int32 Mode)
 
 	ExitDrawing();
 
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // ****************************************************************************************************
@@ -774,7 +776,7 @@ void DrawObjects2WithColor(int32 Mode)
 	int32 cnt;
 	ObjectRecord *Object;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_MAGENTA + DRAW_WITH_PEN_AND_NOT_FILLED);
 
@@ -788,7 +790,7 @@ void DrawObjects2WithColor(int32 Mode)
 
 	ExitDrawing();
 
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // ****************************************************************************************************
@@ -5854,7 +5856,7 @@ void DrawTryingObjectCross(double CurrentX, double CurrentY, double MinX, double
 {
 	double cx, cy, dx, dy;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	SetROP2(OutputDisplay, R2_XORPEN);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 	DrawLine(MultX(CurrentX), 4000, MultX(CurrentX), -4000);
@@ -5874,7 +5876,7 @@ void DrawTryingObjectCross(double CurrentX, double CurrentY, double MinX, double
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 

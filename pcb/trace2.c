@@ -948,7 +948,7 @@ void DeleteAndUnDisplayObjectTrace(int32 ObjectNr, int32 RePaint)
 
 		if (!RePaint)
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(0);
 			DrawCode = DrawLayerCode[CurrentDrawingLayer];
 			SetBackGroundActive(0);
 			DrawObject(ConnectObject, 0);
@@ -1025,7 +1025,7 @@ void DeleteAndUnDisplayObjectTrace(int32 ObjectNr, int32 RePaint)
 	if (!RePaint)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -1648,10 +1648,10 @@ int32 InsertTraces(int32 mode, int32 EndPointObjectNr)
 
 			if ((!OkToRePaintAfterTraceDrawing) && (!ObjectInAreaFillInserted))
 			{
-				StartDrawingEditingWindow();
+				StartDrawingEditingWindow(0);
 				ReDisplayNet(0);
 				ExitDrawing();
-				EndDrawingEditingWindow();
+				EndDrawingEditingWindow(0);
 			}
 		}
 
@@ -1735,7 +1735,7 @@ int32 InsertTraces(int32 mode, int32 EndPointObjectNr)
 		    if ((!OkToRePaintAfterTraceDrawing)
 		       &&
 		       (!ObjectInAreaFillInserted)) {
-		      StartDrawingEditingWindow();
+		      StartDrawingEditingWindow(0);
 		      SetBackGroundActive(0);
 		      DrawObject(ConnectObject,0);
 		      if (OkToDrawClearances) {
@@ -1748,7 +1748,7 @@ int32 InsertTraces(int32 mode, int32 EndPointObjectNr)
 		      GetObjectsNet(CurrentDrawingNetNr,MODE_OBJECTS3,0);
 		      ReDisplayNet(0);
 		      ExitDrawing();
-		      EndDrawingEditingWindow();
+		      EndDrawingEditingWindow(0);
 		    } else {
 		*/
 		ReCalcConnectionsNet(CurrentDrawingNetNr, 0, 1);
@@ -2019,13 +2019,13 @@ int32 InsertTwoTracesOnGuide(int32 mode)
 		{
 			ZeroUnusedObjects(0);
 			/*
-			      StartDrawingEditingWindow();
+			      StartDrawingEditingWindow(0);
 			      SetROP2(OutputDisplay,R2_XORPEN);
 			      InitDrawingConnections();
 			      Connection=&((*Connections)[CurrentGuideNr]);
 			      DrawConnection(Connection);
 			      ExitDrawing();
-			      EndDrawingEditingWindow();
+			      EndDrawingEditingWindow(0);
 			      Connection->Info|=OBJECT_NOT_VISIBLE;
 			      Connection->DeleteNr=(int16)LastActionNr;
 			      DataBaseChanged=1;
@@ -2124,12 +2124,12 @@ int32 InsertTwoTracesOnGuide(int32 mode)
 	{
 		if ((!OkToRePaintAfterTraceDrawing) || (!ObjectInAreaFillInserted))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(0);
 			SetROP2(OutputDisplay, R2_COPYPEN);
 			GetObjectsNet(CurrentDrawingNetNr, MODE_OBJECTS3, 0);
 			ReDisplayNet(0);
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(0);
 		}
 		else
 			RePaint();
@@ -2289,10 +2289,10 @@ int32 InsertVia()
 		GetObjectsNet(CurrentDrawingNetNr, MODE_OBJECTS3, 0);
 		/*
 		    if (!OkToRePaintAfterTraceDrawing) {
-		      StartDrawingEditingWindow();
+		      StartDrawingEditingWindow(0);
 		      ReDisplayNet(0);
 		      ExitDrawing();
-		      EndDrawingEditingWindow();
+		      EndDrawingEditingWindow(0);
 		    }
 		*/
 		DataBaseChanged = 1;

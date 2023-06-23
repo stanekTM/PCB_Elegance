@@ -2128,7 +2128,7 @@ void ChangeNetsHilite(int32 NetNr, int32 Hilite)
 	ViaRecord *Via;
 	ConnectionsRecord *Connection;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 
 	for (Layer = 0; Layer < 32; Layer++)
 	{
@@ -2351,7 +2351,7 @@ void ChangeNetsHilite(int32 NetNr, int32 Hilite)
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -2665,7 +2665,7 @@ int32 HideSelectedConnections()
 	int32 cnt, cnt2, ConnectionInfo;
 	ConnectionsRecord *Connection;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	cnt2 = 0;
 
 	for (cnt = 0; cnt < Design.NrConnections; cnt++)
@@ -2681,7 +2681,7 @@ int32 HideSelectedConnections()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 	return 0;
 }
 
@@ -2695,7 +2695,7 @@ void ChangeNetsVisibility(int32 NetNr, int32 Visibility)
 	int32 cnt, cnt2, ConnectionInfo;
 	ConnectionsRecord *Connection;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 //  SetROP2(OutputDisplay,R2_COPYPEN);
 	SetROP2(OutputDisplay, R2_XORPEN);
 	cnt2 = 0;
@@ -2727,7 +2727,7 @@ void ChangeNetsVisibility(int32 NetNr, int32 Visibility)
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -2810,7 +2810,7 @@ void CheckClipBoard()
 				case UNSELECT_REF:
 					CompRef = (LPSTR) & (ClipBoardMem[BufPos + 4]);
 					BufPos += 16;
-					StartDrawingEditingWindow();
+					StartDrawingEditingWindow(0);
 
 					for (cnt = 0; cnt < Design.NrComps; cnt++)
 					{
@@ -2830,13 +2830,13 @@ void CheckClipBoard()
 					}
 
 					ExitDrawing();
-					EndDrawingEditingWindow();
+					EndDrawingEditingWindow(0);
 					break;
 
 				case SELECT_REF:
 					CompRef = (LPSTR) & (ClipBoardMem[BufPos + 4]);
 					BufPos += 16;
-					StartDrawingEditingWindow();
+					StartDrawingEditingWindow(0);
 
 					for (cnt = 0; cnt < Design.NrComps; cnt++)
 					{
@@ -2853,7 +2853,7 @@ void CheckClipBoard()
 					}
 
 					ExitDrawing();
-					EndDrawingEditingWindow();
+					EndDrawingEditingWindow(0);
 					break;
 				}
 			}

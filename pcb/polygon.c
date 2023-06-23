@@ -190,7 +190,7 @@ double GetNewRandomValue(int32 mode)
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
-
+/*
 void DrawAreaFillStartPolygon(AreaFillRecord * AreaFill, int32 mode)
 {
 	int32 count, cnt;
@@ -275,7 +275,7 @@ void DrawAreaFillStartPolygon(AreaFillRecord * AreaFill, int32 mode)
 		}
 	}
 }
-
+*/
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -360,7 +360,7 @@ void DrawTestPolygon(PolygonRecord * Polygon, int32 mode)
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
-
+/*
 void DrawTestPolygon2(PolygonRecord * Polygon, int32 mode)
 {
 	int32 count, cnt;
@@ -408,13 +408,13 @@ void DrawTestPolygon2(PolygonRecord * Polygon, int32 mode)
 
 		if ((Xmax >= ViewMinX) && (Xmin <= ViewMaxX) && (Ymax >= ViewMinY) && (Ymin <= ViewMaxY))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(0);
 			InitDrawingObject(0, CONNECTIONS_LAYER, 0, DRAW_WITH_PEN_AND_NOT_FILLED);
 			SetROP2(OutputDisplay, SelectColorMode);
 			ellips2(Mult(x1 - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(y1 - Yoffset) - 1, 3, 3, 255);
 			
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(0);
 
 			if ((mode & 2) == 0)
 			{
@@ -433,7 +433,7 @@ void DrawTestPolygon2(PolygonRecord * Polygon, int32 mode)
 		}
 	}
 }
-
+*/
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -453,7 +453,7 @@ void DrawTryingPolygon(int32 dikte, int32 mode)
 	if (count == 0)
 		return;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(BM_DoubleBuffer);
 
 	if (mode == 0)
 		SetROP2(OutputDisplay, R2_XORPEN);
@@ -503,7 +503,7 @@ void DrawTryingPolygon(int32 dikte, int32 mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(BM_DoubleBuffer);
 }
 
 // *******************************************************************************************************
@@ -518,7 +518,7 @@ void DrawTestPolygon3(PolygonRecord * Polygon, int32 mode)
 	char str[MAX_LENGTH_STRING];
 
 	if ((mode & 4) == 0)
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 	count = Polygon->NrVertices;
 
@@ -591,7 +591,7 @@ void DrawTestPolygon3(PolygonRecord * Polygon, int32 mode)
 	if ((mode & 4) == 0)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -607,7 +607,7 @@ void DrawTestPolygon4(PolygonRecord * Polygon, double dikte, int32 mode)
 	char str[MAX_LENGTH_STRING];
 
 	if ((mode & 4) == 0)
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 	thickness = Mult(dikte);
 	count = Polygon->NrVertices;
@@ -683,7 +683,7 @@ void DrawTestPolygon4(PolygonRecord * Polygon, double dikte, int32 mode)
 	if ((mode & 4) == 0)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -702,7 +702,7 @@ void DrawFilledPolygon(PolygonRecord * FilledPolygon, int32 mode)
 	AllocateSpecialMem(MEM_POINTS, count * sizeof(POINT) + 16384, (void **) &Points);
 
 	if ((mode & 8) == 8)
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 	switch (mode & 7)
 	{
@@ -764,7 +764,7 @@ void DrawFilledPolygon(PolygonRecord * FilledPolygon, int32 mode)
 	if ((mode & 8) == 8)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -782,7 +782,7 @@ void DrawOwnPolygon(double *PolygonPoints, int32 count, int32 mode)
 	AllocateSpecialMem(MEM_POINTS, count * sizeof(POINT) + 16384, (void **) &Points);
 
 	if ((mode & 8) == 8)
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 	if (ReverseY)
 	{
@@ -872,7 +872,7 @@ void DrawOwnPolygon(double *PolygonPoints, int32 count, int32 mode)
 	if ((mode & 8) == 8)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -890,7 +890,7 @@ void DrawOwnPolygonFloat(float *PolygonPoints, int32 count, int32 mode)
 	AllocateSpecialMem(MEM_POINTS, count * sizeof(POINT) + 16384, (void **) &Points);
 
 	if ((mode & 8) == 8)
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 	if (ReverseY)
 	{
@@ -980,7 +980,7 @@ void DrawOwnPolygonFloat(float *PolygonPoints, int32 count, int32 mode)
 	if ((mode & 8) == 8)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -1108,7 +1108,7 @@ void DrawTryingPolygonObject(double CurrentX, double CurrentY, int32 Mode)
 			return;
 		}
 
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(BM_DoubleBuffer);
 		SetROP2(OutputDisplay, R2_XORPEN);
 		NewObjectLine.X1 = (float) CurrentX2;
 		NewObjectLine.Y1 = (float) CurrentY2;
@@ -1136,7 +1136,7 @@ void DrawTryingPolygonObject(double CurrentX, double CurrentY, int32 Mode)
 				DrawCrossHair(16 + 8 + 2);
 
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DoubleBuffer);
 			return;
 		}
 
@@ -1153,11 +1153,11 @@ void DrawTryingPolygonObject(double CurrentX, double CurrentY, int32 Mode)
 			DrawCrossHair(16 + 8 + 2);
 
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(BM_DoubleBuffer);
 		break;
 
 	case OBJECT_RECT:
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(BM_DoubleBuffer);
 		SetROP2(OutputDisplay, R2_XORPEN);
 		InitDrawingObject(0, POLYGON_DRAW_LAYER, 1, DRAW_WITH_PEN_AND_NOT_FILLED);
 		AreaFillObjectRect.CentreX = (float) CurrentX;
@@ -1168,11 +1168,11 @@ void DrawTryingPolygonObject(double CurrentX, double CurrentY, int32 Mode)
 		DrawLine(MultX(CurrentX) - 3, MultY(CurrentY) + 3, MultX(CurrentX) + 3, MultY(CurrentY) - 3);
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(BM_DoubleBuffer);
 		break;
 
 	case OBJECT_CIRCLE:
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(BM_DoubleBuffer);
 		SetROP2(OutputDisplay, R2_XORPEN);
 		InitDrawingObject(0, POLYGON_DRAW_LAYER, 1, DRAW_WITH_PEN_AND_NOT_FILLED);
 
@@ -1186,11 +1186,11 @@ void DrawTryingPolygonObject(double CurrentX, double CurrentY, int32 Mode)
 
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(BM_DoubleBuffer);
 		break;
 
 	case PIN_LINE_HOR:
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(BM_DoubleBuffer);
 		SetROP2(OutputDisplay, R2_XORPEN);
 		dikte = Mult(AreaFillObjectHorLine.Y2);
 		InitDrawingObject(0, POLYGON_DRAW_LAYER, dikte, DRAW_WITH_PEN_AND_NOT_FILLED);
@@ -1207,11 +1207,11 @@ void DrawTryingPolygonObject(double CurrentX, double CurrentY, int32 Mode)
 		DrawLine(MultX(CurrentX) - 3, MultY(CurrentY) + 3, MultX(CurrentX) + 3, MultY(CurrentY) - 3);
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(BM_DoubleBuffer);
 		break;
 
 	case PIN_LINE_VER:
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(BM_DoubleBuffer);
 		SetROP2(OutputDisplay, R2_XORPEN);
 		dikte = Mult(AreaFillObjectVerLine.X2);
 		InitDrawingObject(0, POLYGON_DRAW_LAYER, dikte, DRAW_WITH_PEN_AND_NOT_FILLED);
@@ -1228,7 +1228,7 @@ void DrawTryingPolygonObject(double CurrentX, double CurrentY, int32 Mode)
 		DrawLine(MultX(CurrentX) - 3, MultY(CurrentY) + 3, MultX(CurrentX) + 3, MultY(CurrentY) - 3);
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(BM_DoubleBuffer);
 		break;
 	}
 }
@@ -1242,8 +1242,8 @@ void CommandAddTryingPolygonLine()
 {
 	int32 ok, count, dikte;
 	PolygonRecord *DrawPolygon2;
-// PolygonObjectType
-	StartDrawingEditingWindow();
+    //PolygonObjectType
+	StartDrawingEditingWindow(0);
 	dikte = Mult(NewObjectLine.LineThickNess);
 	InitDrawingObject(0, POLYGON_DRAW_LAYER, dikte, DRAW_WITH_PEN_AND_NOT_FILLED);
 
@@ -1282,7 +1282,7 @@ void CommandAddTryingPolygonLine()
 	DrawCrossHair(8);
 	ExitDrawing();
 
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -2779,7 +2779,7 @@ int32 CollectCrossesPolygons2(PolygonRecord * PolygonObject, PolygonRecord * Res
 				        ResultPolygon->Points[LineCnt2a].y);
 				OutputDebugString(str);
 				DrawLineRed(PolygonObject->Points[LineCnt2].x, PolygonObject->Points[LineCnt2].y,
-				            PolygonObject->Points[LineCnt2a].x, PolygonObject->Points[LineCnt2a].y);
+					        PolygonObject->Points[LineCnt2a].x, PolygonObject->Points[LineCnt2a].y, BM_DirectToScreen);
 #endif
 
 				LineCnt3 = CrossPoints[cnt].LineNrPolygonB;
@@ -2796,9 +2796,9 @@ int32 CollectCrossesPolygons2(PolygonRecord * PolygonObject, PolygonRecord * Res
 				        PolygonObject->Points[LineCnt3a].y);
 				OutputDebugString(str);
 				DrawLineGreen(PolygonObject->Points[LineCnt3].x, PolygonObject->Points[LineCnt3].y,
-				              PolygonObject->Points[LineCnt3a].x, PolygonObject->Points[LineCnt3a].y);
+					          PolygonObject->Points[LineCnt3a].x, PolygonObject->Points[LineCnt3a].y, BM_DirectToScreen);
 
-				DrawCircleYellow(CrossPoints[cnt].CrossX, CrossPoints[cnt].CrossY, 1000.0);
+				DrawCircleYellow(CrossPoints[cnt].CrossX, CrossPoints[cnt].CrossY, 1000.0, BM_DirectToScreen);
 #endif
 			}
 
@@ -4461,10 +4461,10 @@ int32 MakeNewAreaFill(int32 NetNr, int32 Layer, int32 Info, double ThickNess, do
 			return 0;
 
 		/*
-		    StartDrawingEditingWindow();
+		    StartDrawingEditingWindow(0);
 		    DrawTestPolygon(SmallerPolygon,1);
 		    ExitDrawing();
-		    EndDrawingEditingWindow();
+		    EndDrawingEditingWindow(0);
 		    DeAllocateMemAreaFills();
 		    return 0;
 		*/
@@ -4592,7 +4592,7 @@ int32 MakeNewAreaFill(int32 NetNr, int32 Layer, int32 Info, double ThickNess, do
 
 					/*
 					          if (ObjectNr>=21) {
-					            StartDrawingEditingWindow();
+					            StartDrawingEditingWindow(0);
 					            InitDrawingBackGround(0,0);
 					            DrawAreaFill(AreaFillToChange,1);
 					            AreaFillToChange->Info|=OBJECT_NOT_VISIBLE;
@@ -4637,7 +4637,7 @@ int32 MakeNewAreaFill(int32 NetNr, int32 Layer, int32 Info, double ThickNess, do
 					            InvalidateRect(PCBWindow,NULL,0);
 					            PostMessage(PCBWindow,WM_PAINT,(WPARAM)NULL,(LPARAM)NULL);
 					            CheckInputMessages(0);
-					            StartDrawingEditingWindow();
+					            StartDrawingEditingWindow(0);
 					            InitDrawingAreaFills(0);
 					            DrawAreaFill(NewAreaFill,0);
 					            DrawTestPolygon(PolygonObject,1);  // green
@@ -4964,7 +4964,7 @@ int32 RebuildAreaFill(AreaFillRecord * AreaFillToChange, int32 mode)
 
 				if (ObjectNr >= 602)
 				{
-					StartDrawingEditingWindow();
+					StartDrawingEditingWindow(0);
 					SetBackGroundActive(0);
 					DrawAreaFill(AreaFillToChange, 0);
 					AreaFillToChange->Info |= OBJECT_NOT_VISIBLE;
@@ -5073,7 +5073,7 @@ int32 RebuildAreaFill(AreaFillRecord * AreaFillToChange, int32 mode)
 								              CheckInputMessages(0);
 								              CheckInputMessages(0);
 								              AreaFillToChange->Info&=~OBJECT_NOT_VISIBLE;
-								              StartDrawingEditingWindow();
+								              StartDrawingEditingWindow(0);
 								              InitDrawingAreaFills(0);
 								              DrawAreaFill(NewAreaFill,0);
 								              DrawTestPolygon(PolygonObject,1);  // green
@@ -5095,7 +5095,7 @@ int32 RebuildAreaFill(AreaFillRecord * AreaFillToChange, int32 mode)
 						              CheckInputMessages(0);
 						              CheckInputMessages(0);
 						              AreaFillToChange->Info&=~OBJECT_NOT_VISIBLE;
-						              StartDrawingEditingWindow();
+						              StartDrawingEditingWindow(0);
 						              InitDrawingAreaFills(0);
 						              DrawAreaFill(NewAreaFill,0);
 						              DrawTestPolygon(PolygonObject,1);  // green
@@ -5298,13 +5298,13 @@ int32 RebuildAreaFill(AreaFillRecord * AreaFillToChange, int32 mode)
 			CenterScreenOnPoint(x1, y1, 0);
 			RePaint();
 			CheckInputMessages(200);
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(0);
 			InitDrawingObject(0, CROSS_HAIR_LAYER, 1, DRAW_WITH_DASH_PEN_AND_NO_BRUSH);
 			SetROP2(OutputDisplay, R2_XORPEN);
 			DrawLine(MultX(x1), -10000, MultX(x1), 10000);
 			DrawLine(-10000, MultY(y1), 10000, MultY(y1));
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(0);
 
 			if ((ProblemPolygon1) && (ProblemPolygon2))
 			{
@@ -6715,7 +6715,7 @@ void GetPowerPlaneToCutFrom(int32 Layer, double ThickNess, int32 ObjectType, int
 
 		/*
 		    AreaFill=(AreaFillRecord *)&(AreaFillMem[(*AreaFills)[Found]]);
-		    StartDrawingEditingWindow();
+		    StartDrawingEditingWindow(0);
 		    InitDrawingBackGround();
 		    DrawAreaFill(AreaFill,1);
 		    AreaFill->Info|=OBJECT_NOT_VISIBLE;
@@ -6723,7 +6723,7 @@ void GetPowerPlaneToCutFrom(int32 Layer, double ThickNess, int32 ObjectType, int
 		    AreaFill=(AreaFillRecord *)&(AreaFillMem[(*AreaFills)[Design.NrAreaFills-1]]);
 		    DrawAreaFill(AreaFill,0);
 		    ExitDrawing();
-		    EndDrawingEditingWindow();
+		    EndDrawingEditingWindow(0);
 		*/
 	}
 
@@ -7068,7 +7068,7 @@ int32 InsertObjectInAreaFill(ObjectRecord * Object, int32 Layer, int32 NetNr, in
 						if ((mode & 1) == 1)
 						{
 							ExitDrawing();
-							EndDrawingEditingWindow();
+							EndDrawingEditingWindow(0);
 						}
 
 						AreaFill->Info |= OBJECT_NOT_VISIBLE;
@@ -7088,7 +7088,7 @@ int32 InsertObjectInAreaFill(ObjectRecord * Object, int32 Layer, int32 NetNr, in
 								RePaint();
 
 								if ((mode & 1) == 1)
-									StartDrawingEditingWindow();
+									StartDrawingEditingWindow(0);
 							}
 						}
 					}
@@ -7250,7 +7250,7 @@ void RemovePowerPlane(int32 Layer)
 	if (!OkToDrawAreaFills)
 		return;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 
 	for (cnt = 0; cnt < Design.NrAreaFills; cnt++)
 	{
@@ -7267,7 +7267,7 @@ void RemovePowerPlane(int32 Layer)
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 
 	if (OkToRePaint)
 		RePaint();
@@ -9775,7 +9775,7 @@ void ViewAreafillPoint()
 	if (AreaFill2 == 0)
 		return;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 //  InitDrawingShapePinsTop();
 	SetROP2(OutputDisplay, R2_COPYPEN);
 	DrawPolygon = (PolygonRecord *) ((uint8 *) AreaFill2 + sizeof(AreaFillRecord));
@@ -9920,7 +9920,7 @@ void ViewAreafillPoint()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************

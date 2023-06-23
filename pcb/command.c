@@ -706,12 +706,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if ((GridVisible) && (NotInRange(TempGridSize, GridSize)))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			GridSize = TempGridSize;
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 		else
 			GridSize = TempGridSize;
@@ -742,12 +742,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if ((GridVisible) && (NotInRange(TempGridSize, GridSize)))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			GridSize = TempGridSize;
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 		else
 			GridSize = TempGridSize;
@@ -781,12 +781,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if ((GridVisible) && (NotInRange(TempGridSize, GridSize)))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			GridSize = TempGridSize;
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 		else
 			GridSize = TempGridSize;
@@ -821,12 +821,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if ((GridVisible) && (NotInRange(TempGridSize, GridSize)))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			GridSize = TempGridSize;
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 		else
 			GridSize = TempGridSize;
@@ -858,10 +858,10 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if (GridVisible)
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 
 		if (Units == 0)
@@ -871,10 +871,10 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if (GridVisible)
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 
 		SetInfoStr(0);
@@ -906,10 +906,10 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if (GridVisible)
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 
 		if (Units == 0)
@@ -919,10 +919,10 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if (GridVisible)
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 
 		SetInfoStr(0);
@@ -951,12 +951,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if ((GridVisible) && (NotInRange(TempGridSize, GridSize)))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			GridSize = TempGridSize;
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 		else
 			GridSize = TempGridSize;
@@ -987,12 +987,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if ((GridVisible) && (NotInRange(TempGridSize, GridSize)))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			GridSize = TempGridSize;
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 		else
 			GridSize = TempGridSize;
@@ -1026,12 +1026,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 		if ((GridVisible) && (NotInRange(TempGridSize, GridSize)))
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(BM_DirectToScreen);
 			DrawGrid();
 			GridSize = TempGridSize;
 			DrawGrid();
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(BM_DirectToScreen);
 		}
 		else
 			GridSize = TempGridSize;
@@ -1095,12 +1095,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 			if ((GridVisible) && (NotInRange(TempGridSize, GridSize)))
 			{
-				StartDrawingEditingWindow();
+				StartDrawingEditingWindow(BM_DirectToScreen);
 				DrawGrid();
 				GridSize = TempGridSize;
 				DrawGrid();
 				ExitDrawing();
-				EndDrawingEditingWindow();
+				EndDrawingEditingWindow(BM_DirectToScreen);
 			}
 			else
 				GridSize = TempGridSize;
@@ -1484,10 +1484,10 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 		break;
 
 	case ID_VIEW_GRIDONOFF:
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(BM_DirectToScreen);
 		GridVisible = !GridVisible;
 		DrawGrid();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(BM_DirectToScreen);
 		break;
 
 	case ID_VIEW_HILITEVISIBLECONN:
@@ -1858,8 +1858,8 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 		}
 
 		val = PixelToReal(10);
-		DrawLineWhite(RelX, RelY + val, RelX, RelY - val);
-		DrawLineWhite(RelX + val, RelY, RelX - val, RelY);
+		DrawLineWhite(RelX, RelY + val, RelX, RelY - val, BM_MultiStart);
+		DrawLineWhite(RelX + val, RelY, RelX - val, RelY, BM_MultiEnd);
 		DisplayCursorPosition();
 		break;
 
@@ -2283,12 +2283,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 				{
 					if (SelectionMode == 3)
 					{
-						StartDrawingEditingWindow();
+						StartDrawingEditingWindow(BM_DoubleBuffer);
 						Comp->Info |= OBJECT_SELECTED;
 						SetROP2(OutputDisplay, R2_COPYPEN);
 						DrawComp(Comp, 0.0, 0.0, 0, 0x200);
 						ExitDrawing();
-						EndDrawingEditingWindow();
+						EndDrawingEditingWindow(BM_DoubleBuffer);
 						PostMessage(PCBWindow, WM_COMMAND, (WPARAM) ID_MOVE_OBJECTS, (LPARAM) NULL);
 					}
 				}

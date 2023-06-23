@@ -181,8 +181,8 @@ void ViewDesignRuleError(int32 mode)
 
 		if (minx < 10000.0e5)
 		{
-			DrawLineYellow((minx + maxx) / 2, -10000.0e5, (minx + maxx) / 2, 10000.0e5);
-			DrawLineYellow(-10000.0e5, (miny + maxy) / 2, 10000.0e5, (miny + maxy) / 2);
+			DrawLineYellow((minx + maxx) / 2, -10000.0e5, (minx + maxx) / 2, 10000.0e5, BM_DirectToScreen);
+			DrawLineYellow(-10000.0e5, (miny + maxy) / 2, 10000.0e5, (miny + maxy) / 2, BM_DirectToScreen);
 		}
 	}
 	else

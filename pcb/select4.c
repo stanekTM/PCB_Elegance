@@ -260,7 +260,7 @@ void SelectOnlyVias()
 	int32 TraceInfo, Layer, cnt;
 	TraceRecord *Trace;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 
 	for (Layer = 0; Layer < 32; Layer++)
 	{
@@ -356,7 +356,7 @@ void SelectOnlyVias()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -369,7 +369,7 @@ void SelectOnlyTraces()
 	int32 ViaInfo, cnt;
 	ViaRecord *Via;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 
 	for (cnt = 0; cnt < Design.NrVias; cnt++)
 	{
@@ -395,7 +395,7 @@ void SelectOnlyTraces()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 
@@ -796,7 +796,7 @@ void UnprotectComponents()
 	int32 cnt;
 	CompRecord *Comp;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 
 	for (cnt = 0; cnt < Design.NrComps; cnt++)
 	{
@@ -811,7 +811,7 @@ void UnprotectComponents()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -844,8 +844,8 @@ void FindNextConnection()
 				CenterScreenOnPoint(cx, cy, 0);
 				SearchConnectionNr = cnt;
 				RePaint();
-				DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0);
-				DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy);
+				DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0, BM_DirectToScreen);
+				DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy, BM_DirectToScreen);
 				return;
 			}
 		}
@@ -877,8 +877,8 @@ void FindNextConnection()
 			CenterScreenOnPoint(cx, cy, 0);
 			SearchConnectionNr = cnt;
 			RePaint();
-			DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0);
-			DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy);
+			DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0, BM_DirectToScreen);
+			DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy, BM_DirectToScreen);
 			return;
 		}
 
@@ -906,8 +906,8 @@ void FindNextConnection()
 			CenterScreenOnPoint(cx, cy, 0);
 			SearchConnectionNr = cnt;
 			RePaint();
-			DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0);
-			DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy);
+			DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0, BM_DirectToScreen);
+			DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy, BM_DirectToScreen);
 		}
 	}
 }

@@ -2067,11 +2067,11 @@ void GetObjectsConnectedToObject(int32 ObjectNr)
 						if (Object->ObjectType == AREAFILL)
 							ok = 1;
 
-						StartDrawingEditingWindow();
+						StartDrawingEditingWindow(0);
 						InitDrawingObject(0, ERROR_LAYER, -1, NORMAL_FILLED_AND_PEN1);
 						DrawObject(Object, 64);
 						ExitDrawing();
-						EndDrawingEditingWindow();
+						EndDrawingEditingWindow(0);
 //            while (!KeyPressed()) CheckInputMessages(0);
 //            ReadKeyFunction();
 //          }
@@ -2224,11 +2224,11 @@ int32 CheckNet(int32 NetNr, int32 mode)
 
 			if (DrawOn)
 			{
-				StartDrawingEditingWindow();
+				StartDrawingEditingWindow(0);
 				InitDrawingObject(0, ERROR_LAYER, -1, NORMAL_FILLED_AND_PEN1);
 				DrawObject(Object, 64);
 				ExitDrawing();
-				EndDrawingEditingWindow();
+				EndDrawingEditingWindow(0);
 
 				while (!KeyPressed())
 					CheckInputMessages(0);
@@ -2728,7 +2728,7 @@ void DeleteAndUndisplayConnectionsNet(int32 NetNr, int32 mode)
 
 	if (mode == 0)
 	{
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		InitDrawingObject(0, CONNECTIONS_LAYER, 0, DRAW_WITH_PEN_AND_NOT_FILLED);
 	}
 
@@ -2755,7 +2755,7 @@ void DeleteAndUndisplayConnectionsNet(int32 NetNr, int32 mode)
 	if (mode == 0)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -2811,7 +2811,7 @@ void ReCalcConnectionsNet(int32 NetNr, int32 mode, int32 RePaint)
 
 		if (!RePaint)
 		{
-			StartDrawingEditingWindow();
+			StartDrawingEditingWindow(0);
 			SetROP2(OutputDisplay, R2_XORPEN);
 			InitDrawingObject(0, CONNECTIONS_LAYER, 0, DRAW_WITH_PEN_AND_NOT_FILLED);
 		}
@@ -2833,7 +2833,7 @@ void ReCalcConnectionsNet(int32 NetNr, int32 mode, int32 RePaint)
 		if (!RePaint)
 		{
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(0);
 		}
 
 		if (mode == 2)

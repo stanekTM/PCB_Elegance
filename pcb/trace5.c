@@ -170,7 +170,7 @@ void SpecialTraceDrawing(int32 mode)
 	if ((mode & 0x18) != 0)
 	{
 		Net = &((*Nets)[MovingTrace2.NetNr]);
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		DrawCode = DrawLayerCode[CurrentDrawingLayer];
 
 		if ((mode & 8) == 8)
@@ -224,7 +224,7 @@ void SpecialTraceDrawing(int32 mode)
 
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -374,7 +374,7 @@ void DrawSpecialTrace(int32 mode)
 
 	if (OkToDrawSpecialTraces(0.0, 0))
 	{
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 		if (mode == 0)
 			SetROP2(OutputDisplay, R2_XORPEN);
@@ -430,7 +430,7 @@ void DrawSpecialTrace(int32 mode)
 		}
 
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 

@@ -25,11 +25,10 @@
 
 #ifndef _GRAPHICS
 
-#define _GRAPHICS
-
 #include "owntypes.h"
 #include "windows.h"
 
+#define _GRAPHICS
 
 #define NORMAL_FILLED_AND_PEN1                  0x00
 #define NORMAL_FILLED_AND_NO_PEN                0x01
@@ -306,33 +305,23 @@ int32 InitDrawingObject(int32 ObjectType, int32 Layer, int32 ThickNess, int32 mo
 
 void InitDrawingEmptyPen(void);
 
-void InitDrawingColor(COLORREF Color);
-
 void ExitDrawing(void);
 
-void DrawLineWhite(double x1, double y1, double x2, double y2);
+void DrawLineWhite(double x1, double y1, double x2, double y2, int32 BufferMode);
 
-void DrawLineYellow(double x1, double y1, double x2, double y2);
+void DrawLineYellow(double x1, double y1, double x2, double y2, int32 BufferMode);
 
-void DrawLineRed(double x1, double y1, double x2, double y2);
+void DrawLineRed(double x1, double y1, double x2, double y2, int32 BufferMode);
 
-void DrawLineGreen(double x1, double y1, double x2, double y2);
+void DrawLineGreen(double x1, double y1, double x2, double y2, int32 BufferMode);
 
-void DrawLineWhite3(double x1, double y1, double x2, double y2);
+void DrawLineGray(double x1, double y1, double x2, double y2, int32 BufferMode);
 
-void DrawLineGray(double x1, double y1, double x2, double y2);
+void DrawCircleWhite(double x, double y, double dikte, int32 BufferMode);
 
-void DrawLineYellow3(double x1, double y1, double x2, double y2);
+void DrawCircleYellow(double x, double y, double dikte, int32 BufferMode);
 
-void DrawLineRed3(double x1, double y1, double x2, double y2);
-
-void DrawLineGreen3(double x1, double y1, double x2, double y2);
-
-void DrawCircleWhite(double x, double y, double dikte);
-
-void DrawCircleYellow(double x, double y, double dikte);
-
-void DrawCircleGray(double x, double y, double dikte);
+void DrawCircleGray(double x, double y, double dikte, int32 BufferMode);
 
 void DeleteGraphicObjects(void);
 

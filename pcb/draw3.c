@@ -100,7 +100,7 @@ void DrawXorWindow(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 {
 	int32 xmin, xmax, ymin, ymax;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_XORPEN);
 
@@ -111,7 +111,7 @@ void DrawXorWindow(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 	rect2(xmin, ymin, abs(x2 - x1) + 1, abs(y2 - y1) + 1);
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -136,7 +136,7 @@ void DrawTempObjects(double WindowX, double WindowY)
 	YO = cy - (int32) (WindowY * 0.5);
 
 	DrawCrossHair(2);
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	InitDrawingObject(0, BACKGROUND_LAYER, 0, NORMAL_FILLED_AND_PEN1);
 	rect3(cx + DrawWindowMinX, cy + 1, (int32) WindowX, (int32) WindowY);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
@@ -223,7 +223,7 @@ void DrawTempObjects(double WindowX, double WindowY)
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -276,13 +276,13 @@ void DrawXorWindow2(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 			UpdateWindow(PCBWindow);
 		}
 
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 		SetROP2(OutputDisplay, R2_XORPEN);
 		rect2(xmin, ymin, abs(x2 - x1) + 1, abs(y2 - y1) + 1);
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 	else
 	{
@@ -316,7 +316,7 @@ void DrawXorWindow2(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 		if (FirstOutZoom)
 			DrawTempObjects(DisplayX, DisplayY);
 
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 
 		if (FirstOutZoom)
@@ -329,7 +329,7 @@ void DrawXorWindow2(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 		rect3(cx2 + x4, cy2 - y4, x3, y3);
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -568,12 +568,12 @@ void ZoomWindow()
 
 void DrawXorWindow3(int32 x1, int32 y1, int32 width, int32 height, int32 mode)
 {
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_XORPEN);
 	rect3(x1, y1, width, height);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -626,11 +626,11 @@ void PanWindow()
 
 
 	DrawCrossHair(2);
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 	rect3(cx + DrawWindowMinX, cy, (int32) DisplayX, (int32) DisplayY);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 
 //  DrawXorWindow3(cx+DrawWindowMinX,cy,(int32)DisplayX,(int32)DisplayY,0);
 
@@ -752,7 +752,7 @@ void DrawWindow(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 {
 	int32 x3, y3, x4, y4;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 	SetROP2(OutputDisplay, R2_XORPEN);
 
@@ -773,13 +773,13 @@ void DrawWindow(int32 x1, int32 y1, int32 x2, int32 y2, int32 mode)
 		DrawLine(x2, y2, x3, y3);
 		DrawLine(x3, y3, x4, y4);
 		DrawLine(x4, y4, x1, y1);
-//    LineTo(OutputDisplay,x3,y3);
-//    LineTo(OutputDisplay,x2,y2);
-//    LineTo(OutputDisplay,x4,y4);
-//    LineTo(OutputDisplay,x1,y1);
+       //LineTo(OutputDisplay,x3,y3);
+       //LineTo(OutputDisplay,x2,y2);
+       //LineTo(OutputDisplay,x4,y4);
+       //LineTo(OutputDisplay,x1,y1);
 	}
 
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -812,7 +812,7 @@ void DrawMeasurementLine(double x1, double y1, double x2, double y2, int32 mode)
 	if (mode == 0)
 		return;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 
 	if (mode & 0x20)
@@ -850,7 +850,7 @@ void DrawMeasurementLine(double x1, double y1, double x2, double y2, int32 mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -1097,7 +1097,7 @@ void ButtonInfo()
 					DrawMouseInfoOff(0);
 					DisplayButtonNr = 1;
 					OldButtonNr = NewButtonNr;
-					StartDrawingEditingWindow();
+					StartDrawingEditingWindow(0);
 					InitDrawingObject(0, BUTTON_INFO_LAYER, -1, NORMAL_FILLED_AND_PEN1);
 					SetTextColor(OutputDisplay, RGB(0, 0, 0));
 					SetBkMode(OutputDisplay, TRANSPARENT);
@@ -1293,7 +1293,7 @@ void ButtonInfo()
 					TextOutUTF8(OutputDisplay, ButtonRect.left + 2, ButtonRect.top + 2, str, strlen(str));
 					SelectObject(OutputDisplay, SaveFont);
 					ExitDrawing();
-					EndDrawingEditingWindow();
+					EndDrawingEditingWindow(0);
 				}
 			}
 			else
@@ -1379,7 +1379,7 @@ void PressButton(int32 val, int32 mode)
 
 	if ((mode & 1) == 0)
 	{
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		SelectClipRgn(OutputDisplay, NULL);
 	}
 
@@ -1420,7 +1420,7 @@ void PressButton(int32 val, int32 mode)
 	if (mode == 0)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -1439,7 +1439,7 @@ void DepressButton(int32 val, int32 mode)
 	if (mode == 0)
 		val = GetButtonNr(SelectionMode);
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	DrawCrossHair(8 + 2);
 	ButtonBitmap = LoadBitmap(PCBClass.hInstance, MAKEINTRESOURCE(BITMAP_BUTTONS));
 	ButtonMemoryDC = CreateCompatibleDC(OutputDisplay);
@@ -1453,7 +1453,7 @@ void DepressButton(int32 val, int32 mode)
 	DeleteObject(ButtonBitmap);
 	SelectClipRgn(OutputDisplay, EditingRegion);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -1860,7 +1860,7 @@ int32 NewDisplayInfo(LPSTR InfoStr, int32 x, int32 y)
 	*/
 	TimeOutInfo = TimerValue;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	DrawCrossHair(8 + 2);
 	InitDrawingObject(0, BUTTON_INFO_LAYER, -1, NORMAL_FILLED_AND_PEN1);
 	SetTextColor(OutputDisplay, GraphicsObjectColor[BackGroundObjectNr]);
@@ -1940,7 +1940,7 @@ int32 NewDisplayInfo(LPSTR InfoStr, int32 x, int32 y)
 
 	SelectObject(OutputDisplay, SaveFont);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 	DrawCrossHair(2);
 	return 0;
 }

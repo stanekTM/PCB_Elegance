@@ -113,7 +113,7 @@ void TraceDrawingOff(int32 mode)
 
 	if (((CurrentWorkingTrace.Info2 & 1) == 1) && (CurrentWorkingTrace.ObjectType != 0))
 	{
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		DrawCode = DrawLayerCode[CurrentDrawingLayer];
 		InitDrawingObject(TRACE_HOR, DrawCode, 0, NORMAL_FILLED_AND_PEN1);
 		memmove(&ObjectTrace, &CurrentWorkingTrace, sizeof(ObjectRecord));
@@ -136,7 +136,7 @@ void TraceDrawingOff(int32 mode)
 		}
 
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 
 	TraceDrawingActive = 0;
@@ -159,7 +159,7 @@ void TraceDrawingOn(int32 mode)
 
 	if (((CurrentWorkingTrace.Info2 & 1) == 1) && (CurrentWorkingTrace.ObjectType != 0))
 	{
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 		DrawCode = DrawLayerCode[CurrentDrawingLayer];
 		memmove(&ObjectTrace, &CurrentWorkingTrace, sizeof(ObjectRecord));
 		ObjectTrace.Info &= ~OBJECT_HIGHLITED;
@@ -194,7 +194,7 @@ void TraceDrawingOn(int32 mode)
 		}
 
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 
 	DrawTrace(CurrentDrawX1, CurrentDrawY1, OldX, OldY, CurrentTraceWidth, CurrentClearance, CurrentDrawingNetNr,
@@ -2583,7 +2583,7 @@ x2,y2 : New point to draw trace to
 	DrawCode = DrawLayerCode[CurrentDrawingLayer];
 	Net = &((*Nets)[CurrentDrawingNetNr]);
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	SetROP2(OutputDisplay, R2_XORPEN);
 
 	if ((Net->Info & OBJECT_HIGHLITED) == OBJECT_HIGHLITED)
@@ -2797,7 +2797,7 @@ x2,y2 : New point to draw trace to
 
 #endif
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 // *******************************************************************************************************
@@ -3033,12 +3033,12 @@ int32 DrawNewVia(double x, double y)
 	NewVia.X = (float) x;
 	NewVia.Y = (float) y;
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	SetROP2(OutputDisplay, R2_XORPEN);
 	DrawVia(&NewVia);
 	DrawCrossHair(16 + 8);
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 	return 0;
 }
 

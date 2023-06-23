@@ -4605,7 +4605,7 @@ void DrawGerberObjects(double CurrentX, double CurrentY, int32 Layer, int32 mode
 	int32 ok;
 #endif
 
-	StartDrawingEditingWindow();
+	StartDrawingEditingWindow(0);
 	CurrentObjectCode = -1;
 
 	SetROP2(OutputDisplay, R2_XORPEN);
@@ -4642,7 +4642,7 @@ void DrawGerberObjects(double CurrentX, double CurrentY, int32 Layer, int32 mode
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 }
 
 
@@ -5612,7 +5612,7 @@ int32 ConvertGerberObjectsToTracesVias(int32 Layer, int32 mode)
 	}
 
 	/*
-	  StartDrawingEditingWindow();
+	  StartDrawingEditingWindow(0);
 	  SetROP2(OutputDisplay,SelectColorMode);
 	  for (cnt=0;cnt<NrObjects6;cnt++) {
 	    Object6=&((*Objects6)[cnt]);
@@ -5621,8 +5621,9 @@ int32 ConvertGerberObjectsToTracesVias(int32 Layer, int32 mode)
 	    }
 	  }
 	  ExitDrawing();
-	  EndDrawingEditingWindow();
+	  EndDrawingEditingWindow(0);
 	*/
+
 	LastActionNr++;
 
 	for (cnt = 0; cnt < Design.NrNets; cnt++)
@@ -5702,7 +5703,7 @@ int32 ImportTracesVias(int32 mode)
 	}
 
 	/*
-	  StartDrawingEditingWindow();
+	  StartDrawingEditingWindow(0);
 	  for (cnt=0;cnt<NrObjects3;cnt++) {
 	    Object=&((*Objects3)[cnt]);
 	//    Object->Info|=OBJECT_SELECTED;
@@ -5712,8 +5713,9 @@ int32 ImportTracesVias(int32 mode)
 	    DrawObject(Object,0);
 	  }
 	  ExitDrawing();
-	  EndDrawingEditingWindow();
+	  EndDrawingEditingWindow(0);
 	*/
+
 	PostMessage(PCBWindow, WM_COMMAND, (WPARAM) ID_ACTION_OBJECTS, (LPARAM) NULL);
 	CheckInputMessages(0);
 

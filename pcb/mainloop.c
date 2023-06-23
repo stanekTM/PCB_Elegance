@@ -770,7 +770,7 @@ void DrawCrossHair(int32 mode)
 	}
 
 	if ((mode & 8) == 0)
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 	InitDrawingObject(0, CROSS_HAIR_LAYER, 1, DRAW_WITH_DASH_PEN_AND_NO_BRUSH);
 	PreviousROP = GetROP2(OutputDisplay);
@@ -857,7 +857,7 @@ void DrawCrossHair(int32 mode)
 	if ((mode & 8) == 0)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 
@@ -896,7 +896,7 @@ void DrawCrossHair2(int32 mode)
 		return;
 
 	if ((mode & 8) == 0)
-		StartDrawingEditingWindow();
+		StartDrawingEditingWindow(0);
 
 	InitDrawingObject(0, CROSS_HAIR_LAYER, 1, DRAW_WITH_DASH_PEN_AND_NO_BRUSH);
 	SetROP2(OutputDisplay, R2_XORPEN);
@@ -919,7 +919,7 @@ void DrawCrossHair2(int32 mode)
 		if ((mode & 8) == 0)
 		{
 			ExitDrawing();
-			EndDrawingEditingWindow();
+			EndDrawingEditingWindow(0);
 		}
 
 		return;
@@ -1009,7 +1009,7 @@ void DrawCrossHair2(int32 mode)
 	if ((mode & 8) == 0)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow();
+		EndDrawingEditingWindow(0);
 	}
 }
 

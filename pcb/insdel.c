@@ -529,7 +529,7 @@ void DeleteObjectsSelected()
 				else
 				{
 					RemoveDeletionsAreaFill(cnt, 0);
-//          StartDrawingEditingWindow();
+                    //StartDrawingEditingWindow(0);
 					AreaFill = (AreaFillRecord *) & (AreaFillMem[(*AreaFills)[cnt]]);
 
 					if ((AreaFill->NetNr >= 0) && (AreaFill->NetNr < Design.NrNets))
@@ -3151,7 +3151,7 @@ void RedoObjects()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow();
+	EndDrawingEditingWindow(0);
 	RePaint();
 }
 
