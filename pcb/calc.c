@@ -5181,8 +5181,7 @@ double DistancePointToTrace(double px, double py, double TraceX1, double TraceY1
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-double DistancePointToArc(double px, double py, double x1, double y1, double x2, double y2, double x3, double y3,
-                          double x4, double y4)
+double DistancePointToArc(double px, double py, double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4)
 {
 	int32 cnt2, LineSegments, SegmentCount;
 	double xx1, yy1, xx2, yy2, LineBuf[4096], Distance;
@@ -5682,8 +5681,7 @@ void GetMinMaxText2(double X, double Y, double FontSize, int32 FontNr, double Ro
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-void GetMinMaxText2b(double X, double Y, double FontSize, int32 FontNr, double Rotation, int32 Alignment, int32 Mirror,
-                     WCHAR * Str)
+void GetMinMaxText2b(double X, double Y, double FontSize, int32 FontNr, double Rotation, int32 Alignment, int32 Mirror,WCHAR * Str)
 {
 	int32 code, cnt, Length;
 	double x1, y1, x2, y2, x3, y3, x4, y4, Width, divx;

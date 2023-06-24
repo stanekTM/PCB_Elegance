@@ -23,6 +23,13 @@
 /*******************************************************************************************/
 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <math.h>
+#include <windows.h>
+#include <commdlg.h>
 
 #include "types.h"
 #include "calc.h"
@@ -30,7 +37,6 @@
 #include "calc3.h"
 #include "calc4.h"
 #include "calcdef.h"
-#include "commdlg.h"
 #include "dialogs.h"
 #include "draw.h"
 #include "draw2.h"
@@ -43,7 +49,6 @@
 #include "keyswin.h"
 #include "line2.h"
 #include "mainloop.h"
-#include "math.h"
 #include "memory.h"
 #include "menus.h"
 #include "nets.h"
@@ -54,14 +59,9 @@
 #include "resource.h"
 #include "select.h"
 #include "select3.h"
-#include "stdio.h"
-#include "stdlib.h"
-#include "string.h"
-#include "time.h"
 #include "toets.h"
 #include "trace2.h"
 #include "trace3.h"
-#include "windows.h"
 #include "move3.h"
 #include "owntime.h"
 

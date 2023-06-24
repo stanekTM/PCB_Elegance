@@ -24,8 +24,13 @@
 
 
 
+#include <stddef.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 #include  "types.h"
-#include  "stdio.h"
 #include  "memory.h"
 #include  "graphics.h"
 #include  "calcdef.h"

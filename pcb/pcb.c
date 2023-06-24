@@ -23,9 +23,12 @@
 /*******************************************************************************************/
 
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
-#define  _WIN32_WINNT       0x0501
-//#define  WINVER             0x0501
+#include <windows.h>
+#include <commctrl.h>
 
 #include "calc.h"
 #include "direct.h"
@@ -75,8 +78,11 @@
 #include "params.h"
 #include "uservar.h"
 #include "own_process.h"
-#include "../functionsc/version.h"
+#include "version.h"
 
+
+#define  _WIN32_WINNT       0x0501
+//#define  WINVER             0x0501
 
 #define WANT_GETLONGPATHNAME_WRAPPER
 #define COMPILE_NEWAPIS_STUBS

@@ -24,12 +24,14 @@
 
 
 
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
+
+#include <windows.h>
+
 #include "types.h"
-#include "windows.h"
-#include "string.h"
-#include "stdlib.h"
-#include "math.h"
-#include "stdio.h"
 #include "help.h"
 #include "keyswin.h"
 #include "toets.h"

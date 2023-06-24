@@ -20,15 +20,16 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-/*******************************************************************************************/
+ /*******************************************************************************************/
 
 
 #ifndef _GRAPHICS
 
+#define _GRAPHICS
+
 #include "owntypes.h"
 #include "windows.h"
 
-#define _GRAPHICS
 
 #define NORMAL_FILLED_AND_PEN1                  0x00
 #define NORMAL_FILLED_AND_NO_PEN                0x01
@@ -297,7 +298,7 @@ extern HDC OutputDisplay;
 
 void CreateDrawObjects(int32 mode);
 
-void FillBrushOnColorObjectNr(LOGBRUSH * Brush, int32 ObjectColorNr);
+void FillBrushOnColorObjectNr(LOGBRUSH* Brush, int32 ObjectColorNr);
 
 void GetGraphicsPenBrush(int32 mode);
 

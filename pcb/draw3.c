@@ -23,15 +23,18 @@
 /*******************************************************************************************/
 
 
+
+#include <windows.h>
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
+#include <commdlg.h>
+
 #include "types.h"
-#include "windows.h"
-#include "string.h"
-#include "stdlib.h"
-#include "math.h"
-#include "stdio.h"
+#include "utf8.h"
 #include "keyswin.h"
 #include "toets.h"
-#include "commdlg.h"
 #include "pcb.h"
 #include "calc.h"
 #include "calc2.h"
@@ -57,7 +60,6 @@
 #include "resource.h"
 #include "polygon.h"
 #include "select4.h"
-#include "utf8.h"
 
 #define  BUTTON_INFO_TIMEOUT  40
 

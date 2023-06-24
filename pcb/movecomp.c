@@ -24,6 +24,14 @@
 
 
 
+#include <ctype.h>
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <sys/stat.h>
+
 #include "types.h"
 #include "memory.h"
 #include "calc.h"
@@ -32,15 +40,9 @@
 #include "calc4.h"
 #include "menus.h"
 #include "pcb.h"
-#include "stdio.h"
 #include "dialogs.h"
-#include "math.h"
 #include "rect.h"
-#include "time.h"
 #include "io.h"
-#include "fcntl.h"
-#include "errno.h"
-#include "sys/stat.h"
 #include "calcdef.h"
 #include "graphics.h"
 #include "toets.h"
@@ -64,7 +66,7 @@
 #include "direct.h"
 #include "resource.h"
 #include "dialogs.h"
-#include "ctype.h"
+#include "version.h"
 
 
 typedef struct

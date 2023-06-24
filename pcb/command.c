@@ -23,16 +23,18 @@
 /*******************************************************************************************/
 
 
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
+
+#include <windows.h>
+#include <commdlg.h>
+
 #include "types.h"
-#include "windows.h"
-#include "string.h"
-#include "stdlib.h"
-#include "math.h"
 #include "calcdef.h"
-#include "stdio.h"
 #include "keyswin.h"
 #include "toets.h"
-#include "commdlg.h"
 #include "pcb.h"
 #include "calc.h"
 #include "calc2.h"
@@ -85,6 +87,7 @@
 #include "geomsave.h"
 #include "settings.h"
 #include "odb.h"
+#include "version.h"
 
 
 int32 Size1, Size2, ok;
@@ -132,7 +135,7 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 	PROCESS_INFORMATION ProcessInfo;
 
 	if ((WParam >= ID_EXT_RESOURCE) && (WParam < ID_EXT_RESOURCE + 4096))
-		WParam = GetExtendedResource(WParam - ID_EXT_RESOURCE);
+		 WParam = GetExtendedResource(WParam - ID_EXT_RESOURCE);
 
 	if (SystemBusyMode != 0)
 		res = 1;
@@ -195,34 +198,34 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 
 				switch (WParam)
 				{
-				case ID_TRACE_FINISH:
-				case ID_TRACE_BACKWARDS:
-				case ID_TRACE_WIDTH_DIALOG:
-				case ID_INSERT_VIA:
-				case ID_CLEARANCE_WIDTH_DIALOG:
-				case ID_SWITCH_VIAINFO_ON_OFF:
-				case ID_SWITCH_TWO_TRACES_ON_OFF:
-				case ID_SWITCH_TRYING_CLEAR_ON_OFF:
-				case ID_HIGHLIGHT_NET:
-				case ID_EDIT_DELETE:
-				case ID_SWITCH_NEAREST_LAYER:
-				case ID_EDIT_TRACE_CHECK_OFF:
-				case ID_EDIT_DESIGN_RULES_NET:
-				case ID_EDIT_TEXT:
-				case ID_VIEW_LAYERS:
-				case ID_CHANGE_TRACE_MODE:
-				case ID_TRACE_MODE_NORMAL:
-				case ID_TRACE_MODE_ARC45:
-				case ID_TRACE_MODE_ARC90:
-				case ID_TRACE_MODE_ALL_ANGLE:
-//              case ID_ACTION_DRAG_TRACE:
-//              case ID_ACTION_DRAG_TRACES_VIAS:
-					res = 1;
-					break;
-
-				default:
-					QuitCommand = 1;
-					res = 1;
+				    case ID_TRACE_FINISH:
+				    case ID_TRACE_BACKWARDS:
+				    case ID_TRACE_WIDTH_DIALOG:
+				    case ID_INSERT_VIA:
+				    case ID_CLEARANCE_WIDTH_DIALOG:
+				    case ID_SWITCH_VIAINFO_ON_OFF:
+				    case ID_SWITCH_TWO_TRACES_ON_OFF:
+				    case ID_SWITCH_TRYING_CLEAR_ON_OFF:
+				    case ID_HIGHLIGHT_NET:
+				    case ID_EDIT_DELETE:
+				    case ID_SWITCH_NEAREST_LAYER:
+				    case ID_EDIT_TRACE_CHECK_OFF:
+				    case ID_EDIT_DESIGN_RULES_NET:
+				    case ID_EDIT_TEXT:
+				    case ID_VIEW_LAYERS:
+				    case ID_CHANGE_TRACE_MODE:
+				    case ID_TRACE_MODE_NORMAL:
+				    case ID_TRACE_MODE_ARC45:
+				    case ID_TRACE_MODE_ARC90:
+				    case ID_TRACE_MODE_ALL_ANGLE:
+                    //case ID_ACTION_DRAG_TRACE:
+                    //case ID_ACTION_DRAG_TRACES_VIAS:
+						res = 1;
+						break;
+					
+					default:
+						QuitCommand = 1;
+						res = 1;
 				}
 
 				break;
