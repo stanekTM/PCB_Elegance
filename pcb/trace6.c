@@ -68,7 +68,7 @@ void DrawTracesVias(double CurrentX, double CurrentY, int32 mode)
 
 	ObjectRecord *Object5, Object5a;
 
-	StartDrawingEditingWindow(0);
+	StartDrawingEditingWindow(BM_DoubleBuffer);
 	SetROP2(OutputDisplay, R2_XORPEN);
 
 	for (cnt = 0; cnt < NrObjects5; cnt++)
@@ -123,7 +123,7 @@ void DrawTracesVias(double CurrentX, double CurrentY, int32 mode)
 	DrawCrossHair(8);
 
 	ExitDrawing();
-	EndDrawingEditingWindow(0);
+	EndDrawingEditingWindow(BM_DoubleBuffer);
 }
 
 // *******************************************************************************************************
@@ -242,7 +242,7 @@ void PlaceCopiedTracesVias(double CurrentX, double CurrentY, int32 mode)
 	else
 	{
 		Beep(1000, 200);
-		MessageBoxOwn(PCBWindow, SC(1082, "Did not found a pin"), SC(24, "Error"), MB_APPLMODAL | MB_OK);
+		MessageBoxOwn(PCBWindow, SC(1082, "Did not find a pin"), SC(24, "Error"), MB_APPLMODAL | MB_OK);
 	}
 }
 
@@ -329,13 +329,13 @@ void MoveTracesVias(int32 mode)
 					DrawTracesVias(OldX, OldY, 0);
 				else
 				{
-					StartDrawingEditingWindow(0);
+					StartDrawingEditingWindow(BM_DoubleBuffer);
 					InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_GRAY + DRAW_WITH_PEN_AND_NOT_FILLED);
 					SetROP2(OutputDisplay, R2_XORPEN);
 					DrawLine(MultX(OldX), 100000, MultX(OldX), -100000);
 					DrawLine(100000, MultY(OldY), -100000, MultY(OldY));
 					ExitDrawing();
-					EndDrawingEditingWindow(0);
+					EndDrawingEditingWindow(BM_DoubleBuffer);
 				}
 
 				OldX = CurrentX;
@@ -345,13 +345,13 @@ void MoveTracesVias(int32 mode)
 					DrawTracesVias(OldX, OldY, 0);
 				else
 				{
-					StartDrawingEditingWindow(0);
+					StartDrawingEditingWindow(BM_DoubleBuffer);
 					InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_GRAY + DRAW_WITH_PEN_AND_NOT_FILLED);
 					SetROP2(OutputDisplay, R2_XORPEN);
 					DrawLine(MultX(CurrentX), 100000, MultX(CurrentX), -100000);
 					DrawLine(100000, MultY(CurrentY), -100000, MultY(CurrentY));
 					ExitDrawing();
-					EndDrawingEditingWindow(0);
+					EndDrawingEditingWindow(BM_DoubleBuffer);
 				}
 			}
 
@@ -886,7 +886,7 @@ void CopyTracesViasNet()
 		else
 		{
 			Beep(1000, 200);
-			MessageBoxOwn(PCBWindow, SC(1082, "Did not found a pin"), SC(24, "Error"), MB_APPLMODAL | MB_OK);
+			MessageBoxOwn(PCBWindow, SC(1082, "Did not find a pin"), SC(24, "Error"), MB_APPLMODAL | MB_OK);
 		}
 	}
 
