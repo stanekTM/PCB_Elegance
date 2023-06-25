@@ -1214,7 +1214,7 @@
 1212 "volný text"
 1213 "volný text"
 1214 "volný text"
-1215 "volný text"
+1215 "Vlastnosti"
 1216 "volný text"
 1217 "volný text"
 1218 "volný text"
