@@ -3533,6 +3533,7 @@ int32 CalcMemory(int32 mode)
 	  TotalMem+=Design.NrObjectCircles*sizeof(ObjectCircleRecord);
 	  TotalMemDeleted+=ObjectCirclesDeleted*sizeof(ObjectCircleRecord);
 	*/
+	
 	for (cnt = 0; cnt < Design.NrObjectArcs; cnt++)
 	{
 		ObjectArc = &((*ObjectArcs)[cnt]);
