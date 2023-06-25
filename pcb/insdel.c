@@ -529,7 +529,7 @@ void DeleteObjectsSelected()
 				else
 				{
 					RemoveDeletionsAreaFill(cnt, 0);
-                    //StartDrawingEditingWindow(0);
+//          StartDrawingEditingWindow(BM_DoubleBuffer);
 					AreaFill = (AreaFillRecord *) & (AreaFillMem[(*AreaFills)[cnt]]);
 
 					if ((AreaFill->NetNr >= 0) && (AreaFill->NetNr < Design.NrNets))
@@ -3151,7 +3151,7 @@ void RedoObjects()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(0);
+	EndDrawingEditingWindow(BM_DoubleBuffer);
 	RePaint();
 }
 
@@ -3533,7 +3533,6 @@ int32 CalcMemory(int32 mode)
 	  TotalMem+=Design.NrObjectCircles*sizeof(ObjectCircleRecord);
 	  TotalMemDeleted+=ObjectCirclesDeleted*sizeof(ObjectCircleRecord);
 	*/
-	
 	for (cnt = 0; cnt < Design.NrObjectArcs; cnt++)
 	{
 		ObjectArc = &((*ObjectArcs)[cnt]);
@@ -3606,7 +3605,7 @@ int32 CalcMemory(int32 mode)
 
 	if (MessageBufPos != 0)
 	{
-		MessageDialog("Info 1", 0, 0);
+		MessageDialog(SC(617, "Info"), 0, 0);
 		DeAllocateMemMessageBuf();
 	}
 
