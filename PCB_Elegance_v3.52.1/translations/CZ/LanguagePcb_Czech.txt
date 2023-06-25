@@ -617,7 +617,7 @@
 614  "Oblouky"
 615  "Polygony"
 616  "Vybrat pouze objekty ve vrstvě"
-617  "volný text"
+617  "Info"
 618  "Aktivovat pouze jednu vrstvu"
 619  "volný text"
 620  "Zrušit výběr"
