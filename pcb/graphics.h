@@ -20,7 +20,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
- /*******************************************************************************************/
+/*******************************************************************************************/
 
 
 #ifndef _GRAPHICS
@@ -298,7 +298,7 @@ extern HDC OutputDisplay;
 
 void CreateDrawObjects(int32 mode);
 
-void FillBrushOnColorObjectNr(LOGBRUSH* Brush, int32 ObjectColorNr);
+void FillBrushOnColorObjectNr(LOGBRUSH * Brush, int32 ObjectColorNr);
 
 void GetGraphicsPenBrush(int32 mode);
 
@@ -306,23 +306,33 @@ int32 InitDrawingObject(int32 ObjectType, int32 Layer, int32 ThickNess, int32 mo
 
 void InitDrawingEmptyPen(void);
 
+void InitDrawingColor(COLORREF Color);
+
 void ExitDrawing(void);
 
-void DrawLineWhite(double x1, double y1, double x2, double y2, int32 BufferMode);
+void DrawLineWhite(double x1, double y1, double x2, double y2);
 
-void DrawLineYellow(double x1, double y1, double x2, double y2, int32 BufferMode);
+void DrawLineYellow(double x1, double y1, double x2, double y2);
 
-void DrawLineRed(double x1, double y1, double x2, double y2, int32 BufferMode);
+void DrawLineRed(double x1, double y1, double x2, double y2);
 
-void DrawLineGreen(double x1, double y1, double x2, double y2, int32 BufferMode);
+void DrawLineGreen(double x1, double y1, double x2, double y2);
 
-void DrawLineGray(double x1, double y1, double x2, double y2, int32 BufferMode);
+void DrawLineWhite3(double x1, double y1, double x2, double y2);
 
-void DrawCircleWhite(double x, double y, double dikte, int32 BufferMode);
+void DrawLineGray(double x1, double y1, double x2, double y2);
 
-void DrawCircleYellow(double x, double y, double dikte, int32 BufferMode);
+void DrawLineYellow3(double x1, double y1, double x2, double y2);
 
-void DrawCircleGray(double x, double y, double dikte, int32 BufferMode);
+void DrawLineRed3(double x1, double y1, double x2, double y2);
+
+void DrawLineGreen3(double x1, double y1, double x2, double y2);
+
+void DrawCircleWhite(double x, double y, double dikte);
+
+void DrawCircleYellow(double x, double y, double dikte);
+
+void DrawCircleGray(double x, double y, double dikte);
 
 void DeleteGraphicObjects(void);
 
