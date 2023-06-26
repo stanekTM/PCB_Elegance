@@ -170,7 +170,7 @@ void SpecialTraceDrawing(int32 mode)
 	if ((mode & 0x18) != 0)
 	{
 		Net = &((*Nets)[MovingTrace2.NetNr]);
-		StartDrawingEditingWindow(BM_DoubleBuffer);
+		StartDrawingEditingWindow();
 		DrawCode = DrawLayerCode[CurrentDrawingLayer];
 
 		if ((mode & 8) == 8)
@@ -224,7 +224,7 @@ void SpecialTraceDrawing(int32 mode)
 
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow(BM_DoubleBuffer);
+		EndDrawingEditingWindow();
 	}
 }
 
@@ -374,7 +374,7 @@ void DrawSpecialTrace(int32 mode)
 
 	if (OkToDrawSpecialTraces(0.0, 0))
 	{
-		StartDrawingEditingWindow(BM_DoubleBuffer);
+		StartDrawingEditingWindow();
 
 		if (mode == 0)
 			SetROP2(OutputDisplay, R2_XORPEN);
@@ -430,7 +430,7 @@ void DrawSpecialTrace(int32 mode)
 		}
 
 		ExitDrawing();
-		EndDrawingEditingWindow(BM_DoubleBuffer);
+		EndDrawingEditingWindow();
 	}
 }
 
@@ -479,8 +479,6 @@ void MoveOneTrace2(int32 mode)
 	TraceChanged = 0;
 	SelectionEsc = 0;
 
-//  MovingCurrentDrawX1=AdjustToDrawGrid(PixelToRealOffX(MousePosX));
-//  MovingCurrentDrawY1=AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY-MousePosY));
 	MovingCurrentDrawX1 = AdjustToDrawGrid(MovingCurrentDrawX1);
 	MovingCurrentDrawY1 = AdjustToDrawGrid(MovingCurrentDrawY1);
 	MovingCurrentDrawX2 = MovingCurrentDrawX1;
@@ -494,14 +492,6 @@ void MoveOneTrace2(int32 mode)
 	OldX = MovingCurrentDrawX2;
 	OldY = MovingCurrentDrawY2;
 
-//  if ((!OkToDrawSpecialTraces(0.0,0))
-//     ||
-//     (!OkToDrawSpecialTraces(GridSize,0))
-//     ||
-//     (!OkToDrawSpecialTraces(-GridSize,0))) {
-//    ok=1;
-//    return;
-//  }
 	div_old = 0.0;
 
 	ShiftPressedAtStart = ShiftPressed;
@@ -939,7 +929,7 @@ void MoveOneTrace2(int32 mode)
 			SpecialTraceDrawing(4);
 			SpecialTraceDrawing(8);
 			PopUpMenu = CreatePopupMenu();
-			OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_ESCAPE, SC(493, "Escape"));
+			AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_ESCAPE, SC(493, "Escape"));
 			TrackPopupMenu(PopUpMenu, TPM_LEFTALIGN + TPM_RIGHTBUTTON, RealWindow.left + MousePosX + 5,
 			               RealWindow.top + MousePosY + 40, 0, PCBWindow, NULL);
 			RightButtonPressed = 0;
