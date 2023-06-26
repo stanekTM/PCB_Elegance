@@ -2128,7 +2128,7 @@ void ChangeNetsHilite(int32 NetNr, int32 Hilite)
 	ViaRecord *Via;
 	ConnectionsRecord *Connection;
 
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 
 	for (Layer = 0; Layer < 32; Layer++)
 	{
@@ -2351,7 +2351,7 @@ void ChangeNetsHilite(int32 NetNr, int32 Hilite)
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -2665,7 +2665,7 @@ int32 HideSelectedConnections()
 	int32 cnt, cnt2, ConnectionInfo;
 	ConnectionsRecord *Connection;
 
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 	cnt2 = 0;
 
 	for (cnt = 0; cnt < Design.NrConnections; cnt++)
@@ -2681,7 +2681,7 @@ int32 HideSelectedConnections()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 	return 0;
 }
 
@@ -2695,7 +2695,7 @@ void ChangeNetsVisibility(int32 NetNr, int32 Visibility)
 	int32 cnt, cnt2, ConnectionInfo;
 	ConnectionsRecord *Connection;
 
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 //  SetROP2(OutputDisplay,R2_COPYPEN);
 	SetROP2(OutputDisplay, R2_XORPEN);
 	cnt2 = 0;
@@ -2727,7 +2727,7 @@ void ChangeNetsVisibility(int32 NetNr, int32 Visibility)
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -2777,11 +2777,7 @@ void CheckClipBoard()
 					{
 						Net = &((*Nets)[cnt]);
 						Net->Info &= ~CONNECTIONS_NOT_VISIBLE;
-//              Net->Info&=~OBJECT_HIGHLITED;
 					}
-
-//            ConnectionsNetsNonVisible(0);
-//            HiliteNetsFromDialog(0,0);
 					BufPos += 4;
 					break;
 
@@ -2792,8 +2788,6 @@ void CheckClipBoard()
 					{
 						Net = &((*Nets)[NetNr]);
 						Net->Info &= ~CONNECTIONS_NOT_VISIBLE;
-//              Net->Info&=~OBJECT_HIGHLITED;
-//              ChangeNetsHilite((int32)*NetNr,0);
 						ChangeNetsVisibility((int32) NetNr, 0);
 					}
 
@@ -2807,8 +2801,6 @@ void CheckClipBoard()
 					{
 						Net = &((*Nets)[NetNr]);
 						Net->Info &= ~CONNECTIONS_NOT_VISIBLE;
-//              Net->Info&=~OBJECT_HIGHLITED;
-//              ChangeNetsHilite((int32)*NetNr,0);
 						ChangeNetsVisibility((int32) NetNr, 1);
 					}
 
@@ -2818,7 +2810,7 @@ void CheckClipBoard()
 				case UNSELECT_REF:
 					CompRef = (LPSTR) & (ClipBoardMem[BufPos + 4]);
 					BufPos += 16;
-					StartDrawingEditingWindow(BM_DoubleBuffer);
+					StartDrawingEditingWindow();
 
 					for (cnt = 0; cnt < Design.NrComps; cnt++)
 					{
@@ -2838,13 +2830,13 @@ void CheckClipBoard()
 					}
 
 					ExitDrawing();
-					EndDrawingEditingWindow(BM_DoubleBuffer);
+					EndDrawingEditingWindow();
 					break;
 
 				case SELECT_REF:
 					CompRef = (LPSTR) & (ClipBoardMem[BufPos + 4]);
 					BufPos += 16;
-					StartDrawingEditingWindow(BM_DoubleBuffer);
+					StartDrawingEditingWindow();
 
 					for (cnt = 0; cnt < Design.NrComps; cnt++)
 					{
@@ -2861,7 +2853,7 @@ void CheckClipBoard()
 					}
 
 					ExitDrawing();
-					EndDrawingEditingWindow(BM_DoubleBuffer);
+					EndDrawingEditingWindow();
 					break;
 				}
 			}
