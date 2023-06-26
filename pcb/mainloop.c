@@ -24,14 +24,12 @@
 
 
 
-#include <string.h>
-#include <stdlib.h>
-#include <math.h>
-#include <stdio.h>
-
-#include <windows.h>
-
 #include "types.h"
+#include "windows.h"
+#include "string.h"
+#include "stdlib.h"
+#include "math.h"
+#include "stdio.h"
 #include "help.h"
 #include "keyswin.h"
 #include "toets.h"
@@ -772,7 +770,7 @@ void DrawCrossHair(int32 mode)
 	}
 
 	if ((mode & 8) == 0)
-		StartDrawingEditingWindow(0);
+		StartDrawingEditingWindow();
 
 	InitDrawingObject(0, CROSS_HAIR_LAYER, 1, DRAW_WITH_DASH_PEN_AND_NO_BRUSH);
 	PreviousROP = GetROP2(OutputDisplay);
@@ -859,7 +857,7 @@ void DrawCrossHair(int32 mode)
 	if ((mode & 8) == 0)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow(0);
+		EndDrawingEditingWindow();
 	}
 }
 
@@ -898,7 +896,7 @@ void DrawCrossHair2(int32 mode)
 		return;
 
 	if ((mode & 8) == 0)
-		StartDrawingEditingWindow(0);
+		StartDrawingEditingWindow();
 
 	InitDrawingObject(0, CROSS_HAIR_LAYER, 1, DRAW_WITH_DASH_PEN_AND_NO_BRUSH);
 	SetROP2(OutputDisplay, R2_XORPEN);
@@ -921,7 +919,7 @@ void DrawCrossHair2(int32 mode)
 		if ((mode & 8) == 0)
 		{
 			ExitDrawing();
-			EndDrawingEditingWindow(0);
+			EndDrawingEditingWindow();
 		}
 
 		return;
@@ -1011,7 +1009,7 @@ void DrawCrossHair2(int32 mode)
 	if ((mode & 8) == 0)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow(0);
+		EndDrawingEditingWindow();
 	}
 }
 
