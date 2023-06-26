@@ -23,12 +23,9 @@
 /*******************************************************************************************/
 
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
-#include <windows.h>
-#include <commctrl.h>
+#define  _WIN32_WINNT       0x0501
+//#define  WINVER             0x0501
 
 #include "calc.h"
 #include "direct.h"
@@ -78,11 +75,8 @@
 #include "params.h"
 #include "uservar.h"
 #include "own_process.h"
-#include "version.h"
+#include "../functionsc/version.h"
 
-
-#define  _WIN32_WINNT       0x0501
-//#define  WINVER             0x0501
 
 #define WANT_GETLONGPATHNAME_WRAPPER
 #define COMPILE_NEWAPIS_STUBS
@@ -1163,30 +1157,10 @@ void InitDeviceContext2()
 // ********************************************************************************************************
 // ********************************************************************************************************
 
-void StartDrawingEditingWindow(int32 BufferMode)
+void StartDrawingEditingWindow()
 {
 	RECT ClipRect;
-
-	BufferMode &= BM_Mask;
-
-	switch (BufferMode)
-	{
-	    case BM_DirectToScreen:
-			InitDeviceContext();
-		break;
-	
-	    case BM_MultiStart:
-	    case BM_DoubleBuffer:
-			InitDeviceContext2();
-		    // copy screen to buffer
-		    BitBlt(OutputDisplay, 0, 0, ViewPixelsX, ViewPixelsY, OutputDisplay2, 0, 0, SRCCOPY);
-		break;
-
-	    case BM_MultiContinue:
-	    case BM_MultiEnd:
-		//return;
-		break;
-	}
+	InitDeviceContext();
 
 	EditingRegion = CreateRectRgn(DrawWindowMinX, DrawWindowMinY, DrawWindowMaxX, DrawWindowMaxY);
 	SelectClipRgn(OutputDisplay, EditingRegion);
@@ -1205,8 +1179,7 @@ void DoneDeviceContext2()
 
 	if (DCInUse)
 	{
-		OutputDebugString("EndDrawingEditingWindow: BM_MultiEnd\n");
-        //res=GetDIBits(OutputDisplay,ViewBitmap,0,ViewPixelsY,TempMem,BitmapInfo,DIB_RGB_COLORS);
+//    res=GetDIBits(OutputDisplay,ViewBitmap,0,ViewPixelsY,TempMem,BitmapInfo,DIB_RGB_COLORS);
 		BitBlt(OutputDisplay2, 0, 0, ViewPixelsX, ViewPixelsY, OutputDisplay, 0, 0, SRCCOPY);
 		GdiFlush();
 
@@ -1253,36 +1226,13 @@ void DoneDeviceContext()
 // ********************************************************************************************************
 // ********************************************************************************************************
 
-void EndDrawingEditingWindow(int32 BufferMode)
+void EndDrawingEditingWindow()
 {
 	SelectClipRgn(OutputDisplay, NULL);
 	DeleteObject(EditingRegion);
 	EditingRegion = NULL;
-
-	BufferMode &= BM_Mask;
-	
-	switch (BufferMode)
-	{
-	    case BM_DirectToScreen:
-		//SelectClipRgn(OutputDisplay, NULL);
-		//DeleteObject(EditingRegion);
-		//EditingRegion = NULL;
-		DoneDeviceContext();
-		break;
-		
-		case BM_MultiStart:
-		case BM_MultiContinue:
-		break;
-		
-		case BM_MultiEnd:
-		case BM_DoubleBuffer:
-	    //OutputDebugString("EndDrawingEditingWindow: BM_MultiEnd/n");
-		//SelectClipRgn(OutputDisplay, NULL);
-		//DeleteObject(EditingRegion);
-	    //EditingRegion = NULL;
-		DoneDeviceContext2();
-		break;
-	}
+	DoneDeviceContext();
+//  DeleteGraphicObjects();
 }
 
 
@@ -2115,8 +2065,11 @@ void WindowPaint()
 		if (!PaintBecauseOfResize)
 		{
 			Painting = 1;
-			
-			InitDeviceContext2();
+
+			if (FastPaint)
+				InitDeviceContext2();
+			else
+				InitDeviceContext();
 
 			if (UpdateRect.bottom >= (int32) DrawWindowMaxY + HeightScrollBar)
 				RedrawInfoBar();
@@ -2127,7 +2080,10 @@ void WindowPaint()
 			if ((UpdateRect.bottom >= (int32) DrawWindowMinY) && (UpdateRect.top < (int32) DrawWindowMaxY))
 				RedrawMainWindow();
 
+			if (FastPaint)
 				DoneDeviceContext2();
+			else
+				DoneDeviceContext();
 
 			Painting = 0;
 		}
@@ -2149,11 +2105,17 @@ void WindowPaint()
 				res = GetUpdateRect(PCBWindow, &UpdateRect, 0);
 				Painting = 1;
 
-			    InitDeviceContext2();
+				if (FastPaint)
+					InitDeviceContext2();
+				else
+					InitDeviceContext();
 
 				RedrawInfoBar();
 
-                DoneDeviceContext2();
+				if (FastPaint)
+					DoneDeviceContext2();
+				else
+					DoneDeviceContext();
 
 				Painting = 0;
 			}
@@ -2175,11 +2137,17 @@ void WindowPaint()
 				res = GetUpdateRect(PCBWindow, &UpdateRect, 0);
 				Painting = 1;
 
-                InitDeviceContext2();
+				if (FastPaint)
+					InitDeviceContext2();
+				else
+					InitDeviceContext();
 
 				RedrawButtons();
 
-                DoneDeviceContext2();
+				if (FastPaint)
+					DoneDeviceContext2();
+				else
+					DoneDeviceContext();
 
 				Painting = 0;
 			}
@@ -2208,11 +2176,17 @@ void WindowPaint()
 				res = GetUpdateRect(PCBWindow, &UpdateRect, 0);
 				Painting = 1;
 
-                InitDeviceContext2();
+				if (FastPaint)
+					InitDeviceContext2();
+				else
+					InitDeviceContext();
 
 				RedrawMainWindow();
 
-                DoneDeviceContext2();
+				if (FastPaint)
+					DoneDeviceContext2();
+				else
+					DoneDeviceContext();
 
 				Painting = 0;
 			}
@@ -2240,11 +2214,17 @@ void WindowPaint()
 				res = GetUpdateRect(PCBWindow, &UpdateRect, 0);
 				Painting = 1;
 
-                InitDeviceContext2();
+				if (FastPaint)
+					InitDeviceContext2();
+				else
+					InitDeviceContext();
 
 				RedrawMainWindow();
 
-                DoneDeviceContext2();
+				if (FastPaint)
+					DoneDeviceContext2();
+				else
+					DoneDeviceContext();
 
 				Painting = 0;
 			}
@@ -3535,7 +3515,7 @@ void LoadIniFile(LPSTR FileName, int32 mode)
 								ZoomMode = Value;
 						}
 
-						if (stricmp(str1, "FastPaint") == 0) //obsolete
+						if (stricmp(str1, "FastPaint") == 0)
 						{
 							if (sscanf(str2, "%d", &Value) == 1)
 								FastPaint = Value;
