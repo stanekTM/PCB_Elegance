@@ -458,7 +458,7 @@ void DrawSelectedSpecialObjects(double CurrentX, double CurrentY, int32 Mode)
 	ObjectPolygonRecord *ObjectPolygon;
 	ObjectTextRecord2 *ObjectText2;
 
-	StartDrawingEditingWindow(0);
+	StartDrawingEditingWindow();
 	CurrentObjectCode = -1;
 
 	SetROP2(OutputDisplay, R2_XORPEN);
@@ -546,7 +546,7 @@ void DrawSelectedSpecialObjects(double CurrentX, double CurrentY, int32 Mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow(0);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -1866,7 +1866,7 @@ void DrawSelectedRefs(double CurrentX, double CurrentY, double Rotation)
 	CompRecord *Comp;
 	int32 ObjectChanged;
 
-	StartDrawingEditingWindow(0);
+	StartDrawingEditingWindow();
 
 	SetROP2(OutputDisplay, R2_XORPEN);
 
@@ -1882,7 +1882,7 @@ void DrawSelectedRefs(double CurrentX, double CurrentY, double Rotation)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow(0);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -2163,7 +2163,7 @@ void DrawSelectedCompValues(double CurrentX, double CurrentY, double Rotation)
 	CompRecord *Comp;
 	int32 ObjectChanged;
 
-	StartDrawingEditingWindow(0);
+	StartDrawingEditingWindow();
 
 	SetROP2(OutputDisplay, R2_XORPEN);
 
@@ -2179,7 +2179,7 @@ void DrawSelectedCompValues(double CurrentX, double CurrentY, double Rotation)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow(0);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -2192,7 +2192,7 @@ void GetMinMaxSelectedComponents()
 	int32 cnt;
 	CompRecord *Comp;
 
-	StartDrawingEditingWindow(0);
+	StartDrawingEditingWindow();
 
 	for (cnt = 0; cnt < Design.NrComps; cnt++)
 	{
@@ -2979,7 +2979,7 @@ void ChangeTextHeightCompRefsValues(int32 Mode)
 	}
 
 	TempLastActionNr = (int16) LastActionNr - 1;
-	StartDrawingEditingWindow(0);
+	StartDrawingEditingWindow();
 
 	for (cnt = 0; cnt < Design.NrComps; cnt++)
 	{
