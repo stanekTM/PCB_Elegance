@@ -529,7 +529,7 @@ void DeleteObjectsSelected()
 				else
 				{
 					RemoveDeletionsAreaFill(cnt, 0);
-//          StartDrawingEditingWindow(BM_DoubleBuffer);
+//          StartDrawingEditingWindow();
 					AreaFill = (AreaFillRecord *) & (AreaFillMem[(*AreaFills)[cnt]]);
 
 					if ((AreaFill->NetNr >= 0) && (AreaFill->NetNr < Design.NrNets))
@@ -3151,7 +3151,7 @@ void RedoObjects()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 	RePaint();
 }
 
@@ -3605,7 +3605,7 @@ int32 CalcMemory(int32 mode)
 
 	if (MessageBufPos != 0)
 	{
-		MessageDialog(SC(617, "Info"), 0, 0);
+		MessageDialog("Info 1", 0, 0);
 		DeAllocateMemMessageBuf();
 	}
 
