@@ -294,3 +294,6 @@
 291  "Krajina"
 292  "Měřítko 1x"
 293  "Přizpůsobit stránku"
+294  "Language path set"
+295  "English ( default )"
+296  "Other Language"
