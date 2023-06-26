@@ -776,7 +776,7 @@ int32 GetGateSwapInfo(LPSTR Reference, LPSTR PinName, LPSTR Reference2, LPSTR Pi
 		if ((mode & 2) == 0)
 		{
 			if ((mode & 4) == 0)
-				StartDrawingEditingWindow(0);
+				StartDrawingEditingWindow();
 
 			SetROP2(OutputDisplay, R2_COPYPEN);
 
@@ -903,7 +903,7 @@ int32 GetGateSwapInfo(LPSTR Reference, LPSTR PinName, LPSTR Reference2, LPSTR Pi
 			if ((mode & 4) == 0)
 			{
 				ExitDrawing();
-				EndDrawingEditingWindow(0);
+				EndDrawingEditingWindow();
 			}
 
 			return 0;
@@ -1022,7 +1022,7 @@ int32 GetGateSwapInfo(LPSTR Reference, LPSTR PinName, LPSTR Reference2, LPSTR Pi
 		OkToAdd = 0;
 
 		if ((mode & 4) == 0)
-			StartDrawingEditingWindow(0);
+			StartDrawingEditingWindow();
 
 		SetROP2(OutputDisplay, R2_COPYPEN);
 		DisplayMode = 0;
@@ -1180,7 +1180,7 @@ int32 GetGateSwapInfo(LPSTR Reference, LPSTR PinName, LPSTR Reference2, LPSTR Pi
 		if ((mode & 4) == 0)
 		{
 			ExitDrawing();
-			EndDrawingEditingWindow(0);
+			EndDrawingEditingWindow();
 		}
 
 		return 0;
@@ -1592,7 +1592,7 @@ int32 GetPinSwapInfo(LPSTR Reference, LPSTR PinName, LPSTR Reference2, LPSTR Pin
 	if ((mode & 2) == 0)
 	{
 		if ((mode & 4) == 0)
-			StartDrawingEditingWindow(0);
+			StartDrawingEditingWindow();
 
 		SetROP2(OutputDisplay, R2_COPYPEN);
 
@@ -1699,7 +1699,7 @@ int32 GetPinSwapInfo(LPSTR Reference, LPSTR PinName, LPSTR Reference2, LPSTR Pin
 		if ((mode & 4) == 0)
 		{
 			ExitDrawing();
-			EndDrawingEditingWindow(0);
+			EndDrawingEditingWindow();
 		}
 	}
 	else
