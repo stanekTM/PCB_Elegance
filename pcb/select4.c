@@ -260,7 +260,7 @@ void SelectOnlyVias()
 	int32 TraceInfo, Layer, cnt;
 	TraceRecord *Trace;
 
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 
 	for (Layer = 0; Layer < 32; Layer++)
 	{
@@ -356,7 +356,7 @@ void SelectOnlyVias()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -369,7 +369,7 @@ void SelectOnlyTraces()
 	int32 ViaInfo, cnt;
 	ViaRecord *Via;
 
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 
 	for (cnt = 0; cnt < Design.NrVias; cnt++)
 	{
@@ -395,7 +395,7 @@ void SelectOnlyTraces()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 
@@ -796,7 +796,7 @@ void UnprotectComponents()
 	int32 cnt;
 	CompRecord *Comp;
 
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 
 	for (cnt = 0; cnt < Design.NrComps; cnt++)
 	{
@@ -811,7 +811,7 @@ void UnprotectComponents()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -844,8 +844,8 @@ void FindNextConnection()
 				CenterScreenOnPoint(cx, cy, 0);
 				SearchConnectionNr = cnt;
 				RePaint();
-				DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0, BM_DoubleBuffer);
-				DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy, BM_DoubleBuffer);
+				DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0);
+				DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy);
 				return;
 			}
 		}
@@ -877,8 +877,8 @@ void FindNextConnection()
 			CenterScreenOnPoint(cx, cy, 0);
 			SearchConnectionNr = cnt;
 			RePaint();
-			DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0, BM_DoubleBuffer);
-			DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy, BM_DoubleBuffer);
+			DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0);
+			DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy);
 			return;
 		}
 
@@ -906,16 +906,15 @@ void FindNextConnection()
 			CenterScreenOnPoint(cx, cy, 0);
 			SearchConnectionNr = cnt;
 			RePaint();
-			DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0, BM_DoubleBuffer);
-			DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy, BM_DoubleBuffer);
+			DrawLineYellow(cx, -1000000000.0, cx, 1000000000.0);
+			DrawLineYellow(-1000000000.0, cy, 1000000000.0, cy);
 		}
 	}
 }
 
-// *******************************************************************************************************
-// *******************************************************************************************************
-// *******************************************************************************************************
-// *******************************************************************************************************
+//***********************************************************************************************************************************
+//***************************************** informace myši **************************************************************************
+//***********************************************************************************************************************************
 
 int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 {
@@ -964,35 +963,12 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 	if (Layer == -1)
 		Layer = Design.NrBoardLayers - 1;
 
-	/*
-	  if ((!OkToDrawTopPads)
-	     &&
-	     (Layer==Design.NrBoardLayers-1)) {
-	    Layer=0;
-	  } else {
-	    if ((!OkToDrawBottomPads)
-	       &&
-	       (Layer==0)) {
-	      Layer=Design.NrBoardLayers-1;
-	    }
-	  }
-	*/
 	for (cnt = 0; cnt < Design.NrComps; cnt++)
 	{
 		Comp = (CompRecord *) & (CompsMem[(*Comps)[cnt]]);
 		Mirror = ((Comp->CompMode & 8) >> 3);
 		OkToCheck = 1;
-		/*
-		    if (!Mirror) {
-		      if (!DrawTopComponents) {
-		        OkToCheck=0;
-		      }
-		    } else {
-		      if (!DrawBottomComponents) {
-		        OkToCheck=0;
-		      }
-		    }
-		*/
+
 		CompInfo = Comp->Info;
 
 		if ((CompInfo & OBJECT_NOT_VISIBLE) != 0)
@@ -1149,7 +1125,7 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 					Comp = (CompRecord *) & (CompsMem[(*Comps)[Found]]);
 					NrCompProperties = GetCompProperties(Comp, NULL, NULL, 0x40);
 					strcpy(str4, "\r\n");
-					strcat(str4, SC(1215, "\f\r\nProperties,\r\n"));
+					strcat(str4, "\f\r\n");
 					if ((Comp->Value) && (Comp->Value[0]))
 					{
 						sprintf(str5, SC(91, "Value : %s\r\n"), Comp->Value);
@@ -1205,6 +1181,7 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 					sprintf(InfoStr,
 				  SC(84, "Component pin\r\n\f\r\nReference : %s\r\nPin name : %s\r\nPosition x,y : %s\r\nClearance : %s\r\nLayer : %s%s%s"),
 				  Comp->Name, str, str3, str8, str6, str4, str7);
+
 					DisplayInfoCursorX = MousePosX;
 					DisplayInfoCursorY = MousePosY;
 					return 1;
@@ -1232,7 +1209,6 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 				y1 = Via->Y;
 				ThickNess = Via->ThickNess;
 
-//              Drill=Via->DrillThickNess;
 				if (RectTestCircle(x1, y1, ThickNess, 255))
 				{
 					GetUnitsValue2(Units, x1, str8, 0);
@@ -1268,6 +1244,7 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 
 					sprintf(InfoStr, SC(86, "Via\r\n\f\r\nPosition x,y : %s\r\nDiameter : %s\r\nDrill : %s\r\nClearance : %s\r\n%s%s"),
 						str, str2, str7, str3, str4, str5);
+
 					DisplayInfoCursorX = MousePosX;
 					DisplayInfoCursorY = MousePosY;
 					return 1;
@@ -1577,7 +1554,7 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 				GetLayerText(Layer, LayerStr, 16 + 4);
 
 				sprintf(InfoStr,
-					    SC(85, "Trace\r\n\f\r\nPosition x,y : %s\r\nTracewidth : %s\r\nClearance : %s\r\nLayer : %s\r\n%s%s"), str,
+				        SC(85, "Trace\r\n\f\r\nPosition x,y : %s\r\nTracewidth : %s\r\nClearance : %s\r\nLayer : %s\r\n%s%s"), str,
 				        str2, str3, LayerStr, str4, str5);
 				DisplayInfoCursorX = MousePosX;
 				DisplayInfoCursorY = MousePosY;
@@ -1646,7 +1623,7 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 				GetLayerText(Layer, LayerStr, 16 + 4);
 
 				sprintf(InfoStr,
-					    SC(85, "Trace\r\n\f\r\nPosition x,y : %s\r\nTracewidth : %s\r\nClearance : %s\r\nLayer : %s\r\n%s%s"), str,
+				        SC(85, "Trace\r\n\f\r\nPosition x,y : %s\r\nTracewidth : %s\r\nClearance : %s\r\nLayer : %s\r\n%s%s"), str,
 				        str2, str3, LayerStr, str4, str5);
 				DisplayInfoCursorX = MousePosX;
 				DisplayInfoCursorY = MousePosY;
@@ -1719,7 +1696,7 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 				if (((ObjectArc->Info & OBJECT_FILLED) == OBJECT_FILLED) || (Layer == DRILL_LAYER)
 				        || (Layer == DRILL_UNPLATED_LAYER) || ((InRange(x3, x4)) && (InRange(y3, y4)) && (InRange(x2, y2))))
 					ActiveCircle = 1;
-
+				
 				if (((!ActiveCircle) && (RectTestArc2(x1, y1, x2, y2, x3, y3, x4, y4, ObjectArc->LineThickNess)))
 				        || ((ActiveCircle) && (RectTestCircle(x1, y1, x2, 255))))
 				{
@@ -1789,7 +1766,7 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 								str, str2, str3, LayerStr, str4, str5);
 						}
 						else
-						{   //Trasa kruhu
+						{     //Trasa kruhu
 							sprintf(InfoStr, SC(90, "Arc trace\r\n\f\r\nPosition x,y : %s\r\nTracewidth : %s\r\nClearance : %s\r\nLayer : %s\r\n%s%s"),
 								str, str2, str3, LayerStr, str4, str5);
 						}
@@ -1806,7 +1783,6 @@ int32 GetInfoStr(LPSTR InfoStr, int32 mode)
 	return 0;
 }
 
-// ********************************************************************************************************
-// ********************************************************************************************************
-// ********************************************************************************************************
-// ********************************************************************************************************
+//*************************************************************************************************************************************
+//*************************************************************************************************************************************
+//*************************************************************************************************************************************
