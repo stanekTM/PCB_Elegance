@@ -2248,7 +2248,15 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 		return 0;
 	}
 
-    AperTureNr = CheckTraceAperTure(Thickness1);
+	/*
+	#ifdef _DEBUG
+	  WriteLn(Plotfp,"-----------------------------------------------------------------------");
+	  sprintf(str,"Areafill");
+	  WriteLn(Plotfp,str);
+	  WriteLn(Plotfp,"-----------------------------------------------------------------------");
+	#endif
+	*/
+	AperTureNr = CheckTraceAperTure(Thickness1);
 	AperTure = &((*AperTures)[AperTureNr]);
 	CurrentAperTureNr = AperTureNr;
 
@@ -2261,7 +2269,7 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 	{
 		DrawWithTwoPens = 0;
 
-		
+//    WriteGerberString("");
 		if (GerberInfo.PenSizes[1] > 0.0)
 		{
 			sprintf(str, "PU;SP1;");
@@ -2274,7 +2282,8 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 	}
 
 	MaxRoundings = (int32) (Thickness2 / (Thickness1 * 0.6));
-    AreaPos = (uint8 *) AreaFillToGerber;
+//  MaxRoundings=2;
+	AreaPos = (uint8 *) AreaFillToGerber;
 	count = sizeof(AreaFillRecord);
 
 	DrawPolygon = (PolygonRecord *) (AreaPos + sizeof(AreaFillRecord));
@@ -2312,12 +2321,15 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 	NrShortenLines = 0;
 	DrawPolygon = (PolygonRecord *) (AreaPos + sizeof(AreaFillRecord));
 	PolygonPos = (uint8 *) DrawPolygon;
-    //AreaFillToGerber->NrPolygons=1;
+//  AreaFillToGerber->NrPolygons=1;
 	cnt2 = 0;
 	SelectionEsc = 0;
 
 	while ((cnt2 < AreaFillToGerber->NrPolygons) && (!SelectionEsc))
 	{
+
+//  for (cnt2=0;cnt2<AreaFillToGerber->NrPolygons;cnt2++) {
+
 		count = DrawPolygon->NrVertices;
 
 		if ((DrawPolygon->PolygonType & 8) == 0)
@@ -2329,10 +2341,30 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 			if ((cnt2 % 20) == 0)
 				CheckForEscape();
 
+			//    MaxRoundings=1;
+			/*
+			   #ifdef _DEBUG
+			   count2=DrawPolygon->NrVertices;
+			   for (cnt3=0;cnt3<count2;cnt3++) {
+			   x11=(*DrawPolygon).Points[cnt3].x;
+			   y11=(*DrawPolygon).Points[cnt3].y;
+			   sprintf(str,"Points  %14.5f,%14.5f %i %i",x11,y11,cnt2,cnt3);
+			   WriteLn(Plotfp,str);
+			   }
+			   WriteLn(Plotfp,"-----------------------------------------------------------------------");
+			   #endif
+			 */
 			for (cnt4 = 0; cnt4 < MaxRoundings; cnt4++)
 			{
 				NewThickNess = (1 + (cnt4 * 1.6)) * Thickness1;
+				/*
+				   #ifdef _DEBUG
+				   sprintf(str,"Rounding  %i",cnt4);
+				   WriteLn(Plotfp,str);
+				   #endif
+				 */
 #ifdef _DEBUG
+
 				if (DrawPolygon->NrVertices == 0)
 					ok = 1;
 
@@ -2354,7 +2386,13 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 				{
 					x33 = (*ChangedPolygon).Points[cnt3].x;
 					y33 = (*ChangedPolygon).Points[cnt3].y;
-     			}
+					/*
+					#ifdef _DEBUG
+					          sprintf(str,"Rounding points  %14.5f,%14.5f %i  %i",x33,y33,cnt3,cnt4);
+					          WriteLn(Plotfp,str);
+					#endif
+					*/
+				}
 
 				for (cnt3 = 0; cnt3 < count2; cnt3++)
 				{
@@ -2378,6 +2416,23 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 
 					if (mode == 0)
 					{
+						//           &&
+						//           (cnt4!=0)) {
+						//            res=0;
+						/*
+						#ifdef _DEBUG
+						            OkToDrawPolygon=0;
+						            if ((cnt4==2)
+						               &&
+						               (cnt2==288)
+						               &&
+						               (cnt3==21)) {
+						              DrawLineGreen(x11,y11,x22,y22);
+						              ok=1;
+						              OkToDrawPolygon=1;
+						            }
+						#endif
+						*/
 						LineShorten = 0;
 
 						if ((res =
@@ -2391,6 +2446,24 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 								xx2 = x22;
 								yy2 = y22;
 								LineShorten = 1;
+							}
+							else
+							{
+								/*
+								#ifdef _DEBUG
+								                Length=CalcLengthLine(x11,y11,x22,y22);
+								                NewLength=CalcLengthLine(xx1,yy1,xx2,yy2);
+								                if ((cnt4==0)
+								                   &&
+								                   (Length>2e5)
+								                   &&
+								                   (NewLength<1e5)) {
+								  //                DrawLineWhite(xx1,yy1,xx2,yy2);
+								  //                DrawLineYellow(x11,y11,x22,y22);
+								                  ok=1;
+								                }
+								  #endif
+								  */
 							}
 
 #ifdef _DEBUG
@@ -2417,6 +2490,24 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 									yy2 = y22;
 									LineShorten = 1;
 								}
+								else
+								{
+									/*
+									#ifdef _DEBUG
+									                  Length=CalcLengthLine(x11,y11,x22,y22);
+									                  NewLength=CalcLengthLine(xx1,yy1,xx2,yy2);
+									                  if ((cnt4==0)
+									                     &&
+									                     (Length>2e5)
+									                     &&
+									                     (NewLength<1e5)) {
+									                    ok=1;
+									  //                  DrawLineWhite(xx1,yy1,xx2,yy2);
+									  //                  DrawLineYellow(x11,y11,x22,y22);
+									                  }
+									#endif
+									*/
+								}
 
 #ifdef _DEBUG
 								CheckPlotLine2(xx1, yy1, xx2, yy2);
@@ -2429,6 +2520,29 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 							}
 						}
 
+						/*
+						#ifdef _DEBUG
+						            if ((cnt4==0)
+						               &&
+						               (res==-1)
+						               &&
+						               (res2==-1)) {
+						              Length=CalcLengthLine(x11,y11,x22,y22);
+						              if (Length>1e5) {
+						  //              DrawLineYellow(x11,y11,x22,y22);
+						              }
+						            }
+						            if ((cnt2==0)
+						               &&
+						               (LineShorten)
+						               &&
+						               (InRange(y11,y22))
+						               &&
+						               (fabs(x22-x11)>10e5)) {
+						              NrShortenLines++;
+						            }
+						#endif
+						*/
 					}
 					else
 					{
@@ -2443,9 +2557,16 @@ int32 PlotAreaFillToGerber(AreaFillRecord * AreaFill, double Thickness1, double 
 					}
 				}
 
+				/*
+				#ifdef _DEBUG
+				        WriteLn(Plotfp,"-----------------------------------------------------------------------");
+				#endif
+				*/
 			}
 		}
 
+//    sprintf(InfoStr,"Areafill Layer %i [%i (%i)]",AreaFill->Layer,cnt2,AreaFill->NrPolygons);
+//    RedrawInfoStr(1);
 		PolygonPos += sizeof(PolygonInitRecord) + count * sizeof(PointRecord);
 		DrawPolygon = (PolygonRecord *) PolygonPos;
 		cnt2++;
