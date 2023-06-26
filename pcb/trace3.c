@@ -113,7 +113,7 @@ void TraceDrawingOff(int32 mode)
 
 	if (((CurrentWorkingTrace.Info2 & 1) == 1) && (CurrentWorkingTrace.ObjectType != 0))
 	{
-		StartDrawingEditingWindow(BM_DoubleBuffer);
+		StartDrawingEditingWindow();
 		DrawCode = DrawLayerCode[CurrentDrawingLayer];
 		InitDrawingObject(TRACE_HOR, DrawCode, 0, NORMAL_FILLED_AND_PEN1);
 		memmove(&ObjectTrace, &CurrentWorkingTrace, sizeof(ObjectRecord));
@@ -136,7 +136,7 @@ void TraceDrawingOff(int32 mode)
 		}
 
 		ExitDrawing();
-		EndDrawingEditingWindow(BM_DoubleBuffer);
+		EndDrawingEditingWindow();
 	}
 
 	TraceDrawingActive = 0;
@@ -159,7 +159,7 @@ void TraceDrawingOn(int32 mode)
 
 	if (((CurrentWorkingTrace.Info2 & 1) == 1) && (CurrentWorkingTrace.ObjectType != 0))
 	{
-		StartDrawingEditingWindow(BM_DoubleBuffer);
+		StartDrawingEditingWindow();
 		DrawCode = DrawLayerCode[CurrentDrawingLayer];
 		memmove(&ObjectTrace, &CurrentWorkingTrace, sizeof(ObjectRecord));
 		ObjectTrace.Info &= ~OBJECT_HIGHLITED;
@@ -194,7 +194,7 @@ void TraceDrawingOn(int32 mode)
 		}
 
 		ExitDrawing();
-		EndDrawingEditingWindow(BM_DoubleBuffer);
+		EndDrawingEditingWindow();
 	}
 
 	DrawTrace(CurrentDrawX1, CurrentDrawY1, OldX, OldY, CurrentTraceWidth, CurrentClearance, CurrentDrawingNetNr,
@@ -626,11 +626,11 @@ void TraceDrawing(int32 mode)
 			if ((OldX != CurrentDrawX2) || (OldY != CurrentDrawY2))
 			{
 				DrawTrace(CurrentDrawX1, CurrentDrawY1, OldX, OldY, CurrentTraceWidth, CurrentClearance,
-				          CurrentDrawingNetNr, TraceDrawingMode | BM_MultiStart);
+				          CurrentDrawingNetNr, TraceDrawingMode);
 				OldX = CurrentDrawX2;
 				OldY = CurrentDrawY2;
 				DrawTrace(CurrentDrawX1, CurrentDrawY1, CurrentDrawX2, CurrentDrawY2, CurrentTraceWidth,
-				          CurrentClearance, CurrentDrawingNetNr, TraceDrawingMode | BM_MultiEnd);
+				          CurrentClearance, CurrentDrawingNetNr, TraceDrawingMode);
 			}
 
 			if (MousePosX > DrawWindowMaxX - ScrollEndOfWindow)
@@ -2583,7 +2583,7 @@ x2,y2 : New point to draw trace to
 	DrawCode = DrawLayerCode[CurrentDrawingLayer];
 	Net = &((*Nets)[CurrentDrawingNetNr]);
 
-	StartDrawingEditingWindow(mode);
+	StartDrawingEditingWindow();
 	SetROP2(OutputDisplay, R2_XORPEN);
 
 	if ((Net->Info & OBJECT_HIGHLITED) == OBJECT_HIGHLITED)
@@ -2605,7 +2605,7 @@ x2,y2 : New point to draw trace to
 		      } else {
 		        strcpy(str," : Trace normal");
 		      }
-		      SetWindowTextOwn(PCBWindow,str);
+		      SetWindowTextUTF8(PCBWindow,str);
 		#endif
 		*/
 		if (DrawClearanceForTryingTrace)
@@ -2797,7 +2797,7 @@ x2,y2 : New point to draw trace to
 
 #endif
 	ExitDrawing();
-	EndDrawingEditingWindow(mode);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -3033,12 +3033,12 @@ int32 DrawNewVia(double x, double y)
 	NewVia.X = (float) x;
 	NewVia.Y = (float) y;
 
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 	SetROP2(OutputDisplay, R2_XORPEN);
 	DrawVia(&NewVia);
 	DrawCrossHair(16 + 8);
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 	return 0;
 }
 
