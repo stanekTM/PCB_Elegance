@@ -171,17 +171,17 @@ void DrawTryingObjectLine(double CurrentX, double CurrentY, int32 Mode)
 {
 	double x1, y1;
 
-	StartDrawingEditingWindow(Mode);
+	StartDrawingEditingWindow();
 	SetROP2(OutputDisplay, R2_XORPEN);
 
-	if ((Mode & ~BM_Mask) == 0)
+	if (Mode == 0)
 	{
 		InitDrawingObject(0, CROSS_HAIR_LAYER, 1, DRAW_WITH_DASH_PEN_AND_NO_BRUSH);
 		DrawLine(MultX(CurrentX), 100000, MultX(CurrentX), -100000);
 		DrawLine(100000, MultY(CurrentY), -100000, MultY(CurrentY));
 
 		ExitDrawing();
-		EndDrawingEditingWindow(Mode);
+		EndDrawingEditingWindow();
 		return;
 	}
 
@@ -206,7 +206,7 @@ void DrawTryingObjectLine(double CurrentX, double CurrentY, int32 Mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow(Mode);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -218,7 +218,7 @@ void CommandAddTryingObjectLine()
 {
 	int32 ok;
 
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 	SetROP2(OutputDisplay, R2_COPYPEN);
 	DrawCrossHair(8 + 2);
 
@@ -236,7 +236,7 @@ void CommandAddTryingObjectLine()
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -414,10 +414,10 @@ void CommandAddObjectLines(double LineThickNess, int32 Layer, int32 Mode)
 
 			if ((OldX != CurrentX) || (OldY != CurrentY))
 			{
-				DrawTryingObjectLine(OldX, OldY, Mode | BM_MultiStart);
+				DrawTryingObjectLine(OldX, OldY, Mode);
 				OldX = CurrentX;
 				OldY = CurrentY;
-				DrawTryingObjectLine(CurrentX, CurrentY, Mode | BM_MultiEnd);
+				DrawTryingObjectLine(CurrentX, CurrentY, Mode);
 			}
 
 			if (MousePosX > DrawWindowMaxX - ScrollEndOfWindow)
@@ -637,19 +637,19 @@ void CommandAddObjectLines(double LineThickNess, int32 Layer, int32 Mode)
 //    if (RightButtonPressed) {
 			DrawTryingObjectLine(OldX, OldY, Mode);
 			PopUpMenu = CreatePopupMenu();
-			OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_ESCAPE, SC(493, "Escape"));
+			AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_ESCAPE, SC(493, "Escape"));
 
 			if ((Layer != SOLD_MASK_BOTTOM) && (Layer != SOLD_MASK_TOP) && (Layer != PASTE_MASK_BOTTOM)
 			        && (Layer != PASTE_MASK_TOP))
 			{
 				if (LinesAllDirection)
 				{
-					OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_LINES_45_DIR,
+					AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_LINES_45_DIR,
 					              SC(991, "Draw with 45/90 degrees directions"));
 				}
 				else
 				{
-					OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_LINES_ALL_DIR,
+					AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_LINES_ALL_DIR,
 					              SC(992, "Draw in all directions"));
 				}
 			}
@@ -803,16 +803,16 @@ void CommandAddObjectLines(double LineThickNess, int32 Layer, int32 Mode)
 
 void DrawTryingObjectRect(double CurrentX, double CurrentY, int32 Mode)
 {
-	switch (Mode & ~BM_Mask)
+	switch (Mode)
 	{
 	case 0:
-		StartDrawingEditingWindow(Mode);
+		StartDrawingEditingWindow();
 		SetROP2(OutputDisplay, R2_XORPEN);
 		InitDrawingObject(0, CROSS_HAIR_LAYER, 1, DRAW_WITH_DASH_PEN_AND_NO_BRUSH);
 		DrawLine(MultX(CurrentX), 100000, MultX(CurrentX), -100000);
 		DrawLine(100000, MultY(CurrentY), -100000, MultY(CurrentY));
 		ExitDrawing();
-		EndDrawingEditingWindow(Mode);
+		EndDrawingEditingWindow();
 		return;
 
 	case 1:
@@ -832,7 +832,7 @@ void DrawTryingObjectRect(double CurrentX, double CurrentY, int32 Mode)
 		break;
 	}
 
-	StartDrawingEditingWindow(Mode);
+	StartDrawingEditingWindow();
 	SetROP2(OutputDisplay, R2_XORPEN);
 	InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_PEN_AND_NOT_FILLED);
 	DrawLine(Mult(NewObjectRect.CentreX - Xoffset) + DrawWindowMinX - 3,
@@ -851,7 +851,7 @@ void DrawTryingObjectRect(double CurrentX, double CurrentY, int32 Mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow(Mode);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -861,7 +861,7 @@ void DrawTryingObjectRect(double CurrentX, double CurrentY, int32 Mode)
 
 void CommandAddTryingObjectRect(ObjectRectRecord * ObjectRect, int32 Mode)
 {
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 	DrawCrossHair(8 + 2);
 	SetROP2(OutputDisplay, R2_COPYPEN);
 
@@ -910,7 +910,7 @@ void CommandAddTryingObjectRect(ObjectRectRecord * ObjectRect, int32 Mode)
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -982,10 +982,10 @@ void CommandAddObjectRects(double LineThickNess, int32 Layer, int32 Mode)
 
 			if ((OldX != CurrentX) || (OldY != CurrentY))
 			{
-				DrawTryingObjectRect(OldX, OldY, Mode | BM_MultiStart);
+				DrawTryingObjectRect(OldX, OldY, Mode);
 				OldX = CurrentX;
 				OldY = CurrentY;
-				DrawTryingObjectRect(CurrentX, CurrentY, Mode | BM_MultiEnd);
+				DrawTryingObjectRect(CurrentX, CurrentY, Mode);
 			}
 
 			if (MousePosX > DrawWindowMaxX - ScrollEndOfWindow)
@@ -1271,23 +1271,20 @@ void CommandAddObjectRects(double LineThickNess, int32 Layer, int32 Mode)
 
 void DrawTryingObjectArc(double CurrentX, double CurrentY, int32 Mode)
 {
-	int32 ok, OkToDraw, BufferMode;
-
-	BufferMode = Mode;
-	Mode &= ~BM_Mask;
+	int32 ok, OkToDraw;
 
 	if (Mode == 0)
 	{
-		StartDrawingEditingWindow(BufferMode);
+		StartDrawingEditingWindow();
 		SetROP2(OutputDisplay, R2_XORPEN);
 		DrawCrossHair(8);
 		ExitDrawing();
-		EndDrawingEditingWindow(BufferMode);
+		EndDrawingEditingWindow();
 		return;
 	}
 
 	OkToDraw = 0;
-	StartDrawingEditingWindow(BufferMode);
+	StartDrawingEditingWindow();
 	SetROP2(OutputDisplay, R2_XORPEN);
 
 	switch (Mode)
@@ -1400,7 +1397,7 @@ void DrawTryingObjectArc(double CurrentX, double CurrentY, int32 Mode)
 
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow(BufferMode);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -1410,7 +1407,7 @@ void DrawTryingObjectArc(double CurrentX, double CurrentY, int32 Mode)
 
 void CommandAddTryingObjectArc(ObjectArcRecord * ObjectArc)
 {
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 	DrawCrossHair(2);
 	SetROP2(OutputDisplay, R2_COPYPEN);
 
@@ -1418,7 +1415,7 @@ void CommandAddTryingObjectArc(ObjectArcRecord * ObjectArc)
 		DrawObjectArc(ObjectArc, 0.0, 0.0, 0);
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -1566,10 +1563,10 @@ void CommandAddObjectArcs(double LineThickNess, int32 Layer, int32 CircleMode, i
 
 			if ((OldX != CurrentX) || (OldY != CurrentY))
 			{
-				DrawTryingObjectArc(OldX, OldY, Mode | BM_MultiStart);
+				DrawTryingObjectArc(OldX, OldY, Mode);
 				OldX = CurrentX;
 				OldY = CurrentY;
-				DrawTryingObjectArc(CurrentX, CurrentY, Mode | BM_MultiEnd);
+				DrawTryingObjectArc(CurrentX, CurrentY, Mode);
 			}
 
 			if (MousePosX > DrawWindowMaxX - ScrollEndOfWindow)
@@ -1744,11 +1741,11 @@ void CommandAddObjectArcs(double LineThickNess, int32 Layer, int32 CircleMode, i
 			   if (CircleMode==0) {
 			   DrawTryingObjectArc(CurrentX,CurrentY,Mode);
 			   PopUpMenu=CreatePopupMenu();
-			   OwnAppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ESCAPE,SC(493,"Escape"));
+			   AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_STRING,ID_ESCAPE,SC(493,"Escape"));
 			   if (LinesAllDirection) {
-			   OwnAppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_LINES_45_DIR,SC(991,"Draw with 45/90 degrees directions"));
+			   AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_STRING,ID_LINES_45_DIR,SC(991,"Draw with 45/90 degrees directions"));
 			   } else {
-			   OwnAppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_LINES_ALL_DIR,SC(992,"Draw in all directions"));
+			   AppendMenuUTF8(PopUpMenu,MF_ENABLED|MF_STRING,ID_LINES_ALL_DIR,SC(992,"Draw in all directions"));
 			   }
 			   TrackPopupMenu(PopUpMenu,TPM_LEFTALIGN+TPM_RIGHTBUTTON,
 			   RealWindow.left+MousePosX+5,RealWindow.top+MousePosY+40,0,PCBWindow,NULL);
@@ -2022,17 +2019,18 @@ void CommandAddObjectArcs(double LineThickNess, int32 Layer, int32 CircleMode, i
 
 void DrawTryingObjectText2(double CurrentX, double CurrentY, int32 Mode)
 {
-	StartDrawingEditingWindow(Mode);
+	StartDrawingEditingWindow();
 	SetROP2(OutputDisplay, R2_XORPEN);
-
 	NewObjectText2.X = (float) CurrentX;
 	NewObjectText2.Y = (float) CurrentY;
-	NewObjectText2.Rotation = (float) ((Mode & ~BM_Mask) * 45.0);
-	DrawObjectText2(&NewObjectText2, 0.0, 0.0, 0.0, 1);
 
+	if (Mode != -1)
+		NewObjectText2.Rotation = (float) (Mode * 45.0);
+
+	DrawObjectText2(&NewObjectText2, 0.0, 0.0, 0.0, 1);
 	DrawCrossHair(8);
 	ExitDrawing();
-	EndDrawingEditingWindow(Mode);
+	EndDrawingEditingWindow();
 
 }
 
@@ -2043,14 +2041,14 @@ void DrawTryingObjectText2(double CurrentX, double CurrentY, int32 Mode)
 
 void CommandAddTryingObjectText2(ObjectTextRecord2 * ObjectText2)
 {
-	StartDrawingEditingWindow(BM_DoubleBuffer);
+	StartDrawingEditingWindow();
 	DrawCrossHair(2);
 
 	if (AddObjectText2(ObjectText2))
 		DrawObjectText2(ObjectText2, 0.0, 0.0, 0.0, 0);
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BM_DoubleBuffer);
+	EndDrawingEditingWindow();
 }
 
 // *******************************************************************************************************
@@ -2099,7 +2097,7 @@ void CommandAddObjectTexts2(double LineThickNess, int32 Layer, int32 Mode)
 	OldY = CurrentY;
 	OldDir = -1;
 	NewObjectLine.LineThickNess = (float) LineThickNess;
-	Mode = 0;
+	Mode = -1;
 
 	ClipMouseCursor();
 	DrawTryingObjectText2(CurrentX, CurrentY, Mode);
@@ -2124,10 +2122,10 @@ void CommandAddObjectTexts2(double LineThickNess, int32 Layer, int32 Mode)
 
 			if ((OldX != CurrentX) || (OldY != CurrentY))
 			{
-				DrawTryingObjectText2(OldX, OldY, Mode | BM_MultiStart);
+				DrawTryingObjectText2(OldX, OldY, Mode);
 				OldX = CurrentX;
 				OldY = CurrentY;
-				DrawTryingObjectText2(CurrentX, CurrentY, Mode | BM_MultiEnd);
+				DrawTryingObjectText2(CurrentX, CurrentY, Mode);
 			}
 
 			if (MousePosX > DrawWindowMaxX - ScrollEndOfWindow)
@@ -2253,6 +2251,7 @@ void CommandAddObjectTexts2(double LineThickNess, int32 Layer, int32 Mode)
 
 		if (CheckRightButton2(&DrawXorFunction) == 1)
 		{
+//    if (RightButtonPressed) {
 			DrawTryingObjectText2(CurrentX, CurrentY, Mode);
 
 			if (AltPressed)
@@ -2277,26 +2276,28 @@ void CommandAddObjectTexts2(double LineThickNess, int32 Layer, int32 Mode)
 			{
 				memset(&TypeObject, 0, sizeof(ObjectTextRecord));
 
-				if (LineInputDialog(&TypeObject, SC(1077, "Add text (x,y)"), 0) == 1)
+				if (Mode == 0)
 				{
-					if ((NrParams = ScanParameters(-1, TypeObject.Text, 0)) == 2)
+					if (LineInputDialog(&TypeObject, SC(1077, "Add text (x,y)"), 0) == 1)
 					{
-						if (!ParametersRelative)
+						if ((NrParams = ScanParameters(-1, TypeObject.Text, 0)) == 2)
 						{
-							NewObjectText2.X = (float) ParamsFloat[0];
-							NewObjectText2.Y = (float) ParamsFloat[1];
-						}
-						else
-						{
-							NewObjectText2.X = (float) (RelX + ParamsFloat[0]);
-							NewObjectText2.Y = (float) (RelY + ParamsFloat[1]);
-						}
+							if (!ParametersRelative)
+							{
+								NewObjectText2.X = (float) ParamsFloat[0];
+								NewObjectText2.Y = (float) ParamsFloat[1];
+							}
+							else
+							{
+								NewObjectText2.X = (float) (RelX + ParamsFloat[0]);
+								NewObjectText2.Y = (float) (RelY + ParamsFloat[1]);
+							}
 
-						CommandAddTryingObjectText2(&NewObjectText2);
-						SelectionEsc = 1;
+							CommandAddTryingObjectText2(&NewObjectText2);
+							SelectionEsc = 1;
+						}
 					}
 				}
-				
 			}
 
 			SpacePressed = 0;
