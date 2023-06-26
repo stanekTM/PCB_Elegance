@@ -65,13 +65,12 @@ extern double TextMinX, TextMinY, TextMaxX, TextMaxY;
 
 void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 mode)
 {
-	
 	int32 hulpx, hulpy;
 
 	if (OkToDrawCrossHair == 1)
 		DrawCrossHair(1);
 
-	StartDrawingEditingWindow(0);
+	StartDrawingEditingWindow(BM_DoubleBuffer);
 
 
 	if ((mode & 1) == 1)
@@ -99,7 +98,9 @@ void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 m
 		SearchMaxX = max(x1, x2);
 		SearchMaxY = max(y1, y2);
 	}
-	
+
+//  SetROP2(OutputDisplay,R2_COPYPEN);
+
 	switch (SelectionMode)
 	{
 	case DRAG_TRACES_VIAS_COMPS_MODE:
@@ -119,40 +120,31 @@ void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 m
 
 		if (UnselectAll)
 		{
-			strcpy(InfoStr, SC(269, "Drag traces/vias/components")); //spodní pravý pøeklad
+			strcpy(InfoStr, SC(269, "Drag traces/vias/components")); //spodni pravy preklad
 			RedrawInfoStr(0);
 		}
+
 		break;
 
-	case ROUTING_MODE:
+	case ROUTING_MODE:			// Routing
 		SelectTracesFromRectWindow();
-		
-		if (UnselectAll)
-		{
-			strcpy(InfoStr, SC(138, "Routing traces")); //spodní pravý pøeklad
-			RedrawInfoStr(0);
-		}
+//      if (UnselectAll) {
+//        strcpy(InfoStr, SC(138, "Routing traces")); //spodni pravy preklad
+//        RedrawInfoStr(0);
+//      }
 		break;
 
-	case MOVE_ONE_TRACE_MODE:
+	case MOVE_ONE_TRACE_MODE:	// Moving one trace
 		SelectTracesFromRectWindow();
-		
-		if (UnselectAll)
-		{
-			strcpy(InfoStr, SC(135, "Drag traces")); //spodní pravý pøeklad
-			RedrawInfoStr(0);
-		}
+//      if (UnselectAll) {
+//        strcpy(InfoStr, SC(135, "Drag traces")); //spodni pravy preklad
+//        RedrawInfoStr(0);
+//      }
 		break;
 
 	case MOVE_COMPONENTS_MODE:
 		SelectCompsFromRectWindow((mode & 2) >> 1);
 		LastAction = MOVE_COMPONENTS_MODE;
-		
-		if (UnselectAll)
-		{
-			strcpy(InfoStr, SC(134, "Move/rotate/change components")); //spodní pravý pøeklad
-			RedrawInfoStr(0);
-		}
 		break;
 
 	case MOVE_COMPONENT_REFERENCES_MODE:
@@ -163,10 +155,11 @@ void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 m
 
 			if (UnselectAll)
 			{
-				strcpy(InfoStr, SC(241, "Modify component references")); //spodní pravý pøeklad
+				strcpy(InfoStr, SC(241, "Modify component references")); //spodni pravy preklad
 				RedrawInfoStr(0);
 			}
 		}
+
 		break;
 
 	case MOVE_COMPONENT_VALUES_MODE:
@@ -177,25 +170,23 @@ void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 m
 
 			if (UnselectAll)
 			{
-				strcpy(InfoStr, SC(268, "Modify component values")); //spodní pravý pøeklad
+				strcpy(InfoStr, SC(268, "Modify component values")); //spodni pravy preklad
 				RedrawInfoStr(0);
 			}
 		}
+
 		break;
 
 	case OBJECTS_MODE:
 		SelectObjectLinesFromRectWindow(0);
 		SelectObjectRectsFromRectWindow(0);
+		/*
+		      SelectObjectCirclesFromRectWindow(0);
+		*/
 		SelectObjectArcsFromRectWindow(0);
 		SelectObjectTexts2FromRectWindow(0);
 		SelectObjectPolygonsFromRectWindow(0);
 		LastAction = OBJECTS_MODE;
-		
-		if (UnselectAll)
-		{
-			strcpy(InfoStr, SC(228, "Draw/change objects other layers")); //spodní pravý pøeklad
-			RedrawInfoStr(0);
-		}
 		break;
 
 	case AREAFILLS_MODE:
@@ -204,9 +195,10 @@ void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 m
 
 		if (UnselectAll)
 		{
-			strcpy(InfoStr, SC(176, "Areafills/powerplanes")); //spodní pravý pøeklad
+			strcpy(InfoStr, SC(176, "Areafills/powerplanes")); //spodni pravy preklad
 			RedrawInfoStr(0);
 		}
+
 		break;
 
 	case MOVING_TRACES_VIAS_MODE:
@@ -218,35 +210,26 @@ void SelectObjectsFromWindow(double x1, double y1, double x2, double y2, int32 m
 
 		SelectObjectLinesFromRectWindow(1);
 		SelectObjectArcsFromRectWindow(1);
-		
-		if (UnselectAll)
-		{
-			strcpy(InfoStr, SC(136, "Change traces/vias")); //spodní pravý pøeklad
-			RedrawInfoStr(0);
-		}
 		break;
 
 	case GATE_PINSWAP_MODE:
-		SelectGatePinSwap(0);
-		
 		if (!UnselectAll)
-		{
-			strcpy(InfoStr, SC(292, "Gate/pin swap")); //spodní pravý pøeklad
-			RedrawInfoStr(0);
-		}
+			SelectGatePinSwap(0);
+
 		break;
 	}
 
 	ExitDrawing();
-	EndDrawingEditingWindow(0);
+	EndDrawingEditingWindow(BM_DoubleBuffer);
 
 	if (OkToDrawCrossHair == 1)
 		DrawCrossHair(1);
 }
 
-//*******************************************************************************************************************
-//************************************ spodní pravý pøeklad *********************************************************
-//*******************************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
 
 void SelectCompsFromRectWindow(int32 mode)
 {
@@ -256,7 +239,10 @@ void SelectCompsFromRectWindow(int32 mode)
 	int32 ObjectChanged;
 	ConnectionsRecord *Connection;
 	char str[MAX_LENGTH_STRING];
-	
+
+//  strcpy(InfoStr,"              ");
+//  RedrawInfoStr(0);
+
 	NrComponentsSelected = 0;
 
 	if (UnselectAll)
@@ -338,7 +324,12 @@ void SelectCompsFromRectWindow(int32 mode)
 
 				if ((CompInfo & (Mask)) == 0)
 				{
-					
+					/*
+					          x1a=Comp->BoardPosMinX;
+					          y1a=Comp->BoardPosMinY;
+					          x2a=Comp->BoardPosMaxX;
+					          y2a=Comp->BoardPosMaxY;
+					*/
 					x1a = Comp->PlacementOriginX - Comp->PlacementWidth * 0.5;
 					y1a = Comp->PlacementOriginY - Comp->PlacementHeight * 0.5;
 					x2a = Comp->PlacementOriginX + Comp->PlacementWidth * 0.5;
@@ -492,10 +483,15 @@ void SelectCompsFromRectWindow(int32 mode)
 				if (Selected > 10)
 					strcat(InfoStr, " ........");
 
-				sprintf(str, SC(339, " [ %d selected ]"), Selected);
+				sprintf(str, SC(338, "components %s"), FirstComps[cnt]->Name);
 				strcat(InfoStr, str);
 			}
-			
+
+			RedrawInfoStr(0);
+		}
+		else
+		{
+			strcpy(InfoStr, SC(269, "Move/rotate/change components"));
 			RedrawInfoStr(0);
 		}
 	}
@@ -973,7 +969,8 @@ void SelectViasFromRectWindow()
 						else
 							ViaInfo |= OBJECT_SELECTED;
 					}
-					
+
+//          ViaInfo&=~0x0001;
 					ObjectChanged = 1;
 				}
 			}
@@ -1046,6 +1043,7 @@ void SelectConnectionsFromRectWindow()
 				{
 					ObjectChanged = 1;
 					ConnectionInfo &= ~(OBJECT_SELECTED | 0x003f);
+//          ConnectionInfo&=~(OBJECT_SELECTED);
 				}
 			}
 			else
@@ -1056,16 +1054,18 @@ void SelectConnectionsFromRectWindow()
 					{
 						ConnectionInfo &= ~(OBJECT_SELECTED | 0x003f);
 						ConnectionInfo |= TestResult;
-						
+//            ConnectionsSelected--;
 						ObjectChanged = 1;
 					}
 					else
 					{
+//            if (TestResult!=3) {
 						ConnectionInfo &= ~0x003f;
 						ConnectionInfo |= OBJECT_SELECTED;
 						ConnectionInfo |= TestResult;
 						ConnectionsSelected++;
 						ObjectChanged = 1;
+//            }
 					}
 				}
 			}
@@ -1265,6 +1265,69 @@ void SelectObjectRectsFromRectWindow(int32 Mode)
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
+/*
+void SelectObjectCirclesFromRectWindow(int32 Mode)
+
+{
+  int32  cnt;
+  double  x1,y1,x2,y2,dikte,lengte;
+  int32  ObjectCircleInfo,ok,Layer,CircleMode;
+  int32   Check,ObjectChanged;
+
+  ObjectCircleRecord  *ObjectCircle;
+
+  for (cnt=0;cnt<Design.NrObjectCircles;cnt++) {
+    ObjectCircle=&((*ObjectCircles)[cnt]);
+    ObjectCircleInfo=ObjectCircle->Info;
+    if (((ObjectCircleInfo & (OBJECT_NOT_VISIBLE)) == 0)
+       &&
+       (OkToDrawObjectsLayer(ObjectCircle->Layer)==0)) {
+      x1=ObjectCircle->CentreX;
+      y1=ObjectCircle->CentreY;
+      x2=ObjectCircle->Diam;
+      CircleMode=CircleConv[(int32)ObjectCircle->CircleMode];
+      ObjectChanged=0;
+      if (UnselectAll) {
+        if ((ObjectCircleInfo & OBJECT_SELECTED) == OBJECT_SELECTED) {
+          ObjectCircleInfo&=~OBJECT_SELECTED;
+          ObjectChanged=1;
+        }
+      } else {
+        if (RectTestCircle(x1,y1,x2,CircleMode)) {
+          if (!ReplaceSelections) {
+            if ((ObjectCircleInfo & OBJECT_SELECTED) == OBJECT_SELECTED) {
+              if (ShiftPressed) {
+                ObjectCircleInfo&=~OBJECT_SELECTED;
+              }
+            } else {
+              ObjectCircleInfo|=OBJECT_SELECTED;
+            }
+          } else {
+            if (ShiftPressed) {
+              if ((ObjectCircleInfo & OBJECT_SELECTED) == OBJECT_SELECTED) {
+                ObjectCircleInfo&=~(OBJECT_SELECTED);
+              } else {
+                ObjectCircleInfo|=OBJECT_SELECTED;
+              }
+            } else {
+              ObjectCircleInfo|=OBJECT_SELECTED;
+            }
+          }
+          ObjectChanged=1;
+        }
+      }
+      if (ObjectChanged) {
+        ObjectCircle->Info=ObjectCircleInfo;
+        DrawObjectCircle(ObjectCircle,0.0,0.0,0);
+      }
+    }
+  }
+}
+*/
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
 
 void SelectObjectArcsFromRectWindow(int32 Mode)
 {
@@ -1388,6 +1451,7 @@ void SelectObjectArcsFromRectWindow(int32 Mode)
 		}
 	}
 }
+
 
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -1522,6 +1586,7 @@ void SelectObjectTexts2FromRectWindow(int32 Mode)
 // *******************************************************************************************************
 // *******************************************************************************************************
 
+
 void SelectObjectPolygonsFromRectWindow(int32 Mode)
 {
 	int32 cnt, ObjectPolygonInfo;
@@ -1596,6 +1661,7 @@ void SelectObjectPolygonsFromRectWindow(int32 Mode)
 // *******************************************************************************************************
 // *******************************************************************************************************
 
+
 void SelectReferencesFromRectWindow(int32 Mode)
 {
 	int32 cnt, MemPos, lengte, OldTextVisibility, OldInfo, Mirror, CompInfo, ShapeNr, TextVisibility;
@@ -1628,6 +1694,8 @@ void SelectReferencesFromRectWindow(int32 Mode)
 
 		if (((CompInfo & OBJECT_NOT_VISIBLE) == 0) && ((Comp->TextVisibility & 0x100) == 0))
 		{
+//       &&
+//       ((TextVisibility & 4) == 0)) {
 			if (UnselectAll)
 			{
 				if (((TextVisibility & 1) == 1) || ((Comp->Info & OBJECT_SELECTED) == OBJECT_SELECTED))
@@ -1725,6 +1793,7 @@ void SelectReferencesFromRectWindow(int32 Mode)
 				}
 
 				DrawComp2(Comp, 0.0, 0.0, 0, 0x204);
+//        return;
 			}
 		}
 	}
@@ -1869,6 +1938,7 @@ void SelectCompValuesFromRectWindow(int32 Mode)
 				}
 
 				DrawComp2(Comp, 0.0, 0.0, 0, 0x204);
+//        return;
 			}
 		}
 	}
@@ -1916,7 +1986,9 @@ void SelectAreaFillsFromRectWindow(int32 Mode)
 #ifdef _DEBUG
 	int32 ok;
 #endif
-	
+
+// DrawPolygon->PolygonType  =  2   ->  polygon selected
+
 	for (cnt = 0; cnt < Design.NrAreaFills; cnt++)
 	{
 		AreaFill = (AreaFillRecord *) & (AreaFillMem[(*AreaFills)[cnt]]);
@@ -1991,10 +2063,15 @@ void SelectAreaFillsFromRectWindow(int32 Mode)
 							}
 							else
 							{
+// PolygonType bit 0 = 0  -> polygon deletion because of copper
+// PolygonType bit 0 = 1  -> polygon deletion because of user deletion/thermal relief
+// PolygonType bit 2 = 0  -> polygon deletion because of thermal relief
+// PolygonType bit 2 = 1  -> polygon deletion because of user deletion
 								if ((PointInPolygon(DrawPolygon, cx, cy) & 1) == 1)
 								{
 									FoundSubPolygon = 1;
 
+//#else
 #ifdef _DEBUG
 
 									if ((DrawPolygon->PolygonType & 8) == 8)
@@ -2350,16 +2427,39 @@ int32 GetNrObjectSelections(int32 Layer, int32 mode)
 			        && (ObjectLine->NetNr >= 0) && (CheckIfLayerHasObjectWithClearances(ObjectLine->Layer)))
 				count++;
 		}
+
+		/*
+		      for (cnt=0;cnt<Design.NrObjectRects;cnt++) {
+		        ObjectRect=&((*ObjectRects)[cnt]);
+		        if (((ObjectRect->Info & (OBJECT_NOT_VISIBLE|OBJECT_SELECTED)) == OBJECT_SELECTED)
+		           &&
+		           (CheckIfLayerHasObjectWithClearances(ObjectRect->Layer))) {
+		          count++;
+		        }
+		      }
+		*/
 		for (cnt = 0; cnt < Design.NrObjectArcs; cnt++)
 		{
 			ObjectArc = &((*ObjectArcs)[cnt]);
 
 			if (((ObjectArc->Info & (OBJECT_NOT_VISIBLE | OBJECT_SELECTED)) == OBJECT_SELECTED)
-				
-				&& (CheckIfLayerHasObjectWithClearances(ObjectArc->Layer)))
+			        /*
+			                   &&
+			                   (ObjectArc->NetNr>=0)
+			        */
+			        && (CheckIfLayerHasObjectWithClearances(ObjectArc->Layer)))
 				count++;
 		}
-		
+
+		/*
+		      for (cnt=0;cnt<Design.NrObjectPolygons;cnt++) {
+		        ObjectPolygon=(ObjectPolygonRecord *)&(ObjectPolygonMem[(*ObjectPolygons)[cnt]]);
+		        if (((ObjectPolygon->Info & (OBJECT_NOT_VISIBLE|OBJECT_SELECTED)) == OBJECT_SELECTED)
+		           &&
+		           (CheckIfLayerHasObjectWithClearances(ObjectPolygon->Layer))) {
+		        }
+		      }
+		*/
 		return count;
 	}
 
@@ -2836,7 +2936,7 @@ int32 CopySelectedViasToObjects4(int32 mode, int32 SelectedLayer)
 					Object = &((*Objects4)[NrObjects4]);
 					Object->x1 = Via->X;
 					Object->y1 = Via->Y;
-					
+//          Object->x2=Object->x1+Trace->Length;
 					Object->ObjectType = VIA_PUT_THROUGH_ROUND;
 					NrObjects4++;
 				}
@@ -2944,6 +3044,18 @@ void GetMaxRectSelectedObjects(int32 mode, double *MinX, double *MinY, double *M
 			maxy = max(ObjectRect->CentreY + ObjectRect->Height * 0.5, maxy);
 		}
 	}
+
+	/*
+	  for (cnt=0;cnt<Design.NrObjectCircles;cnt++) {
+	    ObjectCircle=&((*ObjectCircles)[cnt]);
+	    if ((ObjectCircle->Info & (OBJECT_NOT_VISIBLE|OBJECT_SELECTED)) == OBJECT_SELECTED) {
+	      minx=min(ObjectCircle->CentreX-ObjectCircle->Diam*0.5,minx);
+	      maxx=max(ObjectCircle->CentreX+ObjectCircle->Diam*0.5,maxx);
+	      miny=min(ObjectCircle->CentreY-ObjectCircle->Diam*0.5,miny);
+	      maxy=max(ObjectCircle->CentreY+ObjectCircle->Diam*0.5,maxy);
+	    }
+	  }
+	*/
 	for (cnt = 0; cnt < Design.NrObjectArcs; cnt++)
 	{
 		ObjectArc = &((*ObjectArcs)[cnt]);
@@ -2956,6 +3068,26 @@ void GetMaxRectSelectedObjects(int32 mode, double *MinX, double *MinY, double *M
 			maxy = max(ObjectArc->CentreY + ObjectArc->Height * 0.5, maxy);
 		}
 	}
+
+	/*
+	  for (cnt=0;cnt<Design.NrObjectTexts;cnt++) {
+	    ObjectText=&((*ObjectTexts)[cnt]);
+	    if ((ObjectText->Info & (OBJECT_NOT_VISIBLE|OBJECT_SELECTED)) == OBJECT_SELECTED) {
+	      x1=ObjectText->X;
+	      y1=ObjectText->Y;
+	      x2=ObjectText->FontHeight;
+	      TextMode=ObjectText->TextMode;
+	      TextRotation=(TextMode >> 8) & 3;
+	      TextAlignment=(TextMode & 0x0f);
+	      Mirror=(ObjectText->TextMode & 0x10) >> 4;
+	      GetMinMaxText(x1,y1,x2,0,TextRotation,TextAlignment,Mirror,ObjectText->Text);
+	      minx=min(minx,TextMinX);
+	      maxx=max(maxx,TextMaxX);
+	      miny=min(miny,TextMinY);
+	      maxy=max(maxy,TextMaxY);
+	    }
+	  }
+	*/
 	for (cnt = 0; cnt < Design.NrObjectTexts2; cnt++)
 	{
 		ObjectText2 = &((*ObjectTexts2)[cnt]);
@@ -3028,31 +3160,33 @@ void GetMaxRectSelectedObjects(int32 mode, double *MinX, double *MinY, double *M
 	*MaxY = maxy;
 }
 
-//********************************************************************************************************
-//******************************************** trasy/prùchodky *******************************************
-//********************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
 
 void PrintValue(double value, LPSTR ValueStr, int32 mode)
 {
 	if (Units == 0)
 	{
-		sprintf(ValueStr, "%.1f", value / 2540.0); //trasy/prùchodky
+		sprintf(ValueStr, "%.1f", value / 2540.0); //trasy/pruchodky
 
 		if (mode == 1)
-			strcat(ValueStr, " thou"); //trasy/prùchodky
+			strcat(ValueStr, " thou"); //trasy/pruchodky
 	}
 	else
 	{
-		sprintf(ValueStr, "%.4f", value / 100000.0); //trasy/prùchodky
+		sprintf(ValueStr, "%.4f", value / 100000.0); //trasy/pruchodky
 
 		if (mode == 1)
-			strcat(ValueStr, "\t"); //trasy/prùchodky
+			strcat(ValueStr, "  mm"); //trasy/pruchodky
 	}
 }
 
-//********************************************************************************************************
-//******************************************** trasy/prùchodky *******************************************
-//********************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
 
 void PrintTrace(TraceRecord * Trace, LPSTR ValueStr, int32 TraceType, int32 Layer, int32 CountIndex)
 {
@@ -3061,24 +3195,28 @@ void PrintTrace(TraceRecord * Trace, LPSTR ValueStr, int32 TraceType, int32 Laye
 	int32 NetNr;
 
 	if (Layer == 0)
-		sprintf(ValueStr, SC(1357, "Trace\tBottom\t"), Layer); //trasy/prùchodky
+		sprintf(ValueStr, SC(1357, "Trace\tBottom\t"), Layer); //trasy/pruchodky
 	else
 	{
 		if (Design.NrBoardLayers > 1)
 		{
 			if (Layer == Design.NrBoardLayers - 1)
-				sprintf(ValueStr, SC(1358, "Trace\tTop\t"), Layer); //trasy/prùchodky
+				sprintf(ValueStr, SC(1358, "Trace\tTop\t"), Layer); //trasy/pruchodky
 			else
-				sprintf(ValueStr, SC(1359, "Trace\tLayer %i\t"), Layer); //trasy/prùchodky
+				sprintf(ValueStr, SC(1359, "Trace\tLayer %i\t"), Layer); //trasy/pruchodky
 		}
 	}
-	
-    PrintValue(Trace->X, str2, 0); // pozice x, y
+
+	NetNr = Trace->NetNr;
+	Net = &((*Nets)[NetNr]);
+	strcat(ValueStr, Net->Name);
+	strcat(ValueStr, "\t");
+	PrintValue(Trace->X, str2, 0);
 	strcat(ValueStr, str2);
-	strcat(ValueStr, ", ");
+	strcat(ValueStr, "  ");
 	PrintValue(Trace->Y, str2, 0);
 	strcat(ValueStr, str2);
-	strcat(ValueStr, " - ");
+	strcat(ValueStr, "\t");
 
 	if (TraceType == TRACE_VER)
 		PrintValue(Trace->X, str2, 0);
@@ -3086,7 +3224,7 @@ void PrintTrace(TraceRecord * Trace, LPSTR ValueStr, int32 TraceType, int32 Laye
 		PrintValue(Trace->X + Trace->Length, str2, 0);
 
 	strcat(ValueStr, str2);
-	strcat(ValueStr, ", ");
+	strcat(ValueStr, "  ");
 
 	if ((TraceType == TRACE_VER) || (TraceType == TRACE_DIAG2))
 		PrintValue(Trace->Y + Trace->Length, str2, 0);
@@ -3098,25 +3236,18 @@ void PrintTrace(TraceRecord * Trace, LPSTR ValueStr, int32 TraceType, int32 Laye
 		PrintValue(Trace->Y - Trace->Length, str2, 0); // pozice x,y
 
 	strcat(ValueStr, str2);
-	strcat(ValueStr, SC(1360, "\twidth ")); //trasy/prùchodky
+	strcat(ValueStr, SC(1041, "\tTrace width\t"));
 	PrintValue(Trace->ThickNess, str2, 0);
 	strcat(ValueStr, str2);
-	strcat(ValueStr, SC(1361, " clearance ")); //trasy/prùchodky
+	strcat(ValueStr, SC(1042, "\t\t\tClearance\t"));
 	PrintValue(Trace->Clearance, str2, 1);
 	strcat(ValueStr, str2);
-
-	strcat(ValueStr, "\t");
-	NetNr = Trace->NetNr; //si
-	Net = &((*Nets)[NetNr]);
-	strcat(ValueStr, Net->Name); //si
-	strcat(ValueStr, "\t");
-
 #ifdef _DEBUG
-	sprintf(str2, "%d", CountIndex); //ostatní
+	sprintf(str2, "\t%d", CountIndex);
 	strcat(ValueStr, str2);
-	
 #endif
 }
+
 
 // *******************************************************************************************************
 // *******************************************************************************************************
@@ -3174,20 +3305,15 @@ void ObjectsInfo(ObjectRecord * Object)
 		if (((Object->Info & OBJECT_FILLED) == 0) || (Object->Layer == DRILL_LAYER))
 		{
 			if (Object->Layer == DRILL_LAYER)
-
-				sprintf(Val2, "%.1f %.1f\t%.1f ( %.1f )\t", x1, y1, x2, Clearance / 2540.0);
-			
+				sprintf(Val2, "%.1f  %.1f\t%.1f (%.1f)\t", x1, y1, x2, Clearance / 2540.0);
 			else
-				
-				sprintf(Val2, "%.1f %.1f\t%.1f\t%.1f", x1, y1, x2, dikte);
+				sprintf(Val2, "%.1f  %.1f\t%.1f\t%.1f", x1, y1, x2, dikte);
 		}
 		else
-			
-			    sprintf(Val2, "%.1f %.1f\t%.1f\t\t\t", x1, y1, x2);
+			sprintf(Val2, "%.1f  %.1f\t%.1f\t\t\t", x1, y1, x2);
 
-		        sprintf(Val4a, "%.1f %.1f\t%.1f\t%.1f\t%i", x1, y1, x2, dikte, rot);
-		        
-				sprintf(Val5, "%.1f %.1f\t%.1f\t%.1f\t%.1f", x1, y1, x2, dikte, Rotation);
+		sprintf(Val4a, "%.1f  %.1f\t%.1f\t%.1f\t%i", x1, y1, x2, dikte, rot);
+		sprintf(Val5, "%.1f  %.1f\t%.1f\t%.1f\t%.1f", x1, y1, x2, dikte, Rotation);
 
 		if (Object->ObjectType == OBJECT_ARC)
 		{
@@ -3195,21 +3321,18 @@ void ObjectsInfo(ObjectRecord * Object)
 			ConvertPointToPolar(Object->x4, Object->y4, &Dist2, &Angle2);
 		}
 
-		sprintf(Val6, "%.1f %.1f\t%.1f %.1f\t%.1f\t%.1f %.1f", x1, y1, x2, y2, dikte, Angle1, Angle2);
-		
-		sprintf(Val6a, "%.1f %.1f\t%.1f %.1f\t%.1f ( %.1f )\t%.1f %.1f", x1, y1, x2, y2, dikte, Clearance / 2540.0,
+		sprintf(Val6, "%.1f  %.1f\t%.1f  %.1f\t%.1f\t%.1f  %.1f", x1, y1, x2, y2, dikte, Angle1, Angle2);
+		sprintf(Val6a, "%.1f  %.1f\t%.1f  %.1f\t%.1f (%.1f)\t%.1f  %.1f", x1, y1, x2, y2, dikte, Clearance / 2540.0,
 		        Angle1, Angle2);
-		
-		sprintf(Val7, "%.1f %.1f\t%.1f %.1f\t%.1f\tLength %.1f, Angle %.1f", x1, y1, x2, y2, dikte,
+		sprintf(Val7, SC(1043, "%.1f  %.1f\t%.1f  %.1f\t%.1f\tLength  %.1f, Angle %.1f"), x1, y1, x2, y2, dikte,
 		        Length / 2540.0, Angle * 180.0 / PI);
-		
-		sprintf(Val7a, "%.1f %.1f\t%.1f %.1f\t%.1f ( %.1f )\tLength %.1f, Angle %.1f", x1, y1, x2, y2, dikte,
+		sprintf(Val7a, SC(1104, "%.1f  %.1f\t%.1f  %.1f\t%.1f (%.1f)\tLength  %.1f, Angle %.1f"), x1, y1, x2, y2, dikte,
 		        Clearance / 2540.0, Length / 2540.0, Angle * 180.0 / PI);
 
 		if ((Object->Info & OBJECT_FILLED) == 0)
-			sprintf(Val8, "%.1f %.1f\t%.1f %.1f\t%.1f", x1, y1, x2, y2, dikte);
+			sprintf(Val8, "%.1f  %.1f\t%.1f  %.1f\t%.1f", x1, y1, x2, y2, dikte);
 		else
-			sprintf(Val8, "%.1f %.1f\t%.1f %.1f\t\t\t", x1, y1, x2, y2);
+			sprintf(Val8, "%.1f  %.1f\t%.1f  %.1f\t\t\t", x1, y1, x2, y2);
 	}
 	else
 	{
@@ -3222,45 +3345,34 @@ void ObjectsInfo(ObjectRecord * Object)
 		if (((Object->Info & OBJECT_FILLED) == 0) || (Object->Layer == DRILL_LAYER))
 		{
 			if (Object->Layer == DRILL_LAYER)
-
-			sprintf(Val2, SC(1349, "%.4f , %.4f\t\tdiameter %.4f clearance %.4f\t"), x1, y1, x2, Clearance / 100000.0); //kruh 1347, ostatní objekty
-
+				sprintf(Val2, "%.4f  %.4f\t%.4f (%.4f)\t", x1, y1, x2, Clearance / 100000.0);
 			else
-				
-			sprintf(Val2, SC(1348, "%.4f %.4f\t%.4f\t%.4f"), x1, y1, x2, dikte); //kruh 1347, ostatí objekty
+				sprintf(Val2, "%.4f  %.4f\t%.4f\t%.4f", x1, y1, x2, dikte);
 		}
 		else
-			
-			sprintf(Val2, SC(1375, "%.4f %.4f\t%.4f"), x1, y1, x2); //kruhový pad 1374, ostatní objekty
-		
-		    sprintf(Val4a, "%.4f %.4f\t%.4f\t%.4f\t%i", x1, y1, x2, dikte, rot);
-		
-		    sprintf(Val5, SC(1355, "%.4f , %.4f\t\twidth %.4f height %.4f\t%.1f"), x1, y1, dikte, x2, Rotation); //text 1354, ostatní objekty
+			sprintf(Val2, "%.4f  %.4f\t%.4f\t\t\t", x1, y1, x2);
+
+		sprintf(Val4a, "%.4f  %.4f\t%.4f\t%.4f\t%i", x1, y1, x2, dikte, rot);
+		sprintf(Val5, "%.4f  %.4f\t%.4f\t%.4f\t%.1f", x1, y1, x2, dikte, Rotation);
 
 		if (Object->ObjectType == OBJECT_ARC)
 		{
 			ConvertPointToPolar(Object->x3, Object->y3, &Dist1, &Angle1);
 			ConvertPointToPolar(Object->x4, Object->y4, &Dist2, &Angle2);
 		}
-		
-		    sprintf(Val6, SC(1373, "%.4f %.4f\t%.4f %.4f\t%.4f\t%.1f %.1f"), x1, y1, dikte, x2, y2, Angle1, Angle2); //oblouk 1372, ostatní objekty
-		
-		    sprintf(Val6a, SC(1376, "%.4f %.4f\t%.4f %.4f\t%.4f (%.4f)\t%.1f %.1f"), //oblouk 1372, oststní objekty
-		            x1, y1, dikte, x2, y2, Clearance / 100000.0, Angle1, Angle2);
 
-		    sprintf(Val7, SC(1351, "%.4f , %.4f - %.4f , %.4f\twidth %.4f length %.4f\t%.1f"), //èára 1350, ostatní objekty
-				             x1, y1, x2, y2, dikte, Length / 100000.0, Angle * 180.0 / PI);
-		
-		    sprintf(Val7a, SC(1346, "%.4f %.4f\t%.4f %.4f\t%.4f ( %.4f )\tLength %.4f, Angle %.1f"), //èára 1350, ostatní objekty
-		            x1, y1, x2, y2, dikte, Length / 100000.0, Clearance / 100000.0, Angle * 180.0 / PI);
+		sprintf(Val6, "%.4f  %.4f\t%.4f  %.4f\t%.4f\t%.1f  %.1f", x1, y1, x2, y2, dikte, Angle1, Angle2);
+		sprintf(Val6a, "%.4f  %.4f\t%.4f  %.4f\t%.4f (%.4f)\t%.1f  %.1f", x1, y1, x2, y2, dikte, Clearance / 100000.0,
+		        Angle1, Angle2);
+		sprintf(Val7, SC(1044, "%.4f  %.4f\t%.4f  %.4f\t%.4f\tLength  %.4f, Angle %.1f"), x1, y1, x2, y2, dikte,
+		        Length / 100000.0, Angle * 180.0 / PI);
+		sprintf(Val7a, SC(1105, "%.4f  %.4f\t%.4f  %.4f\t%.4f (%.4f)\tLength  %.4f, Angle %.1f"), x1, y1, x2, y2, dikte,
+		        Clearance / 100000.0, Length / 100000.0, Angle * 180.0 / PI);
 
 		if ((Object->Info & OBJECT_FILLED) == 0)
-			
-			sprintf(Val8, "%.4f %.4f\t%.4f %.4f\t%.4f", x1, y1, x2, y2, dikte);
-		
+			sprintf(Val8, "%.4f  %.4f\t%.4f  %.4f\t%.4f", x1, y1, x2, y2, dikte);
 		else
-			
-			sprintf(Val8, SC(1353, "%.4f , %.4f\t\twidth %.4f height %.4f"), x1, y1, x2, y2); //obdélníkový pad 1352, ostatní objekty
+			sprintf(Val8, "%.4f  %.4f\t%.4f  %.4f\t\t\t", x1, y1, x2, y2);
 	}
 
 	GetLayerTextObjects(Object->Layer, LayerText, 0);
@@ -3268,7 +3380,7 @@ void ObjectsInfo(ObjectRecord * Object)
 	switch (Object->ObjectType)
 	{
 	case OBJECT_LINE:
-		strcpy(ObjectText, SC(1350, "Line")); //èára
+		strcpy(ObjectText, SC(462, "Line"));
 
 		if (!CheckIfLayerHasObjectWithClearances(Layer))
 			sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val7, ObjectNrStr);
@@ -3282,9 +3394,9 @@ void ObjectsInfo(ObjectRecord * Object)
 
 	case OBJECT_RECT:
 		if ((Object->Info & OBJECT_FILLED) == 0)
-			strcpy(ObjectText, SC(449, "Rect"));
+			strcpy(ObjectText, SC(583, "Rect"));
 		else
-			strcpy(ObjectText, SC(1352, "Rect pad")); //obdélníkový pad
+			strcpy(ObjectText, SC(585, "Rect pad"));
 
 		sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val8, ObjectNrStr);
 
@@ -3295,9 +3407,9 @@ void ObjectsInfo(ObjectRecord * Object)
 
 	case OBJECT_CIRCLE:
 		if ((Object->Info & OBJECT_FILLED) == 0)
-			strcpy(ObjectText, SC(1348, "Circle")); //kruh
+			strcpy(ObjectText, SC(1045, "Circle"));
 		else
-			strcpy(ObjectText, SC(1374, "Circle pad")); //kruhový pad
+			strcpy(ObjectText, SC(586, "Circle pad"));
 
 		sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
 
@@ -3309,8 +3421,8 @@ void ObjectsInfo(ObjectRecord * Object)
 	case OBJECT_ARC:
 		if ((Object->Layer == DRILL_LAYER) || (Object->Layer == DRILL_UNPLATED_LAYER))
 		{
-			strcpy(ObjectText, SC(1347, "Circle")); //kruh
-			sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
+			strcpy(ObjectText, SC(1045, "Circle"));
+			sprintf(str, "%s\t%s\t%s    \t%s", ObjectText, LayerText, Val2, ObjectNrStr);
 		}
 		else
 		{
@@ -3319,23 +3431,23 @@ void ObjectsInfo(ObjectRecord * Object)
 				if ((InRange(Object->x3, Object->x4)) && (InRange(Object->y3, Object->y4))
 				        && (InRange(Object->x2, Object->y2)))
 				{
-					strcpy(ObjectText, SC(1347, "Circle")); //kruh
-					sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
+					strcpy(ObjectText, SC(1045, "Circle"));
+					sprintf(str, "%s\t%s\t%s    \t%s", ObjectText, LayerText, Val2, ObjectNrStr);
 				}
 				else
 				{
-					strcpy(ObjectText, SC(1372, "Arc")); //oblouk
+					strcpy(ObjectText, SC(588, "Arc"));
 
 					if (!CheckIfLayerHasObjectWithClearances(Layer))
-						sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val6, ObjectNrStr);
+						sprintf(str, "%s\t%s\t%s    \t%s", ObjectText, LayerText, Val6, ObjectNrStr);
 					else
-						sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val6a, ObjectNrStr);
+						sprintf(str, "%s\t%s\t%s    \t%s", ObjectText, LayerText, Val6a, ObjectNrStr);
 				}
 			}
 			else
 			{
-				strcpy(ObjectText, SC(1374, "Circle pad")); //kruhový pad
-				sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
+				strcpy(ObjectText, SC(586, "Circle pad"));
+				sprintf(str, "%s\t%s\t%s    \t%s", ObjectText, LayerText, Val2, ObjectNrStr);
 			}
 		}
 
@@ -3343,21 +3455,27 @@ void ObjectsInfo(ObjectRecord * Object)
 			return;
 
 		break;
-	
-	case OBJECT_TEXT:
 
+	/*
+	    case OBJECT_TEXT:
+	      strcpy(ObjectText,"TEXT");
+	      sprintf(str,"%s\t%s\t%s\t%s\t%s",ObjectText,LayerText,Val4a,(LPSTR)Object->TraceNr,ObjectNrStr);
+	      if (AddToMessageBuf(str)!=0) return;
+	      break;
+	*/
+	case OBJECT_TEXT:
 	case OBJECT_TEXT2:
-		strcpy(ObjectText, SC(1354, "Text")); //text
+		strcpy(ObjectText, SC(589, "Text"));
 		strcpy(str2, (LPSTR) Object->TraceNr);
 		lengte = strlen(str2);
 
 		for (cnt = 0; cnt < lengte; cnt++)
 		{
 			if ((str2[cnt] == '\r') || (str2[cnt] == '\n'))
-				 str2[cnt] = '\x01   '; //upraveno
+				str2[cnt] = '\x01';
 		}
 
-		sprintf(str, "%s\t%s\t%s\t%s\t%s", ObjectText, LayerText, Val5, ObjectNrStr, str2); //upraveno
+		sprintf(str, "%s\t%s\t%s\t%s\t%s", ObjectText, LayerText, Val5, str2, ObjectNrStr);
 
 		if (AddToMessageBuf(str) != 0)
 			return;
@@ -3375,9 +3493,10 @@ void ObjectsInfo(ObjectRecord * Object)
 	}
 }
 
-//*************************************************************************************************************************
-//******************************************* informace vybraných objektù *************************************************
-//*************************************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
+// *******************************************************************************************************
 
 void GetInfoSelectedObjects(int32 mode)
 {
@@ -3428,22 +3547,28 @@ void GetInfoSelectedObjects(int32 mode)
 			struprUTF8(str7);
 			strcpy(str4, Comp->Value);
 			struprUTF8(str4);
+			strcpy(str6, Comp->PartNr);
+			struprUTF8(str6);
 			PrintValue(Comp->CompOriginX, str8, 0);
 			PrintValue(Comp->CompOriginY, str9, 1);
 			Rotation = Comp->Rotation;
 
 			if ((Comp->CompMode & 8) == 0)
 			{
-				sprintf(str, SC(1370, "%s       \tTop\t%s  \t%s    \t%s , %s\t%.1f"), str7, str5, str4, str8, str9, Rotation); //komponenty pøední
+				sprintf(str, SC(1048, "%s\tTop\t%s\t%s\t%s\t%s\t%s\t%.1f"), str7, str5, str6, str4, str8, str9,
+				        Rotation);
 			}
 			else
 			{
-				sprintf(str, SC(1371, "%s       \tBottom\t%s  \t%s    \t%s , %s\t%.1f"), str7, str5, str4, str8, str9, Rotation); //komponenty zadní
+				sprintf(str, SC(1049, "%s\tBottom\t%s\t%s\t%s\t%s\t%s\t%.1f"), str7, str5, str6, str4, str8, str9,
+				        Rotation);
 			}
 
 			if (AddToMessageBuf(str) != 0)
 				return;
-			
+
+//      sprintf(str,"\t\t%s,%s\t%i",
+//      if (AddToMessageBuf(str)!=0) return;
 			cnt2++;
 			ObjectsSelected++;
 		}
@@ -3451,7 +3576,8 @@ void GetInfoSelectedObjects(int32 mode)
 
 	memset(&str, '-', 190);
 	str[190] = 0;
-	
+//  if (AddToMessageBuf(str)!=0) return;
+
 	for (Layer = 0; Layer < 32; Layer++)
 	{
 		for (cnt = 0; cnt < Design.NrVerTraces[Layer]; cnt++)
@@ -3517,7 +3643,8 @@ void GetInfoSelectedObjects(int32 mode)
 
 	memset(&str, '-', 190);
 	str[190] = 0;
-	
+//  if (AddToMessageBuf(str)!=0) return;
+
 	for (cnt = 0; cnt < Design.NrVias; cnt++)
 	{
 		Via = &((*Vias)[cnt]);
@@ -3525,26 +3652,25 @@ void GetInfoSelectedObjects(int32 mode)
 
 		if ((ViaInfo & (OBJECT_NOT_VISIBLE | OBJECT_SELECTED)) == OBJECT_SELECTED)
 		{
-			sprintf(str, SC(1362, "Via\t\t")); //trasy/prùchodky
-			
-			PrintValue(Via->X, str2, 0);
-			strcat(str, str2);
-			strcat(str, ", ");
-			PrintValue(Via->Y, str2, 0);
-			strcat(str, str2);
-			strcat(str, SC(1363, "\t\tdiameter ")); //trasy/prùchodky
-			PrintValue(Via->ThickNess, str2, 0);
-			strcat(str, str2);
-			strcat(str, SC(1364, " drill ")); //trasy/prùchodky
-			PrintValue(Via->DrillThickNess, str2, 0);
-			strcat(str, str2);
-			strcat(str, SC(1365, " clearance ")); //trasy/prùchodky
-			PrintValue(Via->Clearance, str2, 1);
-			strcat(str, str2);
-
+			sprintf(str, SC(1050, "Via\t\t"));
 			NetNr = Via->NetNr;
 			Net = &((*Nets)[NetNr]);
-			strcat(str, Net->Name); //sít
+			strcat(str, Net->Name);
+			strcat(str, "\t");
+			PrintValue(Via->X, str2, 0);
+			strcat(str, str2);
+			strcat(str, "  ");
+			PrintValue(Via->Y, str2, 0);
+			strcat(str, str2);
+			strcat(str, SC(1051, "\t\tPadsize\t"));
+			PrintValue(Via->ThickNess, str2, 0);
+			strcat(str, str2);
+			strcat(str, SC(1052, "\tDrill\t"));
+			PrintValue(Via->DrillThickNess, str2, 0);
+			strcat(str, str2);
+			strcat(str, SC(1053, "\tClearance\t"));
+			PrintValue(Via->Clearance, str2, 1);
+			strcat(str, str2);
 
 			if (AddToMessageBuf(str) != 0)
 				return;
@@ -3593,6 +3719,23 @@ void GetInfoSelectedObjects(int32 mode)
 			ObjectsSelected++;
 		}
 	}
+
+	/*
+	  for (cnt=0;cnt<Design.NrObjectCircles;cnt++) {
+	    ObjectCircle=&((*ObjectCircles)[cnt]);
+	    if ((ObjectCircle->Info & (OBJECT_NOT_VISIBLE|OBJECT_SELECTED)) == OBJECT_SELECTED) {
+	      SpecialObject.x1=ObjectCircle->CentreX;
+	      SpecialObject.y1=ObjectCircle->CentreY;
+	      SpecialObject.x2=ObjectCircle->Diam;
+	      SpecialObject.x3=ObjectCircle->LineThickNess;
+	      SpecialObject.Layer=ObjectCircle->Layer;
+	      SpecialObject.NetNr=ObjectCircle->NetNr;
+	      SpecialObject.Info=ObjectCircle->Info;
+	      SpecialObject.ObjectType=OBJECT_CIRCLE;
+	      ObjectsInfo(&SpecialObject);
+	    }
+	  }
+	*/
 	for (cnt = 0; cnt < Design.NrObjectArcs; cnt++)
 	{
 		ObjectArc = &((*ObjectArcs)[cnt]);
@@ -3617,6 +3760,29 @@ void GetInfoSelectedObjects(int32 mode)
 			ObjectsSelected++;
 		}
 	}
+
+	/*
+	  for (cnt=0;cnt<Design.NrObjectTexts;cnt++) {
+	    ObjectText=&((*ObjectTexts)[cnt]);
+	    if ((ObjectText->Info & (OBJECT_NOT_VISIBLE|OBJECT_SELECTED)) == OBJECT_SELECTED) {
+	      SpecialObject.x1=ObjectText->X;
+	      SpecialObject.y1=ObjectText->Y;
+	      SpecialObject.x2=ObjectText->FontHeight;
+	      SpecialObject.Info2=(ObjectText->TextMode >> 8) & 0x03;
+	      SpecialObject.NetNr=ObjectText->NetNr;
+	      if (((ObjectText->TextMode & 0x10) == 0x10)
+	         &&
+	         (SpecialObject.Info2>=1)) {
+	        SpecialObject.Info2^=2;
+	      }
+	      SpecialObject.x3=ObjectText->LineThickNess;
+	      SpecialObject.Layer=ObjectText->Layer;
+	      SpecialObject.TraceNr=(int32)ObjectText->Text;
+	      SpecialObject.ObjectType=OBJECT_TEXT;
+	      ObjectsInfo(&SpecialObject);
+	    }
+	  }
+	*/
 	for (cnt = 0; cnt < Design.NrObjectTexts2; cnt++)
 	{
 		ObjectText2 = &((*ObjectTexts2)[cnt]);
@@ -3631,7 +3797,7 @@ void GetInfoSelectedObjects(int32 mode)
 			SpecialObject.NetNr = ObjectText2->NetNr;
 			SpecialObject.Thickness = ObjectText2->LineThickNess;
 			SpecialObject.Layer = ObjectText2->Layer;
-			SpecialObject.TraceNr = (int32) ObjectText2->Text;
+			SpecialObject.TraceNr = (intptr_t) ObjectText2->Text;
 			SpecialObject.ObjectType = OBJECT_TEXT;
 			ObjectsInfo(&SpecialObject);
 			ObjectsSelected++;
@@ -3658,6 +3824,11 @@ void GetInfoSelectedObjects(int32 mode)
 			ObjectsSelected++;
 		}
 	}
+
+// PolygonType bit 0 = 0  -> polygon deletion because of copper
+// PolygonType bit 0 = 1  -> polygon deletion because of user deletion/thermal relief
+// PolygonType bit 2 = 0  -> polygon deletion because of thermal relief
+// PolygonType bit 2 = 1  -> polygon deletion because of user deletion
 	for (cnt = 0; cnt < Design.NrAreaFills; cnt++)
 	{
 		AreaFill = (AreaFillRecord *) & (AreaFillMem[(*AreaFills)[cnt]]);
@@ -3682,9 +3853,7 @@ void GetInfoSelectedObjects(int32 mode)
 				if ((FirstPolygon->PolygonType & 2) == 2)
 				{
 					ObjectsSelected++;
-					
-					sprintf(str, SC(1367, "Areafill\t%s\t%s\t%i"), str2, Net->Name, FirstPolygon->NrVertices); //výplnì/napájecí plochy
-
+					sprintf(str, SC(1012, "Areafill\t%s\t%s\t%i"), str2, Net->Name, FirstPolygon->NrVertices);
 #ifdef _DEBUG
 					AreaPos = (uint8 *) AreaFill;
 					DrawPolygon = (PolygonRecord *) (AreaPos + sizeof(AreaFillRecord));
@@ -3706,10 +3875,10 @@ void GetInfoSelectedObjects(int32 mode)
 						PolygonPos += MemSizePolygon(DrawPolygon);
 						DrawPolygon = (PolygonRecord *) PolygonPos;
 					}
-					
-					sprintf(str3, SC(1368, "\t%i\t%i\tuser %d, internal %d, thermal %d\t%d"), AreaFill->MemSize,
-					AreaFill->NrPolygons - 1, UserCutOuts, UserInternalCutOuts, ThermalReliefCutOuts, cnt); //výplnì/napájecí plochy
-					
+
+
+					sprintf(str3, "\t%i\t%i [ User,internal,thermal %d,%d,%d ]  %d", AreaFill->MemSize,
+					        AreaFill->NrPolygons - 1, UserCutOuts, UserInternalCutOuts, ThermalReliefCutOuts, cnt);
 					strcat(str, str3);
 
 
@@ -3730,20 +3899,17 @@ void GetInfoSelectedObjects(int32 mode)
 					{
 						if ((DrawPolygon->PolygonType & 2) == 2)
 						{
-							sprintf(str, SC(1013, "Areafill cut out\t%s\t%s\t%i"),
-								        str2, Net->Name, DrawPolygon->NrVertices); //výplnì/napájecí plochy
+							sprintf(str, SC(1013, "Areafill cut out\t%s\t%s\t%i"), str2, Net->Name,
+							        DrawPolygon->NrVertices);
 
 							if ((DrawPolygon->PolygonType & 5) == 1)
-								
-								strcat(str, SC(1014, " (Thermal relief)")); //výplnì/napájecí plochy
+								strcat(str, SC(1014, " (Thermal relief)"));
 
 							if ((DrawPolygon->PolygonType & 5) == 5)
-								
-								strcat(str, SC(1054, " (User encapsulated cutout)")); //výplnì/napájecí plochy
+								strcat(str, SC(1054, " (User encapsulated cutout)"));
 
 							if ((DrawPolygon->PolygonType & 8) == 8)
-								
-								strcat(str, SC(1055, " (User cutout)")); //výplnì/napájecí plochy
+								strcat(str, SC(1055, " (User cutout)"));
 
 							if (AddToMessageBuf(str) != 0)
 								return;
@@ -3804,34 +3970,27 @@ void GetInfoSelectedObjects(int32 mode)
 	{
 		switch (SelectionMode)
 		{
-		case MOVE_COMPONENTS_MODE:	         // Components
-		case MOVE_COMPONENT_REFERENCES_MODE: // Component references
-		case MOVE_COMPONENT_VALUES_MODE:	 // Component values
-			
-			MessageDialog(SC(1369, "Comp\tLayer\tGeometry\tValue\tOrigin x, y\t\tRotation"), 3, ObjectsSelected); //komponenty
-			
+		case MOVE_COMPONENTS_MODE:	// Components
+		case MOVE_COMPONENT_REFERENCES_MODE:	// Component references
+		case MOVE_COMPONENT_VALUES_MODE:	// Component values
+			MessageDialog(SC(1093, "Comp\tLayer\tGeometry\tPartnr\tValue\tOrigin\t\tRotation"), 3, ObjectsSelected);
 			break;
 
-		case OBJECTS_MODE:
-			
-			MessageDialog(SC(1345, "Object\tLayer\tOrigin x, y\t\tSize\t\t\tRotation/Net\tOther"), 6, ObjectsSelected); //ostatní objekty
-			
+		case OBJECTS_MODE:		// Other objects
+//        MessageDialog(SC(617,"Info"),6);
+			MessageDialog(SC(1058, "Object\tLayer\tOrigin\tSize\tThick\tExtra"), 6, ObjectsSelected);
 			break;
 
-		case AREAFILLS_MODE:
+		case AREAFILLS_MODE:	// areafills
 #ifdef _DEBUG
-			
-			MessageDialog(SC(1366, "Object\tLayer\tNet\tNr vertices\tMemsize\tNr cut outs\tCutout type\t\tOther"), 7, ObjectsSelected); //výplnì/napájecí plochy
+			MessageDialog("Object\tLayer\tNet\tNr vertices\tMemsize\tNr cut outs [ types ]", 7, ObjectsSelected);
 #else
-			
 			MessageDialog(SC(1096, "Object\tLayer\tNet\tNr vertices\tCut out type"), 7, 0);
 #endif
 			break;
 
-		case MOVING_TRACES_VIAS_MODE:
-
-			MessageDialog(SC(1356, "Object\tLayer\tOrigin x, y\t\tSize\t\t\tNet\tOther"), 7, ObjectsSelected); //trasy/prùchodky
-			
+		case MOVING_TRACES_VIAS_MODE:	// traces/vias
+			MessageDialog(SC(1059, "Object\tLayer\tNet\tOrigin\t\tSize\t\t\t\tClearance"), 8, ObjectsSelected);
 			break;
 		}
 
