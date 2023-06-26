@@ -1559,7 +1559,7 @@ int32 DrawSelectedAreafills(double CurrentX, double CurrentY, double CurrentX2, 
 
 			if ((mode & 1) == 1)
 			{
-				StartDrawingEditingWindow(0);
+				StartDrawingEditingWindow();
 				SetROP2(OutputDisplay, R2_XORPEN);
 			}
 
@@ -1640,7 +1640,7 @@ int32 DrawSelectedAreafills(double CurrentX, double CurrentY, double CurrentX2, 
 	if ((mode & 1) == 1)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow(0);
+		EndDrawingEditingWindow();
 	}
 
 	return 0;
@@ -2029,7 +2029,7 @@ int32 DrawStretchedAreafill(int32 AreafillNrToMove, double CurrentX, double Curr
 
 	if (mode == 1)
 	{
-		StartDrawingEditingWindow(0);
+		StartDrawingEditingWindow();
 		SetROP2(OutputDisplay, R2_XORPEN);
 	}
 
@@ -2162,7 +2162,7 @@ int32 DrawStretchedAreafill(int32 AreafillNrToMove, double CurrentX, double Curr
 	if (mode == 1)
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow(0);
+		EndDrawingEditingWindow();
 	}
 
 	return 0;
@@ -2208,13 +2208,12 @@ int32 MoveStretchedAreafill(int32 mode)
 
 	AreaFill = (AreaFillRecord *) & (AreaFillMem[(*AreaFills)[AreafillNrToMove]]);
 	FirstPolygon = (PolygonRecord *) ((uint8 *) AreaFill + sizeof(AreaFillRecord));
-
 	/*
-	  StartDrawingEditingWindow(0);
+	  StartDrawingEditingWindow();
 	  SetROP2(OutputDisplay,R2_XORPEN);
 	  DrawTestPolygon(FirstPolygon,4);
 	  ExitDrawing();
-	  EndDrawingEditingWindow(0);
+	  EndDrawingEditingWindow();
 	*/
 
 	FirstPolygon = (PolygonRecord *) ((uint8 *) AreaFill + sizeof(AreaFillRecord));
