@@ -24,14 +24,6 @@
 
 
 
-#include <ctype.h>
-#include <stdio.h>
-#include <math.h>
-#include <time.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <sys/stat.h>
-
 #include "types.h"
 #include "memory.h"
 #include "calc.h"
@@ -40,9 +32,15 @@
 #include "calc4.h"
 #include "menus.h"
 #include "pcb.h"
+#include "stdio.h"
 #include "dialogs.h"
+#include "math.h"
 #include "rect.h"
+#include "time.h"
 #include "io.h"
+#include "fcntl.h"
+#include "errno.h"
+#include "sys/stat.h"
 #include "calcdef.h"
 #include "graphics.h"
 #include "toets.h"
@@ -66,7 +64,7 @@
 #include "direct.h"
 #include "resource.h"
 #include "dialogs.h"
-#include "version.h"
+#include "ctype.h"
 
 
 typedef struct
@@ -486,8 +484,8 @@ void CollectComponentsForMoving(int32 mode)
 		}
 	}
 
-    //ExitDrawing();
-    //EndDrawingEditingWindow(0);
+//  ExitDrawing();
+//  EndDrawingEditingWindow();
 
 	if (MaxNrObjects4 > 4096)
 		DeAllocateMemObjects4();
@@ -717,7 +715,7 @@ void MoveConnectionsComponents(int32 mode)
 
 	int32 ok, cnt, NrParams, mode2, CompCount, res, FirstShift, ObjectsPlaced, FirstComp = 1;
 	double OldX, OldY, CurrentX, CurrentY, ShiftX, ShiftY, CentreX, CentreY, x1, y1, x2, y2, CompRotationForMoving,
-		   CursorX, CursorY, ViewFactor, ViewDivX, ViewDivY, divx, divy, NewMode1, NewMode2;
+	       CursorX, CursorY, ViewFactor, ViewDivX, ViewDivY, divx, divy;
 	CompRecord *Comp;
 	ViaRecord *Via;
 	DrawXorFunctionRecord DrawXorFunction;
@@ -895,9 +893,6 @@ void MoveConnectionsComponents(int32 mode)
 	if ((mode & 3) == 1)
 		mode2 |= 2;
 
-	NewMode1 = mode2 | BM_MultiStart;
-	NewMode2 = mode2 | BM_MultiEnd;
-
 	CurrentX2 = CurrentX;
 	CurrentY2 = CurrentY;
 
@@ -905,19 +900,19 @@ void MoveConnectionsComponents(int32 mode)
 	OldY = CurrentY;
 	FirstShift = 1;				//  CrossHairX CrossHairY
 	CrossHairMode = 1;
-	DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+	DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 	ClipMouseCursor();
 	SystemBusyMode = 2;
 	DrawXorFunction.Function8 = (FUNCP8) DrawMoveableConnections;
 	DrawXorFunction.Param1[0] = &OldX;
 	DrawXorFunction.Param1[1] = &OldY;
 	DrawXorFunction.Param1[2] = &CompRotationForMoving;
-	DrawXorFunction.Param1[3] = &NewMode1;
+	DrawXorFunction.Param1[3] = &mode2;
 	DrawXorFunction.Mode = 7;
 	DrawXorFunction.Param2[0] = &CurrentX;
 	DrawXorFunction.Param2[1] = &CurrentY;
 	DrawXorFunction.Param2[2] = &CompRotationForMoving;
-	DrawXorFunction.Param2[3] = &NewMode2;
+	DrawXorFunction.Param2[3] = &mode2;
 	ZoomInOutProcessed = 0;
 
 	//************************************ dolní zobrazení pozice pøesunu *********************************************
@@ -932,7 +927,7 @@ void MoveConnectionsComponents(int32 mode)
 			if ((OldX != CurrentX) || (OldY != CurrentY))
 			{
 				if (!ShiftPressed)
-					DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | BM_MultiStart);
+					DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2);
 				
 				if (Units == 0)
 				{
@@ -948,66 +943,65 @@ void MoveConnectionsComponents(int32 mode)
 					sprintf(InfoStr, SC(342, "%s  move x,y %.4f , %.4f mm"), TempCompStr, x1, y1);
 				}
 
-				//RedrawInfoStr(1);
+				RedrawInfoStr(1);
 
 				OldX = CurrentX;
 				OldY = CurrentY;
 
 				if (!ShiftPressed)
-					DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | BM_MultiEnd);
+					DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2);
 			
 			}
-
 			if (MousePosX > DrawWindowMaxX - ScrollEndOfWindow)
 			{
 				SetCursorPos(MousePosX - ScrollSizeDrawing + ClientStartX, MousePosY + ClientStartY);
-				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | 16 | BM_MultiStart);
+				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | 16);
 				ScrollRight(ScrollSize);
 				MousePosX -= ScrollSizeDrawing;
 				CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
 				CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
 				OldX = CurrentX;
 				OldY = CurrentY;
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_MultiEnd);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			}
 
 			if (MousePosY > DrawWindowMaxY - ScrollEndOfWindow)
 			{
 				SetCursorPos(MousePosX + ClientStartX, MousePosY - ScrollSizeDrawing + ClientStartY);
-				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | 16 | BM_MultiStart);
+				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | 16);
 				ScrollDown(ScrollSize);
 				MousePosY -= ScrollSizeDrawing;
 				CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
 				CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
 				OldX = CurrentX;
 				OldY = CurrentY;
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_MultiEnd);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			}
 
 			if (MousePosX < DrawWindowMinX + ScrollEndOfWindow)
 			{
 				SetCursorPos(MousePosX + ScrollSizeDrawing + ClientStartX, MousePosY + ClientStartY);
-				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | 16 | BM_MultiStart);
+				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | 16);
 				ScrollLeft(ScrollSize);
 				MousePosX += ScrollSizeDrawing;
 				CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
 				CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
 				OldX = CurrentX;
 				OldY = CurrentY;
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_MultiEnd);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			}
 
 			if (MousePosY < DrawWindowMinY + ScrollEndOfWindow)
 			{
 				SetCursorPos(MousePosX + ClientStartX, MousePosY + ScrollSizeDrawing + ClientStartY);
-				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | 16 | BM_MultiStart);
+				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | 16);
 				ScrollUp(ScrollSize);
 				MousePosY += ScrollSizeDrawing;
 				CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
 				CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
 				OldX = CurrentX;
 				OldY = CurrentY;
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_MultiEnd);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			}
 
 			DisplayCursorPosition();
@@ -1018,7 +1012,7 @@ void MoveConnectionsComponents(int32 mode)
 		{
 			if (!FirstShift)
 			{
-				DrawMoveableConnections(ShiftX, ShiftY, CompRotationForMoving, mode2 | BM_MultiStart);
+				DrawMoveableConnections(ShiftX, ShiftY, CompRotationForMoving, mode2);
 				ShiftOffsetX -= ShiftX - CurrentX;
 				ShiftOffsetY -= ShiftY - CurrentY;
 				FirstShift = 1;
@@ -1039,7 +1033,7 @@ void MoveConnectionsComponents(int32 mode)
 					RelY = CurrentY2 + ShiftOffsetY;
 				}
 
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_MultiEnd);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 				DisplayCursorPosition();
 			}
 		}
@@ -1061,13 +1055,13 @@ void MoveConnectionsComponents(int32 mode)
 			CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
 			OldX = CurrentX;
 			OldY = CurrentY;
-			DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+			DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			ZoomInOutProcessed = 0;
 		}
 
 		if (!Focused)
 		{
-			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2);
 			UnClipMouseCursor();
 			CheckInputMessages(0);
 
@@ -1078,14 +1072,14 @@ void MoveConnectionsComponents(int32 mode)
 			ClipMouseCursor();
 
 			if (!SelectionEsc)
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			else
 				ObjectsPlaced = 1;
 		}
 
 		if ((ZoomActive()) && (!SelectionEsc))
 		{
-			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2);
 			ZoomWindow();
 
 			while (CtrlPressed)
@@ -1097,14 +1091,14 @@ void MoveConnectionsComponents(int32 mode)
 			OldY = CurrentY;
 
 			if (!SelectionEsc)
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			else
 				ObjectsPlaced = 1;
 		}
 
 		if ((PanActive()) && (!SelectionEsc))
 		{
-			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2);
 			PanWindow();
 
 			while (CtrlPressed)
@@ -1116,14 +1110,14 @@ void MoveConnectionsComponents(int32 mode)
 			OldY = CurrentY;
 
 			if (!SelectionEsc)
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			else
 				ObjectsPlaced = 1;
 		}
 
 		if (CheckLeftButton())
 		{
-			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2);
 			UnClipMouseCursor();
 			
 			PlaceMovedObjects(CurrentX - ShiftOffsetX, CurrentY - ShiftOffsetY, CompRotationForMoving, 0);
@@ -1142,7 +1136,7 @@ void MoveConnectionsComponents(int32 mode)
 			
 			if (SelectionMode != MOVING_TRACES_VIAS_MODE)
 			{
-				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | BM_MultiStart);
+				DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2);
 			
 				CurrentX = AdjustToDrawGrid(PixelToRealOffX(MousePosX));
 				CurrentY = AdjustToDrawGrid(PixelToRealOffY(DrawWindowMaxY - MousePosY));
@@ -1159,7 +1153,7 @@ void MoveConnectionsComponents(int32 mode)
 
 				RightButtonPressed = 0;
 				CheckInputMessages(0);
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_MultiEnd);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			}
 			else
 			{
@@ -1170,7 +1164,7 @@ void MoveConnectionsComponents(int32 mode)
 
 		if (NrFunctionsInBuf > 0)
 		{
-			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+			DrawMoveableConnections(OldX, OldY, CompRotationForMoving, mode2);
 			UnClipMouseCursor();
 			ExecuteKeys();
 			CheckInputMessages(0);
@@ -1233,7 +1227,7 @@ void MoveConnectionsComponents(int32 mode)
 			OldY = CurrentY;
 
 			if (!SelectionEsc)
-				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+				DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 			else
 				ObjectsPlaced = 1;
 
@@ -1247,7 +1241,7 @@ void MoveConnectionsComponents(int32 mode)
 	RedrawInfoStr(1);
 
 	if (!ObjectsPlaced)
-		DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2 | BM_DoubleBuffer);
+		DrawMoveableConnections(CurrentX, CurrentY, CompRotationForMoving, mode2);
 
 	CrossHairMode = 0;
 	DrawCrossHair(16 + 2);
@@ -1663,13 +1657,9 @@ void DrawMoveableConnections(double CurrentX, double CurrentY, double Rotation, 
 	ObjectRecord *Object5, *Object4;
 	ObjectLineRecord *ObjectLine;
 	ObjectArcRecord *ObjectArc;
-	int32 BufferMode;
-
-	BufferMode = mode;
-	mode &= ~BM_Mask;
 
 	NrCompsSelected = 0;
-	StartDrawingEditingWindow(BufferMode);
+	StartDrawingEditingWindow();
 	SetROP2(OutputDisplay, R2_XORPEN);
 	InitDrawingObject(0, CONNECTIONS_LAYER, 0, DRAW_WITH_PEN_AND_NOT_FILLED);
 	NewRotation = Rotation;
@@ -2254,7 +2244,7 @@ void DrawMoveableConnections(double CurrentX, double CurrentY, double Rotation, 
 		DrawCrossHair(16 + 8 + 2);
 
 	ExitDrawing();
-	EndDrawingEditingWindow(BufferMode);
+	EndDrawingEditingWindow();
 }
 
 // ****************************************************************************************************
@@ -2960,7 +2950,7 @@ void PlaceMovedObjects(double CurrentX, double CurrentY, double Rotation, int32 
 	if (!OkToRePaintAfterCompMove)
 	{
 		OkToRepaint = 0;
-		StartDrawingEditingWindow(0);
+		StartDrawingEditingWindow();
 	}
 	else
 		OkToRepaint = 1;
@@ -4113,7 +4103,7 @@ void PlaceMovedObjects(double CurrentX, double CurrentY, double Rotation, int32 
 	if ((!OkToRepaint) && (OutputDisplay))
 	{
 		ExitDrawing();
-		EndDrawingEditingWindow(0);
+		EndDrawingEditingWindow();
 	}
 
 	if (MaxNrObjects5 > 4096)
