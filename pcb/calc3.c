@@ -3196,13 +3196,13 @@ int32 CheckFillingLine(double x1, double y1, double x2, double y2, double x3, do
 
 		if (0)
 		{
-			StartDrawingEditingWindow(BM_DirectToScreen);
+			StartDrawingEditingWindow();
 			InitDrawingObject(0, FIXED_COLOR_LAYER, 1, GRAPHICS_WHITE + DRAW_WITH_WHITE_PEN_AND_NOT_FILLED);
 			SetROP2(OutputDisplay, R2_COPYPEN);
 			ellips2(Mult(xx - Xoffset) + DrawWindowMinX, DrawWindowMaxY - Mult(yy - Yoffset) - 1, Mult(ThickNess),
 			        Mult(ThickNess), 255);
 			ExitDrawing();
-			EndDrawingEditingWindow(BM_DirectToScreen);
+			EndDrawingEditingWindow();
 		}
 
 #endif
