@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ generated include file.
-// Used by D:\Demo\PCB_Elegance\design\resource\design.rc
+// Microsoft Visual C++ vygeneroval soubor zahrnutí.
+// Použito C:\GitHub\PCB_Elegance_DEV\design\resource\design.rc
 //
 #define IDHELP                          9
 #define ICON1                           100
