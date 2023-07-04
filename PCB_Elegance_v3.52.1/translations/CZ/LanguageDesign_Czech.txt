@@ -283,7 +283,7 @@
 280  "Konfigurovat cesty projektu"
 281  "Soubor projektu Gerbv nebyl nalezen !"
 282  "Projekty"
-283  "To může vyžadovat nastavení oprávnění správce"
+283  "To může vyžadovat spustit jako správce"
 284  "Nastavit"
 285  "Cesta"
 286  "Viewplot (výchozí)"
