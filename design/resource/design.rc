@@ -16,7 +16,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (United States) resources
+// Angliètina (Spojené státy) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -297,28 +297,29 @@ BEGIN
     RTEXT           "Part description",IDC_STATIC12,175,80,50,8
 END
 
-IDD_DIALOG_PATHS DIALOGEX 0, 0, 459, 167
+IDD_DIALOG_PATHS DIALOGEX 0, 0, 597, 242
 STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Configure the project paths"
 FONT 8, "MS Sans Serif", 400, 0, 0xEE
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,400,15,50,15
-    PUSHBUTTON      "Cancel",IDCANCEL,400,40,50,15
-    EDITTEXT        IDC_EDIT1,40,30,290,12,ES_AUTOHSCROLL
-    PUSHBUTTON      "Set",IDC_BUTTON1,335,25,50,15
-    EDITTEXT        IDC_EDIT2,95,84,290,12,ES_AUTOHSCROLL
-    GROUPBOX        "Gerber viewer",IDC_STATIC3,10,55,380,50
-    GROUPBOX        "Project directory",IDC_STATIC1,10,5,380,45
-    RTEXT           "Path",IDC_STATIC4,54,86,35,8
-    PUSHBUTTON      "Help",IDHELP,400,65,50,15
-    CONTROL         "Viewplot ( default )",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,15,70,370,8
-    CONTROL         "Gerbv",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,86,35,8
-    LTEXT           "Path - This may require administrator privileges to set",IDC_STATIC2,40,20,290,8
-    EDITTEXT        IDC_EDIT3,125,142,290,12,ES_AUTOHSCROLL
-    GROUPBOX        "Language path set",IDC_STATIC5,10,113,434,50
-    RTEXT           "Path",IDC_STATIC6,83,144,35,8
-    CONTROL         "English( default )",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,16,127,89,8
-    CONTROL         "Other Language",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,16,143,83,8
+    DEFPUSHBUTTON   "OK",IDOK,534,15,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,534,40,50,15
+    EDITTEXT        IDC_EDIT1,41,33,427,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set",IDC_BUTTON1,474,31,50,15
+    EDITTEXT        IDC_EDIT2,75,98,449,12,ES_AUTOHSCROLL
+    GROUPBOX        "Gerber viewer",IDC_STATIC3,7,68,524,48
+    GROUPBOX        "Project directory",IDC_STATIC1,7,7,524,44
+    RTEXT           "Path",IDC_STATIC4,51,100,17,8
+    PUSHBUTTON      "Help",IDHELP,534,65,50,15
+    CONTROL         "Viewplot (default)",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,15,84,231,8
+    CONTROL         "Gerbv",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,100,35,8
+    LTEXT           "This may require you to run as an administrator",IDC_STATIC2,15,20,315,8
+    EDITTEXT        IDC_EDIT3,109,155,415,12,ES_AUTOHSCROLL
+    GROUPBOX        "Language",IDC_STATIC5,7,125,524,57
+    RTEXT           "Path",IDC_STATIC6,87,158,17,8
+    CONTROL         "English (default)",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,15,140,90,8
+    CONTROL         "Other language",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,16,159,70,8
+    RTEXT           "Path",IDC_STATIC7,15,34,17,8
 END
 
 
@@ -444,9 +445,9 @@ BEGIN
     IDD_DIALOG_PATHS, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 452
+        RIGHTMARGIN, 584
         TOPMARGIN, 7
-        BOTTOMMARGIN, 116
+        BOTTOMMARGIN, 182
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -520,7 +521,7 @@ BEGIN
     0
 END
 
-#endif    // English (United States) resources
+#endif    // Angliètina (Spojené státy) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
