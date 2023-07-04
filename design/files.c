@@ -1818,8 +1818,8 @@ int32 ProjectDialog(int32 Mode)
 }
 
 //*******************************************************************************************************
-//*************************** Konfigurovat cesty projektu IDD_DIALOG_PATHS ******************************
 //*******************************************************************************************************
+//Konfigurovat cesty projektu IDD_DIALOG_PATHS **********************************************************
 
 int32 CALLBACK ConfigurePathsDialog2(HWND Dialog, WORD Message, WORD WParam, int32 LParam)
 {
@@ -1832,17 +1832,19 @@ int32 CALLBACK ConfigurePathsDialog2(HWND Dialog, WORD Message, WORD WParam, int
 	switch (Message)
 	{
 	case WM_INITDIALOG:
-		SetWindowTextUTF8(Dialog, SC(280, "Configure the project paths"));
-		SetDialogItemTextUTF8(Dialog, IDC_STATIC1, SC(282, "Project directory"));
-		SetDialogItemTextUTF8(Dialog, IDC_STATIC2, SC(283, "Project Path - This may require administrator privileges to set"));
+		SetWindowTextUTF8(Dialog, SC(280, "Configure project paths"));
+		SetDialogItemTextUTF8(Dialog, IDC_STATIC1, SC(282, "Projects"));
+		SetDialogItemTextUTF8(Dialog, IDC_STATIC2, SC(283, "This may require you to run as an administrator"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC3, SC(163, "Gerber viewer"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC4, SC(285, "Path"));
-		SetDialogItemTextUTF8(Dialog, IDC_RADIO1, SC(286, "Viewplot ( default )"));
+		SetDialogItemTextUTF8(Dialog, IDC_STATIC5, SC(294, "Language"));
+		SetDialogItemTextUTF8(Dialog, IDC_STATIC6, SC(285, "Path"));
+		SetDialogItemTextUTF8(Dialog, IDC_STATIC7, SC(285, "Path"));
+		SetDialogItemTextUTF8(Dialog, IDC_RADIO1, SC(286, "Viewplot (default)"));
 		SetDialogItemTextUTF8(Dialog, IDC_RADIO2, SC(287, "Gerbv"));
 		SetDialogItemTextUTF8(Dialog, IDC_BUTTON1, SC(284, "Set"));
-		SetDialogItemTextUTF8(Dialog, IDC_STATIC5, SC(294, "Language path set"));
-		SetDialogItemTextUTF8(Dialog, IDC_RADIO3, SC(295, "English ( default )"));
-		SetDialogItemTextUTF8(Dialog, IDC_RADIO4, SC(296, "Other Language"));
+		SetDialogItemTextUTF8(Dialog, IDC_RADIO3, SC(295, "English (default)"));
+		SetDialogItemTextUTF8(Dialog, IDC_RADIO4, SC(296, "Other language"));
 		SetDialogItemTextUTF8(Dialog, IDOK, "OK");
 		SetDialogItemTextUTF8(Dialog, IDCANCEL, SC(37, "Cancel"));
 		SetDialogItemTextUTF8(Dialog, IDHELP, SC(36, "Help"));
