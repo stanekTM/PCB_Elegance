@@ -903,15 +903,17 @@ int32 ReadApertures(int32 mode)
 
 		cnt3++;
 	}
+	
+	//TextFileClose(fp);
 
-//  TextFileClose(fp);
 	if (MessageBufPos > 0)
 	{
 		MessageDialog(SC(380, "The following apertures could not be decoded"), 0, 0);
 		DeAllocateMemMessageBuf();
 	}
+	
+	//NrAperTures
 
-// NrAperTures
 	sprintf(RetryStr, SC(381, "%i apertures have been found"), TempGerberInfo.NrApertureDefs);
 	res = OwnDialogBox(PCBClass.hInstance, MAKEINTRESOURCE(IDD_READ_RETRY), PCBWindow, (DLGPROC) RetryDialog2);
 
@@ -3057,8 +3059,9 @@ int32 LoadGerberFile(LPSTR GerberFile, int32 Layer, int32 mode)
 		        (PCBWindow, NULL, LocalAperTureFile, ExportDir, SC(489, "Load aperture file"), NULL,
 		         SC(489, "Load aperture file"), "*", 0))
 			return -1;
-
-//    if (LoadNewFile3(LocalAperTureFile,SC(489,"Load aperture file"),SC(490,"Aperture files"),0,0)!=0) return -1;
+		
+		//if (LoadNewFile3(LocalAperTureFile,SC(489,"Load aperture file"),SC(490,"Aperture files"),0,0)!=0) return -1;
+		
 		if (CheckFileIsAperTure(LocalAperTureFile))
 			LoadApertureFile(LocalAperTureFile, 0);
 		else
@@ -3242,8 +3245,10 @@ int32 LoadGerberFile(LPSTR GerberFile, int32 Layer, int32 mode)
 					switch (LineBuf[1])
 					{
 					case '1':
-//              SingleQuadrantInterpolation=0;
-//              SingleQuadrantInterpolation=1;
+						
+						//SingleQuadrantInterpolation=0;
+						//SingleQuadrantInterpolation=1;
+
 						CircularInterpolation = 0;
 						CircularInterpolationCW = 0;
 						break;
@@ -5668,8 +5673,9 @@ int32 ImportTracesVias(int32 mode)
 		        (PCBWindow, NULL, GerberFileName, ExportDir, SC(495, "Gerber file"), NULL, SC(391, "Import gerber file"),
 		         "*", 0))
 			return -1;
+		
+		//if (LoadNewFile3(GerberFileName,SC(495,"Gerber file"),SC(391,"Import gerber file"),0,0)!=0)
 
-//    if (LoadNewFile3(GerberFileName,SC(495,"Gerber file"),SC(391,"Import gerber file"),0,0)!=0)
 		if (!CheckFileIsGerber(GerberFileName))
 		{
 			sprintf(str, SC(497, "File %s is not a gerber file"), GerberFileName);
