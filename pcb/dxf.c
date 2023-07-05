@@ -3325,7 +3325,7 @@ int32 ExportDXF(int32 Mode)
 
 	if (FileExistsUTF8(ExportFileName) == 0)
 	{
-		sprintf(str2, SC(788, "File already exists.\n\n%s\n\nDo you want to overwrite it ?"), ExportFileName); //soubor již existuje
+		sprintf(str2, SC(788, "File already exists.\n\n%s\n\nDo you want to overwrite it ?"), ExportFileName); //soubor jiz existuje
 
 		if (MessageBoxOwn(PCBWindow, str2, SC(1, "Message"), MB_OKCANCEL | MB_APPLMODAL) != IDOK)
 			return -1;
@@ -3373,8 +3373,8 @@ int32 ExportDXF(int32 Mode)
 		CompOutlineOnBottom = 0;
 		strcpy(DXFLayer, DXFLayers[SelectedLayers[cnt2]]);
 		ok = 1;
-
-// *******************************************************************************************************
+		
+		//********************************************************************************************************
 		for (cnt = 0; cnt < Design.NrObjectLines; cnt++)
 		{
 			ObjectLine = &((*ObjectLines)[cnt]);
@@ -4774,8 +4774,8 @@ int32 ExportDXF(int32 Mode)
 	strcpy(InfoStr, InfoCopy);
 	RedrawInfoStr(1);
 
-	sprintf(str, SC(452, "DXF output ready.\n\nOutput file is\n\n%s"), ExportFileName); //pøidána zpráva kam se uložilo
-	MessageBoxOwn(PCBWindow, str, SC(1, "Message"), MB_APPLMODAL | MB_OK); //pøidána zpráva kam se uložilo
+	sprintf(str, SC(452, "DXF output ready.\n\nOutput file is\n\n%s"), ExportFileName); //pridana zprava kam se ulozilo
+	MessageBoxOwn(PCBWindow, str, SC(1, "Message"), MB_APPLMODAL | MB_OK); //pridana zprava kam se ulozilo
 
 	return 0;
 }
