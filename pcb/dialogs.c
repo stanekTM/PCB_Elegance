@@ -1666,8 +1666,8 @@ int32 CALLBACK MessageDialog2(HWND Dialog, UINT Message, WPARAM WParam, LPARAM L
 			TabStops[3] = (440 * 13) / 20;
 			TabStops[4] = (520 * 13) / 20;
 			TabStops[5] = (620 * 13) / 20;
-//          TabStops[4]=370;
-//          TabStops[5]=430;
+			//TabStops[4]=370;
+			//TabStops[5]=430;
 			SendDlgItemMessageOwn(Dialog, IDD_MESSAGE_EDIT, EM_SETTABSTOPS, 6, (LPARAM) (LPINT) & TabStops);
 			SendDlgItemMessageOwn(Dialog, IDD_MESSAGE_EDIT2, EM_SETTABSTOPS, 6, (LPARAM) (LPINT) & TabStops);
 			sprintf(str, SC(1290, "%d objects selected"), LParam);
@@ -1698,7 +1698,7 @@ int32 CALLBACK MessageDialog2(HWND Dialog, UINT Message, WPARAM WParam, LPARAM L
 		return about;
 
 	case WM_MOVE:
-//      SendDlgItemMessage(Dialog,IDD_MESSAGE_EDIT,EM_SETSEL,(WPARAM)-1,0);
+		//SendDlgItemMessage(Dialog,IDD_MESSAGE_EDIT,EM_SETSEL,(WPARAM)-1,0);
 		break;
 
 	case WM_WINDOWPOSCHANGED:
@@ -2838,7 +2838,7 @@ void InitPlotLayers(int32 ReverseLayerNumbering, int32 mode)
 
 	if (Design.NrBoardLayers > 1)
 	{
-		sprintf(GerberLayerStr[count], SC(258, "Keepout\t\tTop")); //export gerberu/vrtání, penplot, tisk, bitmap, pdf
+		sprintf(GerberLayerStr[count], SC(258, "Keepout\t\tTop")); //export gerberu/vrtani, penplot, tisk, bitmap, pdf
 		LayerCodes[count++] = ROUTING_KEEPOUT_LAYER + Design.NrBoardLayers - 1;
 	}
 
@@ -2856,7 +2856,7 @@ void InitPlotLayers(int32 ReverseLayerNumbering, int32 mode)
 		}
 	}
 
-	sprintf(GerberLayerStr[count], SC(259, "Keepout\t\tBottom")); //export gerberu/vrtání, penplot, tisk, bitmap, pdf
+	sprintf(GerberLayerStr[count], SC(259, "Keepout\t\tBottom")); //export gerberu/vrtani, penplot, tisk, bitmap, pdf
 	LayerCodes[count++] = ROUTING_KEEPOUT_LAYER;
 	GetLayerTextObjects(SOLD_MASK_BOTTOM, GerberLayerStr[count], 1);
 	LayerCodes[count++] = SOLD_MASK_BOTTOM;
@@ -4618,7 +4618,7 @@ int32 CALLBACK AboutDialogBody(HWND Dialog, UINT Message, WPARAM WParam, LPARAM 
 		SetWindowTextUTF8(Dialog, SC(730, "About program"));
 		SetDialogItemTextUTF8(Dialog, IDC_STATIC1, SC(731, "Layout editor PCB Elegance"));
 		SetDialogItemTextUTF8(Dialog, IDOK, "OK");
-		SetDialogItemTextUTF8(Dialog, IDHELP, "Web PCB Elegance"); //pøidán
+		SetDialogItemTextUTF8(Dialog, IDHELP, "Web PCB Elegance"); //pridan
 
 		sprintf(str, SC(732, "\r\n Build version %i.%i.%i  ( %s )"), VER_VERSION / 100, VER_VERSION % 100, VER_BUILD, VER_DATE_STR);
 
@@ -5149,8 +5149,9 @@ int32 CALLBACK SelectGeomDialog2(HWND Dialog, UINT Message, WPARAM WParam, LPARA
 							StartupInfo.wShowWindow = SW_SHOW;
 							CreateProcess(GeometrieEditor, ExeParams, NULL, NULL, 1, 0, NULL, NULL, &StartupInfo,
 							              &ProcessInfo);
+							
+							//WinExec(str3,SW_SHOW);
 
-//                  WinExec(str3,SW_SHOW);
 							GeomViewActive = 1;
 						}
 					}
@@ -5303,8 +5304,8 @@ int32 CALLBACK SelectGeomDialog2(HWND Dialog, UINT Message, WPARAM WParam, LPARA
 								StartupInfo.wShowWindow = SW_SHOW;
 								CreateProcess(ExeFile, ExeParams, NULL, NULL, 1, 0, NULL, NULL, &StartupInfo,
 								              &ProcessInfo);
-
-//                    WinExec(str3,SW_SHOW);
+								
+								//WinExec(str3,SW_SHOW);
 							}
 						}
 						else
