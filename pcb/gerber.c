@@ -264,9 +264,9 @@ void GerbvProjectOutput(void)
 			CutExtensionFileName(FilePart);
 
 			if (GerberInfo.DrillOutputOption == 0)
-				sprintf(str2, "(cons \'filename \"Drills.drl\")", FilePart); //název v souboru GerbvProject.gvp
+				sprintf(str2, "(cons \'filename \"Drills.drl\")", FilePart); //nazev v souboru GerbvProject.gvp
 			else
-				sprintf(str2, "(cons \'filename \"Drills.ncd\")", FilePart); //název v souboru GerbvProject.gvp
+				sprintf(str2, "(cons \'filename \"Drills.ncd\")", FilePart); //nazev v souboru GerbvProject.gvp
 
 			strcat(str, str2);
 
@@ -399,7 +399,7 @@ void OutputGerberDrill()
 
 			if (GerberInfo.GerbvProject == 1)
 			{
-				sprintf(GerbvProjectFilename, "%s\\pcb\\gerber\\GerbvProject.gvp", DesignPath); //název souboru
+				sprintf(GerbvProjectFilename, "%s\\pcb\\gerber\\GerbvProject.gvp", DesignPath); //nazev souboru
 				DeleteFileUTF8(GerbvProjectFilename);
 				GerbvProjectOutput();
 			}
@@ -544,14 +544,14 @@ int32 GerberOutput(int32 mode)
 		else
 			strcat(FileStr, ".hgl");
 
-		//********************************************** nelze vytvoøit soubor *********************************************************
+		//nelze vytvorit soubor ******************************************************************************
 		if ((Gerberfp = FileOpenWriteUTF8(FileStr)) <= 0)
 		{
 			sprintf(str2, SC(405, "Could not write to file\n\n%s"), FileStr);
 			MessageBoxOwn(PCBWindow, str2, SC(24, "Error"), MB_APPLMODAL | MB_OK);
 			return -2;
 		}
-		//******************************************************************************************************************************
+		//****************************************************************************************************
 
 		if (!GerberInfo.ReverseLayerNumbering)
 			GetLayerTextObjects(Layer, str, 64);
@@ -562,9 +562,9 @@ int32 GerberOutput(int32 mode)
 		sprintf(InfoStr, "Plot %s", str);
 		RedrawInfoStr(1);
 		CheckInputMessages(0);
-
-// ****************************************************************************
-// ****************************************************************************
+		
+		//*****************************************************************************
+		//*****************************************************************************
 		if (!PenPlotMode)
 		{
 			// Gerber initialisation code
@@ -618,11 +618,11 @@ int32 GerberOutput(int32 mode)
 
 		sprintf(str, SC(407, "Get info layer %d"), Layer);
 		AddPerformanceValue(str);
+		
+		//*****************************************************************************
+		//*****************************************************************************
+		// Collect all layer objects to Objects4 and fill in the aperture table
 
-// ****************************************************************************
-// ****************************************************************************
-
-// Collect all layer objects to Objects4 and fill in the aperture table
 		NrObjects4 = 0;
 		NrTraceObjects = 0;
 		NrCheckObjects = 0;
@@ -1332,13 +1332,13 @@ int32 GerberOutput(int32 mode)
 				return -1;
 		}
 
-		//********************************************** nelze vytvoøit soubor *********************************************************
+		//nelze vytvorit soubor *********************************************************
 		if (WriteLnError != 0)
 		{
 			sprintf(str2, SC(405, "Could not write to file\n\n%s"), FileStr);
 			MessageBoxOwn(PCBWindow, str2, SC(24, "Error"), MB_APPLMODAL | MB_OK);
 		}
-		//******************************************************************************************************************************
+		//*******************************************************************************
 	}
 
 	DeAllocateMemObjects4();
