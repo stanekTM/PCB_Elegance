@@ -1163,14 +1163,12 @@ void PCBCommand(WPARAM WParam, LPARAM LParam)
 		if (FileChanged)
 		{
 
-			sprintf(str, SC(141, "The layout file has changed.\n\n%s\n\nDo you want to update it ?"), EditFile); //nový
+			sprintf(str, SC(141, "The layout file has changed.\n\n%s\n\nDo you want to update it ?"), EditFile); //novy
 
 			res = MessageBoxOwn(PCBWindow, str, SC(1, "Message"), MB_APPLMODAL | MB_YESNOCANCEL);
-
-
-
-//			res = MessageBoxOwn(PCBWindow, SC(141, "The layout file has changed.\n\nDo you want to update it ?"), //pùvodní
-//				SC(1, "Message"), MB_APPLMODAL | MB_YESNOCANCEL);
+			
+			//res = MessageBoxOwn(PCBWindow, SC(141, "The layout file has changed.\n\nDo you want to update it ?"), //puvodni
+			      //SC(1, "Message"), MB_APPLMODAL | MB_YESNOCANCEL);
 			
 			if (res == IDYES)
 			{
