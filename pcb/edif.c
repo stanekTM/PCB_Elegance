@@ -251,8 +251,8 @@ int32 ExportEdif(int32 mode)
 	double x1, y1, Rotation, x = 0.0, y = 0.0, Width, Height;
 
 	ObjectRecord *Object, *Object4, *Object4a;
-//  ObjectLineRecord *ObjectLine;
-//  ObjectPolygonRecord *ObjectPolygon;
+	//ObjectLineRecord *ObjectLine;
+	//ObjectPolygonRecord *ObjectPolygon;
 	CompRecord *Comp, *NewComp;
 	ShapeRecord *Shape;
 	ShapePadRecord *ShapePad;
@@ -261,9 +261,9 @@ int32 ExportEdif(int32 mode)
 	NetRecord *Net;
 	NetItemsRecord *NetItem;
 	AreaFillRecord *AreaFill, *BoardOutlineAreaFill;
-//  AperTureRecord *AperTure;
+	//AperTureRecord *AperTure;
 	PolygonRecord *Polygon;
-//  GeomPolygonRecord *GeomPolygon;
+	//GeomPolygonRecord *GeomPolygon;
 	char str[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING], DesignName[MAX_LENGTH_STRING], str3[MAX_LENGTH_STRING],
 	     str4[MAX_LENGTH_STRING], str5[MAX_LENGTH_STRING], FileStr[MAX_LENGTH_STRING], strx1[64], stry1[64], strx2[64],
 	     strx3[64], stry2[64];
@@ -274,14 +274,14 @@ int32 ExportEdif(int32 mode)
 	GetFilePartFromFileName(DesignName, str);
 	strcat(FileStr, ".dsn");
 
-	//********************************************** nelze vytvoøit soubor *********************************************************
+	//nelze vytvoøit soubor **********************************************************************************
 	if ((fp = FileOpenWriteUTF8(FileStr)) <= 0)
 	{
 		sprintf(str2, SC(405, "Could not write to file\n\n%s"), FileStr);
 		MessageBoxOwn(PCBWindow, str2, SC(24, "Error"), MB_APPLMODAL | MB_OK);
 		return -2;
 	}
-	//******************************************************************************************************************************
+	//********************************************************************************************************
 
 	/*
 	(pcb CAD.dsn
@@ -294,6 +294,7 @@ int32 ExportEdif(int32 mode)
 	    (layer L2 (type signal))
 	  )
 	*/
+
 	AllocateMemTemp(256 * 1024);
 	AllocateSpecialMem(MEM_POINTS, 256 * 1024, (void **) &NewComp);
 	AllocateMemObjects2(4096);
@@ -332,8 +333,8 @@ int32 ExportEdif(int32 mode)
 	}
 
 	WriteLn(fp, "  )");
-// *******************************************************************************************************
-// *******************************************************************************************************
+	//********************************************************************************************************
+	//********************************************************************************************************
 	WriteLn(fp, "  (placement");
 	NrShapesUsed = 0;
 	ShapeNrUsed = (int32 *) ((int32) NewComp + 128 * 1024);
@@ -392,9 +393,9 @@ int32 ExportEdif(int32 mode)
 				First = 0;
 				Mirror = ((Comp->CompMode & 8) >> 3);
 				Rotation = Comp->Rotation;
-				/*
-				   (component J1 (place J1 36.830000 20.320000 front 0))
-				 */
+				
+				//(component J1 (place J1 36.830000 20.320000 front 0))
+				
 				GetUnitsValue(TempUnits, Comp->CompOriginX, strx1, 1);
 				GetUnitsValue(TempUnits, Comp->CompOriginY, stry1, 1);
 				sprintf(str, "      (place %-12s %s %s ", Comp->Name, strx1, stry1);
@@ -426,8 +427,8 @@ int32 ExportEdif(int32 mode)
 	}
 
 	WriteLn(fp, "  )");
-// *******************************************************************************************************
-// *******************************************************************************************************
+	//********************************************************************************************************
+	//********************************************************************************************************
 	WriteLn(fp, "  (library");
 	PadCount = 0;
 	NrObjects2 = 0;
@@ -456,10 +457,11 @@ int32 ExportEdif(int32 mode)
 				ShapePinsToObject(NewComp, 0.0, 0.0, 0, 0, 0, 0);
 
 				/*
-				    (image J1
+				      image J1
 				      (pin Pad1 1 8.890000 0.000000)
 				      (pin Pad2 2 6.350000 0.000000)
 				*/
+
 				sprintf(str, "    (image %s", Shape->ShapeName);
 				WriteLn(fp, str);
 
@@ -547,9 +549,9 @@ int32 ExportEdif(int32 mode)
 
 		WriteLn(fp, "    )");
 	}
-
-// *******************************************************************************************************
-// *******************************************************************************************************
+	
+	//********************************************************************************************************
+	//********************************************************************************************************
 	/*
 	    (padstack Via0 (shape (circle L1 1.270000)))
 	    (padstack Pad1
@@ -560,6 +562,7 @@ int32 ExportEdif(int32 mode)
 	      (shape (circle L1 1.473200 0 0))
 	      (shape (circle L2 1.473200 0 0))    )
 	*/
+
 	GetUnitsValue(TempUnits, Design.DefVia1.ThickNess, strx1, 1);
 	sprintf(str, "    (padstack Via0 (shape (circle L1 %s))", strx1);
 	WriteLn(fp, str);
@@ -648,6 +651,7 @@ int32 ExportEdif(int32 mode)
 			case DRILL:
 				GetUnitsValue(TempUnits, Object->x2, strx2, 1);
 				break;
+
 				/*
 				(outline (polygon signal_1 0.0 0.0550 0.0000 0.4100
 				0.0000 0.4650 0.0550 0.4650 0.4250 0.4250 0.4650
@@ -662,8 +666,8 @@ int32 ExportEdif(int32 mode)
 	}
 
 	WriteLn(fp, "  )");
-// *******************************************************************************************************
-// *******************************************************************************************************
+	//********************************************************************************************************
+	//********************************************************************************************************
 	/*
 	  (network
 	    (net X_1
@@ -704,11 +708,16 @@ int32 ExportEdif(int32 mode)
 				ok = 1;
 
 #endif
-//      if (stricmpOwn(Shape->ShapeName,"pci_slot")==0) {
-//        ShapeNr=cnt3;
-//        MemPos=(*Shapes)[ShapeNr].ShapePos;
-//        Shape=(ShapeRecord *)&(ShapesMem[MemPos]);
-//      }
+
+			/*
+			if (stricmpOwn(Shape->ShapeName,"pci_slot")==0)
+			{
+				ShapeNr=cnt3;
+				MemPos=(*Shapes)[ShapeNr].ShapePos;
+				Shape=(ShapeRecord *)&(ShapesMem[MemPos]);
+			}
+			*/
+
 			PinOffset = Shape->PinOffset;
 			NrPins = Shape->NrPins;
 			MemPos += PinOffset;
@@ -733,8 +742,9 @@ int32 ExportEdif(int32 mode)
 					if (NetNr != -1)
 						CompPin->NetNr = -1;
 				}
+				
+				//PinTextFound=(ShapePad->Name);
 
-//        PinTextFound=(ShapePad->Name);
 				for (cnt2 = 0; cnt2 < NrPinShapes; cnt2++)
 				{
 					Pad = (PadRecord *) & (ShapesMem[MemPos]);
@@ -748,7 +758,7 @@ int32 ExportEdif(int32 mode)
 
 				PinsMemPos += sizeof(CompPinRecord);
 				NrPins--;
-//        PinNr++;
+				//PinNr++;
 			}
 		}
 	}
@@ -775,11 +785,16 @@ int32 ExportEdif(int32 mode)
 			ShapeNr = (int32) Comp->ShapeNr;
 			MemPos = (*Shapes)[ShapeNr].ShapePos;
 			Shape = (ShapeRecord *) & (ShapesMem[MemPos]);
-//      if (stricmpOwn(Shape->ShapeName,"pci_slot")==0) {
-//        ShapeNr=cnt3;
-//        MemPos=(*Shapes)[ShapeNr].ShapePos;
-//        Shape=(ShapeRecord *)&(ShapesMem[MemPos]);
-//      }
+
+			/*
+			if (stricmpOwn(Shape->ShapeName,"pci_slot")==0)
+			{
+			ShapeNr=cnt3;
+			MemPos=(*Shapes)[ShapeNr].ShapePos;
+			Shape=(ShapeRecord *)&(ShapesMem[MemPos]);
+			}
+			*/
+
 			PinOffset = Shape->PinOffset;
 			ShapeInfo = Shape->Info;
 			NrPins = Shape->NrPins;
@@ -867,13 +882,13 @@ int32 ExportEdif(int32 mode)
 	}
 
 	WriteLn(fp, "  )");
-
-// *******************************************************************************************************
-// *******************************************************************************************************
+	
+	//********************************************************************************************************
+	//********************************************************************************************************
 
 	WriteLn(fp, ")");
 	FileClose(fp);
-//  DeAllocateMemObjects2();
+	//DeAllocateMemObjects2();
 	DeallocateSpecialMem(MEM_POINTS);
 	DeallocateSpecialMem(MEM_POLYGON_CHECK1);
 	DeallocateSpecialMem(MEM_POLYGON_CHECK2);
@@ -884,7 +899,7 @@ int32 ExportEdif(int32 mode)
 	return 0;
 }
 
-// *******************************************************************************************************
-// *******************************************************************************************************
-// *******************************************************************************************************
-// *******************************************************************************************************
+//********************************************************************************************************
+//********************************************************************************************************
+//********************************************************************************************************
+//********************************************************************************************************
