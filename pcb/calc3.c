@@ -1319,11 +1319,11 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 		switch (mode & 15)
 		{
 		case 0:
-			sprintf(TextStr, SC(3, "Layer %i (Bottom)"), Layer2); //export odb++, název v gerber bez diakritiky
+			sprintf(TextStr, SC(3, "Layer %i (Bottom)"), Layer2); //export odb++, nazev v gerber bez diakritiky
 			break;
 
 		case 1:
-			sprintf(TextStr, SC(4, "Layer %i\t\tBottom"), Layer2); //export gerber/vrtání, penplot, tisk, bitmap, pdf
+			sprintf(TextStr, SC(4, "Layer %i\t\tBottom"), Layer2); //export gerber/vrtani, penplot, tisk, bitmap, pdf
 			break;
 
 		case 2:
@@ -1335,7 +1335,7 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 			break;
 
 		case 4:
-			sprintf(TextStr, SC(7, "Bottom %d"), Layer2); //info myši
+			sprintf(TextStr, SC(7, "Bottom %d"), Layer2); //info mysi
 			break;
 
 		case 5:
@@ -1347,7 +1347,7 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 			break;
 
 		case 8:
-			sprintf(TextStr, "Bottom_%d", Layer2); //export dxf, název souboru.ger
+			sprintf(TextStr, "Bottom_%d", Layer2); //export dxf, nazev souboru.ger
 			break;
 		}
 
@@ -1361,11 +1361,11 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 			switch (mode & 15)
 			{
 			case 0:
-				sprintf(TextStr, SC(10, "Layer %i (Top)"), Layer2); //export odb++, název v gerber bez diakritiky
+				sprintf(TextStr, SC(10, "Layer %i (Top)"), Layer2); //export odb++, nazev v gerber bez diakritiky
 				break;
 
 			case 1:
-				sprintf(TextStr, SC(11, "Layer %i\t\tTop"), Layer2); //export gerber/vrtání, penplot, tisk, bitmap, pdf
+				sprintf(TextStr, SC(11, "Layer %i\t\tTop"), Layer2); //export gerber/vrtani, penplot, tisk, bitmap, pdf
 				break;
 
 			case 2:
@@ -1377,7 +1377,7 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 				break;
 
 			case 4:
-				sprintf(TextStr, SC(14, "Top %d"), Layer2); //info myši
+				sprintf(TextStr, SC(14, "Top %d"), Layer2); //info mysi
 				break;
 
 			case 5:
@@ -1389,7 +1389,7 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 				break;
 
 			case 8:
-				sprintf(TextStr, "Top_%d", Layer2); //export dxf, název souboru.ger
+				sprintf(TextStr, "Top_%d", Layer2); //export dxf, nazev souboru.ger
 				break;
 			}
 
@@ -1430,7 +1430,7 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 				break;
 
 			case 1:
-				sprintf(TextStr, SC(18, "Layer %i\t\tInner\tPowerplane %s"), Layer2, Net->Name); //export gerber/vrtání, penplot, tisk, bitmap, pdf
+				sprintf(TextStr, SC(18, "Layer %i\t\tInner\tPowerplane %s"), Layer2, Net->Name); //export gerber/vrtani, penplot, tisk, bitmap, pdf
 				break;
 
 			case 2:
@@ -1438,11 +1438,11 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 				break;
 
 			case 3:
-				sprintf(TextStr, SC(20, "\tInner %i\tPowerplane %s"), Layer2, Net->Name); //export gerber/vrtání, penplot, tisk, bitmap, pdf
+				sprintf(TextStr, SC(20, "\tInner %i\tPowerplane %s"), Layer2, Net->Name); //export gerber/vrtani, penplot, tisk, bitmap, pdf
 				break;
 
 			case 4:
-				sprintf(TextStr, SC(21, "Inner %i"), Layer2); //levé info dole
+				sprintf(TextStr, SC(21, "Inner %i"), Layer2); //leve info dole
 				break;
 
 			case 5:
@@ -1454,7 +1454,7 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 				break;
 
 			case 8:
-				sprintf(TextStr, "Inner_%i", Layer2); //export dxf, název souboru.ger
+				sprintf(TextStr, "Inner_%i", Layer2); //export dxf, nazev souboru.ger
 				break;
 			}
 		}
@@ -1485,7 +1485,7 @@ int32 GetLayerText(int32 Layer, LPSTR TextStr, int32 mode)
 				break;
 
 			case 8:
-				sprintf(TextStr, "Inner_%i", Layer2); //export dxf, název souboru.ger
+				sprintf(TextStr, "Inner_%i", Layer2); //export dxf, nazev souboru.ger
 				break;
 			}
 		}
@@ -2858,16 +2858,16 @@ int32 GetLayerTextObjects(int32 LayerObjectNr, LPSTR LayerText, int32 mode)
 						NewLayer = Design.NrBoardLayers - (Layer - ROUTING_KEEPOUT_LAYER) - 1;
 
 					if (Layer == ROUTING_KEEPOUT_LAYER)
-						sprintf(LayerText, SC(110, "Keepout bottom %d"), NewLayer); //název v prohlížeèi gerber bez diakritiky
+						sprintf(LayerText, SC(110, "Keepout bottom %d"), NewLayer); //nazev v prohlizeci gerber bez diakritiky
 
 					if (Design.NrBoardLayers > 1)
 					{
 						if (Layer == ROUTING_KEEPOUT_LAYER + Design.NrBoardLayers - 1)
-							sprintf(LayerText, SC(111, "Keepout top %d"), NewLayer); //název v prohlížeèi gerber bez diakritiky
+							sprintf(LayerText, SC(111, "Keepout top %d"), NewLayer); //nazev v prohlizeci gerber bez diakritiky
 					}
 
 					if (CheckIfInnerLayer(Layer - ROUTING_KEEPOUT_LAYER))
-						sprintf(LayerText, SC(112, "Keepout inner %d"), NewLayer); //název v prohlížeèi gerber bez diakritiky
+						sprintf(LayerText, SC(112, "Keepout inner %d"), NewLayer); //nazev v prohlizeci gerber bez diakritiky
 				}
 			}
 
