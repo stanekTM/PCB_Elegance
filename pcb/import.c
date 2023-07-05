@@ -2410,20 +2410,19 @@ int32 MakeNetlistFromDesign(int32 mode)
 	if ((mode & 1) == 1)
 	{
 
-		sprintf(FileStr, "%s\\pcb\\Netlist.net", DesignPath); //nový název souboru
+		sprintf(FileStr, "%s\\pcb\\Netlist.net", DesignPath); //novy nazev souboru
+		//sprintf(FileStr, "%s\\pcb\\design.net", DesignPath); //puvodni nazev souboru
 
-//		sprintf(FileStr, "%s\\pcb\\design.net", DesignPath); //pùvodní název souboru
-
-		//********************************************** nelze vytvoøit soubor *********************************************************
+		//nelze vytvorit soubor *********************************************************
 		if ((fp = FileOpenWriteUTF8(FileStr)) <= 0)
 		{
 			sprintf(str2, SC(405, "Could not write to file\n\n%s"), FileStr);
 			MessageBoxOwn(PCBWindow, str2, SC(24, "Error"), MB_APPLMODAL | MB_OK);
 			return -1;
 		}
-		//*****************************************************************************************************************************
+		//*******************************************************************************
 
-	    //***** tisk netlistu *********************************************************************************************************
+	    //tisk netlistu *****************************************************************
 		WriteLn(fp, "# PCB elegance components and netlist file");
 		WriteLn(fp, "#");
 
@@ -2473,18 +2472,18 @@ int32 MakeNetlistFromDesign(int32 mode)
 
 		FileClose(fp);
 
-		//********************************************** nelze vytvoøit soubor *********************************************************
+		//nelze vytvorit soubor *********************************************************
 		if (WriteLnError != 0)
 		{
 			sprintf(str2, SC(405, "Could not write to file\n\n%s"), FileStr);
 			MessageBoxOwn(PCBWindow, str2, SC(24, "Error"), MB_APPLMODAL | MB_OK);
 		}
-		//******************************************************************************************************************************
+		//*******************************************************************************
 
 		DeAllocateMemNetItems();
 	}
 
-    //************************************* Soubor síového seznamu NET vygenerován ****************************************************
+    //Soubor sitoveho seznamu NET vygenerovan *****************************************************************
 	
 	if ((mode & 1) == 1)
 		
