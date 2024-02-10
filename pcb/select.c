@@ -3059,7 +3059,7 @@ void PrintTrace(TraceRecord * Trace, LPSTR ValueStr, int32 TraceType, int32 Laye
 	char str2[MAX_LENGTH_STRING];
 	NetRecord *Net;
 	int32 NetNr;
-
+	
 	if (Layer == 0)
 		sprintf(ValueStr, SC(1357, "Trace\tBottom\t"), Layer); //trasy/prùchodky
 	else
@@ -3121,7 +3121,6 @@ void PrintTrace(TraceRecord * Trace, LPSTR ValueStr, int32 TraceType, int32 Laye
 // *******************************************************************************************************
 // *******************************************************************************************************
 // *******************************************************************************************************
-// *******************************************************************************************************
 
 void ObjectsInfo(ObjectRecord * Object)
 {
@@ -3146,7 +3145,7 @@ void ObjectsInfo(ObjectRecord * Object)
 	rot *= 90;
 	dikte = Object->Thickness;
 	ConvNormalCoorToPolar(x1, y1, x2, y2, &Angle, &Length);
-
+	
 	if ((Layer == DRILL_LAYER) || (Layer == DRILL_UNPLATED_LAYER))
 		dikte = 0.0;
 
@@ -3174,27 +3173,25 @@ void ObjectsInfo(ObjectRecord * Object)
 		if (((Object->Info & OBJECT_FILLED) == 0) || (Object->Layer == DRILL_LAYER))
 		{
 			if (Object->Layer == DRILL_LAYER)
-
-				sprintf(Val2, "%.1f %.1f\t%.1f ( %.1f )\t", x1, y1, x2, Clearance / 2540.0);
-			
-			else
 				
+				sprintf(Val2, "%.1f %.1f\t%.1f ( %.1f )\t", x1, y1, x2, Clearance / 2540.0);
+			else
 				sprintf(Val2, "%.1f %.1f\t%.1f\t%.1f", x1, y1, x2, dikte);
 		}
 		else
 			
-			    sprintf(Val2, "%.1f %.1f\t%.1f\t\t\t", x1, y1, x2);
-
-		        sprintf(Val4a, "%.1f %.1f\t%.1f\t%.1f\t%i", x1, y1, x2, dikte, rot);
+			sprintf(Val2, "%.1f %.1f\t%.1f\t\t\t", x1, y1, x2);
+		
+		    sprintf(Val4a, "%.1f %.1f\t%.1f\t%.1f\t%i", x1, y1, x2, dikte, rot);
 		        
-				sprintf(Val5, "%.1f %.1f\t%.1f\t%.1f\t%.1f", x1, y1, x2, dikte, Rotation);
-
+		    sprintf(Val5, "%.1f %.1f\t%.1f\t%.1f\t%.1f", x1, y1, x2, dikte, Rotation);
+			
 		if (Object->ObjectType == OBJECT_ARC)
 		{
 			ConvertPointToPolar(Object->x3, Object->y3, &Dist1, &Angle1);
 			ConvertPointToPolar(Object->x4, Object->y4, &Dist2, &Angle2);
 		}
-
+		
 		sprintf(Val6, "%.1f %.1f\t%.1f %.1f\t%.1f\t%.1f %.1f", x1, y1, x2, y2, dikte, Angle1, Angle2);
 		
 		sprintf(Val6a, "%.1f %.1f\t%.1f %.1f\t%.1f ( %.1f )\t%.1f %.1f", x1, y1, x2, y2, dikte, Clearance / 2540.0,
@@ -3205,8 +3202,9 @@ void ObjectsInfo(ObjectRecord * Object)
 		
 		sprintf(Val7a, "%.1f %.1f\t%.1f %.1f\t%.1f ( %.1f )\tLength %.1f, Angle %.1f", x1, y1, x2, y2, dikte,
 		        Clearance / 2540.0, Length / 2540.0, Angle * 180.0 / PI);
-
+		
 		if ((Object->Info & OBJECT_FILLED) == 0)
+			
 			sprintf(Val8, "%.1f %.1f\t%.1f %.1f\t%.1f", x1, y1, x2, y2, dikte);
 		else
 			sprintf(Val8, "%.1f %.1f\t%.1f %.1f\t\t\t", x1, y1, x2, y2);
@@ -3222,12 +3220,10 @@ void ObjectsInfo(ObjectRecord * Object)
 		if (((Object->Info & OBJECT_FILLED) == 0) || (Object->Layer == DRILL_LAYER))
 		{
 			if (Object->Layer == DRILL_LAYER)
-
-			sprintf(Val2, SC(1349, "%.4f , %.4f\t\tdiameter %.4f clearance %.4f\t"), x1, y1, x2, Clearance / 100000.0); //kruh 1347, ostatní objekty
-
-			else
 				
-			sprintf(Val2, SC(1348, "%.4f %.4f\t%.4f\t%.4f"), x1, y1, x2, dikte); //kruh 1347, ostatí objekty
+				sprintf(Val2, SC(1349, "%.4f , %.4f\t\tdiameter %.4f clearance %.4f\t"), x1, y1, x2, Clearance / 100000.0); //kruh 1347, ostatní objekty
+			else
+				sprintf(Val2, SC(1348, "%.4f %.4f\t%.4f\t%.4f"), x1, y1, x2, dikte); //kruh 1347, ostatí objekty
 		}
 		else
 			
@@ -3257,9 +3253,7 @@ void ObjectsInfo(ObjectRecord * Object)
 		if ((Object->Info & OBJECT_FILLED) == 0)
 			
 			sprintf(Val8, "%.4f %.4f\t%.4f %.4f\t%.4f", x1, y1, x2, y2, dikte);
-		
 		else
-			
 			sprintf(Val8, SC(1353, "%.4f , %.4f\t\twidth %.4f height %.4f"), x1, y1, x2, y2); //obdélníkový pad 1352, ostatní objekty
 	}
 
@@ -3267,111 +3261,120 @@ void ObjectsInfo(ObjectRecord * Object)
 
 	switch (Object->ObjectType)
 	{
-	case OBJECT_LINE:
-		strcpy(ObjectText, SC(1350, "Line")); //èára
-
-		if (!CheckIfLayerHasObjectWithClearances(Layer))
-			sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val7, ObjectNrStr);
-		else
-			sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val7a, ObjectNrStr);
-
-		if (AddToMessageBuf(str) != 0)
-			return;
-
-		break;
-
-	case OBJECT_RECT:
-		if ((Object->Info & OBJECT_FILLED) == 0)
-			strcpy(ObjectText, SC(449, "Rect"));
-		else
-			strcpy(ObjectText, SC(1352, "Rect pad")); //obdélníkový pad
-
-		sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val8, ObjectNrStr);
-
-		if (AddToMessageBuf(str) != 0)
-			return;
-
-		break;
-
-	case OBJECT_CIRCLE:
-		if ((Object->Info & OBJECT_FILLED) == 0)
-			strcpy(ObjectText, SC(1348, "Circle")); //kruh
-		else
-			strcpy(ObjectText, SC(1374, "Circle pad")); //kruhový pad
-
-		sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
-
-		if (AddToMessageBuf(str) != 0)
-			return;
-
-		break;
-
-	case OBJECT_ARC:
-		if ((Object->Layer == DRILL_LAYER) || (Object->Layer == DRILL_UNPLATED_LAYER))
-		{
-			strcpy(ObjectText, SC(1347, "Circle")); //kruh
-			sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
-		}
-		else
-		{
+	    case OBJECT_LINE:
+			
+			strcpy(ObjectText, SC(1350, "Line")); //èára
+			
+			if (!CheckIfLayerHasObjectWithClearances(Layer))
+				
+				sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val7, ObjectNrStr);
+			else
+				sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val7a, ObjectNrStr);
+			
+			if (AddToMessageBuf(str) != 0)
+				return;
+			
+			break;
+		
+		case OBJECT_RECT:
+			
 			if ((Object->Info & OBJECT_FILLED) == 0)
+				
+				strcpy(ObjectText, SC(449, "Rect"));
+			else
+				strcpy(ObjectText, SC(1352, "Rect pad")); //obdélníkový pad
+			
+			sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val8, ObjectNrStr);
+			
+			if (AddToMessageBuf(str) != 0)
+				return;
+			
+			break;
+		
+		case OBJECT_CIRCLE:
+			
+			if ((Object->Info & OBJECT_FILLED) == 0)
+				
+				strcpy(ObjectText, SC(1348, "Circle")); //kruh
+			else
+				strcpy(ObjectText, SC(1374, "Circle pad")); //kruhový pad
+			
+			sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
+			
+			if (AddToMessageBuf(str) != 0)
+				return;
+			
+			break;
+		
+		case OBJECT_ARC:
+			
+			if ((Object->Layer == DRILL_LAYER) || (Object->Layer == DRILL_UNPLATED_LAYER))
 			{
-				if ((InRange(Object->x3, Object->x4)) && (InRange(Object->y3, Object->y4))
-				        && (InRange(Object->x2, Object->y2)))
-				{
-					strcpy(ObjectText, SC(1347, "Circle")); //kruh
-					sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
-				}
-				else
-				{
-					strcpy(ObjectText, SC(1372, "Arc")); //oblouk
-
-					if (!CheckIfLayerHasObjectWithClearances(Layer))
-						sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val6, ObjectNrStr);
-					else
-						sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val6a, ObjectNrStr);
-				}
+				strcpy(ObjectText, SC(1347, "Circle")); //kruh
+				sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
 			}
 			else
 			{
-				strcpy(ObjectText, SC(1374, "Circle pad")); //kruhový pad
-				sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
+				if ((Object->Info & OBJECT_FILLED) == 0)
+				{
+					if ((InRange(Object->x3, Object->x4)) && (InRange(Object->y3, Object->y4)) && (InRange(Object->x2, Object->y2)))
+					{
+						strcpy(ObjectText, SC(1347, "Circle")); //kruh
+						sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
+					}
+					else
+					{
+						strcpy(ObjectText, SC(1372, "Arc")); //oblouk
+						
+						if (!CheckIfLayerHasObjectWithClearances(Layer))
+							sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val6, ObjectNrStr);
+						else
+							sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val6a, ObjectNrStr);
+					}
+				}
+				else
+				{
+					strcpy(ObjectText, SC(1374, "Circle pad")); //kruhový pad
+					sprintf(str, "%s\t%s\t%s\t%s", ObjectText, LayerText, Val2, ObjectNrStr);
+				}
 			}
-		}
-
-		if (AddToMessageBuf(str) != 0)
-			return;
-
-		break;
-	
-	case OBJECT_TEXT:
-
-	case OBJECT_TEXT2:
-		strcpy(ObjectText, SC(1354, "Text")); //text
-		strcpy(str2, (LPSTR) Object->TraceNr);
-		lengte = strlen(str2);
-
-		for (cnt = 0; cnt < lengte; cnt++)
-		{
-			if ((str2[cnt] == '\r') || (str2[cnt] == '\n'))
-				 str2[cnt] = '\x01   '; //upraveno
-		}
-
-		sprintf(str, "%s\t%s\t%s\t%s\t%s", ObjectText, LayerText, Val5, ObjectNrStr, str2); //upraveno
-
-		if (AddToMessageBuf(str) != 0)
-			return;
-
-		break;
-
-	case OBJECT_POLYGON:
-		strcpy(ObjectText, SC(1046, "Polygon"));
-		sprintf(str, SC(1047, "%s\t%s\t\t\t\t%d vertices\t\t%s"), ObjectText, LayerText, Object->TraceNr, ObjectNrStr);
-
-		if (AddToMessageBuf(str) != 0)
-			return;
-
-		break;
+			
+			if (AddToMessageBuf(str) != 0)
+				return;
+			
+			break;
+		
+		case OBJECT_TEXT:
+		
+		case OBJECT_TEXT2:
+			strcpy(ObjectText, SC(1354, "Text")); //text
+			strcpy(str2, (LPSTR) Object->TraceNr);
+			
+			lengte = strlen(str2);
+			
+			for (cnt = 0; cnt < lengte; cnt++)
+			{
+				if ((str2[cnt] == '\r') || (str2[cnt] == '\n'))
+					
+					str2[cnt] = '\x01   '; //upraveno
+			}
+			
+			sprintf(str, "%s\t%s\t%s\t%s\t%s", ObjectText, LayerText, Val5, ObjectNrStr, str2); //upraveno
+			
+			if (AddToMessageBuf(str) != 0)
+				return;
+			
+			break;
+		
+		case OBJECT_POLYGON:
+			
+			strcpy(ObjectText, SC(1046, "Polygon"));
+			sprintf(str, SC(1047, "%s\t%s\t\t\t\t%d vertices\t\t%s"), ObjectText, LayerText, Object->TraceNr, ObjectNrStr);
+			
+			if (AddToMessageBuf(str) != 0)
+				return;
+			
+			break;
 	}
 }
 
@@ -3401,6 +3404,7 @@ void GetInfoSelectedObjects(int32 mode)
 	     str6[MAX_LENGTH_STRING], str7[MAX_LENGTH_STRING], str8[MAX_LENGTH_STRING], str9[MAX_LENGTH_STRING];
 	PolygonRecord *DrawPolygon;
 	uint8 *AreaPos, *PolygonPos;
+
 #ifdef _DEBUG
 	char str3[MAX_LENGTH_STRING];
 #endif

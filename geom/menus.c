@@ -1841,14 +1841,14 @@ void MenuPopUp1()
 		OwnAppendMenu(PopUpMenuDrill, MF_ENABLED | MF_STRING, ID_ADD_CIRCLE_PAD_OBJECT + DRILL_UNPLATED_LAYER, SC(138, "Unplated"));
 	}
 
-//  OwnAppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ADD_ROUTING_KEEPOUT,"Routing keepout");
+    //OwnAppendMenu(PopUpMenu,MF_ENABLED|MF_STRING,ID_ADD_ROUTING_KEEPOUT,"Routing keepout");
 
 	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_SEPARATOR, 0, 0);
 	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_UNSELECT_ALL, SC(109, "Unselect all"));
 	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_EDIT_GOTOXY, SC(128, "Goto x,y"));
 	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_MEASUREMENT, SC(30, "Measurement"));
 	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_PREVIOUS_VIEW, SC(356, "Previous view"));
-	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(357, "View whole design"));
+	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(92, "View whole design"));
 	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_REPAINT, SC(358, "Repaint"));
 	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_EDIT_UNDO, SC(90, "Undo"));
 	OwnAppendMenu(PopUpMenu, MF_ENABLED | MF_STRING, ID_EDIT_REDO, SC(91, "Redo"));
@@ -2043,7 +2043,7 @@ void MakeMainMenu()
 	OwnAppendMenu(GEOMMenu4, MENU_ID, ID_VIEW_ZOOMIN, SC(377, "Zoom in"));
 	OwnAppendMenu(GEOMMenu4, MENU_ID, ID_VIEW_ZOOMOUT, SC(378, "Zoom out"));
 	OwnAppendMenu(GEOMMenu4, MENU_ID, ID_VIEW_PAN, SC(379, "Pan window"));
-	OwnAppendMenu(GEOMMenu4, MENU_ID, ID_VIEW_VIEWFULL, SC(380, "Viewfull"));
+	OwnAppendMenu(GEOMMenu4, MENU_ID, ID_VIEW_VIEWFULL, SC(92, "View whole design"));
 	OwnAppendMenu(GEOMMenu4, MENU_ID, ID_VIEW_REPAINT, SC(358, "Repaint"));
 	OwnAppendMenu(GEOMMenu4, MENU_ID, ID_VIEW_PREVIOUS_VIEW, SC(356, "Previous view"));
 	OwnAppendMenu(GEOMMenu4, MF_ENABLED | MF_SEPARATOR, 0, 0);

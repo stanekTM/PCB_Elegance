@@ -3680,12 +3680,13 @@ void LoadUserIniFile()
 			if (str1[0] == '[')
 			{
 				ParamMode = 0;
-
-//        if (stricmp(str1,"[ExeDirectory]")==0) ParamMode=1;
-//        if (stricmp(str1,"[ProjectPath]")==0) ParamMode=2;
-//        if (stricmp(str1,"[SymbolDirs]")==0) ParamMode=3;
-//        if (stricmp(str1,"[GeometryLibraryPath]")==0) ParamMode=4;
-				//      if (stricmp(str1,"[SchematicSymbolLibraryPath]")==0) ParamMode=5;
+				
+				//if (stricmp(str1,"[ExeDirectory]")==0) ParamMode=1;
+				//if (stricmp(str1,"[ProjectPath]")==0) ParamMode=2;
+                //if (stricmp(str1,"[SymbolDirs]")==0) ParamMode=3;
+                //if (stricmp(str1,"[GeometryLibraryPath]")==0) ParamMode=4;
+				//if (stricmp(str1,"[SchematicSymbolLibraryPath]")==0) ParamMode=5;
+				
 				if (stricmp(str1, "[LastDesigns]") == 0)
 					ParamMode = 1;
 
@@ -3708,9 +3709,8 @@ void LoadUserIniFile()
 							NrDesigns++;
 						}
 					}
-
 					break;
-
+				
 				case 2:
 					if (GetStringValue(str4, str1, str2))
 					{
@@ -3769,7 +3769,6 @@ void LoadUserIniFile()
 						}
 
 					}
-
 					break;
 
 				case 3:
@@ -3800,7 +3799,7 @@ void LoadUserIniFile()
 
 int32 AddMessage(LPSTR str)
 {
-	int32 res, start, eind;
+	int32 res, start = 0, eind = 0;
 
 	res = SendMessage(EditWindow, EM_GETSEL, (WPARAM) & start, (LPARAM) & eind);
 

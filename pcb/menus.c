@@ -2052,7 +2052,7 @@ void MenuPopUp()
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_MEASUREMENT, SC(1276, "Measurement"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_UNSELECT_ALL, SC(161, "Unselect all"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_PREVIOUS_VIEW, SC(688, "Previous view"));
-	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(689, "Full view"));
+	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(351, "View whole design"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_REPAINT, SC(690, "Repaint"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_EDIT_UNDO, SC(328, "Undo"));
 	AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_EDIT_REDO, SC(329, "Redo"));
@@ -2449,7 +2449,7 @@ void MakeMainMenu()
 	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_ZOOMIN, SC(764, "Zoom in"));
 	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_ZOOMOUT, SC(765, "Zoom out"));
 	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_PAN, SC(766, "Pan window"));
-	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_VIEWFULL, SC(689, "Full view"));
+	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_VIEWFULL, SC(351, "View whole design"));
 	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_REPAINT, SC(690, "Repaint"));
 	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_PREVIOUS_VIEW, SC(688, "Previous view"));
 	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_OPTIONS, SC(768, "Change grid"));
@@ -2474,7 +2474,7 @@ void MakeMainMenu()
 	AppendMenuUTF8(PCBMenu6, MENU_ID, ID_VIEW_SELECTERROR, SC(779, "Select error/warning"));
 
 	PCBMenu6b = CreateMenu();
-	AppendMenuUTF8(PCBMenu6, MF_ENABLED | MF_POPUP, (UINT) PCBMenu6b, SC(780, "View with 300-2400 dpi"));
+	AppendMenuUTF8(PCBMenu6, MF_ENABLED | MF_POPUP, (UINT) PCBMenu6b, SC(780, "View with 300 - 2400 dpi"));
 	AppendMenuUTF8(PCBMenu6b, MENU_ID, ID_VIEW_VIEWWITH300DPI, "300 dpi");
 	AppendMenuUTF8(PCBMenu6b, MENU_ID, ID_VIEW_VIEWWITH360DPI, "360 dpi");
 	AppendMenuUTF8(PCBMenu6b, MENU_ID, ID_VIEW_VIEWWITH600DPI, "600 dpi");

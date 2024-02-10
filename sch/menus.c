@@ -282,7 +282,7 @@ void MenuPopUp()
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_SELECT_COMPS_BY_LIST,
 		              SC(491, "Component selections by list"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_UNSELECT_ALL, SC(418, "Unselect all"));
-		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(320, "Full screen"));
+		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(33, "View whole design"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_PREVIOUS_VIEW, SC(321, "Previous view"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_VIEW_REPAINT, SC(322, "Repaint"));
 		AppendMenuUTF8(PopUpMenu, MF_ENABLED | MF_STRING, ID_EDIT_GOTOXY, SC(468, "Goto (x,y)"));
@@ -840,7 +840,7 @@ void MakeSheetMenu()
 
 	AppendMenuUTF8(SheetMenu5, MF_ENABLED | MF_STRING, ID_VIEW_ZOOMIN, SC(398, "Zoom in"));
 	AppendMenuUTF8(SheetMenu5, MF_ENABLED | MF_STRING, ID_VIEW_ZOOMOUT, SC(399, "Zoom out"));
-	AppendMenuUTF8(SheetMenu5, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(320, "Full screen"));
+	AppendMenuUTF8(SheetMenu5, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(33, "View whole design"));
 	AppendMenuUTF8(SheetMenu5, MF_ENABLED | MF_STRING, ID_VIEW_PAN, SC(401, "Pan window"));
 	AppendMenuUTF8(SheetMenu5, MF_ENABLED | MF_STRING, ID_VIEW_REPAINT, SC(322, "Repaint"));
 	AppendMenuUTF8(SheetMenu5, MF_ENABLED | MF_STRING, ID_VIEW_PREVIOUS_VIEW, SC(321, "Previous view"));
@@ -930,7 +930,7 @@ void MakeSymbolMenu()
 	AppendMenuUTF8(SymbolMenu2, MF_ENABLED | MF_STRING, ID_EDIT_GOTOXY, SC(468, "Goto (x,y)"));
 	AppendMenuUTF8(SymbolMenu5, MF_ENABLED | MF_STRING, ID_VIEW_ZOOMIN, SC(398, "Zoom in"));
 	AppendMenuUTF8(SymbolMenu5, MF_ENABLED | MF_STRING, ID_VIEW_ZOOMOUT, SC(399, "Zoom out"));
-	AppendMenuUTF8(SymbolMenu5, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(320, "Full screen"));
+	AppendMenuUTF8(SymbolMenu5, MF_ENABLED | MF_STRING, ID_VIEW_VIEWFULL, SC(33, "View whole design"));
 	AppendMenuUTF8(SymbolMenu5, MF_ENABLED | MF_STRING, ID_VIEW_PAN, SC(401, "Pan window"));
 	AppendMenuUTF8(SymbolMenu5, MF_ENABLED | MF_STRING, ID_VIEW_REPAINT, SC(322, "Repaint"));
 	AppendMenuUTF8(SymbolMenu5, MF_ENABLED | MF_STRING, ID_VIEW_PREVIOUS_VIEW, SC(321, "Previous view"));

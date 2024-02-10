@@ -2479,7 +2479,7 @@ void WriteCompLine(LPSTR fpstr, int32 CompNr, int32 MaxComps, int32 count, int32
 					}
 				}
 				else
-					sprintf(str6, "?%?", Component->Reference);
+					sprintf(str6, "?%s?", Component->Reference);
 
 				FoundSystemColumn = 1;
 			}
@@ -2540,7 +2540,8 @@ void WriteCompLine(LPSTR fpstr, int32 CompNr, int32 MaxComps, int32 count, int32
 	{
 		strcpy(str, SC(108, "Comp error"));
 		AddMessage(str);
-//    SendMessageUTF8(EditWindow,EM_REPLACESEL,0,(LPARAM)(LPSTR)SC(108,"Comp error"));
+		
+		//SendMessageUTF8(EditWindow,EM_REPLACESEL,0,(LPARAM)(LPSTR)SC(108,"Comp error"));
 	}
 }
 

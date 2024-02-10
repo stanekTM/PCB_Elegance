@@ -31,5 +31,4 @@
 
 void GEOMCommand(int32 WParam, int32 LParam);
 
-
 #endif

@@ -3197,7 +3197,7 @@ void LoadUserIniFile()
 {
 	int32 fp, Length, ParamMode, Value, res;
 	char LineBuf[MAX_LENGTH_STRING], str1[MAX_LENGTH_STRING], str2[MAX_LENGTH_STRING], CurrentDir[MAX_LENGTH_STRING],
-		str4[MAX_LENGTH_STRING];
+		 str4[MAX_LENGTH_STRING];
 
 	if ((fp = TextFileOpenUTF8(UserIniFile)) < 0)
 		return;
