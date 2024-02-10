@@ -46,8 +46,8 @@ The source code can be compiled with Microsoft Visual Studio 2022 (version "Comm
 https://visualstudio.microsoft.com/en/downloads
 
 To support Windows 7, 8 and 10 :            
-- Version Windows : SDK 10.0              
-- Platform tools set : Visual Studio 2022 - Windows 10 (v143)
+- SDK version : 10.0              
+- Platform tools set : Visual Studio 2022 (v143)
 
 Open the solution file "vc2010\pcbeleg.sln"
 
