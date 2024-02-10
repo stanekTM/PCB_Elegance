@@ -6,8 +6,8 @@ https://visualstudio.microsoft.com/en/downloads
 
 To support Windows 7, 8 and 10 :
 
-SDK version : 10.0
-Platform tools set : Visual Studio 2022 (v143)
+- SDK version : 10.0
+- Platform tools set : Visual Studio 2022 (v143)
 
 Open the solution file "vc2010\pcbeleg.sln"
 
