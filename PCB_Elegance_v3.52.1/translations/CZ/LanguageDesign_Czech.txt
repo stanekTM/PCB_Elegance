@@ -65,7 +65,7 @@
 62   "O programu"
 63   "Projektový manažer PCB Elegance"
 64   "\r\n Verze sestavení %i.%i.%i  ( %s )"
-65   "\r\n\r\n Sestaven pomocí Microsoft Visual Studio 2019"
+65   "\r\n\r\n Sestaven pomocí Microsoft Visual Studio 2022"
 66   "Vytvoření nového projektu"
 67   "Soubor ORCAD"
 68   "Otevřít soubor knihovny ORCAD"

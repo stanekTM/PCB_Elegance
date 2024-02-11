@@ -126,7 +126,7 @@
 123  "Šířka obrysu desky"
 124  "Editor Geometrie PCB Elegance"
 125  "\r\n Verze sestavení %i.%i.%i  (%s)"
-126  "\r\n\r\n Sestaven pomocí Microsoft Visual Studio 2019"
+126  "\r\n\r\n Sestaven pomocí Microsoft Visual Studio 2022"
 127  "O programu"
 128  "Jít na souřadnice x,y"
 129  "Zrušit výběr prvního objektu"

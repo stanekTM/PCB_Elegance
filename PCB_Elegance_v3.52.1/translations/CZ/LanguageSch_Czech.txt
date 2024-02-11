@@ -135,7 +135,7 @@
 132  "Otevřít rozložení s komponentem %s" 
 133  "Editor Symbolu/Schéma PCB Elegance"
 134  "\r\n Verze sestavení %i.%i.%i  ( %s )"
-135  "\r\n\r\n Sestaven pomocí Microsoft Visual Studio 2019"
+135  "\r\n\r\n Sestaven pomocí Microsoft Visual Studio 2022"
 136  "Zdroj geometrie"
 137  "Zadat název geometrie ( zkratku )"
 138  "Místní adresář geometrie\t%s\\pcb\\shapes"

@@ -2388,7 +2388,7 @@ int32 CALLBACK AboutDialogBody(HWND Dialog, UINT Message, WPARAM WParam, LPARAM 
 		strcat(str, "\r\n\r\n Compiled with Microsoft Visual Studio 2005");
 #endif
 #ifdef VC2010
-		strcat(str, SC(65, "\r\n\r\n Compiled with Microsoft Visual Studio 2019"));
+		strcat(str, SC(65, "\r\n\r\n Compiled with Microsoft Visual Studio 2022"));
 #endif
 		SendDlgItemMessageUTF8(Dialog, IDC_EDIT2, WM_SETTEXT, 0, (LPARAM) (LPSTR) str);
 		return about;

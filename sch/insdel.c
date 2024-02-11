@@ -22,11 +22,12 @@
  */
 /*******************************************************************************************/
 
-
+#include <string.h>
+#include <math.h>
+#include <stdio.h>
 
 #include "types.h"
 #include "memory.h"
-#include "string.h"
 #include "insdel.h"
 #include "calc.h"
 #include "calcdef.h"
@@ -39,9 +40,8 @@
 #include "toets.h"
 #include "mainloop.h"
 #include "utf8.h"
-#include "math.h"
-#include "stdio.h"
 
+////////////////////////////////////////////////////////////////////////////
 
 typedef struct
 {
@@ -582,7 +582,7 @@ void DeleteSelectedObjects(int32 Mode)
 	double x1, y1, x2, y2;
 	ObjectRecord *Object;
 
-	WireRecord *Wire;
+	WireRecord *Wire, *Wire2;
 	BusRecord *Bus;
 	JunctionRecord *Junction;
 	OnePinNetRecord *OnePinNet;
@@ -668,12 +668,30 @@ void DeleteSelectedObjects(int32 Mode)
 
 				if ((NetLabel->Info & (OBJECT_NOT_VISIBLE)) == 0)
 				{
-					if (((InRange(x1, NetLabel->ConnectX)) && (InRange(y1, NetLabel->ConnectY)))
-					        || ((InRange(x2, NetLabel->ConnectX)) && (InRange(y2, NetLabel->ConnectY))))
+					if ((InRange(x1, NetLabel->ConnectX) && InRange(y1, NetLabel->ConnectY))
+						|| (InRange(x2, NetLabel->ConnectX) && InRange(y2, NetLabel->ConnectY)))
 					{
-						Changed = 1;
-						NetLabel->Info |= OBJECT_NOT_VISIBLE;
-						NetLabel->DeleteNr = (int16) LastActionNr;
+						points1 = 0;
+						for (cnt3 = 0; cnt3 < Design.NrWires; cnt3++)
+						{
+							Wire2 = &((*Wires)[cnt3]);
+
+							if ((Wire2->Info & (OBJECT_NOT_VISIBLE)) == 0)
+							{
+								if (InRange(NetLabel->ConnectX, Wire2->X1) && InRange(NetLabel->ConnectY, Wire2->Y1))
+									points1++;
+
+								if (InRange(NetLabel->ConnectX, Wire2->X2) && InRange(NetLabel->ConnectY, Wire2->Y2))
+									points1++;
+							}
+						}
+
+						if (points1 == 0)
+						{
+							Changed = 1;
+							NetLabel->Info |= OBJECT_NOT_VISIBLE;
+							NetLabel->DeleteNr = (int16)LastActionNr;
+						}
 					}
 				}
 			}
@@ -1014,7 +1032,6 @@ void UndoObjects()
 			if ((Instance->Info & (OBJECT_NOT_VISIBLE)) == OBJECT_NOT_VISIBLE)
 			{
 				Instance->Info &= ~(OBJECT_NOT_VISIBLE | OBJECT_SELECTED | 15);
-				DrawInstance(Instance, (double) 0.0, (double) 0.0, 0);
 				Changed = 1;
 			}
 		}
@@ -3834,17 +3851,18 @@ int32 PlaceJunctionOnEndPoint(double x, double y, int32 mode)
 // ********************************************************************************************************
 // ********************************************************************************************************
 
-
-int32 QsortCompare(const char *arg1, const char *arg2)
+static int32 QsortCompare(const void *arg1, const void *arg2)
 {
 	if ((*(LineJunctionRecord *) arg1).Distance > (*(LineJunctionRecord *) arg2).Distance)
 		return 1;
-
+	
 	if ((*(LineJunctionRecord *) arg1).Distance == (*(LineJunctionRecord *) arg2).Distance)
 		return 0;
-
+	
 	return -1;
 }
+
+// ********************************************************************************************************
 
 int32 JunctionCheckWire(int32 WireCnt, int32 mode)
 {
